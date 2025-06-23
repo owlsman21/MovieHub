@@ -6,12 +6,11 @@
     <title>The Movie Hub</title>
     <!-- Embedded CSS for styling -->
     <style>
+        /* Import Google Font - Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
         body {
-           body {
-    font-family: 'Inter', Arial, sans-serif;
-    /* ... other body styles ... */
-}
+            font-family: 'Inter', Arial, sans-serif; /* Changed font to Inter */
             margin: 0;
             padding: 0;
             background-color: #1a1a2e; /* Dark background */
@@ -487,7 +486,7 @@
         // year: Release year (Number)
         // release_date: Full release date string (e.g., "YYYY-MM-DD")
         const moviesData = [
-           {
+          {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -3747,7 +3746,7 @@
      },
      {
         "id": "Cannibal Holocaust",
-        "posterUrl": "images\Cannibal Holocaust.jpg",
+        "posterUrl":  "images/Cannibal Holocaust.jpg",
         "year": 1980,
         "title": "Cannibal Holocaust (1980)",
         "description": "An anthropologist ventures into the Amazon rainforest on a rescue mission, where he recovers footage shot by a film crew documenting their disastrous encounters with local cannibal tribes.",
@@ -3757,7 +3756,7 @@
      },
      {
         "id": "Big-Jake",
-        "posterUrl":"images/Big Jake.jpg",
+        "posterUrl":  "images/Big Jake.jpg",
         "year": 1971,
         "title": "Big Jake",
         "description": "In 1909, when John Fain's gang kidnaps Jacob McCandles' grandson and holds him for ransom, Big Jake sets out to rescue the boy.",
@@ -3838,9 +3837,19 @@
 
         // Helper function to get the correct embed URL based on source and ID
         function getEmbedUrl(movie) {
+            // For Ok.ru, construct the URL using the embedId
             if (movie.source === "okru" && movie.embedId) {
                 return `https://ok.ru/videoembed/${movie.embedId}`;
             }
+            // NEW: For YouTube, construct the URL using the video ID with autoplay and branding parameters
+            else if (movie.source === "youtube" && movie.embedId) {
+                // Autoplay is attempted, but modern browsers usually require mute=1 or user interaction
+                // for autoplay to work. Adding mute=1 as a common workaround.
+                return `https://www.youtube.com/embed/${movie.embedId}?autoplay=0&modestbranding=1&rel=0`; // Autoplay set to 0
+            }
+            // For Facebook, a direct iframe embed usually doesn't work from file://.
+            // If you have a different direct embed URL from Facebook, you can add logic here.
+            // For now, it will return empty, causing the poster to display.
             return ''; // Return empty string if no valid embed URL can be formed
         }
 
@@ -3890,14 +3899,14 @@
                         event.preventDefault(); // Prevent default link behavior if inside an <a>
                         event.stopPropagation(); // Stop event from bubbling up to parent link (if any)
                         
-                        const embedUrl = getEmbedUrl(movie);
+                        const embedUrl = getEmbedUrl(movie); // Get the embed URL with parameters
                         if (embedUrl) {
                             mediaContainer.innerHTML = ''; // Clear poster and play button
                             const iframe = document.createElement('iframe');
                             iframe.src = embedUrl;
                             iframe.allowFullscreen = true;
-                            iframe.allow = "autoplay; encrypted-media";
-                            iframe.autoplay = true;
+                            // Use the same comprehensive 'allow' attributes here as on details page
+                            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
                             iframe.scrolling = 'no';
                             iframe.frameBorder = '0';
                             mediaContainer.appendChild(iframe);

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Movie Hub</title>
-    <!-- Embedded CSS for styling -->
+    <title>Movie Details - The Movie Hub</title>
+    <!-- Embedded CSS (same as index.html for consistency) -->
     <style>
+        /* Import Google Font - Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Added Inter font import */
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif; /* Changed font to Inter */
             margin: 0;
             padding: 0;
             background-color: #1a1a2e; /* Dark background */
@@ -67,39 +70,6 @@
             clear: both;
         }
 
-        .hero {
-            background: #0f044c;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 100px 20px;
-            margin-bottom: 20px;
-        }
-
-        .hero h2 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            color: #ffd700;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #735bf2;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #5d48cc;
-        }
-
         .section-padded {
             padding: 40px 0;
             background-color: #2a2a4a;
@@ -114,100 +84,129 @@
             color: #ffd700;
         }
 
-        .movie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* Styles specific to movie-details.html */
+        .movie-detail-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
-            justify-content: center;
+            padding: 20px;
+            text-align: center;
         }
 
-        .movie-card {
-            background-color: #0f044c;
+        .movie-detail-content h2 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .movie-detail-content .video-player {
+            width: 100%;
+            max-width: 800px;
+            height: 450px; /* Standard 16:9 aspect ratio for videos */
+            background-color: #000;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            padding-bottom: 15px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .movie-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        /* iframe within movie-detail-content */
+        .movie-detail-content .video-player iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block; /* Ensure iframe is displayed by default */
         }
-
-        .movie-card img {
+        /* Image fallback within movie-detail-content */
+        .movie-detail-content .video-player img {
             max-width: 100%;
-            height: 300px;
+            height: 100%;
             object-fit: cover;
             display: block;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #735bf2;
-        }
-        
-        .movie-card iframe {
-            width: 100%;
-            height: 300px; /* Adjust as needed */
-            display: block;
-            border: none; /* Remove iframe border */
-            margin-bottom: 10px;
-            border-bottom: 2px solid #735bf2;
+            border-radius: 8px;
         }
 
-        .movie-card h3 {
-            font-size: 1.2em;
-            margin: 10px 10px 5px;
-            color: #e0e0e0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .movie-card p {
-            font-size: 0.9em;
-            color: #b0b0b0;
-            margin: 0 10px;
-        }
-
-        .movie-card a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        /* Pagination styles */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 10px;
-        }
-
-        .pagination button {
-            background-color: #735bf2;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
+        .autoplay-message {
+            background-color: #ffd700; /* Gold color for alert */
+            color: #1a1a2e; /* Dark text for contrast */
+            padding: 10px 20px;
             border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px; /* Align with video player width */
+            width: 100%; /* Full width within max-width */
+        }
+
+        .autoplay-message button {
+            background: none;
+            border: none;
+            color: #1a1a2e;
+            font-size: 1.2em;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
+            padding: 0 5px;
+            line-height: 1;
+            margin-left: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
-        .pagination button:hover:not(:disabled) {
-            background-color: #5d48cc;
+        .autoplay-message button:hover {
+            opacity: 1;
         }
 
-        .pagination button:disabled {
-            background-color: #4a4a6b;
-            cursor: not-allowed;
+        .movie-detail-info {
+            max-width: 800px;
+            text-align: left;
+            background-color: #0f044c;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
-        .pagination span {
-            align-self: center;
+        .movie-detail-info p {
+            margin-bottom: 10px;
             font-size: 1.1em;
+            color: #b0b0b0;
         }
 
+        .movie-detail-info strong {
+            color: #e0e0e0;
+        }
+
+        /* Responsive adjustments for movie-details */
+        @media (max-width: 768px) {
+            .movie-detail-content .video-player {
+                height: 300px;
+            }
+            .movie-detail-content h2 {
+                font-size: 2em;
+            }
+            .movie-detail-info p {
+                font-size: 1em;
+            }
+            .autoplay-message {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            .autoplay-message button {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .movie-detail-content .video-player {
+                height: 200px;
+            }
+            .movie-detail-content h2 {
+                font-size: 1.8em;
+            }
+            .autoplay-message {
+                font-size: 0.85em;
+            }
+        }
 
         footer {
             background-color: #0f044c;
@@ -232,49 +231,6 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            header h1,
-            header nav {
-                float: none;
-                text-align: center;
-            }
-
-            header nav ul li {
-                margin: 0 10px;
-            }
-
-            .hero h2 {
-                font-size: 2.5em;
-            }
-
-            .movie-grid {
-                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 60px 15px;
-            }
-
-            .hero h2 {
-                font-size: 2em;
-            }
-
-            .section-padded h2 {
-                font-size: 2em;
-            }
-
-            .movie-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-
-            .movie-card img, .movie-card iframe {
-                height: 250px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -293,38 +249,24 @@
     </header>
 
     <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <h2>Welcome to The Movie Hub!</h2>
-                <p>Your ultimate destination for discovering and watching classic films.</p>
-                <a href="#all-movies-section" class="btn">Explore All Movies</a> <!-- Link to all movies section below -->
-            </div>
-        </section>
+        <section id="movie-detail-section" class="section-padded">
+            <div class="container movie-detail-content">
+                <h2 id="movieTitle">Loading Movie...</h2>
+                <div class="video-player">
+                    <!-- The iframe or image will be dynamically inserted here -->
+                </div>
 
-        <section id="latest-releases" class="section-padded">
-            <div class="container">
-                <h2>Latest Releases</h2>
-                <div id="latest-movie-grid" class="movie-grid">
-                    <!-- Latest movies will be rendered here -->
-                    <p>Loading latest movies...</p>
+                <div id="autoplayMessage" class="autoplay-message" style="display: none;">
+                    <span>Please click the play button on the video to start playback.</span>
+                    <button onclick="document.getElementById('autoplayMessage').style.display='none';">&times;</button>
                 </div>
-            </div>
-        </section>
 
-        <section id="all-movies-section" class="section-padded">
-            <div class="container">
-                <h2>Our Complete Movie Collection</h2>
-                <div class="search-bar">
-                    <input type="text" id="movie-search" placeholder="Search movies by title, genre or year...">
-                </div>
-                <div id="all-movie-grid" class="movie-grid">
-                    <!-- All movies will be rendered here with pagination -->
-                    <p>Loading all movies...</p>
-                </div>
-                <div class="pagination">
-                    <button id="prevPage">Previous</button>
-                    <span id="pageInfo">Page 1 of 1</span>
-                    <button id="nextPage">Next</button>
+                <div class="movie-detail-info">
+                    <p><strong>Description:</strong> <span id="movieDescription"></span></p>
+                    <p><strong>Genres:</strong> <span id="movieGenres"></span></p>
+                    <p><strong>Release Date:</strong> <span id="movieReleaseDate"></span></p>
+                    <p><strong>Year:</strong> <span id="movieYear"></span></p>
+                    <p><strong>Source:</strong> <span id="movieSource"></span></p>
                 </div>
             </div>
         </section>
@@ -337,22 +279,11 @@
         </div>
     </footer>
 
-    <!-- Embedded JavaScript for movie data and rendering -->
     <script>
-        // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA ---
-        // Each movie object should have at least:
-        // id: Unique identifier
-        // title: Movie title
-        // posterUrl: Path to a local image (e.g., "images/movie-poster.jpg") or a direct URL to an image.
-        // embedId: The ID from Ok.ru or other platform (e.g., "6410503522969").
-        //           NOTE for Facebook: Facebook embeds often require their JS SDK which cannot be loaded from file://.
-        //           For Facebook, you might need to link directly to the video on Facebook or provide a simple image.
-        // description: Short plot summary
-        // genres: Array of genres (e.g., ["Action", "Drama"])
-        // year: Release year (Number)
-        // release_date: Full release date string (e.g., "YYYY-MM-DD")
-        const moviesData = [
-          {
+        // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
+        // Copy the ENTIRE content of your movies.json file here.
+        const moviesData = [ 
+           {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -3682,128 +3613,87 @@
      }
         ]; // <-- END OF MOVIE DATA
 
-        // --- GLOBAL VARIABLES FOR PAGINATION & RENDERING ---
-        const itemsPerPage = 20; // Number of movies to display per page
-        let currentPage = 1;
-        let filteredMovies = []; // Stores movies after search/filter
-
-        const latestMovieGrid = document.getElementById('latest-movie-grid');
-        const allMovieGrid = document.getElementById('all-movie-grid');
-        const movieSearchInput = document.getElementById('movie-search');
-        const prevPageBtn = document = document.getElementById('prevPage');
-        const nextPageBtn = document.getElementById('nextPage');
-        const pageInfoSpan = document.getElementById('pageInfo');
-
-        // --- FUNCTIONS ---
-
-        // Helper function to get the correct embed URL based on source
+        // --- MOVIE DETAIL PAGE SCRIPT ---
+        // Helper function to get the correct embed URL based on source and ID
         function getEmbedUrl(movie) {
+            // For Ok.ru, construct the URL using the embedId
             if (movie.source === "okru" && movie.embedId) {
                 return `https://ok.ru/videoembed/${movie.embedId}`;
             }
-            // Add conditions for other sources here if needed
-            // For Facebook, a direct iframe embed usually doesn't work from file://
-            // return `https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/facebookapp/videos/${movie.embedId}/` // Example for FB, but usually needs SDK
+            // For YouTube, construct the URL using the video ID without autoplay or mute
+            else if (movie.source === "youtube" && movie.embedId) {
+                // Removed autoplay=1 and mute=1 from the URL parameters
+                return `https://www.youtube.com/embed/${movie.embedId}?modestbranding=1&rel=0`;
+            }
+            // For Facebook, a direct iframe embed usually doesn't work from file://.
+            // If you have a different direct embed URL from Facebook, you can add logic here.
+            // For now, it will return empty, causing the poster to display.
             return ''; // Return empty string if no valid embed URL can be formed
         }
 
-        // Renders movie cards to a specified grid
-        function renderMoviesToGrid(moviesToDisplay, targetGridElement) {
-            if (!targetGridElement) return;
-
-            if (!moviesToDisplay || moviesToDisplay.length === 0) {
-                targetGridElement.innerHTML = '<p>No movies to display.</p>';
-                return;
-            }
-
-            targetGridElement.innerHTML = ''; // Clear existing content
-
-            moviesToDisplay.forEach(movie => {
-                const movieCard = document.createElement('div');
-                movieCard.classList.add('movie-card');
-
-                const title = movie.title || 'Untitled';
-                const posterPath = movie.posterUrl || `images/placeholder.jpg`;
-                const releaseDate = movie.release_date || (movie.year ? `Year: ${movie.year}` : 'Date: N/A');
-                const genres = (movie.genres && movie.genres.join(', ')) || 'N/A';
-                
-                const embedUrl = getEmbedUrl(movie); // Use the helper function
-
-                let mediaContent = '';
-                if (embedUrl) {
-                    mediaContent = `<iframe src="${embedUrl}" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>`;
-                } else {
-                    mediaContent = `<img src="${posterPath}" alt="${title} Poster" onerror="this.onerror=null;this.src='images/placeholder.jpg';">`;
-                }
-
-                movieCard.innerHTML = `
-                    <a href="movie-details.html?id=${movie.id}">
-                        ${mediaContent}
-                        <h3>${title}</h3>
-                        <p>Genres: ${genres}</p>
-                        <p>Release Date: ${releaseDate}</p>
-                    </a>
-                `;
-                targetGridElement.appendChild(movieCard);
-            });
-        }
-
-        function renderAllMovies(page = currentPage) {
-            currentPage = page;
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const moviesToRender = filteredMovies.slice(start, end);
-
-            renderMoviesToGrid(moviesToRender, allMovieGrid);
-            updatePaginationControls();
-        }
-
-        function updatePaginationControls() {
-            const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
-            pageInfoSpan.textContent = `Page ${currentPage} of ${totalPages || 1}`;
-
-            prevPageBtn.disabled = currentPage === 1;
-            nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
-        }
-
-        function filterAndRenderMovies() {
-            const searchTerm = movieSearchInput.value.toLowerCase().trim();
-            if (searchTerm) {
-                filteredMovies = moviesData.filter(movie =>
-                    (movie.title && movie.title.toLowerCase().includes(searchTerm)) ||
-                    (movie.genres && movie.genres.some(genre => genre.toLowerCase().includes(searchTerm))) ||
-                    (movie.release_date && movie.release_date.includes(searchTerm)) ||
-                    (movie.year && String(movie.year).includes(searchTerm))
-                );
-            } else {
-                filteredMovies = [...moviesData];
-            }
-            currentPage = 1;
-            renderAllMovies();
-        }
-
-        // --- EVENT LISTENERS ---
         document.addEventListener('DOMContentLoaded', () => {
-            renderMoviesToGrid(moviesData.slice(0, 5), latestMovieGrid);
-            
-            filteredMovies = [...moviesData];
-            renderAllMovies(1);
-        });
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get('id');
+            const videoPlayerContainer = document.querySelector('.movie-detail-content .video-player');
+            const autoplayMessage = document.getElementById('autoplayMessage');
 
-        prevPageBtn.addEventListener('click', () => {
-            if (currentPage > 1) {
-                renderAllMovies(currentPage - 1);
+            // Clear any existing content in the video player container initially
+            videoPlayerContainer.innerHTML = ''; 
+            autoplayMessage.style.display = 'none'; // Hide message by default
+
+            if (movieId) {
+                const movie = moviesData.find(m => m.id === movieId);
+                if (movie) {
+                    document.getElementById('movieTitle').textContent = movie.title || 'Untitled Movie';
+                    document.getElementById('movieDescription').textContent = movie.description || 'No description available.';
+                    document.getElementById('movieGenres').textContent = (movie.genres && movie.genres.join(', ')) || 'N/A';
+                    document.getElementById('movieReleaseDate').textContent = movie.release_date || (movie.year ? `Year: ${movie.year}` : 'N/A');
+                    document.getElementById('movieYear').textContent = movie.year || 'N/A';
+                    document.getElementById('movieSource').textContent = movie.source || 'N/A';
+
+                    const embedUrl = getEmbedUrl(movie); // Use the helper function here
+
+                    if (embedUrl) {
+                        const iframe = document.createElement('iframe');
+                        iframe.id = 'moviePlayer'; // Assign ID for consistency if needed elsewhere
+                        iframe.src = embedUrl;
+                        iframe.allowFullscreen = true;
+                        // Removed 'autoplay' from allow attribute as it's no longer being forced.
+                        iframe.allow = "encrypted-media"; 
+                        iframe.scrolling = 'no';
+                        iframe.frameBorder = '0';
+                        videoPlayerContainer.appendChild(iframe);
+                        console.log("Movie Embed URL:", embedUrl); // ADDED FOR DEBUGGING
+
+                        // Display the autoplay message only for YouTube videos since autoplay is removed
+                        // This message informs the user they need to click to play.
+                        if (movie.source === "youtube") {
+                            autoplayMessage.style.display = 'flex';
+                        }
+                    } else {
+                        // If no embed URL, show poster image fallback
+                        const img = document.createElement('img');
+                        img.src = movie.posterUrl || 'images/placeholder.jpg';
+                        img.alt = movie.title + ' Poster';
+                        img.style.maxWidth = '100%';
+                        img.style.height = 'auto'; // Maintain aspect ratio
+                        img.style.borderRadius = '8px'; // Keep rounded corners
+                        videoPlayerContainer.appendChild(img);
+                        console.log("Movie Embed URL: No valid embedUrl could be formed. Displaying poster."); // ADDED FOR DEBUGGING
+                    }
+                } else {
+                    document.getElementById('movieTitle').textContent = 'Movie Not Found';
+                    document.getElementById('movieDescription').textContent = 'The requested movie could not be found.';
+                    videoPlayerContainer.innerHTML = '<p>Video not found or embed not available.</p>'; // Clear and show message
+                    console.log("Movie Not Found: ID", movieId); // ADDED FOR DEBUGGING
+                }
+            } else {
+                document.getElementById('movieTitle').textContent = 'No Movie ID Provided';
+                document.getElementById('movieDescription').textContent = 'Please provide a movie ID in the URL (e.g., ?id=movie-name).';
+                videoPlayerContainer.innerHTML = '<p>No video ID provided.</p>'; // Clear and show message
+                console.log("No Movie ID Provided in URL."); // ADDED FOR DEBUGGING
             }
         });
-
-        nextPageBtn.addEventListener('click', () => {
-            const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
-            if (currentPage < totalPages) {
-                renderAllMovies(currentPage + 1);
-            }
-        });
-
-        movieSearchInput.addEventListener('input', filterAndRenderMovies);
     </script>
 </body>
 </html>
