@@ -126,37 +126,6 @@
             border-radius: 8px;
         }
 
-        .autoplay-message {
-            background-color: #ffd700; /* Gold color for alert */
-            color: #1a1a2e; /* Dark text for contrast */
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 800px; /* Align with video player width */
-            width: 100%; /* Full width within max-width */
-        }
-
-        .autoplay-message button {
-            background: none;
-            border: none;
-            color: #1a1a2e;
-            font-size: 1.2em;
-            cursor: pointer;
-            padding: 0 5px;
-            line-height: 1;
-            margin-left: 10px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-
-        .autoplay-message button:hover {
-            opacity: 1;
-        }
-
         .movie-detail-info {
             max-width: 800px;
             text-align: left;
@@ -176,6 +145,49 @@
             color: #e0e0e0;
         }
 
+        /* Share Button Styles */
+        .share-buttons-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between buttons */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        .share-button {
+            background-color: #3b5998; /* Facebook blue */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none; /* For the <a> tag */
+            display: inline-flex; /* Align icon and text */
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .share-button:hover {
+            background-color: #2d4373; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+
+        .share-button.twitter {
+            background-color: #1da1f2; /* Twitter blue */
+        }
+        .share-button.twitter:hover {
+            background-color: #0c85d0;
+        }
+
+        .share-button.whatsapp {
+            background-color: #25d366; /* WhatsApp green */
+        }
+        .share-button.whatsapp:hover {
+            background-color: #128c7e;
+        }
+
         /* Responsive adjustments for movie-details */
         @media (max-width: 768px) {
             .movie-detail-content .video-player {
@@ -187,12 +199,9 @@
             .movie-detail-info p {
                 font-size: 1em;
             }
-            .autoplay-message {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
-            .autoplay-message button {
-                font-size: 1em;
+            .share-buttons-container {
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
             }
         }
 
@@ -202,9 +211,6 @@
             }
             .movie-detail-content h2 {
                 font-size: 1.8em;
-            }
-            .autoplay-message {
-                font-size: 0.85em;
             }
         }
 
@@ -256,11 +262,6 @@
                     <!-- The iframe or image will be dynamically inserted here -->
                 </div>
 
-                <div id="autoplayMessage" class="autoplay-message" style="display: none;">
-                    <span>Please click the play button on the video to start playback.</span>
-                    <button onclick="document.getElementById('autoplayMessage').style.display='none';">&times;</button>
-                </div>
-
                 <div class="movie-detail-info">
                     <p><strong>Description:</strong> <span id="movieDescription"></span></p>
                     <p><strong>Genres:</strong> <span id="movieGenres"></span></p>
@@ -268,6 +269,16 @@
                     <p><strong>Year:</strong> <span id="movieYear"></span></p>
                     <p><strong>Source:</strong> <span id="movieSource"></span></p>
                 </div>
+
+                <!-- NEW: Share Buttons Container -->
+                <div class="share-buttons-container">
+                    <a id="facebookShareBtn" class="share-button" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .732.593 1.325 1.325 1.325h11.35c.732 0 1.325-.593 1.325-1.325v-9.451h3.313c.121 0 .22-.099.22-.22l.536-3.766c.019-.133-.081-.253-.21-.253h-3.66c-.121 0-.22-.099-.22-.22v-2.072c0-.6.4-.951.99-.951h2.04c.121 0 .22-.099.22-.22v-3.488c0-.121-.099-.22-.22-.22h-3.328c-3.155 0-3.693 2.15-3.693 4.256v2.96h-2.183c-.121 0-.22.099-.22.22v3.767c0 .121.099.22.22.22h2.183v9.45h7.521c.732 0 1.325-.593 1.325-1.325v-21.351c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        Share on Facebook
+                    </a>
+                    <!-- Add other share buttons here if needed, e.g., Twitter, WhatsApp -->
+                </div>
+
             </div>
         </section>
     </main>
@@ -283,7 +294,7 @@
         // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
         // Copy the ENTIRE content of your movies.json file here.
         const moviesData = [ 
-           {
+          {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -3622,12 +3633,8 @@
             }
             // For YouTube, construct the URL using the video ID without autoplay or mute
             else if (movie.source === "youtube" && movie.embedId) {
-                // Removed autoplay=1 and mute=1 from the URL parameters
                 return `https://www.youtube.com/embed/${movie.embedId}?modestbranding=1&rel=0`;
             }
-            // For Facebook, a direct iframe embed usually doesn't work from file://.
-            // If you have a different direct embed URL from Facebook, you can add logic here.
-            // For now, it will return empty, causing the poster to display.
             return ''; // Return empty string if no valid embed URL can be formed
         }
 
@@ -3635,11 +3642,10 @@
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
             const videoPlayerContainer = document.querySelector('.movie-detail-content .video-player');
-            const autoplayMessage = document.getElementById('autoplayMessage');
+            const facebookShareBtn = document.getElementById('facebookShareBtn'); // Get the share button
 
             // Clear any existing content in the video player container initially
             videoPlayerContainer.innerHTML = ''; 
-            autoplayMessage.style.display = 'none'; // Hide message by default
 
             if (movieId) {
                 const movie = moviesData.find(m => m.id === movieId);
@@ -3658,18 +3664,11 @@
                         iframe.id = 'moviePlayer'; // Assign ID for consistency if needed elsewhere
                         iframe.src = embedUrl;
                         iframe.allowFullscreen = true;
-                        // Removed 'autoplay' from allow attribute as it's no longer being forced.
-                        iframe.allow = "encrypted-media"; 
+                        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"; 
                         iframe.scrolling = 'no';
                         iframe.frameBorder = '0';
                         videoPlayerContainer.appendChild(iframe);
                         console.log("Movie Embed URL:", embedUrl); // ADDED FOR DEBUGGING
-
-                        // Display the autoplay message only for YouTube videos since autoplay is removed
-                        // This message informs the user they need to click to play.
-                        if (movie.source === "youtube") {
-                            autoplayMessage.style.display = 'flex';
-                        }
                     } else {
                         // If no embed URL, show poster image fallback
                         const img = document.createElement('img');
@@ -3681,6 +3680,13 @@
                         videoPlayerContainer.appendChild(img);
                         console.log("Movie Embed URL: No valid embedUrl could be formed. Displaying poster."); // ADDED FOR DEBUGGING
                     }
+
+                    // Dynamically set the href for the Facebook share button
+                    // The URL of the current page is obtained, ensuring it's the live GitHub Pages URL
+                    const moviePageUrl = encodeURIComponent(window.location.href);
+                    facebookShareBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${moviePageUrl}`;
+                    console.log("Facebook Share URL:", facebookShareBtn.href);
+
                 } else {
                     document.getElementById('movieTitle').textContent = 'Movie Not Found';
                     document.getElementById('movieDescription').textContent = 'The requested movie could not be found.';

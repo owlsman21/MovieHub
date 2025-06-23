@@ -132,7 +132,7 @@
             text-align: center;
             padding-bottom: 15px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative; /* For play button positioning */
+            position: relative; /* For play button positioning and details text */
         }
 
         .movie-card:hover {
@@ -213,8 +213,32 @@
             color: inherit;
             display: block; /* Ensure the anchor fills its container */
             cursor: pointer; /* Indicate it's clickable */
+            position: relative; /* For positioning details-text */
+            padding-bottom: 25px; /* Make space for details text */
         }
         
+        /* New styles for "View Details" text */
+        .details-text {
+            position: absolute;
+            bottom: 0px; /* Position at the bottom of the card content */
+            left: 0;
+            right: 0;
+            background-color: rgba(115, 91, 242, 0.8); /* Semi-transparent background */
+            color: #fff;
+            padding: 5px 0;
+            font-size: 0.85em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease;
+            pointer-events: none; /* Allows clicks to pass through to the parent link */
+        }
+
+        .movie-card:hover .details-text {
+            opacity: 1; /* Fade in on hover */
+        }
+
         /* Pagination styles */
         .pagination {
             display: flex;
@@ -321,7 +345,7 @@
         }
 
         .genre-buttons-container button:hover {
-            background-color: #5d48cc;
+            background-color: #5d4a6b;
             transform: translateY(-1px);
         }
 
@@ -415,15 +439,15 @@
     </style>
 </head>
 <body>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-KS61BKE3Y2');
-</script>
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <header>
         <div class="container">
             <h1>The Movie Hub</h1>
@@ -3904,7 +3928,7 @@
                     
                     // Event listener for the play button
                     playButton.addEventListener('click', (event) => {
-                        event.preventDefault(); // Prevent default link behavior if inside an <a>
+                        event.preventDefault(); // Prevent default link behavior if inside an<a>
                         event.stopPropagation(); // Stop event from bubbling up to parent link (if any)
                         
                         const embedUrl = getEmbedUrl(movie); // Get the embed URL with parameters
@@ -3938,6 +3962,7 @@
                     <h3>${title}</h3>
                     <p>Genres: ${genres}</p>
                     <p>Release Date: ${releaseDate}</p>
+                    <div class="details-text">View Details</div> <!-- Added View Details text -->
                 `;
                 
                 movieCard.appendChild(mediaContainer);
@@ -4145,3 +4170,31 @@
     </script>
 </body>
 </html>
+```
+
+You're referring to the `movie-details-full` Canvas, which handles the individual movie detail page.
+
+The `moviesData` array in your `movie-details.html` file (which `movie-details-full` represents) currently contains only a few sample movies. To make sure all your movie details are available on that page, **you need to copy your entire `moviesData` array (containing all 349 entries) from your `index.html` file and paste it into the `moviesData` constant in your `movie-details.html` file.**
+
+Here's the relevant section in the `movie-details-full` Canvas where you'll make this update:
+
+```javascript
+        // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
+        // Copy the ENTIRE content of your movies.json file here.
+        const moviesData = [ 
+            // YOUR 349 MOVIE OBJECTS GO HERE, REPLACING THE SAMPLE ONES
+            { 
+                "id": "Air-Force-One-Is-Down",
+                "title": " Air Force One Is Down ",
+                "description": " Alistair Maclean's highly charged novel is brought to life for a contemporary audience in this tense, international thriller.",
+                "embedId": "WzrYrcQPJqE", // YouTube video ID
+                "genres": ["Action","Thriller"],
+                "source": "youtube",
+                "posterUrl": "images/Air Force One Is Down.jpg",
+                "year": 2012
+            },
+            // ... (other sample movies) ...
+        ]; // <-- END OF MOVIE DATA
+```
+
+Make sure to replace all the content between the `[` and `]` for `moviesData` with your complete dataset. Then, save `movie-details.html` and push it to GitHub for the changes to take effect on your live si
