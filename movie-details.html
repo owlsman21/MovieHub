@@ -1,0 +1,3809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Hub</title>
+    <!-- Embedded CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0f044c; /* Darker blue */
+            color: #e0e0e0;
+            padding: 1rem 0;
+            border-bottom: 3px solid #735bf2; /* Accent color */
+        }
+
+        header h1 {
+            margin: 0;
+            float: left;
+            color: #ffd700; /* Gold for title */
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700; /* Gold on hover */
+        }
+
+        header .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .hero {
+            background: #0f044c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #735bf2;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #5d48cc;
+        }
+
+        .section-padded {
+            padding: 40px 0;
+            background-color: #2a2a4a;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .section-padded h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .movie-card {
+            background-color: #0f044c;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding-bottom: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .movie-card img {
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #735bf2;
+        }
+        
+        .movie-card iframe {
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+            display: block;
+            border: none; /* Remove iframe border */
+            margin-bottom: 10px;
+            border-bottom: 2px solid #735bf2;
+        }
+
+        .movie-card h3 {
+            font-size: 1.2em;
+            margin: 10px 10px 5px;
+            color: #e0e0e0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .movie-card p {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            margin: 0 10px;
+        }
+
+        .movie-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .pagination button {
+            background-color: #735bf2;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background-color: #5d48cc;
+        }
+
+        .pagination button:disabled {
+            background-color: #4a4a6b;
+            cursor: not-allowed;
+        }
+
+        .pagination span {
+            align-self: center;
+            font-size: 1.1em;
+        }
+
+
+        footer {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+            border-top: 3px solid #735bf2;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1,
+            header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                margin: 0 10px;
+            }
+
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .section-padded h2 {
+                font-size: 2em;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .movie-card img, .movie-card iframe {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Movie Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h2>Welcome to The Movie Hub!</h2>
+                <p>Your ultimate destination for discovering and watching classic films.</p>
+                <a href="#all-movies-section" class="btn">Explore All Movies</a> <!-- Link to all movies section below -->
+            </div>
+        </section>
+
+        <section id="latest-releases" class="section-padded">
+            <div class="container">
+                <h2>Latest Releases</h2>
+                <div id="latest-movie-grid" class="movie-grid">
+                    <!-- Latest movies will be rendered here -->
+                    <p>Loading latest movies...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="all-movies-section" class="section-padded">
+            <div class="container">
+                <h2>Our Complete Movie Collection</h2>
+                <div class="search-bar">
+                    <input type="text" id="movie-search" placeholder="Search movies by title, genre or year...">
+                </div>
+                <div id="all-movie-grid" class="movie-grid">
+                    <!-- All movies will be rendered here with pagination -->
+                    <p>Loading all movies...</p>
+                </div>
+                <div class="pagination">
+                    <button id="prevPage">Previous</button>
+                    <span id="pageInfo">Page 1 of 1</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Embedded JavaScript for movie data and rendering -->
+    <script>
+        // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA ---
+        // Each movie object should have at least:
+        // id: Unique identifier
+        // title: Movie title
+        // posterUrl: Path to a local image (e.g., "images/movie-poster.jpg") or a direct URL to an image.
+        // embedId: The ID from Ok.ru or other platform (e.g., "6410503522969").
+        //           NOTE for Facebook: Facebook embeds often require their JS SDK which cannot be loaded from file://.
+        //           For Facebook, you might need to link directly to the video on Facebook or provide a simple image.
+        // description: Short plot summary
+        // genres: Array of genres (e.g., ["Action", "Drama"])
+        // year: Release year (Number)
+        // release_date: Full release date string (e.g., "YYYY-MM-DD")
+        const moviesData = [
+          {
+        "id": "Ulzanas-Raid", 
+        "title": "Ulzanas Raid",
+        "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
+        "embedId": "6410503522969",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/ulzana.jpg", 
+       "year": 1972 
+    },
+    {   "id": "she-wore-a-yellow-ribbon", 
+        "title": "She wore a yellow ribbon",
+        "description": "Captain Nathan Brittles heads his last assignment before retirement to stop a Native American attack. But the job gets challenging when his superior instructs him to escort two women to safety.",
+        "embedId": "8921446943385",
+        "source": "okru",
+        "genres": ["Western"],
+        "posterUrl":  "images/she wore a yellow ribbon.jpg",
+        "year": 1949
+    },
+    {   "id": "They-Died-with-Their-Boots-On", 
+        "title": "They Died with Their Boots On (1941)",
+        "description": "A movie which showcases the famous battle of Little Big Horn and the life of General Custer from the time he enters West Point military academy, the American Civil War and his death at Big Horn.",
+        "embedId": "8921449302681",
+        "source": "okru",
+        "genres": ["Western"],
+        "posterUrl":  "images/they died with their boots on.jpg",
+        "year": 1949
+     },
+    {
+        "id": "Dog-Soldiers", 
+        "title": "Dog Soldiers.720p.BluRay",
+        "description": "During a routine nighttime training mission in the Scottish Highlands, a small squad of British soldiers expected to rendezvous with a special ops unit instead find a bloody massacre with a sole survivor. The savage attackers of the special ops team return, and the men are rescued by Megan (Emma Cleasby), a zoologist who identifies what hunts them as werewolves. Without transport or communications, the group is forced to retreat to a farmhouse to wait for the full moon to disappear at dawn.",
+        "embedId": "1632050940569",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/dog soldiers.jpg",
+        "year": 2002
+    },
+    {
+        "id": "The-Shattering", 
+        "title": "THE SHATTERING_ HD ",
+        "description": "Donovan lures several friends into the woods to meet a healer with his cancer-stricken girlfriend. Lucy. As they are hunted by creatures and commandos, the friends realize they were set up to pay for Lucy's cure.",
+        "embedId": "2054985288345",
+        "source": "okru",
+        "genres": ["Thriller"],
+        "posterUrl":  "images/the shattering.jpg",
+        "year": 2015
+    },
+     {
+        "id": "Downrange", 
+        "title": "Downrange ",
+        "description": "Stranded at the side of the road after a tire blowout, a group of friends become targets for an enigmatic sniper.",
+        "embedId": "1281124600473",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/downrange.jpg",
+        "year": 2017
+    },
+    
+   
+    {
+        "id": "mary-had-a-little-lamb", 
+        "title": "mary had a little-lamb-2023",
+        "description": "A horror film reimagining the classic nursery rhyme with a terrifying twist.",
+        "embedId": "8916412664473",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/mary.jpg",
+        "year": 2023
+    },
+    {
+        "id": "The-horse-soldiers", 
+        "title": "The-horse-soldiers",
+        "description": "During the Civil War, a Union cavalry unit is sent on a perilous mission behind Confederate lines.",
+        "embedId": "8921430297241",
+        "source": "okru",
+        "genres": ["Western"],
+        "posterUrl":  "images/the horse soldiers.jpg",
+        "year": 1959
+    },
+    {
+        "id": "Training-Day", 
+        "title": "Training Day",
+        "description": "A rookie detective is pushed to his limits by a corrupt narcotics officer during a single, intense day.",
+        "embedId": "6458634209830",
+        "source": "okru",
+        "genres": ["Thriller"],
+        "posterUrl":  "images/training day.jpg",
+        "year": 2001
+    },
+    { 
+        "id": "Wrong-Turn", 
+        "title": "wrong turn",
+        "description": "A group of friends gets lost in the woods and becomes prey for a family of cannibalistic mutants.",
+        "embedId": "3630121945753",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wrong turn.jpg",
+        "year": 2001
+    },
+    {
+        "id": "Wrong-Turn2", 
+        "title": "Wrong Turn2:Dead_End",
+        "description": "Contestants on a reality TV show fight for survival against a family of inbred cannibals.",
+        "embedId": "3630122273433",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wrong turn2.jpg",
+        "year": 2007
+    },
+    {
+        "id": "Wrong-Turn3", 
+        "title": "wrong turn 3 left for dead",
+        "description": "Escaped convicts and a group of college students find themselves hunted by cannibals in the wilderness.",
+        "embedId": "3630123649689",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wrong turn3.jpg",
+        "year": 2009
+    },
+    {
+        "id": "Wrong-Turn4", 
+        "title": "Wrong Turn 4: Bloody Beginnings",
+        "description": "A group of college students gets stranded in a snowstorm and takes refuge in an abandoned asylum, where they are hunted by mutants.",
+        "embedId": "3630125222553",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wrong turn4.jpg",
+        "year": 2011
+    },
+    {
+        "id": "Wrong-Turn5", 
+        "title": "Wrong Turn 5:Bloodlines",
+        "description": "A Halloween music festival takes a terrifying turn when a group of friends becomes targets for a family of cannibals.",
+        "embedId": "3630125812377",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wrong turn5.jpg",
+        "year": 2012
+    },
+    {
+        "id": "Wrong-Turn6", 
+        "title": "Wrong Turn 6: Last Resort",
+        "description": "A young man inherits a forgotten resort, only to discover it's home to a sinister family of cannibals.",
+        "embedId": "3630126271129",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wrong turn6.jpg",
+        "year": 2014
+    },
+
+
+    {
+        "id": "Nightbreed", 
+        "title": "Nightbreed.1080p.BluRay",
+        "description": "A young man discovers a hidden world of monsters and becomes their unlikely leader.",
+        "embedId": "2575196097177",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/nightbreed.jpg",
+        "year": 1990
+    },
+    {
+        "id": "The-Sweeney", 
+        "title": "The Sweeney.720p",
+        "description": "A hard-hitting police drama following a flying squad of detectives in London.",
+        "embedId": "2480859581081",
+        "source": "okru",
+        "genres": ["Thriller"],
+        "posterUrl":  "images/the sweeney.jpg",
+        "year": 2012
+    },
+    
+    {
+        "id": "wolf-creek", 
+        "title": "Wolf Creek 720p HD",
+        "description": "Three backpackers stranded in the Australian outback fall prey to a sadistic killer.",
+        "embedId": "2054941575833",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wolf creek.jpg",
+        "year": 2005
+    },
+    
+    {
+        "id": "wolf-creek2", 
+        "title": "Wolf Creek 2 ",
+        "description": "A sequel continuing the terrifying journey of the infamous Australian serial killer, Mick Taylor.",
+        "embedId": "3290426641064",
+        "source": "okru",
+        "genres": ["Horror"],
+        "posterUrl":  "images/wolf creek2.jpg",
+        "year": 2013
+    },
+    {
+        "id": "The-Girl-Next-Door", 
+        "title": "The.Girl.Next.Door.720p.BluRay",
+        "description": "Based on a disturbing true story, a teenage girl is subjected to horrific abuse by her aunt and cousins.",
+        "embedId": "2207886740121",
+        "genres": ["Drama"],
+        "source": "okru",
+        "posterUrl":  "images/girl next door.jpg",
+        "year": 2007
+    },
+     
+    {
+        "id": "Dragon-Soldiers", 
+        "title": "Dragon Soldiers",
+        "description": "A group of soldiers must fight mythical creatures in a fantastical setting.",
+        "embedId": "1630024567449",
+        "genres": ["Sci-Fi"],
+        "source": "okru",
+        "posterUrl":  "images/dragon soldiers.jpg",
+        "year": 2020
+    },
+    {
+      
+    "id": "The-Punisher",
+    "title": "The punisher 1989",
+    "description": "An ex-cop wages a one-man war against the criminal underworld after his family is murdered.",
+    "embedId": "2099299682969",
+    "genres": ["Action"], 
+    "source": "okru",
+    "posterUrl":  "images/the punisher.jpg",
+    "year": 1989 
+},
+    
+    {
+        "id": "Master-and-Commander", 
+        "title": "Master and Commander: The Far Side of the World",
+        "description": "During the Napoleonic Wars, a daring British captain pursues a formidable French warship.",
+        "embedId": "1004226742937",
+        "genres": ["War","Action"],
+        "source": "okru",
+        "posterUrl":  "images/master.jpg",
+        "year": 2003
+    },
+    {
+        "id": "I-am-wrath",
+        "title": "I am wrath",
+        "description": "A man seeks revenge for his wife's murder when corrupt police fail to catch the killers.",
+        "embedId": "1060182231705",
+        "genres": ["Action"],
+        "source": "okru",
+        "posterUrl":  "images/i am wrath.jpg",
+        "year": 2016
+    },
+    {
+        "id": "Brawl-in-Cell-Block-99",
+        "title": "Brawl in Cell Block 99.1080",
+        "description": "A former boxer and drug runner ends up in a brutal prison, forced to make impossible choices.",
+        "embedId": "1200399846041",
+        "genres": ["Drama","Action"],
+        "source": "okru",
+        "posterUrl":  "images/brawl in cell block 99.jpg",
+        "year": 2017
+    },
+    {
+        "id": "True-romance",
+        "title": "True romance",
+        "description": "A comic book nerd and a call girl fall in love and go on the run from the mob.",
+        "embedId": "1189170907801",
+        "genres": ["Drama","Action"],
+        "source": "okru",
+        "posterUrl":  "images/true romance.jpg",
+        "year": 1993
+    },
+    {
+        "id": "Police-Story",
+        "title": "Police Story",
+        "description": "A Hong Kong detective is framed for murder and must clear his name while fighting criminals.",
+        "embedId": "1189169334937",
+        "genres": ["Action"],
+        "source": "okru",
+        "posterUrl":  "images/police story.jpg",
+        "year": 1985
+    },
+    {
+        "id": "Heat",
+        "title": "Heat full movie",
+        "description": "A professional thief and an obsessive detective engage in a high-stakes game of cat and mouse.",
+        "embedId": "1189169138329",
+        "genres": ["Action"],
+        "source": "okru",
+        "posterUrl":  "images/heat.jpg",
+        "year": 1995
+    },
+    {
+        "id": "The-Guvnors",
+        "title": "The.Guvnors.2014.720p.BluRay",
+        "description": "A retired gang leader is drawn back into London's violent underworld.",
+        "embedId": "1123590015641",
+        "genres": ["Action","Drama"],
+        "source": "okru",
+        "posterUrl":  "images/the guvnors.jpg",
+        "year": 2014
+    },
+    {
+        "id": "north-vs-south",
+        "title": "North vs South",
+        "description": "A conflict between two opposing factions in a historical or fictional setting.",
+        "embedId": "1157638130329",
+        "genres": ["Drama","Action"],
+        "source": "okru",
+        "posterUrl":  "images/north vs south.jpg",
+        "year": 2015
+    },
+    
+    
+    {
+        "id": "Dead-Rush",
+        "title": "Dead Rush",
+        "description": "ADavid's life is turned upside down when an unknown illness ignites a full-blown zombie epidemic, leaving survivors with few places to hide. David rushes home to protect his pregnant wife, along the way gathering survivors.",
+        "embedId": "6410479798937",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/dead rush.jpg",
+        "year": 2016
+    },
+    {
+        "id": "Fragile",
+        "title": "Fragile 2005 BluRay 720p",
+        "description": "At her new job in a rundown children's hospital, a nurse desperately tries to keep her patients safe from a plague of random, mysterious attacks.",
+        "embedId": "2575196097177",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/fragile.jpg",
+        "year": 2005
+    },
+    {
+        "id": "Darkness-Falls",
+        "title": "Darkness Falls",
+        "description": "After his wife's suicide, Detective Jeff Anderson becomes convinced that she has been murdered. Obsessed with his investigation, he finds out that his wife was the victim of a team of father-and-son serial killers and sets out to stop them.",
+        "embedId": "2218518055577",
+        "genres": ["Drama","Action"],
+        "source": "okru",
+        "posterUrl":  "images/darkness falls.jpg",
+        "year": 2020
+    },
+    {
+        "id": "The-Babysitter",
+        "title": "The Babysitter 2017",
+        "description": "When Cole stays up past his bedtime, he discovers that his hot baby sitter belongs to a satanic cult",
+        "embedId": "1012486376089",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/the babysitter.jpg",
+        "year": 2017
+    },
+   
+    {
+        "id": "Colditz",
+        "title": "Colditz",
+        "description": "While WWII Allied officer Jack Rose is held prisoner in Germany's notorious Colditz Castle, he recruits a band of fellow escape artists in the ultimate break-out only to discover that the greatest betrayal awaits him on safe ground.",
+        "embedId": "6YHTnOquIBY",
+        "genres": ["Drama","war"],
+        "source": "youtube",
+        "posterUrl":  "images/colditz.jpg",
+        "year": 2005
+    },
+    {
+        "id": "Please-Sir",
+        "title": "Please Sir",
+        "description": "Fun with the Fenn st gang",    
+        "embedId": "v6rgy5d/?pub=792qb",
+        "genres": ["Comedy"],
+        "source": "rumble",
+        "posterUrl":  "images/please sir.jpg",
+        "year": 1968
+    },
+    {   "id": "cass",
+        "title": "Cass",
+        "description": " Cass is a 2008 British crime drama film. It stars Nonso Anozie as Cass Pennant and is directed by Jon S. Baird. Cass is based on the true story of the life of Cass Pennant, adapted from his book.",
+        "embedId": "_uurzT-1Sck",
+        "genres": ["Drama"],
+        "source": "youtube",
+        "posterUrl":  "images/cass.jpg",
+        "year": 2008
+    },
+    {   "id": "Rise-of-the-Footsoldier",
+        "title": "Rise of the Footsoldier 2021",
+        "description": " Rise of the Footsoldier is a British gangster film franchise written and directed by Julian Gilbey, Will Gilbey, Ricci Harnett, Zackary Adler, Andrew Loveday and Nick Nevern, ",
+        "embedId": "qLFepx1SF80",
+        "genres": ["Drama"],
+        "source": "youtube",
+        "posterUrl":  "images/rise of the foot soldier.jpg",
+        "year": 2007
+
+    },
+     
+    {   "id": "The-Hot-Potato",
+        "title": "The Hot Potato ",
+        "description": " The Hot Potato is a 2012 British comedy crime thriller film. It was directed and written by Tim Lewiston and stars Ray Winstone, Colm Meaney and Jack Huston in the lead roles.",
+        "embedId": "O85tflN5Krg",
+        "genres": ["Drama","Comedy"],
+        "source": "youtube",
+        "posterUrl":  "images/hot potato.jpg",
+        "year": 2011
+    },
+    {   "id": "Open-Graves",
+        "title": "Open Graves ",
+        "description": " A group of surfers discover an old board game which claims a life every time it is played.",
+        "embedId": "9519433386534",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/open graves.jpg",
+        "year": 2009
+    },
+    {   "id": "Ouija",
+        "title": "Ouija: A New Beginning  ",
+        "description": "Molly Price is a woman on the run, but when her oldest daughter finds a Ouija board and attempts to communicate with her deceased father, she invites the spirit of an ancient witch into her soul and puts the entire family at risk.",
+        "embedId": "9517571574310",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/ouija.jpg",
+        "year": 2025
+    },
+    {   "id": "Abduct",
+        "title": "Abduct ",
+        "description": " A woman's peaceful mountain getaway takes a bizarre turn when her boyfriend disappears, and a random naked man shows up claiming to be him.",
+        "embedId": "9517374966310",
+        "genres": ["Drama"],
+        "source": "okru",
+        "posterUrl":  "images/abduct.jpg",
+        "year": 2025
+    },
+    {   "id": "I-Was-Honey-Boo-Boo",
+        "title": "I Was Honey Boo Boo (2025)",
+        "description": " Alana Thompson, famously known as honey boo boo reveals her story of rising to fame and the secrets behind the cameras.",
+        "embedId": "9517224757798",
+        "genres": ["Drama"],
+        "source": "okru",
+        "posterUrl":"images/boo.jpg",
+        "year": 2025
+    },
+    {   "id": "The-Surrender",
+        "title": "The Surrender ",
+        "description": " When the family patriarch dies, a grieving mother and daughter risk their lives to perform a brutal resurrection ritual and bring him back from the dead.",
+        "embedId": "9516826429990",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/the surrender.jpg",
+        "year": 2025
+    },
+
+    {   "id": "Final-Destination-Bloodlines",
+        "title": "Final Destination: Bloodlines 2025 ",
+        "description": " Plagued by a recurring violent nightmare, a college student returns home to find the one person who can break the cycle and save her family from the horrific fate that inevitably awaits them.",
+        "embedId": "9514534111782",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/final destination bloodlines.jpg",
+        "year": 2025
+    },
+    {   "id": "Antisocial-2",
+        "title": "Antisocial 2 ",
+        "description": "Years after having her newborn child stolen from her, Sam searches a world infested with infected users from the Social Redroom website. After befriending a young girl named Bean, Sam is captured and locked in a facility dedicated to finding a cure for the Redroom Virus",
+        "embedId": "9506057947686",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/antisocial 2.jpg",
+        "year": 2015
+    },
+    {   "id": "Antisocial",
+        "title": "Antisocial ",
+        "description": " Five university friends gather at a house party to ring in the New year. Unbeknownst to them, an epidemic has erupted outside, causing outbreaks around the world.",
+        "embedId": "9500551088678",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/antisocial.jpg",
+        "year": 2013
+    },
+    {   "id": "Crossfire",
+        "title": "Crossfire 2022",
+        "description": "After a shooting, Jo's family vacations turns into turmoil.",
+        "embedId": "pF_YIqju9gw",
+        "genres": ["Action"],
+        "source": "youtube",
+        "posterUrl":  "images/crossfire.jpg",
+        "year": 2022
+    },
+    {   "id": "Blood-Predator",
+        "title": "Blood Predator",
+        "description": " A handful of people wind up stranded in a desolate snowy mountain area in the wake of an airplane crash. They seek refuge in an old abandoned cabin. The group find themselves being terrorized by a lethal predatory extraterrestrial beast residing in the basement of the cabin.",
+        "embedId": "wN6OhOR43a4",
+        "genres": ["Horror"],
+        "source": "youtube",
+        "posterUrl":  "images/blood predator.jpg",
+        "year": 2007
+    },
+    {   "id": "Archangel",
+        "title": "Archangel",
+        "description": " A British college professor, working in Russia, investigates certain mysteries surrounding the life and death of Joseph Stalin.",
+        "embedId": "zsZYaPNWcl4",
+        "genres": ["Drama"],
+        "source": "youtube",
+        "posterUrl":  "images/archangel.jpg",
+        "year": 2005
+    },
+    {   "id": "Assassin",
+        "title": "Assassin",
+        "description": " Jamie is a contract killer tasked with eliminating a crooked official, but complications arise when he falls for the daughter of his target.",
+        "embedId": "jTR6N8Ip6DM",
+        "genres": ["Action"],
+        "source": "youtube",
+        "posterUrl":  "images/Assassin.jpg",
+        "year": 2015
+    },
+    {   "id": "Air-Force-One-Is-Down",
+        "title": " Air Force One Is Down ",
+        "description": " Alistair Maclean's highly charged novel is brought to life for a contemporary audience in this tense, international thriller.",
+        "embedId": "WzrYrcQPJqE",
+        "genres": ["Action","Thriller"],
+        "source": "youtube",
+        "posterUrl":  "images/Air Force One Is Down.jpg",
+        "year": 2012
+    },
+    {   "id": "Union",
+        "title": "Union ",
+        "description": "A woman disguises herself as her dead brother, Henry, in order to survive in the Confederate ranks during the Civil War. He marries a widow to rescue her from an arranged marriage. They keep each others secrets and find true love.",
+        "embedId": "1367854418585",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/union.jpg",
+        "year": 2019
+    },
+    {   "id": "Decoys",
+        "title": "Decoys ",
+        "description": " Luke and Roger are just another couple of college guys trying to lose their virginity. But when Luke sees something unusual, he begins to suspect that the girls on campus aren't exactly human.",
+        "embedId": "rWS9TaHh0Jo",
+        "genres": ["Horror","Comedy"],
+        "source": "youtube",
+        "posterUrl":  "images/decoys.jpg",
+        "year": 2004
+    },
+    {   "id": "Mercury-Plains",
+        "title": "Mercury Plains",
+        "description": " A troubled man runs away to Mexico and is recruited to join a paramilitary group of teens fighting the drug cartels. He proves himself to the group, but questions their motive.",
+        "embedId": "qwkiu0sk-9k",
+        "genres": ["Action","Drama"],
+        "source": "youtube",
+        "posterUrl":  "images/mercury plains.jpg",
+        "year": 2004
+    },
+    {   "id": "Wolf-Town",
+        "title": " Wolf Town",
+        "description": " Kyle, a shy college student finds himself and three of his friends trapped in an old western ghost town by a pack of ferocious wolves and has to overcome his personal fears to confront the wolves and lead his friends to safety.",
+        "embedId": "978941381273",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/wolf town.jpg",
+        "year": 2011
+    },
+    {   "id": "Shadowland",
+        "title": "Shadowland 2008 ",
+        "description": "A taut reinvention of vampire lore, Shadowland opens in modern day North America, where construction workers uncover an old stone cross and what appears to be a wooden stake. They remove the stake from the ground, allowing Laura (Caitlin McIntosh), a slumbering vampire, to revive and rise from the earth",
+        "embedId": "979663850137",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/shadowland.jpg",
+        "year": 2008
+    },
+    
+    {    "id": "Aliens-vs-Predator-Requiem.",
+        "title": "Aliens.vs.Predator.Requiem.2007 ",
+        "description": " Residents (Steven Pasquale, Reiko Aylesworth, John Ortiz) of Gunnison, Colorado, are caught up in the crossfire when two deadly extraterrestrial species bring their longstanding conflict to Earth. On the one side, nearly indestructible Aliens; on the other, a lone Predator whose mission is to wipe out all traces of the Alien infestation from Earth, no matter who gets in the way.",
+        "embedId": "1005714934425",
+        "genres": ["Horror", "Sci-Fi"],
+        "source": "okru",
+        "posterUrl":  "images/aliens vs predator requiem.jpg",
+        "year": 2007
+    },
+    {  
+         "id": "The-Devils-Rock",
+        "title": "The Devil's Rock ",
+        "description": " Set in the Channel Islands on the eve of D Day, two Kiwi commandos, sent to destroy German gun emplacements to distract Hitler's forces away from Normandy, discover a Nazi occult plot to unleash demonic forces to win the war",
+        "embedId": "979809208985",
+        "genres": ["Horror"],
+        "source": "okru",
+        "posterUrl":  "images/the devils rock.jpg",
+        "year": 2011
+    },
+    {   "id": "The-Last-of-the-Mohicans",
+        "title": "The Last of the Mohicans  ",
+        "description": "The last members of a dying Native American tribe, the Mohicans -- Uncas (Eric Schweig), his father Chingachgook (Russell Means), and his adopted half-white brother Hawkeye (Daniel Day-Lewis) -- live in peace alongside British colonists. But when the daughters (Madeleine Stowe, Jodhi May) of a British colonel are kidnapped by a traitorous scout, Hawkeye and Uncas must rescue them in the crossfire of a gruesome military conflict of which they wanted no part: the French and Indian War.",
+        "embedId": "967004064409",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/the last of the mohicans.jpg",
+        "year": 1992
+    },
+    {   "id": "Mohawk",
+        "title": "Mohawk ",
+        "description": "Late in the War of 1812, a young Mohawk woman and her two lovers battle a squad of American soldiers hell-bent on revenge.",
+        "embedId": "1351353633433",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/mohawk.jpg",
+        "year": 2018
+    },
+    
+    {   "id": "Young-Guns-2",
+        "title": "Young Guns 2 ",
+        "description": "En route to Mexico from the United States, Billy the Kid (Emilio Estevez) and his associates are pursued by federal agents hell-bent on bringing them to justice. But when Billy, Doc (Kiefer Sutherland) and Chavez (Lou Diamond Phillips) prove too difficult to track down, the frustrated authorities enlist an old friend of theirs, reformed outlaw Pat Garrett (William Petersen), to take down the elusive gunslinger. But Billy has a head start, and his crew of outlaws is growing by the minute.",
+        "embedId": "1012291275417",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/young guns 2.jpg",
+        "year": 1990
+    },
+     {  "id": "Wyatt-Earp",
+        "title": "Wyatt Earp.HD ",
+        "description": " The epic biography of western lawman Wyatt Earp, who at an early age, is taught that nothing matters more than family and the law. He becomes a respected sheriff in Dodge City and Tombstone. Joined by his brothers and Doc Holliday, Earp wages war on the dreaded Clanton and McLaury gangs.",
+        "embedId": "1010676468377",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/wyatt earp.jpg",
+        "year": 1994
+    },
+     {  "id": "The-Salvation",
+        "title": "The.Salvation.720p.BluRay ",
+        "description": " After shooting the man who murdered his wife, a Danish settler (Mads Mikkelsen) incurs the wrath of the man's brother (Jeffrey Dean Morgan), a ruthless land baron who rules their frontier town.",
+        "embedId": "1010670897817",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/the salvation.jpg",
+        "year": 2014
+    },
+     {  "id": "The-Burrowers",
+        "title": "The.Burrowers. ",
+        "description": " A rescue party comes face to face with underground creatures attacking a town.",
+        "embedId": "1010671487641",
+        "genres": ["Horror", "Western"],
+        "source": "okru",
+        "posterUrl":  "images/the burrowers.jpg",
+        "year": 2008
+    },
+     {  "id": "The-Revenant",
+        "title": "The Revenant ",
+        "description": "While exploring the uncharted wilderness in 1823, frontiersman Hugh Glass (Leonardo DiCaprio) sustains life-threatening injuries from a brutal bear attack. When a member (Tom Hardy) of his hunting team kills his young son (Forrest Goodluck) and leaves him for dead, Glass must utilize his survival skills to find a way back to civilization. Grief-stricken and fueled by vengeance, the legendary fur trapper treks through the snowy terrain to track down the man who betrayed him.",
+        "embedId": "1009119464089",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/the revenant.jpg",
+        "year": 2015
+    },
+     {  "id": "Hostiles",
+        "title": "Hostiles",
+        "description": "In 1892, legendary Army Capt. Joseph Blocker reluctantly agrees to escort a dying Cheyenne war chief and his family back to their tribal land. Embarking on a harrowing and perilous journey from Fort Berringer, N.M., to the grasslands of Montana, they soon encounter a young widow whose family was killed on the plains. The travelers must now band together to survive a punishing landscape that's crawling with hostile Comanches and vicious outliers.",
+        "embedId": "1009119398553",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/hostiles.jpg",
+        "year": 2017
+    },
+     {  "id": "Tombstone",
+        "title": "Tombstone ",
+        "description": "Wyatt Earp (Kurt Russell) and his brothers, Morgan (Bill Paxton) and Virgil (Sam Elliott), have left their gunslinger ways behind them to settle down and start a business in the town of Tombstone, Ariz. While they aren't looking to find trouble, trouble soon finds them when they become targets of the ruthless Cowboy gang. Now, together with Wyatt's best friend, Doc Holliday (Val Kilmer), the brothers pick up their guns once more to restore order to a lawless land.",
+        "embedId": "967267846809",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/tombstone.jpg",
+        "year": 1993
+    },
+     {  "id": "Young-Guns",
+        "title": "Young Guns (1988) ",
+        "description": "John Tunstall (Terence Stamp), a distinguished British gentleman, employs downtrodden youths to tend his herd on the New Mexican frontier. When Tunstall is gunned down by the crooked Lawrence G. Murphy (Jack Palance), a ragtag group of cow hands -- including Doc Scurlock (Kiefer Sutherland), Richard Brewer (Charlie Sheen) and young William billy the kid Bonney (Emilio Estevez) -- ride forth in search of bloody vengeance for the death of their beloved mentor.",
+        "embedId": "970239642265",
+        "genres": ["Western"],
+        "source": "okru",
+        "posterUrl":  "images/young guns.jpg",
+        "year": 1988
+    },
+     {  "id": "In-the-Tall-Grass",
+        "title": "In the Tall Grass ",
+        "description": " After hearing a young boy's cry for help, a sister and brother venture into a vast field of tall grass in Kansas but soon discover there may be no way out...and that something evil lurks within.",
+        "embedId": "1590932015654",
+        "genres": ["Horror","Sci-Fi"],
+        "source": "okru",
+        "posterUrl":  "images/in the tall grass.jpg",
+        "year": 2019
+    },
+     {  "id": "The-Inbetweeners-Movie",
+        "posterUrl":  "images/The-Inbetweeners-Movie.jpg",
+        "year": 2011,
+        "title": "The.Inbetweeners.Movie ",
+        "description": "Now that their final year of school is over, friends Will, Simon, Neil and Jay are off to Crete for a holiday. Hoping to get as much sun, sea and sex as possible, the boys quickly find more trouble than they had bargained for.",
+        "embedId": "1900462607001",
+        "genres": ["Comedy"],
+        "source": "okru"
+    },
+     {  "id": "The-Inbetweeners2-Movie",
+        "posterUrl":  "images/The.Inbetweeners.2.jpg",
+        "year": 2014,
+        "title": "The Inbetweeners 2.1080p.BluRay ",
+        "description": "Jay, Neil, Simon and Will reunite in Australia after the gang finds out that Jay is indulging in a life of hedonism and promiscuity as a star DJ in Sydney. However, when they get there, they discover that Jay has vastly overstated his success.",
+        "embedId": "1900467325593",
+        "genres": ["Comedy"],
+        "source": "okru"
+    },
+     {  "id": "Nil-by-mouth",
+        "posterUrl":  "images/Nil by mouth.jpg",
+        "year": 1997,
+        "title": "Nil by mouth ",
+        "description": "In a working-class London neighborhood, a highly dysfunctional family struggles to survive. The widowed Janet (Laila Morse), a former factory worker, has welcomed relatives into her home. In addition to her elderly mother, Kath (Edna Doré), and her son, Billy (Charlie Creed-Miles), Janet lives with her daughter, Valerie (Kathy Burke), and Valerie's abusive, alcoholic husband, Ray (Ray Winstone). Together they attempt to work out their differences, but drugs, booze and violence get in the way.",
+        "embedId": "970686663321",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "One-Flew-Over-The-Cuckoos-Nest",
+        "posterUrl":  "images/One Flew Over The Cuckoos Nest.jpg",
+        "year": 1975,
+        "title": "One Flew Over The Cuckoos Nest  720p BluRay ",
+        "description": "A criminal pleads insanity and is admitted to a mental institution, where he rebels against the oppressive nurse and rallies up the scared patients.",
+        "embedId": "1490043603609",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Safe-Haven",
+        "posterUrl":  "images/Safe Haven.jpg",
+        "year": 2013,
+        "title": "Safe Haven ",
+        "description": "A young woman with mysterious past land in Southport, North Carolina where her bond with a widower forces her to confront the dark secret that haunts her.",
+        "embedId": "977407052441",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "urge",
+        "posterUrl":  "images/urge.jpg",
+        "year": 2016,
+        "title": "urge ",
+        "description": " An island getaway turns deadly when a mysterious nightclub owner (Pierce Brosnan) introduces a group of friends to a drug that can't be taken more than one time.",
+        "embedId": "1076555680409",
+        "genres": ["Drama","Sci-Fi"],
+        "source": "okru"
+    },
+       {"id": "The-Pilots-Wife",
+        "posterUrl":  "images/the pilots wife.jpg",
+        "year": 2002,
+        "title": "The Pilots Wife (2002)",
+        "description": " Kathryn is distraught at the news of her husband's death delivered by a stranger from the airline for whom he was a pilot. She starts however to uncover information which leads to her arrival in London for further investigation...and further devastation.",
+        "embedId": "1092629367449",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+       {
+        "id": "Stan-and-Ollie",
+        "posterUrl":  "images/stan and ollie.jpg",
+        "year": 2019,
+        "title": "Stan and Ollie.HD ",
+        "description": "Laurel and Hardy, the world's most famous comedy duo, attempt to reignite their film careers as they embark on what becomes their swan song - a gruelling theatre tour of post-war Britain.",
+        "embedId": "1198585678489",
+        "genres": ["Drama","Comedy"],
+        "source": "okru"
+    },
+       { "id": "The-Brown-Bunny",
+        "posterUrl":  "images/the brown bunny.jpg",
+        "year": 2003,
+        "title": "The Brown Bunny 2003 ",
+        "description": "A motorcycle racer (Vincent Gallo) journeys cross country in search of women to take the place of the one true love (Chloë Sevigny) of his life.",
+        "embedId": "1232238086809",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+       {"id": "The-Guard-of-Auschwitz",
+        "posterUrl":  "images/The Guard of Auschwitz.jpg",
+        "year": 2018,
+        "title": "The Guard of Auschwitz.720p ",
+        "description": " Follows the events of the Holocaust through the eyes of an SS Soldier.",
+        "embedId": "1265936632473",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+       {"id": "A-Lonely-Place-to-Die",
+        "posterUrl":  "images/A Lonely Place to Die.jpg",
+        "year": 2011,
+        "title": "A Lonely Place to Die",
+        "description": "While hiking and climbing in the Scottish Highlands, a group of five mountaineers discover a young Serbian girl buried in a small chamber. In the attempt to get the girl to safety, they become caught up in a terrifying game of cat and mouse with the kidnappers.",
+        "embedId": "968086391449",
+        "genres": ["Drama","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "Vendetta",
+        "posterUrl":  "images/vendetta.jpg",
+        "year": 2013,
+        "title": "Vendetta",
+        "description": "Special ops interrogation officer Jimmy Vickers tracks down a gang who slaughtered his parents. With police closing in & his old unit on his trail, he has to to evade capture long enough to complete his gruesome crusade.",
+        "embedId": "6410477177497",
+        "genres": ["Action","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "Deepwater",
+        "posterUrl":  "images/Deepwater.jpg",
+        "year": 2005,
+        "title": "Deepwater",
+        "description": " Nat Banyon (Lucas Black), a drifter en route to Wyoming, rescues Herman Finch (Peter Coyote) at the scene of a car accident. Grateful for his assistance, Finch offers Nat a job and free room and board at his hotel. There, Nat meets Finch's beautiful wife, Iris (Mia Maestro), and learns that his new boss is the ringleader of a local crime syndicate. Fearful that he too will fall prey to Finch's criminal machinations, Nat hatches a plan to run off with Iris.",
+        "embedId": "1333519387289",
+        "genres": ["Drama","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "Hamburger-Hill",
+        "posterUrl":  "images/Hamburger Hill.jpg",
+        "year": 1987,
+        "title": "Hamburger.Hill.1987 ",
+        "description": " A brutal and realistic war film focuses on the lives of a squad of 14 U.S. Army soldiers of B Company, 3rd Battalion, 187th Infanty Regiment, 101st Airborne Division during the brutal 10 day (May 11-20, 1969) battle for Hill 937 in the A Shau Valley of Vietnam as they try again and again to take the fortified hill held by the North Vietnamese, and the faults and casualties they take every time in which the battle was later dubbed Hamburger Hill because enemy fire was so fierce that the fusillade of bullets turned assaulting troops into shreded hamburger meat.",
+        "embedId": "1440487049881",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "Threads",
+        "posterUrl":  "images/Threads.jpg",
+        "year": 1984,
+        "title": "Threads",
+        "description": " The effects of a nuclear holocaust on the working class city of Sheffield, England and the eventual long-term effects of nuclear war on civilization.",
+        "embedId": "6410542975641",
+        "genres": ["War","Drama"],
+        "source": "okru"
+    },
+     {  "id": "Mission-of-Honor",
+        "posterUrl":  "images/mission of honor.jpg",
+        "year": 2018,
+        "title": "Mission of Honor",
+        "description": "The exploits of 303 Squadron RAF during the Battle of Britain. The squadron consisted of Polish pilots, many of whom were veterans of the air battles involved in Germany's invasion of Poland.",
+        "embedId": "1004758633113",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "bravo-two-zero",
+        "posterUrl":  "images/bravo two zero.jpg",
+        "year": 1999,
+        "title": "bravo two zero ",
+        "description": "British soldier Andy McNab (Sean Bean) leads a British Special Air Services patrol deployed during the Gulf War to take down Saddam Hussein's growing arsenal of Scud missiles. The fearless unit successfully inserts itself behind enemy lines, but inclement weather and loss of radio communication threatens to doom its mission. Captured and taken prisoner by the Iraqi army, the heroic soldiers of Bravo Two Zero must overcome the odds to escape almost certain torture or death.",
+        "embedId": "976455010969",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "My-Lai-Four",
+        "posterUrl":  "images/My Lai Four.jpg",
+        "year": 2010,
+        "title": "My Lai Four ",
+        "description": "The reenactment of the brutal massacre in Mi Lai a village in South Vietnam perpetrated by American Military forces on 16th of March 1968.",
+        "embedId": "1004028431001",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "Lone-Survivor",
+        "posterUrl":  "images/Lone Survivor.jpg",
+        "year": 2013,
+        "title": "Lone Survivor ",
+        "description": "Marcus Luttrell and his team set out on a mission to capture or kill notorious Taliban leader Ahmad Shah, in late June 2005. Marcus and his team are left to fight for their lives in one of the most valiant efforts of modern warfare.",
+        "embedId": "1015881337497",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "Alone-We-Fight",
+        "posterUrl":  "images/Alone We Fight.jpg",
+        "year": 2018,
+        "title": "Alone We Fight.1080p",
+        "description": "On a mission to stop an advancing German unit from breaking through the Allied line during WWII, a small -- but determined -- band of American soldiers ventures into dangerous enemy territory.",
+        "embedId": "1086013311641",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "Act of valor",
+        "posterUrl":  "images/Act of valor.jpg",
+        "year": 2012,
+        "title": "Act of valor",
+        "description": "An elite team of Navy SEALs embark on a covert mission to recover a kidnapped CIA agent.",
+        "embedId": "1460879952537",
+        "genres": ["War","Action"],
+        "source": "okru"
+    },
+     {  "id": "The-Green-Berets",
+        "posterUrl":  "images/The Green Berets.jpg",
+        "year": 1968,
+        "title": "The Green Berets.720p.BluRay ",
+        "description": "Col. Mike Kirby picks two teams of crack Green Berets for a mission in South Vietnam. First off is to build and control a camp that is trying to be taken by the enemy the second mission is to kidnap a North Vietnamese General.",
+        "embedId": "1447574112921",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "Black-Hawk-Down",
+        "posterUrl":  "images/Black Hawk Down.jpg",
+        "year": 2001,
+        "title": "Black Hawk Down",
+        "description": " Action/war drama based on the best-selling book detailing a near-disastrous mission in Somalia on October 3, 1993. On this date nearly 100 U.S. Army Rangers, commanded by Capt. Mike Steele, were dropped by helicopter deep into the capital city of Mogadishu to capture two top lieutenants of a Somali warlord. This led to a large and drawn-out firefight between the Army Ranges, US Special Forces, and hundreds of Somali gunmen; resulting in the destruction of two U.S. Black Hawk helicopters. The film focuses on the heroic efforts of various Rangers to get to the downed black hawks, centering on SSG Eversmann, leading the Ranger unit Chalk Four to the first black hawk crash site, Chief Warrant Officer Durant who was captured after being the only survivor of the second black hawk crash, as well as many others who were involved.",
+        "embedId": "1440484952729",
+        "genres": ["War"],
+        "source": "okru"
+    },
+     {  "id": "Green-Street-Hooligans-2",
+        "posterUrl":  "images/Green Street Hooligans 2.jpg",
+        "year": 2009,
+        "title": "Green Street Hooligans 2 (2009) ",
+        "description": " After the brutal mass brawl fans of two football teams go to jail, where their feud raised to a new level of cruelty.",
+        "embedId": "10207745018482",
+        "genres": ["Drama","Crime"],
+        "source": "okru"
+    },
+     {  "id": "Green-Street",
+        "posterUrl":  "images/Green Street.jpg",
+        "year": 2005,
+        "title": "Green Street 720p ",
+        "description": "A wrongfully expelled Harvard undergrad moves to London, where he is introduced to the violent underworld of football hooliganism.",
+        "embedId": "10207743511154",
+        "genres": ["Drama","Crime"],
+        "source": "okru"
+    },
+     {  "id": "The-Bayou",
+        "posterUrl":  "images/The Bayou 2025.jpg",
+        "year": 2025,
+        "title": "The Bayou 2025",
+        "description": " Vacation turns disaster when Houston grad, Kyle and her friends escape a plane crash in the desolate Louisiana everglades, only to discover there's something way more dangerous lurking in the shallows.",
+        "embedId": "10413556304498",
+        "genres": ["Thriller","Horror"],
+        "source": "okru"
+    },
+    
+     {  "id": "Teeth",
+        "posterUrl":  "images/Teeth.jpg",
+        "year": 2007,
+        "title": "Teeth",
+        "description": "Still a stranger to her own body, a high school student discovers she has a physical advantage when she becomes the object of male violence.",
+        "embedId": "9490268686886",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "Redhead",
+        "posterUrl":  "images/Redhead.jpg",
+        "year": 2023,
+        "title": "Redhead ",
+        "description": " Cannibalism and depravity drive Autumn Blacksmith, now widowed, to engage in a relentless revenge binge. Will she kill every man around her?",
+        "embedId": "9461777959462",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "Drop",
+        "posterUrl":  "images/Drop.jpg",
+        "year": 2025,
+        "title": "Drop 2025 ",
+        "description": " A widowed mother's first date in years takes a terrifying turn when she's bombarded with anonymous threatening messages on her phone during their upscale dinner, leaving her questioning if her charming date is behind the harassment.",
+        "embedId": "9453163252262",
+        "genres": ["Drama","Thriller"],
+        "source": "okru"
+    },
+
+     {  "id": "Bone Face",
+        "posterUrl":  "images/Boneface.jpg",
+        "year": 2025,
+        "title": "Bone Face (2025) ",
+        "description": "When a masked killer slaughters several campers in a small town, a sheriff and a deputy track the murderer to a local diner where, using their investigative skills, they must discover which person in the diner is the actual killer.",
+        "embedId": "9235304614438",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "Piglet",
+        "posterUrl":  "images/Piglet.jpg",
+        "year": 2025,
+        "title": "Piglet (2025) ",
+        "description": " On Kate's 21st birthday camping trip, her friends encounter Piglet, a monstrous human-pig hybrid who brutally murders one of them. They uncover Piglet's origins and Kate must confront her past to survive the relentless killer.",
+        "embedId": "9190687115814",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "Terrifier-3",
+        "posterUrl":  "images/terrifier 3.jpg",
+        "year": 2024,
+        "title": "Terrifier 3",
+        "description": "Art the Clown is set to unleash chaos on the unsuspecting residents of Miles County as they peacefully drift off to sleep on Christmas Eve.",
+        "embedId": "7979902568998",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "Near-Dark",
+        "posterUrl":  "images/near dark.jpg",
+        "year": 1987,
+        "title": "Near Dark (1987)",
+        "description": " A small-town farmer's son reluctantly joins a traveling group of vampires after he is bitten by a beautiful drifter.",
+        "embedId": "7723308616230",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "Lowlifes",
+        "posterUrl":  "images/Lowlifes.jpg",
+        "year": 2024,
+        "title": "Lowlifes (2024)",
+        "description": "The survival instincts of a road-tripping family are put to the test when they have no other choice but to stay the night at a remote homestead.",
+        "embedId": "7499099933222",
+        "genres": ["Thriller","Horror"],
+        "source": "okru"
+    },
+
+     {  "id": "IT",
+        "posterUrl":  "images/IT 1990.jpg",
+        "year": 1990,
+        "title": "IT 1990 ",
+        "description": "In 1960, seven pre-teen outcasts fight an evil demon who poses as a child-killing clown. Thirty years later, they reunite to stop the demon once and for all when it returns to their hometown.",
+        "embedId": "7404707383846",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {   "id": "Geronimo",
+        "posterUrl":  "images/Geronimo.jpg",
+        "year": 1993,
+        "title": "Geronimo: An American Legend ",
+        "description": " The story of the Apache chief and his armed resistance to the U.S. Government's subjugation of his people.",
+        "embedId": "7286425389606",
+        "genres": ["Western"],
+        "source": "okru"
+    },
+
+     {  "id": "The-Bad-Seed",
+        "posterUrl":  "images/The bad seed.jpg",
+        "year": 2018,
+        "title": "The Bad Seed",
+        "description": "A father is forced to question everything he thought he knew about his daughter when he believes that she might have played a role in the tragic death of one of her classmates.",
+        "embedId": "1008261991065",
+        "genres": ["Drama","Thriller"],
+        "source": "okru"
+    },
+
+     {  "id": "PayBack",
+        "posterUrl":  "images/Payback.jpg",
+        "year": 1999,
+        "title": "PayBack 1999 ",
+        "description": "Porter (Mel Gibson) is a thief betrayed by both his wife, Lynn (Deborah Kara Unger), and his partner, Val (Gregg Henry), when he is shot in the back after a heist. Slowly, Porter recovers from his wounds and begins a search for Val, intent on recovering his share of the money they stole together. With the aid of prostitute Rosie (Maria Bello), Porter captures Val but still cannot find his cash. For this, Porter will have to challenge an imposing crime syndicate called the Outfit.",
+        "embedId": "979802917529",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+
+     {  "id": "Bone-Tomahawk",
+        "posterUrl":  "images/Bone Tomahawk.jpg",
+        "year": 2015,
+        "title": "Bone Tomahawk (2015) ",
+        "description": " In the Old West, a small-town sheriff and his rag-tag posse set out to rescue several townspeople from a brutal cave-dwelling, cannibalistic Indian tribe.",
+        "embedId": "6461509208614",
+        "genres": ["Horror","Western"],
+        "source": "okru"
+    },
+      { "id": "Jennifers-Body",
+        "posterUrl":  "images/Jennifers Body.jpg",
+        "year": 2019,
+        "title": "Jennifers Body 2019 ",
+        "description": " A newly-possessed high-school cheerleader turns into a succubus who specializes in killing her male classmates. Can her best friend put an end to the horror?",
+        "embedId": "967038929561",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+      { "id": "Rio-Bravo",
+        "posterUrl":  "images/rio bravo.jpg",
+        "year": 1959,
+        "title": "Rio Bravo 1959",
+        "description": " A small-town sheriff in the American West enlists the help of a disabled man, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy.",
+        "embedId": "7965129706199",
+        "genres": ["Western"],
+        "source": "okru"
+    },
+      { "id": "We-Were-Soldiers",
+        "posterUrl":  "images/we were soldiers.jpg",
+        "year": 2002,
+        "title": "We Were Soldiers 2002 ",
+        "description": " The story of the first major battle of the American phase of the Vietnam War, and the soldiers on both sides that fought it, while their wives wait nervously and anxiously at home for the good news or the bad news.",
+        "embedId": "7790913129175",
+        "genres": ["War"],
+        "source": "okru"
+    },
+      { "id": "Platoon",
+        "posterUrl":  "images/Platoon.jpg",
+        "year": 1986,
+        "title": "Platoon 1986",
+        "description": " Chris Taylor, a neophyte recruit in Vietnam, finds himself caught in a battle of wills between two sergeants, one good and the other evil. A shrewd examination of the brutality of war and the duality of man in conflict.",
+        "embedId": "9363592120858",
+        "genres": ["War"],
+        "source": "okru"
+    },
+      { "id": "Hacksaw-Ridge",
+        "posterUrl":  "images/Hacksaw Ridge.jpg",
+        "year": 2016,
+        "title": "Hacksaw Ridge 2016 ",
+        "description": " World War II American Army Medic Desmond T. Doss, serving during the Battle of Okinawa, refuses to kill people and becomes the first man in American history to receive the Medal of Honor without firing a shot.",
+        "embedId": "10488723737169",
+        "genres": ["War"],
+        "source": "okru"
+    },
+
+     {  "id": "Soldier Blue",
+        "posterUrl":  "images/Soldier Blue.jpg",
+        "year": 1970,
+        "title": "Soldier Blue 1970 ",
+        "description": " After a cavalry patrol is ambushed by the Cheyenne, the two survivors, a soldier and a woman, must reach the safety of the nearest fort",
+        "embedId": "6172174715419",
+        "genres": ["Western"],
+        "source": "okru"
+    },
+     {  "id": "The-Perfect-Storm",
+        "posterUrl":  "images/The Perfect Storm.jpg",
+        "year": 2000,
+        "title": "The Perfect Storm [2000]  ",
+        "description": "An unusually intense storm pattern catches some commercial fishermen unaware and puts them in mortal danger.",
+        "embedId": "725902166561",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Titanic",
+        "posterUrl":  "images/Titanic.jpg",
+        "year": 1997,
+        "title": "Titanic 1997 ",
+        "description": " A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+        "embedId": "9605610932881",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Taken",
+        "posterUrl":  "images/Taken.jpg",
+        "year": 2008,
+        "title": "Taken 2008 ",
+        "description": " A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.",
+        "embedId": "9640291732145",
+        "genres": ["Action","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "Wedding Crashers",
+        "posterUrl":  "images/Wedding Crashers.jpg",
+        "year": 2005,
+        "title": "Wedding Crashers 2005",
+        "description": " John Beckwith and Jeremy Grey, a pair of committed womanizers who sneak into weddings to take advantage of the romantic tinge in the air, find themselves at odds with one another when John meets and falls for Claire Cleary.",
+        "embedId": "3551833164343",
+        "genres": ["Comedy"],
+        "source": "okru"
+    },
+     {  "id": "Goldfinger",
+        "posterUrl":  "images/Goldfinger.jpg",
+        "year": 1964,
+        "title": "Goldfinger 1964 ",
+        "description": " While investigating a gold magnate's smuggling, James Bond uncovers a plot to contaminate the Fort Knox gold reserve.",
+        "embedId": "7364356082387",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Holmes-and-Watson",
+        "posterUrl":  "images/Holmes and Watson.jpg",
+        "year": 2018,
+        "title": "Holmes and Watson 2018",
+        "description": "A humorous take on Sir Arthur Conan Doyle's classic mysteries featuring Sherlock Holmes and Doctor Watson.",
+        "embedId": "9530383075878",
+        "genres": ["Action","Comedy"],
+        "source": "okru"
+    },
+     {  "id": "Thirteen",
+        "posterUrl":  "images/Thirteen.jpg",
+        "year": 2003,
+        "title": "Thirteen 2003 ",
+        "description": " A thirteen-year-old girl's relationship with her mother is put to the test as she discovers drugs, sex, and petty crime in the company of her cool but troubled best friend.",
+        "embedId": "9519964621350",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+    
+ 
+     {  "id": "A-Sierra-Nevada-Gunfight",
+        "posterUrl":  "images/A Sierra Nevada Gunfight.jpg",
+        "year": 2013,
+        "title": "A Sierra Nevada Gunfight (2013) ",
+        "description": " Gold miner Roger Hazard brings his twelve year old son Casper to the treacherous gold fields of 1870s California. The two of them work a small mine in the southern fields but when Roger begins to lose touch with reality young Casper ends up on his own. Casper faces danger around every corner but must find the strength to save his father from himself and still manage to fight off the savage Indians and ruthless bushwhackers that plague them across California's breathtaking Sierra Nevadas. genres: Western Thriller. In the mold of The Shining and Treasure of the Sierra Madre",
+        "embedId": "3684168632887",
+        "genres": ["Western"],
+        "source": "okru"
+    },
+     {  "id": "Leave the World Behind",
+        "posterUrl":  "images/Leave the World Behind.jpg",
+        "year": 2013,
+        "title": "Leave the World Behind 2013 ",
+        "description": " A family's getaway to a luxurious rental home takes an ominous turn when a cyberattack knocks out their devices, and two strangers appear at their door.",
+        "embedId": "9517395020326",
+        "genres": ["Drama","Sci-Fi"],
+        "source": "okru"
+    },
+     {  "id": "Chaplin",
+        "posterUrl":  "images/Chaplin.jpg",
+        "year": 1992,
+        "title": "Chaplin (1992)",
+        "description": "An elderly Charlie Chaplin discusses his autobiography with his editor, recounting his amazing journey from his poverty-stricken childhood to world-wide success after the ingenious invention of the Little Tramp.",
+        "embedId": "9513004239398",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "The Nanny",
+        "posterUrl":  "images/The Nanny.jpg",
+        "year": 2023,
+        "title": "The Nanny (2023)",
+        "description": "A wealthy couple hire a young girl from Finland to take care of their newborn. These new parents should be in a state of bliss, so why does it seem like they are trying to kill each other?",
+        "embedId": "9500319025702",
+        "genres": ["Drama","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "Tuesday",
+        "posterUrl":  "images/Tuesday.jpg",
+        "year": 2023,
+        "title": "Tuesday 2023",
+        "description": "A mother and her teenage daughter must confront Death when it arrives in the form of an astonishing talking bird.",
+        "embedId": "9487379925542",
+        "genres": ["Drama","Sci-Fi"],
+        "source": "okru"
+    },
+     {  "id": "Queen-of-the-Ring",
+        "posterUrl":  "images/Queen of the ring.jpg",
+        "year": 2024,
+        "title": "Queen of the Ring 2024",
+        "description": "In a time when pro wrestling for women was illegal all over the United States, a small town single mother embraces the danger as she dominates America's most masculine sport and becomes the first million dollar female athlete in history.",
+        "embedId": "9481252440614",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "The-Sexiest-Man-in-Winnipeg",
+        "posterUrl":  "images/The Sexiest Man in Winnipeg.jpg",
+        "year": 2025,
+        "title": "The Sexiest Man in Winnipeg",
+        "description": "When a polite robber carries out a series of odd bank heists, the police investigation takes a sharp turn, pointing to Steve Vogelsang, a garrulous former broadcaster once known as The Sexiest Man in Winnipeg.",
+        "embedId": "9481251785254",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     { "id": "Marijuambies",
+        "posterUrl":  "images/Marijuambies.jpg",
+        "year": 2025,
+        "title": "Marijuambies 2025",
+        "description": "Marijuambies is a hilarious new comedy that follows the story of a weed dealer and his hippie friend who accidentally sell poisoned weed, turning their customers into zombies. Directed by Brian Foster.",
+        "embedId": "9481251326502",
+        "genres": ["Drama","Comedy"],
+        "source": "okru"
+    },
+     {  "id": "The-Devils-Hacksaw",
+        "posterUrl":  "images/The Devils Hacksaw.jpg",
+        "year": 2025,
+        "title": "The Devils Hacksaw 2025",
+        "description": "In a quiet little town in Pennsylvania terror strikes when one of the notorious inmates at the Greystone Asylum escapes. With a thirst for vengeance, he embarks on a brutal killing spree, leaving the townsfolk in a state of panic.",
+        "embedId": "9468701313574",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Goodfellas",
+        "posterUrl":  "images/Goodfellas.jpg",
+        "year": 1990,
+        "title": "Goodfellas 1990  FHD",
+        "description": "In 1955, Henry Hill, a high school student, becomes enamored of the criminal life in his neighborhood, and begins working for Paul Paulie Cicero and his associates: James Jimmy the GentConway, a truck hijacker; and Tommy DeVito, a fellow juvenile delinquent. Henry begins as fence for Jimmy, gradually working his way up to more serious crimes. Enjoying the perks of their criminal life, the three associates spend most of their nights at the Copacabana nightclub, carousing with women. Henry starts dating Karen Friedman, a Jewish woman from the Five Towns area of Long Island. Karen is initially troubled by Henry's criminal activities, but is eventually seduced by his glamorous lifestyle. They marry, despite her parents' disapproval...",
+        "embedId": "1106851990168",
+        "genres": ["Drama","Crime","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "Blue",
+        "posterUrl":  "images/Blue.jpg",
+        "year": 2024,
+        "title": "Blue 2024",
+        "description": "Set on England's Southwest coast, the story follows a father-son pair of struggling fishermen, John Winter and Charlie. A huge loss in their lives leads to a confrontation with emotions neither are equipped to deal with.",
+        "embedId": "9459849497126",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     { "id": "Rust",
+        "posterUrl":  "images/Rust.jpg",
+        "year": 2024,
+        "title": "Rust 2024",
+        "description": "An orphaned boy of 13 left to fend for himself and his younger brother in 1880s Wyoming is sentenced to hang for the accidental killing of a local rancher. His estranged grandfather breaks him out of jail and they go on the run to Mexico.",
+        "embedId": "9453161351718",
+        "genres": ["Western"],
+        "source": "okru"
+    },
+     {  "id": "King.Arthur",
+        "posterUrl":  "images/King Arthur.jpg",
+        "year": 2004,
+        "title": "King Arthur 2004 1080p",
+        "description": "A demystified take on the tale of King Arthur and the Knights of the Round Table.",
+        "embedId": "6806099331779",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Snatch",
+        "posterUrl":  "images/Snatch.jpg",
+        "year": 2000,
+        "title": "Snatch (2000)",
+        "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+        "embedId": "8153582799537",
+        "genres": ["Drama","Comedy","action"],
+        "source": "okru"
+    },
+     {  "id": "Lock-Stock",
+        "posterUrl":  "images/Lock Stock.jpg",
+        "year": 1998,
+        "title": "Lock Stock and Two Smoking Barrels 1998",
+        "description": "When four small-time criminals lose a rigged poker game against a London kingpin, he gives them one week to settle their enormous debt",
+        "embedId": "9602459634262",
+        "genres": ["Drama","Comedy","Action"],
+        "source": "okru"
+    },
+     {  "id": "Nosferatu-the-Vampyre",
+        "posterUrl":  "images/Nosferatu the Vampyre.jpg",
+        "year": 1978,
+        "title": "Nosferatu the Vampyre 1978",
+        "description": "Count Dracula moves from Transylvania to Wismar, spreading the Black Plague across the land. Only a woman pure of heart can bring an end to his reign of horror.",
+        "embedId": "3060519602894",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "The-Shawshank-Redemption",
+        "posterUrl":  "images/The Shawshank Redemption.jpg",
+        "year": 1994,
+        "title": "The Shawshank Redemption.1994",
+        "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+        "embedId": "7957536901741",
+        "genres": ["Drama","Crime"],
+        "source": "okru"
+    },
+     {  "id": "The-Godfather-2",
+        "posterUrl":  "images/the godfather 2.jpg",
+        "year": 1974,
+        "title": "The Godfather 2  (1974)",
+        "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+        "embedId": "277362379400",
+        "genres": ["Drama","Crime"],
+        "source": "okru"
+    },
+     {  "id": "The-Godfather-3",
+        "posterUrl":  "images/The Godfather 3.jpg",
+        "year": 1990,
+        "title": "The Godfather 3 1990",
+        "description": "Follows Michael Corleone, now in his 60s, as he seeks to free his family from crime and find a suitable successor to his empire.",
+        "embedId": "6872072915582",
+        "genres": ["Drama","Crime"],
+        "source": "okru"
+    },
+     
+     {  "id": "Schindlers-List",
+        "posterUrl":  "images/Schindlers List.jpg",
+        "year": 1993,
+        "title": "Schindlers List 1993 1080",
+        "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+        "embedId": "9135100004896",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Jaws",
+        "posterUrl":  "images/Jaws.jpg",
+        "year": 1995,
+        "title": "Jaws 1995",
+        "description": "When a massive killer shark unleashes chaos on a beach community off Long Island, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.",
+        "embedId": "9666610006702",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "The-Dark-Knight",
+        "posterUrl":  "images/The Dark Knight.jpg",
+        "year": 2008,
+        "title": "The Dark Knight (2008) HD",
+        "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "embedId": "7652106504857",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Superman-3",
+        "posterUrl":  "images/Superman 3.jpg",
+        "year": 1983,
+        "title": "Superman 3 (1983)",
+        "description": "Synthetic kryptonite laced with tar splits Superman in two: good Clark Kent and bad Man of Steel.",
+        "embedId": "2393667668662",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Superman-4",
+        "posterUrl":  "images/Superman 4.jpg",
+        "year": 1987,
+        "title": "Superman 4: The Quest for Peace (1987)",
+        "description": "The Man of Steel crusades for nuclear disarmament and meets Lex Luthor's latest creation, Nuclear Man.",
+        "embedId": "2393667603126",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Superman",
+        "posterUrl":  "images/Superman.jpg",
+        "year": 1978,
+        "title": "Superman (1978) Special Edition (720p)",
+        "description": "RESTORED WITH ADDITIONAL FOOTAGE! Follow the Man of Steel's story from Krypton to Smallville to his life in Metropolis and his alter-ego, mild-mannered Daily Planet reporter Clark Kent. Both Superman and Clark Kent must contend with the brilliant villain Lex Luthor and the tenacious, often-in-danger reporter Lois Lane.",
+        "embedId": "2323019860507",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Superman-2",
+        "posterUrl":  "images/Superman 2.jpg",
+        "year": 1980,
+        "title": "Superman 2  (1980)  720p",
+        "description": "Superman agrees to sacrifice his powers to start a relationship with Lois Lane, unaware that three Kryptonian criminals he inadvertently released are conquering Earth." ,
+        "embedId": "382886415088",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Scum",
+        "posterUrl":  "images/Scum.jpg",
+        "year": 1979,
+        "title": "Scum (1979) HD",
+        "description": "Scum is a 1979 British crime drama film. It features Ray Winstone, Mick Ford, Julian Firth, John Blundell, Phil Daniels, and Ray Burdis.",
+        "embedId": "9350991186638",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Scrubbers",
+        "posterUrl":  "images/Scrubbers.jpg",
+        "year": 1982,
+        "title": "Scrubbers (1982)",
+        "description": "Scrubbers is a 1982 British drama film. It features Amanda York, Chrissie Cotterill, Elizabeth Edmonds, Kate Ingram, and Kathy Burke. ",
+        "embedId":"9190631475918",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Planet-of-the-Apes",
+        "posterUrl":  "images/Planet of the Apes.jpg",
+        "year": 2001,
+        "title": "Planet of the Apes 2001 1080",
+        "description": "In 2029, an Air Force astronaut crash-lands on a mysterious planet where evolved, talking apes dominate a race of primitive humans.",
+        "embedId": "9227425155812",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+    },
+     {  "id": "Rocky-Balboa",
+        "posterUrl":  "images/Rocky Balboa.jpg",
+        "year": 2006,
+        "title": "Rocky Balboa 2006 Director's Cut 2160p 4K BluRay",
+        "description": "His wife is dead and his son hates him, but this old man still has fight in him! When he loses a highly publicized virtual boxing match to ex-champ Rocky Balboa, reigning heavyweight titleholder Mason Dixon retaliates by challenging Rocky to a nationally televised, 10-round exhibition bout. To the surprise of his son and friends, Rocky agrees to come out of retirement and face an opponent who's faster, stronger, and thirty years his junior.",
+        "embedId": "9403827948260",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Everest",
+        "posterUrl":  "images/Everest.jpg",
+        "year": 2015,
+        "title": "Everest 2015",
+        "description": "On May 10, 1996, mountain guides Rob Hall and Scott Fischer combine their expedition teams for a final ascent to the summit of Mount Everest. With little warning, a storm strikes the mountain and the climbers must now battle to survive.",
+        "embedId": "9278677715494",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Sharp Corner",
+        "posterUrl":  "images/Sharp Corner.jpg",
+        "year": 2024,
+        "title": "Sharp Corner 2024 1080p",
+        "description": "A dedicated family man becomes obsessed with saving the lives of the car accident victims on the sharp corner in front of his house  an obsession that could cost him everything.",
+        "embedId": "9374293297892",
+        "genres": ["Drama"],
+        "source": "okru"
+    },
+     {  "id": "Rabid",
+        "posterUrl":  "images/Rabid.jpg",
+        "year": 2019,
+        "title": "Rabid 2019.720p",
+        "description": "Rabid is a 2019 Canadian horror film directed and co-written by Jen and Sylvia Soska and starring Laura Vandervoort, Ben Hollingsworth, and Phil Brooks. It is a remake of the 1977 film of the same name directed by David Cronenberg.",
+        "embedId": "1398321449625",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "The-Utah-Cabin-Murders",
+        "posterUrl":  "images/The Utah Cabin Murders.jpg",
+        "year": 2019,
+        "title": "The Utah Cabin Murders 2019",
+        "description": "Two sisters fight for survival when masked intruders invade their vacation cabin.",
+        "embedId": "1375699077785",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Artik",
+        "posterUrl":  "images/Artik.jpg",
+        "year": 2019,
+        "title": "Artik 2019",
+        "description": "A comic book obsessed serial killer teaches his son how to get away with a series of brutal murders until the boy befriends a mysterious man who threatens to expose everything.",
+        "embedId": "1375699012249",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Stained",
+        "posterUrl":  "images/Stained.jpg",
+        "year": 2019,
+        "title": "Stained 2019",
+        "description": "A terrifying, modern adaptation of Shakespeare's Macbeth set in Scotland, CA. Scorning the mediocrity of their mundane lives, John and Jane Macbeth carry out a horrific plan to make the American dream a reality.",
+        "embedId": "1375698946713",
+        "genres": ["Drama","Horror"],
+        "source": "okru"
+    },
+     {  "id": "The-Unseen",
+        "posterUrl":  "images/The Unseen.jpg",
+        "year": 2016,
+        "title": "The Unseen 2016 ",
+        "description": "A man who abandoned his family now risks everything to find his missing daughter, including exposing the secret that he is becoming invisible.",
+        "embedId": "M0d6iuIpR_g",
+        "genres": ["Sci-Fi"],
+        "source": "youtube"
+    },
+     {  "id": "The-Foreigner",
+        "posterUrl":  "images/The Foreigner.jpg",
+        "year": 2017,
+        "title": "The Foreigner (2017)",
+        "description": "Jackie Chan plays Quan Ngoc Minh, a humble London businessman whose daughter is killed in a terrorist bombing claimed by a splinter group of the IRA. He then seeks revenge on those responsible.",
+        "embedId": "Xpm7URf-Jb8",
+        "genres": ["Action"],
+        "source": "youtube"
+    },
+     {  "id": "Law-Abiding-Citizen",
+        "posterUrl":  "images/Law Abiding Citizen.jpg",
+        "year": 2009,
+        "title": "Law Abiding Citizen (2009)",
+        "description": "Clyde Shelton, intentionally gets himself into prison to orchestrate a complex revenge plot against the corrupt justice system that allowed his family's killers to go free. Jamie Foxx plays Nick Rice, the assistant district attorney who becomes his adversary.",
+        "embedId": "-WEsxS-lJKs?si",
+        "genres": ["Action"],
+        "source": "youtube"
+    },
+     {  "id": "3-Days-to-Kill",
+        "posterUrl":  "images/3 Days to Kill.jpg",
+        "year": 2014,
+        "title": "3 Days to Kill (2014)",
+        "description": " Kevin Costner plays Ethan Renner, a CIA assassin who is trying to track down two international terrorists known as The Wolf and his lieutenant, The Albino.",
+        "embedId": "kTgGI7pXoMk",
+        "genres": ["Action"],
+        "source": "youtube"
+    },
+      {  "id": "Unknown",
+        "posterUrl":  "images/Unknown.jpg",
+        "year": 2011,
+        "title": " Unknown (2011)",
+        "description": "Dr. Martin Harris, who awakens from a coma to find that another man has assumed his identity, and even his own wife doesn't recognize him. He then sets out to prove who he is and uncover the conspiracy behind it",
+        "embedId": "RWFzTMgrIyI",
+        "genres": ["Thriller","Drama"],
+        "source": "youtube"
+    },
+     {  "id": "Stolen",
+        "posterUrl":  "images/Stolen.jpg",
+        "year": 2012,
+        "title": "Stolen (2012)",
+        "description": " Nicolas Cage plays a former thief whose daughter is kidnapped, and he has to find $10 million in 12 hours. Danny Huston plays an FBI agent.",
+        "embedId": "yWRCE71ZWcQ",
+        "genres": ["Drama","Thriller"],
+        "source": "youtube"
+    },
+     {  "id": "Red-Dawn",
+        "posterUrl":  "images/Red Dawn.jpg",
+        "year": 2012,
+        "title": "Red Dawn (2012)",
+        "description": " Chris Hemsworth plays Jed Eckert, a Marine who, along with a group of teenagers, defends their hometown in Washington state from a North Korean invasion. They form a guerrilla resistance group called the Wolverines.",
+        "embedId": "2XIlZDElESI",
+        "genres": ["Action"],
+        "source": "youtube"
+    },
+     {  "id": "Kingdom-of-the-Vampire",
+        "posterUrl":  "images/Kingdom of the Vampire.jpg",
+        "year": 1991,
+        "title": "Kingdom of the Vampire",
+        "description": "Jeff works the night shift, then comes home to his domineering mother, who has the grisly habit of slaughtering neighborhood children to satisfy her insatiable bloodlust.",
+        "embedId": "1365524089497",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Wicked-Witches",
+        "posterUrl":  "images/Wicked Witches.jpg",
+        "year": 2018,
+        "title": "Wicked Witches 2018",
+        "description": "Mark returns to Dumpling Farm, his old hangout. His friend Ian, possessed by demonic witches, lures Mark and others into a trap. The witches consume souls, using Ian and the farm to honey-trap their victims.",
+        "embedId": "1364470794905",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Criminal",
+        "posterUrl":  "images/Criminal.jpg",
+        "year": 2016,
+        "title": "Criminal 2016",
+        "description": "A dangerous convict receives an implant containing the memories and skills of a dead CIA agent.",
+        "embedId": "o4Em8Sxk4OM",
+        "genres": ["Crime","Action"],
+        "source": "youtube"
+    },
+     {  "id": "Man-on-Fire",
+        "posterUrl":  "images/Man on Fire.jpg",
+        "year": 2004,
+        "title": "Man on Fire 2004",
+        "description": "In Mexico City, a former CIA operative swears vengeance on those who committed an unspeakable act against the family he was hired to protect.",
+        "embedId": "967003081369",
+        "genres": ["Action","Thriller"],
+        "source": "okru"
+    }, 
+    {   "id": "30-Daye-of-Nights",
+        "posterUrl":  "images/30 Daye of Nights.jpg",
+        "year": 2007,
+        "title": "30 Daye of Nights 2007",
+        "description": "After an Alaskan town is plunged into darkness for a month, it is attacked by a bloodthirsty gang of vampires.",
+        "embedId": "967003802265",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "10.5-Apocalypse",
+        "posterUrl":  "images/Apocalypse 10.jpg",
+        "year": 2006,
+        "title": "10.5: Apocalypse 2006",
+        "description": "A massive earthquake creates a chain of events that threaten two of the largest nuclear reactors.",
+        "embedId": "967976422041",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+    },
+     { "id": "The Craving",
+        "posterUrl":  "images/The Craving.jpg",
+        "year": 2011,
+        "title": "The Craving 2011",
+        "description": "Leading a double life, Chef Ronnie spends her days as a charming celebrity chef who thrives and shines as owner of a trendy Spanish tapas restaurant in San Francisco, and spends her nights in ways too gruesome to fathom. As Chef Ronnie's reputation scorches up the culinary scene, San Francisco's murder count hits a record high. Haunted by her past in the form a vengeful lover, and caught in the seductive cross fire of an increasingly serious relationship; Chef Ronnie has bitten off more than she can chew.",
+        "embedId": "967976487577",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Howl",
+        "posterUrl":  "images/howl.jpg",
+        "year": 2015,
+        "title": "Howl 2015",
+        "description": "When passengers on a train are attacked by a creature, they must band together in order to survive until morning.",
+        "embedId": "970099069337",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "One More Shot",
+        "posterUrl":  "images/One More Shot.jpg",
+        "year": 2024,
+        "title": "One More Shot 2024",
+        "description": "Following the attack on the black site in Poland, Navy SEAL Jake Harris is ordered to escort terrorist suspect Amin Mansur to Washington D.C for interrogation.",
+        "embedId": "/eGjBfDnpUVs",
+        "genres": ["Action"],
+        "source": "youtube"
+    },
+     {  "id": "Final-Destination",
+        "posterUrl":  "images/Final Destination.jpg",
+        "year": 2000,
+        "title": "Final Destination 2000 1080p BluRay",
+        "description": "After getting a premonition about a plane crash on his school trip, Alex, a student, saves a few of his classmates. However, their situation gets complicated when death starts chasing them.",
+        "embedId": "9371838974692",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Final-Destination-2",
+        "posterUrl":  "images/Final Destination 2.jpg",
+        "year": 2003,
+        "title": "Final Destination 2 2003 1080p BluRay",
+        "description": "When Kimberly has a violent premonition of a highway pileup she blocks the freeway, keeping a few others meant to die, safe...Or are they? The survivors mysteriously start dying and it's up to Kimberly to stop it before she's next.",
+        "embedId": "9371839302372",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Final-Destination-3",
+        "posterUrl":  "images/Final Destination 3.jpg",
+        "year": 2006,
+        "title": "Final Destination 3 (2006)",
+        "description": "Wendy Christensen and a group of teens who escaped a fatal roller-coaster crash face a bloody date with Death.",
+        "embedId": "8254576527953",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Twilight-Breaking-Dawn-Part-2",
+        "posterUrl":  "images/The Twilight Saga  Breaking Dawn  Part 2.jpg",
+        "year": 2012,
+        "title": "Twilight Breaking Dawn Part 2",
+        "description": "After the birth of Renesmee/Nessie, the Cullens gather other vampire clans in order to protect the child from a false allegation that puts the family in front of the Volturi.",
+        "embedId": "1316303473392",
+        "genres": ["Drama","Sci-Fi"],
+        "source": "okru"
+    },
+     {  "id": "Mannequin-2",
+        "posterUrl":  "images/Mannequin 2.jpg",
+        "year": 1991,
+        "title": "Mannequin 2: On The Move (1991)",
+        "description": "Although Jason (William Ragsdale) works as a department store clerk, he is also a reincarnated prince. Long ago, his beloved Jessie (Kristy Swanson) was snatched away from him by an evil wizard (Terry Kiser) who used his powers to transform her into wooden statue. Now Jessie is in Jason's department store as a mannequin. When he encounters her, she awakens from her thousand-year sleep. They quickly revive their romance, but the evil wizard has been reincarnated as well, and he's up to no good.",
+        "embedId": "943377877542",
+        "genres": ["Comedy"],
+        "source": "okru"
+    },
+     {  "id": "Ghost-Ship",
+        "posterUrl":  "images/ghost ship.jpg",
+        "year": 2002,
+        "title": "Ghost Ship (2002)",
+        "description": "A salvage crew discovers a long-lost 1962 passenger ship floating lifeless in a remote region of the Bering Sea, and soon notices that its long-dead inhabitants may still be on board.",
+        "embedId": "705719306785",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Infernal",
+        "posterUrl":  "images/Infernal.jpg",
+        "year": 2015,
+        "title": "Infernal 2015",
+        "description": "A happy young couple welcomes their first child shortly after getting married. Their joy quickly turns to fear when the girl starts acting strangely and unexplained phenomena start happening around the house.",
+        "embedId": "977205987993",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     { "id": "The-Inflicted",
+        "posterUrl":  "images/The Inflicted.jpg",
+        "year": 2012,
+        "title": "The Inflicted 2012",
+        "description": "David O'Hara is a troubled medical student who kidnaps, rapes and murders women. He impregnates his victim, Melissa, in an attempt to replace his lost family. When Melissa escapes, he goes on a murderous rampage to get his family back.",
+        "embedId": "977208543897",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    
+
+ 
+    {   "id": "Splinter",
+        "posterUrl":  "images/Splinter.jpg",
+        "year": 2009,
+        "title": "Splinter",
+        "description": "Trapped in an isolated gas station by a voracious Splinter parasite that transforms its still-living victims into deadly hosts, a young couple and an escaped convict must find a way to work together to survive this primal terror.",
+        "embedId": "981264173721",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "I-am-omega",
+        "posterUrl":  "images/I am omega.jpg",
+        "year": 2007,
+        "title": "I am omega 2007",
+        "description": "Father-daughter archaeologists Miles (Denis O'Hare) and Nora Holden (Ashley Hinshaw) discover a unique pyramid that has been buried beneath the Egyptian desert for 5,000 years. Accompanied by a newswoman (Christa-Marie Nicola) and her team, the archaeologists enter the tomb and promptly become trapped. Hopelessly lost within the pyramid's labyrinthine structure, the group faces deadly perils that threaten their escape, including collapsing floors and bloodthirsty predators.",
+        "embedId": "981271186073",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "The-Tommyknockers",
+        "posterUrl":  "images/The Tommyknockers.jpg",
+        "year": 1993,
+        "title": "The Tommyknockers 1993",
+        "description": "The small town of Haven becomes a hot-bed of inventions all run by a strange green power device. The whole town is digging something up in the woods, and only an alcoholic poet can discover the secret of the Tommyknockers.",
+        "embedId": "1002381707929",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "The-Amityville-Horror",
+        "posterUrl":  "images/The Amityville Horror.jpg",
+        "year": 2005,
+        "title": "The Amityville Horror (2005)",
+        "description": "When George Lutz (Ryan Reynolds) and his wife, Kathy (Melissa George), find a beautiful new house in the small town of Amityville, N.Y., they think the place is too good to be true. After they move in with their kids, they find out the cheap price tag is thanks to the house's sordid history: The former tenant murdered his family after supposedly being possessed by the devil. Believing the home is haunted, the couple finds a priest (Philip Baker Hall) to help them rid the place of evil spirits.",
+        "embedId": "1002383411865",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Guyver-2-Dark-Hero",
+        "posterUrl":  "images/Guyver 2.jpg",
+        "year": 1994,
+        "title": "Guyver 2 Dark Hero (1994)",
+        "description": "Sean Barker, unwilling host to an alien bio-armor known as the Guyver, must fight the Kronos Corporation again before they discover the secrets of the Guyver's origin.",
+        "embedId": "1002426274201",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+    },
+    {   "id": "The-Texas-Chainsaw-Massacre",
+        "posterUrl":  "images/The Texas Chainsaw Massacre.jpg",
+        "year": 2003,
+        "title": "The Texas Chainsaw Massacre (2003)",
+        "description": "After picking up a traumatized young hitchhiker, five friends find themselves stalked and hunted by a deformed chainsaw-wielding loon and his family of equally psychopathic killers.",
+        "embedId": "7636091406869",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Zombie-Nation",
+        "posterUrl":  "images/Zombie Nation.jpg",
+        "year": 2004,
+        "title": "Zombie Nation 2004",
+        "description": "A psychotic police officer who murders his female arrestees gets what's coming to him when a horde of zombified women rise from their graves to seek revenge.",
+        "embedId": "1007769291417",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Serenity-Farm",
+        "posterUrl":  "images/Serenity Farm.jpg",
+        "year": 2014,
+        "title": "Serenity Farm 2014",
+        "description": "Undisturbed for over 20 years, this remote forested island in the Pacific Northwest is visited by a group of campers on horseback. The camp tranquility is broken by violence and terror.",
+        "embedId": "1007769356953",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {  "id": "beond-skyline",
+        "posterUrl":  "images/beond skyline.jpg",
+        "year": 2018,
+        "title": "beond skyline 2018 ",
+        "description": "Detective Mark Corley storms his way onto an alien spaceship to rescue his estranged son. When the ship crashes in Southeast Asia, he forges an alliance with a band of survivors to take back the planet once and for all.",
+        "embedId": "1009147710105",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+    },
+    {   "id": "COLD-MOON",
+        "posterUrl":  "images/COLD MOON.jpg",
+        "year": 2017,
+        "title": "COLD MOON (2017)",
+        "description": "In a sleepy Southern town, the Larkin family suffer a terrible tragedy and they're about to endure another. Traffic lights blink an eerie warning, a ghostly visage prowls in the streets, and graves erupt from the local cemetery in an implacable march of terror. And beneath the murky surface of the river, a shifting, almost human, shape slowly takes form to seek a terrible vengeance.",
+        "embedId": "1009147906713",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Rampage",
+        "posterUrl":  "images/Rampage.jpg",
+        "year": 2009,
+        "title": "Rampage 2009",
+        "description": "A man with a thirst for revenge builds a full body armor from Kevlar and goes on a killing spree.",
+        "embedId": "1009180674713",
+        "genres": ["Crime","Thriller"],
+        "source": "okru"
+    },
+    {   "id": "Rampage-Capital-Punishment",
+        "posterUrl":  "images/Rampage Capital Punishment.jpg",
+        "year": 2014,
+        "title": "Rampage: Capital Punishment",
+        "description": "A man takes over a TV station and holds a number of hostages as a political platform to awaken humanity, instead of money.",
+        "embedId": "1009180871321",
+        "genres": ["Crime","Thriller"],
+        "source": "okru"
+    },
+    {   "id": "The-First-Purge",
+        "posterUrl":  "images/The First Purge.jpg",
+        "year": 2018,
+        "title": "The First Purge 2018",
+        "description": "America's third political party, the New Founding Fathers of America, comes to power and conducts an experiment: no laws for 12 hours on Staten Island. No one has to stay on the island, but $5,000 is given to anyone who does.",
+        "embedId": "1009218423449",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Inbred",
+        "posterUrl":  "images/Inbred.jpg",
+        "year": 2011,
+        "title": "Inbred 2011",
+        "description": "Four young offenders and their care workers visit the remote Yorkshire village of Mortlake, which prides on keeping itself to itself. A minor incident with locals rapidly escalates into a blood-soaked, deliriously warped nightmare.",
+        "embedId": "1009869851289",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Abraham-Lincoln-Vampire-Hunter",
+        "posterUrl":  "images/Abraham Lincoln Vampire Hunter.jpg",
+        "year": 2012,
+        "title": "Abraham Lincoln Vampire Hunter 2012",
+        "description": "Abraham Lincoln, the 16th President of the United States, discovers vampires are planning to take over the United States. He makes it his mission to eliminate them.",
+        "embedId": "1014399437465",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Prometheus",
+        "posterUrl":  "images/Prometheus.jpg",
+        "year": 2012,
+        "title": "Prometheus.2012.720p.BluRay.",
+        "description": "The discovery of a clue to mankind's origins on Earth leads a team of explorers to the darkest parts of the universe. Two brilliant young scientists lead the expedition. Shaw (Noomi Rapace) hopes that they will meet a race of benevolent, godlike beings who will in some way verify her religious beliefs, while Holloway (Logan Marshall-Green) is out to debunk any spiritual notions. However, neither the scientists nor their shipmates are prepared for the unimaginable terrors that await them.",
+        "embedId": "1015245441689",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+    },
+    {   "id": "Stripped",
+        "posterUrl":  "images/Stripped.jpg",
+        "year": 2012,
+        "title": "Stripped 2012 720p BluRay",
+        "description": "Four friends head to Vegas and meet female strippers at a remote location for a night of fun. However, they don't realize that the women work for an organ trafficker and that they are about to be stripped of theirs.",
+        "embedId": "1015912663705",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "The-Transporter-Refueled",
+        "posterUrl":  "images/The Transporter Refueled.jpg",
+        "year": 2015,
+        "title": "The Transporter Refueled 2015",
+        "description": "In the south of France, former special-ops mercenary Frank Martin enters into a game of chess with a femme-fatale and her three sidekicks who are looking for revenge against a sinister Russian kingpin.",
+        "embedId": "1015894903449",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+    {   "id": "Little Dead Rotting Hood",
+        "posterUrl":  "images/little dead rotting hood.jpg",
+        "year": 2016,
+        "title": "Little Dead Rotting Hood 2016.720p",
+        "description": "The residents of a small town realize that something is killing wolves and people in the woods.",
+        "embedId": "1015905585817",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Feast-2-sloppy-seconds",
+        "posterUrl":  "images/Feast 2 sloppy seconds.jpg",
+        "year": 2008,
+        "title": "Feast 2 sloppy seconds",
+        "description": "The monsters have made it into a small neighboring town in the middle of nowhere and the locals have to band with the survivors of the bar' slaughter to figure out how to survive.",
+        "embedId": "1016872700569",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     
+    {   "id": "Feast",
+        "posterUrl":  "images/Feast.jpg",
+        "year": 2005,
+        "title": "Feast 2005",
+        "description": "Patrons locked inside a bar are forced to fight monsters.",
+        "embedId": "1016878402201",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Skinwalkers",
+        "posterUrl":  "images/Skinwalkers.jpg",
+        "year": 2006,
+        "title": "Skinwalkers 2006",
+        "description": "A 12-year-old boy and his mother become the targets of two warring werewolf packs, each with different intentions and motives.",
+        "embedId": "1016874404505",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Valhalla Rising",
+        "posterUrl":  "images/Valhalla Rising.jpg",
+        "year": 2009,
+        "title": "Valhalla Rising 2009.1080p",
+        "description": "In 11th-century Scandinavia, an enslaved man dubbed One Eye (Mads Mikkelsen) because of an old facial wound stages a violent uprising against those who imprisoned him. One Eye links up with Eirik (Ewan Stewart) and other Christian fanatics who aim to use their muscle to spread God's word. Headed for Jerusalem, One Eye and his shipmates must cope with crew infighting and attacks from the coastline. But the journey's challenges are only a harbinger of even greater brutality.",
+        "embedId": "1021591292569",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+    {   "id": "Darkness Rising",
+        "posterUrl":  "images/Darkness Rising.jpg",
+        "year": 2017,
+        "title": "Darkness Rising 2017",
+        "description": "The lone survivor of a brutal family massacre must revisit her childhood home on the eve of its destruction and confront her past, as well as a deadly evil.",
+        "embedId": "1021591358105",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Werewolf-Rising",
+        "posterUrl":  "images/Werewolf Rising.jpg",
+        "year": 2014,
+        "title": "Werewolf Rising 2014.720p.BluRay",
+        "description": "Emma travels to her family's cabin in the Arkansas hills to get away from the city. After she settles in, she has to fight for her life when a werewolf begins slaughtering everything in its path.",
+        "embedId": "1021636184729",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Mutants",
+        "posterUrl":  "images/Mutants.jpg",
+        "year": 2009,
+        "title": "Mutants 2009",
+        "description": "In the middle of a zombie apocalypse, a resourceful couple hides out in an isolated abandoned building. The woman is pregnant and the man is infected, slowly transforming into the kind of inhuman monster they are trying to escape.",
+        "embedId": "1021815884441",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "The-House-of-Violent-Desire",
+        "posterUrl":  "images/The House of Violent Desire.jpg",
+        "year": 2018,
+        "title": "The House of Violent Desire.2018",
+        "description": "Awoken by screams in the night, young Evelyn Whipley is found drenched in blood and mysteriously bound to the bed - A Gothic Horror set in the 1940s, a psychosexual thriller disguised as traditional Ghost Story.",
+        "embedId": "1031999392409",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "It-Lives-Inside",
+        "posterUrl":  "images/It Lives Inside.jpg",
+        "year": 2018,
+        "title": "It Lives Inside 2018",
+        "description": "A chronic sleepwalker reads from a mysterious text that foretells his impending demonic possession. He struggles to hold his family together as the ancient evil threatens to consume everything he holds dear.",
+        "embedId": "1034554051225",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Jeepers-Creepers-2",
+        "posterUrl":  "images/Jeepers Creepers 2.jpg",
+        "year": 2003,
+        "title": "Jeepers Creepers 2 2003",
+        "description": "Set a few days after the original, a championship basketball team's bus is attacked by The Creeper, the winged, flesh-eating terror, on the last day of his 23-day feeding frenzy.",
+        "embedId": "1038368180889",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Jeepers-Creepers",
+        "posterUrl":  "images/Jeepers Creepers.jpg",
+        "year": 2001,
+        "title": "Jeepers Creepers (2001)",
+        "description": "A brother and sister driving home through isolated countryside for spring break encounter a flesh-eating creature which is in the midst of its ritualistic eating spree.",
+        "embedId": "7451752729259",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Jeepers-Creepers-3",
+        "posterUrl":  "images/Jeepers Creepers 3.jpg",
+        "year": 2017,
+        "title": "Jeepers Creepers 3 (2017)",
+        "description": "Sheriff Dan Tashtego and a team of creeper hunters enlist the help of officer Davis Tubbs to help stop the monster's eating spree.",
+        "embedId": "2928047557260",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "Dracula-The-Dark-Prince",
+        "posterUrl":  "images/Dracula The Dark Prince.jpg",
+        "year": 2013,
+        "title": "Dracula The Dark Prince 2013",
+        "description": "In his search for the Lightbringer, Dracula crosses paths with a beautiful crusader named Alina who bears a remarkable resemblance to his murdered bride. One look at her and Dracula is immediately smitten. Could Alina be the reincarnation of his long-dead love? Dracula has Alina kidnapped and brought to his castle where the Beast must now try to win his Beauty's heart.",
+        "embedId": "4230911101454",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+    {   "id": "All-the-Boys-Love-Mandy-Lane",
+        "posterUrl":  "images/All the Boys Love Mandy Lane.jpg",
+        "year": 2006,
+        "title": "All the Boys Love Mandy Lane 2006.720p.BluRay",
+        "description": "Beautiful Mandy Lane (Amber Heard) isn't a party girl but, when classmate Chloe (Whitney Able) invites the Texas high school student to a bash in the countryside, she reluctantly accepts. After hitching a ride with a vaguely scary older man (Anson Mount), the teens arrive at their destination. Partying ensues, and Mandy's close pal, Emmet (Michael Welch), keeps a watchful eye on the young males making a play for Mandy. Then two of the students are murdered.",
+        "embedId": "1071316077209",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+   
+     {  "id": "Gangsters-Guns-Zombies",
+        "posterUrl":  "images/Gangsters Guns Zombies.jpg",
+        "year": 2012,
+        "title": "Gangsters Guns Zombies.2012.720p.BluRay",
+        "description": "Q, Tony, Danny and Steve think the police are their biggest problem after they pull off a robbery. But when the dead rise from the grave, they have to hide out with a woman and her grandmother in a fortified windmill.",
+        "embedId": "1072197012121",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     { "id": "Cockneys-vs-Zombies",
+        "posterUrl":  "images/Cockneys vs Zombies.jpg",
+        "year": 2012,
+        "title": "Cockneys vs Zombies 2012",
+        "description": "A gang of bank robbers fight their way out of a zombie-infested London.",
+        "embedId": "1072197077657",
+        "genres": ["Horror","Comedy"],
+        "source": "okru"
+    },
+     {  "id": "Left-Behind",
+        "posterUrl":  "images/Left Behind.jpg",
+        "year": 2014,
+        "title": "Left Behind 2014",
+        "description": "A small group of survivors is left behind after millions of people suddenly vanish and the world is plunged into chaos and destruction.",
+        "embedId": "1076555549337",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+    },
+     {  "id": "Tiger-House",
+        "posterUrl":  "images/Tiger House.jpg",
+        "year": 2015,
+        "title": "Tiger House 2015",
+        "description": "Kelly sneaks into her boyfriend's house but tonight, she's not the only unwelcome visitor. As the situation spirals out of control, the suburban house becomes a terrifying arena for violence.",
+        "embedId": "1076676987545",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Cabin-Fever-2",
+        "posterUrl":  "images/Cabin Fever 2 Spring Fever.jpg",
+        "year": 2009,
+        "title": "Cabin Fever 2 Spring Fever 2009",
+        "description": "A high school prom faces a deadly threat: a flesh-eating virus that spreads via a popular brand of bottled water.",
+        "embedId": "1079522429593",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Cabin-Fever",
+        "posterUrl":  "images/Cabin Fever.jpg",
+        "year": 2002,
+        "title": "Cabin Fever 2002",
+        "description": "Five college graduates rent a cabin in the woods and begin to fall victim to a horrifying flesh-eating virus, which attracts the unwanted attention of the homicidal locals.",
+        "embedId": "1079539206809",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Cabin-Fever-3",
+        "posterUrl":  "images/Cabin Fever 3 Patient Zero.jpg",
+        "year": 2014,
+        "title": "Cabin Fever 3 Patient Zero 2014",
+        "description": "When a group of friends enjoying a bachelor cruise in the Caribbean stumble upon a research facility on a remote island, a deadly virus is unleashed. The group must find a way to survive before the flesh eating virus consumes them all.",
+        "embedId": "1079544253081",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Breathing-Room",
+        "posterUrl":  "images/Breathing Room.jpg",
+        "year": 2008,
+        "title": "Breathing Room 2008.720p.BluRay",
+        "description": "Thrown naked into a desolate room with thirteen strangers, Tonya discovers that she is the final contestant in a deadly game. Restrained by lethal electronic collars, the players must utilize hints and tools from a box marked pieces to find both an exit and the reason for their abduction. One by one the players are eliminated as their curfew begins and the lights go out. With each dead body comes another clue, which they use to discover that one of them is the killer.",
+        "embedId": "1100126882457",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "Running-with-the-Devil",
+        "posterUrl":  "images/Running with the Devil.jpg",
+        "year": 2019,
+        "title": "Running with the Devil (2019).",
+        "description": "The CEO of an international conglomerate sends two of his most regarded executives to investigate why shipments of cocaine are being hijacked and over cut somewhere on the supply chain.",
+        "embedId": "9f621XHZ6nQ",
+        "genres": ["Thriller"],
+        "source": "youtube"
+    },
+     {  "id": "The-Bank-Job",
+        "posterUrl":  "images/The Bank Job.jpg",
+        "year": 2008,
+        "title": "The Bank Job 2008",
+        "description": "Martine offers Terry a lead on a foolproof bank hit on London's Baker Street. She targets a roomful of safe deposit boxes worth millions in cash and jewelry along with a treasure trove of dirty secrets.",
+        "embedId": "GQtwrbZZBzQ",
+        "genres": ["Action","Crime"],
+        "source": "youtube"
+    },
+     {  "id": "The-Beverly-Hillbillies",
+        "posterUrl":  "images/The Beverly Hillbillies.jpg",
+        "year": 1993,
+        "title": "The Beverly Hillbillies 1993",
+        "description": "Mild-mannered dirt-poor hill-dweller Jed Clampett strikes it rich when oil is discovered on his property. At his cousin Pearl's insistence, he moves his family to Beverly Hills to better enjoy his newfound wealth.",
+        "embedId": "7333324327462",
+        "genres": ["Comedy"],
+        "source": "okru"
+    },
+     {  "id": "In-Pursuit-of-Honor",
+        "posterUrl":  "images/In Pursuit of Honor.jpg",
+        "year": 1996,
+        "title": "In Pursuit of Honor 1996",
+        "description": "In 1932, a modernizing U.S. Army orders the Cavalry to destroy its horses but some sympathetic cavalrymen, defying orders, steal the horses in order to save them from destruction, to the dismay of the top Army-brass.",
+        "embedId": "HWU9XIp49lk",
+        "genres": ["Action"],
+        "source": "youtube"
+    },
+     {  "id": "War",
+        "posterUrl":  "images/War.jpg",
+        "year": 2007,
+        "title": "War 2007.720p.Bluray",
+        "description": "An FBI Agent seeks vengeance on a mysterious assassin known as Rogue who murdered his partner.",
+        "embedId": "89959697073",
+        "genres": ["Action"],
+        "source": "okru"
+    },
+     {  "id": "Prey",
+        "posterUrl":  "images/Prey.jpg",
+        "year": 2021,
+        "title": "Prey (2021)",
+        "description": "A hiking trip into the wild turns into a desperate bid for survival for five friends on the run from a mysterious shooter.",
+        "embedId": "3300653468252",
+        "genres": ["Thriller","Drama"],
+        "source": "okru"
+    },
+     {  "id": "The Descent",
+        "posterUrl":  "images/The Descent.jpg",
+        "year": 2023,
+        "title": "The Descent 2023",
+        "description": "The film is described as a thriller where a group of individuals in a small, peaceful community must uncover the secrets behind a series of horrifying attacks by mysterious creatures that emerge from the depths of darkness.",
+        "embedId": "9538436008486",
+        "genres": ["Horror"],
+        "source": "okru"
+    },
+     {  "id": "The-Shape-of-Water",
+        "posterUrl":  "images/The Shape of Water.jpg",
+        "year": 2017,
+        "title": "The Shape of Water",
+        "description": "At a top secret research facility in the 1960s, a lonely janitor forms a unique relationship with an amphibious creature that is being held in captivity.",
+        "embedId": "6544850094630",
+        "genres": ["Drama","Sci-Fi"],
+        "source": "okru"
+    },
+     {  "id": "Womb",
+        "posterUrl":  "images/Womb.jpg",
+        "year": 2025,
+        "title": "Womb 2025",
+        "description": "Trapped in a remote hunting cabin, a pregnant recovering addict battles to escape the clutches of a deranged hunter obsessed with abducting her full term fetus.",
+        "embedId": "9451032152614",
+        "genres": ["Horror","Thriller"],
+        "source": "okru"
+    },
+     {  "id": "The-Squatchers",
+        "posterUrl":  "images/The Squatchers.jpg",
+        "year": 2025,
+        "title": "The Squatchers 2025",
+        "description": "A group of friends, known as The Squatchers set out to fulfill their dream of finding Bigfoot, only to wind up on a heart-pounding quest for survival against the unknown. This is one adventure you have to see to believe.",
+        "embedId": "9450984573478",
+        "genres": ["Comedy"],
+        "source": "okru"
+    },
+     {  "id": "War Party",
+        "posterUrl":  "images/War Party.jpg",
+        "year": 1988,
+        "title": "War Party  Director's Cut",
+        "description": "A group of re-enactors attempt to stage a hundred year anniversary battle between US Cavalry and Blackfeet Indians. Unfortunately racial hostilities and a real gun lead to some all too real casualties, and three young Blackfoot men are caught in the middle.",
+        "embedId": "9465828149798",
+        "genres": ["Action","Drama"],
+        "source": "okru"
+     },
+      { "id": "Night-of-the-Tommyknockers",
+        "posterUrl":  "images/Night of the Tommyknockers.jpg",
+        "year": 2022,
+        "title": "Night of the Tommyknockers 2022",
+        "description": "When miners blast for gold in the 1870's, they accidentally release ancient creatures known as Tommyknockers. The Town of Deer Creek, Nevada is soon under siege with only a handful of survivors held up in the local saloon.",
+        "embedId": "9273472846374",
+        "genres": ["Horror","Weastern","Thriller"],
+        "source": "okru"
+     },
+      { "id": "Blazing-Saddles",
+        "posterUrl":  "images/Blazing Saddles.jpg",
+        "year": 1974,
+        "title": "Blazing Saddles 1974",
+        "description": "In order to ruin a western town and steal their land, a corrupt politician appoints a black sheriff, who promptly becomes his most formidable adversary.",
+        "embedId": "7502168066598",
+        "genres": ["Western","Comedy"],
+        "source": "okru"
+     },
+      { "id": "Ride-With-The-Devil",
+        "posterUrl":  "images/Ride With The Devil.jpg",
+        "year": 1999,
+        "title": "Ride With The Devil 1999",
+        "description": "During the American Civil War, two friends join the Bushwhackers, a militant group loyal to the Confederacy.",
+        "embedId": "7210048883238",
+        "genres": ["Western","Drama","War"],
+        "source": "okru"
+     },
+      { "id": "The-Thicket",
+        "posterUrl":  "images/The Thicket.jpg",
+        "year": 2024,
+        "title": "The Thicket 2024",
+        "description": "When a bounty hunter and a band of unlikely heroes pursue a brutal killer, they find themselves in a deadly no-man's-land known as The Thicket.",
+        "embedId": "9136509291046",
+        "genres": ["Western","Drama"],
+        "source": "okru"
+     },
+      { 
+        "id": "Ghost-Town",
+        "posterUrl":  "images/Ghost Town.jpg",
+        "year": 2023,
+        "title": "Ghost Town (2023)",
+        "description": "In the untamed West of Victorian-era America, a drifter takes a job as a barman in a small Arizona town. After a series of bizarre deaths, he soon finds himself the target of suspicion",
+        "embedId": "6364574190118",
+        "genres": ["Western","Horror"],
+        "source": "okru"
+     },
+      { "id": "Mississippi-Burning",
+        "posterUrl":  "images/Mississippi Burning.jpg",
+        "year": 1988,
+        "title": "Mississippi Burning 1988 REMASTERED 1080p",
+        "description": "Two FBI agents with wildly different styles arrive in Mississippi to investigate the disappearance of three civil rights activists.",
+        "embedId": "8443536542376",
+        "genres": ["Crime","Drama","Thriller"],
+        "source": "okru"
+     },
+      { "id": "From-Dusk-Till-Dawn",
+        "posterUrl":  "images/From Dusk Till Dawn.jpg",
+        "year": 1996,
+        "title": "From Dusk Till Dawn 1996 ",
+        "description": "Two criminals and their hostages unknowingly seek temporary refuge in a truck stop populated by vampires, with chaotic results.",
+        "embedId": "6164321405602",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      { "id": "Beyond-the-Night",
+        "posterUrl":  "images/Beyond the Night.jpg",
+        "year": 2018,
+        "title": "Beyond the Night 2018",
+        "description": "When a Marine's son reveals damning information about a local gangster's missing daughter, a war of attrition wreaks havoc on their forgotten coal mining town.",
+        "embedId": "1L7UpBTOzlU",
+        "genres": ["Drama","Thriller"],
+        "source": "youtube"
+     },
+      { "id": "Extinction",
+        "posterUrl":  "images/Extinction The G.M.O. Chronicles.jpg",
+        "year": 2011,
+        "title": "Extinction The G.M.O. Chronicles",
+        "description": "The remaining survivors of pan-global epidemic face a race against time to find a cure before they succumb to its zombie-inducing effects. Holed up in an abandoned military base, Tom and his fellow survivors, their numbers dwindling with each successive day, desperately search for a way of stopping the outbreak and returning their lives to normal",
+        "embedId": "L_njwTIXNA0",
+        "genres": ["Horror"],
+        "source": "youtube"
+     },
+      { "id": "London-Boulevard",
+        "posterUrl":  "images/London Boulevard.jpg",
+        "year": 2010,
+        "title": "London Boulevard",
+        "description": "An ex-con with a reputation tries to go straight by working as a handy man for a reclusive actress but this is unfortunately not the wish of London's underground crime lord.",
+        "embedId": "3838862690871",
+        "genres": ["Drama","Thriller"],
+        "source": "okru"
+     },
+      { "id": "Michael-Collins",
+        "posterUrl":  "images/Michael Collins.jpg",
+        "year": 1996,
+        "title": "Michael Collins 1996  720p",
+        "description": "Neil Jordan's historical biopic of Irish revolutionary Michael Collins, the man who led a guerrilla war against the UK, helped negotiate the creation of the Irish Free State, and led the National Army during the Irish Civil War.",
+        "embedId": "1078123301423",
+        "genres": ["Drama","Thriller","War"],
+        "source": "okru"
+     },
+      { "id": "Outlaw King",
+        "posterUrl":  "images/Outlaw King.jpg",
+        "year": 2018,
+        "title": "Outlaw King.2018.1080p",
+        "description": "A true David vs. Goliath story of how the 14th century Scottish 'Outlaw King' Robert the Bruce used cunning and bravery to defeat the much larger and better equipped occupying English army.",
+        "embedId": "4982591130190",
+        "genres": ["Action","Drama","History"],
+        "source": "okru"
+     },
+      { "id": "The-Outfit",
+        "posterUrl":  "images/The Outfit.jpg",
+        "year": 2022,
+        "title": "The Outfit (2022)",
+        "description": "An expert cutter must outwit a dangerous group of mobsters in order to survive a fateful night.",
+        "embedId": "3793980295758",
+        "genres": ["Drama","Crime"],
+        "source": "okru"
+     },
+      { "id": "Lakeview-Terrace",
+        "posterUrl":  "images/Lakeview Terrace.jpg",
+        "year": 2008,
+        "title": "Lakeview Terrace (2008)",
+        "description": "A troubled and racist African-American L.A.P.D. Officer will stop at nothing to force out a friendly interracial couple who just moved in next door to him.",
+        "embedId": "9447996131878",
+        "genres": ["Crime","Thriller"],
+        "source": "okru"
+     },
+      { 
+        "id": "Wanted",
+        "posterUrl":  "images/Wanted.jpg",
+        "year": 2008,
+        "title": "Wanted 2008",
+        "description": "A frustrated office worker discovers that he is the son of a professional assassin, and that he shares his father's superhuman killing abilities.",
+        "embedId": "9414094424614",
+        "genres": ["Action","Crime","Thriller"],
+        "source": "okru"
+     },
+      { 
+        "id": "Last-County",
+        "posterUrl":  "images/Last County.jpg",
+        "year": 2023,
+        "title": "Last County 2023",
+        "description": "An alcoholic woman with a marriage on the rocks finds an unlikely ally in a wounded drug mule when the two of them are forced to defend her home from a violent siege of corrupt small town cops.",
+        "embedId": "9348503177766",
+        "genres": ["Crime","Thriller"],
+        "source": "okru"
+     },
+      { 
+        "id": "Stir-of-Echoes",
+        "posterUrl":  "images/Stir of Echoes.jpg",
+        "year": 1999,
+        "title": "Stir of Echoes 1999",
+        "description": "A man has visions of a missing neighborhood girl.",
+        "embedId": "7807656921638",
+        "genres": ["Horror","Thriller"],
+        "source": "okru"
+     },
+      { 
+        "id": "Event-Horizon",
+        "posterUrl":  "images/Event Horizon.jpg",
+        "year": 1997,
+        "title": "Event Horizon (1997)",
+        "description": "A rescue crew is tasked with investigating the mysterious reappearance of a spaceship that had been lost for seven years.",
+        "embedId": "9477842602574",
+        "genres": ["Sci-Fi","Horror","Thriller"],
+        "source": "okru"
+     },
+     
+    
+      { 
+        "id": "Hell-of-a-Summer",
+        "posterUrl":  "images/Hell of a Summer.jpg",
+        "year": 2023,
+        "title": "Hell of a Summer 2023",
+        "description": "The counselors of a summer camp are terrorized by a masked killer.",
+        "embedId": "9435574831654",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      { 
+        "id": "Dead Mail",
+        "posterUrl":  "images/Dead Mail.jpg",
+        "year": 2024,
+        "title": "Dead Mail (2024)",
+        "description": "An ominous help note finds its way to a 1980s post office, connecting a dead letter investigator to a kidnapped keyboard technician.",
+        "embedId": "9409949600294",
+        "genres": ["Horror","Thriller"],
+        "source": "okru"
+     },
+      { 
+        "id": "It-Feeds",
+        "posterUrl":  "images/It Feeds.jpg",
+        "year": 2025,
+        "title": "It Feeds (2025)",
+        "description": "After a young girl bursts into their home psychiatry practice claiming an entity is feeding on her,Jordan and her clairvoyant mother must find a way to stop the force before the girl is taken completely.",
+        "embedId": "9409851886118",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      { 
+        "id": "Desert-Fiends",
+        "posterUrl":  "images/Desert Fiends.jpg",
+        "year": 2024,
+        "title": "Desert Fiends 2024",
+        "description": "Six friends on their way to a concert break down in the middle of nowhere and encounter a deranged family that lives in the desert killing anyone they come across.",
+        "embedId": "9468714289702",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {  
+        "id": "Nothing-to-Lose",
+        "posterUrl":  "images/Nothing to Lose.jpg",
+        "year": 1997,
+        "title": "Nothing to Lose 1997",
+        "description": "Nick's wife is in bed with his boss. He later gets a gun to his head by a carjacker but steps on the gas pedal. They end up friends after adventures together:holdups, burglary, reckless driving, and revenge. Twists follow.",
+        "embedId": "2677676706342",
+        "genres": ["Comedy"],
+        "source": "okru"
+     },
+     {  "id": "Nothing-But-Trouble",
+        "posterUrl":  "images/Nothing But Trouble.jpg",
+        "year": 1991,
+        "title": "Nothing But Trouble 1991",
+        "description": "A businessman and his friends are captured by a sadistic judge and his equally odd family in a bizarre mansion in the backwoods.",
+        "embedId": "4357179247142",
+        "genres": ["Comedy"],
+        "source": "okru"
+     },
+     {  
+        "id": "The-Rocky-Horror-Picture-Show",
+        "posterUrl":  "images/The Rocky Horror Picture Show.jpg",
+        "year": 1975,
+        "title": "The Rocky Horror Picture Show 1975",
+        "description": "A newly-engaged couple have a breakdown in an isolated area and must seek shelter at the bizarre residence of Dr. Frank-n-Furter.",
+        "embedId": "3619420637734",
+        "genres": ["Horror","Comedy","Music"],
+        "source": "okru"
+     },
+     {  
+        "id": "The-Lost-Boys",
+        "posterUrl":  "images/The Lost Boys.jpg",
+        "year": 1987,
+        "title": "The Lost Boys (1987)",
+        "description": "When a recently divorced mother and her two teenage boys move to a coastal town to stay with her father, it doesn't take long for the brothers to realize the area is a haven for something much more sinister than party-going surfers.",
+        "embedId": "3439021722150",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {  
+        "id": "The-Great-Outdoors",
+        "posterUrl":  "images/The Great Outdoors.jpg",
+        "year": 1988,
+        "title": "The Great Outdoors 1988",
+        "description": "A Chicago man and his family go camping with his obnoxious brother-in-law.",
+        "embedId": "3280919202342",
+        "genres": ["Comedy"],
+        "source": "okru"
+     },
+     { 
+        "id": "The-Jerky-Boys",
+        "posterUrl":  "images/The Jerky Boys.jpg",
+        "year": 1995,
+        "title": "The Jerky Boys (1995)",
+        "description": "A hilarious prank phone call pushes the buttons of an angry mob boss.",
+        "embedId": "761915574817",
+        "genres": ["Comedy","Crime"],
+        "source": "okru"
+     },
+     { 
+        "id": "Behaving-Badly",
+        "posterUrl":  "images/Behaving Badly.jpg",
+        "year": 2014,
+        "title": "Behaving Badly (2014) ",
+        "description": "Teenager Rick Stevens has a crush on Nina Pennington. They form a friendship and take a rock'n'roll journey together while Nina deals with her overbearing boyfriend Kevin.",
+        "embedId": "9115896056358",
+        "genres": ["Comedy"],
+        "source": "okru"
+     },
+      {
+        "id": "Southern-Comfort",
+        "posterUrl":  "images/Southern Comfort.jpg",
+        "year": 1981,
+        "title": "Southern Comfort 1981 1080",
+        "description": "During a routine exercise, a team of National Guardsmen are threatened by angry and violent locals.",
+        "embedId": "2302014655003",
+        "genres": ["Thriller","Action"],
+        "source": "okru"
+     },
+      {
+        "id": "Frequencies",
+        "posterUrl":  "images/Frequencies.jpg",
+        "year": 2013,
+        "title": "Frequencies (2013) 1080",
+        "description": "In an alternate reality, children learn how lucky they will be (their frequency), knowledge which shapes their destiny. The unluckiest boy must parse the mysteries of free will in order to pursue his forbidden love of the luckiest girl",
+        "embedId": "9870089259547",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+     },
+      {
+        "id": "Freaks",
+        "posterUrl":  "images/Freaks.jpg",
+        "year": 2018,
+        "title": " Freaks 2018  1080",
+        "description": "A bold girl discovers a bizarre, threatening, and mysterious new world beyond her front door after she escapes her father's protective and paranoid control.",
+        "embedId": "9870088079899",
+        "genres": ["Sci-Fi","Thriller"],
+        "source": "okru"
+     },
+      {
+        "id": "Follow-Me",
+        "posterUrl":  "images/Follow Me.jpg",
+        "year": 1972,
+        "title": "Follow Me (1972) (1080p)",
+        "description": "A jealous businessman suspects that his wife is having an affair and hires an eccentric private detective to investigate. The suspected infidelity, however, is the tip of the iceberg and an elaborate game of cat and mouse ensues.",
+        "embedId": "9844221479451",
+        "genres": ["Drama","Comedy"],
+        "source": "okru"
+     },
+      {
+        "id": "Farmlands",
+        "posterUrl":  "images/Farmlands.jpg",
+        "year": 2018,
+        "title": "Farmlands (2018) (1080p)",
+        "description": "Details the plight of South African farmers.",
+        "embedId": "9844218268187",
+        "genres": ["Drama","History"],
+        "source": "okru"
+     },
+      {
+        "id": "The Manhattan Project",
+        "posterUrl":  "images/The Manhattan Project.jpg",
+        "year": 2022,
+        "title": "The Manhattan Project (2022) (1080p)",
+        "description": "When a small-town cocktail-enthusiast decides to kill himself after being diagnosed with a terminal illness he must deal with the repercussion his choice has on his son and his community.",
+        "embedId": "9826338343451",
+        "genres": ["Comedy","Drama"],
+        "source": "okru"
+     },
+      {
+        "id": "Firewall",
+        "posterUrl":  "images/Firewall.jpg",
+        "year": 2006,
+        "title": "Firewall (2006) (1080p)",
+        "description": "A security specialist is forced into robbing the bank that he's protecting, as a bid to pay off his family's ransom.",
+        "embedId": "9813110819355",
+        "genres": ["Action","Thriller"],
+        "source": "okru"
+     },
+      {
+        "id": "Finding-Your-Feet",
+        "posterUrl":  "images/Finding Your Feet.jpg",
+        "year": 2017,
+        "title": "Finding Your Feet (2017) 1080",
+        "description": "On the eve of retirement a middle class, judgmental snob discovers her husband has been having an affair with her best friend and is forced into exile with her bohemian sister who lives on an impoverished inner-city council estate.",
+        "embedId": "9813110557211",
+        "genres": ["Comedy","Drama"],
+        "source": "okru"
+     },
+     {
+        "id": "Finding-Graceland",
+        "posterUrl":  "images/Finding Graceland.jpg",
+        "year": 1998,
+        "title": "Finding Graceland (1998) (1080p)",
+        "description": "An eccentric drifter claiming to be Elvis Presley hitches a ride with a young man and they find themselves on an adventurous road trip to Memphis.",
+        "embedId": "9813091158555",
+        "genres": ["Drama"],
+        "source": "okru"
+     },
+     {
+        "id": "The-Patriot",
+        "posterUrl":  "images/The Patriot.jpg",
+        "year": 1998,
+        "title": "The Patriot.1998",
+        "description": "A respected doctor must race against time to find a cure for a lethal virus unleashed by a paramilitary militia leader.",
+        "embedId": "3639686203959",
+        "genres": ["Action","Thriller"],
+        "source": "okru"
+     },
+     {
+        "id": "Requiem-for-a-Scream",
+        "posterUrl":  "images/Requiem for a Scream.jpg",
+        "year": 2022,
+        "title": "Requiem for a Scream 2022",
+        "description": "A sadistic killer sets his sights on a group of friends partying in an abandoned lake house, determined to make their murders his symphony.",
+        "embedId": "3960201546295",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {
+        "id": "Field-of-Dreams",
+        "posterUrl":  "images/Field of Dreams.jpg",
+        "year": 1989,
+        "title": "Field of Dreams (1989)",
+        "description": "Iowa farmer Ray Kinsella is inspired by a voice he can't ignore to pursue a dream he can hardly believe. Supported by his wife, Ray begins the quest by turning his ordinary cornfield into a place where dreams can come true.",
+        "embedId": "8345107630702",
+        "genres": ["Drama"],
+        "source": "okru"
+     },
+     {
+        "id": "ConAir",
+        "posterUrl":  "images/ConAir.jpg",
+        "year": 1997,
+        "title": "ConAir 1997",
+        "description": "Former US Amy Ranger, Cameron Poe, has just been paroled for manslaughter, but must stop a group of violent and deadly criminals from escaping the country after they seizes control of the prison transport plane he is on.",
+        "embedId": "10328404003438",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+     {
+        "id": "A-Chefs-Deadly-Revenge",
+        "posterUrl":  "images/A Chefs Deadly Revenge.jpg",
+        "year": 2024,
+        "title": "A Chefs Deadly Revenge (2024)",
+        "description": "A woman moves to a new town and opens her own gourmet restaurant after escaping from an abusive relationship. She soon finds herself in a deadly game of cat and mouse when she becomes the target of constant harassment from a jealous man.",
+        "embedId": "7953109879406",
+        "genres": ["Thriller"],
+        "source": "okru"
+     },
+     {
+        "id": "I Know What You Did Last Summer",
+        "posterUrl":  "images/I Know What You Did Last Summer.jpg",
+        "year": 1997,
+        "title": "I Know What You Did Last Summer (1997)",
+        "description": "Four young friends bound by a tragic accident are reunited when they find themselves being stalked by a hook-wielding maniac in their small seaside town.",
+        "embedId": "7590589303406",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     
+     {
+        "id": "I-Still-Know-What-You-Did-Last-Summer",
+        "posterUrl":  "images/I Still Know What You Did Last Summer.jpg",
+        "year": 1998,
+        "title": "I Still Know What You Did Last Summer (1998)",
+        "description": "The murderous fisherman with a hook is back to once again stalk the two surviving teens, Julie and Ray, who had left him for dead, as well as cause even more murder and mayhem, this time at a posh island resort.",
+        "embedId": "7590592645742",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {
+         "id": "When Darkness Falls",
+        "posterUrl":  "images/When Darkness Falls.jpg",
+        "year": 2022,
+        "title": "When Darkness Falls.2022.",
+        "description": "Andrea and Jess go trekking in Scotland and get separated. Jess searches for Andrea but finds danger instead. Now in peril herself, Jess struggles to locate her missing friend and discern who she can trust.",
+        "embedId": "7576565123694",
+        "genres": ["Thriller"],
+        "source": "okru"
+     },
+     {
+        "id": "House of Inequity",
+        "posterUrl":  "images/House of Inequity.jpg",
+        "year": 2021,
+        "title": "House of Inequity 2021",
+        "description": "A day trip takes a turn for the worse when a group of friends investigate an abandoned house. The nightmares quickly become a reality when they're forced to face their own personal fears, and survive a night in The House of Inequity.",
+        "embedId": "7576554572398",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {
+        "id": "The-Vampire-Next-Door",
+        "posterUrl":  "images/The Vampire Next Door.jpg",
+        "year": 2024,
+        "title": "The Vampire Next Door 2024",
+        "description": "Introverted Cameron, is desperately in love with his high school crush Diane. But his romantic pursuit is halted when Victoria, a female vampire moves in next door. Cameron soon discovers he's in the middle of a life-and-death adventure.",
+        "embedId": "7576537795182",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {
+        "id": "Woman-With-The-Red-Lipstick",
+        "posterUrl":  "images/Woman With The Red Lipstick.jpg",
+        "year": 2024,
+        "title": "Woman With The Red Lipstick (2024)",
+        "description": "Looking to spice things up, Lucy and her boyfriend assume fake names and roleplay meeting for the first time in a bar. A few days later Lucy sees a news report about a missing persons case where the victim has the same name she just used.",
+        "embedId": "7567417739886",
+        "genres": ["Thriller"],
+        "source": "okru"
+     },
+     {
+         "id": "Nanny-Dearest",
+        "posterUrl":  "images/Nanny Dearest.jpg",
+        "year": 2023,
+        "title": "Nanny Dearest (2023)",
+        "description": "After receiving fertile eggs from a donor, Rebecca and Caleb are finally able to have a child and start a family. Four years later, a strange woman appears in their life and becomes oddly drawn to their daughter.",
+        "embedId": "7567330445934",
+        "genres": ["Thriller"],
+        "source": "okru"
+     },
+
+
+    {
+        "id": "breakwater-2023", 
+        "title": "Breakwater (2023)",
+        "description": "A young ex-con risks his newfound freedom to track down the estranged daughter of a fellow inmate, and unknowingly brings a devil from her past straight to her doorstep.",
+        "embedId": "7476133956206",
+        "genres": ["Thriller"],
+        "source": "okru",
+        "posterUrl": "images/breakwater.jpg", 
+        "year": 2023 
+    },
+    {
+        "id": "when-the-bough-breaks-2016", 
+        "title": "When The Bough Breaks (2016)",
+        "description": "A surrogate mom for a couple becomes dangerously obsessed with the soon-to-be father.",
+        "embedId": "7174931352174",
+        "genres": ["Thriller","Drama"],
+        "source": "okru",
+        "posterUrl": "images/when the bough breaks.jpg",
+        "year": 2016 
+    },
+    {
+        "id": "nightmare-school-moms-2023", 
+        "title": "Nightmare School Moms (2023)",
+        "description": "Two mothers battle to see which of their overachieving daughters will be accepted to a prestigious university. However, when one of their methods quickly spirals out of control, the games turned deadly.",
+        "embedId": "7329874119278",
+        "genres": ["Thriller"],
+        "source": "okru",
+        "posterUrl": "images/nightmare.jpg", 
+        "year": 2023 
+    },
+    {
+        "id": "ondine-2009", 
+        "title": "Ondine (2009)",
+        "description": "An Irish fisherman discovers a woman in his fishing net whom his precocious daughter believes to be a selkie.",
+        "embedId": "9919012801134",
+        "genres": ["Drama"],
+        "source": "okru",
+        "posterUrl": "images/ondine.jpg",
+        "year": 2009 
+    },
+    {
+        "id": "kingdom-of-heaven-2005", 
+        "title": "Kingdom of Heaven (2005)",
+        "description": "In the twelfth century, blacksmith Balian travels to Jerusalem, a city seething with religious wars. He transforms into a defending warrior who saves the city and its people.",
+        "embedId": "3680264260327",
+        "genres": ["Action","Drama","War"],
+        "source": "okru",
+        "posterUrl": "images/kingdom.jpg", 
+        "year": 2005 
+    },
+    
+    {
+       
+        "id": "Phenomenon",
+        "title": "Phenomenon",
+        "description": "A cynical American expatriate meets a former lover, with unforeseen complications.",
+        "embedId": "8201706932846",
+        "source":"okru",
+        "posterUrl": "images/phenomenon.jpg",
+        "genres": "Drama",
+        "year": 1996
+    },
+    {
+        "id": "the-godfather",
+        "title": "The Godfather",
+        "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        "posterUrl": "images/the godfather.jpg",
+        "genres": "Crime",
+        "source": "okru",
+        "year": 1972
+    },
+    {
+        "id": "pulp-fiction",
+        "title": "Pulp Fiction",
+        "description": "The lives of two mob hitmen, a boxer, a gangster\"s wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        "posterUrl": "images/pulp fiction.jpg",
+        "genres": "Crime",
+        "source": "okru",
+        "year": 1994
+    },
+   
+    {
+        "id": "Smokey-And-The-Bandit",
+        "title": "Smokey And The Bandit",
+        "description": "The Bandit is hired on to run a tractor-trailer full of beer over state lines, in hot pursuit by a pesky sheriff.",
+        "embedId": "7792980920942",
+        "posterUrl": "images/smokey.jpg",
+        "genres": "Action",
+        "source": "okru",
+        "year": 1977
+    },
+     {
+        "id": "Smokey-And-The-Bandit-2",
+        "title": "Smokey And The Bandit 2",
+        "description": "The Bandit goes on another cross-country run, transporting an elephant from Florida to Texas. And, once again, Sheriff Buford T. Justice is on his tail.",
+        "embedId": "7792984590958",
+        "posterUrl": "images/smokey2.jpg", 
+        "genres": "Action",
+        "source": "okru",
+        "year": 1980
+    },
+     {
+        "id": "Smokey-And-The-Bandit-3",
+        "title": "Smokey And The Bandit 3",
+        "description": "Big and Little Enos are opening a sea food restaurant. They bet Sheriff Buford T. Justice that he cannot drive from Miami to the Enos ranch in Texas in a given amount of time. If Buford loses he has to give up his badge.",
+        "embedId": "7792987277934",
+        "posterUrl": "images/smokey3.jpg", 
+        "genres": "Action",
+        "source": "okru",
+        "year": 1980
+    },
+    {
+        "id": "Angel-Baby",
+        "title": "Angel Baby",
+        "description": "A loving wife and her husband move away to a remote cabin to heal from the devastating loss of their stillborn twins. Soon she senses an evil presence and is pushed to the edge when dark secrets begin to unravel.",
+        "embedId": "7476110101102",
+        "posterUrl": "images/angel baby.jpg",
+        "genres": "Horror",
+        "source": "okru",
+        "year": 2023
+    },
+    
+
+
+      
+      {
+        "id": "Michael",
+        "title": "Michael (1996)",
+        "description": "An ordinary man sees a bright light descend from the sky, and discovers he now has super-intelligence and telekinesis.",
+         "embedId": "8201706932846",
+        "posterUrl": "images/michael.jpg", 
+        "genres": "Drama",
+        "source": "okru",
+        "year": 1996
+    },
+     {
+        "id": "Goin-South",           
+        "posterUrl": "images/goin south.jpg", 
+        "year": 1978 ,           
+        "title": "Goin South ",        
+        "genres": ["western","Comedy" ],      
+        "source": "okru",       
+        "embedId": "7792993372782",      
+        "description": "Due to the lack of men after the Civil War, a small western town allows a bachelorette with ulterior motives to save a horse thief from the gallows by marrying him. They must deal with his old gang, the Sheriff, the bank, and each other."  
+    },
+    {
+        "id": "Grind",         
+        "posterUrl": "images/grind.jpg", 
+        "year": 2003 ,           
+        "title": "Grind ",        
+        "genres": ["Comedy" ],     
+        "source": "okru",       
+        "embedId": "7792993372782",      
+        "description": "Four skaters follow their idol on his summer tour in an attempt to get noticed, get sponsored, and become stars themselves."   
+    },
+    
+      {
+        "id": "Unspeakable-Beyond-the-Wall-of-Sleep",
+        "posterUrl":  "images/Unspeakable Beyond the Wall of Sleep.jpg",
+        "year": 2025,
+        "title": "Unspeakable Beyond the Wall of Sleep 2025",
+        "description": "Renowned oneirologist Ambrose London is requested to appear at Arkham Asylum to study the strange case of dissociative identity disorder in patient James Fhelleps/Joe Slater.",
+        "embedId": "9565076261414",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      {
+        "id": "Deciphering-the-Zodiac-Killer",
+        "posterUrl":  "images/Deciphering the Zodiac Killer.jpg",
+        "year": 2023,
+        "title": "Deciphering the Zodiac Killer",
+        "description": "The Zodiac Killer terrorized San Francisco with brutal murders and cryptic letters to newspapers. Despite extensive investigations, the killer's identity remains unknown, marking a pivotal case in criminal history.",
+        "embedId": "9544518339150",
+        "genres": ["History"],
+        "source": "okru"
+     },
+      {
+        "id": "10-Rillington-Place",
+        "posterUrl":  "images/10 rillington place.jpg",
+        "year": 1971,
+        "title": "10 Rillington Place (1971)",
+        "description": "What happened to the women at 10 Rillington Place? The story of British serial killer John Christie, who committed most or all of his crimes in the titular terraced house, and the miscarriage of justice involving Timothy Evans.",
+        "embedId": "9584557886158",
+        "genres": ["Horror","Crime","History"],
+        "source": "okru"
+     },
+      {
+        "id": "The-Capture-of-the-Green-River-Killer",
+        "posterUrl":  "images/The Capture of the Green River Killer.jpg",
+        "year": 2008,
+        "title": "The Capture of the Green River Killer",
+        "description": "A pair of girls seeking adventure beyond their western Washington trailer park encounter the area's most ruthless serial killer. The series is based on Sheriff David Reichert's book, Chasing the Devil: My Twenty-year Quest to Capture the Green River Killer",
+        "embedId": "7997470608035",
+        "genres": ["Crime","Horror"],
+        "source": "okru"
+     },
+      {
+        "id": "K-O",
+        "posterUrl":  "images/ko.jpg",
+        "year": 2025,
+        "title": "K.O 2025",
+        "description": "After accidentally killing his rival in an MMA bout, a man has the chance to make it up to the widow by finding her son.",
+        "embedId": "9572706552358",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+      {
+        "id": "The-Shrouds",
+        "posterUrl":  "images/The Shrouds.jpg",
+        "year": 2024,
+        "title": "The Shrouds 2024",
+        "description": "Karsh, an innovative businessman and grieving widower, builds a device to connect with the dead inside a burial shroud.",
+        "embedId": "9572658186790",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      {
+        "id": "The-Quiet-Hour",
+        "posterUrl":  "images/the quiet hour.jpg",
+        "year": 2014,
+        "title": "The Quiet Hour 2014",
+        "description": "In the aftermath of an alien invasion, a feisty teenage girl sets out to protect her farm from human scavengers who will stop at nothing in order to survive in a post-apocalyptic world.",
+        "embedId": "IV4cNRQho1k",
+        "genres": ["Sci-Fi"],
+        "source": "youtube"
+     },
+      {
+        "id": "Cannibal-Troll",
+        "posterUrl":  "images/Cannibal Troll.jpg",
+        "year": 2021,
+        "title": "Cannibal Troll 2021",
+        "description": "A group of female friends on a hen weekend in the countryside find themselves hunted by a beastly - and very hungry - troll.",
+        "embedId": "KB-LE45JNns",
+        "genres": ["Horror"],
+        "source": "youtube"
+     },
+      
+     {
+        "id": "Big-Sky",
+        "posterUrl":  "images/big sky.jpg",
+        "year": 2015,
+        "title": "Big Sky 2015",
+        "description": "A teen traveling with her mother to a treatment center for her agoraphobia has to fight for their lives against a gunman who attacks them.",
+        "embedId": "/8trxactihoU",
+        "genres": ["Thriller","Drama"],
+        "source": "youtube"
+     },
+     {
+        "id": "Wake-the-Dead",
+        "posterUrl":  "images/Wake the Dead.jpg",
+        "year": 2017,
+        "title": "Wake the Dead 2017",
+        "description": "After a near death incident leaves Kristin scarred with a terrifying connection to the Spirit World, her family attempts to break her free of an Evil Spirit's hold.",
+        "embedId": "QRdXBv1MAlY",
+        "genres": ["Horror"],
+        "source": "youtube"
+     },
+     {
+        "id": "Killer-Elite",
+        "posterUrl":  "images/Killer Elite.jpg",
+        "year": 2011,
+        "title": "Killer Elite (2011).",
+        "description": "When his mentor is taken captive by a disgraced Arab sheik, a killer-for-hire is forced into action. His mission: kill three members of Britain's elite Special Air Service responsible for his son's deaths.",
+        "embedId": "ujIBDYjOB5Q",
+        "genres": ["Action"],
+        "source": "youtube"
+     },
+     {
+        "id": "Alien",
+        "posterUrl":  "images/alien.jpg",
+        "year": 1979,
+        "title": "Alien (1979)",
+        "description": "After investigating a mysterious transmission of unknown origin, the crew of a commercial spacecraft encounters a deadly lifeform.",
+        "embedId": "7528202832426",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {
+        "id": "Dead Again",
+        "posterUrl":  "images/Dead Again.jpg",
+        "year": 2021,
+        "title": "Dead Again 2021",
+        "description": "In a rural village where crime is non existent, a police sergeant is retiring out of boredom. He is sent a young recruit fresh out of police school. All hell is about to break loose in this apocalyptic horror film.",
+        "embedId": "2342570756646",
+        "genres": ["Horror","Comedy"],
+        "source": "okru"
+     },
+     {
+        "id": "BTK",
+        "posterUrl":  "images/BTK.jpg",
+        "year": 2008,
+        "title": "BTK 2008",
+        "description": "Dennis L. Rader systematically tortured and killed innocent victims for over two decades, evading the police for over 30 years while living a seemingly normal life as a husband, father, security officer and church president.",
+        "embedId": "2276641933862",
+        "genres": ["Crime","Horror","History"],
+        "source": "okru"
+     },
+     {
+        "id": "Haunting-of-the-Mary-Celeste",
+        "posterUrl":  "images/Haunting of the Mary Celeste.jpg",
+        "year": 2020,
+        "title": "Haunting of the Mary Celeste 2020",
+        "description": "Rachel and her team investigate supernatural causes of a family and crew's disappearance from a merchant ship, proving their theory as the ship breaks down and crew members disappear.",
+        "embedId": "2200181344806",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      {
+        "id": "Staying-Alive",
+        "posterUrl":  "images/Staying Alive.jpg",
+        "year": 1983,
+        "title": "Staying Alive 1983",
+        "description": "Five years later, Tony Manero's Saturday Night Fever is still burning. Now he's strutting toward his biggest challenge yet: succeeding as a dancer on the Broadway stage.",
+        "embedId": "2743232301708",
+        "genres": ["Drama"],
+        "source": "okru"
+     },
+      {
+        "id": "Grease",
+        "posterUrl":  "images/Grease.jpg",
+        "year": 1978,
+        "title": "Grease 1978",
+        "description": "Good girl Sandy Olsson and greaser Danny Zuko fell in love over the summer. When they unexpectedly discover they're now in the same high school, will they be able to rekindle their romance?",
+        "embedId": "7631759018722",
+        "genres": ["Drama","Comedy"],
+        "source": "okru"
+     },
+      {
+        "id": "The-Searchers",
+        "posterUrl":  "images/The Searchers.jpg",
+        "year": 1956,
+        "title": "The Searchers 1956",
+        "description": "An American Civil War veteran embarks on a years-long journey to rescue his niece from the Comanches after the rest of his brother's family is massacred in a raid on their Texas farm.",
+        "embedId": "4705978485410",
+        "genres": ["Western"],
+        "source": "okru"
+     },
+      {
+        "id": "Gunslingers",
+        "posterUrl":  "images/Gunslingers.jpg",
+        "year": 2025,
+        "title": "Gunslingers 2025",
+        "description": "In a town named Redemption, reformed gunslinger Keller and mad genius Ben are guided by spiritual leader Jericho towards vindication. While confronting their violent histories, their newfound peace is challenged by violence and revenge.",
+        "embedId": "9369180377506",
+        "genres": ["Western"],
+        "source": "okru"
+     },
+      {
+        "id": "Dances-With-Wolves",
+        "posterUrl":  "images/Dances with Wolves.jpg",
+        "year": 1990,
+        "title": "Dances With Wolves 1990",
+        "description": "A lieutenant assigned to a remote Civil War outpost starts questioning his purpose after making contact with a neighboring Sioux settlement.",
+        "embedId": "9289789606562",
+        "genres": ["Western"],
+        "source": "okru"
+     },
+      {
+        "id": "Under-Siege",
+        "posterUrl":  "images/Under Siege.jpg",
+        "year": 1992,
+        "title": "Under Siege (1992)",
+        "description": "Ex US Navy Seal turned cook, Casey Ryback, is the only person who can stop a group of terrorists when they seize control of the US battleship The Missouri to obtain it's nuclear warheads",
+        "embedId": "9569543522990",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+      {
+        "id": "Under-Siege-2",
+        "posterUrl":  "images/Under Siege 2.jpg",
+        "year": 1995,
+        "title": "Under Siege 2 Dark Territory(1995)",
+        "description": "Casey Ryback, is on vacation, with his recently orphaned niece to attend his brothers funeral by train but when terrorists hijack it, to use as a mobile base to hack a top secret destructive US satellite, Ryback must stop them.",
+        "embedId": "9569632651950",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+      {
+        "id": "A-Kind-of-Madness",
+        "posterUrl":  "images/A Kind of Madness.jpg",
+        "year": 2025,
+        "title": "A Kind of Madness (2025)",
+        "description": "A 70-year-old man kidnaps his wife with dementia from her care facility fleeing from police and their grown children",
+        "embedId": "9572628171302",
+        "genres": ["Drama"],
+        "source": "okru"
+     },
+      {
+        "id": "Echo Valley",
+        "posterUrl":  "images/Echo Valley.jpg",
+        "year": 2025,
+        "title": "Echo Valley 2025",
+        "description": "Kate is dealing with a personal tragedy while owning and training horses in Echo Valley, an isolated and picturesque place, when her daughter, Claire, arrives at her doorstep, frightened, trembling and covered in someone else's blood",
+
+        "embedId": "9572607330854",
+        "genres": ["Thriller"],
+        "source": "okru"
+     },
+      {
+        "id": "Diablo",
+        "posterUrl":  "images/Diablo.jpg",
+        "year": 2025,
+        "title": "Diablo 2025",
+        "description": "Kris Chaney, a recently released ex-convict embarks on a perilous mission. He kidnaps Elisa, daughter of Vicente, a powerful gangster, which puts them in danger from El Corvo, a psychopathic killer seeking revenge against Vicente's family",
+        "embedId": "9572578953766",
+        "genres": ["Action","Thriller"],
+        "source": "okru"
+     },
+      {
+        "id": "Reaper",
+        "posterUrl":  "images/Reaper.jpg",
+        "year": 2014,
+        "title": "Reaper (2014)",
+        "description": "Criminals and a beautiful but cunning hitchhiker battle a supernatural force known as the Reaper",
+        "embedId": "9568061098534",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+      {
+        "id": "Lethal-Weapon-3",
+        "posterUrl":  "images/Lethal Weapon 3.jpg",
+        "year": 1992,
+        "title": "Lethal Weapon 3 1992",
+        "description": "Martin Riggs and Roger Murtaugh pursue a former LAPD officer who uses his knowledge of police procedure and policies to steal and sell confiscated guns and ammunition to local street gangs.",
+        "embedId": "8351993563834",
+        "genres": ["Acton"],
+        "source": "okru"
+     },
+      {
+        "id": "Lethal-Weapon-2",
+        "posterUrl":  "images/Lethal Weapon 2.jpg",
+        "year": 1992,
+        "title": "Lethal Weapon 2 1989",
+        "description": "Riggs and Murtaugh are on the trail of South African diplomats who are using their immunity to engage in criminal activities.",
+        "embedId": "4324245179130",
+        "genres": ["Action"],
+        "source": "okru"
+     }, {
+        "id": "Lethal-Weapon",
+        "posterUrl":  "images/Lethal Weapon.jpg",
+        "year": 1987,
+        "title": "Lethal Weapon 1987",
+        "description": "Two newly paired cops who are complete opposites must put aside their differences in order to catch a gang of drug smugglers.",
+        "embedId": "4324245113594",
+        "genres": ["Action"],
+        "source": "okru"
+     }, 
+     {
+        "id": "Lethal-Weapon-4",
+        "posterUrl":  "images/Lethal Weapon 4.jpg",
+        "year": 1998,
+        "title": "Lethal Weapon 4 1998",
+        "description": "With personal crises and age weighing in on them, LAPD officers Riggs and Murtaugh must contend with deadly Chinese triads that are trying to free their former leaders out of prison and onto American soil.",
+        "embedId": "4324244982522",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+     {
+        "id": "Die-Hard",
+        "posterUrl":  "images/Die Hard.jpg",
+        "year": 1988,
+        "title": "Die Hard 1988",
+        "description": "A New York City cop, John McClane, tries to save his estranged wife and several others taken hostage by terrorists during a Christmas Eve party at the Nakatomi Plaza Skyscraper in Los Angeles, California.",
+        "embedId": "4998759254577",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+     {
+        "id": "Live-Free-or-Die-Hard",
+        "posterUrl":  "images/Live Free or Die Hard.jpg",
+        "year": 2007,
+        "title": "Live Free or Die Hard (2007)",
+        "description": "John McClane is forced to team up with a young computer hacker, Matt Farrell, to stop a master cyber-terrorist called Thomas Gabriel, who wants to shut down the entire nations computer infrastructure in a mass cyber attack.",
+        "embedId": "4998759123505",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+     {
+        "id": "Gallowwalkers",
+        "posterUrl":  "images/gallowwalkers.jpg",
+        "year": 2012,
+        "title": "Gallowwalkers",
+        "description": "A cursed gunman (Snipes) whose victims come back from the dead recruits a young warrior to help in the fight against a gang of zombies.",
+        "embedId": "231263636075",
+        "genres": ["Horror","Western"],
+        "source": "okru"
+     },
+     {
+        "id": "Zulu",
+        "posterUrl":  "images/Zulu.jpg",
+        "year": 1964,
+        "title": "Zulu",
+        "description": "Outnumbered British soldiers do battle with Zulu warriors at Rorke's Drift.",
+        "embedId": "7711462394458",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+     {
+        "id": "Zulu-Dawn",
+        "posterUrl":  "images/Zulu Dawn.jpg",
+        "year": 1979,
+        "title": "Zulu Dawn (1979)",
+        "description": "A dramatization of the Battle of Isandlwana, where the British Army met its match against the Zulu nation",
+        "embedId": "3937392528031",
+        "genres": ["Action"],
+        "source": "okru"
+     },
+     {
+        "id": "Planet-Of-The-Apes",
+        "posterUrl":  "images/Planet Of The Apes 1968.jpg",
+        "year": 1968,
+        "title": "Planet Of The Apes (1968)",
+        "description": "After being kept in hypersleep during a long expedition into deep space, an astronaut crew crash-lands in the 40th century on a planet where highly intelligent non-human ape species are dominant and humans are enslaved.",
+        "embedId": "",
+        "genres": ["Sci-Fi"],
+        "source": "okru"
+     },
+     {
+        "id": "The-Odyssey",
+        "posterUrl":  "images/The Odyssey.jpg",
+        "year": 1997,
+        "title": "The Odyssey (1997)",
+        "description": "Follows Odysseus on his wanderings back to Ithaca following the Trojan War.",
+        "embedId": "9074546182746",
+        "genres": ["Adventure","Action"],
+        "source": "okru"
+     },
+     {
+        "id": "Tremors",
+        "posterUrl":  "images/Tremors.jpg",
+        "year": 1990,
+        "title": "Tremors (1990)",
+        "description": "Natives of a small isolated town defend themselves against strange underground creatures which are killing them one by one.",
+        "embedId": "",
+        "genres": ["Horror","Comedy"],
+        "source": "okru"
+     },
+     {
+        "id": "Tremors-II-Aftershocks",
+        "posterUrl":  "images/Tremors II Aftershocks.jpg",
+        "year": 1996,
+        "title": "Tremors II: Aftershocks",
+        "description": "Earl Bassett, now a washed-up ex-celebrity, is hired by a Mexican oil company to eradicate a Graboid epidemic that's killing more people each day. However, the humans aren't the only one with a new battle plan.",
+        "embedId": "",
+        "genres": ["Horror","Comedy"],
+        "source": "okru"
+     },
+     {
+        "id": "Futureworld",
+        "posterUrl":  "images/futureworld.jpg",
+        "year": 1976,
+        "title": "Futureworld (1976)",
+        "description": "Upon attempting to divulge a diabolical plot of the futuristic theme park, Futureworld, an ex-employee is dispatched after he tips off the reporter who exposed Westworld. The reporter and his ex-co-reporter investigate the situation.",
+        "embedId": "8924694252122",
+        "genres": ["Thriller","Sci-Fi"],
+        "source": "okru"
+     },
+     {
+        "id": "She",
+        "posterUrl":  "images/she.jpg",
+        "year": 1965,
+        "title": "She (1965)",
+        "description": "An Edwardian archaeologist and two companions stumble upon a lost city in East Africa, run by a beautiful queen whose love holds the promise of immortality.",
+        "embedId": "8608074304090",
+        "genres": ["Adventure","Action"],
+        "source": "okru"
+     },
+     {
+        "id": "The Vengeance Of She",
+        "posterUrl":  "images/The Vengeance of She.jpg",
+        "year": 1968,
+        "title": "The Vengeance Of She (1968)",
+        "description": "Carol, a beautiful young girl is possessed by Ayesha's spirit who was once the queen of Kuma. Ayesha's spirit gains control over Carol to achieve her malevolent goals",
+        "embedId": "",
+        "genres": ["Adventure","Action"],
+        "source": "okru"
+     },
+     {
+        "id": "King Kong",
+        "posterUrl":  "images/King Kong (1976).jpg",
+        "year": 1976,
+        "title": "King Kong (1976)",
+        "description": "A petroleum exploration expedition comes to an isolated island and encounters a colossal giant gorilla.",
+        "embedId": "8145274604122",
+        "genres": ["Adventute","action"],
+        "source": "okru"
+     },
+     {
+        "id": "Cannibal Holocaust",
+        "posterUrl":  "images/Cannibal Holocaust.jpg",
+        "year": 1980,
+        "title": "Cannibal Holocaust (1980)",
+        "description": "An anthropologist ventures into the Amazon rainforest on a rescue mission, where he recovers footage shot by a film crew documenting their disastrous encounters with local cannibal tribes.",
+        "embedId": "7761425336922",
+        "genres": ["Horror"],
+        "source": "okru"
+     },
+     {
+        "id": "Big-Jake",
+        "posterUrl":  "images/Big Jake.jpg",
+        "year": 1971,
+        "title": "Big Jake",
+        "description": "In 1909, when John Fain's gang kidnaps Jacob McCandles' grandson and holds him for ransom, Big Jake sets out to rescue the boy.",
+        "embedId": "8899457190490",
+        "genres": ["Western"],
+        "source": "okru"
+     },
+     {
+        "id": "Chisum",
+        "posterUrl":  "images/Chisum.jpg",
+        "year": 1970,
+        "title": "Chisum (1970)",
+        "description": "Cattle baron John Chisum joins forces with Billy the Kid and Pat Garrett to fight the Lincoln County land war.",
+        "embedId": "",
+        "genres": ["Western"],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year": 2024,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year": 2024,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year": 2024,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year": 2024,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     }
+        ]; // <-- END OF MOVIE DATA
+
+        // --- GLOBAL VARIABLES FOR PAGINATION & RENDERING ---
+        const itemsPerPage = 20; // Number of movies to display per page
+        let currentPage = 1;
+        let filteredMovies = []; // Stores movies after search/filter
+
+        const latestMovieGrid = document.getElementById('latest-movie-grid');
+        const allMovieGrid = document.getElementById('all-movie-grid');
+        const movieSearchInput = document.getElementById('movie-search');
+        const prevPageBtn = document = document.getElementById('prevPage');
+        const nextPageBtn = document.getElementById('nextPage');
+        const pageInfoSpan = document.getElementById('pageInfo');
+
+        // --- FUNCTIONS ---
+
+        // Helper function to get the correct embed URL based on source
+        function getEmbedUrl(movie) {
+            if (movie.source === "okru" && movie.embedId) {
+                return `https://ok.ru/videoembed/${movie.embedId}`;
+            }
+            // Add conditions for other sources here if needed
+            // For Facebook, a direct iframe embed usually doesn't work from file://
+            // return `https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/facebookapp/videos/${movie.embedId}/` // Example for FB, but usually needs SDK
+            return ''; // Return empty string if no valid embed URL can be formed
+        }
+
+        // Renders movie cards to a specified grid
+        function renderMoviesToGrid(moviesToDisplay, targetGridElement) {
+            if (!targetGridElement) return;
+
+            if (!moviesToDisplay || moviesToDisplay.length === 0) {
+                targetGridElement.innerHTML = '<p>No movies to display.</p>';
+                return;
+            }
+
+            targetGridElement.innerHTML = ''; // Clear existing content
+
+            moviesToDisplay.forEach(movie => {
+                const movieCard = document.createElement('div');
+                movieCard.classList.add('movie-card');
+
+                const title = movie.title || 'Untitled';
+                const posterPath = movie.posterUrl || `images/placeholder.jpg`;
+                const releaseDate = movie.release_date || (movie.year ? `Year: ${movie.year}` : 'Date: N/A');
+                const genres = (movie.genres && movie.genres.join(', ')) || 'N/A';
+                
+                const embedUrl = getEmbedUrl(movie); // Use the helper function
+
+                let mediaContent = '';
+                if (embedUrl) {
+                    mediaContent = `<iframe src="${embedUrl}" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>`;
+                } else {
+                    mediaContent = `<img src="${posterPath}" alt="${title} Poster" onerror="this.onerror=null;this.src='images/placeholder.jpg';">`;
+                }
+
+                movieCard.innerHTML = `
+                    <a href="movie-details.html?id=${movie.id}">
+                        ${mediaContent}
+                        <h3>${title}</h3>
+                        <p>Genres: ${genres}</p>
+                        <p>Release Date: ${releaseDate}</p>
+                    </a>
+                `;
+                targetGridElement.appendChild(movieCard);
+            });
+        }
+
+        function renderAllMovies(page = currentPage) {
+            currentPage = page;
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const moviesToRender = filteredMovies.slice(start, end);
+
+            renderMoviesToGrid(moviesToRender, allMovieGrid);
+            updatePaginationControls();
+        }
+
+        function updatePaginationControls() {
+            const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
+            pageInfoSpan.textContent = `Page ${currentPage} of ${totalPages || 1}`;
+
+            prevPageBtn.disabled = currentPage === 1;
+            nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+        }
+
+        function filterAndRenderMovies() {
+            const searchTerm = movieSearchInput.value.toLowerCase().trim();
+            if (searchTerm) {
+                filteredMovies = moviesData.filter(movie =>
+                    (movie.title && movie.title.toLowerCase().includes(searchTerm)) ||
+                    (movie.genres && movie.genres.some(genre => genre.toLowerCase().includes(searchTerm))) ||
+                    (movie.release_date && movie.release_date.includes(searchTerm)) ||
+                    (movie.year && String(movie.year).includes(searchTerm))
+                );
+            } else {
+                filteredMovies = [...moviesData];
+            }
+            currentPage = 1;
+            renderAllMovies();
+        }
+
+        // --- EVENT LISTENERS ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMoviesToGrid(moviesData.slice(0, 5), latestMovieGrid);
+            
+            filteredMovies = [...moviesData];
+            renderAllMovies(1);
+        });
+
+        prevPageBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                renderAllMovies(currentPage - 1);
+            }
+        });
+
+        nextPageBtn.addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                renderAllMovies(currentPage + 1);
+            }
+        });
+
+        movieSearchInput.addEventListener('input', filterAndRenderMovies);
+    </script>
+</body>
+</html>

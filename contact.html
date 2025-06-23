@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Movie Hub</title>
+    <!-- Embedded CSS for consistent styling with index.html and about.html -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0f044c; /* Darker blue */
+            color: #e0e0e0;
+            padding: 1rem 0;
+            border-bottom: 3px solid #735bf2; /* Accent color */
+        }
+
+        header h1 {
+            margin: 0;
+            float: left;
+            color: #ffd700; /* Gold for title */
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700; /* Gold on hover */
+        }
+
+        header .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .content-section {
+            padding: 40px 0;
+            background-color: #2a2a4a;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+
+        /* Styles adapted from Tailwind classes in your provided .njk content */
+        .page-content-section {
+            text-align: center; /* Equivalent to text-center */
+        }
+
+        .section-title {
+            color: #ffd700; /* Match existing h2 color */
+            font-size: 2.5em; /* Default large size for section titles */
+            font-weight: bold; /* Equivalent to font-bold */
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+            text-align: center;
+        }
+
+        .section-title.text-3xl {
+            font-size: 1.875rem; /* Specific for text-3xl (30px) */
+        }
+
+        .page-content-section p {
+            line-height: 1.625; /* Equivalent to leading-relaxed */
+            margin-bottom: 1rem; /* Equivalent to mb-4 */
+            font-size: 1.1em; /* Default paragraph font size */
+            color: #e0e0e0; /* Inherit main text color for general paragraphs */
+        }
+        
+        .page-content-section p.mb-6 {
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+        }
+
+        .page-content-section a {
+            color: #735bf2; /* Equivalent to text-blue-500 */
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+        .page-content-section a:hover {
+            text-decoration: underline;
+            color: #5d48cc; /* Darker blue on hover */
+        }
+
+        form {
+            margin-top: 2rem; /* Equivalent to mt-8 */
+            max-width: 32rem; /* Equivalent to max-w-lg (512px) */
+            margin-left: auto; /* Equivalent to mx-auto */
+            margin-right: auto; /* Equivalent to mx-auto */
+            background-color: #3a3a5e; /* Darker background for the form, adapting from white */
+            padding: 1.5rem; /* Equivalent to p-6 */
+            border-radius: 0.5rem; /* Equivalent to rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Equivalent to shadow-md */
+            text-align: left; /* Equivalent to text-left */
+        }
+
+        form div.mb-4 {
+            margin-bottom: 1rem; /* Equivalent to mb-4 */
+        }
+
+        form div.mb-6 {
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+        }
+
+        form label {
+            display: block; /* Equivalent to block */
+            color: #e0e0e0; /* Adapted from text-gray-700 to match dark theme */
+            font-size: 0.875rem; /* Equivalent to text-sm */
+            font-weight: bold; /* Equivalent to font-bold */
+            margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Equivalent to shadow appearance-none */
+            border: 1px solid #735bf2; /* Equivalent to border */
+            border-radius: 0.25rem; /* Equivalent to rounded */
+            width: 100%; /* Equivalent to w-full */
+            padding: 0.5rem 0.75rem; /* Equivalent to py-2 px-3 */
+            color: #1a1a2e; /* Text color for input fields, dark to be legible on light input bg */
+            line-height: 1.25; /* Equivalent to leading-tight */
+            outline: none; /* Equivalent to focus:outline-none */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: #f0f0f0; /* Light background for input fields */
+        }
+
+        form input::placeholder,
+        form textarea::placeholder {
+            color: #888; /* Placeholder text color */
+        }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #ffd700; /* Yellow border on focus */
+            box-shadow: 0 0 0 3px rgba(115, 91, 242, 0.5); /* Equivalent to focus:shadow-outline */
+        }
+        
+        form button[type="submit"] {
+            background-color: #735bf2; /* Equivalent to bg-blue-500 */
+            color: #fff; /* Equivalent to text-white */
+            font-weight: bold; /* Equivalent to font-bold */
+            padding: 0.5rem 1rem; /* Equivalent to py-2 px-4 */
+            border-radius: 0.25rem; /* Equivalent to rounded */
+            outline: none; /* Equivalent to focus:outline-none */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Equivalent to focus:shadow-outline */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        form button[type="submit"]:hover {
+            background-color: #5d48cc; /* Equivalent to hover:bg-blue-700 */
+            transform: translateY(-1px);
+        }
+
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+
+
+        footer {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+            border-top: 3px solid #735bf2;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1,
+            header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                margin: 0 10px;
+            }
+
+            .content-section h2, .section-title {
+                font-size: 2em;
+            }
+            .page-content-section p {
+                font-size: 1em;
+            }
+            form {
+                max-width: 90%; /* Adjust form width for smaller screens */
+                padding: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .content-section h2, .section-title {
+                font-size: 1.8em;
+            }
+            .page-content-section p {
+                font-size: 0.9em;
+            }
+            form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Movie Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-us" class="content-section">
+            <div class="container">
+                <div class="page-content-section">
+                    <h2 class="section-title text-3xl font-bold mb-6">Contact Us</h2>
+                    <p class="leading-relaxed mb-4">Have questions, feedback, or movie suggestions? We'd love to hear from you!</p>
+                    <p class="leading-relaxed mb-6">You can reach us via email at: <a href="mailto:info@themoviehub.com">info@themoviehub.com</a></p>
+
+                    <form class="mt-8 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md text-left">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="your.email@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your message here..."></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>

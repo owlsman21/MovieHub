@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Movie Hub</title>
+    <!-- Embedded CSS for consistent styling with index.html -->
+    <style>
+        body {
+           body {
+    font-family: 'Inter', Arial, sans-serif;
+    /* ... other body styles ... */
+}
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0f044c; /* Darker blue */
+            color: #e0e0e0;
+            padding: 1rem 0;
+            border-bottom: 3px solid #735bf2; /* Accent color */
+        }
+
+        header h1 {
+            margin: 0;
+            float: left;
+            color: #ffd700; /* Gold for title */
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700; /* Gold on hover */
+        }
+
+        header .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .content-section {
+            padding: 40px 0;
+            background-color: #2a2a4a;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+
+        /* Styles adapted from Tailwind classes in your provided .njk content */
+        .page-content-section {
+            text-align: center; /* Equivalent to text-center */
+        }
+
+        .section-title {
+            color: #ffd700; /* Match existing h2 color */
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+            font-size: 2.5em; /* Keep consistent with content-section h2 */
+            text-align: center;
+        }
+
+        .section-title.mt-12 {
+            margin-top: 3rem; /* Equivalent to mt-12 (48px) */
+        }
+
+        .section-title.mb-6 {
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 (24px) */
+        }
+
+        .about-subheading {
+            color: #e0e0e0; /* Subheading text color */
+        }
+        
+        .about-subheading.text-2xl {
+            font-size: 1.5rem; /* Equivalent to text-2xl (24px) */
+            margin-bottom: 2rem; /* Equivalent to mb-8 (32px) */
+        }
+
+        .about-subheading.text-xl {
+            font-size: 1.25rem; /* Equivalent to text-xl (20px) */
+            margin-top: 2rem; /* Equivalent to mt-8 (32px) */
+            margin-bottom: 0.5rem; /* Equivalent to mb-2 (8px) */
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            text-align: justify;
+            margin-bottom: 1rem; /* Equivalent to mb-4 (16px) */
+            max-width: 800px; /* Kept existing max-width from .content-section p */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+
+        .content-section p.mb-4 {
+            margin-bottom: 1rem; /* Equivalent to mb-4 (16px) */
+        }
+
+        .content-section p.mb-6 {
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 (24px) */
+        }
+
+        .content-section p.mt-8 {
+            margin-top: 2rem; /* Equivalent to mt-8 (32px) */
+        }
+
+        .text-left-responsive-container { /* Custom class for div with text-left max-w-2xl mx-auto */
+            text-align: left; /* Equivalent to text-left */
+            max-width: 672px; /* Equivalent to max-w-2xl (42rem or 672px) */
+            margin-left: auto; /* Equivalent to mx-auto */
+            margin-right: auto; /* Equivalent to mx-auto */
+        }
+
+        footer {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+            border-top: 3px solid #735bf2;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1,
+            header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                margin: 0 10px;
+            }
+
+            .content-section h2, .section-title {
+                font-size: 2em;
+            }
+            .content-section p {
+                font-size: 1em;
+            }
+            .about-subheading.text-2xl {
+                font-size: 1.35rem; /* Adjust for smaller screens */
+            }
+            .about-subheading.text-xl {
+                font-size: 1.1rem; /* Adjust for smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .content-section h2, .section-title {
+                font-size: 1.8em;
+            }
+            .content-section p {
+                font-size: 0.9em;
+            }
+            .about-subheading.text-2xl {
+                font-size: 1.2rem;
+            }
+            .about-subheading.text-xl {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Movie Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-us" class="content-section">
+            <div class="container">
+                <div class="page-content-section">
+                    <h2 class="section-title mb-6">WELCOME TO THE MOVIE HUB:</h2>
+                    <h3 class="about-subheading text-2xl mb-8">YOUR PORTAL TO CINEMATIC IMMERSION</h3>
+
+                    <p class="mb-4">Step into a world where every frame tells a story, every character breathes life, and every film is a journey. The Movie Hub isn't just a website; it's a testament to the enduring power of the moving picture. We are cinephiles, storytellers, and dreamers, united by an unyielding passion for the magic that unfolds on screen.</p>
+
+                    <h2 class="section-title mt-12 mb-6">OUR GENESIS: A PASSION FOR THE MOVING PICTURE</h2>
+
+                    <p class="mb-4">Born from countless late-night discussions, shared popcorn, and a collective reverence for cinematic artistry, The Movie Hub began as a simple idea: to create a space where fellow enthusiasts could explore, discover, and celebrate the vast universe of film. We noticed a void - a lack of a truly immersive, user-friendly platform that honored both blockbuster epics and hidden indie gems with equal fervor. So, we decided to build it ourselves, frame by painstaking frame.</p>
+
+                    <h2 class="section-title mt-12 mb-6">WHAT AWAITS YOU WITHIN OUR REELS</h2>
+
+                    <div class="text-left-responsive-container">
+                        <h4 class="about-subheading text-xl mt-8 mb-2">Vast Library</h4>
+                        <p class="mb-6">Dive into an ever-expanding collection spanning genres, eras, and cultures. From timeless classics to the latest releases, our library is meticulously curated to cater to every taste.</p>
+
+                        <h4 class="about-subheading text-xl mt-8 mb-2">Curated Collections</h4>
+                        <p class="mb-6">Beyond simple categories, we offer thoughtful collections, guiding you through themed cinematic journeys – be it a deep dive into Film Noir, a celebration of Auteur Cinema, or a thrilling ride through the best Sci-Fi epics.</p>
+
+                        <h4 class="about-subheading text-xl mt-8 mb-2">Community & Connection</h4>
+                        <p class="mb-6">The Movie Hub is a place for dialogue. Share your thoughts, discuss theories, and connect with other movie lovers. Your perspective enriches the cinematic experience for all.</p>
+
+                        <h4 class="about-subheading text-xl mt-8 mb-2">Seamless Experience</h4>
+                        <p class="mb-6">Our intuitive design ensures effortless navigation. Find what you love, discover something new, and enjoy a smooth, visually engaging experience every time you visit.</p>
+                    </div>
+
+                    <h2 class="section-title mt-12 mb-6">OUR VISION</h2>
+
+                    <p class="mb-4">We envision The Movie Hub as more than just a database; it's a living, breathing archive where the legacy of film is honored and its future is enthusiastically embraced. We are committed to constant evolution, adding new features, expanding our library, and listening to our community to ensure The Movie Hub remains your ultimate cinematic companion.</p>
+
+                    <p class="mt-8 mb-4">Thank you for embarking on this cinematic journey with us. Let the reels roll, and may your movie-watching experience be nothing short of extraordinary!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
