@@ -486,7 +486,7 @@
         // year: Release year (Number)
         // release_date: Full release date string (e.g., "YYYY-MM-DD")
         const moviesData = [
-          {
+           {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -3843,9 +3843,8 @@
             }
             // NEW: For YouTube, construct the URL using the video ID with autoplay and branding parameters
             else if (movie.source === "youtube" && movie.embedId) {
-                // Autoplay is attempted, but modern browsers usually require mute=1 or user interaction
-                // for autoplay to work. Adding mute=1 as a common workaround.
-                return `https://www.youtube.com/embed/${movie.embedId}?autoplay=0&modestbranding=1&rel=0`; // Autoplay set to 0
+                // Autoplay is set to 0, modestbranding and rel are for player appearance.
+                return `https://www.youtube.com/embed/${movie.embedId}?autoplay=0&modestbranding=1&rel=0`; 
             }
             // For Facebook, a direct iframe embed usually doesn't work from file://.
             // If you have a different direct embed URL from Facebook, you can add logic here.
@@ -3905,8 +3904,8 @@
                             const iframe = document.createElement('iframe');
                             iframe.src = embedUrl;
                             iframe.allowFullscreen = true;
-                            // Use the same comprehensive 'allow' attributes here as on details page
-                            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                            // UPDATED: Added 'fullscreen' to the allow attribute for full screen capability
+                            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
                             iframe.scrolling = 'no';
                             iframe.frameBorder = '0';
                             mediaContainer.appendChild(iframe);
