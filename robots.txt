@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://owlsman21.github.io/MovieHub/sitemap.xml
