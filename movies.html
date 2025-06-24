@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Movies - The Movie Hub</title>
+    <!-- Google Tag (gtag.js) - Include if you want to track this page -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GA_MEASUREMENT_ID'); // REPLACE with your actual Google Analytics Measurement ID
+    </script>
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/movies.html"> <!-- Specific URL for this page -->
+    <meta property="og:title" content="The Movie Hub - All Movies"> <!-- Specific title for this page -->
+    <meta property="og:description" content="Explore the complete collection of classic films on The Movie Hub."> <!-- Specific description for this page -->
+    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png"> <!-- Use your generic Facebook.png image -->
+    <meta property="og:image:width" content="940">
+    <meta property="og:image:height" content="788">
+
+    <!-- Embedded CSS (consistent with index.html) -->
+    <style>
+        /* Import Google Font - Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            border-bottom: 3px solid #735bf2;
+        }
+
+        header h1 {
+            margin: 0;
+            float: left;
+            color: #ffd700;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        header .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .section-padded {
+            padding: 40px 0;
+            background-color: #2a2a4a;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .section-padded h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .movie-card {
+            background-color: #0f044c;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding-bottom: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .movie-card-media {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            border-bottom: 2px solid #735bf2;
+        }
+
+        .movie-card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        
+        .movie-card-media iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(115, 91, 242, 0.9);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 2.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .play-button:hover {
+            background-color: #ffd700;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .movie-card h3 {
+            font-size: 1.2em;
+            margin: 10px 10px 5px;
+            color: #e0e0e0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .movie-card p {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            margin: 0 10px;
+        }
+
+        .movie-card a.card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 25px;
+        }
+        
+        .details-text {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            background-color: rgba(115, 91, 242, 0.8);
+            color: #fff;
+            padding: 5px 0;
+            font-size: 0.85em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .movie-card:hover .details-text {
+            opacity: 1;
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .pagination button {
+            background-color: #735bf2;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background-color: #5d48cc;
+        }
+
+        .pagination button:disabled {
+            background-color: #4a4a6b;
+            cursor: not-allowed;
+        }
+
+        .pagination span {
+            align-self: center;
+            font-size: 1.1em;
+        }
+
+        /* Search bar styling */
+        .search-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-controls input[type="text"] {
+            flex-grow: 1;
+            max-width: 500px;
+            padding: 12px 15px;
+            border: 2px solid #735bf2;
+            border-radius: 25px;
+            background-color: #0f044c;
+            color: #e0e0e0;
+            font-size: 1.1em;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-controls input[type="text"]::placeholder {
+            color: #b0b0b0;
+        }
+
+        .search-controls input[type="text"]:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 8px rgba(115, 91, 242, 0.5);
+        }
+
+        .search-controls button {
+            background-color: #735bf2;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .search-controls button:hover {
+            background-color: #5d48cc;
+            transform: translateY(-2px);
+        }
+
+        /* Genre Buttons Styling */
+        .genre-buttons-container {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            background-color: #2a2a4a;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .genre-buttons-container button {
+            background-color: #4a4a6b;
+            color: #e0e0e0;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .genre-buttons-container button:hover {
+            background-color: #5d4a6b;
+            transform: translateY(-1px);
+        }
+
+        .genre-buttons-container button.active-genre-button {
+            background-color: #735bf2;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+            border-top: 3px solid #735bf2;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments for overall layout */
+        @media (max-width: 768px) {
+            header h1,
+            header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                margin: 0 10px;
+            }
+
+            .section-padded h2 {
+                font-size: 2.5em;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+
+            .search-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-controls input[type="text"],
+            .search-controls button {
+                width: 100%;
+                max-width: none;
+            }
+
+            .genre-buttons-container {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-padded h2 {
+                font-size: 2em;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .movie-card img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Movie Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="all-movies-section" class="section-padded">
+            <div class="container">
+                <h2>Our Complete Movie Collection</h2>
+                <div class="search-controls">
+                    <input type="text" id="movie-search" placeholder="Search movies by title, genre, year or description...">
+                    <button id="searchButton">Search</button>
+                    <button id="clearSearchButton">Clear</button>
+                </div>
+                <div id="genre-buttons" class="genre-buttons-container">
+                    <!-- Genre buttons will be dynamically inserted here -->
+                    <p>Loading genres...</p>
+                </div>
+                <div id="all-movie-grid" class="movie-grid">
+                    <!-- All movies will be rendered here with pagination -->
+                    <p>Loading all movies...</p>
+                </div>
+                <div class="pagination">
+                    <button id="homePageBtn">Home</button>
+                    <button id="prevPage">Previous</button>
+                    <span id="pageInfo">Page 1 of 1</span>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // --- MOVIE DATA: COPY YOUR ENTIRE MOVIESDATA ARRAY FROM INDEX.HTML HERE ---
+        const moviesData = [
+            { 
+                "id": "Air-Force-One-Is-Down",
+                "title": " Air Force One Is Down ",
+                "description": " Alistair Maclean's highly charged novel is brought to life for a contemporary audience in this tense, international thriller.",
+                "embedId": "WzrYrcQPJqE", // YouTube video ID
+                "genres": ["Action","Thriller"],
+                "source": "youtube",
+                "posterUrl": "images/Air Force One Is Down.jpg",
+                "year": 2012
+            },
+            {
+                "id": "okru-ulzana",
+                "title": "Ulzana's Raid",
+                "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
+                "embedId": "6410503522969", // Now using embedId
+                "source": "okru",
+                "posterUrl": "images/ulzana.jpg",
+                "year": 1972,
+                "release_date": "1972-01-01",
+                "genres": ["Western"]
+            },
+            {
+                "id": "okru-yellow-ribbon",
+                "title": "She Wore a Yellow Ribbon",
+                "description": "Captain Nathan Brittles heads his last assignment before retirement to stop a Native American attack.",
+                "embedId": "8921446943385", // Now using embedId
+                "source": "okru",
+                "genres": ["Western", "Drama"],
+                "posterUrl": "images/she-wore-a-yellow-ribbon.jpg",
+                "year": 1949,
+                "release_date": "1949-01-01"
+            },
+            {
+                "id": "sample-movie-1",
+                "title": "The Grand Adventure",
+                "description": "A thrilling tale of exploration and discovery.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_1", // REPLACE with your actual Ok.ru VIDEO ID
+                "genres": ["Adventure", "Family"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2018,
+                "release_date": "2018-05-20"
+            },
+            {
+                "id": "sample-movie-2",
+                "title": "Mystery of the Old House",
+                "description": "A detective unravels secrets in an eerie mansion.",
+                "embedId": "", // Empty embedId, will show poster
+                "genres": ["Mystery", "Thriller"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2022,
+                "release_date": "2022-11-10"
+            },
+            {
+                "id": "sample-movie-3",
+                "title": "Comedy Night Live",
+                "description": "Laugh out loud with this stand-up special.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_2", // REPLACE
+                "genres": ["Comedy"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2021,
+                "release_date": "2021-08-01"
+            },
+            {
+                "id": "sample-movie-4",
+                "title": "Sci-Fi Odyssey",
+                "description": "Humanity's last hope rests on a journey through the stars.",
+                "embedId": "", // Empty embedId
+                "genres": ["Sci-Fi", "Adventure"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2024,
+                "release_date": "2024-03-25"
+            },
+            {
+                "id": "sample-movie-5",
+                "title": "Historical Drama",
+                "description": "A powerful story set during a tumultuous period.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_3", // REPLACE
+                "genres": ["Drama", "History"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2019,
+                "release_date": "2019-09-05"
+            },
+            {
+                "id": "sample-movie-6",
+                "title": "Kids' Cartoon Fun",
+                "description": "Join colorful characters on a magical quest.",
+                "embedId": "", // Empty embedId
+                "genres": ["Animation", "Family"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2023,
+                "release_date": "2023-01-15"
+            },
+             {
+                "id": "sample-movie-7",
+                "title": "Action Thriller",
+                "description": "Non-stop action and suspense.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_4", // REPLACE
+                "genres": ["Action", "Thriller"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2020,
+                "release_date": "2020-04-01"
+            },
+            {
+                "id": "sample-movie-8",
+                "title": "Romantic Comedy",
+                "description": "Love, laughter, and unexpected twists.",
+                "embedId": "", // Empty embedId
+                "genres": ["Romance", "Comedy"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2021,
+                "release_date": "2021-02-14"
+            },
+            {
+                "id": "sample-movie-9",
+                "title": "Epic Fantasy",
+                "description": "A hero's journey through a magical realm.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_5", // REPLACE
+                "genres": ["Fantasy", "Adventure"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2017,
+                "release_date": "2017-07-20"
+            },
+            {
+                "id": "sample-movie-10",
+                "title": "Dark Crime Drama",
+                "description": "A gritty look into the underworld.",
+                "embedId": "", // Empty embedId
+                "genres": ["Crime", "Drama"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2015,
+                "release_date": "2015-10-01"
+            },
+            {
+                "id": "sample-movie-11",
+                "title": "Animated Masterpiece",
+                "description": "A visually stunning story for all ages.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_6", // REPLACE
+                "genres": ["Animation", "Family"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2023,
+                "release_date": "2023-06-10"
+            },
+            {
+                "id": "sample-movie-12",
+                "title": "Post-Apocalyptic Survival",
+                "description": "Scavenging for hope in a ruined world.",
+                "embedId": "", // Empty embedId
+                "genres": ["Sci-Fi", "Action"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2016,
+                "release_date": "2016-04-20"
+            },
+            {
+                "id": "sample-movie-13",
+                "title": "Indie Thriller",
+                "description": "A low-budget film with high-stakes suspense.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_7", // REPLACE
+                "genres": ["Thriller"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2014,
+                "release_date": "2014-01-01"
+            },
+            {
+                "id": "sample-movie-14",
+                "title": "Cult Classic",
+                "description": "A quirky film that gained a devoted following.",
+                "embedId": "", // Empty embedId
+                "genres": ["Comedy", "Cult"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 1999,
+                "release_date": "1999-07-07"
+            },
+            {
+                "id": "sample-movie-15",
+                "title": "Biographical Drama",
+                "description": "The true story of an inspiring individual.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_8", // REPLACE
+                "genres": ["Biography", "Drama"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2022,
+                "release_date": "2022-03-03"
+            },
+            {
+                "id": "sample-movie-16",
+                "title": "Experimental Film",
+                "description": "A boundary-pushing cinematic experience.",
+                "embedId": "", // Empty embedId
+                "genres": ["Experimental"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2010,
+                "release_date": "2010-10-10"
+            },
+            {
+                "id": "sample-movie-17",
+                "title": "Family Friendly Musical",
+                "description": "Sing along with this heartwarming adventure.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_9", // REPLACE
+                "genres": ["Musical", "Family"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2018,
+                "release_date": "2018-12-01"
+            },
+            {
+                "id": "sample-movie-18",
+                "title": "Found Footage Horror",
+                "description": "Terrifying events caught on camera.",
+                "embedId": "", // Empty embedId
+                "genres": ["Horror"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2013,
+                "release_date": "2013-08-30"
+            },
+            {
+                "id": "sample-movie-19",
+                "title": "Sports Underdog Story",
+                "description": "Against all odds, they fought for victory.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_10", // REPLACE
+                "genres": ["Sport",
+"Drama"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2005,
+                "release_date": "2005-06-15"
+            },
+            {
+                "id": "sample-movie-20",
+                "title": "Psychological Thriller",
+                "description": "Mind-bending twists and turns.",
+                "embedId": "", // Empty embedId
+                "genres": ["Thriller", "Psychological"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 2008,
+                "release_date": "2008-03-20"
+            },
+            {
+                "id": "sample-movie-21",
+                "title": "War Epic",
+                "description": "A sweeping saga of courage and conflict.",
+                "embedId": "YOUR_OKRU_VIDEO_ID_11", // REPLACE
+                "genres": ["War", "Drama"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 1998,
+                "release_date": "1998-11-11"
+            },
+            {
+                "id": "sample-movie-22",
+                "title": "Noir Detective Story",
+                "description": "A cynical private eye takes on a dangerous case.",
+                "embedId": "", // Empty embedId
+                "genres": ["Noir", "Mystery"],
+                "posterUrl": "images/placeholder.jpg",
+                "year": 1947,
+                "release_date": "1947-02-01"
+            }
+        ];
+        // --- END OF MOVIE DATA ---
+
+        // --- GLOBAL VARIABLES FOR PAGINATION & RENDERING ---
+        const itemsPerPage = 20;
+        let currentPage = 1;
+        let filteredMovies = [];
+        let currentGenreFilter = null;
+
+        const allMovieGrid = document.getElementById('all-movie-grid');
+        const movieSearchInput = document.getElementById('movie-search');
+        const searchButton = document.getElementById('searchButton');
+        const clearSearchButton = document.getElementById('clearSearchButton');
+        const homePageBtn = document.getElementById('homePageBtn');
+        const prevPageBtn = document.getElementById('prevPage');
+        const nextPageBtn = document.getElementById('nextPage');
+        const pageInfoSpan = document.getElementById('pageInfo');
+        const genreButtonsContainer = document.getElementById('genre-buttons');
+
+        // --- FUNCTIONS ---
+        function getEmbedUrl(movie) {
+            if (movie.source === "okru" && movie.embedId) {
+                return `https://ok.ru/videoembed/${movie.embedId}`;
+            } else if (movie.source === "youtube" && movie.embedId) {
+                return `https://www.youtube.com/embed/${movie.embedId}?autoplay=0&modestbranding=1&rel=0`;
+            }
+            return '';
+        }
+
+        function renderMoviesToGrid(moviesToDisplay, targetGridElement) {
+            if (!targetGridElement) return;
+
+            if (!moviesToDisplay || moviesToDisplay.length === 0) {
+                targetGridElement.innerHTML = '<p>No movies to display.</p>';
+                return;
+            }
+
+            targetGridElement.innerHTML = '';
+
+            moviesToDisplay.forEach(movie => {
+                const movieCard = document.createElement('div');
+                movieCard.classList.add('movie-card');
+
+                const title = movie.title || 'Untitled';
+                const posterPath = movie.posterUrl || `images/placeholder.jpg`;
+                const releaseDate = movie.release_date || (movie.year ? `Year: ${movie.year}` : 'Date: N/A');
+                const genres = (movie.genres && Array.isArray(movie.genres) && movie.genres.length > 0) 
+                               ? movie.genres.map(g => g.trim().charAt(0).toUpperCase() + g.trim().slice(1).toLowerCase()).join(', ') 
+                               : 'N/A';
+                
+                const mediaContainer = document.createElement('div');
+                mediaContainer.classList.add('movie-card-media');
+
+                const imgElement = document.createElement('img');
+                imgElement.src = posterPath;
+                imgElement.alt = `${title} Poster`;
+                imgElement.onerror = function() { this.onerror=null;this.src='images/placeholder.jpg'; };
+                mediaContainer.appendChild(imgElement);
+
+                if (movie.embedId && movie.embedId.trim() !== '') {
+                    const playButton = document.createElement('button');
+                    playButton.classList.add('play-button');
+                    playButton.innerHTML = '&#9658;';
+                    playButton.title = `Play ${title}`;
+                    
+                    playButton.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        
+                        const embedUrl = getEmbedUrl(movie);
+                        if (embedUrl) {
+                            mediaContainer.innerHTML = '';
+                            const iframe = document.createElement('iframe');
+                            iframe.src = embedUrl;
+                            iframe.allowFullscreen = true;
+                            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+                            iframe.scrolling = 'no';
+                            iframe.frameBorder = '0';
+                            mediaContainer.appendChild(iframe);
+                            console.log(`Playing movie in card: ${title}`);
+                        } else {
+                            console.warn(`No embed URL available for ${title}. Cannot play in card.`);
+                        }
+                    });
+                    mediaContainer.appendChild(playButton);
+                }
+
+                const linkElement = document.createElement('a');
+                linkElement.href = `movie-details.html?id=${movie.id}`;
+                linkElement.classList.add('card-link');
+                linkElement.style.textDecoration = 'none';
+                linkElement.style.color = 'inherit';
+                linkElement.style.display = 'block';
+
+                linkElement.innerHTML = `
+                    <h3>${title}</h3>
+                    <p>Genres: ${genres}</p>
+                    <p>Release Date: ${releaseDate}</p>
+                    <div class="details-text">View Details</div>
+                `;
+                
+                movieCard.appendChild(mediaContainer);
+                movieCard.appendChild(linkElement);
+
+                targetGridElement.appendChild(movieCard);
+            });
+        }
+
+        function renderAllMovies(page = currentPage) {
+            currentPage = page;
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const moviesToRender = filteredMovies.slice(start, end);
+
+            renderMoviesToGrid(moviesToRender, allMovieGrid);
+            updatePaginationControls();
+        }
+
+        function updatePaginationControls() {
+            const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
+            pageInfoSpan.textContent = `Page ${currentPage} of ${totalPages || 1}`;
+
+            homePageBtn.disabled = currentPage === 1;
+            prevPageBtn.disabled = currentPage === 1;
+            nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+        }
+
+        function filterAndRenderMovies() {
+            const searchTerm = movieSearchInput.value.toLowerCase().trim();
+            let workingMovies = [...moviesData];
+
+            if (searchTerm) {
+                workingMovies = workingMovies.filter(movie =>
+                    (movie.title && movie.title.toLowerCase().includes(searchTerm)) ||
+                    (movie.genres && Array.isArray(movie.genres) && movie.genres.some(genre => genre.toLowerCase().includes(searchTerm))) ||
+                    (movie.release_date && movie.release_date.includes(searchTerm)) ||
+                    (movie.year && String(movie.year).includes(searchTerm)) ||
+                    (movie.description && movie.description.toLowerCase().includes(searchTerm))
+                );
+            }
+
+            if (currentGenreFilter && currentGenreFilter !== 'All') {
+                workingMovies = workingMovies.filter(movie =>
+                    movie.genres && Array.isArray(movie.genres) && movie.genres.some(genre => {
+                        const normalizedMovieGenre = genre.trim().charAt(0).toUpperCase() + genre.trim().slice(1).toLowerCase();
+                        return normalizedMovieGenre === currentGenreFilter;
+                    })
+                );
+            }
+
+            filteredMovies = workingMovies.sort((a, b) => {
+                const isAPlaceholder = a.posterUrl === 'images/placeholder.jpg' || !a.embedId || a.embedId.trim() === '';
+                const isBPlaceholder = b.posterUrl === 'images/placeholder.jpg' || !b.embedId || b.embedId.trim() === '';
+
+                if (isAPlaceholder && !isBPlaceholder) return 1;
+                if (!isAPlaceholder && isBPlaceholder) return -1;
+
+                const titleA = a.title || '';
+                const titleB = b.title || '';
+                return titleA.localeCompare(titleB);
+            });
+
+            currentPage = 1;
+            renderAllMovies();
+        }
+
+        function generateGenreButtons() {
+            genreButtonsContainer.innerHTML = '';
+
+            const misspelledGenresToExclude = ['acton', 'adventute', 'weastern']; 
+            
+            const allGenres = new Set();
+            moviesData.forEach(movie => {
+                if (movie.genres && Array.isArray(movie.genres)) {
+                    movie.genres.forEach(genre => {
+                        const trimmedLowerGenre = genre.trim().toLowerCase();
+                        if (!misspelledGenresToExclude.includes(trimmedLowerGenre)) {
+                            const normalizedGenre = trimmedLowerGenre.charAt(0).toUpperCase() + trimmedLowerGenre.slice(1);
+                            allGenres.add(normalizedGenre);
+                        }
+                    });
+                }
+            });
+
+            const sortedGenres = Array.from(allGenres).sort();
+
+            const allButton = document.createElement('button');
+            allButton.textContent = 'All';
+            allButton.classList.add('genre-button');
+            allButton.addEventListener('click', () => filterByGenre(null));
+            genreButtonsContainer.appendChild(allButton);
+
+            sortedGenres.forEach(genre => {
+                const button = document.createElement('button');
+                button.textContent = genre;
+                button.classList.add('genre-button');
+                button.addEventListener('click', () => filterByGenre(genre));
+                genreButtonsContainer.appendChild(button);
+            });
+
+            updateGenreButtonActiveClass();
+        }
+
+        function filterByGenre(genre) {
+            currentGenreFilter = genre;
+            movieSearchInput.value = '';
+            filterAndRenderMovies();
+            updateGenreButtonActiveClass();
+        }
+
+        function updateGenreButtonActiveClass() {
+            const buttons = genreButtonsContainer.querySelectorAll('.genre-button');
+            buttons.forEach(button => {
+                const buttonTextNormalized = button.textContent.trim().charAt(0).toUpperCase() + button.textContent.trim().slice(1).toLowerCase();
+                
+                if ((currentGenreFilter === null && button.textContent === 'All') ||
+                    (currentGenreFilter !== null && buttonTextNormalized === currentGenreFilter)) {
+                    button.classList.add('active-genre-button');
+                } else {
+                    button.classList.remove('active-genre-button');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (moviesData.length === 0) {
+                console.warn("moviesData array is empty. Please ensure your movie data is correctly pasted.");
+            }
+            
+            generateGenreButtons();
+            filterAndRenderMovies();
+        });
+
+        homePageBtn.addEventListener('click', () => {
+            movieSearchInput.value = '';
+            currentGenreFilter = null;
+            updateGenreButtonActiveClass();
+            filterAndRenderMovies();
+        });
+
+        searchButton.addEventListener('click', () => {
+            currentGenreFilter = null;
+            updateGenreButtonActiveClass();
+            filterAndRenderMovies();
+        });
+
+        clearSearchButton.addEventListener('click', () => {
+            movieSearchInput.value = '';
+            currentGenreFilter = null;
+            updateGenreButtonActiveClass();
+            filterAndRenderMovies();
+        });
+
+        movieSearchInput.addEventListener('input', () => {
+            filterAndRenderMovies();
+        });
+
+        prevPageBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                renderAllMovies(currentPage - 1);
+            }
+        });
+
+        nextPageBtn.addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                renderAllMovies(currentPage + 1);
+            }
+        });
+    </script>
+</body>
+</html>
+```
+
+The user is reporting that their Google Analytics is "stopped showing analytics." I need to check the `movie-details-full` Canvas provided in the prompt to see if the Google Analytics tag is present in that file.
+
+Upon reviewing the `movie-details-full` Canvas, I can see that the Google Tag (gtag.js) script is present in the `<head>` section:
+
+```html
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+```
+
+The placeholder `GA_MEASUREMENT_ID` is present. If the user has replaced this with their actual ID in their live file, and their `index.html` also has the tag, then the most likely reasons for analytics not showing are:
+
+1.  **Incorrect GA_MEASUREMENT_ID:** The ID used in the code is not the correct one for their Google Analytics property.
+2.  **No live traffic:** There's currently no active traffic to the website that Google Analytics can pick up.
+3.  **Ad blockers:** The user or visitors might have ad blockers that prevent analytics scripts from loading.
+4.  **Google Analytics processing delay:** Sometimes there can be a short delay in data appearing in the Realtime reports, especially for new properties or after changes.
+
+Since the code provided in the immersive *does* include the analytics tag, I should advise the user to:
+1.  Confirm they've replaced `GA_MEASUREMENT_ID` with their actual ID.
+2.  Ensure they are visiting the live site (GitHub Pages URL) to generate traffic.
+3.  Try visiting the site from a different browser or device (without ad blockers).
+4.  Wait a few minutes and recheck the Realtime report.I understand you're still seeing no analytics data in your Google Analytics Realtime report.
+
+I've reviewed the `movie-details-full` Canvas you've provided, and it **does correctly include the Google Tag (gtag.js) script** in the `<head>` section:
+
+```html
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+```
+
+If you've already ensured that `GA_MEASUREMENT_ID` has been replaced with your actual Google Analytics tracking ID in your `movie-details.html` file (and also in your `index.html` and the newly provided `movies.html`), and you've pushed these changes to GitHub, then the issue is likely one of the following:
+
+1.  **Incorrect Measurement ID:** Double-check your Google Analytics account to confirm the `GA_MEASUREMENT_ID` you've pasted into your HTML files is exactly correct. A single typo will prevent data collection.
+2.  **No Live Traffic:** Ensure you are accessing your live website on GitHub Pages (e.g., `https://owlsman21.github.io/MovieHub/`) to generate traffic. If you're still viewing files locally (`file:///...`), analytics will not work.
+3.  **Ad Blockers/Privacy Extensions:** If you or your visitors have ad blockers or privacy extensions enabled in your browser, they might be preventing the Google Analytics script from loading and sending data. Try viewing your site from a different browser or device where such extensions are not active, or in an Incognito/Private browsing window.
+4.  **Google Analytics Processing Delay:** Sometimes, especially for new properties or recent changes, there can be a slight delay (a few minutes) for data to appear in the Realtime reports. Wait a bit and refresh the Realtime report in Google Analytics.
+5.  **GitHub Pages Deployment Cache:** Although unlikely to affect script loading after a successful push, sometimes there can be a slight delay in GitHub Pages serving the very latest version of your HTML files.
+
+**Please confirm you've replaced `GA_MEASUREMENT_ID` in all your HTML files with your correct ID and are viewing the live site on GitHub Pages.** If these are confirmed, try waiting a few more minutes and checking the Realtime report aga
