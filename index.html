@@ -4172,29 +4172,3 @@
 </html>
 ```
 
-You're referring to the `movie-details-full` Canvas, which handles the individual movie detail page.
-
-The `moviesData` array in your `movie-details.html` file (which `movie-details-full` represents) currently contains only a few sample movies. To make sure all your movie details are available on that page, **you need to copy your entire `moviesData` array (containing all 349 entries) from your `index.html` file and paste it into the `moviesData` constant in your `movie-details.html` file.**
-
-Here's the relevant section in the `movie-details-full` Canvas where you'll make this update:
-
-```javascript
-        // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
-        // Copy the ENTIRE content of your movies.json file here.
-        const moviesData = [ 
-            // YOUR 349 MOVIE OBJECTS GO HERE, REPLACING THE SAMPLE ONES
-            { 
-                "id": "Air-Force-One-Is-Down",
-                "title": " Air Force One Is Down ",
-                "description": " Alistair Maclean's highly charged novel is brought to life for a contemporary audience in this tense, international thriller.",
-                "embedId": "WzrYrcQPJqE", // YouTube video ID
-                "genres": ["Action","Thriller"],
-                "source": "youtube",
-                "posterUrl": "images/Air Force One Is Down.jpg",
-                "year": 2012
-            },
-            // ... (other sample movies) ...
-        ]; // <-- END OF MOVIE DATA
-```
-
-Make sure to replace all the content between the `[` and `]` for `moviesData` with your complete dataset. Then, save `movie-details.html` and push it to GitHub for the changes to take effect on your live si

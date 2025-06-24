@@ -415,6 +415,15 @@
     </style>
 </head>
 <body>
+     <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <header>
         <div class="container">
             <h1>The Movie Hub</h1>
@@ -4068,55 +4077,5 @@
 </html>
 ```
 
-The user is reporting that their Google Analytics is "stopped showing analytics." I need to check the `movie-details-full` Canvas provided in the prompt to see if the Google Analytics tag is present in that file.
 
-Upon reviewing the `movie-details-full` Canvas, I can see that the Google Tag (gtag.js) script is present in the `<head>` section:
 
-```html
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-```
-
-The placeholder `GA_MEASUREMENT_ID` is present. If the user has replaced this with their actual ID in their live file, and their `index.html` also has the tag, then the most likely reasons for analytics not showing are:
-
-1.  **Incorrect GA_MEASUREMENT_ID:** The ID used in the code is not the correct one for their Google Analytics property.
-2.  **No live traffic:** There's currently no active traffic to the website that Google Analytics can pick up.
-3.  **Ad blockers:** The user or visitors might have ad blockers that prevent analytics scripts from loading.
-4.  **Google Analytics processing delay:** Sometimes there can be a short delay in data appearing in the Realtime reports, especially for new properties or after changes.
-
-Since the code provided in the immersive *does* include the analytics tag, I should advise the user to:
-1.  Confirm they've replaced `GA_MEASUREMENT_ID` with their actual ID.
-2.  Ensure they are visiting the live site (GitHub Pages URL) to generate traffic.
-3.  Try visiting the site from a different browser or device (without ad blockers).
-4.  Wait a few minutes and recheck the Realtime report.I understand you're still seeing no analytics data in your Google Analytics Realtime report.
-
-I've reviewed the `movie-details-full` Canvas you've provided, and it **does correctly include the Google Tag (gtag.js) script** in the `<head>` section:
-
-```html
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-```
-
-If you've already ensured that `GA_MEASUREMENT_ID` has been replaced with your actual Google Analytics tracking ID in your `movie-details.html` file (and also in your `index.html` and the newly provided `movies.html`), and you've pushed these changes to GitHub, then the issue is likely one of the following:
-
-1.  **Incorrect Measurement ID:** Double-check your Google Analytics account to confirm the `GA_MEASUREMENT_ID` you've pasted into your HTML files is exactly correct. A single typo will prevent data collection.
-2.  **No Live Traffic:** Ensure you are accessing your live website on GitHub Pages (e.g., `https://owlsman21.github.io/MovieHub/`) to generate traffic. If you're still viewing files locally (`file:///...`), analytics will not work.
-3.  **Ad Blockers/Privacy Extensions:** If you or your visitors have ad blockers or privacy extensions enabled in your browser, they might be preventing the Google Analytics script from loading and sending data. Try viewing your site from a different browser or device where such extensions are not active, or in an Incognito/Private browsing window.
-4.  **Google Analytics Processing Delay:** Sometimes, especially for new properties or recent changes, there can be a slight delay (a few minutes) for data to appear in the Realtime reports. Wait a bit and refresh the Realtime report in Google Analytics.
-5.  **GitHub Pages Deployment Cache:** Although unlikely to affect script loading after a successful push, sometimes there can be a slight delay in GitHub Pages serving the very latest version of your HTML files.
-
-**Please confirm you've replaced `GA_MEASUREMENT_ID` in all your HTML files with your correct ID and are viewing the live site on GitHub Pages.** If these are confirmed, try waiting a few more minutes and checking the Realtime report aga
