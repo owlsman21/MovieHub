@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Details - The Movie Hub</title>
-    <!-- Open Graph Meta Tags for social sharing - these must be static to be scraped by bots -->
-    <!-- For dynamic OG images/titles per movie on a static site, a build process/static site generator is needed. -->
+    <!-- Open Graph Meta Tags for social sharing -->
+    <!-- These must be static to be scraped by bots that do not execute JavaScript. -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/"> <!-- Generic site URL -->
+    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/movie-details.html">
     <meta property="og:title" content="The Movie Hub - Classic Films"> <!-- Generic site title -->
     <meta property="og:description" content="Your ultimate destination for discovering and watching classic films."> <!-- Generic site description -->
-    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png"> <!-- Updated: Points to your uploaded Facebook.png -->
+    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png"> <!-- Points to your uploaded Facebook.png -->
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -304,7 +304,7 @@
         // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
         // Copy the ENTIRE content of your movies.json file here.
         const moviesData = [ 
-           {
+         {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -3692,14 +3692,10 @@
                     }
 
                     // Dynamically set the href for the Facebook share button
-                    // The URL of the current page is obtained, ensuring it's the live GitHub Pages URL
                     const moviePageUrl = encodeURIComponent(window.location.href);
                     facebookShareBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${moviePageUrl}`;
                     console.log("Facebook Share URL:", facebookShareBtn.href);
 
-                    // Reverted to static OG tags as dynamic JS updates are not scraped by bots
-                    // These meta tags are already in the <head> of the HTML
-                    // We just need to ensure the og:image path is correct relative to the live site.
                 } else {
                     document.getElementById('movieTitle').textContent = 'Movie Not Found';
                     document.getElementById('movieDescription').textContent = 'The requested movie could not be found.';
