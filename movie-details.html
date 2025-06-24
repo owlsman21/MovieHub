@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Google Tag (gtag.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - The Movie Hub</title>
+    <!-- Google Tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,11 +12,7 @@
       gtag('js', new Date());
 
       gtag('config', 'G-KS61BKE3Y2');
-      
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Details - The Movie Hub</title>
     <!-- Open Graph Meta Tags for social sharing -->
     <!-- These must be static to be scraped by bots that do not execute JavaScript. -->
     <meta property="og:type" content="website">
@@ -260,7 +259,6 @@
     </style>
 </head>
 <body>
-    
     <header>
         <div class="container">
             <h1>The Movie Hub</h1>
@@ -310,7 +308,11 @@
             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
     </footer>
-<>
+
+    <script>
+        // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
+        // Copy the ENTIRE content of your movies.json file here.
+        const moviesData = [ 
           {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
@@ -3664,8 +3666,12 @@
             // Clear any existing content in the video player container initially
             videoPlayerContainer.innerHTML = ''; 
 
+            console.log("Movie ID from URL:", movieId); // Debugging log
+
             if (movieId) {
                 const movie = moviesData.find(m => m.id === movieId);
+                console.log("Found movie object:", movie); // Debugging log
+
                 if (movie) {
                     document.getElementById('movieTitle').textContent = movie.title || 'Untitled Movie';
                     document.getElementById('movieDescription').textContent = movie.description || 'No description available.';
@@ -3675,6 +3681,7 @@
                     document.getElementById('movieSource').textContent = movie.source || 'N/A';
 
                     const embedUrl = getEmbedUrl(movie); // Use the helper function here
+                    console.log("Generated Embed URL:", embedUrl); // Debugging log
 
                     if (embedUrl) {
                         const iframe = document.createElement('iframe');
@@ -3685,17 +3692,19 @@
                         iframe.scrolling = 'no';
                         iframe.frameBorder = '0';
                         videoPlayerContainer.appendChild(iframe);
-                        console.log("Movie Embed URL:", embedUrl); // ADDED FOR DEBUGGING
+                        console.log("Movie iframe appended."); // Debugging log
                     } else {
                         // If no embed URL, show poster image fallback
                         const img = document.createElement('img');
                         img.src = movie.posterUrl || 'images/placeholder.jpg';
                         img.alt = movie.title + ' Poster';
                         img.style.maxWidth = '100%';
-                        img.style.height = 'auto'; // Maintain aspect ratio
-                        img.style.borderRadius = '8px'; // Keep rounded corners
+                        img.style.height = '100%';
+                        img.style.objectFit = 'cover';
+                        img.style.display = 'block';
+                        img.style.borderRadius = '8px';
                         videoPlayerContainer.appendChild(img);
-                        console.log("Movie Embed URL: No valid embedUrl could be formed. Displaying poster."); // ADDED FOR DEBUGGING
+                        console.log("Movie poster image appended as fallback."); // Debugging log
                     }
 
                     // Dynamically set the href for the Facebook share button
@@ -3707,13 +3716,13 @@
                     document.getElementById('movieTitle').textContent = 'Movie Not Found';
                     document.getElementById('movieDescription').textContent = 'The requested movie could not be found.';
                     videoPlayerContainer.innerHTML = '<p>Video not found or embed not available.</p>'; // Clear and show message
-                    console.log("Movie Not Found: ID", movieId); // ADDED FOR DEBUGGING
+                    console.log("Movie Not Found: ID", movieId); // Debugging log
                 }
             } else {
                 document.getElementById('movieTitle').textContent = 'No Movie ID Provided';
                 document.getElementById('movieDescription').textContent = 'Please provide a movie ID in the URL (e.g., ?id=movie-name).';
                 videoPlayerContainer.innerHTML = '<p>No video ID provided.</p>'; // Clear and show message
-                console.log("No Movie ID Provided in URL."); // ADDED FOR DEBUGGING
+                console.log("No Movie ID Provided in URL."); // Debugging log
             }
         });
     </script>
