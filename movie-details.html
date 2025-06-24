@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Details - The Movie Hub</title>
-    <!-- Open Graph Meta Tags (will be dynamically populated by JavaScript) -->
-    <meta property="og:type" content="video.movie">
-    <meta property="og:url" id="ogUrl">
-    <meta property="og:title" id="ogTitle">
-    <meta property="og:description" id="ogDescription">
-    <meta property="og:image" id="ogImage">
+    <!-- Open Graph Meta Tags for social sharing - these must be static to be scraped by bots -->
+    <!-- For dynamic OG images/titles per movie on a static site, a build process/static site generator is needed. -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/"> <!-- Generic site URL -->
+    <meta property="og:title" content="The Movie Hub - Classic Films"> <!-- Generic site title -->
+    <meta property="og:description" content="Your ultimate destination for discovering and watching classic films."> <!-- Generic site description -->
+    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png"> <!-- Updated: Points to your uploaded Facebook.png -->
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -279,7 +280,7 @@
                     <p><strong>Source:</strong> <span id="movieSource"></span></p>
                 </div>
 
-                <!-- NEW: Share Buttons Container -->
+                <!-- Share Buttons Container -->
                 <div class="share-buttons-container">
                     <a id="facebookShareBtn" class="share-button" target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .732.593 1.325 1.325 1.325h11.35c.732 0 1.325-.593 1.325-1.325v-9.451h3.313c.121 0 .22-.099.22-.22l.536-3.766c.019-.133-.081-.253-.21-.253h-3.66c-.121 0-.22-.099-.22-.22v-2.072c0-.6.4-.951.99-.951h2.04c.121 0 .22-.099.22-.22v-3.488c0-.121-.099-.22-.22-.22h-3.328c-3.155 0-3.693 2.15-3.693 4.256v2.96h-2.183c-.121 0-.22.099-.22.22v3.767c0 .121.099.22.22.22h2.183v9.45h7.521c.732 0 1.325-.593 1.325-1.325v-21.351c0-.732-.593-1.325-1.325-1.325z"/></svg>
@@ -303,7 +304,7 @@
         // --- MOVIE DATA: REPLACE THIS WITH YOUR ACTUAL MOVIE DATA (SAME AS INDEX.HTML) ---
         // Copy the ENTIRE content of your movies.json file here.
         const moviesData = [ 
-          {
+           {
         "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -3696,15 +3697,9 @@
                     facebookShareBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${moviePageUrl}`;
                     console.log("Facebook Share URL:", facebookShareBtn.href);
 
-                    // NEW: Dynamically set Open Graph meta tags for sharing
-                    // Ensure the URL is the absolute, live site URL for Facebook to scrape correctly
-                    const absolutePosterUrl = new URL(movie.posterUrl, window.location.origin).href;
-
-                    document.getElementById('ogUrl').setAttribute('content', window.location.href);
-                    document.getElementById('ogTitle').setAttribute('content', movie.title || 'The Movie Hub');
-                    document.getElementById('ogDescription').setAttribute('content', movie.description || 'Discover and watch classic films on The Movie Hub.');
-                    document.getElementById('ogImage').setAttribute('content', absolutePosterUrl);
-
+                    // Reverted to static OG tags as dynamic JS updates are not scraped by bots
+                    // These meta tags are already in the <head> of the HTML
+                    // We just need to ensure the og:image path is correct relative to the live site.
                 } else {
                     document.getElementById('movieTitle').textContent = 'Movie Not Found';
                     document.getElementById('movieDescription').textContent = 'The requested movie could not be found.';
