@@ -22,6 +22,13 @@
             padding: 1rem 0;
             border-bottom: 3px solid #735bf2; /* Accent color */
         }
+        /* Style for individual blog post titles */
+.blog-post-title {
+    font-family: 'Creepster', cursive;
+    color: #ffd700; /* Keeping your gold accent color for consistency */
+    text-align: center; /* This will center the title on the page */
+    margin-bottom: 20px; /* Adds space below the title */
+}
 
         header h1 {
             margin: 0;
