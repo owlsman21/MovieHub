@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Hub Blog</title>
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KS61BKE3Y2');
+    </script>
+    <!-- Embedded CSS (consistent with main site for header/footer) -->
+    <style>
+        /* Import Google Font - Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            border-bottom: 3px solid #735bf2;
+        }
+
+        header h1 {
+            margin: 0;
+            float: left;
+            color: #ffd700;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        header .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .blog-section {
+            padding: 40px 0;
+            background-color: #2a2a4a;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .blog-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+
+        .post-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .post-item {
+            background-color: #0f044c;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .post-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .post-item h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+
+        .post-item h3 a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .post-item h3 a:hover {
+            color: #735bf2;
+        }
+
+        .post-meta {
+            font-size: 0.9em;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .post-meta span {
+            margin-right: 15px;
+        }
+
+        .post-excerpt {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background-color: #735bf2;
+            color: #fff;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color: #5d48cc;
+        }
+
+        footer {
+            background-color: #0f044c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+            border-top: 3px solid #735bf2;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1,
+            header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                margin: 0 10px;
+            }
+
+            .blog-section h2 {
+                font-size: 2em;
+            }
+            .post-item h3 {
+                font-size: 1.5em;
+            }
+            .post-excerpt {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .blog-section h2 {
+                font-size: 1.8em;
+            }
+            .post-item h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Movie Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../movies.html">Movies</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="index.html">Blog</a></li> <!-- Link to this page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="blog-posts" class="blog-section">
+            <div class="container">
+                <h2>Our Latest Blog Posts</h2>
+                <div class="post-list">
+                    <!-- Sample Blog Post Item -->
+                    <div class="post-item">
+                        <h3><a href="posts/sample-blog-post.html">Unearthing Hidden Gems: The Best Public Domain Sci-Fi</a></h3>
+                        <p class="post-meta">
+                            <span>By The Movie Hub Team</span>
+                            <span>Date: June 25, 2025</span>
+                            <span>Category: Classic Sci-Fi</span>
+                        </p>
+                        <p class="post-excerpt">
+                            Explore forgotten masterpieces of science fiction that have entered the public domain. From dystopian futures to intergalactic adventures, discover films that shaped the genre.
+                        </p>
+                        <a href="posts/sample-blog-post.html" class="read-more-btn">Read More</a>
+                    </div>
+                    <!-- Add more post-item blocks here as you write new posts -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
