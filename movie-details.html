@@ -3482,7 +3482,7 @@
         "year": 1968,
         "title": "Planet Of The Apes (1968)",
         "description": "After being kept in hypersleep during a long expedition into deep space, an astronaut crew crash-lands in the 40th century on a planet where highly intelligent non-human ape species are dominant and humans are enslaved.",
-        "embedId": "",
+        "embedId": "9730240023246",
         "genres": ["Sci-Fi"],
         "source": "okru"
      },
@@ -5449,22 +5449,92 @@
         "genres": ["Drama","Thriller"],
         "source": "okru"
      },
+      {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
+     {
+        "id": "",
+        "posterUrl":  "images/.jpg",
+        "year":2007,
+        "title": "",
+        "description": "",
+        "embedId": "",
+        "genres": [""],
+        "source": "okru"
+     },
         ]; // <-- END OF MOVIE DATA
 
         // --- MOVIE DETAIL PAGE SCRIPT ---
         // Helper function to get the correct embed URL based on source and ID
-        function getEmbedUrl(movie) {
-            // For Ok.ru, construct the URL using the embedId
-            if (movie.source === "okru" && movie.embedId) {
-                return `https://ok.ru/videoembed/${movie.embedId}`;
-            }
-            // For YouTube, construct the URL using the video ID without autoplay or mute
-            else if (movie.source === "youtube" && movie.embedId) {
-                return `https://www.youtube.com/embed/${movie.embedId}?modestbranding=1&rel=0`;
-            }
-            return ''; // Return empty string if no valid embed URL can be formed
-        }
-
+        // Helper function to get the correct embed URL based on source and ID
+function getEmbedUrl(movie) {
+    // For Ok.ru, construct the URL using the embedId
+    if (movie.source === "okru" && movie.embedId) {
+        return `https://ok.ru/videoembed/${movie.embedId}`;
+    }
+    // For YouTube, construct the URL using the video ID without autoplay or mute
+    else if (movie.source === "youtube" && movie.embedId) {
+        return `http://googleusercontent.com/youtube.com/${movie.embedId}?modestbranding=1&rel=0`;
+    }
+    return ''; // Return empty string if no valid embed URL can be formed
+}
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');

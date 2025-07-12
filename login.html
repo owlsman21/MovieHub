@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub - Members Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: #dc3545;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .back-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .back-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Members Only</h2>
+        <p>Enter the secret password to access.</p>
+        <div>
+            <label for="passwordInput">Password:</label>
+            <input type="password" id="passwordInput" placeholder="Secret Password">
+        </div>
+        <button onclick="checkPassword()">Login</button>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+    <p class="back-link">
+        <a href="index.html">Back to Public Movies</a>
+    </p>
+
+    <script>
+        // This code runs as soon as the page loads.
+        // It checks if the user is already "logged in" and redirects them if so.
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn === 'true') {
+                // If the user is already logged in, redirect them directly to the members page
+                window.location.href = 'members-movies.html';
+            }
+        });
+
+        // !!! IMPORTANT !!!
+        // This password is in the public source code.
+        // DO NOT use this for anything important or sensitive!
+        // It's only for a very casual, friends-only scenario.
+        const CORRECT_PASSWORD = "MovieHub2025"; // <--- This is your chosen password
+
+        function checkPassword() {
+            const enteredPassword = document.getElementById('passwordInput').value;
+            const errorMessageElement = document.getElementById('errorMessage');
+
+            if (enteredPassword === CORRECT_PASSWORD) {
+                // If password is correct, set a flag in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                // Redirect to the members-only movie page
+                window.location.href = 'members-movies.html';
+            } else {
+                errorMessageElement.textContent = "Incorrect password. Please try again.";
+                document.getElementById('passwordInput').value = ''; // Clear the input field
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    /* Make sure hero-background.jpg exists in your images folder */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/movie.jpg') no-repeat center center/cover;
+    padding: 100px 0; /* Vertical padding */
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+    flex-grow: 1; /* Make main content fill available space */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 70vh; /* Give it a decent height */
+}
+
+.hero-content h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Use the bold font for this heading */
+    font-size: 3.5em;
+    color: #ff6b6b; /* A vibrant red for impact */
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly rounded buttons */
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none; /* Remove default button border */
+}
+
+.button.primary {
+    background-color: #6a3ab2; /* Your existing purple */
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.button.primary:hover {
+    background-color: #5a3099; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.button.secondary {
+    background-color: #ffd700; /* Gold/yellow */
+    color: #1a1a2e; /* Dark text for contrast */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.button.secondary:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* --- Responsive Adjustments (Basic Example) --- */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%; /* Make buttons take more width on small screens */
+        max-width: 300px;
+    }
+}

@@ -1,36 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/style.css">
-     <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2."></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-KS61BKE3Y2.');
+      gtag('config', 'G-KS61BKE3Y2'); // Corrected Measurement ID: Removed the trailing period
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Movies - The Movie Hub</title>
-   
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      
-    </script>
-    <!-- Open Graph Meta Tags for social sharing -->
+    
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/movies.html"> <!-- Specific URL for this page -->
-    <meta property="og:title" content="The Movie Hub - All Movies"> <!-- Specific title for this page -->
-    <meta property="og:description" content="Explore the complete collection of classic films on The Movie Hub."> <!-- Specific description for this page -->
-    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png"> <!-- Use your generic Facebook.png image -->
+    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/movies.html">
+    <meta property="og:title" content="The Movie Hub - All Movies">
+    <meta property="og:description" content="Explore the complete collection of classic films on The Movie Hub.">
+    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png">
     <meta property="og:image:width" content="940">
     <meta property="og:image:height" content="788">
 
-    <!-- Embedded CSS (consistent with index.html) -->
     <style>
         /* Import Google Font - Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -423,25 +417,17 @@
     </style>
 </head>
 <body>
-     <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
     <header>
         <div class="container">
             <h1>The Movie Hub</h1>
-           <nav>
+            <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="movies.html">Movies</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog/index.html">Blog</a></li> </ul>
+                    <li><a href="blog/index.html">Blog</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -456,11 +442,9 @@
                     <button id="clearSearchButton">Clear</button>
                 </div>
                 <div id="genre-buttons" class="genre-buttons-container">
-                    <!-- Genre buttons will be dynamically inserted here -->
                     <p>Loading genres...</p>
                 </div>
                 <div id="all-movie-grid" class="movie-grid">
-                    <!-- All movies will be rendered here with pagination -->
                     <p>Loading all movies...</p>
                 </div>
                 <div class="pagination">
@@ -484,13 +468,13 @@
         // --- MOVIE DATA: COPY YOUR ENTIRE MOVIESDATA ARRAY FROM INDEX.HTML HERE ---
         const moviesData = [
            {
-        "id": "Ulzanas-Raid", 
+"id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
         "embedId": "6410503522969",
         "genres": ["Western"],
         "source": "okru",
-        "posterUrl":  "images/ulzana.jpg", 
+        "posterUrl"        :  "images/ulzana.jpg", 
        "year": 1972 
     },
     {   "id": "she-wore-a-yellow-ribbon", 
@@ -3637,7 +3621,7 @@
      },
      {
         "id": "Zulu-Dawn",
-        "posterUrl":  "images/Zulu Dawn.jpg",
+        "posterUrl":  "images/Zulu dawn.jpg",
         "year": 1979,
         "title": "Zulu Dawn (1979)",
         "description": "A dramatization of the Battle of Isandlwana, where the British Army met its match against the Zulu nation",
@@ -3651,7 +3635,7 @@
         "year": 1968,
         "title": "Planet Of The Apes (1968)",
         "description": "After being kept in hypersleep during a long expedition into deep space, an astronaut crew crash-lands in the 40th century on a planet where highly intelligent non-human ape species are dominant and humans are enslaved.",
-        "embedId": "",
+        "embedId": "9730240023246",
         "genres": ["Sci-Fi"],
         "source": "okru"
      },
@@ -3717,7 +3701,7 @@
      },
      {
         "id": "King Kong",
-        "posterUrl":  "images/King Kong (1976).jpg",
+        "posterUrl":  "images/King Kong.jpg",
         "year": 1976,
         "title": "King Kong (1976)",
         "description": "A petroleum exploration expedition comes to an isolated island and encounters a colossal giant gorilla.",
@@ -4182,7 +4166,7 @@
         "title": "The Sound of Music",
         "description": "A young novice is sent by her convent in 1930s Austria to become a governess to the seven children of a widowed naval officer.",
         "embedId": "9029453351552", 
-        "genres": ["Drama","Musical"],
+        "genres": ["Drama","Music"],
         "source": "okru"
      },
       {
@@ -4914,7 +4898,7 @@
         "title": "The Tourist",
         "description": "A tourist on the train to Venice is approached by a mysterious woman for an unusual reason.",
         "embedId": "31901289103",
-        "genres": ["Actio","Thriller"],
+        "genres": ["Action","Thriller"],
         "source": "okru"
      },
      {
@@ -4934,7 +4918,7 @@
         "title": "Predators",
         "description": "A group of elite warriors parachute into an unfamiliar jungle and are hunted by members of a merciless alien race.",
         "embedId": "30838884875",
-        "genres": ["Action","Adventure","Thrller","Sci-Fi"],
+        "genres": ["Action","Adventure","Thriller","Sci-Fi"],
         "source": "okru"
      },
      {
@@ -5104,7 +5088,7 @@
         "title": "The Brothers Grimm",
         "description": "Will and Jake Grimm are traveling con-artists who encounter a genuine fairy-tale curse which requires true courage instead of their usual bogus exorcisms.",
         "embedId": "35334195751",
-        "genres": ["Action","Adventre","Horror","Comedy"],
+        "genres": ["Action","Adventure","Horror","Comedy"],
         "source": "okru"
      },
       {
@@ -5124,7 +5108,7 @@
         "title": "Match Point",
         "description": "At a turning point in his life, a former tennis pro falls for an actress who happens to be dating his friend and soon-to-be brother-in-law.",
         "embedId": "37704960587",
-        "genres": ["Drama","Thrller"],
+        "genres": ["Drama","Thriller"],
         "source": "okru"
      },
       {
@@ -5355,7 +5339,7 @@
         "title": "Limitless",
         "description": "A mysterious pill that enables the user to access 100% of his brain's abilities transforms a struggling writer into a financial wizard, but it also puts him in a new world with many dangers",
         "embedId": "37459462890",
-        "genres": ["SciFi","Thriller"],
+        "genres": ["Sci-Fi","Thriller"],
         "source": "okru"
      },
      {

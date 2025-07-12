@@ -1,0 +1,456 @@
+/* --- Global Styles --- */
+body {
+    background-color: #282c36; /* Dark, deep purple-blue background, adjusted slightly */
+    color: #e0e0e0; /* Light off-white for general text */
+    font-family: 'Inter', sans-serif; /* CHANGE THIS TO INTER - This is crucial! */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+.container {
+    width: 90%; /* Adjusted for better responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0; /* Padding top/bottom, auto left/right for centering */
+}
+
+/* --- Header Section (Applies to both index.html and movies.html) --- */
+/* This combines the general header styling */
+header {
+    background-color: #1a1e24; /* Darker header background */
+    padding: 10px 0;
+    border-bottom: 2px solid #5a4b99; /* Purple line */
+    text-align: center; /* Fallback for center alignment */
+}
+
+header .container {
+    display: flex; /* Makes direct children (h1, nav, search-bar, genre-buttons) flex items */
+    justify-content: space-between; /* Pushes H1 to left, Nav to right (on index), or centers/distributes on movies */
+    align-items: center; /* Vertically aligns items in the middle */
+    flex-wrap: wrap; /* Allows items to wrap to next line on smaller screens */
+    gap: 10px; /* Space between flex items */
+}
+
+header h1 {
+    font-family: 'Bebas Neue', sans-serif; /* ADD THIS - For the "The Movie Hub" logo */
+    font-size: 2.5em; /* Adjusted to original requested size */
+    color: #fdd835; /* Yellowish color for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+/* --- Main Navigation (for Home, Movies, About, Contact, Blog links) --- */
+/* This styling is for the <nav> element in the header */
+nav ul {
+    list-style: none; /* REMOVES BULLET POINTS */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arranges list items (Home, Movies, etc.) horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+nav a {
+    text-decoration: none; /* REMOVES UNDERLINE */
+    color: #fff; /* White text for links */
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif; /* ADD THIS - Ensures nav links use Inter */
+}
+
+nav a:hover {
+    color: #fdd835; /* Yellowish on hover */
+}
+
+/* --- Call to Action Buttons (for index.html: EXPLORE ALL MOVIES, MEMBERS AREA) --- */
+/* This targets the <a> tags with .button, .primary-button, .secondary-button classes */
+.cta-buttons {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 50px; /* Add some space below buttons */
+}
+
+.button {
+    display: inline-block; /* Allows padding and margins to work like blocks, but stays in line */
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px; /* Slightly more rounded corners */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from button links */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-button {
+    background-color: #5a4b99; /* Primary button color (purple) */
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #7a6bbd; /* Lighter purple on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.secondary-button {
+    background-color: #fdd835; /* Secondary button color (yellow) */
+    color: #282c36; /* Dark text for contrast */
+}
+
+.secondary-button:hover {
+    background-color: #ffe066; /* Lighter yellow on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Welcome Section (Public Page Only) --- */
+#welcome-section {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 50px;
+}
+
+#welcome-section h2 { /* Targeting h2 within the section */
+    font-size: 2.8em;
+    color: #e94560; /* Accent color for welcome message */
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', sans-serif; /* ADD THIS - For "Welcome to The Movie Hub!" */
+}
+
+#welcome-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    line-height: 1.8;
+}
+
+/* --- Search Bar (For movies.html header) --- */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Space from nav */
+    flex-grow: 1; /* Allows it to take available space */
+    justify-content: flex-end; /* Pushes to right in header */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 15px;
+    border: 1px solid #5a4b99;
+    border-radius: 5px;
+    background-color: #3b3f47;
+    color: #fff;
+    font-size: 1em;
+    flex-grow: 1; /* Allows input to expand */
+    min-width: 150px; /* Prevents it from becoming too small */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+.search-bar button {
+    background-color: #5a4b99;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #7a6bbd;
+}
+
+/* --- Genre Buttons (For movies.html header) --- */
+.genre-buttons-container { /* Matches HTML for movies.html */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center; /* Center buttons below search bar */
+    width: 100%; /* Take full width of header container */
+}
+
+.genre-buttons-container button {
+    background-color: #4a4a6b;
+    color: #e0e0e0;
+    border: 1px solid #6b6b8b;
+    padding: 8px 15px;
+    border-radius: 20px; /* Pill shape */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.genre-buttons-container button:hover {
+    background-color: #5a5a7d;
+    border-color: #8c8cd1;
+    color: #ffffff;
+}
+
+.genre-buttons-container button.active {
+    background-color: #e94560; /* Highlight with your accent red */
+    border-color: #e94560;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(233, 69, 96, 0.5);
+}
+
+/* --- "Our Complete Movie Collection" Title (Applies only to movies.html) --- */
+#all-movies h2 { /* Target the h2 inside the #all-movies section */
+    font-family: 'Bebas Neue', sans-serif; /* ADD THIS - For the movie collection title */
+    font-size: 2.8em;
+    color: #fdd835;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: normal;
+}
+
+/* --- Movie Grid Layout (Applies to both pages if used, but primarily movies.html) --- */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted for better fit */
+    gap: 25px; /* Spacing between movies */
+    padding: 20px 0;
+}
+
+/* --- Individual Movie Card Styling (Applies to both pages) --- */
+.movie-card { /* Changed from .movie-item to .movie-card to match HTML */
+    background-color: #2b2b48; /* Dark card background */
+    border-radius: 12px; /* More rounded cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Softer shadow */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Flexbox for consistent layout */
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+    min-height: 350px; /* Ensure consistent card height */
+    position: relative; /* For play button overlay */
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+.movie-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded images */
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.movie-card h3 {
+    font-size: 1.4em; /* Movie titles */
+    color: #fdd835; /* Changed to yellow for consistency with title */
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows text to grow, pushing button down */
+}
+
+/* Play/View Movie button on cards */
+.movie-card .play-button { /* Target the specific play button */
+    background-color: #e94560; /* Striking red for play button */
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px; /* Pill-shaped button */
+    cursor: pointer;
+    font-size: 1.0em;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    margin-top: auto; /* Push to bottom of flex container */
+    text-decoration: none; /* Ensure it's not underlined if it's an <a> */
+    display: inline-block; /* Treat like a block for padding/margin */
+}
+
+.movie-card .play-button:hover {
+    background-color: #d13030;
+    transform: translateY(-2px);
+}
+
+.movie-card .play-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for when a movie is being played (media container) */
+.movie-card-media {
+    width: 100%;
+    height: 250px; /* Fixed height for video player, adjust as needed */
+    background-color: #000; /* Black background for video area */
+    margin-bottom: 15px;
+    border-radius: 8px; /* Rounded corners for video player */
+    overflow: hidden; /* Ensures iframe/video fits within rounded corners */
+}
+
+.movie-card-media iframe,
+.movie-card-media video {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe default border */
+}
+
+/* --- Pagination (For movies.html) --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 15px;
+    padding-bottom: 40px;
+}
+
+.pagination button {
+    background-color: #5a4b99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+    background-color: #7a6bbd;
+    transform: translateY(-2px);
+}
+
+.pagination button:disabled {
+    background-color: #3b3f47;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+.pagination span {
+    font-size: 1.1em;
+    color: #fdd835;
+    font-weight: bold;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1a1e24;
+    padding: 15px 0;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9em;
+    margin-top: 50px; /* Space above footer */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center;
+    }
+    header nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 5px; /* Smaller gap */
+        margin-top: 10px;
+    }
+    header h1 {
+        font-size: 2em; /* Smaller title */
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar input, .search-bar button {
+        width: 100%; /* Full width for search elements */
+        max-width: 300px; /* Max width for input */
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    .movie-card {
+        min-height: 300px;
+        padding: 15px;
+    }
+    .movie-card h3 {
+        font-size: 1.2em;
+    }
+    .movie-card p {
+        font-size: 0.8em;
+    }
+    .movie-card .play-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .movie-card-media {
+        height: 200px;
+    }
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* More width on very small screens */
+        padding: 15px 0;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    nav a {
+        font-size: 0.9em;
+        margin: 0 10px;
+    }
+    .cta-buttons .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    #welcome-section h2 {
+        font-size: 2em;
+    }
+    #welcome-section p {
+        font-size: 1em;
+    }
+    #all-movies h2 {
+        font-size: 2em;
+    }
+    .movie-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .movie-card {
+        min-height: auto; /* Allow height to adjust */
+    }
+    .movie-card-media {
+        height: 180px;
+    }
+}

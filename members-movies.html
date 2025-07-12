@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Movies</title>
+    <link rel="stylesheet" href="C:\Users\owlsm\Desktop\MovieHub1\css\style.css">     
+
+    <script>
+        // Check if the user is considered logged in based on localStorage
+        // This 'isLoggedIn' variable is local to this script block.
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        // If not logged in, redirect immediately to the login page
+        if (!isLoggedIn) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <div id="members-content">
+        <div class="container">
+            <div class="header">
+                <h1>Exclusive Member Movies</h1>
+                <div class="nav-buttons">
+                    <button onclick="window.location.href='index.html'">All Public Movies</button>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+
+            <div class="movie-grid" id="memberMoviesContainer">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // --- IMPORTANT: This `isLoggedIn` variable is now controlled by the <head> script. ---
+        // Do NOT redeclare `isLoggedIn` here.
+
+        const memberMoviesData = [
+            {
+                "id": "Cowboys-And-Aliens",
+                "posterUrl": "images/Cowboys & Aliens.jpg",
+                "year": 2011,
+                "title": "Cowboys & Aliens",
+                "description": "FROM THE DIRECTOR OF IRON MAN",
+                "source": "ok.ru",
+                "embedId": "37439867626",
+                "genres": ["Western", "Sci-Fi", "Action"]
+            },
+            {
+                "id": "Avatar",
+                "posterUrl": "images/Avatar.jpg",
+                "year": 2009,
+                "title": "Avatar",
+                "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+                "source": "mega",
+                "embedId": "n8wzFCyL#fFtowWI_qo1Meskf8vwASCajksUe0p7n1rxHelrWfzU",
+                "genres": ["Sci-Fi", "Adventure"]
+            },
+            {
+                "id": "Avatar-The-Way-of-Water",
+                "posterUrl": "images/Avatar The Way of Water.jpg",
+                "year": 2022,
+                "title": "Avatar The Way of Water",
+                "description": "",
+                "source": "mega",
+                "embedId": "XoJEhAIS#DIFG6YM4o5Q8lAjH_DgLfxKntZJQRF1lLYq4g_WEj1g",
+                "genres": ["Sci-Fi", "Drama","Action"]
+            },
+            {
+                "id": "Kandahar",
+                "posterUrl": "images/Kandahar.jpg",
+                "year": 2023,
+                "title": "Kandahar",
+                "description": "A CIA operative and his translator flee from special forces in Afghanistan after exposing a covert mission.",
+                "source": "mega",
+                "embedId": "XoJEhAIS#DIFG6YM4o5Q8lAjH_DgLfxKntZJQRF1lLYq4g_WEj1g",
+                "genres": ["Thriller", "Drama","Action"]
+            },
+             {
+                "id": "Greyhound",
+                "posterUrl": "images/Greyhound.jpg",
+                "year": 2020,
+                "title": "Greyhound",
+                "description": "Several months after the U.S. entry into World War II, an inexperienced U.S. Navy commander must lead an Allied convoy being stalked by a German submarine wolf pack.",
+                "source": "mega",
+                "embedId": "S0BHmDoS#QLZpkLp9S3C1uI6A28X67VQeu2kiMxIqg",
+                "genres": ["War","Action","Drama"]
+            },
+             {
+                "id": "Gunslingers ",
+                "posterUrl": "images/Gunslingers.jpg",
+                "year": 2025,
+                "title": "Gunslingers ",
+                "description": "In a town named Redemption, reformed gunslinger Keller and mad genius Ben are guided by spiritual leader Jericho towards vindication. While confronting their violent histories, their newfound peace is challenged by violence and revenge.",
+                "source": "mega",
+                "embedId": "Skp0ySJR#Xd2QczBoQzKkBoqR-CoQTfaHOGEMAAZh",
+                "genres": ["Western"]
+            },
+             {
+                "id": "In-the-Name-of-the-Father",
+                "posterUrl": "images/In the Name of the Father.jpg",
+                "year": 1993,
+                "title": "In the Name of the Father",
+                "description": "An Irish man's coerced confession to an I.R.A. bombing he did not commit results in the imprisonment of his father as well. Meanwhile, a British lawyer fights to clear their names and free them.",
+                "source": "mega",
+                "embedId": "r9Qx0AIA#HrsgjODNqFWeJcrO7Hoa4mUFuF9CBpBZpgeHG8UkoH8",
+                "genres": ["Drama","Crime"]
+            },
+             {
+                "id": "Avengers-Infinity-War",
+                "posterUrl": "images/Avengers Infinity War.jpg",
+                "year": 2018,
+                "title": "Avengers Infinity War",
+                "description": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+                "source": "mega",
+                "embedId": "mhpA0KgT#6-6OpWyfnEs4wSdFf373SzTTPQCnHkeHQ4k4crNoNjg",
+                "genres": ["Sci-Fi","Action","Adventure"]
+            },
+             {
+                "id": "Avengers-Endgame",
+                "posterUrl": "images/Avengers Endgame.jpg",
+                "year": 2019,
+                "title": "Avengers Endgame",
+                "description": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+                "source": "mega",
+                "embedId": "20JQjAQS#uBQARa1pRlpIu9nIiIFx1BaPzzeWGkUABPXRurVUZ_A",
+                "genres": ["Sci-Fi","Action","Adventure"]
+            },
+             {
+                "id": "",
+                "posterUrl": "images/.jpg",
+                "year": 2023,
+                "title": "",
+                "description": "",
+                "source": "mega",
+                "embedId": "",
+                "genres": [""]
+            },
+             {
+                "id": "",
+                "posterUrl": "images/.jpg",
+                "year": 2023,
+                "title": "",
+                "description": "",
+                "source": "mega",
+                "embedId": "",
+                "genres": [""]
+            },
+        ];
+
+        function renderMovies(movies, containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            container.innerHTML = ''; // Clear existing content before rendering
+
+            movies.forEach(movie => {
+                const movieItem = document.createElement('div');
+                movieItem.classList.add('movie-item');
+
+                const posterSrc = movie.posterUrl ? movie.posterUrl : 'images/placeholder.jpg';
+
+                movieItem.innerHTML = `
+                    <img src="${posterSrc}" alt="${movie.title} Poster">
+                    <h3>${movie.title}</h3>
+                    <p>${movie.year} | ${movie.genres.join(', ')}</p>
+                    <button onclick="viewMovie('${movie.id}', '${movie.source}', '${movie.embedId}')">View Movie</button>
+                `;
+                container.appendChild(movieItem);
+            });
+        }
+
+        function viewMovie(movieId, movieSource, movieEmbedId) {
+            const clickedButton = document.querySelector(`[onclick*="viewMovie('${movieId}'"]`);
+            if (!clickedButton) {
+                console.error("Could not find the clicked button for movie ID:", movieId);
+                return;
+            }
+            const movieItem = clickedButton.closest('.movie-item');
+            if (!movieItem) {
+                console.error("Could not find the movie item for movie ID:", movieId);
+                return;
+            }
+
+            let embedHtml = '';
+            if (movieSource === 'youtube') {
+                embedHtml = `<iframe width="100%" height="300" src="http://googleusercontent.com/youtube.com/embed/${movieEmbedId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            } else if (movieSource === 'vimeo') {
+                embedHtml = `<iframe width="100%" height="300" src="https://player.vimeo.com/video/${movieEmbedId}?autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            } else if (movieSource === 'mega') {
+                embedHtml = `<iframe width="100%" height="300" frameborder="0" src="https://mega.nz/embed/${movieEmbedId}?autoplay=1" allowfullscreen></iframe>`;
+            } else if (movieSource === 'ok.ru') {
+                embedHtml = `<iframe width="100%" height="300" src="https://ok.ru/videoembed/${movieEmbedId}?autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+            } else {
+                alert('Video source not supported.');
+                return;
+            }
+
+            const originalMovieData = memberMoviesData.find(m => m.id === movieId);
+            if (!originalMovieData) {
+                console.error("Original movie data not found for ID:", movieId);
+                return;
+            }
+
+            movieItem.dataset.originalContent = movieItem.innerHTML;
+
+            movieItem.innerHTML = `
+                <div class="movie-card-media">
+                    ${embedHtml}
+                </div>
+                <h3>${originalMovieData.title}</h3>
+                <p>Playing Now...</p>
+                <button onclick="restoreMovieCard('${movieId}')">Back to Movies</button>
+            `;
+        }
+
+        function restoreMovieCard(movieId) {
+            const movieItem = document.querySelector(`[onclick*="restoreMovieCard('${movieId}'"]`).closest('.movie-item');
+            if (movieItem && movieItem.dataset.originalContent) {
+                movieItem.innerHTML = movieItem.dataset.originalContent;
+                delete movieItem.dataset.originalContent;
+            } else {
+                renderMovies(memberMoviesData, 'memberMoviesContainer');
+            }
+        }
+
+        function logout() {
+            alert('You have been logged out.');
+            localStorage.setItem('isLoggedIn', 'false'); // Clear login state in localStorage
+            window.location.href = 'index.html'; // Redirect to home page
+        }
+
+        // Initial rendering when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // This 'isLoggedIn' refers to the one declared in the <head> script.
+            // It will be true ONLY if localStorage.getItem('isLoggedIn') was 'true'.
+            if (isLoggedIn) {
+                renderMovies(memberMoviesData, 'memberMoviesContainer');
+            } else {
+                // If not logged in, show access denied message
+                const contentDiv = document.getElementById('members-content');
+                if (contentDiv) {
+                    contentDiv.innerHTML = `
+                        <div id="access-denied">
+                            <h2>Access Denied</h2>
+                            <p>You must be logged in to view exclusive member movies.</p>
+                            <p><a href="login.html">Login Here</a></p>
+                        </div>
+                    `;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
