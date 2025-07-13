@@ -22,7 +22,7 @@
             <div class="header">
                 <h1>Exclusive Member Movies</h1>
                 <div class="nav-buttons">
-                    <button onclick="window.location.href='index.html'">All Public Movies</button>
+                    <button onclick="window.location.href='movies.html'">All Public Movies</button>
                     <button onclick="logout()">Logout</button>
                 </div>
             </div>
@@ -157,7 +157,6 @@
 
             movies.forEach(movie => {
                 const movieItem = document.createElement('div');
-                // *** IMPORTANT CHANGE IS HERE ***
                 movieItem.classList.add('movie-card'); // Changed from 'movie-item' to 'movie-card'
 
                 const posterSrc = movie.posterUrl ? movie.posterUrl : 'images/placeholder.jpg';
@@ -178,7 +177,7 @@
                 console.error("Could not find the clicked button for movie ID:", movieId);
                 return;
             }
-            const movieItem = clickedButton.closest('.movie-card'); // Use movie-card here too
+            const movieItem = clickedButton.closest('.movie-card');
             if (!movieItem) {
                 console.error("Could not find the movie item for movie ID:", movieId);
                 return;
@@ -217,7 +216,6 @@
         }
 
         function restoreMovieCard(movieId) {
-            // Also update this line to look for 'movie-card'
             const movieItem = document.querySelector(`[onclick*="restoreMovieCard('${movieId}'"]`).closest('.movie-card');
             if (movieItem && movieItem.dataset.originalContent) {
                 movieItem.innerHTML = movieItem.dataset.originalContent;

@@ -222,6 +222,57 @@ nav a:hover {
     letter-spacing: normal;
 }
 
+/* --- Member Movies Page Header Styling (NEW SECTION!) --- */
+/* This specifically targets the header section within members-movies.html */
+#members-content .header {
+    background-color: #1a1e24; /* Darker header background */
+    padding: 20px; /* More padding for a distinct section */
+    border-bottom: 2px solid #5a4b99; /* Purple line */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 15px; /* Space between title and buttons */
+    margin-bottom: 40px; /* Space below this header section */
+    border-radius: 0 0 10px 10px; /* Slightly rounded bottom corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#members-content .header h1 {
+    font-family: 'Bebas Neue', sans-serif; /* The "yellow creepter font" */
+    font-size: 3.2em; /* Made it larger for impact */
+    color: #fdd835; /* Yellowish color */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    letter-spacing: 2px; /* A bit more spaced out */
+    text-align: center; /* Ensure it's centered */
+    margin: 0; /* Remove default margins */
+}
+
+#members-content .header .nav-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center buttons if they wrap */
+}
+
+#members-content .header .nav-buttons button {
+    background-color: #5a4b99; /* Primary purple color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#members-content .header .nav-buttons button:hover {
+    background-color: #7a6bbd; /* Lighter purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
 /* --- Movie Grid Layout (Applies to both pages if used, but primarily movies.html) --- */
 .movie-grid {
     display: grid;
@@ -392,6 +443,10 @@ footer {
         max-width: 300px; /* Max width for input */
     }
 
+    #members-content .header h1 { /* Specific adjustment for member header */
+        font-size: 2.5em;
+    }
+
     .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 15px;
@@ -443,6 +498,10 @@ footer {
     }
     #all-movies h2 {
         font-size: 2em;
+    }
+    #members-content .header h1 { /* Specific adjustment for member header */
+        font-size: 2em;
+        letter-spacing: 1px;
     }
     .movie-grid {
         grid-template-columns: 1fr; /* Single column on very small screens */
