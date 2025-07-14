@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Details - The Movie Hub</title>
-    <!-- Google Tag (gtag.js) -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,17 +14,14 @@
 
       gtag('config', 'G-KS61BKE3Y2');
     </script>
-    <!-- Open Graph Meta Tags for social sharing -->
-    <!-- These must be static to be scraped by bots that do not execute JavaScript. -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/movie-details.html">
-    <meta property="og:title" content="The Movie Hub - Classic Films"> <!-- Generic site title -->
-    <meta property="og:description" content="Your ultimate destination for discovering and watching classic films."> <!-- Generic site description -->
-    <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png"> <!-- Points to your uploaded Facebook.png -->
-    <meta property="og:image:width" content="940"> <!-- UPDATED WIDTH -->
-    <meta property="og:image:height" content="788"> <!-- UPDATED HEIGHT -->
 
-    <!-- Embedded CSS (same as index.html for consistency) -->
+    <meta property="og:type" content="video.movie"> <meta property="og:url" id="ogUrl" content="https://owlsman21.github.io/MovieHub/movie-details.html">
+    <meta property="og:title" id="ogTitle" content="The Movie Hub">
+    <meta property="og:description" id="ogDescription" content="Your ultimate destination for discovering and watching classic films.">
+    <meta property="og:image" id="ogImage" content="https://owlsman21.github.io/MovieHub/images/Facebook.png">
+    <meta property="og:image:width" content="940">
+    <meta property="og:image:height" content="788">
+
     <style>
         /* Import Google Font - Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Added Inter font import */
@@ -263,13 +260,14 @@
     <header>
         <div class="container">
             <h1>The Movie Hub</h1>
-          <nav>
+            <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="movies.html">Movies</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog/index.html">Blog</a></li> </ul>
+                    <li><a href="blog/index.html">Blog</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -279,8 +277,7 @@
             <div class="container movie-detail-content">
                 <h2 id="movieTitle">Loading Movie...</h2>
                 <div class="video-player">
-                    <!-- The iframe or image will be dynamically inserted here -->
-                </div>
+                    </div>
 
                 <div class="movie-detail-info">
                     <p><strong>Description:</strong> <span id="movieDescription"></span></p>
@@ -288,17 +285,22 @@
                     <p><strong>Release Date:</strong> <span id="movieReleaseDate"></span></p>
                     <p><strong>Year:</strong> <span id="movieYear"></span></p>
                     <p><strong>Source:</strong> <span id="movieSource"></span></p>
-                </div>
+                    <p><strong>Views:</strong> <span id="movieViews">0</span></p> </div>
 
-                <!-- Share Buttons Container -->
                 <div class="share-buttons-container">
                     <a id="facebookShareBtn" class="share-button" target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .732.593 1.325 1.325 1.325h11.35c.732 0 1.325-.593 1.325-1.325v-9.451h3.313c.121 0 .22-.099.22-.22l.536-3.766c.019-.133-.081-.253-.21-.253h-3.66c-.121 0-.22-.099-.22-.22v-2.072c0-.6.4-.951.99-.951h2.04c.121 0 .22-.099.22-.22v-3.488c0-.121-.099-.22-.22-.22h-3.328c-3.155 0-3.693 2.15-3.693 4.256v2.96h-2.183c-.121 0-.22.099-.22.22v3.767c0 .121.099.22.22.22h2.183v9.45h7.521c.732 0 1.325-.593 1.325-1.325v-21.351c0-.732-.593-1.325-1.325-1.325z"/></svg>
                         Share on Facebook
                     </a>
-                    <!-- Add other share buttons here if needed, e.g., Twitter, WhatsApp -->
+                    <a id="twitterShareBtn" class="share-button twitter" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.795-1.576 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.174-1.555-3.594-1.555-3.424 0-6.22 2.829-6.22 6.311 0 .495.056.974.164 1.431-5.176-.26-9.761-2.753-12.83-6.505-.536.924-.846 1.999-.846 3.167 0 2.185 1.112 4.136 2.808 5.271-.822-.027-1.59-.252-2.276-.645v.081c0 3.067 2.184 5.626 5.09 6.206-.52.146-1.07.224-1.638.224-.402 0-.796-.041-1.18-.112.809 2.535 3.154 4.38 5.92 4.439-2.17 1.758-4.912 2.812-7.893 2.812-.511 0-1.01-.03-1.5-.088 2.766 1.791 6.049 2.839 9.58 2.839 11.5 0 17.803-9.539 17.803-17.78 0-.27-.006-.54-.019-.81.969-.735 1.808-1.656 2.474-2.705z"/></svg>
+                        Share on Twitter
+                    </a>
+                    <a id="whatsappShareBtn" class="share-button whatsapp" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-.569-.754-.903-1.63-.903-2.585C.84 11.492 4.829 7.5 9.875 7.5c2.062 0 4.015.811 5.487 2.285 1.472 1.47 2.28 3.422 2.28 5.485 0 5.045-3.99 9.032-9.034 9.032-1.956 0-3.834-.61-5.487-1.666l-6.16 1.685zm8.077-1.916c1.298.005 2.607-.367 3.754-1.127 2.65-1.745 3.518-5.32 1.76-7.97-.24-.367-.5-.724-.76-1.07-.3-.404-.63-.79-1-1.157-1.47-1.47-3.422-2.28-5.485-2.28-4.038 0-7.312 3.27-7.312 7.312-.002 1.956.61 3.835 1.666 5.487l-.462 1.687 1.685-.462c1.652 1.056 3.53 1.664 5.487 1.664z"/></svg>
+                        Share on WhatsApp
+                    </a>
                 </div>
-
             </div>
         </section>
     </main>
@@ -5593,33 +5595,79 @@
         ]; // <-- END OF MOVIE DATA
 
         // --- MOVIE DETAIL PAGE SCRIPT ---
-        // Helper function to get the correct embed URL based on source and ID
-        // Helper function to get the correct embed URL based on source and ID
-function getEmbedUrl(movie) {
-    // For Ok.ru, construct the URL using the embedId
-    if (movie.source === "ok.ru" && movie.embedId) {
-        return `https://ok.ru/videoembed/${movie.embedId}`;
-    }
-    // For YouTube, construct the URL using the video ID without autoplay or mute
-    else if (movie.source === "youtube" && movie.embedId) {
-        return `http://googleusercontent.com/youtube.com/${movie.embedId}?modestbranding=1&rel=0`;
-    }
-    return ''; // Return empty string if no valid embed URL can be formed
-}
+        // --- Helper function to get the correct embed URL based on source and ID ---
+        function getEmbedUrl(movie) {
+            // For Ok.ru, construct the URL using the embedId
+            if (movie.source === "ok.ru" && movie.embedId) {
+                return `https://ok.ru/videoembed/${movie.embedId}`;
+            }
+            // For YouTube, construct the URL using the video ID without autoplay or mute
+            // NOTE: Your original YouTube embed URL was `https://www.youtube.com/embed/${movie.embedId}?autoplay=1&mute=0`.
+            // The `getEmbedUrl` function uses `http://googleusercontent.com/youtube.com/${movie.embedId}?modestbranding=1&rel=0`.
+            // Make sure the YouTube URL generated here is the one that WORKS for you locally and online.
+            // I'm using the one from your provided snippet.
+            else if (movie.source === "youtube" && movie.embedId) { // Ensure movie.source is lowercase 'youtube' in your data
+                return `https://www.youtube.com/embed/${movie.embedId}?modestbranding=1&rel=0`; // Changed to standard YouTube embed domain
+            }
+            return ''; // Return empty string if no valid embed URL can be formed
+        }
+
+        // --- Local Storage Functions (needed for view counts) ---
+        function loadAndInitializeMoviesData() {
+            try {
+                const storedData = localStorage.getItem('localMoviesData');
+                if (storedData) {
+                    const parsedData = JSON.parse(storedData);
+                    moviesData.forEach(movie => {
+                        const storedMovie = parsedData.find(sm => sm.id === movie.id);
+                        movie.views = storedMovie ? storedMovie.views : 0;
+                    });
+                    parsedData.forEach(storedMovie => {
+                        if (!moviesData.some(m => m.id === storedMovie.id)) {
+                            moviesData.push(storedMovie);
+                        }
+                    });
+                    console.log("Movies data loaded from Local Storage and initialized.");
+                } else {
+                    moviesData.forEach(movie => {
+                        movie.views = 0;
+                    });
+                    console.log("Movies data initialized to 0 views (no data in Local Storage).");
+                }
+            } catch (e) {
+                console.error("Error loading/initializing movies data from Local Storage:", e);
+                moviesData.forEach(movie => {
+                    movie.views = 0;
+                });
+            }
+        }
+
+        function saveMoviesDataToLocalStorage() {
+            try {
+                localStorage.setItem('localMoviesData', JSON.stringify(moviesData));
+                console.log("Movies data saved to Local Storage.");
+            } catch (e) {
+                console.error("Error saving to Local Storage:", e);
+            }
+        }
+
+        // --- DOMContentLoaded Listener (main logic execution) ---
         document.addEventListener('DOMContentLoaded', () => {
+            // Load and initialize movie data from local storage first
+            loadAndInitializeMoviesData();
+
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
             const videoPlayerContainer = document.querySelector('.movie-detail-content .video-player');
-            const facebookShareBtn = document.getElementById('facebookShareBtn'); // Get the share button
+            const movieViewsElem = document.getElementById('movieViews'); // Get the views element
+            const facebookShareBtn = document.getElementById('facebookShareBtn');
 
-            // Clear any existing content in the video player container initially
-            videoPlayerContainer.innerHTML = ''; 
-
-            console.log("Movie ID from URL:", movieId); // Debugging log
+            videoPlayerContainer.innerHTML = '';
+            console.log("Movie ID from URL:", movieId);
 
             if (movieId) {
                 const movie = moviesData.find(m => m.id === movieId);
-                console.log("Found movie object:", movie); // Debugging log
+                console.log("Found movie object:", movie);
 
                 if (movie) {
                     document.getElementById('movieTitle').textContent = movie.title || 'Untitled Movie';
@@ -5629,21 +5677,45 @@ function getEmbedUrl(movie) {
                     document.getElementById('movieYear').textContent = movie.year || 'N/A';
                     document.getElementById('movieSource').textContent = movie.source || 'N/A';
 
-                    const embedUrl = getEmbedUrl(movie); // Use the helper function here
-                    console.log("Generated Embed URL:", embedUrl); // Debugging log
+                    // --- START OF INSERTION POINT FOR GA4 EVENT AND LOCAL VIEWS ---
+                    // Increment views for the movie (GA4 and local counter)
+                    const foundMovieForViews = moviesData.find(m => m.id === movie.id);
+                    if (foundMovieForViews) {
+                        foundMovieForViews.views = (foundMovieForViews.views || 0) + 1; // Increment view count
+                        movieViewsElem.textContent = foundMovieForViews.views; // Update displayed views
+                        saveMoviesDataToLocalStorage(); // Save updated data
+                        console.log(`Local view count incremented for: ${movie.title}. New count: ${foundMovieForViews.views}`);
+                    }
+
+                    // Send a custom event to Google Analytics 4
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'movie_view', {
+                            'movie_id': movie.id,
+                            'movie_title': movie.title,
+                            'movie_source': movie.source,
+                            'movie_year': movie.year,
+                            'page_path': window.location.pathname + window.location.search
+                        });
+                        console.log(`GA4 Event 'movie_view' sent for: ${movie.title}`);
+                    } else {
+                        console.warn('gtag function not found. Google Analytics may not be loaded.');
+                    }
+                    // --- END OF INSERTION POINT ---
+
+                    const embedUrl = getEmbedUrl(movie);
+                    console.log("Generated Embed URL:", embedUrl);
 
                     if (embedUrl) {
                         const iframe = document.createElement('iframe');
-                        iframe.id = 'moviePlayer'; // Assign ID for consistency if needed elsewhere
+                        iframe.id = 'moviePlayer';
                         iframe.src = embedUrl;
                         iframe.allowFullscreen = true;
-                        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"; 
+                        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
                         iframe.scrolling = 'no';
                         iframe.frameBorder = '0';
                         videoPlayerContainer.appendChild(iframe);
-                        console.log("Movie iframe appended."); // Debugging log
+                        console.log("Movie iframe appended.");
                     } else {
-                        // If no embed URL, show poster image fallback
                         const img = document.createElement('img');
                         img.src = movie.posterUrl || 'images/placeholder.jpg';
                         img.alt = movie.title + ' Poster';
@@ -5653,7 +5725,7 @@ function getEmbedUrl(movie) {
                         img.style.display = 'block';
                         img.style.borderRadius = '8px';
                         videoPlayerContainer.appendChild(img);
-                        console.log("Movie poster image appended as fallback."); // Debugging log
+                        console.log("Movie poster image appended as fallback.");
                     }
 
                     // Dynamically set the href for the Facebook share button
@@ -5661,17 +5733,32 @@ function getEmbedUrl(movie) {
                     facebookShareBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${moviePageUrl}`;
                     console.log("Facebook Share URL:", facebookShareBtn.href);
 
+                    // You'll want to update the other share buttons (Twitter, WhatsApp) here too
+                    // Example for Twitter (assuming you have an element with id="twitterShareBtn"):
+                    const twitterShareBtn = document.getElementById('twitterShareBtn');
+                    if (twitterShareBtn) {
+                        const twitterText = encodeURIComponent(`Check out "${movie.title}" on The Movie Hub!`);
+                        twitterShareBtn.href = `https://twitter.com/intent/tweet?text=${twitterText}&url=${encodeURIComponent(window.location.href)}`;
+                    }
+
+                    // Example for WhatsApp (assuming you have an element with id="whatsappShareBtn"):
+                    const whatsappShareBtn = document.getElementById('whatsappShareBtn');
+                    if (whatsappShareBtn) {
+                        const whatsappText = encodeURIComponent(`Check out "${movie.title}" on The Movie Hub! ${window.location.href}`);
+                        whatsappShareBtn.href = `https://api.whatsapp.com/send?text=${whatsappText}`;
+                    }
+
                 } else {
                     document.getElementById('movieTitle').textContent = 'Movie Not Found';
                     document.getElementById('movieDescription').textContent = 'The requested movie could not be found.';
-                    videoPlayerContainer.innerHTML = '<p>Video not found or embed not available.</p>'; // Clear and show message
-                    console.log("Movie Not Found: ID", movieId); // Debugging log
+                    videoPlayerContainer.innerHTML = '<p>Video not found or embed not available.</p>';
+                    console.log("Movie Not Found: ID", movieId);
                 }
             } else {
                 document.getElementById('movieTitle').textContent = 'No Movie ID Provided';
                 document.getElementById('movieDescription').textContent = 'Please provide a movie ID in the URL (e.g., ?id=movie-name).';
-                videoPlayerContainer.innerHTML = '<p>No video ID provided.</p>'; // Clear and show message
-                console.log("No Movie ID Provided in URL."); // Debugging log
+                videoPlayerContainer.innerHTML = '<p>No video ID provided.</p>';
+                console.log("No Movie ID Provided in URL.");
             }
         });
     </script>

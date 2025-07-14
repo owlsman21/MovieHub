@@ -466,7 +466,8 @@
     <script>
         // --- MOVIE DATA: COPY YOUR ENTIRE MOVIESDATA ARRAY FROM INDEX.HTML HERE ---
         const moviesData = [
-           {
+            
+   {
 "id": "Ulzanas-Raid", 
         "title": "Ulzanas Raid",
         "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
@@ -5707,7 +5708,12 @@
         "source": "ok.ru"
      },
 
+   
         ];
+          moviesData.forEach(movie => {
+    movie.views = 0;
+});
+
         // --- END OF MOVIE DATA ---
 
        
@@ -5925,5 +5931,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
         ;
     </script>
+    
 </body>
 </html>
