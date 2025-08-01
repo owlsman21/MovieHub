@@ -1,2131 +1,988 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/index.html</loc>
-      <lastmod>2025-06-24</lastmod> <!-- Update with the date you last modified index.html -->
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
+     <loc>https://owlsman21.github.io/MovieHub/</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movies.html</loc>
-      <lastmod>2025-06-24</lastmod> <!-- Update with the date you last modified movies.html -->
-      <changefreq>daily</changefreq>
-      <priority>0.9</priority>
+     <loc>https://owlsman21.github.io/MovieHub/index.html</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/about.html</loc>
-      <lastmod>2025-06-24</lastmod> <!-- Update with the date you last modified about.html -->
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movies.html</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/contact.html</loc>
-      <lastmod>2025-06-24</lastmod> <!-- Update with the date you last modified contact.html -->
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+     <loc>https://owlsman21.github.io/MovieHub/about.html</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.7</priority>
    </url>
-   <!-- Add an entry for EACH of your 349 movie-details pages -->
-   <!-- Example for one movie: -->
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Air-Force-One-Is-Down</loc>
-      <lastmod>2025-06-24</lastmod> <!-- Update with the actual last modified date of this movie's data -->
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/contact.html</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.7</priority>
    </url>
-   
+   <!-- Movie Details Pages -->
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ulzanas-Raid</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Air-Force-One-Is-Down</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=she-wore-a-yellow-ribbon</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ulzanas-Raid</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=They-Died-with-Their-Boots-On</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=she-wore-a-yellow-ribbon</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dog-Soldiers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=They-Died-with-Their-Boots-On</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Shattering</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dog-Soldiers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Downrange</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Shattering</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=mary-had-a-little-lamb</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Downrange</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-horse-soldiers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=mary-had-a-little-lamb</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Training-Day</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-horse-soldiers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Training-Day</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn2</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn4</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn3</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn5</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn4</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn6</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn5</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nightbreed</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wrong-Turn6</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Sweeney</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nightbreed</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=wolf-creek</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Sweeney</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=wolf-creek2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=wolf-creek</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Girl-Next-Door</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=wolf-creek2</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dragon-Soldiers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Girl-Next-Door</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Punisher</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dragon-Soldiers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Master-and-Commander</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Punisher</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I-am-wrath</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Master-and-Commander</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Brawl-in-Cell-Block-99</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I-am-wrath</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=True-romance</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Brawl-in-Cell-Block-99</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Police-Story</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=True-romance</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Heat</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Police-Story</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Guvnors</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Heat</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=north-vs-south</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Guvnors</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dead-Rush</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=north-vs-south</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Fragile</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dead-Rush</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Darkness-Falls</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Fragile</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Babysitter</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Darkness-Falls</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Colditz</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Babysitter</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Please-Sir</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Colditz</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=cass</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Please-Sir</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rise-of-the-Footsoldier</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=cass</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Hot-Potato</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rise-of-the-Footsoldier</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Open-Graves</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Hot-Potato</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ouija</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Open-Graves</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Abduct</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ouija</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I-Was-Honey-Boo-Boo</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Abduct</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Surrender</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I-Was-Honey-Boo-Boo</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Final-Destination-Bloodlines</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Surrender</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Antisocial-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Final-Destination-Bloodlines</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Antisocial</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Antisocial-2</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Crossfire</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Antisocial</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Blood-Predator</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Crossfire</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Archangel</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Blood-Predator</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Assassin</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Archangel</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Air-Force-One-Is-Down</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Assassin</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Union</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Union</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Decoys</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Decoys</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mercury-Plains</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mercury-Plains</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wolf-Town</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wolf-Town</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Shadowland</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Shadowland</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Aliens-vs-Predator-Requiem.</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Aliens-vs-Predator-Requiem.</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Devils-Rock</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Devils-Rock</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Last-of-the-Mohicans</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Last-of-the-Mohicans</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mohawk</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mohawk</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Young-Guns-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Young-Guns-2</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wyatt-Earp</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wyatt-Earp</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Salvation</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Salvation</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Burrowers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Burrowers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Revenant</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Revenant</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hostiles</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hostiles</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tombstone</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tombstone</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Young-Guns</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Young-Guns</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=In-the-Tall-Grass</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=In-the-Tall-Grass</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Inbetweeners-Movie</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Inbetweeners-Movie</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Inbetweeners2-Movie</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Inbetweeners2-Movie</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nil-by-mouth</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nil-by-mouth</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=One-Flew-Over-The-Cuckoos-Nest</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=One-Flew-Over-The-Cuckoos-Nest</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Safe-Haven</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Safe-Haven</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=urge</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=urge</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Pilots-Wife</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Pilots-Wife</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Stan-and-Ollie</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Stan-and-Ollie</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Brown-Bunny</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Brown-Bunny</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Guard-of-Auschwitz</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Guard-of-Auschwitz</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=A-Lonely-Place-to-Die</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=A-Lonely-Place-to-Die</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Vendetta</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Vendetta</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Deepwater</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Deepwater</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hamburger-Hill</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hamburger-Hill</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Threads</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Threads</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mission-of-Honor</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mission-of-Honor</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=bravo-two-zero</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=bravo-two-zero</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=My-Lai-Four</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=My-Lai-Four</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lone-Survivor</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lone-Survivor</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Alone-We-Fight</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Alone-We-Fight</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Act%20of%20valor</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Act%20of%20valor</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Green-Berets</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Green-Berets</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Black-Hawk-Down</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Black-Hawk-Down</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Green-Street-Hooligans-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Green-Street-Hooligans-2</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Green-Street</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Green-Street</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Bayou</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Bayou</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Teeth</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Teeth</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Redhead</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Redhead</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Drop</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Drop</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Bone%20Face</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Bone%20Face</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Piglet</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Piglet</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Terrifier-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Terrifier-3</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Near-Dark</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Near-Dark</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lowlifes</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lowlifes</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=IT</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=IT</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Geronimo</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Geronimo</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Bad-Seed</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Bad-Seed</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=PayBack</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=PayBack</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Bone-Tomahawk</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Bone-Tomahawk</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Jennifers-Body</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Jennifers-Body</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rio-Bravo</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rio-Bravo</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=We-Were-Soldiers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=We-Were-Soldiers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Platoon</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Platoon</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hacksaw-Ridge</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hacksaw-Ridge</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Soldier%20Blue</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Soldier%20Blue</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Perfect-Storm</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Perfect-Storm</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Titanic</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Titanic</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Taken</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Taken</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wedding%20Crashers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wedding%20Crashers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Goldfinger</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Goldfinger</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Holmes-and-Watson</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Holmes-and-Watson</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Thirteen</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Thirteen</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=A-Sierra-Nevada-Gunfight</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=A-Sierra-Nevada-Gunfight</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Leave%20the%20World%20Behind</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Leave%20the%20World%20Behind</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Chaplin</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Chaplin</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The%20Nanny</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The%20Nanny</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tuesday</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tuesday</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Queen-of-the-Ring</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Queen-of-the-Ring</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Sexiest-Man-in-Winnipeg</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Sexiest-Man-in-Winnipeg</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Marijuambies</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Marijuambies</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Devils-Hacksaw</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Devils-Hacksaw</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Goodfellas</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Goodfellas</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Blue</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Blue</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rust</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rust</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=King.Arthur</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=King.Arthur</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Snatch</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Snatch</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lock-Stock</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lock-Stock</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nosferatu-the-Vampyre</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nosferatu-the-Vampyre</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Shawshank-Redemption</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Shawshank-Redemption</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Godfather-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Godfather-2</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Godfather-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Godfather-3</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Schindlers-List</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Old-Way</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Jaws</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Gunslingers</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Dark-Knight</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ghost-Town</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Superman-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Birthright-Outlaw</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Superman-4</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Five</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Superman</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Good-the-Bad-and-the-Ugly</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Superman-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Once-Upon-a-Time-in-the-West</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Scum</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Unforgiven</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Scrubbers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Django-Unchained</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Planet-of-the-Apes</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=True-Grit</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rocky-Balboa</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Hateful-Eight</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Everest</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=High-Noon</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Sharp%20Corner</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Butch-Cassidy-and-the-Sundance-Kid</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rabid</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Wild-Bunch</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Utah-Cabin-Murders</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Shane</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Artik</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=3-10-to-Yuma</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Stained</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=No-Country-for-Old-Men</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Unseen</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Magnificent-Seven</loc>
+     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
    </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Foreigner</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Law-Abiding-Citizen</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=3-Days-to-Kill</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Unknown</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Stolen</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Red-Dawn</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Kingdom-of-the-Vampire</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wicked-Witches</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Criminal</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Man-on-Fire</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=30-Daye-of-Nights</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=10.5-Apocalypse</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The%20Craving</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Howl</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=One%20More%20Shot</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Final-Destination</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Final-Destination-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Final-Destination-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Twilight-Breaking-Dawn-Part-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mannequin-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ghost-Ship</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Infernal</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Inflicted</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Splinter</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I-am-omega</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Tommyknockers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Amityville-Horror</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Guyver-2-Dark-Hero</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Texas-Chainsaw-Massacre</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Zombie-Nation</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Serenity-Farm</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=beond-skyline</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=COLD-MOON</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rampage</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Rampage-Capital-Punishment</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-First-Purge</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Inbred</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Abraham-Lincoln-Vampire-Hunter</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Prometheus</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Stripped</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Transporter-Refueled</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Little%20Dead%20Rotting%20Hood</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Feast-2-sloppy-seconds</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Feast</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Skinwalkers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Valhalla%20Rising</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Darkness%20Rising</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Werewolf-Rising</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mutants</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-House-of-Violent-Desire</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=It-Lives-Inside</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Jeepers-Creepers-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Jeepers-Creepers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Jeepers-Creepers-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dracula-The-Dark-Prince</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=All-the-Boys-Love-Mandy-Lane</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Gangsters-Guns-Zombies</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Cockneys-vs-Zombies</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Left-Behind</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tiger-House</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Cabin-Fever-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Cabin-Fever</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Cabin-Fever-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Breathing-Room</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Running-with-the-Devil</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Bank-Job</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Beverly-Hillbillies</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=In-Pursuit-of-Honor</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=War</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Prey</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The%20Descent</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Shape-of-Water</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Womb</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Squatchers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=War%20Party</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Night-of-the-Tommyknockers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Blazing-Saddles</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ride-With-The-Devil</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Thicket</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Ghost-Town</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Mississippi-Burning</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=From-Dusk-Till-Dawn</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Beyond-the-Night</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Extinction</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=London-Boulevard</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Michael-Collins</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Outlaw%20King</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Outfit</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lakeview-Terrace</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wanted</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Last-County</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Stir-of-Echoes</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Event-Horizon</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Hell-of-a-Summer</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dead%20Mail</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=It-Feeds</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Desert-Fiends</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nothing-to-Lose</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nothing-But-Trouble</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Rocky-Horror-Picture-Show</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Lost-Boys</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Great-Outdoors</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Jerky-Boys</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Behaving-Badly</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Southern-Comfort</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Frequencies</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Freaks</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Follow-Me</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Farmlands</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The%20Manhattan%20Project</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Firewall</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Finding-Your-Feet</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Finding-Graceland</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Patriot</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Requiem-for-a-Scream</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Field-of-Dreams</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=ConAir</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=A-Chefs-Deadly-Revenge</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I%20Know%20What%20You%20Did%20Last%20Summer</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=I-Still-Know-What-You-Did-Last-Summer</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=When%20Darkness%20Falls</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=House%20of%20Inequity</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Vampire-Next-Door</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Woman-With-The-Red-Lipstick</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Nanny-Dearest</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=breakwater-2023</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=when-the-bough-breaks-2016</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=nightmare-school-moms-2023</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=ondine-2009</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=kingdom-of-heaven-2005</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Phenomenon</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=the-godfather</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=pulp-fiction</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Smokey-And-The-Bandit</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Smokey-And-The-Bandit-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Smokey-And-The-Bandit-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Angel-Baby</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Michael</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Goin-South</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Grind</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Unspeakable-Beyond-the-Wall-of-Sleep</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Deciphering-the-Zodiac-Killer</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=10-Rillington-Place</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Capture-of-the-Green-River-Killer</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=K-O</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Shrouds</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Quiet-Hour</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Cannibal-Troll</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Big-Sky</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Wake-the-Dead</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Killer-Elite</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Alien</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dead%20Again</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=BTK</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Haunting-of-the-Mary-Celeste</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Staying-Alive</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Grease</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Searchers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Gunslingers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Dances-With-Wolves</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Under-Siege</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Under-Siege-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=A-Kind-of-Madness</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Echo%20Valley</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Diablo</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Reaper</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lethal-Weapon-3</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lethal-Weapon-2</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lethal-Weapon</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Lethal-Weapon-4</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Die-Hard</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Live-Free-or-Die-Hard</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Gallowwalkers</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Zulu</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Zulu-Dawn</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Planet-Of-The-Apes</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The-Odyssey</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tremors</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Tremors-II-Aftershocks</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Futureworld</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=She</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=The%20Vengeance%20Of%20She</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=King%20Kong</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Cannibal%20Holocaust</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Big-Jake</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=Chisum</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://owlsman21.github.io/MovieHub/movie-details.html?id=</loc>
-      <lastmod>2025-06-24</lastmod> 
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <!-- Repeat the <url> block for every movie ID you have -->
 </urlset>
