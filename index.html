@@ -5,69 +5,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Movie Hub - Your Destination for Classic Films</title>
-
+    
+    <!-- SEO FIX: Added a critical Meta Description -->
+    <meta name="description" content="Discover The Movie Hub, your premier source for streaming and exploring classic cinema, from Hollywood's Golden Age to timeless cult films and beloved independent movies.">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Fonts - Loaded via CDN (as per user's original links) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;700&family=Creepster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css"> 
-    <link rel="stylesheet" href="css/landing-page.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Bebas+Neue&family=Roboto:wght@400;700&family=Creepster&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base styles using user's preferred fonts and dark theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Very dark background */
+            color: #E0E0E0; /* Light text */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
+        /* Utility for centering content width */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
+        /* --- HEADER STYLES --- */
+        header {
+            background-color: #0d0d0d;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid #5D3FD3; /* Deep Purple border */
+        }
 
-    </head>
+        /* Container for Logo and Nav (Flexbox for horizontal layout) */
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Ensures vertical centering */
+            padding: 1.25rem 1rem; /* Slightly increased vertical padding for better spacing */
+        }
+
+        /* Logo Styling - Now aligned left */
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: #FFC300; /* Amber Yellow */
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px rgba(255, 195, 0, 0.5);
+            /* Important: Ensures it doesn't try to take up all the space */
+            flex-shrink: 0; 
+        }
+
+        /* Navigation links on the right */
+        header nav {
+            /* Pushes the navigation to the far right */
+            margin-left: auto; 
+        }
+        header nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 1.5rem; /* Increased spacing between links */
+        }
+
+        @media (max-width: 768px) {
+            /* On mobile, stack logo and navigation for better display */
+            header .container {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem 1rem; /* Reduced padding slightly on mobile */
+            }
+            header nav {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            header nav ul {
+                justify-content: center;
+            }
+        }
+
+        header nav a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        header nav a:hover {
+            color: #FF4D4D; /* Red accent on hover */
+        }
+        
+        /* --- COMPACT LINK BAR --- */
+        .compact-link-bar {
+            background-color: #282828; 
+            border-bottom: 1px solid #FF4D4D; /* Red border */
+            padding: 0.5rem 0;
+            text-align: center; 
+        }
+
+        .compact-link-bar p {
+            color: #A0A0A0; 
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .compact-link-bar a {
+            color: #FF4D4D; /* Red accent */
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .compact-link-bar a:hover {
+            color: #F87171;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://placehold.co/1920x800/201213/201213/png?text='); 
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh; 
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(179, 0, 0, 0.1) 0%, rgba(18, 18, 18, 0.9) 70%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #FF4D4D; /* Red accent */
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(255, 77, 77, 0.6);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #B0B0B0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Button Styling (primary/secondary) */
+        .button {
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid transparent;
+        }
+
+        .button.primary {
+            background-color: #5D3FD3; /* Deep Purple */
+            color: white;
+            border-color: #7D5FD3;
+            box-shadow: 0 4px 15px rgba(93, 63, 211, 0.4);
+        }
+        .button.primary:hover {
+            background-color: #4A32A8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(93, 63, 211, 0.6);
+        }
+
+        .button.secondary {
+            background-color: #FFC300; /* Amber Yellow */
+            color: #121212;
+            border-color: #FFD140;
+            box-shadow: 0 4px 15px rgba(255, 195, 0, 0.4);
+        }
+        .button.secondary:hover {
+            background-color: #E6B300;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 195, 0, 0.6);
+        }
+
+        /* --- CONTENT SECTION --- */
+        .content-block {
+            padding: 3rem 1rem 0rem;
+            max-width: 900px;
+        }
+
+        /* --- COMPANION CALLOUT STYLES --- */
+        .companion-site-callout {
+            padding: 3rem 1rem 4rem; /* Adjusted padding for new content block */
+            text-align: center;
+            max-width: 800px;
+        }
+        .companion-site-callout h3 {
+             font-family: 'Bebas Neue', sans-serif;
+             font-size: 2rem;
+             color: #FFC300;
+             margin-bottom: 1rem;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #0d0d0d;
+            padding: 1.5rem 0;
+            border-top: 1px solid #333;
+        }
+        footer p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
 <body>
+    
     <header>
         <div class="container">
-            <h1 class="logo">The Movie Hub</h1>
-          <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="members-movies.html">Members</a></li> <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog/index.html">Blog</a></li>
-    </ul>
-</nav>
+            <!-- 1. Logo: Aligned Left -->
+            <h1 class="logo">THE MOVIE HUB</h1>
+            
+            <!-- 2. Navigation: Pushed to the right edge and takes up the remaining space -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="members-movies.html">Members</a></li> 
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-   <main>
-    <section class="hero-section">
-        <div class="hero-content container">
-            <h2>Welcome to The Movie Hub!</h2>
-            <p>Your ultimate destination for discovering and watching classic films.</p>
-            <div class="hero-buttons">
-                <a href="movies.html" class="button primary">EXPLORE ALL MOVIES</a>
-                <a href="members-movies.html" class="button secondary">MEMBERS AREA</a>
+    <main>
+        <!-- Compact Backlink Section: Top-loaded for SEO, minimal height for visibility -->
+        <section class="compact-link-bar">
+            <p>
+                Looking for non-fiction true crime? Check out our sister site: 
+                <a href="https://owlsman21.github.io/serial-killers-website/index.html" 
+                   target="_blank" 
+                   title="Go to the Serial Killer Movie Archive">
+                    Serial Killer Movie Archive
+                </a> 
+            </p>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content container">
+                <h2>WELCOME TO THE MOVIE HUB!</h2>
+                <p>Your ultimate destination for discovering and watching classic films.</p>
+                <div class="hero-buttons">
+                    <a href="movies.html" class="button primary">EXPLORE ALL MOVIES</a>
+                    <a href="members-movies.html" class="button secondary">MEMBERS AREA</a>
+                </div>
             </div>
-        </div>
-    </section>
-     <section class="companion-site-callout container">
-        <h3>Exploring the Darker Side of Cinema?</h3>
-        <p>While we focus on classic and general cinema here, some of the most compelling films are those based on true events.</p>
-        <p>If you are looking for an in-depth, curated collection of non-fiction and documentary films, we highly recommend visiting our specialized resource:</p>
+        </section>
         
-        <p style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #f7f7f7; border-radius: 8px;">
-            <a 
-                href="https://owlsman21.github.io/serial-killers-website/index.html" 
-                title="Serial Killer Movie Archive - Companion Site"
-                target="_blank"
-                style="font-weight: bold; color: #cc0000; text-decoration: none; font-size: 1.2em;">
-                Go to the Serial Killer Movie Archive
-            </a>
-        </p>
+        <!-- SEO FIX: Added keyword-rich content block to improve content depth -->
+        <section class="content-block container mx-auto">
+            <h3 class="text-2xl font-bold text-center mb-4 text-yellow-400">Your Home for Timeless Classic Cinema</h3>
+            <p class="text-lg text-gray-300 text-center">
+                The Movie Hub is dedicated to celebrating and curating the best of **classic cinema** from every era. Dive into our extensive library, spanning from the **Golden Age** of Hollywood legends to essential **cult films** that defined generations. Whether you're searching for critically acclaimed dramas, vintage horror, or beloved independent classics, we offer a high-quality streaming experience for every film enthusiast. Start your journey today and rediscover the masterpieces of cinematic history.
+            </p>
+        </section>
         
-        <p>This linked section maintains an updated catalog dedicated solely to true crime films and documentaries, making it a perfect **companion site** for your specialized interests.</p>
-    </section>
-    <!-- ****************************************************** -->
-    
-</main>
+        <!-- Companion Site Callout -->
+        <section class="companion-site-callout container mx-auto">
+            <h3>Exploring the Darker Side of Cinema?</h3>
+            <p>While we focus on classic and general cinema here, some of the most compelling films are those based on true events.</p>
+            <p>If you are looking for an in-depth, curated collection of non-fiction and documentary films, we highly recommend visiting our specialized resource:</p>
+            
+            <p class="text-center p-5 rounded-lg my-6" style="border: 1px solid #FF4D4D; background-color: #280505;">
+                <a 
+                    href="https://owlsman21.github.io/serial-killers-website/index.html" 
+                    title="Serial Killer Movie Archive - Companion Site"
+                    target="_blank"
+                    class="font-extrabold text-white hover:text-yellow-400"
+                    style="font-size: 1.2em; text-decoration: none;">
+                    Go to the Serial Killer Movie Archive
+                </a>
+            </p>
+            
+            <p>This linked section maintains an updated catalog dedicated solely to true crime films and documentaries, making it a perfect **companion site** for your specialized interests.</p>
+        </section>
+        
+    </main>
 
     <footer>
-        <div class="container">
+        <div class="container text-center">
             <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
         </div>
     </footer>
-    <script src="js/movie-data.js"></script>
-<script src="js/script.js"></script>
+
 </body>
+</html>
