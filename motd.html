@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <!-- Google Tag (gtag.js) - MANDATORY HEAD PLACEMENT -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-024J0HFFMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // This line uses your specific ID to start tracking
+  gtag('config', 'G-024J0HFFMT'); 
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Title (Optimized for Indexing) -->
+    <title>MovieHub: Stream the Featured Movie of the Week | Weekly Free Stream</title>
+    <!-- SEO Description -->
+    <meta name="description" content="Watch the latest, modern Movie of the Week right here on MovieHub. Enjoy high-quality, full-screen streaming without ever leaving our site. Updated weekly!">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Custom styles for cinematic, dark theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e; /* Deep purple/blue background */
+            color: #f0f0f0;
+        }
+
+        /* Class to handle the 'full screen' view within the site */
+        .fullscreen-mode {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000; /* Ensure it's on top of everything */
+            background-color: #000;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styling for the video container (using aspect ratio utility) */
+        .video-wrapper {
+            width: 100%;
+            max-width: 1000px; /* Max width for desktop viewing */
+            margin: auto;
+        }
+
+        .fullscreen-mode .video-wrapper {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            padding: 20px; /* Small padding in full screen */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app-container" class="min-h-screen py-8 px-4 sm:px-6 lg:px-8 transition-all duration-300">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-300 mb-2 tracking-tighter">
+                MovieHub
+            </h1>
+            <p class="text-xl text-gray-400">Your Daily Fix of Modern Cinema</p>
+        </header>
+
+        <!-- Header Image Placeholder (Updated text: Movie of the Week) -->
+        <div class="mb-10 w-full max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden border-2 border-indigo-600">
+            <img 
+                src="https://placehold.co/1200x250/3f3f46/ffffff?text=Cinematic+Movie+of+the+Week+Banner" 
+                alt="Cinematic Banner for Movie of the Week Feature"
+                class="w-full h-auto object-cover"
+                onerror="this.onerror=null; this.src='https://placehold.co/1200x250/3f3f46/ffffff?text=Cinematic+Movie+of+the+Week+Banner'"
+            >
+        </div>
+
+        <!-- Movie of the Week Section (Updated heading) -->
+        <main class="w-full max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6 text-center text-indigo-400">
+                <i class="fas fa-star mr-2"></i> Featured Movie of the Week
+            </h2>
+            
+            <div id="movie-card" class="bg-gray-800 p-6 rounded-xl shadow-2xl transition-all duration-300 border-t-4 border-t-red-500">
+                <!-- 1. MOVIE TITLE -->
+                <h3 id="movie-title" class="text-3xl font-bold mb-4 text-white">Zodiac - Director's Cut</h3>
+                
+                <!-- 2. MOVIE DESCRIPTION -->
+                <p class="text-gray-400 mb-6">
+                    Robert Graysmith, a cartoonist by profession, finds himself obsessively thinking about the zodiac killer. He uses his puzzle-solving abilities to get closer to revealing the identity of the killer.
+                </p>
+
+                <!-- Video Container -->
+                <div id="video-host" class="video-wrapper aspect-w-16 aspect-h-9 relative mb-4">
+                    <!-- 3. PASTE YOUR VIDEO EMBED URL HERE (the src="..." part) -->
+                    <iframe 
+                        id="movie-player"
+                        class="w-full h-full rounded-lg shadow-xl"
+                        src="https://mega.nz/embed/fUNXSBZS#3dCcET_Td76aakHLo2En31DQAkJL9fdAX_wl4hq0Fd4" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        loading="lazy"
+                        title="Movie of the Day Embedded Player"
+                    ></iframe>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="flex flex-col sm:flex-row justify-between gap-4 mt-6">
+                    
+                    <!-- Toggle Fullscreen Button -->
+                    <button 
+                        id="fullscreen-toggle"
+                        onclick="toggleFullScreen()" 
+                        class="flex-1 w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-red-500/50"
+                    >
+                        <i class="fas fa-expand-arrows-alt mr-2"></i> Enter Site Fullscreen
+                    </button>
+
+                    <!-- Return to Main Movies Button (Link) -->
+                    <a 
+                        href="index.html" 
+                        class="flex-1 w-full sm:w-auto text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500/50"
+                    >
+                        <i class="fas fa-film mr-2"></i> Return to All Movies
+                    </a>
+                </div>
+
+                <p class="text-xs text-gray-500 mt-6 text-center">
+                    Note: To change the movie, update the `iframe` `src` attribute in the code.
+                </p>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        const appContainer = document.getElementById('app-container');
+        const videoHost = document.getElementById('video-host');
+        const fullscreenButton = document.getElementById('fullscreen-toggle');
+        
+        /**
+         * Toggles a CSS class on the main container to simulate a full-screen mode 
+         * without leaving the page. This hides everything except the video.
+         */
+        function toggleFullScreen() {
+            // Check if the body already has the full-screen class
+            const isFullScreen = appContainer.classList.contains('fullscreen-mode');
+            
+            if (isFullScreen) {
+                // Exit full screen
+                appContainer.classList.remove('fullscreen-mode');
+                // Restore original video aspect ratio classes
+                videoHost.classList.remove('h-full', 'w-full');
+                videoHost.classList.add('aspect-w-16', 'aspect-h-9');
+                fullscreenButton.innerHTML = '<i class="fas fa-expand-arrows-alt mr-2"></i> Enter Site Fullscreen';
+            } else {
+                // Enter full screen
+                appContainer.classList.add('fullscreen-mode');
+                // Set video to fill 100% of the screen
+                videoHost.classList.remove('aspect-w-16', 'aspect-h-9');
+                videoHost.classList.add('h-full', 'w-full');
+                fullscreenButton.innerHTML = '<i class="fas fa-compress-arrows-alt mr-2"></i> Exit Site Fullscreen';
+            }
+        }
+        
+        // Tailwind Aspect Ratio Plugin configuration (manual implementation since we only have one file)
+        // This is a common utility for making embedded videos responsive.
+        // Utility for Aspect-w-16 (width) and Aspect-h-9 (height)
+        document.addEventListener('DOMContentLoaded', () => {
+            const ratioContainers = document.querySelectorAll('.aspect-w-16.aspect-h-9');
+            ratioContainers.forEach(container => {
+                // Simple aspect ratio calculation (16/9 = 56.25%)
+                container.style.paddingBottom = '56.25%';
+                container.style.height = '0';
+                container.style.position = 'relative';
+
+                const iframe = container.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
