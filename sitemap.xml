@@ -161,4 +161,22 @@
     <url><loc>https://moviehub.zya.me/movie-details.html?id=Rust</loc><lastmod>2026-01-04</lastmod></url>
     <url><loc>https://moviehub.zya.me/movie-details.html?id=King.Arthur</loc><lastmod>2026-01-04</lastmod></url>
     <url><loc>https://moviehub.zya.me/movie-details.html?id=Snatch</loc><lastmod>2026-01-04</lastmod></url>
+    <url>
+    <loc>https://zya.me/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://zya.me/movies</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zya.me/hitchcock</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
