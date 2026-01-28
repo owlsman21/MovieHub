@@ -3,14 +3,15 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KS61BKE3Y2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNXJGVNEY0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag('config', 'G-KS61BKE3Y2'); // Corrected Measurement ID: Removed the trailing period
-    </script>
+  gtag('config', 'G-WNXJGVNEY0');
+</script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -414,46 +415,55 @@
             }
         }
     </style>
+     <meta name="p:domain_verify" content="6d55da8784bcc6d2cccc4b90f637350b"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The Movie Hub</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="bg-[#0d0d0d] border-b-4 border-[#5D3FD3] p-5">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <h1 class="bebas text-4xl text-[#FFC300] tracking-wider uppercase font-bold">THE MOVIE HUB</h1>
+    <nav>
+    <ul class="flex flex-wrap gap-4 justify-center md:justify-end mt-4 md:mt-0 font-bold items-center">
+        <li><a href="index.html" class="text-white hover:text-red-500 transition">Home</a></li>
+        <li><a href="movies.html" class="text-white hover:text-red-500 transition border-b-2 border-red-500">Movies</a></li>
+        <li><a href="western.html" class="text-[#FFC300] hover:text-white transition">Westerns</a></li>
+        <li><a href="motd.html" class="text-red-500 hover:text-yellow-400 transition">Movie Of The Week</a></li>
+        <li><a href="about.html" class="text-white hover:text-red-500 transition">About</a></li>
+        <li><a href="contact-us.html" class="text-white hover:text-red-500 transition">Contact</a></li>
+        <li><a href="blog/index.html" class="text-white hover:text-red-500 transition">Blog</a></li>
+    </ul>
+</nav>
+    </div>
+</header>
 
     <main>
-        <section id="all-movies-section" class="section-padded">
-            <div class="container">
-                <h2>Our Complete Movie Collection</h2>
-                <div class="search-controls">
-                    <input type="text" id="movie-search" placeholder="Search movies by title, genre, year or description...">
-                    <button id="searchButton">Search</button>
-                    <button id="clearSearchButton">Clear</button>
-                </div>
-                <div id="genre-buttons" class="genre-buttons-container">
-                    <p>Loading genres...</p>
-                </div>
-                <div id="all-movie-grid" class="movie-grid">
-                    <p>Loading all movies...</p>
-                </div>
-                <div class="pagination">
-                    <button id="homePageBtn">Home</button>
-                    <button id="prevPage">Previous</button>
-                    <span id="pageInfo">Page 1 of 1</span>
-                    <button id="nextPage">Next</button>
-                </div>
+      <section id="all-movies-section" class="section-padded">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="bebas text-4xl text-[#FFC300] mb-6">Our Complete Movie Collection</h2>
+        
+        <div class="search-controls mb-10 flex flex-col md:flex-row justify-center items-center gap-4">
+            <input type="text" id="movie-search" 
+                placeholder="Search movies by title, genre (e.g. Western), or description..." 
+                class="w-full max-w-xl p-3 rounded-lg bg-[#1a1a1a] text-white border-2 border-[#5D3FD3] outline-none">
+            
+            <div class="flex gap-2">
+                <button id="searchButton" class="bg-[#5D3FD3] text-white px-6 py-3 rounded-lg font-bold">Search</button>
+                <button id="clearSearchButton" class="bg-gray-700 text-white px-6 py-3 rounded-lg font-bold">Clear</button>
             </div>
-        </section>
+        </div>
+
+        <div id="genre-buttons" style="display: none;"></div>
+
+        <div id="all-movie-grid" class="movie-grid">
+            </div>
+
+        <div class="pagination mt-12 flex justify-center items-center gap-4">
+            <button id="homePageBtn" class="px-4 py-2 bg-[#5D3FD3] rounded">Home</button>
+            <button id="prevPage" class="px-4 py-2 bg-gray-800 rounded">Previous</button>
+            <span id="pageInfo" class="text-white font-bold">Page 1 of 1</span>
+            <button id="nextPage" class="px-4 py-2 bg-gray-800 rounded">Next</button>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>
@@ -757,7 +767,7 @@
         "id": "north-vs-south",
         "title": "North vs South",
         "description": "A conflict between two opposing factions in a historical or fictional setting.",
-        "embedId": "1157638130329",
+        "embedId": "1157638130329",  
         "genres": ["Drama","Action"],
         "source": "ok.ru",
         "posterUrl":  "images/north vs south.jpg",
@@ -1547,17 +1557,8 @@
         "genres": ["War"],
         "source": "ok.ru"
     },
-
-     {  "id": "Soldier Blue",
-        "posterUrl":  "images/Soldier Blue.jpg",
-        "year": 1970,
-        "title": "Soldier Blue 1970 ",
-        "description": " After a cavalry patrol is ambushed by the Cheyenne, the two survivors, a soldier and a woman, must reach the safety of the nearest fort",
-        "embedId": "6172174715419",
-        "genres": ["Western"],
-        "source": "ok.ru"
-    },
-     {  "id": "The-Perfect-Storm",
+     { 
+         "id": "The-Perfect-Storm",
         "posterUrl":  "images/The Perfect Storm.jpg",
         "year": 2000,
         "title": "The Perfect Storm [2000]  ",
@@ -1566,7 +1567,9 @@
         "genres": ["Drama"],
         "source": "ok.ru"
     },
-     {  "id": "Titanic",
+     { 
+         
+         "id": "Titanic",
         "posterUrl":  "images/Titanic.jpg",
         "year": 1997,
         "title": "Titanic 1997 ",
@@ -3573,16 +3576,7 @@
         "genres": ["Action"],
         "source": "ok.ru"
      },
-     {
-        "id": "Zulu-Dawn",
-        "posterUrl":  "images/Zulu dawn.jpg",
-        "year": 1979,
-        "title": "Zulu Dawn (1979)",
-        "description": "A dramatization of the Battle of Isandlwana, where the British Army met its match against the Zulu nation",
-        "embedId": "3937392528031",
-        "genres": ["Action"],
-        "source": "ok.ru"
-     },
+    
      {
         "id": "Planet-Of-The-Apes",
         "posterUrl":  "images/Planet Of The Apes 1968.jpg",
@@ -4094,16 +4088,7 @@
         "genres": ["War","Action","Drama"],
         "source": "ok.ru"
      },
-      {
-        "id": "The-Birds",
-        "posterUrl":  "images/The Birds.jpg",
-        "year":1963 ,
-        "title": "The Birds",
-        "description": "A wealthy San Francisco socialite pursues a potential boyfriend to a small Northern California town that slowly takes a turn for the bizarre when birds of all kinds suddenly begin to attack people.",
-        "embedId": "9757405481646",
-        "genres": ["Drama","Horror"],
-        "source": "ok.ru"
-     },
+      
      {
         "id": "The-Sound-of-Music",
         "posterUrl":"images/The Sound of Music.jpg",
@@ -5662,16 +5647,7 @@
         "genres": ["Crime","Documentary"],
         "source": "youtube"
      },
-      {
-        "id": "Ice-road-vengeance",
-        "posterUrl":  "images/ice road vengeance.jpg",
-        "year":2025,
-        "title": "Ice road vengeance",
-        "description": "Mike travels to Nepal to scatter his late brother's ashes on Mt. Everest. When Mike and his mountain guide encounter mercenaries on a tour bus, they are forced to fight to save themselves, the passengers, and the local villagers' homeland.",
-        "embedId": "9801823816256",
-        "genres": ["Action","Adventure"],
-        "source": "ok.ru"
-     },
+    
      {
         "id": "Dracula-2000",
         "posterUrl":  "images/Dracula 2000.jpg",
@@ -5702,6 +5678,7 @@
         "genres": ["Sci-Fi","Thriller"],
         "source": "youtube"
      },
+          
      {
         "id": "The-King",
         "posterUrl":"images/The King.jpg",
@@ -5971,7 +5948,7 @@
         "title": "The Girl",
         "description": "The turbulent relationship between filmmaker Sir Alfred Hitchcock (Toby Jones) and actress Tippi Hedren (Sienna Miller).",
         "embedId": "9618328652326",
-        "genres": ["Biography","Drama"],
+        "genres": ["Biography","Drama","Hitchcock"],
         "source": "ok.ru"
      },
      {
@@ -7136,7 +7113,7 @@
         "genres": ["Action","Adventure","Drama","Thriller"],
         "source": "ok.ru"
      },
-      {
+             {
         "id": "Stan-the-Man",
         "posterUrl":  "images/stan the man.jpg",
         "year":2025,
@@ -7146,7 +7123,7 @@
         "genres": ["Drama"],
         "source": "ok.ru"
      },
-      {
+             {
         "id": "Witchy-Ways",
         "posterUrl":  "images/Witchy Ways.jpg",
         "year":2025,
@@ -7156,21 +7133,1640 @@
         "genres": ["Fantasy"],
         "source": "ok.ru"
      },
-      {
-        "id": "",
-        "posterUrl":  "images/.jpg",
-        "year":2007,
-        "title": "",
-        "description": "",
-        "embedId": "",
-        "genres": [""],
+  {
+    "id": "Werewolf-Transformations",
+    "title": "Werewolf Transformations",
+    "description": "Terrifying werewolf transformations: humans turning into beasts.",
+    "genres": ["Horror"],
+    "year": "2025",
+    "source": "rumble",
+  "embedId": "v717tu2",
+    "posterUrl": "https://sp.rmbl.ws/s8/1/A/B/C/D.jpg"
+},
+   {
+    "id": "zombie-nightmare-1987",
+    "title": "Zombie Nightmare (1987)",
+    "source": "rumble",
+    "embedId": "v719128",   
+    "posterUrl": "images/zom.jpg",
+    "genres": ["Horror", "Zombies"],
+    "year": 1987
+},
+   {
+    "id": "Custer-of-the-West",
+    "title": "Custer of the West (1967)",
+    "description": "Robert Shaw stars as George Armstrong Custer in this epic western following the cavalry commander's life and the events leading to the Battle of the Little Bighorn.",
+    "genres": ["Western", "History", "Epic"],
+  "posterUrl": "images/custer.jpg",
+    "source": "rumble",
+    "embedId": "v716790"
+},
+            
+     {
+    "id": "DISTANT_DRUMS",
+    "title": "DISTANT DRUMS 1952",
+    "description": "Deep in the Everglades... the war drums are beating.",
+    "genres": ["Western", "Epic"],
+  "posterUrl": "images/distant.jpg",
+    "source": "rumble",
+    "embedId": "v7187ea"
+},
+        {
+    "id": "THE_HALLELUJAH_TRAIL",
+    "title": "THE HALLELUJAH TRAIL Bert Lancaster (1965)",
+    "description": "When the city of Denver faces a shortage of whiskey, the citizens order a large number of barrels but meet with unexpected opposition from the temperance league, soldiers and the miners themselves",
+    "genres": ["Western", "Epic"],
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTExMTgyMDUwNDdeQTJeQWpwZ15BbWU3MDAwOTI5MzQ@._V1_.jpg",
+    "source": "rumble",
+    "embedId": "v71871i"
+},     
+   {
+        "id": "Stagecoach",
+        "title": "Stagecoach (1939) – John Wayne The Classic Western in Color",
+        "description": "Stagecoach (1939) – The Classic Western in Colour",
+        "genres": ["Western", "Epic"],
+        "posterUrl": "images/stagecoach.jpg",
+        "source": "rumble",
+        "embedId": "v716bzc"
+    },
+    {
+        "id": "The_Searchers",
+        "title": "The Searchers (1956) - John Wayne Western Classic",
+        "description": "Ethan, who returns home after eight years, joins a group of rangers to recover lost cattle. The situation regresses after Comanches raid his town, kill his sister's family and abduct his niece.",
+        "genres": ["Western", "Epic"],
+        "posterUrl": "images/search.jpg",
+        "source": "rumble",
+        "embedId": "v716aug"
+    },
+             {
+        "id": "Turbulence",
+        "posterUrl":  "images/turb.jpg",
+        "year":2025,
+        "title": "Turbulence (2025)",
+        "description": "Zach and Emmy's romantic retreat aboard a hot-air balloon takes a terrifying turn when they get hijacked by a sinister third passenger with a link to Zach's past. As the mystery of their secret relationship is revealed, their spectacular ride becomes a brutal chess match and a lethal battle high in the sky.",
+        "embedId": "10548540475942",
+        "genres": ["Action,Thriller"],
         "source": "ok.ru"
      },
+              {
+        "id": "long_shadows",
+        "posterUrl": "images/Long.jpg",
+        "year":2025,
+        "title": "long shadows ",
+        "description": "When a young boy's mother and father are savagely murdered, he ages out of an orphanage intent on revenge, but the love of a girl and psychological trauma lead him down a mystifying path.",
+        "embedId": "10768314206758",
+        "genres": ["Action,Western"],
+        "source": "ok.ru"
+     },
+              {
+        "id": "ZandysBride",
+        "title": "Zandy's Bride (1974)",
+        "description": "A raw, psychological study of frontier dominance. Gene Hackman stars as a hardened cattleman who treats his mail-order bride (Liv Ullmann) like livestock, leading to a brutal clash of wills.",
+        "genres": ["Western", "Drama"],
+        "posterUrl": "images/zandy.jpg",
+        "source": "rumble",
+        "embedId": "v71j3ma" 
+    },
+                {
+        "id": "WingsOfTheHawk",
+        "title": "Wings of the Hawk (1953)",
+        "description": "After his gold mine is illegally seized by a corrupt Governor, American engineer Irish Gallager (Van Heflin) is forced into the Mexican Revolution. A high-action study of how corruption turns honest men into outlaws.",
+        "genres": ["Western", "Action"],
+        "posterUrl": "images/wings.jpg",
+        "source": "rumble",
+        "embedId": "v71j3gg"
+    },
+            {
+        "id": "Winchester73",
+        "title": "Winchester'73 (1950)",
+        "description": "A 'One in a Thousand' rifle becomes an instrument of fate as it passes through the hands of killers, thieves, and cowards. James Stewart stars in this psychological study of obsession and fraternal vengeance.",
+        "genres": ["Western", "Psychological"],
+        "posterUrl": "images/win.jpg",
+        "source": "rumble",
+        "embedId": "v71j350"
+    },
+            {
+        "id": "HempBrown",
+        "title": "The Saga of Hemp Brown (1958)",
+        "description": "After being dishonorably discharged for a payroll robbery he didn't commit, Hemp Brown (Rory Calhoun) goes on a relentless hunt for the real killer to clear his name. A gritty look at frontier justice and the search for the truth.",
+        "genres": ["Western", "Crime"],
+        "posterUrl": "images/hemp1.jpg",
+        "source": "rumble",
+        "embedId": "v71j30q"
+    },
+        {
+        "id": "DeadlyCompanions",
+        "title": "The Deadly Companions (1961)",
+        "description": "In Sam Peckinpah's directorial debut, an ex-Union officer accidentally kills a young boy and is forced to escort the grieving mother through dangerous Apache territory. A tense study of guilt and redemption.",
+        "genres": ["Western", "Drama"],
+        "posterUrl": "images/dead.webp",
+        "source": "rumble",
+        "embedId": "v71j2r4"
+    },
+              {
+        "id": "RobbersRoost",
+        "title": "Robbers' Roost (1955)",
+        "description": "Based on the Zane Grey classic, an embittered man (George Montgomery) goes undercover to join a gang of rustlers. A gritty exploration of revenge, double-crosses, and the thin line between lawman and outlaw.",
+        "genres": ["Western", "Action"],
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTc5NTUzNDYtMjgxOS00OThjLWIxOGYtYzViYjJhZTJiMmU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "source": "rumble",
+        "embedId": "v71j2jm"
+    },
+               {
+        "id": "PharaohsArmy",
+        "title": "Pharaoh's Army (1995)",
+        "description": "Based on a true Kentucky legend, a Union captain (Chris Cooper) and his scavenging squad occupy the farm of a lone Confederate woman (Patricia Clarkson). A haunting, gritty study of how the 'pathology of war' turns ordinary people into enemies.",
+        "genres": ["Western", "War", "Drama"],
+        "posterUrl": "images/pharaoh.jpg",
+        "source": "rumble",
+        "embedId": "v71j26y"
+    },
+                {
+        "id": "PalsOfTheSaddle",
+        "title": "Pals of the Saddle (1938)",
+        "description": "John Wayne stars in this fast-paced 'Three Mesquiteers' adventure. The trio must stop a foreign agent from smuggling 'monitium'—a secret weapon chemical—out of the country. A rare look at the Duke before his legendary 'Stagecoach' breakthrough.",
+        "genres": ["Western", "Adventure"],
+        "posterUrl": "images/pals.jpg",
+        "source": "rumble",
+        "embedId": "v71j20w"
+    },
+             {
+        "id": "ManCalledGannon",
+        "title": "A Man Called Gannon (1968)",
+        "description": "Gannon (Tony Franciosa), a drifting cowboy haunted by a past tragedy involving barbed wire, takes a young protégé under his wing. Their bond is pushed to the breaking point when they end up on opposite sides of a violent range war.",
+        "genres": ["Western", "Psychological"],
+        "posterUrl": "images/gannon.jpg",
+        "source": "rumble",
+        "embedId": "v71j1v2"
+    },
+                {
+        "id": "GreatDayMorning",
+        "title": "Great Day in the Morning (1956)",
+        "description": "In pre-Civil War Denver, a Southern gambler (Robert Stack) wins a hotel in a card game but finds himself torn between his own greed and his loyalty to the South. A beautifully shot study of divided allegiances and moral conflict.",
+        "genres": ["Western", "Drama"],
+        "posterUrl": "images/greatday.jpg",
+        "source": "rumble",
+        "embedId": "v71j1g6"
+    },
+               {
+        "id": "Halloween1978",
+        "title": "Halloween (1978)",
+        "description": "John Carpenter's masterpiece of suspense. Fifteen years after murdering his sister on Halloween night, Michael Myers escapes from a mental hospital and returns to Haddonfield to kill again. A chilling study of 'pure evil'.",
+        "genres": ["Horror", "Thriller", "Psychological"],
+        "posterUrl": "images/halloween.webp",
+        "source": "rumble",
+        "embedId": "v71hex2"
+    },
+                 {
+        "id": "PhantomOpera1925",
+        "title": "The Phantom of the Opera (1925)",
+        "description": "Lon Chaney stars in the definitive silent horror masterpiece. Beneath the Paris Opera House dwells a disfigured genius who becomes obsessed with a young soprano. A haunting study of isolation, madness, and unrequited love.",
+        "genres": ["Horror", "Silent", "Psychological"],
+        "posterUrl": "images/phantom.jpg",
+        "source": "rumble",
+        "embedId": "v71hfqm"
+    },
+               {
+        "id": "Christine1983",
+        "title": "Christine (1983)",
+        "description": "Based on the Stephen King novel and directed by John Carpenter. High school geek Arnie Cunningham develops a dangerous obsession with a 1958 Plymouth Fury named Christine. A dark study of obsession, transformation, and a machine with a murderous soul.",
+        "genres": ["Horror", "Thriller", "Psychological"],
+        "posterUrl": "images/christine.jpg",
+        "source": "rumble",
+        "embedId": "v71hkr8"
+    },
+            {
+        "id": "FreaksOfNature2015",
+        "title": "Freaks of Nature (2015)",
+        "description": "In the town of Dillford, humans, vampires, and zombies lived in peace—until an alien invasion turned them against each other. Three social misfits must team up to save their town from total extinction. A genre-bending horror comedy.",
+        "genres": ["Horror", "Comedy", "Sci-Fi"],
+        "posterUrl": "images/freaks.jpg",
+        "source": "rumble",
+        "embedId": "v71hero"                               
+    },
+            {
+        "id": "Dracula1931",
+        "title": "Dracula (1931)",
+        "description": "The legendary Bela Lugosi stars as Count Dracula. After traveling to London, the ancient vampire begins a reign of terror, targeting a young woman while being pursued by the determined Professor Van Helsing. A timeless study of seduction and dread.",
+        "genres": ["Horror", "Classic", "Psychological"],
+        "posterUrl": "images/dracula.jpg",
+        "source": "rumble",
+        "embedId": "v71gmuq"
+    },
+             {
+    "id": "7th-cavalry-1956",
+    "title": "7th Cavalry (1956)",
+    "description": "Randolph Scott stars as a captain who missed the Battle of the Little Bighorn and must volunteer for a dangerous mission to recover the dead and prove his honor.",
+    "genres": ["Western", "Drama"],
+    "posterUrl": "images/7th cav.jpg",
+    "source": "rumble",
+    "embedId": "v71kita"
+  },
+             {
+    "id": "black-fox-1995",
+    "title": "Black Fox (1995)",
+    "description": "Christopher Reeve and Tony Todd star as two brothers—one a former slave, one a master—who must unite to survive the brutal Texas frontier.",
+    "genres": ["Western", "Drama"],
+    "posterUrl": "images/blackfox.jpg",
+    "source": "rumble",
+    "embedId": "v71kkzo"
+  },
+              {
+    "id": "four-faces-west-1948",
+    "title": "Four Faces West (1948)",
+    "description": "A unique Western where not a single shot is fired. A bank robber on the run is pursued by Pat Garrett in this gripping psychological study.",
+    "genres": ["Western", "Psychological"],
+    "posterUrl": "images/Four Faces West (1948).webp",
+    "source": "rumble",
+    "embedId": "v71klgg"
+  },
+             {
+    "id": "navajo-joe-1966",
+    "title": "Navajo Joe (1966)",
+    "description": "Burt Reynolds stars as a lone Navajo warrior seeking vengeance against a gang of scalp-hunters in this stylish Spaghetti Western.",
+    "genres": ["Western", "Action"],
+    "posterUrl": "images/navajo-joe.jpg",
+    "source": "rumble",
+    "embedId": "v71klxq"
+  },
+              {
+    "id": "overland-stage-raiders-1938",
+    "title": "Overland Stage Raiders (1938)",
+    "description": "John Wayne and the Three Mesquiteers protect gold shipments from airborne hijackers. Notable as the final film of silent star Louise Brooks.",
+    "genres": ["Western", "Adventure"],
+    "posterUrl": "images/overland-stage.jpg",
+    "source": "rumble",
+    "embedId": "v71km3c"
+  },
+             {
+    "id": "quantez-1957",
+    "title": "Quantez (1957)",
+    "description": "A gang of outlaws takes refuge in a desert ghost town, only to find their internal tensions are more dangerous than the Apache waiting outside.",
+    "genres": ["Western", "Noir"],
+    "posterUrl": "images/quantez.jpg",
+    "source": "rumble",
+    "embedId": "v71km9u"
+  },
+             {
+    "id": "raw-edge-1956",
+    "title": "Raw Edge (1956)",
+    "description": "A brutal 'frontier law' states that a widow belongs to the first man who claims her, sparking a violent power struggle in the Oregon territory.",
+    "genres": ["Western", "Drama"],
+    "posterUrl": "images/raw-edge.jpg",
+    "source": "rumble",
+    "embedId": "v71kmjc"
+  },
+     {
+    "id": "red-sundown-1956",
+    "title": "Red Sundown (1956)",
+    "description": "A reformed gunfighter (Rory Calhoun) becomes a deputy to keep a vow, only to be caught in a ruthless range war.",
+    "genres": ["Western", "Action"],
+    "posterUrl": "images/red-sundown.jpg",
+    "source": "rumble",
+    "embedId": "v71kmom"  
+  },
+        {
+    "id": "cariboo-trail-1950",
+    "title": "The Cariboo Trail (1950)",
+    "description": "Randolph Scott leads cattle and men into the Canadian Gold Rush, facing off against greedy land barons in the wilderness.",
+    "genres": ["Western", "History"],
+    "posterUrl": "images/cariboo.jpg",
+    "source": "rumble",
+    "embedId": "v71kmwa"
+  },
+{
+    "id": "sheepman-1958",
+    "title": "The Sheepman (1958)",
+    "description": "A clever sheep farmer (Glenn Ford) uses his wits to outmaneuver a hostile cattle town. Featuring Leslie Nielsen as a rare villain.",
+    "genres": ["Western", "Comedy"],
+    "posterUrl": "images/sheepman.jpg",
+    "source": "rumble",
+    "embedId": "v71kn6g"
+  },
+          {
+    "id": "walk-the-proud-land-1956",
+    "title": "Walk The Proud Land (1956)",
+    "description": "Audie Murphy stars in the true story of John Clum, an Indian agent who fought for peace and self-government for the Apache people.",
+    "genres": ["Western", "Biography"],
+    "posterUrl": "images/walk.jpg",
+    "source": "rumble",
+    "embedId": "v71knek"
+  },
+          
+  {
+    "id": "bend-of-the-river-1952",
+    "title": "Bend of the River (1952)",
+    "description": "James Stewart stars as a man with a dark past leading a wagon train of settlers to Oregon who must fight off hijackers and betrayal.",
+    "genres": ["Western", "Action", "Movie"],
+    "posterUrl": "images/bendoftheriver.jpg",
+    "source": "rumble",
+    "embedId": "v71lyoo"
+  },
+  {
+    "id": "column-south-1953",
+    "title": "Column South (1953)",
+    "description": "An Audie Murphy classic set on the eve of the Civil War, following a cavalry officer trying to maintain peace with the Navajo.",
+    "genres": ["Western", "History", "Movie"],
+    "posterUrl": "images/columnsouth.jpg",
+    "source": "rumble",
+    "embedId": "v71lyxi"
+  },
+  {
+    "id": "he-rides-tall-1964",
+    "title": "He Rides Tall (1964)",
+    "description": "A gritty study of duty where a sheriff is forced into a deadly showdown with the son of the man who raised him.",
+    "genres": ["Western", "Drama", "Movie"],
+    "posterUrl": "images/heridestall.jpg",
+    "source": "rumble",
+    "embedId": "v71lzmk"
+  },
+  {
+    "id": "stranger-at-my-door-1956",
+    "title": "Stranger At My Door (1956)",
+    "description": "A psychological Western focusing on a preacher's attempt to reform a violent outlaw who seeks refuge in his home.",
+    "genres": ["Western", "Psychological", "Movie"],
+    "posterUrl": "images/strangeratdoor.jpg",
+    "source": "rumble",
+    "embedId": "v71m0ba"
+  },
+  {
+    "id": "gunfight-dodge-city-1959",
+    "title": "The Gunfight At Dodge City (1959)",
+    "description": "Joel McCrea stars as Bat Masterson, cleaning up the lawless town of Dodge City to avenge his brother.",
+    "genres": ["Western", "Action", "Movie"],
+    "posterUrl": "images/dodgecity.jpg",
+    "source": "rumble",
+    "embedId": "v71m1e8"
+  },
+  {
+    "id": "guns-of-fort-petticoat-1957",
+    "title": "The Guns of Fort Petticoat (1957)",
+    "description": "Audie Murphy trains a group of women to defend their Texas ranch against an imminent uprising during the Civil War.",
+    "genres": ["Western", "Action", "Movie"],
+    "posterUrl": "images/fortpetticoat.webp",
+    "source": "rumble",
+    "embedId": "v71m1m8"
+  },
+  {
+    "id": "the-quest-1976",
+    "title": "The Quest: The Longest Drive (1976)",
+    "description": "Kurt Russell and Tim Matheson are brothers searching for their long-lost sister across the dangerous frontier.",
+    "genres": ["Western", "Adventure", "Movie"],
+    "posterUrl": "images/thequest.webp",
+    "source": "rumble",
+    "embedId": "v71m1y0"
+  },
+  {
+    "id": "westbound-1959",
+    "title": "Westbound (1959)",
+    "description": "A Union officer fights to establish a vital stagecoach line through hostile territory to transport gold for the war.",
+    "genres": ["Western", "Action", "Movie"],
+    "posterUrl": "images/westbound.jpg",
+    "source": "rumble",
+    "embedId": "v71m256"
+  },
+  {
+    "id": "westward-the-women-1951",
+    "title": "Westward The Women (1951)",
+    "description": "An epic tale of 150 women crossing 2,000 miles of treacherous land to become brides in California.",
+    "genres": ["Western", "Drama", "Movie"],
+    "posterUrl": "images/westwardwomen.jpg",
+    "source": "rumble",
+    "embedId": "v71m2zo"
+  },
+  {
+    "id": "wichita-1955",
+    "title": "Wichita (1955)",
+    "description": "Joel McCrea portrays Wyatt Earp in his early days as he reluctantly brings order to a lawless cattle town.",
+    "genres": ["Western", "Biography", "Movie"],
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMmMwNWNmMDctYWRmZC00NDMyLTkyZDgtMWFmZjAzNWM5M2FkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "source": "rumble",
+    "embedId": "v71m30a"
+  },
+   {
+    "id": "Broken-Arrow-1950",
+    "title": "Broken Arrow (1950)",
+    "description": "A classic western starring James Stewart as Tom Jeffords, who attempts to broker peace between the U.S. Army and the Apache leader Cochise.",
+    "genres": ["Western"],
+    "posterUrl": "images/brokenarrow.jpg",
+    "source": "rumble",
+    "embedId": "v719fiu"
+},
+            {
+    "id": "A-Lonely-Place-to-Die-2011",
+    "title": "A Lonely Place to Die (2011)",
+    "description": "Five mountaineers in the Scottish Highlands discover a young girl buried alive, sparking a deadly game of survival against ruthless kidnappers.",
+    "genres": ["Action", "Thriller", "Survival", "Movie"],
+    "posterUrl": "images/A-Lonely-Place-to-Die.jpg",
+    "source": "rumble",
+    "embedId": "v71njui"
+  },
+  {
+    "id": "vendetta-2013",
+    "title": "Vendetta (2013)",
+    "description": "Danny Dyer stars as a rogue interrogation officer who returns from Afghanistan to track down the gang that murdered his parents.",
+    "genres": ["Action", "Crime", "Vigilante", "Movie"],
+    "posterUrl": "images/vendetta.jpg",
+    "source": "rumble",
+    "embedId": "v71nlb6"
+  },
+  {
+    "id": "master-and-commander-2003",
+    "title": "Master and Commander (2003)",
+    "description": "During the Napoleonic Wars, a brash British captain pushes his ship and crew to the limit in pursuit of a formidable French warship.",
+    "genres": ["Action", "Adventure", "War", "Movie"],
+    "posterUrl": "images/master-and-commander.jpg",
+    "source": "rumble",
+    "embedId": "v71nml6"
+  },
+  {
+    "id": "the-sweeney-2012",
+    "title": "The Sweeney (2012)",
+    "description": "Ray Winstone leads the elite Flying Squad, using old-school brutal methods to take down an organized gang of armed robbers in London.",
+    "genres": ["Action", "Crime", "Drama", "Movie"],
+    "posterUrl": "images/the-sweeney.jpg",
+    "source": "rumble",
+    "embedId": "v71nndk"
+  },
+             {
+    "id": "i-am-number-four-2011",
+    "title": "I Am Number Four (2011)",
+    "description": "An extraordinary teen, masking his true identity to elude a deadly enemy, must harness his developing superpowers to defend his secret life.",
+    "genres": ["Action", "Sci-Fi", "Adventure", "Movie"],
+    "posterUrl": "images/i-am-number-four.jpg",
+    "source": "rumble",
+    "embedId": "v71npcc"
+  },
+            {
+    "id": "the-running-man-1987",
+    "title": "The Running Man (1987)",
+    "description": "Arnold Schwarzenegger stars as a wrongly convicted man who must survive a public execution in the form of a deadly TV game show.",
+    "genres": ["Action", "Sci-Fi", "Thriller", "Movie"],
+    "posterUrl": "images/The Running Man (1987).webp",
+    "source": "rumble",
+    "embedId": "v71nrsm"
+  },
+            {
+    "id": "terminator-2-judgment-day-1991",
+    "title": "Terminator 2: Judgment Day (1991)",
+    "description": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten-year-old son John from a more advanced and powerful cyborg.",
+    "genres": ["Action", "Sci-Fi", "Movie"],
+    "posterUrl": "images/terminator-2.webp",
+    "source": "rumble",
+    "embedId": "v71nui4"
+  },
+            {
+    "id": "mississippi-burning-1988",
+    "title": "Mississippi Burning (1988)",
+    "description": "Two FBI agents with vastly different styles are sent to Mississippi to investigate the disappearance of civil rights activists in this gritty, true-story thriller.",
+    "genres": ["Action", "Crime", "Drama", "Movie"],
+    "posterUrl": "images/mississippi-burning.jpg",
+    "source": "rumble",
+    "embedId": "v71o0z2"
+  },
+            {
+    "id": "the-jackal-1997",
+    "title": "The Jackal (1997)",
+    "description": "An imprisoned IRA sniper is released to help the FBI track down a mysterious, cold-blooded assassin known only as 'The Jackal' before he hits a high-profile target.",
+    "genres": ["Action", "Crime", "Thriller", "Movie"],
+    "posterUrl": "images/the-jackal-1997.jpg",
+    "source": "rumble",
+    "embedId": "v71o1jk" 
+  },
+            {
+    "id": "the-african-queen-1951",
+    "title": "The African Queen (1951)",
+    "description": "During WWI, a gin-swilling riverboat captain and a prim British missionary team up to take on a German warship in a perilous journey through Africa.",
+    "genres": ["Action", "Adventure", "Romance", "Movie"],
+    "posterUrl": "images/the-african-queen.jpg",
+    "source": "rumble",
+    "embedId": "v71oynk"
+  },
+            {
+    "id": "the-39-steps-1939",
+    "title": "The 39 Steps (1939)",
+    "description": "Richard Hannay becomes embroiled in a deadly international spy ring and is forced to flee across the Scottish Highlands to clear his name while handcuffed to a beautiful woman.",
+    "genres": ["Action", "Thriller", "Mystery", "Hitchcock"],
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTY5ODAzMTcwOF5BMl5BanBnXkFtZTcwMzYxNDYyNA@@._V1_.jpg",
+    "source": "rumble",
+    "embedId": "v71ozco"
+  },
+  {
+    "id": "the-39-steps-1959",
+    "title": "The 39 Steps (1959)",
+    "year": 1939,
+    "description": "In Alfred Hitchcock's original masterpiece, a man in London becomes entangled in a deadly spy ring and must flee to Scotland to clear his name while handcuffed to a beautiful stranger.",
+    "genres": ["Action", "Thriller", "Mystery", "Hitchcock"],
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWE1NTI5YjktNDg2Yy00OTBjLWI1ODMtZTc5M2M5ZmNmMTNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "source": "rumble",
+    "embedId": "v71p00g"
+  },
+            {
+    "id": "the-birds-1963",
+    "title": "The Birds (1963)",
+    "year": 1963,
+    "description": "In Alfred Hitchcock's legendary masterpiece, a wealthy San Francisco socialite pursues a potential boyfriend to a small Northern California town that slowly takes a turn for the terrifying when birds of all kinds begin to attack people.",
+    "genres": ["Action", "Thriller", "Horror", "Movie"],
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTAxNDA1ODc5MDleQTJeQWpwZ15BbWU4MDg2MDA4OTEx._V1_FMjpg_UX1000_.jpg",
+    "source": "rumble",
+    "embedId": "v71p1lk"
+  },
+             {
+  "id": "the-quick-and-the-dead-1995",
+  "title": "The Quick and the Dead (1995)",
+  "description": "A mysterious female gunfighter arrives in a frontier town to participate in a deadly dueling tournament to settle an old score with the town's ruthless leader.",
+  "genres": ["Action", "Western", "Thriller", "Movie"],
+  "posterUrl": "images/the-quick-and-the-dead.jpg",
+  "source": "rumble",
+  "embedId": "v71pb32"
+},
+             {
+  "id": "a-million-ways-to-die-in-the-west-2014",
+  "title": "A Million Ways to Die in the West (2014)",
+  "description": "After a cowardly sheep farmer backs out of a gunfight, his girlfriend leaves him. He soon meets a mysterious woman who helps him find his courage and discover his true potential.",
+  "genres": ["Action", "Western", "Comedy", "Movie"],
+  "posterUrl": "images/a-million-ways-to-die-in-the-west.jpg",
+  "source": "rumble",
+  "embedId": "v71pfda"
+},
+         {
+  "id": "coyotes-2025",
+  "title": "Coyotes (2025)",
+  "description": "In the unforgiving desert heat, a group of travelers finds themselves caught in a deadly game of survival when they cross paths with a ruthless cartel operation.",
+  "genres": ["Action", "Thriller", "Crime", "Movie"],
+  "posterUrl": "images/coyotes-2025.jpg",
+  "source": "ok.ru",
+  "embedId": "10730465462937"
+},
+            {
+  "id": "carter2000",
+  "title": "Get Carter",
+  "year": 2000,
+  "description": "A mob enforcer travels to his hometown to investigate his brother's death and discovers a web of local corruption and murder.",
+  "genres": ["Crime", "Action", "Thriller", "Movie"],
+  "posterUrl": "images/get1.jpg",
+  "source": "ok.ru",
+  "embedId": "10749964257945"
+},
+            {
+  "id": "robe",
+  "title": "The Robe",
+  "year": 1953,
+  "description": "A Roman tribune wins the robe of Jesus Christ in a dice game after the crucifixion, only to find his life transformed by the garment's spiritual power.",
+  "genres": ["Drama", "History", "Classic", "Movie"],
+  "posterUrl": "images/the robe.jpg",
+   "source": "rumble",
+  "embedId": "v71raeg"
+},
+            {
+  "id": "hud",
+  "title": "Hud",
+  "year": 1963,
+  "description": "An arrogant, rebellious rancher's son in Texas clashes with his principled father while his nephew watches the conflict unfold.",
+  "genres": ["Western", "Drama", "Classic", "Movie"],
+  "posterUrl": "images/hud.jpg",
+   "source": "rumble",
+  "embedId": "v71rb1m"
+},
+              {
+  "id": "billy",
+  "title": "The Left Handed Gun",
+  "year": 1958,
+  "description": "A psychological look at the life of William Bonney, the youth who would become the legendary outlaw Billy the Kid.",
+  "genres": ["Western", "Drama", "Classic", "Movie"],
+  "posterUrl": "images/the-left-handed-gun-1958.jpg",
+  "source": "rumble",
+  "embedId": "v71s91m"
+},
+                {
+  "id": "california",
+  "title": "In Old California",
+  "year": 1942,
+  "description": "A Boston pharmacist moves to Sacramento and clashes with a local boss while trying to establish a new life during the Gold Rush.",
+  "genres": ["Western", "Drama", "Classic", "Movie"],
+  "posterUrl": "images/in-old-california-1942.jpg",
+  "source": "rumble",
+  "embedId": "v71scwe"
+},
+  {
+  "id": "renegade",
+  "title": "Renegade Girl",
+  "year": 1946,
+  "description": "A Southern woman caught in the tensions of the post-Civil War West leads a group of renegades while torn between loyalty and peace.",
+  "genres": ["Western", "Action", "Classic", "Movie"],
+  "posterUrl": "images/renegade-girl-1946.jpg",
+  "source": "rumble",
+  "embedId": "v71shey"
+},
+   {
+  "id": "red-river",
+  "title": "Red River",
+  "year": 1948,
+  "description": "A tyrannical cattle rancher leads a massive drive to Missouri, leading to a violent confrontation with his adopted son who takes control of the herd.",
+  "genres": ["Western", "Action", "Classic", "Movie"],
+  "posterUrl": "images/red-river-1948.jpg",
+  "source": "rumble",
+  "embedId": "v71skqy"
+},
+             {
+  "id": "high-noon",
+  "title": "High Noon",
+  "year": 1952,
+  "description": "A small-town marshal, newly married and about to retire, must face a gang of killers alone when the townspeople refuse to help him.",
+  "genres": ["Western", "Drama", "Classic", "Movie"],
+  "posterUrl": "images/high-noon-1952.jpg",
+  "source": "rumble",
+  "embedId": "v71sl2s"
+},
+            {
+  "id": "hidden-jungle",
+  "title": "Tarzan's Hidden Jungle",
+  "year": 1955,
+  "description": "Tarzan fights to protect the animals of a forbidden jungle from a group of hunters posing as a scientific expedition.",
+  "genres": ["Adventure", "Action", "Classic", "Movie"],
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzZkMDU5MDItMzA4Ny00ZmVmLWEzYTYtMGQzYzA4YjA1MDIyXkEyXkFqcGc@._V1_.jpg",
+  "source": "rumble",
+  "embedId": "v71snru"
+},
+{
+  "id": "races",
+  "title": "A Day at the Races",
+  "year": 1937,
+  "description": "A horse doctor poses as a human physician to help save a sanitarium, leading to high-stakes chaos at the race track with the Marx Brothers.",
+  "genres": ["Comedy", "Classic", "Movie"],
+  "posterUrl": "images/at-the-races-1937.jpg",
+  "source": "rumble",
+  "embedId": "v71st6w"
+},
+{
+  "id": "robin-challenge",
+  "title": "A Challenge for Robin Hood",
+  "year": 1967,
+  "description": "After being framed for murder by his cousin, a nobleman escapes to Sherwood Forest and leads a rebellion as the outlaw Robin Hood.",
+  "genres": ["Adventure", "Action", "Classic", "Movie"],
+  "posterUrl": "images/challenge-robin-hood-1967.jpg",
+  "source": "rumble",
+  "embedId": "v71su70"
+},
+{
+  "id": "captain-blood",
+  "title": "Captain Blood",
+  "year": 1935,
+  "description": "An Irish doctor wrongly convicted of treason escapes slavery to become a legendary pirate on the high seas.",
+  "genres": ["Adventure", "Action", "Classic", "Movie"],
+  "posterUrl": "images/captain-blood-1935.jpg",
+  "source": "rumble",
+  "embedId": "v71sud8"
+},
+{
+  "id": "bandit-sherwood",
+  "title": "The Bandit of Sherwood Forest",
+  "year": 1946,
+  "description": "The son of Robin Hood comes to the rescue when the villainous Regent plans to abolish the Magna Carta and threaten the young King.",
+  "genres": ["Adventure", "Action", "Classic", "Movie"],
+  "posterUrl": "images/bandit-sherwood-forest-1946.jpg",
+  "source": "rumble",
+  "embedId": "v71t0wy"
+},
+{
+  "id": "fire-down",
+  "title": "Fire Down Below",
+  "year": 1957,
+  "description": "Two tramp-boat partners fall out over a beautiful woman they are smuggling between Caribbean islands, leading to a dangerous rescue mission.",
+  "genres": ["Adventure", "Drama", "Classic", "Movie"],
+  "posterUrl": "images/fire-down-below-1957.jpg",
+  "source": "rumble",
+  "embedId": "v71ty3m"
+},
+{
+  "id": "visa-canton",
+  "title": "Visa to Canton",
+  "year": 1960,
+  "description": "An American pilot based in Hong Kong is recruited to rescue a girl from Communist China, leading him into a deadly web of international espionage.",
+  "genres": ["Action", "Adventure", "Classic", "Movie"],
+  "posterUrl": "images/visa-to-canton-1960.jpg",
+  "source": "rumble",
+  "embedId": "v71u0so"
+},
+{
+  "id": "outcast-island",
+  "title": "Outcast of the Islands",
+  "year": 1951,
+  "description": "A dishonest man escaping scandal in Singapore is given a second chance at a remote trading post, only to betray his benefactor for greed and obsession.",
+  "genres": ["Drama", "Adventure", "Classic", "Movie"],
+  "posterUrl": "images/outcast-islands-1951.jpg",
+  "source": "rumble",
+  "embedId": "v71u276"
+},
+{
+  "id": "blood-river",
+  "title": "The Pirates of Blood River",
+  "year": 1962,
+  "description": "A group of ruthless pirates, led by a bloodthirsty captain, force an escaped convict to lead them to his village in search of a hidden treasure.",
+  "genres": ["Adventure", "Action", "Classic", "Movie"],
+  "posterUrl": "images/pirates-blood-river-1962.jpg",
+  "source": "rumble",
+  "embedId": "v71u2ho/"
+},
+            {
+  "id": "mary-sue",
+  "title": "Killing Mary Sue",
+  "year": 2025,
+  "description": "A corrupt senator tries to assassinate his erratic step-daughter, only to discover she is an accidental killing machine with a talent for survival.",
+  "genres": ["Action", "Comedy", "Movie"],
+  "posterUrl": "images/killing-mary-sue-2025.jpg",
+  "source": "ok.ru",
+  "embedId": "10781589965465" 
+},
+      {
+  "id": "close",
+  "title": "Close Encounters of the Third Kind (1977)",
+  "year": 1977,
+  "description": "Although aliens begin to make their presence felt to humans, the government denies their existence. However, when Roy, an electrical lineman, encounters a UFO, he is drawn to the Wyoming wilderness.",
+  "genres": ["Sy-Fi", "Action", "Thriller", "Movie"],
+  "posterUrl": "images/close1.jpg",
+  "source": "ok.ru",
+  "embedId": "9663131552430"
+},
+             {
+  "id": "Knowing",
+  "title": "Knowing (2009)",
+  "year": 2009,
+  "description": "When John learns about the time capsule containing cryptic messages about the coming apocalypse that mentions the dates of disasters, he sets out to prevent the horrific events from unfolding",
+  "genres": ["Sy-Fi", "Action", "Thriller", "Movie"],
+  "posterUrl": "images/knowing1.jpg",
+  "source": "ok.ru",
+  "embedId": "9559036267077"
+},
+                {
+  "id": "Wake_Up_Dead_Man",
+  "title": "Wake Up Dead Man (2025)",
+  "year": 2025,
+  "description": "Detective Benoit Blanc teams up with an earnest young priest to investigate a perfectly impossible crime at a small-town church with a dark history.",
+  "genres": ["comedy", "Action", "Thriller", "Movie"],
+  "posterUrl": "images/wakeup.jpg",
+  "source": "ok.ru",
+  "embedId": "10597217995302"
+},
+            
+  {
+    "id": "hercules-rome",
+    "title": "Hercules Against Rome",
+    "year": 1964,
+    "description": "Hercules travels to Italy to protect the Emperor from a deadly palace intrigue led by the mutinous Praetorian Guard.",
+    "genres": ["Action", "Adventure", "Classic", "Movie"],
+    "posterUrl": "images/hercules-against-rome-1964.webp",
+    "source": "rumble",
+    "embedId": "v71vuv0"
+  },
+  {
+    "id": "hercules-avenger",
+    "title": "Hercules The Avenger",
+    "year": 1965,
+    "description": "Hercules journeys to the underworld to battle mythological monsters and save his son from a powerful curse.",
+    "genres": ["Action", "Adventure", "Classic", "Movie"],
+    "posterUrl": "images/hercules-avenger-1965.jpg",
+    "source": "rumble",
+    "embedId": "v71vufq"
+  },
+  {
+    "id": "hit-run",
+    "title": "Hit and Run",
+    "year": 1957,
+    "description": "A dark Film Noir thriller about a man who marries a younger woman, only to find himself caught in a web of betrayal and murder.",
+    "genres": ["Drama", "Classic", "Movie"],
+    "posterUrl": "images/hit-and-run-1957.jpg",
+    "source": "rumble",
+    "embedId": "v71vwfc"
+  },
+  {
+    "id": "sinbad-seas",
+    "title": "Sinbad of the Seven Seas",
+    "year": 1989,
+    "description": "Lou Ferrigno stars as Sinbad in a magical quest to save a city from an evil sorcerer's dark spell.",
+    "genres": ["Fantasy", "Adventure", "Action", "Movie"],
+    "posterUrl": "images/sinbad-seas-1989.jpg",
+    "source": "rumble",
+    "embedId": "v71vwf0"
+  },
+  {
+    "id": "giant-marathon",
+    "title": "The Giant of Marathon",
+    "year": 1960,
+    "description": "A muscle-bound hero leads the Athenian army against Persian invaders in this historical war and action epic.",
+    "genres": ["Action", "War", "Classic", "Movie"],
+    "posterUrl": "images/giant-marathon-1960.jpg",
+    "source": "rumble",
+    "embedId": "v71vwz0"
+  },
+  {
+    "id": "winnetou-1",
+    "title": "Winnetou: Apache Gold",
+    "year": 1963,
+    "description": "The epic story of the friendship between Old Shatterhand and the Apache chief Winnetou on the American frontier.",
+    "genres": ["Western", "Adventure", "Classic", "Movie"],
+    "posterUrl": "images/winnetou-1963.jpg",
+    "source": "rumble",
+    "embedId": "v71vxk2"
+  },
+  {
+    "id": "bridge-kwai",
+    "title": "The Bridge on the River Kwai",
+    "year": 1957,
+    "description": "British POWs build a bridge for their captors while Allied commandos plot its destruction in this Oscar-winning masterpiece.",
+    "genres": ["War", "Drama", "Classic", "Movie"],
+    "posterUrl": "images/bridge-on-the-river-kwai-1957.jpg",
+    "source": "rumble",
+    "embedId": "v71vx9i"
+  },
+   {
+    "id": "american-history-x",
+    "title": "American History X",
+    "year": 1998,
+    "description": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path.",
+    "genres": ["Crime", "Drama", "Movie"],
+    "posterUrl": "images/American History X.jpg",
+    "source": "ok.ru",
+    "embedId": "1829829610111"
+  },
+  {
+    "id": "the-thing-1982",
+    "title": "The Thing",
+    "year": 1982,
+    "description": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
+    "genres": ["Horror", "Sci-Fi", "Movie"],
+    "posterUrl": "images/the-thing-1982.jpg",
+    "source": "rumble",
+    "embedId": "v71wae6"
+  },
+  {
+    "id": "the-thing-2011",
+    "title": "The Thing",
+    "year": 2011,
+    "description": "At an Antarctic research site, a discovery leads to a confrontation with a parasitic alien organism.",
+    "genres": ["Horror", "Sci-Fi", "Movie"],
+    "posterUrl": "images/the-thing-2011.jpg",
+    "source": "ok.ru",
+    "embedId": "10797747997337"
+  },
+  {
+    "id": "escape-from-ny",
+    "title": "Escape from New York",
+    "year": 1981,
+    "description": "In a future where Manhattan is a prison, a convict is sent in to rescue the President.",
+    "genres": ["Action", "Sci-Fi", "Movie"],
+    "posterUrl": "images/escape-from-ny.jpg",
+    "source": "rumble",
+    "embedId": "v71w9wa"
+  },
+  {
+    "id": "jacobs-ladder",
+    "title": "Jacob's Ladder",
+    "year": 1990,
+    "description": "A Vietnam War veteran mourns his dead child while attempting to decipher reality from hallucinations.",
+    "genres": ["Horror", "Mystery", "Movie"],
+    "posterUrl": "images/jacobs-ladder.jpg",
+     "source": "rumble",
+    "embedId": "v71wa22"
+  },
+  {
+    "id": "wolf-1994",
+    "title": "Wolf",
+    "year": 1994,
+    "description": "An aging publisher is bitten by a wolf and finds himself growing increasingly energetic and predatory.",
+    "genres": ["Horror", "Drama", "Movie"],
+    "posterUrl": "images/wolf-1994.jpg",
+    "source": "ok.ru",
+    "embedId": "1900738120319"
+  },
+  {
+    "id": "zabriskie-point",
+    "title": "Zabriskie Point",
+    "year": 1970,
+    "description": "An epic portrait of late Sixties America as seen through the eyes of two young strangers.",
+    "genres": ["Drama", "Movie"],
+    "posterUrl": "images/zabriskie-point.jpg",
+     "source": "rumble",
+    "embedId": "v71wb5y"
+  },
+            {
+  "id": "the-day-the-earth-stood-still-1951",
+  "title": "The Day the Earth Stood Still",
+  "year": 1951,
+  "description": "An alien lands in Washington, D.C. and tells the people of Earth that they must live peacefully or be destroyed as a danger to other planets.",
+  "genres": ["Sci-Fi", "Classic", "Movie"],
+  "posterUrl": "images/the-day-the-earth-stood-still-1951.jpg",
+  "source": "rumble",
+  "embedId": "v71xfhe"
+},
+    {
+  "id": "the-fly-1958",
+  "title": "The Fly",
+  "year": 1951,
+  "description": "A scientist becomes a monstrous hybrid after a fly enters his teleportation machine, leading to a desperate race against time.",
+  "genres": ["Horror", "Sci-Fi", "Classic", "Movie"],
+  "posterUrl": "images/the-fly-1958.jpg",
+  "source": "rumble",
+  "embedId": "v71xgjw"
+},
+  {
+  "id": "the-maltese-falcon-1941",
+  "title": "The Maltese Falcon",
+  "year": 1941,
+  "description": "A private eye takes on a case that involves him with three eccentric criminals, a gorgeous liar, and their quest for a priceless statuette.",
+  "genres": ["Crime", "Mystery", "Noir", "Movie"],
+  "posterUrl": "images/the-maltese-falcon-1941.png",
+  "source": "rumble",
+  "embedId": "v71xgzu"
+},
+  {
+  "id": "the-glory-guys-1965",
+  "title": "The Glory Guys",
+  "year": 1965,
+  "description": "Two cavalry officers vie for the same woman while their regiment prepares for a deadly campaign against the Sioux.",
+  "genres": ["Western", "Action", "Drama", "Movie"],
+  "posterUrl":"images/glory.jpg",
+  "source": "rumble",
+  "embedId": "v71xjxg"
+},
+   {
+  "id": "hondo-1953",
+  "title": "Hondo",
+  "year": 1953,
+  "description": "Cavalry scout Hondo Lane becomes the protector of a woman and her son living in the heart of warring Apache territory.",
+  "genres": ["Western", "Action", "Drama", "Movie"],
+  "posterUrl": "images/hondo.jpg",
+  "source": "rumble",
+  "embedId": "v71z5qc"
+},
+            {
+  "id": "city-of-wolves-2025",
+  "title": "Muzzle: City of Wolves",
+  "year": 2025,
+  "description": "Ex-K-9 officer Jake Rosser and his new partner Argos must take down a ruthless drug cartel after his family is targeted in a brutal attack.",
+  "genres": ["Action", "Thriller", "Crime", "Movie"],
+  "posterUrl": "images/city-of-wolves.jpg",
+  "source": "ok.ru",
+  "embedId": "10830201621145"
+},
+   {
+  "id": "feral-female-2025",
+  "title": "Feral Female",
+  "year": 2025,
+  "description": "An eccentric big-game hunter is hired to track down a wild, undomesticated woman wreaking havoc and murdering hikers on the hillsides of Los Angeles.",
+  "genres": ["Horror", "Comedy", "Cult", "Movie"],
+  "posterUrl": "images/feral-female.jpg",
+  "source": "ok.ru",
+  "embedId": "10830379420313"
+},
+            {
+  "id": "a-yank-at-oxford-1938",
+  "title": "A Yank at Oxford",
+  "year": 1938,
+  "description": "An arrogant American athlete receives a scholarship to Oxford, where he struggles to adjust to British traditions and falls for a local girl.",
+  "genres": ["Drama", "Action", "Classic", "Movie"],
+  "posterUrl": "images/yank-at-oxford.jpg",
+  "source": "rumble",
+  "embedId": "v71zfhk"
+},
+  {
+  "id": "invasion-of-the-body-snatchers-1956",
+  "title": "Invasion of the Body Snatchers",
+  "year": 1956,
+  "description": "A small-town doctor discovers that his community's population is being replaced by emotionless alien duplicates grown from mysterious space pods.",
+  "genres": ["Sci-Fi", "Horror", "Classic", "Movie"],
+  "posterUrl": "images/body-snatchers.jpg",
+  "source": "rumble",
+  "embedId": "v71zl9o"
+},
+ {
+  "id": "the-captains-table-1959",
+  "title": "The Captain's Table",
+  "year": 1959,
+  "description": "A veteran cargo ship captain is unexpectedly given command of a luxury ocean liner. He soon finds himself struggling to handle high-society social duties, amorous passengers, and a crew that is secretly running a smuggling ring.",
+  "genres": ["Comedy", "Classic", "British", "Movie"],
+  "posterUrl": "images/captainstable.jpg",
+  "source": "rumble",
+  "embedId": "v720o8k"
+},
+            {
+  "id": "the-legend-of-lizzie-borden-1975",
+  "title": "The Legend of Lizzie Borden",
+  "year": 1975,
+  "description": "In 1892, a respectable New England spinster is accused of the brutal axe murders of her father and stepmother. This stylized dramatization follows the sensational trial that shocked a nation.",
+  "genres": ["Crime", "Drama", "Mystery", "Horror", "Movie"],
+  "posterUrl": "images/lizzieborden.jpg",
+  "source": "rumble",
+  "embedId": "v720oj6"
+},
+            {
+  "id": "the-mouse-that-roared-1959",
+  "title": "The Mouse That Roared",
+  "year": 1959,
+  "description": "The tiny Duchy of Grand Fenwick declares war on the United States, hoping to lose and receive foreign aid. However, their plan backfires when their ragtag army accidentally wins the war and captures a world-threatening super-weapon.",
+  "genres": ["Comedy", "Satire", "Classic", "British", "Movie"],
+  "posterUrl": "images/mouse.jpg",
+  "source": "rumble",
+  "embedId": "v720opa"
+},
+            {
+  "id": "village-of-the-damned-1960",
+  "title": "Village of the Damned",
+  "year": 1960,
+  "description": "After a mysterious blackout leaves every woman in an English village pregnant, a group of platinum-blonde children are born with terrifying psychic powers and a cold, shared intelligence.",
+  "genres": ["Horror", "Sci-Fi", "Classic", "British", "Movie"],
+  "posterUrl": "images/damned.jpg",
+  "source": "rumble",
+  "embedId": "v720s84"
+},
+            {
+  "id": "children-of-the-damned-colorized-1964",
+  "title": "Children of the Damned",
+  "year": 1964,
+  "description": "[Colorized Version] Six incredibly intelligent children from different nations are brought to London for study. They possess lethal psychic abilities and a collective hive-mind, eventually barricading themselves in an abandoned church to defend against a fearful military.",
+  "genres": ["Sci-Fi", "Horror", "Classic", "British", "Movie"],
+  "posterUrl": "images/children-damned-color.jpg",
+  "source": "rumble",
+  "embedId": "v720vmw"
+},
+            {
+  "id": "12-angry-men-1957",
+  "title": "12 Angry Men",
+  "year": 1957,
+  "description": "A lone dissenting juror in a murder trial slowly manages to convince the others that the case is not as open-and-shut as it appears, forcing them to confront their own prejudices.",
+  "genres": ["Drama", "Crime", "Classic", "Movie"],
+  "posterUrl": "images/angrymen.jpg",
+  "source": "rumble",
+  "embedId": "v7227yu"
+},
+            {
+  "id": "a-beautiful-mind-2001",
+  "title": "A Beautiful Mind",
+  "year": 2001,
+  "description": "After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.",
+  "genres": ["Drama", "Biography", "Classic", "Movie"],
+  "posterUrl": "images/abeautifulmind.jpg",
+  "source": "rumble",
+  "embedId": "v722936"
+},
+            {
+  "id": "dial-m-for-murder-1954",
+  "title": "Dial M For Murder",
+  "year": 1954,
+  "description": "An ex-tennis pro carries out a plot to murder his wife. When things go wrong, he improvises a brilliant second plan to have her convicted of murder.",
+  "genres": ["Thriller", "Crime", "Mystery", "Classic"],
+  "posterUrl": "images/dialmformurder.jpg",
+  "source": "rumble",
+  "embedId": "v722alg"
+},
+            {
+  "id": "psycho-1960",
+  "title": "Psycho",
+  "year": 1960,
+  "description": "A phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+  "genres": ["Horror", "Thriller", "Mystery", "Classic"],
+  "posterUrl": "images/Psycho.jpg",
+  "source": "rumble",
+  "embedId": "v722cam"
+},
+  {
+  "id": "spellbound-1945",
+  "title": "Spellbound",
+  "year": 1945,
+  "description": "A psychiatrist protects the identity of an amnesia patient accused of murder while attempting to recover his memory through psychoanalysis.",
+  "genres": ["Film Noir", "Thriller", "Mystery", "Classic"],
+  "posterUrl": "images/spellbound.jpg",
+  "source": "rumble",
+  "embedId": "v722fyo"
+},
+            {
+  "id": "strangers-on-the-train-1951",
+  "title": "Strangers on the Train",
+  "year": 1951,
+  "description": "A psychotic socialite confronts a pro tennis player with a theory on how two strangers can get away with murder—a theory that becomes a terrifying reality.",
+  "genres": ["Thriller", "Film Noir", "Crime", "Classic"],
+  "posterUrl": "images/strangersonthetrain.jpg",
+  "source": "rumble",
+  "embedId": "v722gqy"
+},
+            {
+  "id": "bullitt-1968",
+  "title": "Bullitt",
+  "year": 1968,
+  "description": "An ambitious politician hires San Francisco Police Lieutenant Frank Bullitt to guard a mob witness. When the witness is killed, Bullitt investigates the hit.",
+  "genres": ["Action", "Crime", "Thriller", "Classic"],
+  "posterUrl": "images/bullitt.jpg",
+  "source": "rumble",
+  "embedId": "v722oic"
+},
+            {
+  "id": "the-getaway-1972",
+  "title": "The Getaway",
+  "year": 1972,
+  "description": "A paroled convict and his wife go on the run across Texas after a bank robbery goes wrong and they are betrayed by their partners.",
+  "genres": ["Action", "Crime", "Thriller", "Classic"],
+  "posterUrl": "images/thegetaway.jpg",
+  "source": "rumble",
+  "embedId": "v722pyk"  
+},
+   {
+  "id": "once-upon-a-time-in-america-1984",
+  "title": "Once Upon a Time in America",
+  "year": 1984,
+  "description": "A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan over thirty years later, where he must confront the ghosts and regrets of his past.",
+  "genres": ["Crime", "Drama", "Classic"],
+  "posterUrl": "images/onceuponatimeinamerica.jpg",
+  "source": "rumble",
+  "embedId": "v722s3u"
+},
+            {
+  "id": "mulholland-falls-1996",
+  "title": "Mulholland Falls",
+  "year": 1996,
+  "description": "In 1950s Los Angeles, a special elite squad of the LAPD known as the 'Hat Squad' investigates the murder of a young woman, leading them to a high-level nuclear conspiracy.",
+  "genres": ["Crime", "Drama", "Thriller", "Action"],
+  "posterUrl": "images/mulhollandfalls.jpg",
+  "source": "rumble",
+  "embedId": "v723t7q"
+},
+             {
+  "id": "the-trap-1966",
+  "title": "The Trap",
+  "year": 1966,
+  "description": "A rugged fur trapper takes a mute girl as his wife and brings her to his remote cabin in the Canadian wilderness, where they must face the brutal elements and each other.",
+  "genres": ["Western", "Drama", "Adventure", "Classic"],
+  "posterUrl": "images/thetrap.jpg",
+  "source": "rumble",
+  "embedId": "v723tve"
+},
+  {
+  "id": "stage-fright-1950",
+  "title": "Stage Fright",
+  "year": 1950,
+  "description": "An aspiring actress tries to help a friend prove his innocence after he's accused of murdering the husband of a flamboyant stage star. But in Hitchcock's world, no one is quite who they seem.",
+  "genres": ["Thriller", "Crime", "Mystery", "Classic", "Film-Noir"],
+  "posterUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p373_p_v12_at.jpg",
+  "source": "rumble",
+  "embedId": "v729216"
+},
+  {
+  "id": "sleeping-with-the-enemy-1991",
+  "title": "Sleeping with the Enemy",
+  "year": 1991,
+  "description": "A young woman fakes her own death to escape her abusive, obsessive husband and start a new life in Iowa, but she soon discovers that he will stop at nothing to find her.",
+  "genres": ["Thriller", "Drama", "Crime", "Classic"],
+  "posterUrl": "images/sleepingwiththeenemy.jpg",
+  "source": "rumble",
+  "embedId": "v7291v8"
+},
+  {
+  "id": "rope-1948",
+  "title": "Rope",
+  "year": 1948,
+  "description": "Two brilliant young men kill a classmate just for the thrill of it and then proceed to host a dinner party with the victim's body hidden in a trunk, inviting his family and a suspicious former teacher.",
+  "genres": ["Thriller", "Crime", "Mystery", "Classic"],
+  "posterUrl": "images/rope.jpg",
+  "source": "rumble",
+  "embedId": "v7291iy"
+},
+  {
+  "id": "the-crazies-2010",
+  "title": "The Crazies",
+  "year": 2010,
+  "description": "After a mysterious toxin enters a small town's water supply, the residents begin to turn into violent killers. The town's sheriff must fight to escape with his wife and a few survivors.",
+  "genres": ["Horror", "Thriller", "Action", "Sci-Fi"],
+  "posterUrl": "images/thecrazies.jpg",
+  "source": "rumble",
+  "embedId": "v7291c8"
+},
+            {
+  "id": "red-dragon-2002",
+  "title": "Red Dragon",
+  "year": 2002,
+  "description": "A retired FBI agent with psychological gifts is assigned to help track down 'The Tooth Fairy', a mysterious serial killer. To do so, he must visit his old nemesis: Hannibal Lecter.",
+  "genres": ["Thriller", "Crime", "Drama", "Mystery"],
+  "posterUrl": "images/reddragon.jpg",
+  "source": "rumble",
+  "embedId": "v72915k"
+},
+ {
+  "id": "mulholland-drive-2001",
+  "title": "Mulholland Drive",
+  "year": 2001,
+  "description": "After a car wreck on the winding Mulholland Drive renders a woman amnesiac, she and a perky Hollywood-hopeful search for clues and answers across Los Angeles in a twisting venture beyond dreams and reality.",
+  "genres": ["Mystery", "Thriller", "Drama", "Neo-Noir"],
+  "posterUrl": "images/mulhollanddrive.jpg",
+  "source": "rumble",
+  "embedId": "v729102"
+},
+             {
+    "id": "Ghost-Town-1956",
+    "posterUrl": "images/ghosttown1956.jpg",
+    "year": 1956,
+    "title": "Ghost Town 1956",
+    "description": "A stagecoach under siege takes refuge in an abandoned town, where the pressure of an Indian attack forces the passengers' dark secrets to the surface.",
+    "embedId": "v72cblm",
+    "genres": ["Western"],
+    "source": "rumble"
+  },
+   {
+    "id": "Looking-For-Mr-Goodbar-1977",
+    "posterUrl": "images/mrgoodbar1977.jpg",
+    "year": 1977,
+    "title": "Looking For Mr. Goodbar",
+    "description": "A dedicated teacher of deaf children leads a dangerous double life exploring the dark and gritty singles bar scene of 1970s New York.",
+    "embedId": "v72ce0u",
+    "genres": ["Drama", "Thriller", "Crime"],
+    "source": "rumble"
+  },
+   {
+    "id": "Cotton-Club",
+    "posterUrl": "images/cottonclub1984.jpg",
+    "year": 1984,
+    "title": "The Cotton Club",
+    "description": "In 1930s Harlem, the lives of a jazz musician, a dancer, and a ruthless mobster collide at the world's most famous nightclub.",
+    "embedId": "v72ccta",
+    "genres": ["Crime", "Drama", "Musical"],
+    "source": "rumble"
+   },
+    {
+    "id": "LegendMakers2014",
+    "posterUrl": "images/legend.jpg",
+    "year": 2014,
+    "title": "The Legend Makers",
+    "description": "A powerful look at the Vietnam War from the Vietnamese perspective, following soldiers tasked with maintaining the Ho Chi Minh Trail amidst intense conflict.",
+    "embedId": "v72fxk8",
+    "genres": ["War", "Drama", "History"],
+    "source": "rumble"
+  },
+   {
+    "id": "AlCapone",
+    "posterUrl": "images/alcapone1959.jpg",
+    "year": 1959,
+    "title": "Al Capone",
+    "description": "Rod Steiger stars in this gritty biographical noir chronicling the brutal rise and fall of Chicago's most famous crime syndicate leader.",
+    "embedId": "v72fxqg",
+    "genres": ["Crime", "Noir", "Biography"],
+    "source": "rumble"
+  },
+   {
+    "id": "GuysDolls1955",
+    "posterUrl": "images/guysanddolls.jpg",
+    "year": 1955,
+    "title": "Guys and Dolls",
+    "description": "Frank Sinatra and Marlon Brando star in this iconic Broadway adaptation about gamblers, showgirls, and the high-stakes game of love in New York City.",
+    "embedId": "v72fxwy",
+    "genres": ["Musical", "Comedy", "Romance"],
+    "source": "rumble"
+  },
+  {
+    "id": "RobinHood1938",
+    "posterUrl": "images/robinhood1938.jpg",
+    "year": 1938,
+    "title": "The Adventures of Robin Hood",
+    "description": "Errol Flynn stars as the legendary outlaw who fights for justice and the heart of Maid Marian in this stunning Technicolor masterpiece.",
+    "embedId": "v72fycm",
+    "genres": ["Adventure", "Action", "Romance"],
+    "source": "rumble"
+  },
+ {
+    "id": "TheGame1997",
+    "posterUrl": "images/thegame1997.jpg",
+    "year": 1997,
+    "title": "The Game",
+    "description": "A wealthy banker's life is turned upside down when he agrees to participate in a mysterious 'game' that blurs the lines between reality and conspiracy.",
+    "embedId": "v72fyk8",
+    "genres": ["Thriller", "Mystery", "Drama"],
+    "source": "rumble"
+  },
+  {
+    "id": "Waterloo1970",
+    "posterUrl": "images/waterloo1970.jpg",
+    "year": 1970,
+    "title": "Waterloo",
+    "description": "A spectacular historical epic depicting the final stand of Napoleon Bonaparte against the Duke of Wellington in one of history's most famous battles.",
+    "embedId": "v72fyui",
+    "genres": ["War", "History", "Drama"],
+    "source": "rumble"
+  },
+   {
+    "id": "Tinker",
+    "posterUrl": "images/tinkertailor1979.jpg",
+    "year": 1979,
+    "title": "Tinker Tailor Soldier Spy (Ep 1 & 2)",
+    "description": "Alec Guinness stars as George Smiley in the definitive adaptation of John le Carré’s spy classic. A mole is deep inside the Circus—can Smiley find him?",
+    "embedId": "v72h7tg",
+    "genres": ["Thriller", "Mystery", "Drama"],
+    "source": "rumble"
+  },
+    {
+    "id": "Tobruk1967",
+    "posterUrl": "images/tobruk1967.jpg",
+    "year": 1967,
+    "title": "Tobruk",
+    "description": "Rock Hudson and George Peppard lead a group of commandos on a suicide mission across the Sahara to destroy Rommel's vital fuel depot.",
+    "embedId": "v72h92k",
+    "genres": ["War", "Action", "Drama"],
+    "source": "rumble"
+  },
+   {
+    "id": "VonRyan1965",
+    "posterUrl": "images/vonryan1965.jpg",
+    "year": 1965,
+    "title": "Von Ryan's Express",
+    "description": "Frank Sinatra stars as an American POW who leads a daring escape by hijacking a German train and fleeing through occupied Italy.",
+    "embedId": "v72h9b2",
+    "genres": ["War", "Action", "Adventure"],
+    "source": "rumble"
+  },
+   {
+    "id": "ZuluDawn1979",
+    "posterUrl": "images/zuludawn1979.jpg",
+    "year": 1979,
+    "title": "Zulu Dawn",
+    "description": "The epic prequel to Zulu, depicting the disastrous Battle of Isandlwana where a massive British force was overwhelmed by Zulu warriors.",
+    "embedId": "v72ha18",
+    "genres": ["War", "History", "Drama"],
+    "source": "rumble"
+  },
+   {
+    "id": "Vertigo1958",
+    "posterUrl": "https://m.media-amazon.com/images/I/91BcDXh2ldL._AC_UF1000,1000_QL80_.jpg",
+    "year": 1965,
+    "title": "Vertigo",
+    "description": "A former police detective juggles his personal demons and becoming obsessed with a beautiful woman he is hired to tail.",
+    "embedId": "v71xshm",
+    "genres": ["Thriller", "Mystery", "Hitchcock"],
+    "source": "rumble"
+  },
+   {
+    "id": "Frenzy1972",
+    "posterUrl": "images/frenzy1972.jpg",
+    "year": 1972,
+    "title": "Frenzy",
+    "description": "A serial killer is strangling women with neckties in London. The police have a suspect, but he is the wrong man.",
+    "embedId": "v72hg0q",
+    "genres": ["Thriller", "Crime", "Hitchcock"],
+    "source": "rumble"
+  },
+   {
+    "id": "HenryV1989",
+    "posterUrl": "images/henryv1989.jpg",
+    "year": 1989,
+    "title": "Henry V",
+    "description": "The young King Henry V of England embarks on a gritty, bloody conquest of France to assert his legal right to the throne.",
+    "embedId": "v72i1w6",
+    "genres": ["Drama", "History", "War"],
+    "source": "rumble"
+  },
+  {
+    "id": "David-Copperfield-1935",
+    "posterUrl": "images/davidcopperfield1935.jpg",
+    "year": 1935,
+    "title": "David Copperfield",
+    "description": "A gentle orphan discovers life and love in Victorian England as he encounters a variety of colorful characters on his journey to adulthood.",
+    "embedId": "v72i204",
+    "genres": ["Drama", "Classic"],
+    "source": "rumble"
+  },
+   {
+    "id": "Oliver-Twist-1948",
+    "posterUrl": "images/olivertwist1948.jpg",
+    "year": 1948,
+    "title": "Oliver Twist",
+    "description": "An orphan meets a pickpocket on the streets of London and is taken in by a gang of juvenile thieves led by the conniving Fagin.",
+    "embedId": "v72i2ma",
+    "genres": ["Drama", "Classic", "Black & White"],
+    "source": "rumble"
+  },
+  {
+    "id": "Who-Dares-Wins-1982",
+    "posterUrl": "images/whodareswins1982.webp",
+    "year": 1982,
+    "title": "Who Dares Wins",
+    "description": "An SAS officer infiltrates a radical anti-nuclear group that is planning a violent attack on the American embassy in London.",
+    "embedId": "v72j5qu",
+    "genres": ["Action", "Thriller"],
+    "source": "rumble"
+  },
+   {
+    "id": "Shout-at-the-Devil-1976",
+    "posterUrl": "images/shout.jpg",
+    "year": 1976,
+    "title": "Shout at the Devil",
+    "description": "In East Africa during WWI, a hard-drinking American poacher and a British aristocrat team up to sabotage a German warship.",
+    "embedId": "v72j6de",
+    "genres": ["Action", "Adventure", "War"],
+    "source": "rumble"
+  },
+   {
+    "id": "Sabotage-1996",
+    "posterUrl": "images/sabotage.jpg",
+    "year": 1996,
+    "title": "Sabotage",
+    "description": "A former special ops commando is framed for a failed mission. Years later, he must team up with an FBI agent to stop the assassin who is systematically eliminating his former team.",
+    "embedId": "v72j6w0",
+    "genres": ["Action", "Thriller"],
+    "source": "rumble"
+  },
+   {
+    "id": "Paper-Tiger-1975",
+    "posterUrl": "images/papertiger1975.jpg",
+    "year": 1975,
+    "title": "Paper Tiger",
+    "description": "An English tutor who has spent years inventing a heroic past for himself is forced to prove his courage when he and his young student are kidnapped by terrorists.",
+    "embedId": "v72j98s",
+    "genres": ["Action", "Adventure", "Drama"],
+    "source": "rumble"
+  },
+   {
+    "id": "Nomads-1986",
+    "posterUrl": "images/nomads1986.jpg",
+    "year": 1986,
+    "title": "Nomads",
+    "description": "An anthropologist discovers a group of malevolent spirits disguised as street punks in Los Angeles and becomes the victim of their ancient curse.",
+    "embedId": "v72jbdk",
+    "genres": ["Thriller", "Horror", "Mystery"],
+    "source": "rumble"
+  },
+  {
+    "id": "Out-for-Blood-2004",
+    "posterUrl": "images/outforblood2004.jpg",
+    "year": 2004,
+    "title": "Out for Blood",
+    "description": "A detective investigating missing persons discovers a nest of vampires preying on the underground rave scene in Los Angeles.",
+    "embedId": "v72jc26",
+    "genres": ["Horror", "Action", "Thriller"],
+    "source": "rumble"
+  },
+   {
+    "id": "55-Days-at-Peking-1963",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWI5NjEwZWYtZjVkNy00NTExLTg0MTctMjkxNDZkMjJmMjc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "year": 1963,
+    "title": "55 Days at Peking",
+    "description": "During the 1900 Boxer Rebellion, a multinational force of diplomats and soldiers must hold out for 55 days against a massive siege in Peking.",
+    "embedId": "v72jd5a",
+    "genres": ["Action", "Drama", "History", "War"],
+    "source": "rumble"
+  },
+   {
+    "id": "pitfall-1948",
+    "title": "Pitfall (1948)",
+    "description": "A bored insurance agent's life spirals out of control when he falls for the girlfriend of a man he's investigating. A quintessential film noir about the dangers of the mundane and the price of straying from the straight and narrow.",
+    "genres": ["Film Noir", "Crime", "Drama", "Mystery", "1940s"],
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGJiYjRjNjUtZWFjOS00MDEzLWJiOGMtMzNhMWVmNGI2MzY2XkEyXkFqcGc@._V1_.jpg",
+    "source": "rumble",
+    "embedId": "v72ksw4"
+},
+   {
+    "id": "digging",
+    "title": "Digging to China (1997)",
+    "description": "Two innocent outcasts form an incredible, life-changing friendship. Starring Kevin Bacon and Evan Rachel Wood.",
+    "genre": "Drama",
+    "year": 1997,
+    "quality": "1080p",
+     "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTc0MTQyMTgxMF5BMl5BanBnXkFtZTYwODQ1NTM5._V1_.jpg",
+    "category": "Drama",
+    "embedId": "v72mhgq",
+    "source": "rumble"
     
-    
-
-   
-        ];
+  },
+  {
+    "id": "mystery-mr-wong-1939",
+    "title": "The Mystery of Mr. Wong (1939)",
+    "description": "A party turns deadly and a priceless jewel vanishes. Boris Karloff stars as the brilliant detective.",
+    "genre": "Mystery",
+    "year": 1939,
+    "quality": "4K Restored",
+     "posterUrl": "https://m.media-amazon.com/images/M/MV5BODBjN2QxZWUtMmQ5Yy00ZjI1LWFlOTktODA0ZGM4MTI4ZWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "category": "Detective",
+      "embedId": "v72mkeq",
+    "source": "rumble"
+  },
+  {
+    "id": "delirium-1979",
+    "title": "Delirium (1979)",
+    "description": "The Monster is Man, when justice goes rogue. A gritty grindhouse psycho thriller.",
+    "genre": "Thriller",
+    "year": 1979,
+    "quality": "1080p",
+     "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ2ODc0OTY5NV5BMl5BanBnXkFtZTgwNTE3MzY4MDE@._V1_.jpg",
+    "category": "Cult Classic",
+     "embedId": "v72mmuy",
+    "source": "rumble"
+  },
+  {
+    "id": "solomon-sheba-1959",
+    "title": "Solomon and Sheba (1959)",
+    "description": "The mighty Biblical epic of wisdom and seduction starring Yul Brynner and Gina Lollobrigida.",
+    "genre": "Epic",
+    "year": 1959,
+    "quality": "1080p",
+     "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTMxMDg2MDQwNl5BMl5BanBnXkFtZTcwNzE0MjI3NA@@._V1_.jpg",
+    "category": "Biblical",
+    "embedId": "v72mmze",
+    "source": "rumble"
+  },
+  {
+    "id": "fall-roman-empire-1964",
+    "title": "The Fall of The Roman Empire (1964)",
+    "description": "The massive spectacle of Rome's decline starring Sophia Loren and Alec Guinness.",
+    "genre": "Epic",
+    "year": 1964,
+    "quality": "720p",
+     "posterUrl": "https://m.media-amazon.com/images/I/51FtsqGdLFL._AC_UF894,1000_QL80_.jpg",
+    "category": "Historical",
+    "embedId": "v72mnoo",
+    "source": "rumble"
+  },
+   {
+    "id": "vengeance",
+    "title": "Vengeance Valley (1951)",
+    "description": "Burt Lancaster stars in his first Western as a loyal ranch foreman caught in a web of betrayal.",
+    "genre": "Western",
+    "year": 1951,
+    "quality": "1080p",
+    "posterUrl":"https://m.media-amazon.com/images/M/MV5BMzQwMzAzMTctMDM3Ny00ZjMzLTkzY2UtZTZjOWNmZTZjZWNjXkEyXkFqcGc@._V1_.jpg",
+    "category": "Westerns",
+    "embedId": "v72o1nw",  
+    "source": "rumble"
+  },
+   {
+    "id": "rebecca-1940",
+    "title": "Rebecca (1940)",
+    "description": "Alfred Hitchcock's gothic masterpiece and Best Picture winner about a haunted marriage.",
+    "genres": ["Thriller"],
+    "year": 1940,
+    "quality": "1080p",
+    "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Rebecca_%281939_poster%29.jpeg",
+    "category": "Hitchcock",
+    "embedId": "v72o6c2",
+    "source": "rumble"
+  },
+  {
+    "id": "howards-end-1992",
+    "title": "Howards End (1992)",
+    "description": "A 3-time Oscar-winning tale of class and inheritance starring Emma Thompson and Anthony Hopkins.",
+    "genre": "Drama",
+    "year": 1992,
+    "quality": "1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk3MDY3NDc2NF5BMl5BanBnXkFtZTgwODcwNjgzOTE@._V1_.jpg",
+    "category": "Award Winners",
+    "embedId": "v72o31w",
+    "source": "rumble"
+  },
+  {
+    "id": "great-expectations-1946",
+    "title": "Great Expectations (1946)",
+    "description": "The definitive Dickens adaptation by David Lean. A haunting, Oscar-winning tale of a young orphan's transformation.",
+    "genre": "Drama",
+    "year": 1946,
+    "quality": "1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTFjNzIyYTYtMjVjOS00NzQ2LWIyMTUtMzlhNGIwZDU1MTdiXkEyXkFqcGc@._V1_.jpg",
+    "category": "Literary Classics",
+    "embedId": "v72o270",
+    "source": "rumble"
+  },
+  {
+  "id": "blackmail-1929-color",
+  "title": "Blackmail (1929) - Colorized",
+  "description": "A stunning colorized restoration of Hitchcock's first talkie. A tense tale of murder, guilt, and a high-stakes chase through the British Museum.",
+ "genres": ["Thriller"],
+  "year": 1929,
+  "quality": "1080p",
+  "posterUrl": "https://fourstarfilmfan.com/wp-content/uploads/2017/07/blackmail_1929_poster.jpg?w=584",
+  "category": "Hitchcock",
+  "embedId": "v72oa08",
+  "source": "rumble"
+},
+{
+    "id": "south-pacific-1958",
+    "title": "South Pacific (1958)",
+    "description": "On a South Pacific island during World War II, love blooms between a young nurse and a secretive Frenchman.",
+    "genre": "Musical, Romance",
+    "year": 1958,
+    "quality": "1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjc1MDM0MDM4Nl5BMl5BanBnXkFtZTgwMDMwMTgxMTE@._V1_FMjpg_UX1000_.jpg",
+    "category": "Classics",
+    "embedId": "v72oiyu",
+    "source": "rumble"
+  },
+  {
+    "id": "she-1965",
+    "title": "She (1965)",
+    "description": "A group of explorers discovers a lost city in the mountains of East Africa, ruled by the immortal Queen Ayesha, who believes one of them is her long-lost lover.",
+    "genre": "Adventure, Fantasy",
+    "year": 1965,
+    "quality": "1080p",
+    "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjXkn63JT4QokZJqXpvehVK6AhEKqxOMvHLw&s",
+    "category": "Classics",
+    "embedId": "v72oihu",
+    "source": "rumble"
+  },
+          
+        
+          
+ ];
           moviesData.forEach(movie => {
     movie.views = 0;
 });
@@ -7392,6 +8988,128 @@ document.addEventListener('DOMContentLoaded', () => {
 });
         ;
     </script>
+<section style="background-color: #050505; padding: 80px 20px; border-top: 4px solid #5D3FD3; text-align: center; color: white;">
     
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 56px; color: white; margin-bottom: 20px; letter-spacing: 2px;">
+            THE <span style="color: #FFC300;">WESTERN FRONTIER</span> AWAITS
+        </h2>
+        
+        <p style="font-size: 20px; color: #cccccc; margin-bottom: 40px; line-height: 1.6;">
+            Don't miss a single shootout. Join our posse on Rumble for full-length remastered classics.
+        </p>
+
+        <div style="margin-bottom: 30px;">
+            <a href="https://rumble.com/c/c-5304032" target="_blank" 
+               style="display: inline-block; background-color: #FFC300; color: #000000; font-weight: 900; font-size: 24px; padding: 20px 50px; border-radius: 50px; text-decoration: none; text-transform: uppercase; box-shadow: 0 10px 20px rgba(255,195,0,0.3);">
+                SUBSCRIBE ON RUMBLE 🤠
+            </a>
+        </div>
+        
+        <p style="font-size: 14px; letter-spacing: 2px; color: #888888; text-transform: uppercase;">
+            OFFICIAL CHANNEL: <span style="color: #FFC300;">rumble.com/c/c-5304032</span>
+        </p>
+    </div>
+</section>
+<script>
+let allMovies = []; // This will hold your movie data
+
+// 1. Load the movies when the page opens
+async function loadAndInitialize() {
+    try {
+        const response = await fetch('movies.json');
+        allMovies = await response.json();
+        
+        // 2. Check if we came from the home page with a genre (like ?genre=Western)
+        const urlParams = new URLSearchParams(window.location.search);
+        const genreToFilter = urlParams.get('genre');
+
+        if (genreToFilter) {
+            document.getElementById('movie-search').value = genreToFilter;
+            performSearch(); // Run the search automatically
+            
+            // Update the title to show the collection name
+            const headerTitle = document.querySelector('h2');
+            if (headerTitle) headerTitle.innerText = "The " + genreToFilter + " Collection";
+        } else {
+            renderMovies(allMovies); // Show everything if no search
+        }
+    } catch (error) {
+        console.error("Error loading movies:", error);
+    }
+}
+
+// 3. The search logic that actually works
+function performSearch() {
+    const searchTerm = document.getElementById('movie-search').value.toLowerCase();
+    
+    const filtered = allMovies.filter(movie => {
+        const titleMatch = movie.title.toLowerCase().includes(searchTerm);
+        // This line makes "Western" work!
+        const genreMatch = movie.genres.some(g => g.toLowerCase().includes(searchTerm));
+        const descMatch = movie.description.toLowerCase().includes(searchTerm);
+        
+        return titleMatch || genreMatch || descMatch;
+    });
+
+    renderMovies(filtered);
+}
+
+// 4. Put the movies into the grid
+function renderMovies(moviesToDisplay) {
+    const grid = document.getElementById('all-movie-grid');
+    grid.innerHTML = ''; // Clear current movies
+
+    if (moviesToDisplay.length === 0) {
+        grid.innerHTML = '<p class="text-white text-xl w-full">No movies found. Try searching for "Western".</p>';
+        return;
+    }
+
+    moviesToDisplay.forEach(movie => {
+        const card = `
+            <div class="movie-card">
+                <a href="movie-details.html?id=${movie.id}">
+                    <img src="${movie.posterUrl}" alt="${movie.title}" class="poster-img">
+                    <h3>${movie.title}</h3>
+                </a>
+            </div>
+        `;
+        grid.innerHTML += card;
+    });
+}
+
+// 5. Event Listeners for buttons
+document.getElementById('searchButton').addEventListener('click', performSearch);
+
+document.getElementById('clearSearchButton').addEventListener('click', () => {
+    document.getElementById('movie-search').value = '';
+    renderMovies(allMovies);
+    document.querySelector('h2').innerText = "Our Complete Movie Collection";
+});
+
+// Allow "Enter" key to search
+document.getElementById('movie-search').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') performSearch();
+});
+
+// Start the process
+window.addEventListener('DOMContentLoaded', loadAndInitialize);
+    // --- PASTE THIS AT THE VERY BOTTOM OF YOUR SCRIPT ---
+window.addEventListener('load', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const genreFromHome = urlParams.get('genre');
+
+    if (genreFromHome) {
+        const searchBox = document.getElementById('movie-search');
+        if (searchBox) {
+            searchBox.value = genreFromHome;
+            // This triggers the search function you already have working
+            if (typeof performSearch === "function") {
+                performSearch();
+            }
+        }
+    }
+});
+</script>
 </body>
 </html>
