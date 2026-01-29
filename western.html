@@ -2,31 +2,30 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/style.css">
-    
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNXJGVNEY0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WNXJGVNEY0');
-</script>
-    
+   
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNXJGVNEY0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNXJGVNEY0');
+    </script>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Movies - The Movie Hub</title>
-    
+    <title>Westerns - The Movie Hub</title>
+   
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://owlsman21.github.io/MovieHub/movies.html">
-    <meta property="og:title" content="The Movie Hub - All Movies">
-    <meta property="og:description" content="Explore the complete collection of classic films on The Movie Hub.">
+    <meta property="og:url" content="https://moviehub.zya.me/westerns.html">
+    <meta property="og:title" content="Westerns - The Movie Hub">
+    <meta property="og:description" content="Explore the complete collection of Western movies on The Movie Hub.">
     <meta property="og:image" content="https://owlsman21.github.io/MovieHub/images/Facebook.png">
     <meta property="og:image:width" content="940">
     <meta property="og:image:height" content="788">
 
     <style>
-        /* Import Google Font - Inter */
+        /* Your existing styles - kept as-is */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
         body {
@@ -146,40 +145,7 @@
             display: block;
             transition: opacity 0.3s ease;
         }
-        
-        .movie-card-media iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
 
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(115, 91, 242, 0.9);
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 2.5em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .play-button:hover {
-            background-color: #ffd700;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-        
         .movie-card h3 {
             font-size: 1.2em;
             margin: 10px 10px 5px;
@@ -195,37 +161,18 @@
             margin: 0 10px;
         }
 
-        .movie-card a.card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            cursor: pointer;
-            position: relative;
-            padding-bottom: 25px;
-        }
-        
-        .details-text {
-            position: absolute;
-            bottom: 0px;
-            left: 0;
-            right: 0;
-            background-color: rgba(115, 91, 242, 0.8);
-            color: #fff;
+        .view-details {
+            background: #735bf2;
+            color: white;
+            text-align: center;
             padding: 5px 0;
             font-size: 0.85em;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
+            margin-top: auto;
         }
 
-        .movie-card:hover .details-text {
-            opacity: 1;
-        }
-
-        /* Pagination styles */
         .pagination {
             display: flex;
             justify-content: center;
@@ -258,7 +205,6 @@
             font-size: 1.1em;
         }
 
-        /* Search bar styling */
         .search-controls {
             display: flex;
             justify-content: center;
@@ -306,41 +252,6 @@
             transform: translateY(-2px);
         }
 
-        /* Genre Buttons Styling */
-        .genre-buttons-container {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px 0;
-            background-color: #2a2a4a;
-            border-radius: 8px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .genre-buttons-container button {
-            background-color: #4a4a6b;
-            color: #e0e0e0;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .genre-buttons-container button:hover {
-            background-color: #5d4a6b;
-            transform: translateY(-1px);
-        }
-
-        .genre-buttons-container button.active-genre-button {
-            background-color: #735bf2;
-            color: #fff;
-            font-weight: bold;
-        }
-
         footer {
             background-color: #0f044c;
             color: #e0e0e0;
@@ -365,39 +276,29 @@
             text-decoration: underline;
         }
 
-        /* Responsive adjustments for overall layout */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            header h1,
-            header nav {
+            header h1, header nav {
                 float: none;
                 text-align: center;
             }
-
             header nav ul li {
                 margin: 0 10px;
             }
-
             .section-padded h2 {
                 font-size: 2.5em;
             }
-
             .movie-grid {
                 grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             }
-
             .search-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-
             .search-controls input[type="text"],
             .search-controls button {
                 width: 100%;
                 max-width: none;
-            }
-
-            .genre-buttons-container {
-                justify-content: center;
             }
         }
 
@@ -405,1449 +306,184 @@
             .section-padded h2 {
                 font-size: 2em;
             }
-
             .movie-grid {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
-
             .movie-card img {
                 height: 250px;
             }
         }
     </style>
 </head>
-    <body>
+<body>
   <header class="bg-[#0d0d0d] border-b-4 border-[#5D3FD3] p-5">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <h1 class="bebas text-4xl text-[#FFC300] tracking-wider uppercase font-bold">THE MOVIE HUB</h1>
         <nav>
-            <ul class="flex flex-wrap gap-4 justify-center md:justify-end mt-4 md:mt-0 font-bold">
+            <ul class="flex flex-wrap gap-4 justify-center md:justify-end mt-4 md:mt-0 font-bold items-center">
                 <li><a href="index.html" class="text-white hover:text-red-500 transition">Home</a></li>
-                <li><a href="movies.html" class="text-white hover:text-red-500 transition border-b-2 border-red-500">Movies</a></li>
+                <li><a href="movies.html" class="text-white hover:text-red-500 transition">Movies</a></li>
+                <li><a href="western.html" class="text-[#FFC300] hover:text-white transition border-b-2 border-red-500">Westerns</a></li>
                 <li><a href="motd.html" class="text-red-500 hover:text-yellow-400 transition">Movie Of The Week</a></li>
-                <a href="western.html">Westerns</a>
                 <li><a href="about.html" class="text-white hover:text-red-500 transition">About</a></li>
                 <li><a href="contact-us.html" class="text-white hover:text-red-500 transition">Contact</a></li>
                 <li><a href="blog/index.html" class="text-white hover:text-red-500 transition">Blog</a></li>
             </ul>
         </nav>
     </div>
-</header>
+  </header>
 
-    <main>
-        <section id="all-movies-section" class="section-padded">
-            <div class="container">
-                <h2>Our Complete Western Movie Collection</h2>
-                <div class="search-controls">
-                    <input type="text" id="movie-search" placeholder="Search movies by title, genre, year or description...">
-                    <button id="searchButton">Search</button>
-                    <button id="clearSearchButton">Clear</button>
-                </div>
-                <div id="genre-buttons" class="genre-buttons-container">
-                    <p>Loading genres...</p>
-                </div>
-                <div id="all-movie-grid" class="movie-grid">
-                    <p>Loading all movies...</p>
-                </div>
-                <div class="pagination">
-                    <button id="homePageBtn">Home</button>
-                    <button id="prevPage">Previous</button>
-                    <span id="pageInfo">Page 1 of 1</span>
-                    <button id="nextPage">Next</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 The Movie Hub. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  <main>
+    <section id="all-movies-section" class="section-padded">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="bebas text-4xl text-[#FFC300] mb-6">Our Complete Western Movie Collection</h2>
+        
+        <div class="search-controls mb-10 flex flex-col md:flex-row justify-center items-center gap-4">
+          <input type="text" id="movie-search" 
+                 placeholder="Search movies by title, genre, year or description..." 
+                 class="w-full max-w-xl p-3 rounded-lg bg-[#1a1a1a] text-white border-2 border-[#5D3FD3] outline-none">
+          
+          <div class="flex gap-2">
+            <button id="searchButton" class="bg-[#5D3FD3] text-white px-6 py-3 rounded-lg font-bold">Search</button>
+            <button id="clearSearchButton" class="bg-gray-700 text-white px-6 py-3 rounded-lg font-bold">Clear</button>
+          </div>
         </div>
-    </footer>
 
-    <script>
-        // --- MOVIE DATA: COPY YOUR ENTIRE MOVIESDATA ARRAY FROM INDEX.HTML HERE ---
-        const moviesData = [
-            
-   {
-"id": "Ulzanas-Raid", 
-        "title": "Ulzanas Raid",
-        "description": "The story revolves around Scout McIntosh and an U.S. Cavalry Lieutenant DeBuin, who set out to catch a group of Apache renegades who are being led by chieftain, Ulzana.",
-        "embedId": "6410503522969",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl"        :  "images/ulzana.jpg", 
-       "year": 1972 
-    },
-    {   "id": "she-wore-a-yellow-ribbon", 
-        "title": "She wore a yellow ribbon",
-        "description": "Captain Nathan Brittles heads his last assignment before retirement to stop a Native American attack. But the job gets challenging when his superior instructs him to escort two women to safety.",
-        "embedId": "8921446943385",
-        "source": "ok.ru",
-        "genres": ["Western"],
-        "posterUrl":  "images/she wore a yellow ribbon.jpg",
-        "year": 1949
-    },
-    {   "id": "They-Died-with-Their-Boots-On", 
-        "title": "They Died with Their Boots On (1941)",
-        "description": "A movie which showcases the famous battle of Little Big Horn and the life of General Custer from the time he enters West Point military academy, the American Civil War and his death at Big Horn.",
-        "embedId": "8921449302681",
-        "source": "ok.ru",
-        "genres": ["Western"],
-        "posterUrl":  "images/they died with their boots on.jpg",
-        "year": 1949
-     },
-   
-    {
-        "id": "The-horse-soldiers", 
-        "title": "The-horse-soldiers",
-        "description": "During the Civil War, a Union cavalry unit is sent on a perilous mission behind Confederate lines.",
-        "embedId": "8921430297241",
-        "source": "ok.ru",
-        "genres": ["Western"],
-        "posterUrl":  "images/the horse soldiers.jpg",
-        "year": 1959
-    },
-   
-             {   "id": "Union",
-        "title": "Union ",
-        "description": "A woman disguises herself as her dead brother, Henry, in order to survive in the Confederate ranks during the Civil War. He marries a widow to rescue her from an arranged marriage. They keep each others secrets and find true love.",
-        "embedId": "1367854418585",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/union.jpg",
-        "year": 2019
-    },
-             {   "id": "The-Last-of-the-Mohicans",
-        "title": "The Last of the Mohicans  ",
-        "description": "The last members of a dying Native American tribe, the Mohicans -- Uncas (Eric Schweig), his father Chingachgook (Russell Means), and his adopted half-white brother Hawkeye (Daniel Day-Lewis) -- live in peace alongside British colonists. But when the daughters (Madeleine Stowe, Jodhi May) of a British colonel are kidnapped by a traitorous scout, Hawkeye and Uncas must rescue them in the crossfire of a gruesome military conflict of which they wanted no part: the French and Indian War.",
-        "embedId": "967004064409",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/the last of the mohicans.jpg",
-        "year": 1992
-    },
-    {   "id": "Mohawk",
-        "title": "Mohawk ",
-        "description": "Late in the War of 1812, a young Mohawk woman and her two lovers battle a squad of American soldiers hell-bent on revenge.",
-        "embedId": "1351353633433",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/mohawk.jpg",
-        "year": 2018
-    },
-    
-    {   "id": "Young-Guns-2",
-        "title": "Young Guns 2 ",
-        "description": "En route to Mexico from the United States, Billy the Kid (Emilio Estevez) and his associates are pursued by federal agents hell-bent on bringing them to justice. But when Billy, Doc (Kiefer Sutherland) and Chavez (Lou Diamond Phillips) prove too difficult to track down, the frustrated authorities enlist an old friend of theirs, reformed outlaw Pat Garrett (William Petersen), to take down the elusive gunslinger. But Billy has a head start, and his crew of outlaws is growing by the minute.",
-        "embedId": "1012291275417",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/young guns 2.jpg",
-        "year": 1990
-    },
-     {  "id": "Wyatt-Earp",
-        "title": "Wyatt Earp.HD ",
-        "description": " The epic biography of western lawman Wyatt Earp, who at an early age, is taught that nothing matters more than family and the law. He becomes a respected sheriff in Dodge City and Tombstone. Joined by his brothers and Doc Holliday, Earp wages war on the dreaded Clanton and McLaury gangs.",
-        "embedId": "1010676468377",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/wyatt earp.jpg",
-        "year": 1994
-    },
-     {  "id": "The-Salvation",
-        "title": "The.Salvation.720p.BluRay ",
-        "description": " After shooting the man who murdered his wife, a Danish settler (Mads Mikkelsen) incurs the wrath of the man's brother (Jeffrey Dean Morgan), a ruthless land baron who rules their frontier town.",
-        "embedId": "1010670897817",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/the salvation.jpg",
-        "year": 2014
-    },
-     {  "id": "The-Burrowers",
-        "title": "The.Burrowers. ",
-        "description": " A rescue party comes face to face with underground creatures attacking a town.",
-        "embedId": "1010671487641",
-        "genres": ["Horror", "Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/the burrowers.jpg",
-        "year": 2008
-    },
-     {  "id": "The-Revenant",
-        "title": "The Revenant ",
-        "description": "While exploring the uncharted wilderness in 1823, frontiersman Hugh Glass (Leonardo DiCaprio) sustains life-threatening injuries from a brutal bear attack. When a member (Tom Hardy) of his hunting team kills his young son (Forrest Goodluck) and leaves him for dead, Glass must utilize his survival skills to find a way back to civilization. Grief-stricken and fueled by vengeance, the legendary fur trapper treks through the snowy terrain to track down the man who betrayed him.",
-        "embedId": "1009119464089",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/the revenant.jpg",
-        "year": 2015
-    },
-     {  "id": "Hostiles",
-        "title": "Hostiles",
-        "description": "In 1892, legendary Army Capt. Joseph Blocker reluctantly agrees to escort a dying Cheyenne war chief and his family back to their tribal land. Embarking on a harrowing and perilous journey from Fort Berringer, N.M., to the grasslands of Montana, they soon encounter a young widow whose family was killed on the plains. The travelers must now band together to survive a punishing landscape that's crawling with hostile Comanches and vicious outliers.",
-        "embedId": "1009119398553",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/hostiles.jpg",
-        "year": 2017
-    },
-     {  "id": "Tombstone",
-        "title": "Tombstone ",
-        "description": "Wyatt Earp (Kurt Russell) and his brothers, Morgan (Bill Paxton) and Virgil (Sam Elliott), have left their gunslinger ways behind them to settle down and start a business in the town of Tombstone, Ariz. While they aren't looking to find trouble, trouble soon finds them when they become targets of the ruthless Cowboy gang. Now, together with Wyatt's best friend, Doc Holliday (Val Kilmer), the brothers pick up their guns once more to restore order to a lawless land.",
-        "embedId": "967267846809",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/tombstone.jpg",
-        "year": 1993
-    },
-      {  "id": "Young-Guns",
-        "title": "Young Guns (1988) ",
-        "description": "John Tunstall (Terence Stamp), a distinguished British gentleman, employs downtrodden youths to tend his herd on the New Mexican frontier. When Tunstall is gunned down by the crooked Lawrence G. Murphy (Jack Palance), a ragtag group of cow hands -- including Doc Scurlock (Kiefer Sutherland), Richard Brewer (Charlie Sheen) and young William billy the kid Bonney (Emilio Estevez) -- ride forth in search of bloody vengeance for the death of their beloved mentor.",
-        "embedId": "40382040772",
-        "genres": ["Western"],
-        "source": "ok.ru",
-        "posterUrl":  "images/young guns.jpg",
-        "year": 1988
-    },
-              {   "id": "Geronimo",
-        "posterUrl":  "images/Geronimo.jpg",
-        "year": 1993,
-        "title": "Geronimo: An American Legend ",
-        "description": " The story of the Apache chief and his armed resistance to the U.S. Government's subjugation of his people.",
-        "embedId": "7286425389606",
-        "genres": ["Western"],
-        "source": "ok.ru"
-    },
-     {  "id": "Bone-Tomahawk",
-        "posterUrl":  "images/Bone Tomahawk.jpg",
-        "year": 2015,
-        "title": "Bone Tomahawk (2015) ",
-        "description": " In the Old West, a small-town sheriff and his rag-tag posse set out to rescue several townspeople from a brutal cave-dwelling, cannibalistic Indian tribe.",
-        "embedId": "6461509208614",
-        "genres": ["Horror","Western"],
-        "source": "ok.ru"
-    },
-             { "id": "Rio-Bravo",
-        "posterUrl":  "images/rio bravo.jpg",
-        "year": 1959,
-        "title": "Rio Bravo 1959",
-        "description": " A small-town sheriff in the American West enlists the help of a disabled man, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy.",
-        "embedId": "7965129706199",
-        "genres": ["Western"],
-        "source": "ok.ru"
-    },
-        { 
-            "id": "SoldierBlue",
-        "posterUrl":  "images/soldier-blue.jpg",
-        "year": 1970,
-        "title": "Soldier Blue 1970 ",
-        "description": " After a cavalry patrol is ambushed by the Cheyenne, the two survivors, a soldier and a woman, must reach the safety of the nearest fort",
-        "embedId": "6172174715419",
-        "genres": ["Western"],
-        "source": "ok.ru"
-    },
-             { "id": "Night-of-the-Tommyknockers",
-        "posterUrl":  "images/Night of the Tommyknockers.jpg",
-        "year": 2022,
-        "title": "Night of the Tommyknockers 2022",
-        "description": "When miners blast for gold in the 1870's, they accidentally release ancient creatures known as Tommyknockers. The Town of Deer Creek, Nevada is soon under siege with only a handful of survivors held up in the local saloon.",
-        "embedId": "9273472846374",
-        "genres": ["Horror","Western","Thriller"],
-        "source": "ok.ru"
-     },
-              { "id": "Blazing-Saddles",
-        "posterUrl":  "images/Blazing Saddles.jpg",
-        "year": 1974,
-        "title": "Blazing Saddles 1974",
-        "description": "In order to ruin a western town and steal their land, a corrupt politician appoints a black sheriff, who promptly becomes his most formidable adversary.",
-        "embedId": "7502168066598",
-        "genres": ["Western","Comedy"],
-        "source": "ok.ru"
-     },
-      { "id": "Ride-With-The-Devil",
-        "posterUrl":  "images/Ride With The Devil.jpg",
-        "year": 1999,
-        "title": "Ride With The Devil 1999",
-        "description": "During the American Civil War, two friends join the Bushwhackers, a militant group loyal to the Confederacy.",
-        "embedId": "7210048883238",
-        "genres": ["Western","Drama","War"],
-        "source": "ok.ru"
-     },
-      { "id": "The-Thicket",
-        "posterUrl":  "images/The Thicket.jpg",
-        "year": 2024,
-        "title": "The Thicket 2024",
-        "description": "When a bounty hunter and a band of unlikely heroes pursue a brutal killer, they find themselves in a deadly no-man's-land known as The Thicket.",
-        "embedId": "9136509291046",
-        "genres": ["Western","Drama"],
-        "source": "ok.ru"
-     },
-      { 
-        "id": "Ghost-Town",
-        "posterUrl":  "images/Ghost Town.jpg",
-        "year": 2023,
-        "title": "Ghost Town (2023)",
-        "description": "In the untamed West of Victorian-era America, a drifter takes a job as a barman in a small Arizona town. After a series of bizarre deaths, he soon finds himself the target of suspicion",
-        "embedId": "6364574190118",
-        "genres": ["Western","Horror"],
-        "source": "ok.ru"
-     },
-            {
-        "id": "Goin-South",           
-        "posterUrl": "images/goin south.jpg", 
-        "year": 1978 ,           
-        "title": "Goin South ",        
-        "genres": ["Western","Comedy" ],      
-        "source": "ok.ru",       
-        "embedId": "7792993372782",      
-        "description": "Due to the lack of men after the Civil War, a small western town allows a bachelorette with ulterior motives to save a horse thief from the gallows by marrying him. They must deal with his old gang, the Sheriff, the bank, and each other."  
-    },
-              {
-        "id": "The-Searchers",
-        "posterUrl":  "images/The Searchers.jpg",
-        "year": 1956,
-        "title": "The Searchers 1956",
-        "description": "An American Civil War veteran embarks on a years-long journey to rescue his niece from the Comanches after the rest of his brother's family is massacred in a raid on their Texas farm.",
-        "embedId": "2950102780629 ",    
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Gunslingers",
-        "posterUrl":  "images/Gunslingers.jpg",
-        "year": 2025,
-        "title": "Gunslingers 2025",
-        "description": "In a town named Redemption, reformed gunslinger Keller and mad genius Ben are guided by spiritual leader Jericho towards vindication. While confronting their violent histories, their newfound peace is challenged by violence and revenge.",
-        "embedId": "9369180377506",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Dances-With-Wolves",
-        "posterUrl":  "images/Dances with Wolves.jpg",
-        "year": 1990,
-        "title": "Dances With Wolves 1990",
-        "description": "A lieutenant assigned to a remote Civil War outpost starts questioning his purpose after making contact with a neighboring Sioux settlement.",
-        "embedId": "9289789606562",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "Gallowwalkers",
-        "posterUrl":  "images/gallowwalkers.jpg",
-        "year": 2012,
-        "title": "Gallowwalkers",
-        "description": "A cursed gunman (Snipes) whose victims come back from the dead recruits a young warrior to help in the fight against a gang of zombies.",
-        "embedId": "231263636075",
-        "genres": ["Horror","Western"],
-        "source": "ok.ru"
-     },
-              {
-        "id": "Big-Jake",
-        "posterUrl":  "images/Big Jake.jpg",
-        "year": 1971,
-        "title": "Big Jake",
-        "description": "In 1909, when John Fain's gang kidnaps Jacob McCandles' grandson and holds him for ransom, Big Jake sets out to rescue the boy.",
-        "embedId": "8899457190490",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-     {
-        "id": "Chisum",
-        "posterUrl":  "images/chisum.jpg",
-        "year": 1970,
-        "title": "Chisum (1970)",
-        "description": "Cattle baron John Chisum joins forces with Billy the Kid and Pat Garrett to fight the Lincoln County land war.",
-        "embedId": "2282577660443",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "Purgatory",
-        "posterUrl":  "images/Purgatory.jpg",
-        "year": 1990,
-        "title": "Purgatory (1999)",
-        "description": "After outlaw Blackjack Britton (Eric Roberts) and his gang hold up a bank, they escape through a dust storm and wind up in the sleepy town of Refuge. Finding its inhabitants and sheriff (Sam Shepard) unusually passive and genteel, Blackjack and his bunch begin to take advantage, causing all manner of trouble. The gang can't fathom the town's lack of fight until they learn that Refuge is actually a purgatory for famous dead gunfighters who must resist the violence that marked their lives.",
-        "embedId": "3589312023118",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-              {
-        "id": "How-the-West-Was-Won",
-        "posterUrl":  "images/how the west was won.jpg",
-        "year":1962 ,
-        "title": "How the West Was Won",
-        "description": "A family saga covering several decades of Westward expansion in the 19th century, including the Gold Rush, the Civil War, and the building of the railroads.",
-        "embedId": "9877124614867",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "Unforgiven",
-        "posterUrl":  "images/Unforgiven.jpg",
-        "year":1992 ,
-        "title": "Unforgiven",
-        "description": "Retired Old West gunslinger Will Munny reluctantly takes on one last job to avenge an injustice with the help of his old partner and a young would-be gunman calling himself The Schofield Kid.",
-        "embedId": "2370504493750",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "Forsaken",
-        "posterUrl":  "images/Forsaken.jpg",
-        "year":2015,
-        "title": "Forsaken",
-        "description": "In 1872, an embittered gunslinger named John Henry Clayton attempts to make amends with his estranged father Reverend Samuel Clayton while their community is besieged by ruthless land-grabbers.",
-        "embedId": "3553582516791",
-        "genres": ["Western","Drama"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "Cahill-US-Marshal",
-        "posterUrl":"images/Cahill US Marshal.jpg",
-        "year":1973,
-        "title": "Cahill US Marshal",
-        "description": "A tough Marshal has a difficult task when his two sons join a gang and rob a bank.",
-        "embedId": "34814102148",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "True-Grit",
-        "posterUrl":  "images/true grit.jpg",
-        "year":2010,
-        "title": "True Grit",
-        "description": "A stubborn teenager enlists the help of a tough U.S. Marshal to track down her father's murderer",
-        "embedId": "31992842911",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "Cowboys-and-Aliens",
-        "posterUrl":"images/Cowboys & Aliens.jpg",
-        "year":2011,
-        "title": "Cowboys and Aliens",
-        "description": "A spaceship arrives in 1873 Arizona to take over the Earth, starting with the Wild West region. All that stands in their way: a posse of cowboys and natives",
-        "embedId": "37439867626",
-        "genres": ["Western","Sci-Fi","Action"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "The-Old-Way",
-        "posterUrl":  "images/The Old Way.jpg",
-        "year":2023,
-        "title": "The Old Way",
-        "description": "An old gunslinger and his daughter must face the consequences of his past, when the son of a man he murdered years ago arrives to take his revenge.",
-        "embedId": "FHiEpo3zpPY?si=xQcBsdJvrnGi33Vw",
-        "genres": ["Action","Western","Drama"],
-        "source": "youtube"
-     },
-             {
-        "id": "September-Dawn",
-        "posterUrl":  "images/September Dawn.jpg",
-        "year":2007,
-        "title": "September Dawn",
-        "description": "A love story set during a tense encounter between a wagon train of settlers and a renegade Mormon group.",
-        "embedId": "942196787759",
-        "genres": ["Drama","Western","History"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "The-Jack-Bull",
-        "posterUrl":  "images/The Jack Bull.jpg",
-        "year":1999,
-        "title": "The Jack Bull",
-        "description": "After being wrongfully denied justice, a horse trader seeks his own justice on a treacherous rancher.",
-        "embedId": "HiKgJJE1ick",
-        "genres": ["Western","Drama"],
-        "source": "youtube"
-     },
-             {
-        "id": "Birthright-Outlaw",
-        "posterUrl":  "images/Birthright Outlaw.jpg",
-        "year":2023,
-        "title": "Birthright Outlaw",
-        "description": "A daughter kidnapped. A hidden past revealed. A seemingly futile chance at rescue. Now, Rev. Jeremiah Jacobs and his wife Martha must overcome the lies of the past to find their Hope for the future.",
-        "embedId": "6877303015974",
-        "genres": ["Western","Drama"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "The-Five",
-        "posterUrl":  "images/The Five.jpg",
-        "year":2023,
-        "title": "The Five",
-        "description": "Five outlaws hide out after robbing a bank. The longer they wait for the woman with their share of the money to arrive, the more suspicion starts to grow. When a gun goes missing, everyone is left to ask, Who is the traitor?",
-        "embedId": "6850591722022",
-        "genres": ["Western","Action","Drama"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Homestead",
-        "posterUrl":  "images/Homestead.jpg",
-        "year":2023,
-        "title": "Homestead",
-        "description": "A family of homesteaders taken captive by a gang of outlaws. Their survival comes to rest in the hands of Irene: a loud-mouthed 12-year-old girl who's got an uncanny knack for shooting guns.",
-        "embedId": "5408574999078",
-        "genres": ["Western","Thriller","Drama"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "The-Cowboys",
-        "posterUrl":  "images/The Cowboys.jpg",
-        "year":1972,
-        "title": "The Cowboys",
-        "description": "Rancher Wil Andersen is forced to hire inexperienced boys as cowhands in order to get his cattle herd to market on time but the rough drive is full of dangers and a gang of rustlers is trailing them.",
-        "embedId": "5363947735590",
-        "genres": ["Western","Adventure"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Traded",
-        "posterUrl":  "images/traded.jpg",
-        "year":2016,
-        "title": "Traded",
-        "description": "In the 1880s western Traded, a father must leave his ranch for Dodge City to save his daughter from an old enemy, putting his reputation as the fastest draw in the west to the test.",
-        "embedId": "4493717539366",
-        "genres": ["Western","Action","Drama"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "The-Legend-of-5-Mile-Cave",
-        "posterUrl":  "images/The Legend of 5 Mile Cave.jpg",
-        "year":2019,
-        "title": "The Legend of 5 Mile Cave",
-        "description": "A mysterious drifter bonds with a boy with tales of the West. Past and present collide when a lawman appears seeking long-lost gold.",
-        "embedId": "3965391866406",
-        "genres": ["Western","Drama"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Murder-at-Yellowstone-City",
-        "posterUrl":  "images/Murder at Yellowstone City.jpg",
-        "year":2022,
-        "title": "Murder at Yellowstone City",
-        "description": "A former slave arrives in Yellowstone City, Montana, a desolate former boomtown now on the decline, looking for a place to call home. On that same day, a local prospector discovers gold - and is murdered.",
-        "embedId": "3812568599078",
-        "genres": ["Western","Drama","Mystery","Thriller"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Above-Snakes",
-        "posterUrl":  "images/Above Snakes.jpg",
-        "year":2022,
-        "title": "Above Snakes",
-        "description": "Coleman Dobbs has returned from prison seeking revenge on the judge who sentenced him. What better way to extract his revenge than by taking the only thing the judge really cares about. His daughter. But can it really be just that easy?",
-        "embedId": "3749774559782",
-        "genres": ["Western","Drama","Mystery"],
-        "source": "ok.ru"
-     },
-               {
-        "id": "From-Dusk-Till-Dawn-3-The-Hangman's-Daughter",
-        "posterUrl":  "images/From Dusk Till Dawn 3  The Hangman's Daughter.jpg",
-        "year":1999,
-        "title": "From Dusk Till Dawn 3  The Hangman's Daughter",
-        "description": "Set 100 years ago in Mexico, this horror/western is the story of the birth of the vampire princess Santanico Pandemonium.",
-        "embedId": "3681243761190",
-        "genres": ["Horror","Thriller","Western"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "The-Magnificent-Seven",
-        "posterUrl":  "images/the magnificent seven 1960.jpg",
-        "year":1960,
-        "title": "The Magnificent Seven",
-        "description": "Seven gunfighters are hired by Mexican peasants to liberate their village from oppressive bandits.",
-        "embedId": "9187069201058",
-        "genres": ["Western","Action","Adventure"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Calamity-Jane",
-        "posterUrl":  "images/Calamity Jane.jpg",
-        "year":2024,
-        "title": "Calamity Jane",
-        "description": "After her husband-to-be Wild Bill Hickok is killed in an infamous poker game, Calamity Jane must break out of prison and find his murderers before Deadwood's Sheriff can arrest her.",
-        "embedId": "6995830245926",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Butch-vs-Sundance",
-        "posterUrl":  "images/Butch vs Sundance.jpg",
-        "year":2023,
-        "title": "Butch vs Sundance",
-        "description": "After years of robbing and scheming, a feud between Butch and Sundance leads to mistrust and betrayal, jeopardizing the largest heist of the century.",
-        "embedId": "6895561476646",
-        "genres": ["Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "The-Last-Victim",
-        "posterUrl":  "images/The Last Victim.jpg",
-        "year":2022,
-        "title": "The Last Victim",
-        "description": "The Last Victim is a Neo Western thriller set in the American southwest, following Sheriff Hickey trying to solve the worst case he has seen in his small town, likely caused by a violent local gang led by a fearsome criminal.",
-        "embedId": "3682592426534",
-        "genres": ["Western","Crime","Drama","Thriller"],
-        "source": "ok.ru"
-     },
-              {
-    "id": "Custer-of-the-West",
-    "title": "Custer of the West (1967)",
-    "description": "Robert Shaw stars as George Armstrong Custer in this epic western following the cavalry commander's life and the events leading to the Battle of the Little Bighorn.",
-    "genres": ["Western", "History", "Epic"],
-  "posterUrl": "images/custer.jpg",
-    "source": "rumble",
-    "embedId": "v716790"
-},
-            
-     {
-    "id": "DISTANT_DRUMS",
-    "title": "DISTANT DRUMS 1952",
-    "description": "Deep in the Everglades... the war drums are beating.",
-    "genres": ["Western", "Epic"],
-  "posterUrl": "images/distant.jpg",
-    "source": "rumble",
-    "embedId": "v7187ea"
-},
-      
-   {
-        "id": "Stagecoach",
-        "title": "Stagecoach (1939) – John Wayne The Classic Western in Color",
-        "description": "Stagecoach (1939) – The Classic Western in Colour",
-        "genres": ["Western", "Epic"],
-        "posterUrl": "images/stage.jpg",
-        "source": "rumble",
-        "embedId": "v716bzc"
-    },
-   
-              {
-        "id": "long_shadows",
-        "posterUrl": "images/Long.jpg",
-        "year":2025,
-        "title": "long shadows ",
-        "description": "When a young boy's mother and father are savagely murdered, he ages out of an orphanage intent on revenge, but the love of a girl and psychological trauma lead him down a mystifying path.",
-        "embedId": "10768314206758",
-        "genres": ["Action,Western"],
-        "source": "ok.ru"
-     },
-             {
-        "id": "3:10_to_YUMA",
-        "title": "3:10 to YUMA (1957)",
-        "description": "In order to safeguard his ranch, Dan Evans decides to escort an outlaw, Ben Wade, to Contention City for a paltry sum of two hundred dollars.",
-        "genres": ["Western", "Epic"],
-        "posterUrl": "images/yuma.jpg",
-        "source": "rumble",
-        "embedId": "v71bqli"
-    },
-               {
-        "id": "Rawhide",
-        "title": "Rawhide (1951)",
-        "description": "A stagecoach stop employee and a stranded woman traveller find themselves at the mercy of four desperate outlaws, who are intent on robbing the next day's gold shipment.",
-        "genres": ["Western", "Epic"],
-        "posterUrl": "images/raw1.jpg",
-        "source": "rumble",
-        "embedId": "v71bv8q"
-    },
-    {
-        "id": "ZandysBride",
-        "title": "Zandy's Bride (1974)",
-        "description": "A raw, psychological study of frontier dominance. Gene Hackman stars as a hardened cattleman who treats his mail-order bride (Liv Ullmann) like livestock, leading to a brutal clash of wills.",
-        "genres": ["Western", "Drama"],
-        "posterUrl": "images/zandy.jpg",
-        "source": "rumble",
-        "embedId": "v71j3ma" 
-    },
-            {
-        "id": "WingsOfTheHawk",
-        "title": "Wings of the Hawk (1953)",
-        "description": "After his gold mine is illegally seized by a corrupt Governor, American engineer Irish Gallager (Van Heflin) is forced into the Mexican Revolution. A high-action study of how corruption turns honest men into outlaws.",
-        "genres": ["Western", "Action"],
-        "posterUrl": "images/wings.jpg",
-        "source": "rumble",
-        "embedId": "v71j3gg"
-    },
-            {
-        "id": "Winchester73",
-        "title": "Winchester'73 (1950)",
-        "description": "A 'One in a Thousand' rifle becomes an instrument of fate as it passes through the hands of killers, thieves, and cowards. James Stewart stars in this psychological study of obsession and fraternal vengeance.",
-        "genres": ["Western", "Psychological"],
-        "posterUrl": "images/win.jpg",
-        "source": "rumble",
-        "embedId": "v71j350"
-    },
-     {
-        "id": "HempBrown",
-        "title": "The Saga of Hemp Brown (1958)",
-        "description": "After being dishonorably discharged for a payroll robbery he didn't commit, Hemp Brown (Rory Calhoun) goes on a relentless hunt for the real killer to clear his name. A gritty look at frontier justice and the search for the truth.",
-        "genres": ["Western", "Crime"],
-        "posterUrl": "images/hemp1.jpg",
-        "source": "rumble",
-        "embedId": "v71j30q" 
-    },
-       {
-        "id": "DeadlyCompanions",
-        "title": "The Deadly Companions (1961)",
-        "description": "In Sam Peckinpah's directorial debut, an ex-Union officer accidentally kills a young boy and is forced to escort the grieving mother through dangerous Apache territory. A tense study of guilt and redemption.",
-        "genres": ["Western", "Drama"],
-        "posterUrl": "images/dead.webp",
-        "source": "rumble",
-        "embedId": "v71j2r4"
-    },
-            {
-        "id": "RobbersRoost",
-        "title": "Robbers' Roost (1955)",
-        "description": "Based on the Zane Grey classic, an embittered man (George Montgomery) goes undercover to join a gang of rustlers. A gritty exploration of revenge, double-crosses, and the thin line between lawman and outlaw.",
-        "genres": ["Western", "Action"],
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWMyOWYwMjktMGFmYy00NTc5LWJjMGMtNTNhNzA4NmMxNGRiXkEyXkFqcGc@._V1_.jpg",
-        "source": "rumble",
-        "embedId": "v71j2jm"
-    },
-     {
-        "id": "PharaohsArmy",
-        "title": "Pharaoh's Army (1995)",
-        "description": "Based on a true Kentucky legend, a Union captain (Chris Cooper) and his scavenging squad occupy the farm of a lone Confederate woman (Patricia Clarkson). A haunting, gritty study of how the 'pathology of war' turns ordinary people into enemies.",
-        "genres": ["Western", "War", "Drama"],
-        "posterUrl": "images/pharaoh.jpg",
-        "source": "rumble",
-        "embedId": "v71j26y"
-    },
-            {
-        "id": "PalsOfTheSaddle",
-        "title": "Pals of the Saddle (1938)",
-        "description": "John Wayne stars in this fast-paced 'Three Mesquiteers' adventure. The trio must stop a foreign agent from smuggling 'monitium'—a secret weapon chemical—out of the country. A rare look at the Duke before his legendary 'Stagecoach' breakthrough.",
-        "genres": ["Western", "Adventure"],
-        "posterUrl": "images/pals.jpg",
-        "source": "rumble",
-        "embedId": "v71j20w"
-    },
-        {
-        "id": "ManCalledGannon",
-        "title": "A Man Called Gannon (1968)",
-        "description": "Gannon (Tony Franciosa), a drifting cowboy haunted by a past tragedy involving barbed wire, takes a young protégé under his wing. Their bond is pushed to the breaking point when they end up on opposite sides of a violent range war.",
-        "genres": ["Western", "Psychological"],
-        "posterUrl": "images/gannon.jpg",
-        "source": "rumble",
-        "embedId": "v71j1v2"
-    },
-            {
-        "id": "GreatDayMorning",
-        "title": "Great Day in the Morning (1956)",
-        "description": "In pre-Civil War Denver, a Southern gambler (Robert Stack) wins a hotel in a card game but finds himself torn between his own greed and his loyalty to the South. A beautifully shot study of divided allegiances and moral conflict.",
-        "genres": ["Western", "Drama"],
-        "posterUrl": "images/greatday.jpg",
-        "source": "rumble",
-        "embedId": "v71j1g6"
-    },
-            
-  {
-    "id": "7th-cavalry-1956",
-    "title": "7th Cavalry (1956)",
-    "description": "Randolph Scott stars as a captain who missed the Battle of the Little Bighorn and must volunteer for a dangerous mission to recover the dead and prove his honor.",
-    "genres": ["Western", "Drama"],
-    "posterUrl": "images/7th cav.jpg",
-    "source": "rumble",
-    "embedId": "v71kita"
-  },
- {
-  "id": "black-fox-1995",
-  "title": "Black Fox (1995)",
-  "description": "Christopher Reeve and Tony Todd star as two brothers—one a former slave, one a master—who must unite to survive the brutal Texas frontier.",
-  "genres": ["Western", "Drama"],
-  "posterUrl": "images/blackfox.jpg",
-  "source": "rumble",
-  "embedId": "v71kkzo"
-},
-  {
-    "id": "four-faces-west-1948",
-    "title": "Four Faces West (1948)",
-    "description": "A unique Western where not a single shot is fired. A bank robber on the run is pursued by Pat Garrett in this gripping psychological study.",
-    "genres": ["Western", "Psychological"],
-    "posterUrl": "images/Four Faces West (1948).webp",
-    "source": "rumble",
-    "embedId": "v71klgg"
-  },
-  {
-    "id": "navajo-joe-1966",
-    "title": "Navajo Joe (1966)",
-    "description": "Burt Reynolds stars as a lone Navajo warrior seeking vengeance against a gang of scalp-hunters in this stylish Spaghetti Western.",
-    "genres": ["Western", "Action"],
-    "posterUrl": "images/navajo-joe.jpg",
-    "source": "rumble",
-    "embedId": "v71klxq"
-  },
-  {
-    "id": "overland-stage-raiders-1938",
-    "title": "Overland Stage Raiders (1938)",
-    "description": "John Wayne and the Three Mesquiteers protect gold shipments from airborne hijackers. Notable as the final film of silent star Louise Brooks.",
-    "genres": ["Western", "Adventure"],
-    "posterUrl": "images/overland-stage.jpg",
-    "source": "rumble",
-    "embedId": "v71km3c"
-  },
-  {
-    "id": "quantez-1957",
-    "title": "Quantez (1957)",
-    "description": "A gang of outlaws takes refuge in a desert ghost town, only to find their internal tensions are more dangerous than the Apache waiting outside.",
-    "genres": ["Western", "Noir"],
-    "posterUrl": "images/quantez.jpg",
-    "source": "rumble",
-    "embedId": "v71km9u"
-  },
-  {
-    "id": "raw-edge-1956",
-    "title": "Raw Edge (1956)",
-    "description": "A brutal 'frontier law' states that a widow belongs to the first man who claims her, sparking a violent power struggle in the Oregon territory.",
-    "genres": ["Western", "Drama"],
-    "posterUrl": "images/raw-edge.jpg",
-    "source": "rumble",
-    "embedId": "v71kmjc"
-  },
-  {
-    "id": "red-sundown-1956",
-    "title": "Red Sundown (1956)",
-    "description": "A reformed gunfighter (Rory Calhoun) becomes a deputy to keep a vow, only to be caught in a ruthless range war.",
-    "genres": ["Western", "Action"],
-    "posterUrl": "images/red-sundown.jpg",
-    "source": "rumble",
-    "embedId": "v71kmom"  
-  },
-  {
-    "id": "cariboo-trail-1950",
-    "title": "The Cariboo Trail (1950)",
-    "description": "Randolph Scott leads cattle and men into the Canadian Gold Rush, facing off against greedy land barons in the wilderness.",
-    "genres": ["Western", "History"],
-    "posterUrl": "images/cariboo.jpg",
-    "source": "rumble",
-    "embedId": "v71kmwa"
-  },
-  {
-    "id": "sheepman-1958",
-    "title": "The Sheepman (1958)",
-    "description": "A clever sheep farmer (Glenn Ford) uses his wits to outmaneuver a hostile cattle town. Featuring Leslie Nielsen as a rare villain.",
-    "genres": ["Western", "Comedy"],
-    "posterUrl": "images/sheepman.jpg",
-    "source": "rumble",
-    "embedId": "v71kn6g"
-  },
-  {
-    "id": "walk-the-proud-land-1956",
-    "title": "Walk The Proud Land (1956)",
-    "description": "Audie Murphy stars in the true story of John Clum, an Indian agent who fought for peace and self-government for the Apache people.",
-    "genres": ["Western", "Biography"],
-    "posterUrl": "images/walk.jpg",
-    "source": "rumble",
-    "embedId": "v71knek"
-  },
-            {
-    "id": "bend-of-the-river-1952",
-    "title": "Bend of the River (1952)",
-    "description": "James Stewart stars as a man with a dark past leading a wagon train of settlers to Oregon who must fight off hijackers and betrayal.",
-    "genres": ["Western", "Action"],
-    "posterUrl": "images/bendoftheriver.jpg",
-    "source": "rumble",
-    "embedId": "v71lyoo"
-  },
-  {
-    "id": "column-south-1953",
-    "title": "Column South (1953)",
-    "description": "An Audie Murphy classic set on the eve of the Civil War, following a cavalry officer trying to maintain peace with the Navajo.",
-    "genres": ["Western", "History"],
-    "posterUrl": "images/columnsouth.jpg",
-    "source": "rumble",
-    "embedId": "v71lyxi"
-  },
-  {
-    "id": "he-rides-tall-1964",
-    "title": "He Rides Tall (1964)",
-    "description": "A gritty study of duty where a sheriff is forced into a deadly showdown with the son of the man who raised him.",
-    "genres": ["Western", "Drama"],
-    "posterUrl": "images/heridestall.jpg",
-    "source": "rumble",
-    "embedId": "v71lzmk"
-  },
-  {
-    "id": "stranger-at-my-door-1956",
-    "title": "Stranger At My Door (1956)",
-    "description": "A psychological Western focusing on a preacher's attempt to reform a violent outlaw who seeks refuge in his home.",
-    "genres": ["Western", "Psychological"],
-    "posterUrl": "images/strangeratdoor.jpg",
-    "source": "rumble",
-    "embedId": "v71m0ba"
-  },
-  {
-    "id": "gunfight-dodge-city-1959",
-    "title": "The Gunfight At Dodge City (1959)",
-    "description": "Joel McCrea stars as Bat Masterson, cleaning up the lawless town of Dodge City to avenge his brother.",
-    "genres": ["Western", "Action"],
-    "posterUrl": "images/dodgecity.jpg",
-    "source": "rumble",
-    "embedId": "v71m1e8"
-  },
-  {
-    "id": "guns-of-fort-petticoat-1957",
-    "title": "The Guns of Fort Petticoat (1957)",
-    "description": "Audie Murphy trains a group of women to defend their Texas ranch against an imminent uprising during the Civil War.",
-    "genres": ["Western", "Action"],
-    "posterUrl": "images/fortpetticoat.webp",
-    "source": "rumble",
-    "embedId": "v71m1m8"
-  },
-  {
-    "id": "the-quest-1976",
-    "title": "The Quest: The Longest Drive (1976)",
-    "description": "Kurt Russell and Tim Matheson are brothers searching for their long-lost sister across the dangerous frontier.",
-    "genres": ["Western", "Adventure"],
-    "posterUrl": "images/thequest.webp",
-    "source": "rumble",
-    "embedId": "v71m1y0"
-  },
-  {
-    "id": "westbound-1959",
-    "title": "Westbound (1959)",
-    "description": "A Union officer fights to establish a vital stagecoach line through hostile territory to transport gold for the war.",
-    "genres": ["Western", "Action"],
-    "posterUrl": "images/westbound.jpg",
-    "source": "rumble",
-    "embedId": "v71m256"
-  },
-  {
-    "id": "westward-the-women-1951",
-    "title": "Westward The Women (1951)",
-    "description": "An epic tale of 150 women crossing 2,000 miles of treacherous land to become brides in California.",
-    "genres": ["Western", "Drama"],
-    "posterUrl": "images/westwardwomen.jpg",
-    "source": "rumble",
-    "embedId": "v71m2zo"
-  },
-             {
-    "id": "THE_HALLELUJAH_TRAIL",
-    "title": "THE HALLELUJAH TRAIL Bert Lancaster (1965)",
-    "description": "When the city of Denver faces a shortage of whiskey, the citizens order a large number of barrels but meet with unexpected opposition from the temperance league, soldiers and the miners themselves",
-    "genres": ["Western", "Epic"],
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTExMTgyMDUwNDdeQTJeQWpwZ15BbWU3MDAwOTI5MzQ@._V1_.jpg",
-    "source": "rumble",
-    "embedId": "v71871i"
-},    
-  {
-    "id": "wichita-1955",
-    "title": "Wichita (1955)",
-    "description": "Joel McCrea portrays Wyatt Earp in his early days as he reluctantly brings order to a lawless cattle town.",
-    "genres": ["Western", "Biography"],
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMmMwNWNmMDctYWRmZC00NDMyLTkyZDgtMWFmZjAzNWM5M2FkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "source": "rumble",
-    "embedId": "v71m30a"
-  },
-     {
-    "id": "Broken-Arrow-1950",
-    "title": "Broken Arrow (1950)",
-    "description": "A classic western starring James Stewart as Tom Jeffords, who attempts to broker peace between the U.S. Army and the Apache leader Cochise.",
-    "genres": ["Western"],
-    "posterUrl": "images/brokenarrow.jpg",
-    "source": "rumble",
-    "embedId": "v719fiu"
-},
-      {
-  "id": "the-quick-and-the-dead-1995",
-  "title": "The Quick and the Dead (1995)",
-  "description": "A mysterious female gunfighter arrives in a frontier town to participate in a deadly dueling tournament to settle an old score with the town's ruthless leader.",
-  "genres": ["Action", "Western", "Thriller", "Movie"],
-  "posterUrl": "images/the-quick-and-the-dead.jpg",
-  "source": "rumble",
-  "embedId": "v71pb32"
-}, 
-   
-   {
-  "id": "million",
-  "title": "A Million Ways to Die in the West",
-  "year": 2014,
-  "description": "After a cowardly sheep farmer backs out of a gunfight, his girlfriend leaves him. He soon meets a mysterious woman who helps him find his courage and discover his true potential.",
-  "genres": ["Action", "Western", "Comedy", "Movie"],
-  "posterUrl": "images/a-million-ways-to-die-in-the-west.jpg",
-  "source": "ok.ru",
-  "embedId": "10748095105689"
-},
- {
-  "id": "drifter",
-  "title": "High Plains Drifter",
-  "year": 1973,
-  "description": "A gun-fighting stranger comes to the small settlement of Lago and is hired to protect the townsfolk from three outlaws. He soon turns the town upside down to prepare for the confrontation.",
-  "genres": ["Western", "Action", "Mystery", "Movie"],
-  "posterUrl": "images/high.jpg",
-  "source": "ok.ru",
-  "embedId": "10749466708633"
-},
-     {
-  "id": "billy",
-  "title": "The Left Handed Gun",
-  "year": 1958,
-  "description": "A psychological look at the life of William Bonney, the youth who would become the legendary outlaw Billy the Kid.",
-  "genres": ["Western", "Drama", "Classic", "Movie"],
-  "posterUrl": "images/the-left-handed-gun-1958.jpg",
-  "source": "rumble",
-  "embedId": "v71s91m"
-},
-            {
-  "id": "california",
-  "title": "In Old California",
-  "year": 1942,
-  "description": "A Boston pharmacist moves to Sacramento and clashes with a local boss while trying to establish a new life during the Gold Rush.",
-  "genres": ["Western", "Drama", "Classic", "Movie"],
-  "posterUrl": "images/in-old-california-1942.jpg",
-  "source": "rumble",
-  "embedId": "v71scwe"
-},
-          {
-  "id": "renegade",
-  "title": "Renegade Girl",
-  "year": 1946,
-  "description": "A Southern woman caught in the tensions of the post-Civil War West leads a group of renegades while torn between loyalty and peace.",
-  "genres": ["Western", "Action", "Classic", "Movie"],
-  "posterUrl": "images/renegade-girl-1946.jpg",
-  "source": "rumble",
-  "embedId": "v71shey"
-},
-            {
-  "id": "red-river",
-  "title": "Red River",
-  "year": 1948,
-  "description": "A tyrannical cattle rancher leads a massive drive to Missouri, leading to a violent confrontation with his adopted son who takes control of the herd.",
-  "genres": ["Western", "Action", "Classic", "Movie"],
-  "posterUrl": "images/red-river-1948.jpg",
-  "source": "rumble",
-  "embedId": "v71skqy"
-},
-   {
-  "id": "high-noon",
-  "title": "High Noon",
-  "year": 1952,
-  "description": "A small-town marshal, newly married and about to retire, must face a gang of killers alone when the townspeople refuse to help him.",
-  "genres": ["Western", "Drama", "Classic", "Movie"],
-  "posterUrl": "images/high-noon-1952.jpg",
-  "source": "rumble",
-  "embedId": "v71snru"
-},
-  {
-  "id": "the-glory-guys-1965",
-  "title": "The Glory Guys",
-  "year": 1965,
-  "description": "Two cavalry officers vie for the same woman while their regiment prepares for a deadly campaign against the Sioux.",
-  "genres": ["Western", "Action", "Drama", "Movie"],
-   "posterUrl": "images/glory.jpg",
-  "source": "rumble",
-  "embedId": "v71xjxg"
-},
-  {
-  "id": "hondo-1953",
-  "title": "Hondo",
-  "year": 1953,
-  "description": "Cavalry scout Hondo Lane becomes the protector of a woman and her son living in the heart of warring Apache territory.",
-  "genres": ["Western", "Action", "Drama", "Movie"],
-  "posterUrl": "images/hondo.jpg",
-  "source": "rumble",
-  "embedId": "v71z5qc"
-},
-           {
-  "id": "big-jake-1971",
-  "title": "Big Jake",
-  "year": 1971,
-  "description": "When a ruthless gang kidnaps his grandson, Jacob McCandles, a man who has outlived his time, sets out to bring him home with the help of his dog and his sons.",
-  "genres": ["Western", "Action", "Classic", "Movie"],
-  "posterUrl": "images/big-jake.jpg",
-  "source": "rumble",
-  "embedId": "v71zl2a"
-},
- {
-  "id": "the-alamo-1960",
-  "title": "The Alamo",
-  "year": 1960,
-  "description": "In 1836, a small band of 187 Texan soldiers, led by Davy Crockett, Jim Bowie, and William Travis, make a legendary stand against the massive Mexican army of General Santa Anna to buy time for Texas independence.",
-  "genres": ["Western", "Action", "History", "Classic", "Movie"],
-  "posterUrl": "images/thealamo.jpg",
-  "source": "rumble",
-  "embedId": "v720nwq"
-},
-            {
-  "id": "the-last-challenge-1967",
-  "title": "The Last Challenge",
-  "year": 1967,
-  "description": "A veteran marshal and former gunfighter is challenged by a young, ambitious marksman who wants to prove he is the fastest draw in the West.",
-  "genres": ["Western", "Action", "Classic"],
-  "posterUrl": "images/thelastchallenge.jpg",
-  "source": "rumble",
-  "embedId": "v722qx8"
-},
-            {
-  "id": "the-trap-1966",
-  "title": "The Trap",
-  "year": 1966,
-  "description": "A rugged fur trapper takes a mute girl as his wife and brings her to his remote cabin in the Canadian wilderness, where they must face the brutal elements and each other.",
-  "genres": ["Western", "Drama", "Adventure", "Classic"],
-  "posterUrl": "images/thetrap.jpg",
-  "source": "rumble",
-  "embedId": "v723tve"
-},
-            {
-  "id": "Diablo-2016",
-  "posterUrl": "images/diablo2016.jpg",
-  "year": 2016,
-  "title": "Diablo",
-  "description": "A young Civil War veteran forced on a desperate journey to save his kidnapped wife from a band of ruthless killers.",
-  "embedId": "v72agtu",
-  "genres": ["Western", "Action", "Thriller"],
-  "source": "rumble"
-},
-      {
-    "id": "Apache-Rifles-1964",
-    "posterUrl": "images/apacherifles1964.jpg",
-    "year": 1964,
-    "title": "Apache Rifles",
-    "description": "A tough cavalry officer must choose between his military orders and justice when greedy gold miners provoke a war with the Apache nation.",
-    "embedId": "v72cb6q",
-    "genres": ["Western", "Action", "Drama"],
-    "source": "rumble"
-  },
-  {
-    "id": "Blood-Moon-2014",
-    "posterUrl": "images/bloodmoon2014.jpg",
-    "year": 2014,
-    "title": "Blood Moon",
-    "description": "Stuck in a ghost town, outlaws and travelers must unite to survive the night against a legendary Native American werewolf known as the Skinwalker.",
-    "embedId": "v72cbc6",
-    "genres": ["Western", "Horror", "Thriller"],
-    "source": "rumble"
-  },
-   {
-    "id": "Ghost-Town-1956",
-    "posterUrl": "images/ghosttown1956.jpg",
-    "year": 1956,
-    "title": "Ghost Town 1956",
-    "description": "A stagecoach under siege takes refuge in an abandoned town, where the pressure of an Indian attack forces the passengers' dark secrets to the surface.",
-    "embedId": "v72cblm",
-    "genres": ["Western"],
-    "source": "rumble"
-  },
-  {
-    "id": "The-Proud-Rebel-1958",
-    "posterUrl": "images/proudrebel1958.jpg",
-    "year": 1958,
-    "title": "The Proud Rebel",
-    "description": "A former Confederate soldier wanders the country with his mute son, finding hope and conflict on a farm run by a strong-willed woman.",
-    "embedId": "v72cd0s",
-    "genres": ["Western", "Family", "Drama"],
-    "source": "rumble"
-  },
-  {
-    "id": "Warlock-1959",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWE0OTEwMDMtNTlhMi00MGNjLThlOTYtM2FkMmUzNWUxZTU2XkEyXkFqcGc@._V1_.jpg",
-    "year": 1959,
-    "title": "Warlock",
-    "description": "A terrified mining town hires a famous mercenary gunman to restore order, but the law he brings is just as dangerous as the outlaws he hunts.",
-    "embedId": "v72cd5u",
-    "genres": ["Western", "Drama", "Psychological"],
-    "source": "rumble"
-  },
-   {
-    "id": "TheStranger",
-    "posterUrl": "images/strangerworeagun1953.jpg",
-    "year": 1953,
-    "title": "The Stranger Wore a Gun",
-    "description": "A former spy for Quantrill's Raiders tries to start a new life in Arizona, but is pulled back into a world of outlaws, gold robberies, and revenge.",
-    "embedId": "v72e2d0",
-    "genres": ["Western", "Action", "Drama"],
-    "source": "rumble"
-  },
-   {
-    "id": "GreenGold1949",
-    "posterUrl": "images/greengold1949.jpg",
-    "year": 1949,
-    "title": "Green Gold (Thunder in the Pines)",
-    "description": "George Reeves and Ralph Byrd star as rival lumberjacks competing for a bonus and a beautiful bride in the North Woods.",
-    "embedId": "v72e2jq",
-    "genres": ["Western", "Romance", "Adventure"],
-    "source": "rumble"
-  },
-   {
-    "id": "theoutlaw",
-    "title": "The Outlaw (1943) [Colorized] [Subtitles]",
-    "description": "The legendary 1943 Western 'The Outlaw' featuring Jane Russell. This colorized version brings Billy the Kid and Doc Holliday to life. Watch the full movie and more classics at https://moviehub.zya.me/index.html",
-    "genres": ["Western", "Colorized", "Subtitles", "Action", "Jane Russell", "1940s"],
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjhjODA0ZGYtNzQ3Mi00MmY3LWI4ZDItZDA5OTQwODk3NTA1XkEyXkFqcGc@._V1_.jpg",
-    "source": "rumble",
-    "embedId": "v72ktj8"
-},
-   {
-        "id": "RobbersRoost",
-        "title": "Robbers' Roost (1955)",
-        "description": "Based on the Zane Grey classic, an embittered man (George Montgomery) goes undercover to join a gang of rustlers. A gritty exploration of revenge, double-crosses, and the thin line between lawman and outlaw.",
-        "genres": ["Western", "Action"],
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTc5NTUzNDYtMjgxOS00OThjLWIxOGYtYzViYjJhZTJiMmU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        "source": "rumble",
-        "embedId": "v71j2jm"
-    },
-    {
-    "id": "vengeance",
-    "title": "Vengeance Valley (1951)",
-    "description": "Burt Lancaster stars in his first Western as a loyal ranch foreman caught in a web of betrayal.",
-    "genre": "Western",
-    "year": 1951,
-    "quality": "1080p",
-    "posterUrl":"https://m.media-amazon.com/images/M/MV5BMzQwMzAzMTctMDM3Ny00ZjMzLTkzY2UtZTZjOWNmZTZjZWNjXkEyXkFqcGc@._V1_.jpg",
-    "category": "Westerns",
-    "embedId": "v72o1nw",  
-    "source": "rumble"
-  },
-   {
-    "id": "barbary-coast-1935",
-    "title": "Barbary Coast (1935)",
-    "description": "A gritty Gold Rush era drama starring Edward G. Robinson as a corrupt crime lord in lawless San Francisco.",
-    "genre": "Western",
-    "year": 1935,
-    "quality": "1080p",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmRlZjMzYTktOWZiMC00MWJiLWFhNTEtMjkzMzNkY2NiZWNiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "category": "Absolute Westerns",
-    "embedId": "v72o0r4",
-    "source": "rumble"
-  },
-  {
-    "id": "one-little-indian-1973",
-    "title": "One Little Indian (1973)",
-    "description": "A U.S. Cavalry deserter (James Garner) flees across the desert on a camel with a runaway boy.",
-    "genre": "Western",
-    "year": 1973,
-    "quality": "1080p",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDM1NTVkNjgtOGVjZi00NTQ0LWExYTgtNjJhYTUxZDZmMzVjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "category": "Absolute Westerns",
-    "embedId": "v72o13e",
-    "source": "rumble"
-  }
+        <div id="all-movie-grid" class="movie-grid"></div>
 
-           
-  ];
-          moviesData.forEach(movie => {
-    movie.views = 0;
-});
+        <div class="pagination mt-12 flex justify-center items-center gap-4">
+          <button id="homePageBtn" class="px-4 py-2 bg-[#5D3FD3] rounded">Home</button>
+          <button id="prevPage" class="px-4 py-2 bg-gray-800 rounded">Previous</button>
+          <span id="pageInfo" class="text-white font-bold">Page 1 of 1</span>
+          <button id="nextPage" class="px-4 py-2 bg-gray-800 rounded">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        // --- END OF MOVIE DATA ---
+  <footer>
+    <div class="container">
+      <p>© 2025 The Movie Hub. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
 
-       
+  <script>
+    let currentPage = 1;
+    const moviesPerPage = 24;
+    let allMovies = [];
+    let filteredMovies = [];
 
-        // Pagination variables
-      // --- START OF REWRITTEN CODE ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hide noscript fallback
+      const nos = document.querySelector('noscript');
+      if (nos) nos.remove();
 
-// Pagination variables
-// --- START OF REFINED CODE ---
+      // Load movies.json and filter to Westerns only
+      fetch('movies.json')
+        .then(response => response.json())
+        .then(moviesData => {
+          allMovies = moviesData.filter(movie => 
+            movie.genres && Array.isArray(movie.genres) && 
+            movie.genres.some(g => g.toLowerCase().includes('western'))
+          );
+          filteredMovies = [...allMovies];
+          renderCurrentPage();
+        })
+        .catch(err => {
+          console.error('Error loading Westerns:', err);
+          document.getElementById('all-movie-grid').innerHTML = 
+            '<p style="color: red; text-align:center;">Failed to load Westerns</p>';
+        });
 
-// Pagination variables
-const moviesPerPage = 15;
-let currentPage = 1;
-let filteredMovies = [];
-let allGenres = new Set(); // To store unique genres
-
-// Assuming moviesData is defined elsewhere in your script, e.g.:
-// const moviesData = [
-//     { id: 1, title: "Movie A", year: 2023, genres: ["Action"], description: "...", posterUrl: "..." },
-//     { id: 2, title: "Movie B", year: 2022, genres: ["Comedy"], description: "...", posterUrl: "..." },
-//     // ... more movie objects
-// ];
-
-function getUniqueGenres(movies) {
-    allGenres.clear(); // Clear previous genres to rebuild
-    movies.forEach(movie => {
-        // Ensure movie.genres exists and is an array before iterating
-        if (movie.genres && Array.isArray(movie.genres)) {
-            movie.genres.forEach(genre => {
-                allGenres.add(genre.trim());
-            });
+      // Search on button click or Enter key
+      document.getElementById('searchButton').addEventListener('click', filterMovies);
+      document.getElementById('movie-search').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          filterMovies();
         }
-        // If movie.genre (singular) is a string, handle it
-        else if (typeof movie.genre === 'string' && movie.genre.trim() !== '') {
-            movie.genre.split(',').forEach(genre => { // Split by comma if it's a single string
-                 allGenres.add(genre.trim());
-            });
+      });
+
+      document.getElementById('clearSearchButton').addEventListener('click', () => {
+        document.getElementById('movie-search').value = '';
+        filteredMovies = [...allMovies];
+        currentPage = 1;
+        renderCurrentPage();
+      });
+
+      // Pagination buttons
+      document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderCurrentPage();
         }
+      });
+
+      document.getElementById('nextPage').addEventListener('click', () => {
+        if (currentPage < Math.ceil(filteredMovies.length / moviesPerPage)) {
+          currentPage++;
+          renderCurrentPage();
+        }
+      });
+
+      document.getElementById('homePageBtn').addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
     });
-    return Array.from(allGenres).sort();
-}
 
-function createGenreButtons() {
-    const genreButtonsContainer = document.getElementById('genre-buttons');
-    genreButtonsContainer.innerHTML = ''; // Clear existing content
+    function renderCurrentPage() {
+      const grid = document.getElementById('all-movie-grid');
+      grid.innerHTML = '';
 
-    const allButton = document.createElement('button');
-    allButton.textContent = 'All';
-    allButton.classList.add('active-genre-button'); // Initially active
-    allButton.addEventListener('click', () => {
-        setActiveGenreButton(allButton);
-        filterMovies(); // Call filterMovies after setting genre, with empty search term
-    });
-    genreButtonsContainer.appendChild(allButton);
+      const start = (currentPage - 1) * moviesPerPage;
+      const end = start + moviesPerPage;
+      const pageMovies = filteredMovies.slice(start, end);
 
-    const genres = getUniqueGenres(moviesData); // Use moviesData to get all unique genres
-    genres.forEach(genre => {
-        const button = document.createElement('button');
-        button.textContent = genre;
-        button.addEventListener('click', () => {
-            setActiveGenreButton(button);
-            filterMovies(); // Call filterMovies after setting genre
-        });
-        genreButtonsContainer.appendChild(button);
-    });
-}
+      pageMovies.forEach(movie => {
+        const card = document.createElement('div');
+        card.className = 'movie-card';
 
-function setActiveGenreButton(activeButton) {
-    const buttons = document.querySelectorAll('#genre-buttons button');
-    buttons.forEach(button => {
-        button.classList.remove('active-genre-button');
-    });
-    activeButton.classList.add('active-genre-button');
-}
+        card.innerHTML = `
+          <div class="movie-card-media">
+            <img src="${movie.posterUrl}" alt="${movie.title}" loading="lazy">
+          </div>
+          <div class="movie-card-info">
+            <h3>${movie.title}</h3>
+            <p class="meta">${movie.year || 'N/A'} | ${movie.genres ? movie.genres.join(', ') : 'N/A'}</p>
+            <a href="movie-details.html?id=${movie.id}" class="view-details">VIEW DETAILS</a>
+          </div>
+        `;
 
-function filterMovies() {
-    const searchTerm = document.getElementById('movie-search').value.toLowerCase();
-    const activeGenreButton = document.querySelector('.active-genre-button');
-    const selectedGenre = activeGenreButton ? activeGenreButton.textContent : 'All'; // Default to 'All' if no button active
+        grid.appendChild(card);
+      });
 
-    // Start with all original movies
-    let tempFilteredMovies = [...moviesData];
-
-    // Apply genre filter first
-    if (selectedGenre !== 'All') {
-        tempFilteredMovies = tempFilteredMovies.filter(movie => {
-            // Ensure movie.genres is an array before checking includes
-            return movie.genres && Array.isArray(movie.genres) && movie.genres.includes(selectedGenre);
-        });
+      const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
+      document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages || 1}`;
+      document.getElementById('prevPage').disabled = currentPage === 1;
+      document.getElementById('nextPage').disabled = currentPage >= totalPages || totalPages === 0;
     }
 
-    // Apply search term filter on the already genre-filtered movies
-    if (searchTerm) { // Only filter by search term if there is one
-        tempFilteredMovies = tempFilteredMovies.filter(movie => {
-            const matchesTitle = movie.title && movie.title.toLowerCase().includes(searchTerm);
-            const matchesDescription = movie.description && movie.description.toLowerCase().includes(searchTerm);
-            const matchesDirector = movie.director && movie.director.toLowerCase().includes(searchTerm);
-            
-            // This is the line that was likely causing the error.
-            // We now ensure movie.genres is an array before calling .some()
-            const matchesGenreSearch = movie.genres && Array.isArray(movie.genres) && 
-                                       movie.genres.some(genre => genre.toLowerCase().includes(searchTerm));
-            
-            const matchesYear = String(movie.year).includes(searchTerm);
+    function filterMovies() {
+      const query = document.getElementById('movie-search').value.toLowerCase().trim();
+      if (!query) {
+        filteredMovies = [...allMovies];
+        currentPage = 1;
+        renderCurrentPage();
+        return;
+      }
 
-            return matchesTitle || matchesDescription || matchesDirector || matchesGenreSearch || matchesYear;
-        });
+      filteredMovies = allMovies.filter(movie => {
+        const titleMatch = movie.title.toLowerCase().includes(query);
+        const genreMatch = movie.genres && movie.genres.some(g => g.toLowerCase().includes(query));
+        const yearMatch = movie.year && String(movie.year).includes(query);
+        const descMatch = movie.description && movie.description.toLowerCase().includes(query);
+        return titleMatch || genreMatch || yearMatch || descMatch;
+      });
+
+      currentPage = 1;
+      renderCurrentPage();
     }
-
-    // Always re-sort the combined filtered results by year (latest first)
-    tempFilteredMovies.sort((a, b) => b.year - a.year);
-
-    // Update the global filteredMovies
-    filteredMovies = tempFilteredMovies;
-
-    currentPage = 1; // Reset to the first page for new search/filter results
-    renderMoviesForPage();
-}
-
-function renderMoviesForPage() {
-    const movieGrid = document.getElementById('all-movie-grid');
-    movieGrid.innerHTML = ''; // Clear previous movies
-
-    const startIndex = (currentPage - 1) * moviesPerPage;
-    const endIndex = startIndex + moviesPerPage;
-    const moviesToRender = filteredMovies.slice(startIndex, endIndex);
-
-    if (moviesToRender.length === 0) {
-        movieGrid.innerHTML = '<p>No movies found matching your criteria.</p>';
-    } else {
-        moviesToRender.forEach(movie => {
-            const movieCard = document.createElement('div');
-            movieCard.classList.add('movie-card');
-
-            const posterSrc = movie.posterUrl ? movie.posterUrl : 'images/placeholder.jpg';
-            
-            // Ensure genres are joined correctly even if movie.genres is not an array
-            const displayGenres = movie.genres && Array.isArray(movie.genres) ? movie.genres.join(', ') : 'N/A';
-
-            movieCard.innerHTML = `
-                <div class="movie-card-media">
-                    <img src="${posterSrc}" alt="${movie.title} Poster">
-                </div>
-                <h3>${movie.title}</h3>
-                <p>${movie.year} | ${displayGenres}</p>
-                <a href="movie-details.html?id=${movie.id}" class="card-link">
-                    <div class="details-text">View Details</div>
-                </a>
-            `;
-            movieGrid.appendChild(movieCard);
-        });
-    }
-    updatePagination();
-}
-
-function updatePagination() {
-    const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
-    document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages || 1}`;
-    document.getElementById('prevPage').disabled = currentPage === 1;
-    document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
-    document.getElementById('homePageBtn').disabled = currentPage === 1;
-}
-
-function goToNextPage() {
-    const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
-    if (currentPage < totalPages) {
-        currentPage++;
-        renderMoviesForPage();
-    }
-}
-
-function goToPrevPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        renderMoviesForPage();
-    }
-}
-
-function goToHomePage() {
-    currentPage = 1;
-    renderMoviesForPage();
-}
-
-function clearSearchAndFilter() {
-    document.getElementById('movie-search').value = ''; // Clear the search input
-    setActiveGenreButton(document.querySelector('#genre-buttons button:first-child')); // Set 'All' genre button active
-    filterMovies(); // Call filterMovies to reset to all movies and re-render
-}
-
-// This function needs to be outside DOMContentLoaded to be globally accessible
-function viewMovie(movieId, movieSource, movieEmbedId) {
-    // This function is for direct embed if needed, currently movie-details.html is used.
-    // Keeping it here for consistency/future use if you switch back.
-    alert(`Viewing movie ${movieId} from ${movieSource} with ID ${movieEmbedId}`);
-}
-
-// Event Listeners - This part of your code is good and doesn't need changes.
-document.addEventListener('DOMContentLoaded', () => {
-    // Initial sort of the main moviesData array by year (latest first)
-    moviesData.sort((a, b) => b.year - a.year);
-
-    filteredMovies = [...moviesData]; // Initialize filteredMovies with all movies
-    createGenreButtons();
-    renderMoviesForPage(); // Render initial page
-
-    document.getElementById('movie-search').addEventListener('input', filterMovies);
-    document.getElementById('searchButton').addEventListener('click', filterMovies);
-    document.getElementById('clearSearchButton').addEventListener('click', clearSearchAndFilter);
-    document.getElementById('prevPage').addEventListener('click', goToPrevPage);
-    document.getElementById('nextPage').addEventListener('click', goToNextPage);
-    document.getElementById('homePageBtn').addEventListener('click', goToHomePage);
-
-    // Initial activation of 'All' genre button
-    setActiveGenreButton(document.querySelector('#genre-buttons button:first-child'));
-});
-        ;
-    </script>
-   
-    
+  </script>
 </body>
 </html>

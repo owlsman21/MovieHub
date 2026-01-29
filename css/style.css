@@ -117,55 +117,84 @@
             color: #ffd700;
         }
 
-        .movie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
+       .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Slightly wider min for better fit */
+    gap: 25px; /* More breathing room */
+}
 
-        .movie-card {
-            background-color: #0f044c;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            padding-bottom: 15px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative; /* For play button positioning and details text */
-        }
+.movie-card {
+    background-color: #0f044c;
+    border-radius: 12px;
+    overflow: hidden; /* Prevents content overflow making cards tall */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column; /* Stack poster + info vertically */
+    height: 420px; /* Fixed total height – adjust as needed (poster ~300px + text ~120px) */
+    transition: transform 0.2s ease;
+}
 
-        .movie-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        }
+.movie-card:hover {
+    transform: translateY(-8px);
+}
 
-        .movie-card-media {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #000; /* Fallback for no image/video */
-            border-bottom: 2px solid #735bf2;
-        }
+.movie-card-media {
+    height: 300px; /* Poster area fixed */
+    background-color: #000;
+    position: relative;
+}
 
-        .movie-card-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: opacity 0.3s ease;
-        }
-        
-        .movie-card-media iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
+.movie-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps poster proportional, no stretching */
+    object-position: center;
+}
+
+.movie-card-info {
+    padding: 12px 10px;
+    flex-grow: 1; /* Pushes content down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-card .meta {
+    font-size: 0.85rem;
+    color: #b0b0b0;
+    margin-bottom: 8px;
+}
+
+.movie-card .description {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.4;
+    max-height: 80px; /* Limit description height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Show max 4 lines */
+    -webkit-box-orient: vertical;
+}
+
+.movie-card .view-details {
+    background: #735bf2;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: auto; /* Pushes button to bottom */
+}
 
         .play-button {
             position: absolute;
