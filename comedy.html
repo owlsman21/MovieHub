@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comedy Vault | MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Movie<span>Hub</span></h2>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="movieSearch" placeholder="Explore the Vault..." onkeyup="searchVault()">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="test-western.html"><i class="fa-solid fa-hat-cowboy"></i> Westerns</a></li>
+            <li><a href="action.html"><i class="fa-solid fa-gun"></i> Action</a></li>
+            <li><a href="classics.html"><i class="fa-solid fa-clapperboard"></i> Classics</a></li>
+            <li><a href="comedy.html" class="active"><i class="fa-solid fa-face-laugh-squint"></i> Comedy</a></li>
+        </ul>
+        
+        <div class="sidebar-footer" style="margin-top: 50px; padding: 20px; color: #555; font-size: 0.8rem;">
+            <p>&copy; 2026 MovieHub</p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header>
+            <h1>Comedy Gallery</h1>
+            <p>Lighthearted laughs and legendary spoofs.</p>
+        </header>
+
+        <div id="comedy-grid" class="movie-grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        window.onload = () => {
+            loadMovies('comedy-grid', 'Comedy');
+        };
+    </script>
+</body>
+</html>

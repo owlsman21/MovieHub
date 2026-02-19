@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieHub | Loading...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
+        <ul class="nav-links">
+            <li><a href="test-index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="test-western.html"><i class="fa-solid fa-hat-cowboy"></i> Westerns</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div id="video-container" class="video-wrapper">
+            </div>
+        
+        <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
+            <h1 id="movie-title">Loading Movie Details...</h1>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin:10px 0;"></p>
+            <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
+        </div>
+    </main>
+
+    <script>
+        async function initPlayer() {
+            // 1. Get the ID from the URL (e.g., ?id=young-guns-ii-1990)
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get('id');
+
+            try {
+                // 2. Fetch your 845-movie list
+                const response = await fetch('movies.json');
+                const movies = await response.json();
+                
+                // 3. Find the specific movie
+                const movie = movies.find(m => m.id === movieId);
+
+                if (movie) {
+                    document.title = `${movie.title} | MovieHub`;
+                    document.getElementById('movie-title').innerText = movie.title;
+                    document.getElementById('movie-meta').innerText = `${movie.year} | ${movie.quality} | ${movie.genres}`;
+                    document.getElementById('movie-desc').innerText = movie.description;
+
+                    // 4. Load the correct Player
+                    let embedCode = '';
+                    if (movie.source === 'ok.ru') {
+                        embedCode = `<iframe src="https://ok.ru/videoembed/${movie.embedId}" width="100%" height="500" frameborder="0" allowfullscreen></iframe>`;
+                    } else {
+                        // Rumble default
+                        embedCode = `<iframe src="https://rumble.com/embed/${movie.embedId}/?pub=4" width="100%" height="500" frameborder="0" allowfullscreen></iframe>`;
+                    }
+                    document.getElementById('video-container').innerHTML = embedCode;
+                } else {
+                    document.getElementById('movie-title').innerText = "Movie Not Found";
+                }
+            } catch (err) {
+                console.error("Playback Error:", err);
+            }
+        }
+        window.onload = initPlayer;
+    </script>
+</body>
+</html>
