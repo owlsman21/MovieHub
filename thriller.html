@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Thriller Vault | MovieHub</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNXJGVNEY0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNXJGVNEY0');
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Movie<span>Hub</span></h2>
+        </div>
+        <div class="search-box">
+            <input type="text" id="movieSearch" placeholder="Explore the Vault..." onkeyup="searchVault()">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="thriller.html" class="active"><i class="fa-solid fa-user-ninja" style="color: #00d4ff;"></i> Thriller</a></li>
+            <li><a href="drama.html"><i class="fa-solid fa-masks-theater"></i> Drama</a></li>
+            <li><a href="horror.html"><i class="fa-solid fa-ghost"></i> Horror</a></li>
+            <li><a href="sci-fi.html"><i class="fa-solid fa-rocket"></i> Sci-Fi</a></li>
+            <li><a href="test-western.html"><i class="fa-solid fa-hat-cowboy"></i> Westerns</a></li>
+            <li><a href="action.html"><i class="fa-solid fa-gun"></i> Action</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header>
+            <h1 style="color: #00d4ff;">Thriller Gallery</h1>
+            <p>Edge of your seat suspense. Non-stop tension.</p>
+        </header>
+        <div id="thriller-grid" class="movie-grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        window.onload = () => {
+            if (typeof loadMovies === 'function') {
+                loadMovies('thriller-grid', 'Thriller');
+            }
+        };
+    </script>
+</body>
+</html>
