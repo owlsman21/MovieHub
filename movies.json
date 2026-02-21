@@ -1,5 +1,17 @@
 [
     {
+  "id": "an-american-werewolf-in-london-1981",
+  "title": "An American Werewolf in London (1981) Full Movie | John Landis | Classic Horror Comedy",
+  "year": 1981,
+  "director": "John Landis",
+  "quality": "HD",
+  "genres": "Horror, Comedy, Cult Classics",
+  "description": "Two American backpackers on a walking tour of Britain are attacked by a werewolf that none of the locals will admit exists. While one is killed, the other survives with a bite that transforms his life into a waking nightmare. Directed by John Landis and featuring groundbreaking Oscar-winning makeup effects.",
+  "embedId": "11757923338905",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDQxZWM3OTYtNGRhNi00NDg4LWJiOWItYWQ3ODZkMzljOTNiXkEyXkFqcGc@._V1_.jpg"
+},
+    {
   "id": "vacant-2026",
   "title": "Vacant (2026) Full Movie | 4K UHD Remaster | Horror Mystery Thriller",
   "year": 2026,
@@ -4910,6 +4922,50 @@
         "genres": ["Drama","Thriller"],
         "source": "ok.ru"
      },
+       {
+  "id": "dial-m-for-murder-1954",
+  "title": "Dial M For Murder",
+  "year": 1954,
+  "description": "An ex-tennis pro carries out a plot to murder his wife. When things go wrong, he improvises a brilliant second plan to have her convicted of murder.",
+  "genres": ["Thriller", "Crime", "Mystery", "Classic","Hitchcock"],
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjZmMjgzMDQtMTNjMC00MTZlLTkyOGItN2I0MmM0NWRjOTA4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  "source": "rumble",
+  "embedId": "v722alg"
+},
+ {
+  "id": "psycho-1960",
+  "title": "Psycho",
+  "year": 1960,
+  "description": "A phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+  "genres": ["Horror", "Thriller", "Mystery", "Classic","Hitchcock"],
+  "posterUrl": "images/Psycho.jpg",
+  "source": "rumble",
+  "embedId": "v722cam"
+},
+ {
+  "id": "blackmail-1929-color",
+  "title": "Blackmail (1929) - Colorized",
+  "description": "A stunning colorized restoration of Hitchcock's first talkie. A tense tale of murder, guilt, and a high-stakes chase through the British Museum.",
+ "genres": ["Thriller","Hitchcock"],
+  "year": 1929,
+  "quality": "1080p",
+  "posterUrl": "https://fourstarfilmfan.com/wp-content/uploads/2017/07/blackmail_1929_poster.jpg?w=584",
+  "category": "Hitchcock",
+  "embedId": "v72oa08",
+  "source": "rumble"
+},
+ {
+    "id": "rebecca-1940",
+    "title": "Rebecca (1940)",
+    "description": "Alfred Hitchcock's gothic masterpiece and Best Picture winner about a haunted marriage.",
+    "genres": ["Thriller","Hitchcock"],
+    "year": 1940,
+    "quality": "1080p",
+    "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Rebecca_%281939_poster%29.jpeg",
+    "category": "Hitchcock",
+    "embedId": "v72o6c2",
+    "source": "rumble"
+  },
       {
         "id": "North-by-Northwest",
         "posterUrl":  "images/North by Northwest.jpg",
@@ -4917,7 +4973,7 @@
         "title": "North by Northwest",
         "description": "A New York City advertising executive goes on the run after being mistaken for a government agent by a group of foreign spies, and falls for a woman whose loyalties he begins to doubt.",
         "embedId": "33495386654",
-        "genres": ["Adventure","Drama","Thriller"],
+        "genres": ["Adventure","Drama","Thriller","Hitchcock"],
         "source": "ok.ru"
      },
       {
@@ -7734,7 +7790,7 @@
     "title": "The Birds (1963)",
     "year": 1963,
     "description": "In Alfred Hitchcock's legendary masterpiece, a wealthy San Francisco socialite pursues a potential boyfriend to a small Northern California town that slowly takes a turn for the terrifying when birds of all kinds begin to attack people.",
-    "genres": ["Action", "Thriller", "Horror", "Movie"],
+    "genres": ["Action", "Thriller", "Horror", "Movie","Hitchcock"],
     "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTAxNDA1ODc5MDleQTJeQWpwZ15BbWU4MDg2MDA4OTEx._V1_FMjpg_UX1000_.jpg",
     "source": "rumble",
     "embedId": "v71p1lk"
