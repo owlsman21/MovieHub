@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub | All Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+    <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
+    </ul>
+    
+    <h3>Genres</h3>
+    <ul id="genre-list">
+        <li><a href="catalog.html?genre=Action">Action</a></li>
+        <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
+        <li><a href="catalog.html?genre=Drama">Drama</a></li>
+        <li><a href="catalog.html?genre=Hitchcock">Hitchcock</a></li>
+        <li><a href="catalog.html?genre=Horror">Horror</a></li>
+        <li><a href="catalog.html?genre=Sci-Fi">Sci-Fi</a></li>
+        <li><a href="catalog.html?genre=Musical">Musical</a></li>
+        <li><a href="catalog.html?genre=History">History</a></li>
+    </ul>
+</nav>
+
+    <main class="content">
+        <header>
+            <h1 id="page-title">Vault Collection</h1>
+        </header>
+        <div id="movie-grid-container" class="movie-grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

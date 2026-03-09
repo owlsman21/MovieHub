@@ -2,24 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MovieHub | Loading...</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Movie Details | MovieHub</title>
 </head>
 <body>
     <nav class="sidebar">
-        <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
-        <ul class="nav-links">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="western.html"><i class="fa-solid fa-hat-cowboy"></i> Westerns</a></li>
-        </ul>
-    </nav>
+    <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
+    </ul>
+    
+    <h3>Genres</h3>
+    <ul id="genre-list">
+        <li><a href="catalog.html?genre=Action">Action</a></li>
+        <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
+        <li><a href="catalog.html?genre=Drama">Drama</a></li>
+        <li><a href="catalog.html?genre=Hitchcock">Hitchcock</a></li>
+        <li><a href="catalog.html?genre=Horror">Horror</a></li>
+        <li><a href="catalog.html?genre=Sci-Fi">Sci-Fi</a></li>
+        <li><a href="catalog.html?genre=Musical">Musical</a></li>
+        <li><a href="catalog.html?genre=History">History</a></li>
+    </ul>
+</nav>
 
     <main class="content">
-        <div id="video-container" class="video-wrapper"></div>
+        <div id="video-container" class="video-wrapper" style="width: 100%; aspect-ratio: 16 / 9; background: #000;"></div>
         
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
-            <h1 id="movie-title">Loading Movie Details...</h1>
+            <h1 id="movie-title">Loading...</h1>
             <p id="movie-meta" style="color:#e50914; font-weight:bold; margin:10px 0;"></p>
             <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
         </div>
@@ -27,37 +39,38 @@
 
     <script>
         async function initPlayer() {
-            // 1. Get the ID from the URL
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
 
             try {
-                // 2. Fetch the movie list from the correct data folder path
                 const response = await fetch('data/all-movies.json');
-                if (!response.ok) throw new Error("Could not find all-movies.json");
+                if (!response.ok) throw new Error("Could not find movie data");
                 
                 const movies = await response.json();
-                
-                // 3. Find the specific movie
                 const movie = movies.find(m => m.id === movieId);
 
                 if (movie) {
-                    document.title = `${movie.title} | MovieHub`;
                     document.getElementById('movie-title').innerText = movie.title;
-                    document.getElementById('movie-meta').innerText = `${movie.year} | ${movie.quality} | ${movie.genres}`;
+                    
+                    // Handle Genre: Convert Array to string if needed
+                    const genreList = Array.isArray(movie.genres) ? movie.genres.join(', ') : movie.genres;
+                    document.getElementById('movie-meta').innerText = `${movie.year} | ${movie.quality || 'HD'} | ${genreList}`;
                     document.getElementById('movie-desc').innerText = movie.description;
 
-                    // 4. Load the correct Player
-                    let embedCode = '';
+                    const container = document.getElementById('video-container');
+                    
+                    // Unified embed logic
+                    let src = "";
                     if (movie.source === 'ok.ru') {
-                        embedCode = `<iframe src="https://ok.ru/videoembed/${movie.embedId}" width="100%" height="500" frameborder="0" allowfullscreen></iframe>`;
+                        src = `https://ok.ru/videoembed/${movie.embedId}`;
                     } else {
-                        // Rumble default
-                        embedCode = `<iframe src="https://rumble.com/embed/${movie.embedId}/?pub=4" width="100%" height="500" frameborder="0" allowfullscreen></iframe>`;
+                        // Defaults to rumble if not ok.ru
+                        src = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
                     }
-                    document.getElementById('video-container').innerHTML = embedCode;
+
+                    container.innerHTML = `<iframe src="${src}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
                 } else {
-                    document.getElementById('movie-title').innerText = "Movie Not Found";
+                    document.getElementById('movie-title').innerText = "Movie Not Found.";
                 }
             } catch (err) {
                 console.error("Playback Error:", err);

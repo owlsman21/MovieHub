@@ -2,34 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MovieHub | The Vault</title>
+    <title>MovieHub | Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="sidebar">
-        <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
-        <div class="search-box">
-            <input type="text" id="movieSearch" placeholder="Explore the Vault..." onkeyup="searchVault()">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#" onclick="showGenre('All')"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#" onclick="showGenre('Horror')"><i class="fa-solid fa-ghost"></i> Horror</a></li>
-            <li><a href="#" onclick="showGenre('Sci-Fi')"><i class="fa-solid fa-rocket"></i> Sci-Fi</a></li>
-            <li><a href="#" onclick="showGenre('Western')"><i class="fa-solid fa-hat-cowboy"></i> Western</a></li>
-            <li><a href="#" onclick="showGenre('Action')"><i class="fa-solid fa-gun"></i> Action</a></li>
-            <li><a href="#" onclick="showGenre('Classics')"><i class="fa-solid fa-clapperboard"></i> Classics</a></li>
-            <li><a href="#" onclick="showGenre('Comedy')"><i class="fa-solid fa-face-laugh-squint"></i> Comedy</a></li>
+        <h2>Movie<span>Hub</span></h2>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
         </ul>
+        <hr>
+       <h3>Genres</h3>
+<ul id="genre-list">
+    <li><a href="catalog.html?genre=Action">Action</a></li>
+    <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
+    <li><a href="catalog.html?genre=Drama">Drama</a></li>
+    <li><a href="catalog.html?genre=Hitchcock">Hitchcock</a></li>
+    <li><a href="catalog.html?genre=Horror">Horror</a></li>
+    <li><a href="catalog.html?genre=Sci-Fi">Sci-Fi</a></li>
+    <li><a href="catalog.html?genre=Musical">Musical</a></li>
+    <li><a href="catalog.html?genre=History">History</a></li>
+</ul>
     </nav>
 
     <main class="content">
-        <header>
-            <h1 id="page-title">Vault Collection</h1>
-        </header>
-        <div id="movie-grid-container" class="movie-grid"></div>
+        <h1>Welcome to the Vault</h1>
+        
+        <h2>Latest Additions</h2>
+        <div id="latest-container" class="movie-grid"></div>
+        
+        <h2>Hitchcock Collection</h2>
+        <div id="hitchcock-container" class="movie-grid"></div>
     </main>
-
+    
     <script src="app.js"></script>
 </body>
 </html>

@@ -130,3 +130,54 @@ body {
     
     .movie-card h3 { font-size: 0.8rem; }
 }
+/* Sidebar Genre Styling */
+#genre-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#genre-list li {
+    margin-bottom: 8px;
+}
+
+#genre-list li a {
+    text-decoration: none;
+    color: #bbb; /* Subtle grey */
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+#genre-list li a:hover {
+    color: #e50914; /* Your MovieHub brand color */
+    padding-left: 5px; /* Subtle animation effect */
+}
+
+.sidebar h3 {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 1px;
+}
+/* Sidebar Layout */
+body {
+    display: flex; /* Aligns sidebar and content */
+    margin: 0;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
