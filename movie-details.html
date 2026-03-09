@@ -10,14 +10,13 @@
     <nav class="sidebar">
         <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
         <ul class="nav-links">
-          <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="test-western.html"><i class="fa-solid fa-hat-cowboy"></i> Westerns</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="western.html"><i class="fa-solid fa-hat-cowboy"></i> Westerns</a></li>
         </ul>
     </nav>
 
     <main class="content">
-        <div id="video-container" class="video-wrapper">
-            </div>
+        <div id="video-container" class="video-wrapper"></div>
         
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
             <h1 id="movie-title">Loading Movie Details...</h1>
@@ -28,13 +27,15 @@
 
     <script>
         async function initPlayer() {
-            // 1. Get the ID from the URL (e.g., ?id=young-guns-ii-1990)
+            // 1. Get the ID from the URL
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
 
             try {
-                // 2. Fetch your 845-movie list
-                const response = await fetch('movies.json');
+                // 2. Fetch the movie list from the correct data folder path
+                const response = await fetch('data/all-movies.json');
+                if (!response.ok) throw new Error("Could not find all-movies.json");
+                
                 const movies = await response.json();
                 
                 // 3. Find the specific movie
@@ -60,6 +61,7 @@
                 }
             } catch (err) {
                 console.error("Playback Error:", err);
+                document.getElementById('movie-title').innerText = "Error loading movie.";
             }
         }
         window.onload = initPlayer;
