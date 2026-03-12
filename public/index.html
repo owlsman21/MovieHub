@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>Movie<span>Hub</span></h2>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies...">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">All Movies</a></li>
+        </ul>
+        <h3>Genres</h3>
+        <ul id="genre-list">
+            <li><a href="catalog.html?genre=Action">Action</a></li>
+            <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
+            <li><a href="catalog.html?genre=Drama">Drama</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div id="movie-grid-container" class="movie-grid"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

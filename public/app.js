@@ -74,3 +74,22 @@ function showGenre(genre) {
 }
 
 window.onload = initMovieVault;
+// Add this to your existing app.js
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const gridContainer = document.getElementById('movie-grid-container');
+
+    if (searchInput && gridContainer) {
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            
+            // Filter the existing cache
+            const filtered = allMoviesCache.filter(movie => 
+                movie.title.toLowerCase().includes(searchTerm)
+            );
+            
+            // Re-render the grid with results
+            renderGrid(gridContainer, filtered);
+        });
+    }
+}
