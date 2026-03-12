@@ -1,22 +1,19 @@
 let allMoviesCache = [];
 
+// 1. Initialize Everything
 async function initMovieVault() {
     try {
         const response = await fetch('data/all-movies.json');
         if (!response.ok) throw new Error("Could not find movie data");
         allMoviesCache = await response.json();
 
-        // 1. HOME PAGE: Latest Additions
+        // Populate containers if they exist on the current page
         const latestCont = document.getElementById('latest-container');
-        if (latestCont) {
-            renderGrid(latestCont, allMoviesCache.slice(0, 12));
-        }
+        if (latestCont) renderGrid(latestCont, allMoviesCache.slice(0, 12));
 
-        // 2. HOME PAGE: Hitchcock Collection (Flexible Filter)
         const hitchCont = document.getElementById('hitchcock-container');
         if (hitchCont) {
             const hitchRaw = allMoviesCache.filter(m => {
-                // Normalize genres whether it is a string or an array
                 const genres = normalizeGenres(m.genres);
                 const cat = (m.category || "").toString().trim().toLowerCase();
                 return cat === 'hitchcock' || genres.includes('hitchcock');
@@ -24,26 +21,44 @@ async function initMovieVault() {
             renderGrid(hitchCont, [...new Map(hitchRaw.map(m => [m.id, m])).values()]);
         }
 
-        // 3. CATALOG PAGE: Check URL parameters
         const gridCont = document.getElementById('movie-grid-container');
         if (gridCont) {
             const urlParams = new URLSearchParams(window.location.search);
             const genre = urlParams.get('genre');
             showGenre(genre || 'All');
         }
+
+        // --- CRITICAL FIX: Initialize search after data is loaded ---
+        setupSearch(); 
+
     } catch (e) {
         console.error("Vault Error:", e);
     }
 }
 
-// Helper: Standardizes genres into a clean array of lowercase strings
+// 2. Search Logic
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const gridContainer = document.getElementById('movie-grid-container');
+
+    if (searchInput && gridContainer) {
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const filtered = allMoviesCache.filter(movie => 
+                movie.title.toLowerCase().includes(searchTerm)
+            );
+            renderGrid(gridContainer, filtered);
+        });
+    }
+}
+
+// 3. Helper Functions
 function normalizeGenres(genres) {
     if (!genres) return [];
     if (Array.isArray(genres)) return genres.map(g => g.toString().toLowerCase().trim());
     return genres.split(',').map(g => g.trim().toLowerCase());
 }
 
-// Universal Render Function
 function renderGrid(container, movieList) {
     if (!container) return;
     container.innerHTML = movieList.length > 0 
@@ -58,7 +73,6 @@ function renderGrid(container, movieList) {
         : "<p style='padding:20px;'>No movies found.</p>";
 }
 
-// Updated Catalog Filter
 function showGenre(genre) {
     const container = document.getElementById('movie-grid-container');
     const pageTitle = document.getElementById('page-title');
@@ -73,23 +87,5 @@ function showGenre(genre) {
     renderGrid(container, filtered);
 }
 
+// Run on load
 window.onload = initMovieVault;
-// Add this to your existing app.js
-function setupSearch() {
-    const searchInput = document.getElementById('search-input');
-    const gridContainer = document.getElementById('movie-grid-container');
-
-    if (searchInput && gridContainer) {
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase().trim();
-            
-            // Filter the existing cache
-            const filtered = allMoviesCache.filter(movie => 
-                movie.title.toLowerCase().includes(searchTerm)
-            );
-            
-            // Re-render the grid with results
-            renderGrid(gridContainer, filtered);
-        });
-    }
-}
