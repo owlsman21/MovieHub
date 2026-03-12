@@ -46,15 +46,16 @@
 
             try {
                 const response = await fetch('data/all-movies.json');
+                if (!response.ok) throw new Error("Could not find movie data");
+                
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
 
                 if (movie) {
-                    // Update Page Title
+                    // Update Title & Meta for SEO
                     document.title = movie.title + " | MovieHub";
-                    
-                    // Update Body Content
                     document.getElementById('movie-title').innerText = movie.title;
+                    
                     const genreList = Array.isArray(movie.genres) ? movie.genres.join(', ') : movie.genres;
                     document.getElementById('movie-meta').innerText = `${movie.year} | ${movie.quality || 'HD'} | ${genreList}`;
                     document.getElementById('movie-desc').innerText = movie.description;
@@ -70,7 +71,7 @@
                     };
                     document.getElementById('schema-script').innerText = JSON.stringify(schema);
 
-                    // Handle Video Embed
+                    // Embed video
                     const container = document.getElementById('video-container');
                     const src = movie.source === 'ok.ru' ? `https://ok.ru/videoembed/${movie.embedId}` : `https://rumble.com/embed/${movie.embedId}/?pub=4`;
                     container.innerHTML = `<iframe src="${src}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
