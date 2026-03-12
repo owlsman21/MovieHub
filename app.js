@@ -7,7 +7,7 @@ async function initMovieVault() {
         if (!response.ok) throw new Error("Could not find movie data");
         allMoviesCache = await response.json();
 
-        // Populate containers if they exist on the current page
+        // Populate containers
         const latestCont = document.getElementById('latest-container');
         if (latestCont) renderGrid(latestCont, allMoviesCache.slice(0, 12));
 
@@ -28,7 +28,7 @@ async function initMovieVault() {
             showGenre(genre || 'All');
         }
 
-        // --- CRITICAL FIX: Initialize search after data is loaded ---
+        // Initialize search
         setupSearch(); 
 
     } catch (e) {
@@ -52,20 +52,22 @@ function setupSearch() {
     }
 }
 
-// 3. Helper Functions
+// 3. Helper Functions & Error Handling
 function normalizeGenres(genres) {
     if (!genres) return [];
     if (Array.isArray(genres)) return genres.map(g => g.toString().toLowerCase().trim());
     return genres.split(',').map(g => g.trim().toLowerCase());
 }
 
+// CRITICAL FIX: The onerror handler prevents 404s from showing in your console
 function renderGrid(container, movieList) {
     if (!container) return;
     container.innerHTML = movieList.length > 0 
         ? movieList.map(movie => `
             <div class="movie-card">
                 <a href="movie-details.html?id=${movie.id}">
-                    <img src="${movie.posterUrl}" onerror="this.src='https://via.placeholder.com/300x450?text=Poster+Missing'">
+                    <img src="${movie.posterUrl || ''}" 
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/300x450?text=Poster+Unavailable';">
                     <h3>${movie.title}</h3>
                 </a>
             </div>
@@ -87,5 +89,4 @@ function showGenre(genre) {
     renderGrid(container, filtered);
 }
 
-// Run on load
 window.onload = initMovieVault;

@@ -1,47 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-    // 1. Get the ID immediately from the URL
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-
-    // 2. We need a way to find this movie data quickly
-    // Note: This assumes you can load a small part of your JSON or a map
-    fetch('data/all-movies.json')
-        .then(res => res.json())
-        .then(movies => {
-            const movie = movies.find(m => m.id === id);
-            if (movie) {
-                // 3. Inject the Schema into the head dynamically
-                const script = document.createElement('script');
-                script.type = 'application/ld+json';
-                script.text = JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Movie",
-                    "name": movie.title,
-                    "description": movie.description,
-                    "image": movie.posterUrl
-                });
-                document.head.appendChild(script);
-            }
-        });
-</script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Frankenstein (2025) Full Movie | MovieHub</title>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Movie",
-        "name": "Frankenstein (2025)",
-        "description": "In this lavish Gothic reimagining of Mary Shelley's classic, a brilliant but tormented scientist brings a creature to life, sparking a tragic journey of abandonment, discovery, and existential horror. Directed by Guillermo del Toro and starring Oscar Isaac and Jacob Elordi.",
-        "image": "https://m.media-amazon.com/images/M/MV5BYzYzNDYxMTQtMTU4OS00MTdlLThhMTQtZjI4NGJmMTZmNmRiXkEyXkFqcGc@._V1_.jpg",
-        "director": { "@type": "Person", "name": "Guillermo del Toro" }
-    }
-    </script>
+    <title>MovieHub</title>
 </head>
 <body>
     <nav class="sidebar">
@@ -64,15 +27,57 @@
     </nav>
 
     <main class="content">
-        <div id="video-container" class="video-wrapper" style="width: 100%; aspect-ratio: 16 / 9; background: #000;">
-            <iframe src="https://ok.ru/videoembed/12681960032806" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        <div id="wrapper" style="width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative;">
+            <iframe id="movie-iframe" src="" width="100%" height="100%" frameborder="0" allowfullscreen style="display: block; border: none;"></iframe>
         </div>
         
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
-            <h1>Frankenstein (2025) Full Movie</h1>
-            <p style="color:#e50914; font-weight:bold; margin:10px 0;">2025 | HD | Drama, Horror, Sci-Fi</p>
-            <p style="line-height:1.6; color:#ccc;">In this lavish Gothic reimagining of Mary Shelley's classic, a brilliant but tormented scientist brings a creature to life, sparking a tragic journey of abandonment, discovery, and existential horror. Directed by Guillermo del Toro and starring Oscar Isaac and Jacob Elordi.</p>
+            <h1 id="movie-title">Loading...</h1>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin:10px 0;"></p>
+            <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
         </div>
     </main>
+
+    <script>
+        async function loadMovieDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get('id');
+            if (!movieId) return;
+
+            try {
+                const response = await fetch('data/all-movies.json');
+                const movies = await response.json();
+                const movie = movies.find(m => m.id === movieId);
+
+                if (movie) {
+                    document.title = movie.title;
+                    document.getElementById('movie-title').innerText = movie.title;
+                    document.getElementById('movie-meta').innerText = `${movie.year || ''} | ${movie.quality || ''} | ${movie.genres || ''}`;
+                    document.getElementById('movie-desc').innerText = movie.description;
+                    
+                    // Unified URL Builder
+                    let videoUrl = "";
+                    if (movie.source === "ok.ru") {
+                        videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
+                    } else if (movie.source === "youtube") {
+                        videoUrl = `https://www.youtube.com/embed/${movie.embedId}`;
+                    } else if (movie.source === "rumble") {
+                        // Rumble requires the specific embed format
+                        videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+                    }
+                    
+                    const iframe = document.getElementById('movie-iframe');
+                    if (videoUrl) {
+                        iframe.src = videoUrl;
+                    } else {
+                        document.getElementById('wrapper').innerHTML = "<h3 style='color:white; padding:20px;'>Error: Unsupported video source.</h3>";
+                    }
+                }
+            } catch (e) {
+                console.error("Critical Load Error:", e);
+            }
+        }
+        loadMovieDetails();
+    </script>
 </body>
 </html>

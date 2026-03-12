@@ -3869,11 +3869,11 @@
      },
      {
         "id": "Tremors",
-        "posterUrl":  "images/Tremors.jpg",
+        "posterUrl":  "https://m.media-amazon.com/images/M/MV5BN2QxZTI3OWEtZjY2Yy00MzUzLTlmN2EtOWUxNjcyZjQ5NWFiXkEyXkFqcGc@._V1_.jpg",
         "year": 1990,
         "title": "Tremors (1990)",
         "description": "Natives of a small isolated town defend themselves against strange underground creatures which are killing them one by one.",
-        "embedId": "",
+        "embedId": "7138442152601",
         "genres": ["Horror","Comedy"],
         "source": "ok.ru"
      },
