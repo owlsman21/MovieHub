@@ -39,44 +39,43 @@
     </main>
 
     <script>
-        async function loadMovieDetails() {
-            const params = new URLSearchParams(window.location.search);
-            const movieId = params.get('id');
-            if (!movieId) return;
+      async function loadMovieDetails() {
+    const params = new URLSearchParams(window.location.search);
+    const movieId = params.get('id');
+    if (!movieId) return;
 
-            try {
-                const response = await fetch('data/all-movies.json');
-                const movies = await response.json();
-                const movie = movies.find(m => m.id === movieId);
+    try {
+        const response = await fetch('data/all-movies.json');
+        const movies = await response.json();
+        const movie = movies.find(m => m.id === movieId);
 
-                if (movie) {
-                    document.title = movie.title;
-                    document.getElementById('movie-title').innerText = movie.title;
-                    document.getElementById('movie-meta').innerText = `${movie.year || ''} | ${movie.quality || ''} | ${movie.genres || ''}`;
-                    document.getElementById('movie-desc').innerText = movie.description;
-                    
-                    // Unified URL Builder
-                    let videoUrl = "";
-                    if (movie.source === "ok.ru") {
-                        videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
-                    } else if (movie.source === "youtube") {
-                        videoUrl = `https://www.youtube.com/embed/${movie.embedId}`;
-                    } else if (movie.source === "rumble") {
-                        // Rumble requires the specific embed format
-                        videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
-                    }
-                    
-                    const iframe = document.getElementById('movie-iframe');
-                    if (videoUrl) {
-                        iframe.src = videoUrl;
-                    } else {
-                        document.getElementById('wrapper').innerHTML = "<h3 style='color:white; padding:20px;'>Error: Unsupported video source.</h3>";
-                    }
-                }
-            } catch (e) {
-                console.error("Critical Load Error:", e);
+        if (movie) {
+            // Update page info
+            document.title = movie.title;
+            document.getElementById('movie-title').innerText = movie.title;
+            document.getElementById('movie-meta').innerText = `${movie.year || ''} | ${movie.quality || ''} | ${movie.genres || movie.genre || ''}`;
+            document.getElementById('movie-desc').innerText = movie.description;
+            
+            // Build the URL based on source
+            let videoUrl = "";
+            if (movie.source === "ok.ru") {
+                videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
+            } else if (movie.source === "rumble") {
+                // FIXED: Use the correct Rumble embed format
+                videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+            }
+            
+            const iframe = document.getElementById('movie-iframe');
+            if (videoUrl) {
+                iframe.src = videoUrl;
+            } else {
+                document.getElementById('wrapper').innerHTML = "<h3 style='color:white; padding:20px;'>Error: Unsupported video source.</h3>";
             }
         }
+    } catch (e) {
+        console.error("Critical Load Error:", e);
+    }
+}
         loadMovieDetails();
     </script>
 </body>
