@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Movie Details | MovieHub</title>
+    <title id="page-title">Movie Details | MovieHub</title>
+    <script id="schema-script" type="application/ld+json"></script>
 </head>
 <body>
     <nav class="sidebar">
-    <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
-    <ul class="nav-links">
-        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-        <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
-    </ul>
-    
-    <h3>Genres</h3>
-    <ul id="genre-list">
-        <li><a href="catalog.html?genre=Action">Action</a></li>
-        <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
-        <li><a href="catalog.html?genre=Drama">Drama</a></li>
-        <li><a href="catalog.html?genre=Hitchcock">Hitchcock</a></li>
-        <li><a href="catalog.html?genre=Horror">Horror</a></li>
-        <li><a href="catalog.html?genre=Sci-Fi">Sci-Fi</a></li>
-        <li><a href="catalog.html?genre=Musical">Musical</a></li>
-        <li><a href="catalog.html?genre=History">History</a></li>
-    </ul>
-</nav>
+        <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
+        </ul>
+        
+        <h3>Genres</h3>
+        <ul id="genre-list">
+            <li><a href="catalog.html?genre=Action">Action</a></li>
+            <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
+            <li><a href="catalog.html?genre=Drama">Drama</a></li>
+            <li><a href="catalog.html?genre=Hitchcock">Hitchcock</a></li>
+            <li><a href="catalog.html?genre=Horror">Horror</a></li>
+            <li><a href="catalog.html?genre=Sci-Fi">Sci-Fi</a></li>
+            <li><a href="catalog.html?genre=Musical">Musical</a></li>
+            <li><a href="catalog.html?genre=History">History</a></li>
+        </ul>
+    </nav>
 
     <main class="content">
         <div id="video-container" class="video-wrapper" style="width: 100%; aspect-ratio: 16 / 9; background: #000;"></div>
@@ -41,33 +42,37 @@
         async function initPlayer() {
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
+            if (!movieId) return;
 
             try {
                 const response = await fetch('data/all-movies.json');
-                if (!response.ok) throw new Error("Could not find movie data");
-                
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
 
                 if (movie) {
-                    document.getElementById('movie-title').innerText = movie.title;
+                    // Update Page Title
+                    document.title = movie.title + " | MovieHub";
                     
-                    // Handle Genre: Convert Array to string if needed
+                    // Update Body Content
+                    document.getElementById('movie-title').innerText = movie.title;
                     const genreList = Array.isArray(movie.genres) ? movie.genres.join(', ') : movie.genres;
                     document.getElementById('movie-meta').innerText = `${movie.year} | ${movie.quality || 'HD'} | ${genreList}`;
                     document.getElementById('movie-desc').innerText = movie.description;
 
-                    const container = document.getElementById('video-container');
-                    
-                    // Unified embed logic
-                    let src = "";
-                    if (movie.source === 'ok.ru') {
-                        src = `https://ok.ru/videoembed/${movie.embedId}`;
-                    } else {
-                        // Defaults to rumble if not ok.ru
-                        src = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
-                    }
+                    // Update Schema for Google
+                    const schema = {
+                        "@context": "https://schema.org",
+                        "@type": "Movie",
+                        "name": movie.title,
+                        "description": movie.description,
+                        "image": movie.posterUrl,
+                        "director": { "@type": "Person", "name": movie.director || "N/A" }
+                    };
+                    document.getElementById('schema-script').innerText = JSON.stringify(schema);
 
+                    // Handle Video Embed
+                    const container = document.getElementById('video-container');
+                    const src = movie.source === 'ok.ru' ? `https://ok.ru/videoembed/${movie.embedId}` : `https://rumble.com/embed/${movie.embedId}/?pub=4`;
                     container.innerHTML = `<iframe src="${src}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
                 } else {
                     document.getElementById('movie-title').innerText = "Movie Not Found.";
