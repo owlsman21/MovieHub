@@ -46,6 +46,24 @@
       <video:player_loc>https://ok.ru/videoembed/placeholder-ok-ru-id</video:player_loc>
     </video:video>
   </url>
+  <url>
+    <loc>https://moviehub.uk/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://moviehub.uk/frankenstein-2025-review</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moviehub.uk/good-luck-have-fun-dont-die-2026-review</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <url>
     <loc>https://moviehub.zya.me/the-trackers-1971</loc>
@@ -1424,7 +1442,7 @@
   <url><loc>https://moviehub.zya.me/movie-details.html?id=Stripped</loc><priority>0.6</priority></url>
   <url><loc>https://moviehub.zya.me/movie-details.html?id=Suspect-Zero</loc><priority>0.6</priority></url>
   <url><loc>https://moviehub.zya.me/movie-details.html?id=Sweeney-Todd-Slice-and-Dice</loc><priority>0.7</priority></url>
-  <url><loc>https://moviehub.zya.me/movie-details.html?id=Sweeney-Todd-The-Demon-Barber-of-Fleet-Street</loc><priority>0.8</priority></url>
+ 
   <url><loc>https://moviehub.zya.me/movie-details.html?id=Syriana</loc><priority>0.7</priority></url>
   <url><loc>https://moviehub.zya.me/movie-details.html?id=Taken</loc><priority>0.7</priority></url>
   <url><loc>https://moviehub.zya.me/movie-details.html?id=Teardrop</loc><priority>0.6</priority></url>
@@ -1532,7 +1550,7 @@
   <url><loc>https://moviehub.zya.me/the-battle-of-the-river-plate</loc><lastmod>2026-02-03</lastmod><priority>0.8</priority></url>
   <url><loc>https://moviehub.zya.me/reach-for-the-sky</loc><lastmod>2026-02-03</lastmod><priority>0.8</priority></url>
   <url><loc>https://moviehub.zya.me/sink-the-bismarck</loc><lastmod>2026-02-03</lastmod><priority>0.8</priority></url>
-  <url><loc>https://moviehub.zya.me/the-enemy-below</loc><lastmod>2026-02-03</lastmod><priority>0.8</priority></url>
+
   <url><loc>https://moviehub.zya.me/raid-on-entebbe</loc><lastmod>2026-02-03</lastmod><priority>0.8</priority></url>
   <url><loc>https://moviehub.zya.me/the-unforgiven-1960</loc><lastmod>2026-02-03</lastmod><priority>0.8</priority></url>
 
