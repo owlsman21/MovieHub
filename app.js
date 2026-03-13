@@ -7,28 +7,41 @@ async function initMovieVault() {
         if (!response.ok) throw new Error("Could not find movie data");
         allMoviesCache = await response.json();
 
-        // Populate containers if they exist on the current page
-        const latestCont = document.getElementById('latest-container');
-        if (latestCont) renderGrid(latestCont, allMoviesCache.slice(0, 12));
+     // Populate Latest Movies (Top 12, excluding Asian/Thai)
+        const latestCont = document.getElementById('latest-grid');
+        if (latestCont) {
+            const internationalOnly = allMoviesCache.filter(m => {
+                const genres = normalizeGenres(m.genres);
+                const cat = (m.category || "").toString().trim().toLowerCase();
+                // Exclude if it's Asian or Thai
+                return cat !== 'asian' && !genres.includes('thai');
+            });
+            renderGrid(latestCont, internationalOnly.slice(0, 12));
+        }
 
-        const hitchCont = document.getElementById('hitchcock-container');
+        // Populate Hitchcock Collection
+        const hitchCont = document.getElementById('hitchcock-grid');
         if (hitchCont) {
             const hitchRaw = allMoviesCache.filter(m => {
                 const genres = normalizeGenres(m.genres);
                 const cat = (m.category || "").toString().trim().toLowerCase();
                 return cat === 'hitchcock' || genres.includes('hitchcock');
             });
-            renderGrid(hitchCont, [...new Map(hitchRaw.map(m => [m.id, m])).values()]);
+            renderGrid(hitchCont, hitchRaw);
         }
 
-        const gridCont = document.getElementById('movie-grid-container');
-        if (gridCont) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const genre = urlParams.get('genre');
-            showGenre(genre || 'All');
-        }
+       // Populate Asian Movies
+const asianCont = document.getElementById('asian-grid');
+if (asianCont) {
+    const asianRaw = allMoviesCache.filter(m => {
+        const genres = normalizeGenres(m.genres); // This helper converts genres to lowercase array
+        const cat = (m.category || "").toString().trim().toLowerCase();
+        // Check if category is 'asian' OR if 'thai' is in the genres list
+        return cat === 'asian' || genres.includes('thai');
+    });
+    renderGrid(asianCont, asianRaw);
+}
 
-        // --- CRITICAL FIX: Initialize search after data is loaded ---
         setupSearch(); 
 
     } catch (e) {
@@ -36,18 +49,15 @@ async function initMovieVault() {
     }
 }
 
-// 2. Search Logic
+// 2. Search Logic (For search-input)
 function setupSearch() {
     const searchInput = document.getElementById('search-input');
-    const gridContainer = document.getElementById('movie-grid-container');
-
-    if (searchInput && gridContainer) {
+    // Note: Only setup search if we aren't on the home page or if search applies to the whole catalog
+    if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase().trim();
-            const filtered = allMoviesCache.filter(movie => 
-                movie.title.toLowerCase().includes(searchTerm)
-            );
-            renderGrid(gridContainer, filtered);
+            // Redirect or filter logic here depending on your needs
+            console.log("Searching for:", searchTerm);
         });
     }
 }
@@ -70,21 +80,7 @@ function renderGrid(container, movieList) {
                 </a>
             </div>
         `).join('')
-        : "<p style='padding:20px;'>No movies found.</p>";
-}
-
-function showGenre(genre) {
-    const container = document.getElementById('movie-grid-container');
-    const pageTitle = document.getElementById('page-title');
-    if (!container) return;
-
-    const searchGenre = genre.toLowerCase().trim();
-    const filtered = genre === 'All' 
-        ? allMoviesCache 
-        : allMoviesCache.filter(m => normalizeGenres(m.genres).includes(searchGenre));
-    
-    if (pageTitle) pageTitle.innerText = genre === 'All' ? 'Vault Collection' : `${genre} Vault`;
-    renderGrid(container, filtered);
+        : "<p style='padding:20px;'>No movies found in this category.</p>";
 }
 
 // Run on load

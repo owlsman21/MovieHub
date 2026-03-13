@@ -1,4 +1,37 @@
 [
+   {
+    "id": "m004",
+    "title": "Time Raiders",
+    "year": 2016,
+    "genres": ["Thai"],
+    "category": "",
+    "description": "A young man is sent to the border of China and discovers a hidden tomb of an ancient civilization.",
+    "source": "rumble",
+    "embedId": "v74v3yw",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDY4NzA3NTYtZDFjYy00M2Q3LThjMGQtMzliZTU2NjQ1NGUxXkEyXkFqcGc@._V1_.jpg"
+},
+  {
+    "id": "m001",
+    "title": "Fatal Island",
+    "thai_title": "เกาะร้างมรณะ",
+    "year": 2024,
+    "genres": ["Thai"],
+    "description": "An expedition team is caught in a storm and stranded on a deserted island!",
+    "embedId": "v74v20m",
+    "source": "rumble",
+   "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gPrP3MfXQZwhWeAz1Xbbi-zYg8ntnKFmGA&s"
+},
+{
+    "id": "m002",
+    "title": "Haunted Tales",
+    "thai_title": "เรื่อง ผี เล่า",
+    "year": 2021,
+    "genres": ["Thai"],
+    "description": "An anthology of three chilling horror stories rooted in Thai belief and karma, following individuals who face terrifying supernatural consequences.",
+    "embedId": "v74uyl6",
+    "source": "rumble",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmUwYzFhYjUtNjc5ZS00ODIzLWIxZTMtOTM0YzlmZmU4OWJhXkEyXkFqcGc@._V1_.jpg"
+},
     {
     "id": "the-enemy-below",
     "title": "The Enemy Below",
@@ -69,18 +102,7 @@
     "source": "ok.ru",
     "posterUrl": "images/final destination bloodlines.jpg"
  },
-    {
-  "id": "primate-2026",
-  "title": "Primate (2026) Full Movie | Intense Creature Horror & Survival",
-  "year": 2026,
-  "director": "Johannes Roberts",
-  "quality": "HD",
-  "genres": "Horror, Thriller, Action",
-  "description": "A group of friends' tropical island getaway becomes a fight for survival when the family's exceptionally clever pet chimpanzee spirals into a savage, rabid frenzy. Directed by Johannes Roberts.",
-  "embedId": "11941521132070",
-  "source": "ok.ru",
-  "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGK3i7C3u8yx9RFuOvf7pWEeYjet_y-QKFhA&s"
-},
+   
     {
   "id": "harmony-falls-2022",
   "title": "Harmony Falls (2022) Full Movie | Mystery Horror | HD Thriller",
