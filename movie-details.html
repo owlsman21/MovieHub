@@ -3,50 +3,57 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>MovieHub</title>
+    <title>MovieHub - Loading...</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
-        
-        <div class="search-container" style="padding: 10px;">
-            <input type="text" id="search-input" placeholder="Search movies..." style="width: 100%; padding: 10px; border-radius: 4px; border: none;">
-        </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
-        </ul>
-        <h3>Genres</h3>
-        <ul id="genre-list">
-            <li><a href="catalog.html?genre=Action">Action</a></li>
-            <li><a href="catalog.html?genre=Thriller">Thriller</a></li>
-            <li><a href="catalog.html?genre=Drama">Drama</a></li>
-            <li><a href="catalog.html?genre=Hitchcock">Hitchcock</a></li>
-            <li><a href="catalog.html?genre=Horror">Horror</a></li>
-            <li><a href="catalog.html?genre=Sci-Fi">Sci-Fi</a></li>
-            <li><a href="catalog.html?genre=Musical">Musical</a></li>
-            <li><a href="catalog.html?genre=History">History</a></li>
-        </ul>
-    </nav>
+    <header class="main-header">
+        <h2>Movie<span>Hub</span></h2>
+        
+        <div class="controls-container">
+            <div class="nav-buttons">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search the Vault...">
+            </div>
+
+            <select class="genre-select" onchange="location = this.value;">
+                <option value="">Filter by Genre</option>
+                <option value="catalog.html?genre=Action">Action</option>
+                <option value="catalog.html?genre=Thriller">Thriller</option>
+                <option value="catalog.html?genre=Drama">Drama</option>
+                <option value="catalog.html?genre=Hitchcock">Hitchcock</option>
+                <option value="catalog.html?genre=Horror">Horror</option>
+                <option value="catalog.html?genre=Sci-Fi">Sci-Fi</option>
+                <option value="catalog.html?genre=Musical">Musical</option>
+                <option value="catalog.html?genre=History">History</option>
+            </select>
+        </div>
+    </header>
 
     <main class="content">
-        <div id="wrapper" style="width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative;">
-            <iframe id="movie-iframe" src="" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        <div id="wrapper">
+            <iframe id="movie-iframe" src="" allowfullscreen></iframe>
         </div>
+
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
             <h1 id="movie-title">Loading...</h1>
-            <p id="movie-meta" style="color:#e50914; font-weight:bold;"></p>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;"></p>
             <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
         </div>
     </main>
 
     <script>
-        // Handle Search Redirection
+        // Handle Search Redirection - Updated to match your new search ID
         document.getElementById('search-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
+            if (e.key === 'Enter') {
+                window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
+            }
         });
 
         // Load Movie Details
@@ -55,22 +62,29 @@
             const movieId = params.get('id');
             if (!movieId) return;
             try {
-                const response = await fetch('data/all-movies.json');
+                // Ensure this path matches your file structure
+                const response = await fetch('data/all-movies.json'); 
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
+                
                 if (movie) {
-                    document.title = movie.title;
+                    document.title = "MovieHub - " + movie.title;
                     document.getElementById('movie-title').innerText = movie.title;
                     document.getElementById('movie-meta').innerText = `${movie.year || ''} | ${movie.quality || ''} | ${movie.genres || movie.genre || ''}`;
                     document.getElementById('movie-desc').innerText = movie.description;
                     
                     let videoUrl = "";
-                    if (movie.source === "ok.ru") videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
-                    else if (movie.source === "rumble") videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+                    if (movie.source === "ok.ru") {
+                        videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
+                    } else if (movie.source === "rumble") {
+                        videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+                    }
                     
                     document.getElementById('movie-iframe').src = videoUrl;
                 }
-            } catch (e) { console.error(e); }
+            } catch (e) { 
+                console.error("Error loading movie data:", e); 
+            }
         }
         loadMovieDetails();
     </script>
