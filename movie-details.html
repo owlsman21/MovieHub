@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <title>MovieHub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>MovieHub</title>
 </head>
 <body>
     <nav class="sidebar">
         <div class="sidebar-header"><h2>Movie<span>Hub</span></h2></div>
+        
+        <div class="search-container" style="padding: 10px;">
+            <input type="text" id="search-input" placeholder="Search movies..." style="width: 100%; padding: 10px; border-radius: 4px; border: none;">
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="catalog.html"><i class="fa-solid fa-film"></i> All Movies</a></li>
@@ -28,54 +34,44 @@
 
     <main class="content">
         <div id="wrapper" style="width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative;">
-            <iframe id="movie-iframe" src="" width="100%" height="100%" frameborder="0" allowfullscreen style="display: block; border: none;"></iframe>
+            <iframe id="movie-iframe" src="" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
         </div>
-        
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
             <h1 id="movie-title">Loading...</h1>
-            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin:10px 0;"></p>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold;"></p>
             <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
         </div>
     </main>
 
     <script>
-      async function loadMovieDetails() {
-    const params = new URLSearchParams(window.location.search);
-    const movieId = params.get('id');
-    if (!movieId) return;
+        // Handle Search Redirection
+        document.getElementById('search-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
+        });
 
-    try {
-        const response = await fetch('data/all-movies.json');
-        const movies = await response.json();
-        const movie = movies.find(m => m.id === movieId);
-
-        if (movie) {
-            // Update page info
-            document.title = movie.title;
-            document.getElementById('movie-title').innerText = movie.title;
-            document.getElementById('movie-meta').innerText = `${movie.year || ''} | ${movie.quality || ''} | ${movie.genres || movie.genre || ''}`;
-            document.getElementById('movie-desc').innerText = movie.description;
-            
-            // Build the URL based on source
-            let videoUrl = "";
-            if (movie.source === "ok.ru") {
-                videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
-            } else if (movie.source === "rumble") {
-                // FIXED: Use the correct Rumble embed format
-                videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
-            }
-            
-            const iframe = document.getElementById('movie-iframe');
-            if (videoUrl) {
-                iframe.src = videoUrl;
-            } else {
-                document.getElementById('wrapper').innerHTML = "<h3 style='color:white; padding:20px;'>Error: Unsupported video source.</h3>";
-            }
+        // Load Movie Details
+        async function loadMovieDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get('id');
+            if (!movieId) return;
+            try {
+                const response = await fetch('data/all-movies.json');
+                const movies = await response.json();
+                const movie = movies.find(m => m.id === movieId);
+                if (movie) {
+                    document.title = movie.title;
+                    document.getElementById('movie-title').innerText = movie.title;
+                    document.getElementById('movie-meta').innerText = `${movie.year || ''} | ${movie.quality || ''} | ${movie.genres || movie.genre || ''}`;
+                    document.getElementById('movie-desc').innerText = movie.description;
+                    
+                    let videoUrl = "";
+                    if (movie.source === "ok.ru") videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
+                    else if (movie.source === "rumble") videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+                    
+                    document.getElementById('movie-iframe').src = videoUrl;
+                }
+            } catch (e) { console.error(e); }
         }
-    } catch (e) {
-        console.error("Critical Load Error:", e);
-    }
-}
         loadMovieDetails();
     </script>
 </body>
