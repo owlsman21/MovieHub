@@ -1,4 +1,15 @@
 [
+    {
+    "id": "Mohawk",
+    "title": "Mohawk (2018) | Gritty Survival Action | Western Horror | Full Movie",
+    "year": 2018,
+    "quality": "HD",
+    "genres": "Action, Horror, Western, History",
+    "description": "Set during the War of 1812, this intense survival thriller follows a young Mohawk woman pursued by a ruthless band of American soldiers. A brutal game of cat-and-mouse deep in the wilderness.",
+    "embedId": "1351353633433",
+    "source": "ok.ru",
+    "posterUrl": "images/mohawk.jpg"
+ },
    {
   "id": "Lock-Stock",
   "title": "Lock, Stock and Two Smoking Barrels (1998) Full Movie | Guy Ritchie's Cult Classic Crime Comedy",
@@ -23,8 +34,7 @@
   "embedId": "8153582799537",
   "source": "ok.ru",
   "posterUrl": "images/Snatch.jpg",
-  "duration": "https://moviehub.uk/movie-details?id=Lock-Stock
-"
+  "duration": "https://moviehub.uk/movie-details?id=Lock-Stock"
 },
    {
   "id": "the-hills-have-eyes-1977",
@@ -1527,17 +1537,7 @@
   "source": "ok.ru",
   "posterUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14197_p_v12_an.jpg"
 },
-   {
-    "id": "Mohawk",
-    "title": "Mohawk (2018) | Gritty Survival Action | Western Horror | Full Movie",
-    "year": 2018,
-    "quality": "HD",
-    "genres": "Action, Horror, Western, History",
-    "description": "Set during the War of 1812, this intense survival thriller follows a young Mohawk woman pursued by a ruthless band of American soldiers. A brutal game of cat-and-mouse deep in the wilderness.",
-    "embedId": "1351353633433",
-    "source": "ok.ru",
-    "posterUrl": "images/mohawk.jpg"
- },
+  
     
   {
   "id": "young-guns-ii-1990",
