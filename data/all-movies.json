@@ -542,18 +542,19 @@
   "source": "rumble",
   "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/House_on_Haunted_Hill.jpg"
 },
-    {
+  {
   "id": "tales-of-manhattan-1942",
-  "title": "Tales of Manhattan (1942) | Rita Hayworth & Charles Boyer | HD",
+  "title": "Tales of Manhattan (1942) Full Movie | Rita Hayworth, Charles Boyer & Henry Fonda",
   "year": 1942,
   "director": "Julien Duvivier",
   "quality": "HD",
-  "genres": "Romantic Comedy, Drama, Anthology",
-  "description": "An elegant tailcoat, cursed by its tailor, passes through the lives of diverse New Yorkers, from a Broadway star to a group of sharecroppers.",
+  "genres": ["Drama", "Romantic Comedy", "Anthology", "Classic"],
+  "description": "Experience the star-studded classic, Tales of Manhattan (1942), a captivating anthology drama featuring Rita Hayworth, Charles Boyer, Henry Fonda, Ginger Rogers, and more. Follow an elegant, seemingly cursed tailcoat as it weaves through the lives of diverse New Yorkers – from a Broadway star to down-on-their-luck sharecroppers. Discover intertwined stories of romance, drama, and unexpected fate. Watch the full movie now for a timeless cinematic journey.",
   "embedId": "v73g6qg",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWU3OWE2NDAtNWQzYS00ZTM5LTkzY2MtMTgzMTVhYzRiNjdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-},
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWU3OWE2NDAtNWQzYS00ZTM5LTkzY2MtMTgzMTVhYzRiNjdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  "duration": "1Hr.33"
+}
     {
   "id": "goodbye-again-1961",
   "title": "Goodbye Again (1961) | Ingrid Bergman & Anthony Perkins | HD",
