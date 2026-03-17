@@ -4858,16 +4858,19 @@
         "genres": ["Crime","Drama"],
         "source": "ok.ru"
      },
-     {
-        "id": "Wall-Street-Money-Never-Sleeps",
-        "posterUrl":  "images/Wall Street Money Never Sleeps.jpg",
-        "year":2010,
-        "title": "Wall Street Money Never Sleeps",
-        "description": "Now out of prison but still disgraced by his peers, Gordon Gekko works his future son-in-law, an idealistic stock broker, when he sees an opportunity to take down a Wall Street enemy and rebuild his empire.",
-        "embedId": "6222313425506",
-        "genres": ["Drama"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "Wall-Street-Money-Never-Sleeps",
+  "title": "Wall Street: Money Never Sleeps (2010) Full Movie | Michael Douglas & Shia LaBeouf",
+  "year": 2010,
+  "director": "Oliver Stone",
+  "quality": "HD",
+  "genres": ["Drama", "Thriller", "Finance"],
+  "description": "Decades after his release, disgraced financier Gordon Gekko (Michael Douglas) emerges from prison, ready to re-enter the cutthroat world of Wall Street. He forms an uneasy alliance with his idealistic future son-in-law (Shia LaBeouf) to expose a conspiracy and rebuild his shattered empire. Dive into this gripping 2010 financial drama, filled with ambition, betrayal, and the timeless lessons of greed. Watch the full movie now.",
+  "embedId": "6222313425506",
+  "source": "ok.ru",
+  "posterUrl": "images/Wall Street Money Never Sleeps.jpg",
+  "duration": "PT2H13M"
+},
      {
         "id": "Natural-Born-Killers",
         "posterUrl":  "images/Natural Born Killers.jpg",
