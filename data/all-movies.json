@@ -23,7 +23,7 @@
   "posterUrl": "images/Lock Stock.jpg",
   "duration": "2Hrs.14"
 },
-  {
+{
   "id": "Snatch",
   "title": "Snatch (2000) Full Movie | Brad Pitt & Jason Statham | Guy Ritchie's Crime Comedy",
   "year": 2000,
@@ -34,7 +34,7 @@
   "embedId": "8153582799537",
   "source": "ok.ru",
   "posterUrl": "images/Snatch.jpg",
-  "duration": "https://moviehub.uk/movie-details?id=Lock-Stock"
+  "duration": "PT1H42M" 
 },
    {
   "id": "the-hills-have-eyes-1977",
