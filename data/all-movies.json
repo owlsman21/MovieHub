@@ -1,5 +1,31 @@
 [
    {
+  "id": "halloween-1978-full-movie",
+  "title": "Halloween (1978) Full Movie | 1080p | John Carpenter's Original Horror Masterpiece",
+  "year": 1978,
+  "director": "John Carpenter",
+  "quality": "1080p",
+  "genres": ["Horror", "Slasher", "Thriller", "Classic"],
+  "description": "Experience the terrifying birth of a horror icon with John Carpenter's Halloween (1978), presented in stunning 1080p. On a cold Halloween night, 15 years after brutally murdering his sister, Michael Myers escapes a mental institution and returns to Haddonfield to stalk babysitter Laurie Strode. Witness the suspense, dread, and pure terror that defined a generation of slasher films. Watch the full original movie now.",
+  "embedId": "v751dv8",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzZiNTdiYTgtYjNkMS00MmJmLWEwZGQtNmY0NGJkMGE0YmYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  "duration": "1Hr.31"
+},
+   {
+  "id": "ghosts-of-war-2020-full-movie",
+  "title": "Ghosts Of War (2020) Full Movie | 1080p | Supernatural Horror Thriller",
+  "year": 2020,
+  "director": "Eric Bress",
+  "quality": "1080p",
+  "genres": ["Horror", "Thriller", "Supernatural", "War"],
+  "description": "Four American soldiers are tasked with guarding a French chateau at the end of World War II, but discover it's haunted by a terrifying supernatural presence. As the horrors intensify, they must confront not only the ghosts of the past but also their own sanity. Experience the pulse-pounding action and chilling scares of Ghosts Of War (2020) in stunning 1080p. Watch the full movie now.",
+  "embedId": "12446695754393",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDk2ZTUzMDUtNjQ3YS00MDUxLTk2MzYtMDJmNTE3YjE1MjA4XkEyXkFqcGc@._V1_.jpg",
+  "duration": "PT1H34M"
+},
+   {
   "id": "the-last-house-on-the-left-1972-remastered",
   "title": "The Last House On The Left (1972) REMASTERED 1080p | Wes Craven's Cult Horror Classic",
   "year": 1972,
