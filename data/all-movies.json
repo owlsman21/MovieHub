@@ -1,5 +1,31 @@
 [
    {
+  "id": "Lock-Stock",
+  "title": "Lock, Stock and Two Smoking Barrels (1998) Full Movie | Guy Ritchie's Cult Classic Crime Comedy",
+  "year": 1998,
+  "director": "Guy Ritchie",
+  "quality": "HD",
+  "genres": ["Crime", "Comedy", "Action", "Cult Classic"],
+  "description": "Four London friends find themselves in deep trouble after a rigged poker game, owing a local crime lord half a million pounds. With only a week to pay, they hatch a desperate plan involving drugs, antique guns, and rival gangs. Guy Ritchie's iconic 1998 cult classic, Lock, Stock and Two Smoking Barrels, is a fast-paced, darkly comedic, and brilliantly convoluted British crime caper. Watch the full movie now.",
+  "embedId": "9602459634262",
+  "source": "ok.ru",
+  "posterUrl": "images/Lock Stock.jpg",
+  "duration": "PT1H47M"
+}
+  {
+  "id": "Snatch",
+  "title": "Snatch (2000) Full Movie | Brad Pitt & Jason Statham | Guy Ritchie's Crime Comedy",
+  "year": 2000,
+  "director": "Guy Ritchie",
+  "quality": "HD",
+  "genres": ["Crime", "Comedy", "Action", "Cult Classic"],
+  "description": "In the chaotic underworld of London, two intertwining plots unfold: one involving a stolen diamond and the eccentric characters trying to get their hands on it, and another about a small-time boxing promoter (Jason Statham) caught between a ruthless gangster and an unhinged Irish Gypsy (Brad Pitt). Guy Ritchie's Snatch (2000) is a fast-talking, action-packed, and hilarious crime comedy. Watch the full movie now.",
+  "embedId": "8153582799537",
+  "source": "ok.ru",
+  "posterUrl": "images/Snatch.jpg",
+  "duration": "PT1H42M"
+}
+   {
   "id": "the-hills-have-eyes-1977",
   "title": "The Hills Have Eyes (1977) Full Movie | Wes Craven's Original Cult Horror Classic",
   "year": 1977,
@@ -2193,15 +2219,7 @@
         "genres": ["Action"],
         "source": "ok.ru"
     },
-     {  "id": "Snatch",
-        "posterUrl":  "images/Snatch.jpg",
-        "year": 2000,
-        "title": "Snatch (2000)",
-        "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
-        "embedId": "8153582799537",
-        "genres": ["Drama","Comedy","Action"],
-        "source": "ok.ru"
-    },
+    
      {  "id": "Lock-Stock",
         "posterUrl":  "images/Lock Stock.jpg",
         "year": 1998,
