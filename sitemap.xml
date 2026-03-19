@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+
 <url>
   <loc>https://moviehub.uk/</loc>
   <lastmod>2026-03-12T08:41:28+00:00</lastmod>
@@ -49,6 +49,31 @@
 <url>
   <loc>https://moviehub.uk/catalog?genre=History</loc>
   <lastmod>2026-03-12T08:41:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=tammy-and-the-millionaire-1967-full-movie</loc>
+  <lastmod>2026-03-20T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-last-house-on-the-left-2009-full-movie</loc>
+  <lastmod>2026-03-20T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=swallowed-2022-full-movie</loc>
+  <lastmod>2026-03-20T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-mummys-shroud-1967-full-movie</loc>
+  <lastmod>2026-03-20T12:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-hills-have-eyes-2006-full-movie</loc>
+  <lastmod>2026-03-20T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
