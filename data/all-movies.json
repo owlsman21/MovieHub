@@ -6735,16 +6735,19 @@
         "genres": ["Drama","Action","Horror"],
         "source": "ok.ru"
      },
-      {
-        "id": "The-Girl",
-        "posterUrl":  "images/The Girl.jpg",
-        "year":2012,
-        "title": "The Girl",
-        "description": "The turbulent relationship between filmmaker Sir Alfred Hitchcock (Toby Jones) and actress Tippi Hedren (Sienna Miller).",
-        "embedId": "9618328652326",
-        "genres": ["Biography","Drama","Hitchcock"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "the-girl-2012-full-movie",
+  "title": "The Girl (2012) Full Movie | Alfred Hitchcock & Tippi Hedren | Biography Drama | Behind the Scenes",
+  "year": 2012,
+  "director": "Julian Jarrold",
+  "quality": "HD",
+  "genres": ["Biography", "Drama", "History"],
+  "description": "Delve into the tumultuous and disturbing relationship between legendary filmmaker Sir Alfred Hitchcock (Toby Jones) and his muse, actress Tippi Hedren (Sienna Miller). This gripping 2012 biographical drama offers a raw look behind the glamour of Hollywood, exploring the psychological complexities and dark obsession that unfolded during the making of classic films like 'The Birds' and 'Marnie.' The Girl (2012) reveals a compelling, often unsettling, chapter in cinematic history. Watch the full movie now.",
+  "embedId": "9618328652326",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/I/61lBYJlnqPL._AC_UF894,1000_QL80_.jpg",
+  "duration": "1HR.30"
+},
      {
         "id": "Bring-Him-Back-Dead",
         "posterUrl":  "images/Bring Him Back Dead.jpg",
