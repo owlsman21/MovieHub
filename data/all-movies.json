@@ -1,5 +1,43 @@
 [
    {
+  "id": "ouija-a-new-beginning-2025-full-movie",
+  "title": "Ouija: A New Beginning (2025) Full Movie | Supernatural Horror | Witch & Ouija Board Nightmare",
+  "year": 2025,
+  "director": "YOUR_DIRECTOR_HERE",
+  "quality": "HD",
+  "genres": ["Horror", "Supernatural", "Mystery"],
+  "description": "A woman's desperate flight takes a terrifying turn when her daughter, seeking to contact her deceased father, unearths a Ouija board, unwittingly unleashing an ancient witch into their lives. Ouija: A New Beginning (2025) is a brand new supernatural horror and mystery film that promises intense scares, dark magic, and a chilling tale of unintended consequences. Watch the full movie now.",
+  "embedId": "8957586573855",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BOGU3MDU5MmMtZjBhNi00NTI4LWJlMjktOTUwMjc1MjgwMzYxXkEyXkFqcGc@._V1_.jpg",
+  "duration": "PT1H30M"
+},
+  {
+  "id": "the-bayou-2025-full-movie",
+  "title": "The Bayou (2025) Full Movie | New Thriller Horror | Louisiana Everglades Survival",
+  "year": 2025,
+  "director": "YOUR_DIRECTOR_HERE",
+  "quality": "HD",
+  "genres": ["Thriller", "Horror", "Survival"],
+  "description": "A dream vacation quickly descends into a nightmare for Houston grad Kyle and her friends. After miraculously surviving a plane crash in the remote and perilous Louisiana everglades, they soon discover that the untamed wilderness holds a secret far more terrifying than they could have imagined – something ancient and dangerous lurks in the murky shallows. The Bayou (2025) is a brand new, intense thriller horror that promises suspense, jump scares, and a fight for survival against unknown forces. Watch the full movie now.",
+  "embedId": "10413556304498",
+  "source": "ok.ru",
+  "posterUrl": "images/The Bayou 2025.jpg",
+  "duration": "PT1H30M"
+},
+     {
+  "id": "frankenstein-2025",
+  "title": "Frankenstein (2025) Full Movie | Oscar Isaac | Guillermo del Toro Horror",
+  "year": 2025,
+  "director": "Guillermo del Toro",
+  "quality": "HD",
+  "genres": "Drama, Horror, Sci-Fi",
+  "description": "In this lavish Gothic reimagining of Mary Shelley's classic, a brilliant but tormented scientist brings a creature to life, sparking a tragic journey of abandonment, discovery, and existential horror. Directed by Guillermo del Toro and starring Oscar Isaac and Jacob Elordi.",
+  "embedId": "12681960032806",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzYzNDYxMTQtMTU4OS00MTdlLThhMTQtZjI4NGJmMTZmNmRiXkEyXkFqcGc@._V1_.jpg"
+},
+   {
   "id": "the-treasure-of-the-silver-lake-1962-full-movie",
   "title": "The Treasure Of The Silver Lake (1962) Full Movie | Lex Barker & Pierre Brice | Classic Western Adventure",
   "year": 1962,
@@ -466,18 +504,7 @@
     "year": 1957
 },
   
-   {
-  "id": "frankenstein-2025",
-  "title": "Frankenstein (2025) Full Movie | Oscar Isaac | Guillermo del Toro Horror",
-  "year": 2025,
-  "director": "Guillermo del Toro",
-  "quality": "HD",
-  "genres": "Drama, Horror, Sci-Fi",
-  "description": "In this lavish Gothic reimagining of Mary Shelley's classic, a brilliant but tormented scientist brings a creature to life, sparking a tragic journey of abandonment, discovery, and existential horror. Directed by Guillermo del Toro and starring Oscar Isaac and Jacob Elordi.",
-  "embedId": "12681960032806",
-  "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzYzNDYxMTQtMTU4OS00MTdlLThhMTQtZjI4NGJmMTZmNmRiXkEyXkFqcGc@._V1_.jpg"
-},
+ 
     {
   "id": "an-american-werewolf-in-london-1981",
   "title": "An American Werewolf in London (1981) Full Movie | John Landis | Classic Horror Comedy",
@@ -1570,17 +1597,7 @@
         "posterUrl":  "images/open graves.jpg",
         "year": 2009
     },
-  {
-    "id": "Ouija",
-    "title": "Ouija: A New Beginning (2025) | Supernatural Horror | Full Movie",
-    "year": 2025,
-    "quality": "HD",
-    "genres": "Horror, Supernatural, Mystery",
-    "description": "A woman on the run faces a terrifying nightmare when her daughter uncovers a Ouija board to contact her late father, inadvertently inviting an ancient witch into their lives.",
-    "embedId": "8957586573855",
-    "source": "ok.ru",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BOGU3MDU5MmMtZjBhNi00NTI4LWJlMjktOTUwMjc1MjgwMzYxXkEyXkFqcGc@._V1_.jpg"
- },
+ 
   {
     "id": "Abduct",
     "title": "Abduct (2025) | Psychological Sci-Fi Thriller | Full Mystery Movie",
@@ -2084,15 +2101,7 @@
   "source": "ok.ru",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjExNTg3NzYwMV5BMl5BanBnXkFtZTcwMzcxMTEzMQ@@._V1_FMjpg_UX1000_.jpg"
 },
-     {  "id": "The-Bayou",
-        "posterUrl":  "images/The Bayou 2025.jpg",
-        "year": 2025,
-        "title": "The Bayou 2025",
-        "description": " Vacation turns disaster when Houston grad, Kyle and her friends escape a plane crash in the desolate Louisiana everglades, only to discover there's something way more dangerous lurking in the shallows.",
-        "embedId": "10413556304498",
-        "genres": ["Thriller","Horror"],
-        "source": "ok.ru"
-    },
+    
     
      {  "id": "Teeth",
         "posterUrl":  "images/Teeth.jpg",
