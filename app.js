@@ -6,16 +6,16 @@ async function initMovieVault() {
         if (!response.ok) throw new Error("Could not find data");
         allMoviesCache = await response.json();
 
-        // Safe rendering for Home Page specific sections (using the correct IDs)
-        renderGrid(document.getElementById('latest-grid'), allMoviesCache.slice(0, 12));
+        // MODIFIED: Safe rendering for Home Page specific sections to show 16 movies
+        renderGrid(document.getElementById('latest-grid'), allMoviesCache.slice(0, 16)); // Changed from 12 to 16
 
         // Fixed: Filter by checking if the 'genres' array includes 'Hitchcock' (case-insensitive for robustness)
         // Added Array.isArray() check to ensure m.genres is actually an array
-        renderGrid(document.getElementById('hitchcock-grid'), allMoviesCache.filter(m => m.genres && Array.isArray(m.genres) && m.genres.some(genre => genre.toLowerCase() === 'hitchcock')));
+        renderGrid(document.getElementById('hitchcock-grid'), allMoviesCache.filter(m => m.genres && Array.isArray(m.genres) && m.genres.some(genre => genre.toLowerCase() === 'hitchcock')).slice(0, 16)); // Added .slice(0, 16)
 
         // MODIFIED: Filter for Asian movies, specifically looking for 'thai' genre
         // Added Array.isArray() check to ensure m.genres is actually an array
-        renderGrid(document.getElementById('asian-grid'), allMoviesCache.filter(m => m.genres && Array.isArray(m.genres) && m.genres.some(genre => genre.toLowerCase() === 'thai')));
+        renderGrid(document.getElementById('asian-grid'), allMoviesCache.filter(m => m.genres && Array.isArray(m.genres) && m.genres.some(genre => genre.toLowerCase() === 'thai')).slice(0, 16)); // Added .slice(0, 16)
 
         // If the homepage search results container exists, initialize it as empty/hidden
         const homepageSearchSection = document.getElementById('homepage-search-section');
