@@ -277,27 +277,57 @@
   <loc>https://moviehub.uk/movie-details.html?id=tigerland-2000-full-movie</loc>
   <lastmod>2026-03-20T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
-   <url>
-      <loc>https://www.yourwebsite.com/movies/first-contact-2023-full-movie</loc>
-      <lastmod>2026-03-30T19:00:00+07:00</lastmod> <!-- This is today's date and time (GMT+7) -->
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-     <url>
-      <loc>https://www.yourwebsite.com/movies/breakup-season-2024-full-movie</loc>
-      <lastmod>2026-03-30T19:00:00+07:00</lastmod> <!-- This is today's date and time (GMT+7) -->
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
+  <url>
+   <loc>https://moviehub.uk/movie-details?id=first-contact-2023-full-movie</loc>
+   <lastmod>2026-03-30T19:00:00+07:00</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.8</priority>
 </url>
-   <url>
-      <loc>https://www.yourwebsite.com/movies/lake-george-2024-full-movie</loc>
-      <lastmod>2026-03-30T19:00:00+07:00</lastmod> <!-- This is today's date and time (GMT+7) -->
+<url>
+   <loc>https://moviehub.uk/movie-details?id=breakup-season-2024-full-movie</loc>
+   <lastmod>2026-03-30T19:00:00+07:00</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://moviehub.uk/movie-details?id=lake-george-2024-full-movie</loc>
+   <lastmod>2026-03-30T19:00:00+07:00</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://moviehub.uk/movie-details?id=killing-all-my-sisters-2024-full-movie</loc>
+   <lastmod>2026-03-30T19:00:00+07:00</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://moviehub.uk/movie-details?id=YOUR_MOVIE_SLUG_HERE</loc> <!-- This placeholder still needs an actual movie slug -->
+   <lastmod>2026-04-01T11:30:00+07:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://moviehub.uk/movie-details?id=all-you-need-is-blood-2023-full-movie</loc>
+   <lastmod>2026-04-01T12:30:00+07:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8</priority>
+</url>
+ <url>
+      <loc>https://moviehub.uk/movie-details?id=the-prank-2022-full-movie</loc>
+      <lastmod>2026-04-01T13:00:00+07:00</lastmod> <!-- Updated with current date and time -->
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
-    <url>
-      <loc>https://www.yourwebsite.com/movies/killing-all-my-sisters-2024-full-movie</loc>
-      <lastmod>2026-03-30T19:00:00+07:00</lastmod> <!-- This is today's date and time (GMT+7) -->
+   <url>
+   <loc>https://moviehub.uk/movie-details?id=dont-breathe-2016-full-movie</loc>
+   <lastmod>2026-04-01T12:45:00+07:00</lastmod> <!-- This is today's date and time (GMT+7) -->
+   <changefreq>weekly</changefreq>
+   <priority>0.8</priority>
+</url>
+ <url>
+      <loc>https://moviehub.uk/movie-details?id=parallel-2024-full-movie</loc>
+      <lastmod>2026-04-01T13:05:00+07:00</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
