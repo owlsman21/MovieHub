@@ -3118,15 +3118,7 @@
         "source": "ok.ru"
     },
     
-     {  "id": "Lock-Stock",
-        "posterUrl":  "images/Lock Stock.jpg",
-        "year": 1998,
-        "title": "Lock Stock and Two Smoking Barrels 1998",
-        "description": "When four small-time criminals lose a rigged poker game against a London kingpin, he gives them one week to settle their enormous debt",
-        "embedId": "9602459634262",
-        "genres": ["Drama","Comedy","Action"],
-        "source": "ok.ru"
-    },
+  
      {  "id": "Nosferatu-the-Vampyre",
         "posterUrl":  "images/Nosferatu the Vampyre.jpg",
         "year": 1978,
