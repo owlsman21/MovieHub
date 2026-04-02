@@ -1,5 +1,58 @@
 [
    {
+  "id": "the-magnificent-seven-1960-full-movie",
+  "title": "The Magnificent Seven (1960) Full Movie | John Sturges | Classic Western Action Adventure",
+  "year": 1960,
+  "director": ["John Sturges"],
+  "cast": ["Yul Brynner", "Steve McQueen", "Charles Bronson", "James Coburn", "Horst Buchholz", "Robert Vaughn", "Brad Dexter", "Eli Wallach"],
+  "quality": "1080",
+  "genres": ["Western", "Action", "Adventure", "Classic"],
+  "description": "A legend is born from the dust. Ride with The Magnificent Seven (1960), the iconic Western masterpiece featuring an all-star cast including Yul Brynner, Steve McQueen, Charles Bronson, and James Coburn. When Mexican peasants hire seven skilled gunfighters to protect their village from relentless bandits, a thrilling battle for freedom and justice ensues. Experience the ultimate tale of courage and sacrifice in this timeless classic.",
+  "embedId": "9187069201058",
+  "source": "ok.ru",
+  "posterUrl": "images/the magnificent seven 1960.jpg",
+  "duration": "2Hrs.08"
+},
+  
+   {
+  "id": "bone-tomahawk-2015-full-movie",
+  "title": "Bone Tomahawk (2015) Full Movie | S. Craig Zahler | Kurt Russell Cannibal Western Horror",
+  "year": 2015,
+  "director": ["S. Craig Zahler"],
+  "cast": ["Kurt Russell", "Matthew Fox", "Richard Jenkins", "Patrick Wilson"],
+  "quality": "1080",
+  "genres": ["Horror", "Western", "Thriller"],
+  "description": "Not for the faint of heart! Brace yourself for Bone Tomahawk (2015), the intensely brutal Western horror starring Kurt Russell. When a small frontier town is terrorized by a savage, cannibalistic tribe, a determined sheriff and his rag-tag posse embark on a harrowing rescue mission into the darkest reaches of the Old West. A visceral blend of Western grit and horrifying survival.",
+  "embedId": "6461509208614",
+  "source": "ok.ru",
+  "posterUrl": "images/Bone Tomahawk.jpg",
+  "duration": "2Hr.12"
+},
+   {
+  "id": "forsaken-2015-full-movie",
+  "title": "Forsaken (2015) Full Movie | Jon Cassar | Kiefer & Donald Sutherland Western",
+  "year": 2015,
+  "director": ["Jon Cassar"],
+  "cast": ["Kiefer Sutherland", "Donald Sutherland"],
+  "quality": "Not Specified",
+  "genres": ["Western", "Drama", "Action"],
+  "description": "The West demands its price. Experience Forsaken (2015), the powerful Western starring real-life father and son, Kiefer and Donald Sutherland. A repentant gunfighter returns home only to find his town terrorized by outlaws, forcing him to pick up his guns once more to protect his family and confront his past. A gripping tale of redemption, family, and frontier justice.",
+  "embedId": "311726901894",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTY5ODExZjktNmU3Mi00Njk0LThlYTktNzVlN2NkYjQ5ZmViXkEyXkFqcGc@._V1_.jpg",
+  "duration": "1Hr.30"
+},
+    {
+        "id": "Forsaken-2016",
+        "posterUrl":  "images/Forsaken 2016.jpg",
+        "year":2016,
+        "title": "Forsaken (2016)",
+        "description": "When a Priest discovers his wife is deathly ill, he decides to go against his faith and use his knowledge of exorcisms to possess her in order to save her life.",
+        "embedId": "https://www.youtube.com/watch?v=5tV5xgNZSYY",
+        "genres": ["Horror"],
+        "source": "youtube"
+     },
+   {
   "id": "long-shadows-2025-full-movie",
   "title": "Long Shadows (2025) Full Movie | Director's Name Here | Mystery Thriller, Psychological Suspense",
   "year": 2025,
@@ -2990,15 +3043,7 @@
         "source": "ok.ru"
     },
 
-     {  "id": "Bone-Tomahawk",
-        "posterUrl":  "images/Bone Tomahawk.jpg",
-        "year": 2015,
-        "title": "Bone Tomahawk (2015) ",
-        "description": " In the Old West, a small-town sheriff and his rag-tag posse set out to rescue several townspeople from a brutal cave-dwelling, cannibalistic Indian tribe.",
-        "embedId": "6461509208614",
-        "genres": ["Horror","Western"],
-        "source": "ok.ru"
-    },
+   
       { "id": "Jennifers-Body",
         "posterUrl":  "images/Jennifers Body.jpg",
         "year": 2019,
@@ -7753,16 +7798,7 @@
         "genres": ["Horror","Thriller","Western"],
         "source": "ok.ru"
      },
-      {
-        "id": "The-Magnificent-Seven",
-        "posterUrl":  "images/the magnificent seven 1960.jpg",
-        "year":1960,
-        "title": "The Magnificent Seven",
-        "description": "Seven gunfighters are hired by Mexican peasants to liberate their village from oppressive bandits.",
-        "embedId": "9187069201058",
-        "genres": ["Western","Action","Adventure"],
-        "source": "ok.ru"
-     },
+     
       {
         "id": "Calamity-Jane",
         "posterUrl":  "images/Calamity Jane.jpg",
@@ -7953,16 +7989,7 @@
         "genres": ["Slasher","Horror"],
         "source": "ok.ru"
      },
-      {
-        "id": "Forsaken-2016",
-        "posterUrl":  "images/Forsaken 2016.jpg",
-        "year":2016,
-        "title": "Forsaken (2016)",
-        "description": "When a Priest discovers his wife is deathly ill, he decides to go against his faith and use his knowledge of exorcisms to possess her in order to save her life.",
-        "embedId": "https://www.youtube.com/watch?v=5tV5xgNZSYY",
-        "genres": ["Horror"],
-        "source": "youtube"
-     },
+     
       {
         "id": "Chopper",
         "posterUrl":  "images/Chopper.jpg",
@@ -10232,15 +10259,6 @@
         "description": " The story of the Apache chief and his armed resistance to the U.S. Government's subjugation of his people.",
         "embedId": "7286425389606",
         "genres": ["Western"],
-        "source": "ok.ru"
-    },
-     {  "id": "Bone-Tomahawk",
-        "posterUrl":  "images/Bone Tomahawk.jpg",
-        "year": 2015,
-        "title": "Bone Tomahawk (2015) ",
-        "description": " In the Old West, a small-town sheriff and his rag-tag posse set out to rescue several townspeople from a brutal cave-dwelling, cannibalistic Indian tribe.",
-        "embedId": "6461509208614",
-        "genres": ["Horror","Western"],
         "source": "ok.ru"
     },
              { "id": "Rio-Bravo",
