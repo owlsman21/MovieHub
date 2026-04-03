@@ -3861,7 +3861,7 @@
         "genres": ["Action"],
         "source": "ok.ru"
     },
-    {   "id": "Darkness Rising",
+    {   "id": "Darkness-Rising",
         "posterUrl":  "images/Darkness Rising.jpg",
         "year": 2017,
         "title": "Darkness Rising 2017",
@@ -4313,7 +4313,7 @@
         "source": "ok.ru"
      },
       { 
-        "id": "Dead Mail",
+        "id": "Dead-Mail",
         "posterUrl":  "images/Dead Mail.jpg",
         "year": 2024,
         "title": "Dead Mail (2024)",
@@ -4574,7 +4574,7 @@
         "source": "ok.ru"
      },
      {
-        "id": "House of Inequity",
+        "id": "House-of-Inequity",
         "posterUrl":  "images/House of Inequity.jpg",
         "year": 2021,
         "title": "House of Inequity 2021",
@@ -4976,7 +4976,7 @@
      },
      
       {
-        "id": "Echo Valley",
+        "id": "Echo-Valley",
         "posterUrl":  "images/Echo Valley.jpg",
         "year": 2025,
         "title": "Echo Valley 2025",
@@ -6654,7 +6654,7 @@
         "source": "ok.ru"
      },
       {
-        "id": "Deja Vu",
+        "id": "Deja-Vu",
         "posterUrl":  "images/Deja Vu.jpg",
         "year":2006,
         "title": "Deja Vu",
@@ -8403,7 +8403,7 @@
         "source": "ok.ru"
      },
       {
-        "id": "Hallow Road",
+        "id": "Hallow-Road",
         "posterUrl":  "images/Hallow Road.jpg",
         "year":2025,
         "title": "Hallow Road",
