@@ -1,5 +1,90 @@
 [
    {
+    "id": "All-The-Presidents-Men-(1976)-1080p",
+    "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/92/All_the_president%27s_men.jpg",
+    "year": 1976,
+    "title": "All The President's Men (1976) 1080p",
+    "description": "Based on the true story, this gripping political thriller follows Washington Post reporters Bob Woodward and Carl Bernstein as they investigate the Watergate scandal that eventually led to President Richard Nixon's resignation. Starring Robert Redford and Dustin Hoffman.",
+    "embedId": "8749680888488",  
+    "genres": ["Drama", "History", "Thriller"],
+    "source": "ok.ru",
+    "quality": "1080p",
+    "duration": "02:18:00" 
+},
+   {
+    "id": "Cabaret-(1972)-1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGExNGNlNmQtZTlmNy00MmZkLWE1MjgtZGYwODY0ZDI1YzMwXkEyXkFqcGc@._V1_.jpg",
+    "year": 1972,
+    "title": "Cabaret (1972) 1080p",
+    "description": "A young American writer gets entangled in the vibrant, decadent nightlife of 1930s Berlin and its Kit Kat Klub, while the Nazi party's rise casts a dark shadow over the city. Starring Liza Minnelli in her iconic role, this musical drama is a celebrated classic.",
+    "embedId": "8781745097384",  
+    "genres": ["Musical", "Drama", "Romance"],
+    "source": "ok.ru",
+    "quality": "1080p",
+    "duration": "02:04:00" 
+},
+   {
+    "id": "The-Sting-(1973)-1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGI4OTk4MDMtYmQ1Ni00YTUzLTkyYTktZGUwMjMyN2M4NjQ5XkEyXkFqcGc@._V1_.jpg",
+    "year": 1973,
+    "title": "The Sting (1973) 1080p",
+    "description": "Two con men, a young upstart and an experienced master, team up to pull off an elaborate 'long con' on a ruthless crime boss to avenge the death of a mutual friend. This Oscar-winning classic stars Paul Newman and Robert Redford.",
+    "embedId": "8750771735208",  
+    "genres": ["Comedy", "Crime", "Drama"],
+    "source": "ok.ru",
+    "quality": "1080p",
+    "duration": "02:09:00" 
+},
+   {
+    "id": "LA-Confidential-(1997)-1080p",
+    "posterUrl": "https://preview.redd.it/i-watched-l-a-confidential-1997-v0-47k9vcawow8d1.jpeg?width=640&crop=smart&auto=webp&s=a0606a13eff9d3a174f4857e299e784aa462329b",
+    "year": 1997,
+    "title": "L.A. Confidential (1997) 1080p",
+    "quality": "1080",
+    "description": "In 1950s Los Angeles, three detectives investigate a series of interconnected crimes, uncovering corruption and a dark conspiracy within the LAPD. A critically acclaimed neo-noir crime thriller starring Kevin Spacey, Russell Crowe, Guy Pearce, and Kim Basinger.",
+    "embedId": "2981635951272",  
+    "genres": ["Crime", "Drama", "Mystery"],
+    "source": "ok.ru",
+    "duration": "2Hrs.18"   
+    
+},
+   
+   {
+    "id": "The-Avengers-(1998)-1080p",
+    "posterUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p21467_p_v8_am.jpg",
+    "year": 1998,
+    "title": "The Avengers (1998) 1080p",
+    "quality": "1080",
+    "description": "Secret agents John Steed and Emma Peel team up to stop a disgruntled former agent from using a weather-controlling device to extort the world. Based on the classic British TV series, this action-adventure film stars Ralph Fiennes, Uma Thurman, and Sean Connery.",
+    "embedId": "227329379053",  
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "source": "ok.ru",
+    "duration": "1Hrs.29"  
+},
+   {
+    "id": "Ghost-(1990)-1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjkwOWM2MWMtMWE1YS00MTBlLTg1ODctYTI3M2I0NGIxMGYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "year": 1990,
+    "title": "Ghost (1990) 1080p",
+    "quality": "1080",
+    "description": "After a man is murdered, his spirit stays behind to warn his lover of impending danger, with the help of a reluctant psychic. A timeless blend of romance, supernatural thrills, and comedy, starring Patrick Swayze, Demi Moore, and Whoopi Goldberg.",
+    "embedId": "2136958241378",  
+    "genres": ["Fantasy", "Drama", "Romance"],
+    "source": "ok.ru",
+    "duration": "2Hrs.07" 
+},
+   {
+    "id": "Burnt-Offerings",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjEzNzYzNTc3Nl5BMl5BanBnXkFtZTgwMDUwNTkyMTE@._V1_.jpg",
+    "year": 1976,
+    "title": "Burnt Offerings (1976) 1080p",
+    "description": "A family rents an isolated, old mansion for the summer, only to discover its dark, sinister secrets and a terrifying entity that demands increasingly strange sacrifices. Starring Karen Black, Oliver Reed, and Bette Davis, this psychological horror gem from 1976 is a chilling dive into the supernatural.",
+    "embedId": "v75t91k",  
+    "genres": ["Horror", "Thriller", "Mystery"],
+    "source": "rumble",
+     "duration": "1Hrs.56" 
+},
+   {
   "id": "the-magnificent-seven-1960-full-movie",
   "title": "The Magnificent Seven (1960) Full Movie | John Sturges | Classic Western Action Adventure",
   "year": 1960,
@@ -34,7 +119,7 @@
   "year": 2015,
   "director": ["Jon Cassar"],
   "cast": ["Kiefer Sutherland", "Donald Sutherland"],
-  "quality": "Not Specified",
+  "quality": "1080",
   "genres": ["Western", "Drama", "Action"],
   "description": "The West demands its price. Experience Forsaken (2015), the powerful Western starring real-life father and son, Kiefer and Donald Sutherland. A repentant gunfighter returns home only to find his town terrorized by outlaws, forcing him to pick up his guns once more to protect his family and confront his past. A gripping tale of redemption, family, and frontier justice.",
   "embedId": "311726901894",
@@ -6254,13 +6339,15 @@
      },
       {
         "id": "Cool-Hand-Luke",
-        "posterUrl":  "images/Cool Hand Luke.jpg",
+        "posterUrl":  "https://ih1.redbubble.net/image.4814966508.1019/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
         "year":1967,
         "title": "Cool Hand Luke",
+         "quality": "1080",
         "description": "A laid-back Southern man is sentenced to two years in a rural prison, but refuses to conform.",
         "embedId": "33543031326",
         "genres": ["Crime","Drama"],
-        "source": "ok.ru"
+        "source": "ok.ru",
+        "duration":"2Hrs.08"
      },
       {
         "id":"The-Great-Escape",
@@ -7162,7 +7249,7 @@
     
      {
         "id": "Dracula-2000",
-        "posterUrl":  "images/Dracula 2000.jpg",
+        "posterUrl":  "https://m.media-amazon.com/images/M/MV5BYmY1YjVjNDctZDc3NC00YmM0LWE2ZGItZjE1ODk0ZWNiY2E5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         "year":2000,
         "title": "Dracula 2000",
         "description": "Dracula slakes his blood thirst and renews his search for love in New Orleans.",
@@ -9678,16 +9765,7 @@
   "source": "rumble",
   "embedId": "v729102"
 },
-             {
-    "id": "Ghost-Town-1956",
-    "posterUrl": "images/ghosttown1956.jpg",
-    "year": 1956,
-    "title": "Ghost Town 1956",
-    "description": "A stagecoach under siege takes refuge in an abandoned town, where the pressure of an Indian attack forces the passengers' dark secrets to the surface.",
-    "embedId": "v72cblm",
-    "genres": ["Western"],
-    "source": "rumble"
-  },
+          
    {
     "id": "Looking-For-Mr-Goodbar-1977",
     "posterUrl": "images/mrgoodbar1977.jpg",
@@ -10307,16 +10385,7 @@
         "genres": ["Western","Drama"],
         "source": "ok.ru"
      },
-      { 
-        "id": "Ghost-Town",
-        "posterUrl":  "images/Ghost Town.jpg",
-        "year": 2023,
-        "title": "Ghost Town (2023)",
-        "description": "In the untamed West of Victorian-era America, a drifter takes a job as a barman in a small Arizona town. After a series of bizarre deaths, he soon finds himself the target of suspicion",
-        "embedId": "6364574190118",
-        "genres": ["Western","Horror"],
-        "source": "ok.ru"
-     },
+     
             {
         "id": "Goin-South",           
         "posterUrl": "images/goin south.jpg", 
