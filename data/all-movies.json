@@ -1,5 +1,44 @@
 [
    {
+    "id": "Picnic-at-Hanging-Rock-(1975)-1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk2ODM1Njc3MV5BMl5BanBnXkFtZTcwMzc1MzYxMQ@@._V1_.jpg",
+    "year": 1975,
+    "title": "Picnic at Hanging Rock (1975) 1080p",
+    "description": "During a rural summer picnic in 1900, several students and a teacher from an Australian girls' boarding school disappear within the caves of Hanging Rock. The event triggers a frantic search and a wave of hysteria, as the community struggles to reconcile the inexplicable disappearance with their rigid Victorian values.",
+    "director": "Peter Weir",
+    "embedId": "v7616q6",
+    "genres": ["Drama", "Mystery", "Thriller"],
+    "source": "rumble",
+    "quality": "1080p",
+    "duration": "01:55:00"
+},
+   {
+    "id": "Merry-Christmas-Mr-Lawrence-(1983)-1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWU3NzRlZTktZWFjMC00OWYzLTkzZTItMjI5Mjg5YmJjNGEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "year": 1983,
+    "title": "Merry Christmas Mr. Lawrence (1983) 1080p",
+    "description": "During WWII, a British soldier, Major Jack Celliers, arrives in a Japanese POW camp. The camp commander, Captain Yonoi, becomes obsessed with Celliers' defiant spirit, leading to a deep psychological conflict between Eastern and Western values. Meanwhile, Colonel Lawrence attempts to bridge the cultural gap between the captives and their captors.",
+    "director": "Nagisa Ôshima",
+    "embedId": "v7616q6",
+    "genres": ["Drama", "War"],
+    "source": "rumble",
+    "quality": "1080p",
+    "duration": "02:03:00"
+},
+   {
+    "id": "Avatar-Fire-and-Ash-(2025)-1080p",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "year": 2025,
+    "title": "Avatar: Fire and Ash (2025) 1080p",
+    "description": "The third installment in James Cameron's groundbreaking 'Avatar' series, 'Avatar: Fire and Ash' continues the saga on the lush moon of Pandora. Following the events of 'The Way of Water,' Jake Sully, Neytiri, and their children face new challenges and explore new regions of their world. As tensions with humanity persist, the Na'vi must confront new threats and forge new alliances to protect their way of life and the sacred balance of Pandora.",
+    "director": "James Cameron",
+    "embedId": "13333963213410",
+    "genres": ["Sci-Fi", "Action", "Adventure"],
+    "source": "ok.ru",
+    "quality": "1080p",
+    "duration": "03:10:00"
+},
+   {
     "id": "Burning-Bright-(2010)-1080p",
     "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDE2NTM1MWMtNGYxNS00ZmE2LWFjMWMtMTY5MjI3NGQxMmNmXkEyXkFqcGc@._V1_.jpg",
     "year": 2010,
