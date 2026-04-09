@@ -1831,4 +1831,46 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.zya.me/jaws-1975</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/hatchet-2006</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/hatchet-ii-2010</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/hatchet-iii-2013</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/nothing-to-lose-1997</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/aladdin-2026</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/aladdins-revenge-2026</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
    </urlset>
