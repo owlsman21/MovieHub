@@ -1825,4 +1825,10 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.zya.me/the-shooting-1966</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
    </urlset>
