@@ -9,7 +9,6 @@
 body {
     background-color: #000;
     color: #fff;
-    /* Changed from flex to block so header stays on top */
     display: block; 
     min-height: 100vh;
 }
@@ -81,18 +80,33 @@ body {
 
 /* Main Content Area */
 .content {
-    /* REMOVED margin-left: 260px - this was the squash culprit! */
     margin-left: 0; 
     padding: 30px;
     width: 100%;
 }
 
-/* Movie Grid - Now fills the whole screen */
+/* Updated Movie Grid - Forces 6 columns on Desktop */
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Default for Mobile */
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Tablet: 4 columns */
+@media (min-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop: 6 columns */
+@media (min-width: 1024px) {
+    .movie-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
 
 .movie-card {
@@ -121,10 +135,9 @@ body {
 
 .movie-card h3 {
     font-size: 0.9rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 10px 5px;
     color: #fff;
+    /* Removed white-space: nowrap to allow titles to wrap if they are long */
 }
 
 /* Video Player Wrapper */
@@ -140,14 +153,4 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    .main-header h2 { font-size: 2rem; }
-    .movie-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .content { padding: 15px; }
 }
