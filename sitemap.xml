@@ -2017,4 +2017,34 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=bodycam-2026</loc>
+  <lastmod>2026-04-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=the-cottage-2008</loc>
+  <lastmod>2026-04-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=notting-hill-1999</loc>
+  <lastmod>2026-04-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=love-actually-2003</loc>
+  <lastmod>2026-04-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=the-mummy-2026</loc>
+  <lastmod>2026-04-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
    </urlset>
