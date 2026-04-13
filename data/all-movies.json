@@ -2251,7 +2251,7 @@
     "posterUrl": "images/mohawk.jpg"
  },
    {
-  "id": "Lock-Stock",
+  "id": "Lock",
   "title": "Lock, Stock and Two Smoking Barrels (1998) Full Movie | Guy Ritchie's Cult Classic Crime Comedy",
   "year": 1998,
   "director": "Guy Ritchie",
@@ -2672,7 +2672,7 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjMzNjAxNTY0NF5BMl5BanBnXkFtZTgwOTQwMTYwODE@._V1_.jpg"
 },
     {
-  "id": "suez-1938",
+  "id": "suez",
   "title": "Suez (1938) Full Movie | Tyrone Power & Loretta Young | Classic Adventure Drama",
   "year": 1938,
   "director": "Allan Dwan",
@@ -6645,16 +6645,7 @@
         "genres": ["Horror","Crime"],
         "source": "ok.ru"
      },
-      {
-        "id": "Christine",
-        "posterUrl":  "images/Christine.jpg",
-        "year":1983 ,
-        "title": "Christine",
-        "description": "A nerdish boy buys a strange car with an evil mind of its own and his nature starts to change to reflect it.",
-        "embedId": "1196907366950",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-     },
+     
       {
         "id": "The-Good-Son",
         "posterUrl":  "images/The Good Son.jpg",
@@ -7158,18 +7149,18 @@
         "genres": ["Crime","Drama"],
         "source": "ok.ru"
      },
-    {
-  "id": "Wall-Street-Money-Never-Sleeps",
-  "title": "Wall Street: Money Never Sleeps (2010) Full Movie | Michael Douglas & Shia LaBeouf",
+  {
+  "id": "wall-street-2",
+  "title": "Wall Street 2: Money Never Sleeps (2010) Full Movie | Michael Douglas & Shia LaBeouf",
   "year": 2010,
   "director": "Oliver Stone",
   "quality": "HD",
-  "genres": ["Drama", "Thriller", "Finance"],
-  "description": "Decades after his release, disgraced financier Gordon Gekko (Michael Douglas) emerges from prison, ready to re-enter the cutthroat world of Wall Street. He forms an uneasy alliance with his idealistic future son-in-law (Shia LaBeouf) to expose a conspiracy and rebuild his shattered empire. Dive into this gripping 2010 financial drama, filled with ambition, betrayal, and the timeless lessons of greed. Watch the full movie now.",
+  "duration": "2h 13min",
+  "genres": "Drama, Thriller, Finance",
+  "description": "Wall Street 2. Gordon Gekko (Michael Douglas) returns in this 2010 sequel. He forms an alliance with a young trader to rebuild his empire and expose a financial conspiracy. A gripping drama about greed and ambition.",
   "embedId": "6222313425506",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU5MDEzMzYwMF5BMl5BanBnXkFtZTcwNTcwMjUxMw@@._V1_FMjpg_UX1000_.jpg",
-  "duration": "PT2H13M"
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU5MDEzMzYwMF5BMl5BanBnXkFtZTcwNTcwMjUxMw@@._V1_FMjpg_UX1000_.jpg"
 },
      {
         "id": "Natural-Born-Killers",
