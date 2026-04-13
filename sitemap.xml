@@ -242,9 +242,11 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://moviehub.uk/movie-details.html?id=dead-again-1991-full-movie</loc>
-  <lastmod>2026-03-20T12:00:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <url>
+  <loc>https://moviehub.uk/movie-details.html?id=Dead-Again</loc>
+  <lastmod>2026-04-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>https://moviehub.uk/movie-details.html?id=midwinter-break-2026-full-movie</loc>
@@ -2065,6 +2067,12 @@
 </url>
 <url>
   <loc>https://moviehub.uk/movie-details.html?id=entebbe</loc>
+  <lastmod>2026-04-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-girl-2012-full-movie</loc>
   <lastmod>2026-04-13</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
