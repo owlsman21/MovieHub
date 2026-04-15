@@ -1,5 +1,43 @@
 [
    {
+  "id": "vampires-1998",
+  "title": "Vampires (1998) Full Movie | James Woods & Daniel Baldwin | Action Horror Classic",
+  "year": 1998,
+  "director": "John Carpenter",
+  "quality": "HD",
+  "genres": "Horror, Action, Thriller",
+  "description": "A vengeful vampire slayer and his team of hunters are hired by the Vatican to find and destroy a powerful vampire master seeking an ancient cross that would allow vampires to endure sunlight.",
+  "embedId": "7076423338649",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BY2FlMTI1YTYtY2E1Yy00ZmZlLTljMTAtMWUwZGZjNTU1OGU0XkEyXkFqcGc@._V1_.jpg"
+},
+   {
+  "id": "the-man-who-came-to-dinner-1942",
+  "title": "The Man Who Came to Dinner (1942) Full Movie | Bette Davis & Monty Woolley | Classic Screwball Comedy",
+  "year": 1942,
+  "director": "William Keighley",
+  "quality": "1080p HD",
+  "duration": "1h 52min",
+  "genres": "Comedy, Romance, Classics",
+  "description": "The Man Who Came to Dinner (1942). The legendary Sheridan Whiteside (Monty Woolley) finds himself stranded in a small Ohio town after an injury. He commandeers the Stanley household, running up massive phone bills and inviting eccentric guests like penguins and an octopus, all while trying to sabotage his secretary's (Bette Davis) romance. A witty and rapid-fire comedy classic.",
+  "embedId": "vYOUR_RUMBLE_ID",
+  "source": "rumble",
+  "posterUrl": "https://theoldmovieshop.com/cdn/shop/files/manwhocame.jpg?v=1723420377"
+},
+   {
+  "id": "the-high-and-the-mighty-1954",
+  "title": "The High and the Mighty (1954) Full Movie | John Wayne & Robert Stack | Classic Aviation Disaster",
+  "year": 1954,
+  "director": "William A. Wellman",
+  "quality": "1080p HD",
+  "duration": "2h 27min",
+  "genres": "Drama, Action, Classics",
+  "description": "The High and the Mighty (1954). When a commercial flight from Honolulu to San Francisco experiences a mid-air engine disaster, veteran co-pilot Dan Roman (John Wayne) must fight to keep the plane aloft while the passengers and crew face their deepest fears. A legendary disaster drama featuring an iconic Oscar-winning score.",
+  "embedId": "v76bzqs",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/904dbeaf020a027ef701e0d47859b4b1831d2209f7ad07f6da43f591270bd54d.jpg"
+},
+   {
   "id": "shane-1953",
   "title": "Shane (1953) Full Movie | Alan Ladd & Jack Palance | Classic Western",
   "year": 1953,

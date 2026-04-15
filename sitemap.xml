@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://moviehub.uk/</loc>
-  <lastmod>2026-04-01T13:15:00+07:00</lastmod>
-  <priority>1.00</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://moviehub.uk/</loc>
+    <lastmod>2026-04-01T13:15:00+07:00</lastmod>
+    <priority>1.00</priority>
+  </url>
 <url>
    <loc>https://moviehub.uk/movie-details?id=the-magnificent-seven-1960-full-movie</loc>
    <lastmod>2026-04-02T09:25:00+07:00</lastmod>
@@ -2135,5 +2134,23 @@
   <lastmod>2026-04-14</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-high-and-the-mighty-1954</loc>
+  <lastmod>2026-04-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-man-who-came-to-dinner-1942</loc>
+  <lastmod>2026-04-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/vampires-1998</loc>
+  <lastmod>2026-04-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
    </urlset>
