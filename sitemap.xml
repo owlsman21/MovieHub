@@ -2176,4 +2176,22 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=high-plains-drifter-1973</loc>
+  <lastmod>2026-04-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=king-kong-1976</loc>
+  <lastmod>2026-04-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=once-upon-a-texas-train-1988</loc>
+  <lastmod>2026-04-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
