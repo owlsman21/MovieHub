@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Only Vault | MovieHub.uk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #ffd700;
+            --bg-black: #0a0a0a;
+            --card-bg: #161625;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-black);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* Vault Branding */
+        .vault-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #1a1a2e 0%, var(--bg-black) 100%);
+            border-bottom: 2px solid var(--primary-gold);
+        }
+
+        .vault-header h1 {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+        }
+
+        .vault-badge {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: #000;
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 20px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .content { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        
+        .section-title {
+            font-size: 2rem;
+            color: #fff;
+            border-left: 5px solid var(--primary-gold);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* The Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .logout-link {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .logout-link:hover { color: var(--primary-gold); }
+
+        @media (max-width: 600px) {
+            .movie-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="vault-header">
+        <div class="vault-badge"><i class="fas fa-star"></i> Founding Member Access</div>
+        <h1>The Private Vault</h1>
+        <p>Welcome back, Dennis. Enjoy these exclusive premium classics.</p>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2 class="section-title">Exclusive Premium Titles</h2>
+            <div id="members-grid" class="movie-grid">
+                </div>
+        </section>
+
+        <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Exit Private Vault</a>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

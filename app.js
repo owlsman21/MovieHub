@@ -6,26 +6,39 @@ async function initMovieVault() {
         if (!response.ok) throw new Error("Could not find data");
         allMoviesCache = await response.json();
 
-       // 1. NEW ADDITIONS: Now takes the first 16 items from the TOP of the JSON
-const newAdditions = allMoviesCache.slice(0, 24); 
-renderGrid(document.getElementById('latest-grid'), newAdditions);
+        // --- THE MEMBER FILTER ---
+        // Public movies: Everything NOT marked as 'private'
+        const publicMovies = allMoviesCache.filter(m => m.category !== 'private');
+        // Member movies: Only those marked as 'private'
+        const privateMovies = allMoviesCache.filter(m => m.category === 'private');
 
-        // 2. LATEST RELEASES: Sort the entire library by Year (2026 downwards)
-        // Shows 24 movies as requested
-        const latestReleases = [...allMoviesCache]
+        // 1. MEMBERS VAULT: Check if we are on the members-vault.html page
+        const membersGrid = document.getElementById('members-grid');
+        if (membersGrid) {
+            renderGrid(membersGrid, privateMovies);
+            // We return early so the homepage grids don't try to load on the vault page
+            return;
+        }
+
+        // 2. NEW ADDITIONS: Takes first 24 items from PUBLIC list
+        const newAdditions = publicMovies.slice(0, 24); 
+        renderGrid(document.getElementById('latest-grid'), newAdditions);
+
+        // 3. LATEST RELEASES: Sort the PUBLIC library by Year
+        const latestReleases = [...publicMovies]
             .sort((a, b) => b.year - a.year)
             .slice(0, 24);
         renderGrid(document.getElementById('latest-releases-grid'), latestReleases);
 
-        // 3. HITCHCOCK COLLECTION: Filter by genre
-        const hitchcockMovies = allMoviesCache.filter(m => 
+        // 4. HITCHCOCK COLLECTION: Filter public by genre
+        const hitchcockMovies = publicMovies.filter(m => 
             m.genres && Array.isArray(m.genres) && 
             m.genres.some(genre => genre.toLowerCase() === 'hitchcock')
         ).slice(0, 16);
         renderGrid(document.getElementById('hitchcock-grid'), hitchcockMovies);
 
-        // 4. ASIAN MOVIES: Filter by 'thai' genre
-        const asianMovies = allMoviesCache.filter(m => 
+        // 5. ASIAN MOVIES: Filter public by 'thai' genre
+        const asianMovies = publicMovies.filter(m => 
             m.genres && Array.isArray(m.genres) && 
             m.genres.some(genre => genre.toLowerCase() === 'thai')
         ).slice(0, 16);
@@ -37,7 +50,7 @@ renderGrid(document.getElementById('latest-grid'), newAdditions);
             homepageSearchSection.style.display = 'none';
         }
 
-        // Catalog Logic
+        // Catalog Logic (Handles 'All Movies' page)
         const catalogGridContainer = document.getElementById('movie-grid-container');
         if (catalogGridContainer) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -45,13 +58,13 @@ renderGrid(document.getElementById('latest-grid'), newAdditions);
             const searchTermFromURL = urlParams.get('search');
 
             if (searchTermFromURL) {
-                renderGrid(catalogGridContainer, allMoviesCache.filter(m => m.title.toLowerCase().includes(searchTermFromURL.toLowerCase())));
+                renderGrid(catalogGridContainer, publicMovies.filter(m => m.title.toLowerCase().includes(searchTermFromURL.toLowerCase())));
             } else {
-                showGenre(genre || 'All');
+                showGenre(genre || 'All', publicMovies);
             }
         }
 
-        setupSearch();
+        setupSearch(publicMovies);
 
     } catch (e) {
         console.error("Vault Error:", e);
@@ -73,33 +86,32 @@ function renderGrid(container, movieList) {
         : "<p>No movies found.</p>";
 }
 
-function showGenre(genre) {
+function showGenre(genre, sourceList) {
     const container = document.getElementById('movie-grid-container'); 
     if (!container) return;
 
     const filtered = genre === 'All'
-        ? allMoviesCache
-        : allMoviesCache.filter(m => m.genres && Array.isArray(m.genres) && m.genres.map(g => g.toLowerCase()).includes(genre.toLowerCase()));
+        ? sourceList
+        : sourceList.filter(m => m.genres && Array.isArray(m.genres) && m.genres.map(g => g.toLowerCase()).includes(genre.toLowerCase()));
 
     renderGrid(container, filtered);
 }
 
-function setupSearch() {
+function setupSearch(searchableList) {
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const term = e.target.value.toLowerCase();
-            const filteredMovies = allMoviesCache.filter(m => m.title.toLowerCase().includes(term));
+            const filteredMovies = searchableList.filter(m => m.title.toLowerCase().includes(term));
 
             const homepageSearchResultsContainer = document.getElementById('homepage-search-results');
             const homepageSearchSection = document.getElementById('homepage-search-section');
             
-            // Targeted sections to hide/show during search
             const contentSections = [
-                document.getElementById('latest-grid'),
-                document.getElementById('latest-releases-grid'),
-                document.getElementById('hitchcock-grid'),
-                document.getElementById('asian-grid')
+                document.getElementById('new-additions-section'), // Updated to match your new ID
+                document.getElementById('latest-section'),
+                document.getElementById('hitchcock-section'),
+                document.getElementById('asian-section')
             ];
 
             if (homepageSearchResultsContainer && homepageSearchSection) {
@@ -107,13 +119,13 @@ function setupSearch() {
                 
                 if (term.length > 0) {
                     homepageSearchSection.style.display = 'block';
-                    contentSections.forEach(grid => {
-                        if(grid) grid.closest('section').style.display = 'none';
+                    contentSections.forEach(section => {
+                        if(section) section.style.display = 'none';
                     });
                 } else {
                     homepageSearchSection.style.display = 'none';
-                    contentSections.forEach(grid => {
-                        if(grid) grid.closest('section').style.display = 'block';
+                    contentSections.forEach(section => {
+                        if(section) section.style.display = 'block';
                     });
                 }
             } else {
