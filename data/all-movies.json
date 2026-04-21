@@ -1,5 +1,44 @@
 [
    {
+  "id": "bone-keeper-2026",
+  "title": "Bone Keeper (2026) | Full Movie | Members Exclusive",
+  "year": 2026,
+  "category": "private",
+  "director": "TBD",
+  "quality": "HD",
+  "genres": ["Horror", "Thriller", "Mystery"],
+  "description": "A chilling 2026 horror story centered on a dark legend that comes to life. When an ancient burial ground is disturbed, the protector of the remains begins a relentless hunt. Exclusive to MovieHub Private Vault members.",
+  "embedId": "14166399584806",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzcyZDA5MzAtNDkzOS00MDY1LTk2MDUtMTQ4YzI1ODQ4NjFlXkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg"
+},
+   {
+  "id": "the-yeti-2026",
+  "title": "The Yeti (2026) | Full Movie | Members Exclusive",
+  "year": 2026,
+  "category": "private",
+  "director": "TBD",
+  "quality": "HD",
+  "genres": ["Horror", "Thriller", "Adventure"],
+  "description": "A high-altitude expedition turns into a fight for survival when a group of explorers realizes they are being stalked by a legendary creature in the frozen wilderness. A 2026 MovieHub Private Vault Exclusive.",
+  "embedId": "14167010052646",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDA4OGU1ZjQtNDI3ZS00NGE5LThjOWQtODQ1ZWRkNTY2NDcxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+},
+   {
+  "id": "dangerous-animals-2025",
+  "title": "Dangerous Animals (2025) | Members Exclusive",
+  "year": 2025,
+  "category": "private",
+  "director": "Steffen Haars",
+  "quality": "HD",
+  "genres": "Thriller, Horror, Action",
+  "description": "In this 2025 edge-of-your-seat thriller, a group of people find themselves hunted in a high-stakes game of survival against nature's most lethal predators. A gripping addition to the MovieHub private collection.",
+  "embedId": "14266961758758",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTY1YzZlZjItMmUwMS00OWUzLTg0OTYtOWJkNGFjYzNlNTVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+},
+   {
   "id": "a-tale-of-two-guns-2022",
   "title": "A Tale of Two Guns (2022) | Full Modern Western | Members Exclusive",
   "year": 2022,
@@ -687,6 +726,7 @@
    {
   "id": "aladdins-revenge-2026",
   "title": "Aladdin's Revenge (2026) Full Movie | Devanny Pinn & Troy Escoda | Horror Thriller",
+   "category": "private",
   "year": 2026,
   "director": "Brett Bentman",
   "quality": "HD",
@@ -699,6 +739,7 @@
    {
   "id": "aladdin-2026",
   "title": "Aladdin (2026) Full Movie | Cedric Mitchell & Laura Williams | Animated Fantasy",
+   "category": "private",
   "year": 2026,
   "director": "Kimmy Gatewood",
   "quality": "HD",
@@ -964,6 +1005,7 @@
     "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzvj6PA2W3QEKIhvRR-dtWqe5Y46N8hT4dmA&s",
     "year": 2026,
     "title": "Night Patrol (2026) 1080p",
+     "category": "private",
     "description": "In the upcoming 2026 thriller 'Night Patrol,' a dedicated unit works tirelessly under the cloak of darkness to maintain order in a city brimming with crime and corruption. As they navigate perilous streets, they confront dangerous adversaries and uncover a conspiracy that threatens to plunge the entire city into chaos. Expect a blend of intense action and nail-biting suspense.",
     "director": "Unknown",
     "embedId": "12615358089749",
@@ -977,6 +1019,7 @@
     "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjkwYWYwMTctM2MyZi00MzM1LWFmNjktNDQxZGU4MzU0NDYwXkEyXkFqcGc@._V1_.jpg",
     "year": 2026,
     "title": "Grizzly Night (2026) 1080p",
+     "category": "private",
     "description": "In 'Grizzly Night (2026),' a group's serene wilderness escape turns into a nightmare when they find themselves hunted by an unseen, ferocious force in the dead of night. As darkness descends, they must use every ounce of their cunning and strength to survive the relentless pursuit and the unforgiving elements.",
     "director": "Unknown",
     "embedId": "12615478807061",
@@ -1777,6 +1820,7 @@
    {
   "id": "mike-nick-nick-alice-2026-full-movie",
   "title": "Mike & Nick & Nick & Alice (2026) Full Movie | Vince Vaughn, James Marsden, Eiza González | R-Rated Action-Comedy, Time Travel, Gangster Film | Hulu/Disney+ 1080p",
+   "category": "private",
   "year": 2026,
   "director": "BenDavid Grabinski",
   "quality": "1080p",
@@ -1790,6 +1834,7 @@
    {
   "id": "the-mortuary-assistant-2026-full-movie",
   "title": "The Mortuary Assistant (2026) Full Movie | Willa Holland, Paul Sparks | Horror, Supernatural Thriller, Video Game Adaptation | Shudder 1080p",
+   "category": "private",
   "year": 2026,
   "director": "Jeremiah Kipp",
   "quality": "1080p",
@@ -1803,6 +1848,7 @@
    {
   "id": "pretty-lethal-2026-full-movie",
   "title": "Pretty Lethal (2026) Full Movie | Uma Thurman, Maddie Ziegler, Lana Condor | Ballet-Fu Action Thriller, Survival Horror | Prime Video 1080p",
+   "category": "private",
   "year": 2026,
   "director": "Vicky Jewson",
   "quality": "1080p",
@@ -1960,6 +2006,7 @@
    {
   "id": "murder-at-highland-manor-2026-full-movie",
   "title": "Murder at Highland Manor (2026) Full Movie | Brooke Burfitt, Megan Lockhurst, Paul Luebke | Scottish Mystery Thriller | Lifetime Original | 1080p",
+   "category": "private",
   "year": 2026,
   "director": "Ryan Dewar",
   "quality": "1080p",
