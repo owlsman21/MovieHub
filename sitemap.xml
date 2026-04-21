@@ -2152,4 +2152,28 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=triangle-2009</loc>
+  <lastmod>2026-04-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=killing-zoe-1994</loc>
+  <lastmod>2026-04-17</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=how-i-live-now-2013</loc>
+  <lastmod>2026-04-17</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=4-for-texas-1963</loc>
+  <lastmod>2026-04-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
