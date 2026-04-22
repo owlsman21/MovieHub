@@ -2218,4 +2218,52 @@
   <changefreq>monthly</changefreq>
   <priority>1.0</priority>
 </url>
+<url>
+  <loc>https://moviehub.zya.me/movie/wishmaster-2-1999</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie/wishmaster-3-2001</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie/wishmaster-4-2002</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/the-unseen-2023</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/the-anacondas-2025-private</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/skate-to-hell-2026</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/play-along-2024</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/soaked-in-bleach-2015</loc>
+  <lastmod>2026-04-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
