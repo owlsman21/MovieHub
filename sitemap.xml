@@ -2272,4 +2272,52 @@
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=zodiac-2007</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=summer-of-sam-1999</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=open-range-2003</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=interstellar-2014</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=the-evil-dead-1981</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=evil-dead-2013</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=back-to-the-future-1985</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=back-to-the-future-ii-1989</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
 </urlset>
