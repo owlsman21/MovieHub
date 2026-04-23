@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WY3DHDXQWH');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WY3DHDXQWH');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>MovieHub - Loading...</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- NO <div id="video-structured-data"> HERE -->
+    <style>
+        /* Essential styles for the MEGA Shield and Player */
+        #wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            background: #000;
+            aspect-ratio: 16 / 9;
+        }
+        #movie-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Invisible shield to block the download button area in MEGA */
+        #mega-shield {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25%;  
+            height: 20%; 
+            z-index: 10;
+            background: transparent;
+            cursor: default;
+            display: none; 
+        }
+    </style>
 </head>
 <body>
 
     <header class="main-header">
         <h2>Movie<span>Hub</span></h2>
-        
         <div class="controls-container">
             <div class="nav-buttons">
                 <a href="index.html"><i class="fas fa-home"></i> Home</a>
                 <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
             </div>
-
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Search the Vault...">
             </div>
-
             <select class="genre-select" onchange="location = this.value;">
                 <option value="">Filter by Genre</option>
                 <option value="catalog.html?genre=Action">Action</option>
@@ -48,6 +70,7 @@
 
     <main class="content">
         <div id="wrapper">
+            <div id="mega-shield"></div>
             <iframe id="movie-iframe" src="" allowfullscreen></iframe>
         </div>
 
@@ -58,103 +81,85 @@
         </div>
     </main>
 
-    <!-- app.js should be linked AFTER this script if loadMovieDetails is defined here -->
     <script>
-        // Handle Search Redirection - Updated to match your new search ID
+        // 1. Search Redirection
         document.getElementById('search-input').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
             }
         });
 
-        // Load Movie Details
+        // 2. Main Logic to Load Movie and Apply Shield
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
+            const iframe = document.getElementById('movie-iframe');
+            const shield = document.getElementById('mega-shield');
+
             if (!movieId) {
-                // Ensure elements exist before trying to update them
                 document.getElementById('movie-title').innerText = "Movie ID not specified.";
-                document.getElementById('movie-desc').innerText = "";
                 return;
             }
 
             try {
-                // Ensure this path matches your file structure
                 const response = await fetch('data/all-movies.json'); 
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
                 
                 if (movie) {
                     document.title = "MovieHub - " + movie.title;
                     document.getElementById('movie-title').innerText = movie.title;
-                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'N/A'} | ${Array.isArray(movie.genres) ? movie.genres.join(', ') : (movie.genres || 'N/A')}`; // Handles genre as array or string
+                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'N/A'} | ${Array.isArray(movie.genres) ? movie.genres.join(', ') : (movie.genres || 'N/A')}`;
                     document.getElementById('movie-desc').innerText = movie.description;
                     
                     let videoUrl = "";
-                    if (movie.source === "ok.ru" && movie.embedId) {
+
+                    // Reset security/shield for each movie load
+                    shield.style.display = "none";
+                    iframe.removeAttribute("sandbox");
+
+                    // SOURCE CHECK:
+                    if (movie.source === "mega" && movie.embedId) {
+                        // Ensure it uses the embed format even if provided as a file link
+                        videoUrl = movie.embedId.replace("/file/", "/embed/"); 
+                        shield.style.display = "block"; 
+                        
+                        // Necessary sandbox flags for MEGA decryption and buffering
+                        iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-popups allow-storage-access-by-user-activation"); 
+                    } else if (movie.source === "ok.ru" && movie.embedId) {
                         videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
                     } else if (movie.source === "rumble" && movie.embedId) {
                         videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
                     } else {
-                        console.warn(`Missing embedId or unsupported source for movie: ${movie.title}`);
-                        videoUrl = "about:blank"; // Or a placeholder video URL
+                        videoUrl = "about:blank";
                     }
                     
-                    document.getElementById('movie-iframe').src = videoUrl;
+                    iframe.src = videoUrl;
 
-                    // --- NEW CODE: Dynamically generate VideoObject JSON-LD ---
-                    // Create the script element directly here, it will be injected into the body
+                    // SEO - Generate VideoObject JSON-LD
                     const scriptElement = document.createElement('script');
                     scriptElement.type = 'application/ld+json';
-                    
-                    const embedUrl = videoUrl; // Use the constructed videoUrl for embedUrl
-                    const thumbnailUrl = movie.posterUrl || ''; // Use posterUrl from your JSON
-
-                    // Ensure genres is an array for schema
-                    const schemaGenres = Array.isArray(movie.genres) ? movie.genres : (movie.genres ? [movie.genres] : []);
-
-                    // Use movie.year for uploadDate, fallback to current year
-                    const uploadDate = movie.year ? `${movie.year}-01-01T00:00:00Z` : `${new Date().getFullYear()}-01-01T00:00:00Z`;
-
-                    // Duration is best if explicitly in JSON. Fallback to a placeholder.
-                    const duration = movie.duration || "PT1H30M"; // Add 'duration' to your all-movies.json for accuracy!
-
                     const videoSchema = {
                         "@context": "https://schema.org",
                         "@type": "VideoObject",
                         "name": movie.title,
                         "description": movie.description,
-                        "thumbnailUrl": thumbnailUrl,
-                        "uploadDate": uploadDate,
-                        "duration": duration,
-                        "contentUrl": window.location.href, // The URL of the current movie details page
-                        "embedUrl": embedUrl,
-                        "interactionCount": "0", // Default, can be updated later if you track views
-                        "genre": schemaGenres
+                        "thumbnailUrl": movie.posterUrl || '',
+                        "uploadDate": movie.year ? `${movie.year}-01-01T00:00:00Z` : "2026-01-01T00:00:00Z",
+                        "embedUrl": videoUrl
                     };
-
                     scriptElement.textContent = JSON.stringify(videoSchema);
-                    document.body.appendChild(scriptElement); // Append to body (or head if you prefer)
+                    document.body.appendChild(scriptElement);
 
-                    console.log("VideoObject JSON-LD generated for:", movie.title); // For debugging
                 } else {
                     document.getElementById('movie-title').innerText = "Movie Not Found";
-                    document.getElementById('movie-meta').innerText = "";
-                    document.getElementById('movie-desc').innerText = "The requested movie could not be found.";
-                    document.getElementById('movie-iframe').src = "about:blank";
                 }
             } catch (e) { 
-                console.error("Error loading movie data:", e); 
-                document.getElementById('movie-title').innerText = "Error Loading Movie";
-                document.getElementById('movie-meta').innerText = "";
-                document.getElementById('movie-desc').innerText = "There was an issue loading movie details. Please try again later.";
-                document.getElementById('movie-iframe').src = "about:blank";
+                console.error("Error:", e); 
             }
         }
         loadMovieDetails();
     </script>
-    <!-- Your app.js link should typically be here, after your custom scripts -->
     <script src="app.js"></script>
 </body>
 </html>
