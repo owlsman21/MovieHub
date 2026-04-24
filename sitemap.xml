@@ -2320,4 +2320,10 @@
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
+<url>
+  <loc>https://moviehub.zya.me/movie-details?id=the-day-of-the-jackal-1973</loc>
+  <lastmod>2026-04-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>

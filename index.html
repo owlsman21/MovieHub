@@ -59,7 +59,6 @@
 
         .top-nav a:hover { color: var(--primary-gold); }
 
-        /* Membership Notice Banner */
         .membership-banner {
             background: #1a1a1a;
             color: #fff;
@@ -75,7 +74,6 @@
             margin-left: 10px;
         }
 
-        /* Modern Header */
         .main-header {
             text-align: center;
             padding: 40px 20px;
@@ -115,7 +113,6 @@
 
         .nav-buttons a:hover { color: var(--primary-gold); }
 
-        /* Controls, Content, Grids, and Forms - Kept your original styles below */
         .controls-wrapper { max-width: 600px; margin: 0 auto; display: flex; gap: 10px; }
         #search-input, .genre-select { padding: 12px 20px; border-radius: 30px; border: 1px solid #333; background: #111; color: white; font-size: 1rem; outline: none; transition: 0.3s; }
         #search-input { flex: 2; }
@@ -128,6 +125,15 @@
         .movie-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); border-color: var(--primary-gold); }
         .movie-card img { width: 100%; height: 270px; object-fit: cover; }
         .movie-card h3 { font-size: 1rem; padding: 12px; margin: 0; color: #fff; text-align: center; }
+        
+        /* Preview Section Styling */
+        #Movie-Previews-section { padding: 40px 20px; background: #0b0b0b; border-radius: 15px; margin: 20px 0; }
+        .preview-container { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: thin; scrollbar-color: var(--netflix-red) #111; }
+        .preview-card { min-width: 320px; background: #1a1a1a; padding: 15px; border-radius: 12px; border: 1px solid #333; transition: 0.3s; }
+        .preview-card:hover { border-color: var(--netflix-red); }
+        .preview-btn { display: block; background: var(--netflix-red); color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 6px; margin-top: 15px; transition: 0.3s; }
+        .preview-btn:hover { background: #b20710; }
+
         #membership-join { background: linear-gradient(135deg, var(--dark-blue) 0%, #0f0f1e 100%); padding: 60px 20px; border-radius: 20px; border: 1px solid #3a3a5e; text-align: center; margin: 60px 0; }
         .membership-text { max-width: 700px; margin: 0 auto 40px auto; }
         .membership-text h2 { color: var(--primary-gold); font-size: 2.5em; margin-bottom: 15px; }
@@ -139,7 +145,9 @@
         .btn-gold:hover { transform: scale(1.02); filter: brightness(1.1); }
         .vault-link { display: inline-block; margin-top: 20px; color: var(--primary-gold); text-decoration: none; font-weight: bold; border: 2px solid var(--primary-gold); padding: 10px 25px; border-radius: 30px; transition: 0.3s; }
         .vault-link:hover { background: var(--primary-gold); color: #000; }
-        hr { border: 0; border-top: 1px solid #222; margin: 60px 0; }
+        
+        #backToTop { position: fixed; bottom: 30px; right: 30px; background: var(--primary-gold); color: black; width: 50px; height: 50px; border-radius: 50%; display: none; text-align: center; line-height: 50px; cursor: pointer; z-index: 1000; }
+
         @media (max-width: 600px) {
             .main-header h1 { font-size: 2.2rem; }
             .controls-wrapper { flex-direction: column; }
@@ -150,7 +158,7 @@
 <body>
 
     <nav class="top-nav">
-        <a href="#hitchcock-section">Hitchcock Collection</a>
+        <a href="#Movie-Previews-section">Movie Previews</a>
         <a href="#latest-section">Latest Releases</a>
         <a href="#asian-section">Asian Movies</a>
         <a href="#membership-join" style="color: var(--primary-gold);">Join Membership</a>
@@ -187,10 +195,33 @@
     </header>
 
     <main class="content">
+
+        <section id="Movie-Previews-section">
+            <h2 class="section-title">Latest Movie Previews & Trailers</h2>
+            <div class="preview-container">
+                
+                <div class="preview-card">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/gwkylgpIfz0" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <h3 style="margin: 15px 0 5px 0;">The Evil Dead (1981)</h3>
+                    <p style="font-size: 0.85em; color: #aaa;">The ultimate in grueling terror.</p>
+                    <a href="https://moviehub.uk/movie-details?id=the-evil-dead-1981" class="preview-btn">WATCH FULL MOVIE</a>
+                </div>
+
+                <div class="preview-card">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/TnQiog7v4sQ" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                    <h3 style="margin: 15px 0 5px 0;">The Day of the Jackal (1973)</h3>
+                    <p style="font-size: 0.85em; color: #aaa;">The professional assassin is on the move.</p>
+                    <a href="https://moviehub.uk/movie-details?id=the-day-of-the-jackal-1973" class="preview-btn">WATCH FULL MOVIE</a>
+                </div>
+
+            </div>
+        </section>
+
         <section id="homepage-search-section">
             <h2 class="section-title">Search Results</h2>
             <div id="homepage-search-results" class="movie-grid"></div>
         </section>
+
         <section id="new-additions-section">
             <h2 class="section-title">New Additions</h2>
             <div id="latest-grid" class="movie-grid"></div>
@@ -204,21 +235,12 @@
         </section>
 
         <hr>
-        <section id="member-preview-section">
-    <h2 class="section-title">Members Only Vault <span style="font-size: 0.8rem; color: var(--primary-gold);">(Login Required)</span></h2>
-    <div id="member-preview-grid" class="movie-grid"></div>
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="login.html" class="vault-link">ENTER THE PRIVATE VAULT</a>
-    </div>
-</section>
 
-        <section id="hitchcock-section">
-            <h2 class="section-title">Hitchcock Collection</h2>
-            <div id="hitchcock-grid" class="movie-grid"></div>
-            <div style="text-align: center;">
-                <a href="catalog.html?genre=Hitchcock" class="vault-link">
-                    SEARCH THE HITCHCOCK COLLECTION IN THE VAULT
-                </a>
+        <section id="member-preview-section">
+            <h2 class="section-title">Members Only Vault <span style="font-size: 0.8rem; color: var(--primary-gold);">(Login Required)</span></h2>
+            <div id="member-preview-grid" class="movie-grid"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="login.html" class="vault-link">ENTER THE PRIVATE VAULT</a>
             </div>
         </section>
 
@@ -268,8 +290,9 @@
 
     <script src="app.js"></script>
     <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-    <i class="fas fa-chevron-up"></i>
-</div>
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
 <script>
     window.onscroll = function() {
         const topBtn = document.getElementById("backToTop");
