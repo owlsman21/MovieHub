@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Essential styles for the MEGA Shield and Player */
+        /* Essential styles for the Player Wrapper */
         #wrapper {
             position: relative;
             width: 100%;
@@ -22,13 +22,15 @@
             margin: 0 auto;
             background: #000;
             aspect-ratio: 16 / 9;
+            overflow: hidden; 
         }
         #movie-iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-        /* Invisible shield to block the download button area in MEGA */
+
+        /* MEGA Shield remains as it's useful for blocking accidental downloads */
         #mega-shield {
             position: absolute;
             top: 0;
@@ -82,19 +84,17 @@
     </main>
 
     <script>
-        // 1. Search Redirection
         document.getElementById('search-input').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
             }
         });
 
-        // 2. Main Logic to Load Movie and Apply Shield
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
             const iframe = document.getElementById('movie-iframe');
-            const shield = document.getElementById('mega-shield');
+            const megaShield = document.getElementById('mega-shield');
 
             if (!movieId) {
                 document.getElementById('movie-title').innerText = "Movie ID not specified.";
@@ -114,17 +114,13 @@
                     
                     let videoUrl = "";
 
-                    // Reset security/shield for each movie load
-                    shield.style.display = "none";
+                    // Reset shields
+                    megaShield.style.display = "none";
                     iframe.removeAttribute("sandbox");
 
-                    // SOURCE CHECK:
                     if (movie.source === "mega" && movie.embedId) {
-                        // Ensure it uses the embed format even if provided as a file link
                         videoUrl = movie.embedId.replace("/file/", "/embed/"); 
-                        shield.style.display = "block"; 
-                        
-                        // Necessary sandbox flags for MEGA decryption and buffering
+                        megaShield.style.display = "block"; 
                         iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-popups allow-storage-access-by-user-activation"); 
                     } else if (movie.source === "ok.ru" && movie.embedId) {
                         videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;

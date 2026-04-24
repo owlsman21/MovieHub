@@ -18,264 +18,287 @@
     <style>
         :root {
             --primary-gold: #ffd700;
-            --dark-blue: #1a1a2e;
-            --accent-purple: #735bf2;
             --bg-black: #0a0a0a;
-            --card-bg: #161625;
             --netflix-red: #e50914;
         }
-
-        /* Smooth Scrolling */
-        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
             background-color: var(--bg-black);
             color: #e0e0e0;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
-        /* Top Navigation Bar */
+        /* Fixed Navigation */
         .top-nav {
             background: #111;
-            padding: 15px;
+            padding: 20px 15px;
             text-align: center;
             border-bottom: 2px solid var(--netflix-red);
             position: sticky;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
         }
 
         .top-nav a {
             color: white;
-            margin: 0 15px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
+            font-weight: 800; 
             text-transform: uppercase;
-            transition: color 0.3s;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
-        .top-nav a:hover { color: var(--primary-gold); }
+        .nav-membership { color: var(--primary-gold) !important; }
 
-        .membership-banner {
+        .nav-members-btn {
+            color: var(--primary-gold) !important;
+            border: 2px solid var(--primary-gold);
+            padding: 6px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        /* Banner */
+        .promo-bar {
             background: #1a1a1a;
-            color: #fff;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
+            font-size: 0.9rem;
             border-bottom: 1px solid #333;
         }
 
-        .membership-banner a {
-            color: var(--primary-gold);
-            text-decoration: underline;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-
-        .main-header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(180deg, #161625 0%, var(--bg-black) 100%);
-            border-bottom: 1px solid #222;
-        }
-
+        /* Header */
+        .main-header { text-align: center; padding: 40px 20px 20px 20px; }
         .main-header h1 {
-            font-size: 3.5rem;
-            margin: 0 0 15px 0;
+            font-size: 4.5rem;
+            margin: 0;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #fff;
+            font-weight: 900;
+            color: white;
         }
 
-        .main-header h1 span {
-            color: var(--primary-gold);
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-        }
-
-        .nav-buttons {
+        .sub-nav {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin-bottom: 25px;
+            gap: 30px;
+            margin-top: 20px;
         }
 
-        .nav-buttons a {
-            color: #fff;
+        .sub-nav a {
+            color: white;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .nav-buttons a:hover { color: var(--primary-gold); }
+        /* Search Bar */
+        .search-filter-row {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
 
-        .controls-wrapper { max-width: 600px; margin: 0 auto; display: flex; gap: 10px; }
-        #search-input, .genre-select { padding: 12px 20px; border-radius: 30px; border: 1px solid #333; background: #111; color: white; font-size: 1rem; outline: none; transition: 0.3s; }
-        #search-input { flex: 2; }
-        .genre-select { flex: 1; cursor: pointer; }
-        #search-input:focus { border-color: var(--primary-gold); box-shadow: 0 0 10px rgba(255, 215, 0, 0.1); }
-        .content { max-width: 1400px; margin: 0 auto; padding: 20px; }
-        .section-title { font-size: 2rem; color: #fff; border-left: 5px solid var(--primary-gold); padding-left: 15px; margin: 40px 0 25px 0; text-transform: uppercase; letter-spacing: 1px; }
-        .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .movie-card { background-color: var(--card-bg); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #222; }
-        .movie-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); border-color: var(--primary-gold); }
-        .movie-card img { width: 100%; height: 270px; object-fit: cover; }
-        .movie-card h3 { font-size: 1rem; padding: 12px; margin: 0; color: #fff; text-align: center; }
-        
-        /* Preview Section Styling */
-        #Movie-Previews-section { padding: 40px 20px; background: #0b0b0b; border-radius: 15px; margin: 20px 0; }
-        .preview-container { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: thin; scrollbar-color: var(--netflix-red) #111; }
-        .preview-card { min-width: 320px; background: #1a1a1a; padding: 15px; border-radius: 12px; border: 1px solid #333; transition: 0.3s; }
-        .preview-card:hover { border-color: var(--netflix-red); }
-        .preview-btn { display: block; background: var(--netflix-red); color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 6px; margin-top: 15px; transition: 0.3s; }
-        .preview-btn:hover { background: #b20710; }
+        .search-filter-row input {
+            padding: 15px 25px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 30px;
+            width: 600px;
+            max-width: 90%;
+            outline: none;
+            font-size: 1.1rem;
+            text-align: center;
+        }
 
-        #membership-join { background: linear-gradient(135deg, var(--dark-blue) 0%, #0f0f1e 100%); padding: 60px 20px; border-radius: 20px; border: 1px solid #3a3a5e; text-align: center; margin: 60px 0; }
-        .membership-text { max-width: 700px; margin: 0 auto 40px auto; }
-        .membership-text h2 { color: var(--primary-gold); font-size: 2.5em; margin-bottom: 15px; }
-        .membership-form { max-width: 450px; margin: 0 auto; background: rgba(0,0,0,0.3); padding: 30px; border-radius: 15px; }
-        .form-group { text-align: left; margin-bottom: 20px; }
-        .form-group label { display: block; color: var(--primary-gold); margin-bottom: 8px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; border-radius: 6px; color: #fff; }
-        .btn-gold { background: linear-gradient(135deg, var(--primary-gold) 0%, #b8860b 100%); color: #000; font-weight: bold; padding: 15px 30px; border: none; border-radius: 6px; width: 100%; cursor: pointer; font-size: 1.1rem; text-transform: uppercase; transition: 0.3s; }
-        .btn-gold:hover { transform: scale(1.02); filter: brightness(1.1); }
-        .vault-link { display: inline-block; margin-top: 20px; color: var(--primary-gold); text-decoration: none; font-weight: bold; border: 2px solid var(--primary-gold); padding: 10px 25px; border-radius: 30px; transition: 0.3s; }
-        .vault-link:hover { background: var(--primary-gold); color: #000; }
-        
-        #backToTop { position: fixed; bottom: 30px; right: 30px; background: var(--primary-gold); color: black; width: 50px; height: 50px; border-radius: 50%; display: none; text-align: center; line-height: 50px; cursor: pointer; z-index: 1000; }
+        /* Layout Grids */
+        .section-title {
+            font-size: 2.2rem;
+            border-left: 6px solid var(--primary-gold);
+            padding-left: 20px;
+            margin: 60px 0 30px 20px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 900;
+        }
 
-        @media (max-width: 600px) {
-            .main-header h1 { font-size: 2.2rem; }
-            .controls-wrapper { flex-direction: column; }
-            .movie-grid { grid-template-columns: repeat(2, 1fr); }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .video-box {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #000;
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+        /* Watch Button Style */
+        .watch-btn {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: var(--primary-gold) !important;
+            border: 2px solid var(--primary-gold);
+            padding: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .watch-btn:hover {
+            background: var(--primary-gold);
+            color: black !important;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-gold);
+            color: #000;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 2000;
         }
     </style>
 </head>
 <body>
 
     <nav class="top-nav">
-        <a href="#Movie-Previews-section">Movie Previews</a>
-        <a href="#latest-section">Latest Releases</a>
-        <a href="#asian-section">Asian Movies</a>
-        <a href="#membership-join" style="color: var(--primary-gold);">Join Membership</a>
-        <a href="login.html" style="color: var(--primary-gold); border: 1px solid var(--primary-gold); padding: 5px 12px; border-radius: 4px; margin: 0 10px;">MEMBERS MOVIES</a>
+        <a href="#new-additions-section">NEWLY ADDED</a>
+        <a href="#previews-section">MOVIE PREVIEWS</a>
+        <a href="#latest-section">LATEST RELEASES</a>
+        <a href="#asian-section">ASIAN MOVIES</a>
+        <a href="https://moviehub.uk/membership" class="nav-membership">JOIN MEMBERSHIP</a>
+        <a href="https://moviehub.uk/membership" class="nav-members-btn">MEMBERS MOVIES</a>
     </nav>
 
-    <div class="membership-banner">
-        <span>🎬 Membership movies coming soon! Join for free now.</span>
-        <a href="#membership-join">Click here to sign up</a>
+    <div class="promo-bar">
+        🎬 Membership movies coming soon! Join for free now. <a href="https://moviehub.uk/membership" style="color: var(--primary-gold);">Click here to sign up</a>
     </div>
 
     <header class="main-header">
-        <h1>Movie<span>Hub</span></h1>
-        <nav class="nav-buttons">
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
-        </nav>
-
-        <div class="controls-wrapper">
-            <input type="text" id="search-input" placeholder="Search the Vault...">
-            <select class="genre-select" onchange="location = this.value;">
-                <option value="">Filter by Genre</option>
-                <option value="catalog.html?genre=Action">Action</option>
-                <option value="catalog.html?genre=Thriller">Thriller</option>
-                <option value="catalog.html?genre=Drama">Drama</option>
-                <option value="catalog.html?genre=Hitchcock">Hitchcock</option>
-                <option value="catalog.html?genre=Horror">Horror</option>
-                <option value="catalog.html?genre=Sci-Fi">Sci-Fi</option>
-                <option value="catalog.html?genre=Musical">Musical</option>
-                <option value="catalog.html?genre=History">History</option>
-                <option value="catalog.html?genre=Western">Western</option>
-            </select>
+        <h1>MOVIE<span style="color:var(--primary-gold)">HUB</span></h1>
+        <div class="sub-nav">
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+            <a href="catalog.html"><i class="fas fa-th-list"></i> ALL MOVIES</a>
         </div>
     </header>
 
     <main class="content">
+        <div class="search-filter-row">
+            <input type="text" id="search-input" placeholder="Search the vault...">
+        </div>
 
-        <section id="Movie-Previews-section">
-            <h2 class="section-title">Latest Movie Previews & Trailers</h2>
-            <div class="preview-container">
-                
-                <div class="preview-card">
-                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/gwkylgpIfz0" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
-                    <h3 style="margin: 15px 0 5px 0;">The Evil Dead (1981)</h3>
-                    <p style="font-size: 0.85em; color: #aaa;">The ultimate in grueling terror.</p>
-                    <a href="https://moviehub.uk/movie-details?id=the-evil-dead-1981" class="preview-btn">WATCH FULL MOVIE</a>
-                </div>
-
-                <div class="preview-card">
-                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/TnQiog7v4sQ" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
-                    <h3 style="margin: 15px 0 5px 0;">The Day of the Jackal (1973)</h3>
-                    <p style="font-size: 0.85em; color: #aaa;">The professional assassin is on the move.</p>
-                    <a href="https://moviehub.uk/movie-details?id=the-day-of-the-jackal-1973" class="preview-btn">WATCH FULL MOVIE</a>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="homepage-search-section">
+        <section id="homepage-search-section" style="display:none; margin-bottom: 50px;">
             <h2 class="section-title">Search Results</h2>
             <div id="homepage-search-results" class="movie-grid"></div>
         </section>
 
         <section id="new-additions-section">
-            <h2 class="section-title">New Additions</h2>
+            <h2 class="section-title">Newly Added</h2>
             <div id="latest-grid" class="movie-grid"></div>
         </section>
 
-        <hr>
+        <section id="previews-section">
+            <h2 class="section-title">Movie Previews & Trailers</h2>
+            <div id="previews-grid" class="preview-grid">
+                
+               <div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/GccLN9JufCs?si=h87jL_iEy4u-8z2f" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Day of the Jackal (1973)</p>
+    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+
+                <div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/NL6mioAlpJk?si=_jJyCuOoRYZsOokh" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Evil Dead (1981)</p>
+    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+
+              <div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Fr2WXx129PY?si=66hCKEKSjWLiHO3B" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Wishmaster (1997)</p>
+    <a href="https://moviehub.uk/movie-details?id=wishmaster-1997" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+<div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Q6iEna2pJqM?si=5g9AtZhiwVb3B7w-" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Man Who Shot Liberty Valance (1962)</p>
+    <a href="https://moviehub.uk/movie-details?id=the-man-who-shot-liberty-valance-1962" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+<div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/kUogGGJtWPs?si=NAjLMsVBEGlh2vxS" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Hatchet (2006)</p>
+    <a href="https://moviehub.uk/movie-details?id=hatchet-2006" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+<div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/XufZT_CRW88?si=H8Wt4L0x3glGk8tD" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Hollow Man (2000)</p>
+    <a href="https://moviehub.uk/movie-details?id=Hollow-Man-(2000)-1080p" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+
+            </div>
+            <div style="text-align: center; margin: 40px 0 20px 0;">
+    <a href="preview.html" class="nav-members-btn" style="padding: 12px 40px; font-size: 1.1rem; text-decoration: none; display: inline-block; letter-spacing: 1px;">
+        VIEW ALL TRAILERS IN THE VAULT
+    </a>
+</div>
+        </section>
 
         <section id="latest-section">
             <h2 class="section-title">Latest Releases</h2>
             <div id="latest-releases-grid" class="movie-grid"></div>
-        </section>
-
-        <hr>
-
-        <section id="member-preview-section">
-            <h2 class="section-title">Members Only Vault <span style="font-size: 0.8rem; color: var(--primary-gold);">(Login Required)</span></h2>
-            <div id="member-preview-grid" class="movie-grid"></div>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="login.html" class="vault-link">ENTER THE PRIVATE VAULT</a>
-            </div>
-        </section>
-
-        <section id="membership-join">
-            <div class="membership-text">
-                <h2>Join the MovieHub Community</h2>
-                <p style="font-size: 1.2rem; color: #fff;">
-                    Gain early access to our upcoming <span style="color: var(--primary-gold); font-weight: bold;">Free Membership</span> and be the first to enter our exclusive <span style="color: var(--primary-gold);">Members-Only Vault</span>. 
-                    <br>
-                    <span style="font-style: italic; opacity: 0.8;">Premium, top-tier classics coming soon.</span>
-                </p>
-            </div>
-
-            <form action="https://formspree.io/f/xqabalea" method="POST" class="membership-form">
-                <input type="hidden" name="_next" value="https://moviehub.uk">
-                <input type="hidden" name="_subject" value="New MovieHub Founding Member!">
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Movie Requests</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Which classics should we add?"></textarea>
-                </div>
-
-                <input type="text" name="_gotcha" style="display:none">
-                <button type="submit" class="btn-gold">Request Early Access</button>
-            </form>
         </section>
 
         <section id="asian-section">
@@ -284,24 +307,21 @@
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #666; font-size: 0.9rem;">
-        <p>&copy; 2026 MovieHub. All Rights Reserved. Curated Classic Cinema.</p>
-    </footer>
+    <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
     <script src="app.js"></script>
-    <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-        <i class="fas fa-chevron-up"></i>
-    </div>
-
-<script>
-    window.onscroll = function() {
-        const topBtn = document.getElementById("backToTop");
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            topBtn.style.display = "block";
-        } else {
-            topBtn.style.display = "none";
-        }
-    };
-</script>
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        backToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 </body>
 </html>

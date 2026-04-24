@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub | All Movie Previews & Trailers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gold: #ffd700;
+            --bg-black: #0a0a0a;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-black);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .header-simple {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .header-simple h1 {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.5rem;
+        }
+
+        .back-home {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .preview-container {
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+       /* Change from 350px to 300px or 280px to get 3 or 4 per row */
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px; /* Tightens the spacing between them */
+    padding: 0 20px;
+}
+
+/* Slightly reduce the button padding so they aren't so tall */
+.watch-btn {
+    padding: 8px; 
+    font-size: 0.9rem;
+}
+
+        .video-box {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+            border: 1px solid #333;
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        .watch-btn {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            color: var(--primary-gold);
+            border: 2px solid var(--primary-gold);
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .watch-btn:hover {
+            background: var(--primary-gold);
+            color: black;
+        }
+
+        .preview-title {
+            text-align: center;
+            font-weight: 900;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-simple">
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> BACK TO HOME</a>
+        <h1>MOVIE PREVIEWS <span style="color:var(--primary-gold)">VAULT</span></h1>
+    </header>
+
+    <main class="preview-container">
+        <div class="preview-grid">
+            
+            <div class="preview-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/GccLN9JufCs?si=h87jL_iEy4u-8z2f" allowfullscreen></iframe>
+                </div>
+                <p class="preview-title">The Day of the Jackal (1973)</p>
+                <a href="https://moviehub.uk/movie-details?id=the-man-who-shot-liberty-valance-1962" class="watch-btn">WATCH FULL MOVIE</a>
+            </div>
+
+            <div class="preview-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/NL6mioAlpJk?si=_jJyCuOoRYZsOokh" allowfullscreen></iframe>
+                </div>
+                <p class="preview-title">The Evil Dead (1981)</p>
+                <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
+            </div>
+
+            <div class="preview-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/Fr2WXx129PY?si=66hCKEKSjWLiHO3B" allowfullscreen></iframe>
+                </div>
+                <p class="preview-title">Wishmaster (1997)</p>
+                <a href="https://moviehub.uk/movie-details?id=wishmaster-1997" class="watch-btn">WATCH FULL MOVIE</a>
+            </div>
+
+            <div class="preview-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/Q6iEna2pJqM?si=5g9AtZhiwVb3B7w-" allowfullscreen></iframe>
+                </div>
+                <p class="preview-title">The Man Who Shot Liberty Valance (1962)</p>
+                <a href="https://moviehub.uk/movie-details?id=the-man-who-shot-liberty-valance-1962" class="watch-btn">WATCH FULL MOVIE</a>
+            </div>
+
+            <div class="preview-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/kUogGGJtWPs?si=NAjLMsVBEGlh2vxS" allowfullscreen></iframe>
+                </div>
+                <p class="preview-title">Hatchet (2006)</p>
+                <a href="https://moviehub.uk/movie-details?id=hatchet-2006" class="watch-btn">WATCH FULL MOVIE</a>
+            </div>
+
+            <div class="preview-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/XufZT_CRW88?si=H8Wt4L0x3glGk8tD" allowfullscreen></iframe>
+                </div>
+                <p class="preview-title">Hollow Man (2000)</p>
+                <a href="https://moviehub.uk/movie-details?id=Hollow-Man-(2000)-1080p" class="watch-btn">WATCH FULL MOVIE</a>
+            </div>
+            <div class="preview-item">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Tfz9AhPnM8c?si=clbAGihGlplTSL_Y" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p class="preview-title">An American Werewolf in London (1981)</p>
+    <a href="https://moviehub.uk/movie-details?id=an-american-werewolf-in-london-1981" class="watch-btn">WATCH FULL MOVIE</a>
+</div>
+
+        </div>
+    </main>
+
+</body>
+</html>
