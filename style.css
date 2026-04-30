@@ -11,21 +11,22 @@ body {
     color: #fff;
     display: block; 
     min-height: 100vh;
-    overflow-x: hidden; /* Stops the side-to-side wobble */
+    overflow-x: hidden; /* Prevents side-to-side wobble */
+    width: 100%;
 }
 
 /* Header & Navigation Area */
 .main-header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px 10px;
     background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
     border-bottom: 1px solid #222;
     width: 100%;
 }
 
 .main-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
@@ -38,9 +39,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     max-width: 400px;
     margin: 0 auto;
+    width: 95%;
 }
 
 .nav-buttons {
@@ -81,18 +83,20 @@ body {
 
 /* Main Content Area */
 .content {
-    padding: 8px; /* Extra thin padding to maximize space for 2 columns in portrait */
+    padding: 8px; /* Minimal padding to maximize movie card size */
     width: 100%;
 }
 
-/* Movie Grid - HARD FORCE 2 Columns for Portrait and Landscape Mobile */
+/* THE GRID - Forced to 2 columns by default (Portrait & Landscape Mobile) */
 .movie-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* This is the fix for portrait */
-    gap: 8px; /* Narrower gap keeps cards side-by-side */
-    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* Forced 2-wide */
+    gap: 8px !important;
+    width: 100% !important;
     margin-bottom: 40px;
 }
+
+/* RESPONSIVE UPGRADES */
 
 /* Tablet: 4 columns */
 @media (min-width: 768px) {
@@ -101,7 +105,7 @@ body {
     }
     .movie-grid {
         grid-template-columns: repeat(4, 1fr) !important;
-        gap: 20px;
+        gap: 20px !important;
     }
 }
 
@@ -109,18 +113,19 @@ body {
 @media (min-width: 1024px) {
     .movie-grid {
         grid-template-columns: repeat(6, 1fr) !important;
-        gap: 25px;
+        gap: 25px !important;
     }
 }
 
+/* MOVIE CARDS */
 .movie-card {
     background: #1a1a1a;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s, border 0.3s;
     border: 1px solid transparent;
-    width: 100%; /* Ensures the card takes up exactly 50% of the grid */
-    min-width: 0; /* Prevents card from pushing past its 50% limit */
+    width: 100%;
+    min-width: 0; /* Critical: stops card from expanding past 50% */
 }
 
 .movie-card:hover {
@@ -137,15 +142,16 @@ body {
 }
 
 .movie-card .info {
-    padding: 6px; /* Smaller padding for portrait info */
+    padding: 8px;
     text-align: center;
 }
 
 .movie-card h3 {
-    font-size: 0.8rem; /* Scaled down slightly for tiny screens */
+    font-size: 0.8rem;
     margin: 5px 0;
     color: #fff;
-    line-height: 1.1;
+    line-height: 1.2;
+    overflow-wrap: break-word; /* Prevents long titles from breaking the grid */
 }
 
 /* Video Player Wrapper */
@@ -169,25 +175,20 @@ iframe {
 #backToTop {
     display: none;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1001;
     background: #ffd700;
     color: #000;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-#backToTop:hover {
-    transform: scale(1.1);
-    background: #fff;
+    transition: 0.3s;
 }
 
 /* OK.ru Specific Shielding & Containers */
@@ -210,7 +211,6 @@ iframe {
     background: #000;
     display: none;
     pointer-events: auto;
-    cursor: default;
 }
 
 .ok-video-container {
@@ -230,22 +230,12 @@ iframe {
     height: calc(100% + 45px);
 }
 
-/* Branding & Logo Overlay */
+/* Branding Overlay */
 .video-branding-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    background: #000;
-}
-
-.video-branding-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
 }
 
 .corner-logo {
@@ -260,14 +250,8 @@ iframe {
     pointer-events: none;
 }
 
-.corner-logo img {
-    height: 25px;
-    display: block;
-}
-
 .corner-logo span {
     color: #ffd700;
     font-weight: bold;
     font-size: 14px;
-    text-transform: uppercase;
 }
