@@ -9,9 +9,7 @@
 body {
     background-color: #000;
     color: #fff;
-    display: block; 
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevents side-to-side wobble */
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -21,97 +19,56 @@ body {
     padding: 20px 10px;
     background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
     border-bottom: 1px solid #222;
-    width: 100%;
 }
 
 .main-header h2 {
     font-size: 1.8rem;
-    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
-.main-header h2 span {
-    color: #e50914;
-}
+.main-header h2 span { color: #e50914; }
 
-/* Portrait Controls Container */
+/* Search and Dropdown */
 .controls-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    max-width: 400px;
-    margin: 0 auto;
     width: 95%;
+    max-width: 400px;
+    margin: 15px auto;
 }
 
-.nav-buttons {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 5px;
-}
-
-.nav-buttons a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.nav-buttons a:hover {
-    color: #e50914;
-}
-
-/* Search and Dropdown Styling */
 #search-input, .genre-select {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background: #111;
     border: 1px solid #333;
     color: #fff;
     border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
+    margin-bottom: 10px;
 }
 
-#search-input:focus, .genre-select:focus {
-    border-color: #e50914;
-}
-
-/* Main Content Area */
+/* THE GRID - High Specificity to beat Tailwind */
 .content {
-    padding: 8px; /* Minimal padding to maximize movie card size */
-    width: 100%;
+    padding: 5px !important; 
+    width: 100% !important;
 }
 
-/* THE GRID - Forced to 2 columns by default (Portrait & Landscape Mobile) */
-.movie-grid {
+/* Targeting with .content prefix to override utility frameworks */
+.content .movie-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* Forced 2-wide */
-    gap: 8px !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 10px !important;
     width: 100% !important;
-    margin-bottom: 40px;
 }
 
 /* RESPONSIVE UPGRADES */
-
-/* Tablet: 4 columns */
 @media (min-width: 768px) {
-    .content {
-        padding: 30px;
-    }
-    .movie-grid {
+    .content .movie-grid {
         grid-template-columns: repeat(4, 1fr) !important;
         gap: 20px !important;
     }
 }
 
-/* Desktop: 6 columns */
 @media (min-width: 1024px) {
-    .movie-grid {
+    .content .movie-grid {
         grid-template-columns: repeat(6, 1fr) !important;
         gap: 25px !important;
     }
@@ -122,20 +79,18 @@ body {
     background: #1a1a1a;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s, border 0.3s;
+    transition: 0.3s;
     border: 1px solid transparent;
-    width: 100%;
-    min-width: 0; /* Critical: stops card from expanding past 50% */
+    width: 100% !important;
+    min-width: 0 !important;
 }
 
 .movie-card:hover {
-    transform: translateY(-5px);
     border: 1px solid #e50914;
 }
 
 .movie-card img {
     width: 100%;
-    max-width: 100%;
     aspect-ratio: 2/3;
     object-fit: cover;
     display: block;
@@ -147,70 +102,18 @@ body {
 }
 
 .movie-card h3 {
-    font-size: 0.8rem;
-    margin: 5px 0;
+    font-size: 0.75rem;
     color: #fff;
     line-height: 1.2;
-    overflow-wrap: break-word; /* Prevents long titles from breaking the grid */
+    overflow-wrap: break-word;
 }
 
-/* Video Player Wrapper */
+/* Video Player & OK.ru Shielding */
 #wrapper {
     position: relative;
     width: 100%;
-    max-width: 900px;
-    margin: 20px auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
     background: #000;
-    overflow: hidden;
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Back to Top Button */
-#backToTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1001;
-    background: #ffd700;
-    color: #000;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 45px;
-    cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    transition: 0.3s;
-}
-
-/* OK.ru Specific Shielding & Containers */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-}
-
-#ok-shield {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 50px;
-    z-index: 999;
-    background: #000;
-    display: none;
-    pointer-events: auto;
 }
 
 .ok-video-container {
@@ -218,8 +121,6 @@ iframe {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    background: #000;
-    border-radius: 8px;
 }
 
 .ok-video-container iframe {
@@ -230,28 +131,17 @@ iframe {
     height: calc(100% + 45px);
 }
 
-/* Branding Overlay */
-.video-branding-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-
-.corner-logo {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    background: #0a0a0a;
-    padding: 5px 10px;
-    border: 1px solid #ffd700;
-    border-radius: 4px;
-    pointer-events: none;
-}
-
-.corner-logo span {
-    color: #ffd700;
-    font-weight: bold;
-    font-size: 14px;
+/* Back to Top */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffd700;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
 }
