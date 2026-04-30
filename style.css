@@ -11,6 +11,7 @@ body {
     color: #fff;
     display: block; 
     min-height: 100vh;
+    overflow-x: hidden; /* Stops the side-to-side wobble */
 }
 
 /* Header & Navigation Area */
@@ -80,32 +81,35 @@ body {
 
 /* Main Content Area */
 .content {
-    margin-left: 0; 
-    padding: 30px;
+    padding: 8px; /* Extra thin padding to maximize space for 2 columns in portrait */
     width: 100%;
 }
 
-/* Updated Movie Grid - Forces 6 columns on Desktop */
+/* Movie Grid - HARD FORCE 2 Columns for Portrait and Landscape Mobile */
 .movie-grid {
-    display: grid;
-    /* Default for Mobile */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* This is the fix for portrait */
+    gap: 8px; /* Narrower gap keeps cards side-by-side */
     width: 100%;
     margin-bottom: 40px;
 }
 
 /* Tablet: 4 columns */
 @media (min-width: 768px) {
+    .content {
+        padding: 30px;
+    }
     .movie-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 20px;
     }
 }
 
 /* Desktop: 6 columns */
 @media (min-width: 1024px) {
     .movie-grid {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 25px;
     }
 }
 
@@ -115,6 +119,8 @@ body {
     overflow: hidden;
     transition: transform 0.3s, border 0.3s;
     border: 1px solid transparent;
+    width: 100%; /* Ensures the card takes up exactly 50% of the grid */
+    min-width: 0; /* Prevents card from pushing past its 50% limit */
 }
 
 .movie-card:hover {
@@ -124,29 +130,33 @@ body {
 
 .movie-card img {
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 2/3;
     object-fit: cover;
+    display: block;
 }
 
 .movie-card .info {
-    padding: 12px;
+    padding: 6px; /* Smaller padding for portrait info */
     text-align: center;
 }
 
 .movie-card h3 {
-    font-size: 0.9rem;
-    margin: 10px 5px;
+    font-size: 0.8rem; /* Scaled down slightly for tiny screens */
+    margin: 5px 0;
     color: #fff;
-    /* Removed white-space: nowrap to allow titles to wrap if they are long */
+    line-height: 1.1;
 }
 
 /* Video Player Wrapper */
 #wrapper {
+    position: relative;
     width: 100%;
     max-width: 900px;
     margin: 20px auto;
     aspect-ratio: 16 / 9;
     background: #000;
+    overflow: hidden;
 }
 
 iframe {
@@ -154,14 +164,15 @@ iframe {
     height: 100%;
     border: none;
 }
+
 /* Back to Top Button */
 #backToTop {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 1001;
-    background: var(--primary-gold);
+    background: #ffd700;
     color: #000;
     width: 50px;
     height: 50px;
@@ -178,60 +189,51 @@ iframe {
     transform: scale(1.1);
     background: #fff;
 }
-/* Container that holds the video and the shield */
+
+/* OK.ru Specific Shielding & Containers */
 .video-wrapper {
     position: relative;
-    width: 640px; /* Adjust to match your iframe width */
-    height: 360px; /* Adjust to match your iframe height */
+    width: 100%;
+    max-width: 640px;
     margin: 0 auto;
     overflow: hidden;
+    aspect-ratio: 16 / 9;
 }
 
-/* Precision Shield for OK.ru Link Icon */
-        #ok-shield {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;    /* Just wide enough to cover the link icon */
-            height: 50px;   /* Just tall enough to cover the top bar */
-            z-index: 999;
-            background: #000; /* Solid black to hide the icon */
-            display: none;    /* Hidden by default */
-            pointer-events: auto; /* BLOCKS clicks in this small corner only */
-            cursor: default;
-        }
-
-        /* Responsive check: ensure wrapper is relative */
-        #wrapper {
-            position: relative;
-            overflow: hidden; /* Important to keep the shield locked in the corner */
-        }
-/* Optional: Make the iframe take up the full container */
-.video-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+#ok-shield {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 50px;
+    z-index: 999;
+    background: #000;
+    display: none;
+    pointer-events: auto;
+    cursor: default;
 }
-/* Hides the OK.ru top bar and link icon */
+
 .ok-video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Keeps the 16:9 shape */
+    padding-bottom: 56.25%;
     height: 0;
-    overflow: hidden; /* This is the "mask" that cuts off the top */
+    overflow: hidden;
     background: #000;
     border-radius: 8px;
 }
 
 .ok-video-container iframe {
     position: absolute;
-    top: -40px; /* Adjust this to hide more or less of the top bar */
+    top: -40px; 
     left: 0;
     width: 100%;
-    height: calc(100% + 45px); /* Adds height back so the bottom isn't cut off */
+    height: calc(100% + 45px);
 }
+
+/* Branding & Logo Overlay */
 .video-branding-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Perfect 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     background: #000;
@@ -243,23 +245,23 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Video stays in back */
+    z-index: 1;
 }
 
 .corner-logo {
     position: absolute;
-    top: 10px;      /* Distance from top */
-    right: 10px;    /* Distance from right - covers the link button */
-    z-index: 10;    /* Forces logo to stay on TOP of the video */
-    background: #0a0a0a; /* Matches your site background */
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    background: #0a0a0a;
     padding: 5px 10px;
-    border: 1px solid #ffd700; /* Your signature gold border */
+    border: 1px solid #ffd700;
     border-radius: 4px;
-    pointer-events: none; /* Allows clicks to go THROUGH if needed, or blocks them if preferred */
+    pointer-events: none;
 }
 
 .corner-logo img {
-    height: 25px; /* Adjust based on your logo size */
+    height: 25px;
     display: block;
 }
 
