@@ -145,3 +145,15 @@ body {
     text-align: center;
     line-height: 45px;
 }
+/* Update your navigation link style to ensure they are clickable */
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800; 
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative; /* Add this */
+    z-index: 1001;      /* Add this */
+    cursor: pointer;    /* Add this to force the hand icon */
+}

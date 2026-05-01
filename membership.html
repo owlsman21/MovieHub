@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Vault | MovieHub.uk</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #0a0a0a; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .signup-card { background: #161625; padding: 40px; border-radius: 15px; border: 1px solid #ffd700; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 450px; }
+        h2 { color: #ffd700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        p { color: #ccc; margin-bottom: 25px; font-size: 0.9rem; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #333; background: #000; color: #fff; font-size: 1rem; box-sizing: border-box; }
+        .btn-submit { background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%); color: #000; font-weight: bold; padding: 15px; border: none; border-radius: 5px; width: 100%; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
+        .btn-submit:hover { transform: scale(1.02); filter: brightness(1.1); }
+        .back-link { display: block; margin-top: 20px; color: #666; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="signup-card">
+    <h2>Founding Member Signup</h2>
+    <p>Register for free to receive your private vault access code.</p>
+  <!-- Formspree endpoint updated for moviehub.uk -->
+<form action="https://formspree.io/f/xqabalea" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email Address" required>
+    <button type="submit" class="btn-submit">Request Access Code</button>
+</form>
+
+    <a href="index.html" class="back-link">← Return to Home</a>
+</div>
+
+</body>
+</html>
