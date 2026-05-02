@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "id": "MH-ART-001",
+      "title": "The Monster Unleashed",
+      "category": "Classic Horror",
+      "price": 59.99,
+      "printful_id": "430592598",
+      "image_url": "images/frankenstein-framed.jpg",
+      "description": "High-quality 18x24 matte poster with a black wooden frame and white matting."
+    },
+  {
+  "id": "MH-ART-001",
+  "title": "The Monster Unleashed",
+  "image_url": "Shop/images/frankenstein-framed-poster.png",
+  "printful_id": "430592598",
+  "year_designed": 2026,
+  "status": "Ready for Upload"
+},
+{
+  "id": "MH-ART-002",
+  "title": "Western Legend",
+  "image_url": "Shop/images/western-legend.jpg",
+  "printful_id": "430592600",
+  "year_designed": 2026,
+  "status": "Ready for Upload"
+},
+{
+  "id": "MH-ART-003",
+  "title": "The Master of Suspense",
+  "image_url": "Shop/images/hitchcock-framed-poster.png",
+  "printful_id": "430693135",
+  "year_designed": 2026,
+  "status": "Ready for Upload"
+}
+
+  ]
+}

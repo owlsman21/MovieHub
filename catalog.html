@@ -2,31 +2,129 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WY3DHDXQWH');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WY3DHDXQWH');
+    </script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>MovieHub - Catalog</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Floating Header Styles */
+        .main-header {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: #0a0a0a;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid #e50914; /* Red accent line */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        /* Big Logo Style to match Home Page */
+        .main-header h1 {
+            font-size: 4.5rem !important;
+            margin: 0 0 15px 0;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: white;
+        }
+        .main-header h1 span { color: #ffd700; } /* Gold Hub */
+
+        /* Navigation Links */
+        .nav-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        .nav-links a:hover { color: #ffd700; }
+
+        /* Search and Filter Row */
+        .controls-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        #search-input {
+            width: 500px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .genre-select {
+            padding: 11px;
+            background: #1a1a1a;
+            color: white;
+            border: 1px solid #333;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Prevent content from hiding behind fixed header */
+        body {
+            padding-top: 260px; 
+            background-color: #0a0a0a;
+        }
+
+        /* High-Priority Back to Top Button */
+        #backToTop {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            background-color: #ffd700 !important;
+            color: #000 !important;
+            width: 55px !important;
+            height: 55px !important;
+            border-radius: 50% !important;
+            display: none; /* Controlled by JS */
+            align-items: center;
+            justify-content: center;
+            font-size: 22px !important;
+            cursor: pointer !important;
+            z-index: 10000 !important;
+            border: 2px solid #000 !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+        }
+    </style>
 </head>
 <body>
 
     <header class="main-header">
-        <h2>Movie<span>Hub</span></h2>
+        <h1>MOVIE<span>HUB</span></h1>
         
-        <div class="controls-container">
-            <div class="nav-buttons">
-                <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
-            </div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+            <a href="catalog.html"><i class="fas fa-film"></i> ALL MOVIES</a>
+        </div>
 
+        <div class="controls-container">
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Search the Catalog...">
             </div>
@@ -49,6 +147,27 @@
         <div id="movie-grid-container" class="movie-grid"></div>
     </main>
 
+    <div id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script src="app.js"></script>
+    <script>
+        // Back to Top and Floating Header logic
+        const btt = document.getElementById("backToTop");
+        
+        window.addEventListener('scroll', function() {
+            // Show/Hide Back to Top Arrow
+            if (window.pageYOffset > 400) {
+                btt.style.display = "flex";
+            } else {
+                btt.style.display = "none";
+            }
+        }, true);
+
+        btt.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 </body>
 </html>

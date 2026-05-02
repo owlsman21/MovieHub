@@ -2398,4 +2398,40 @@
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
+<url>
+    <loc>https://moviehub.uk/movie-details?id=a-study-in-terror-1965</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+  <loc>https://moviehub.uk/movie-details?id=house-of-horrors-1946</loc>
+  <lastmod>2026-05-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details?id=first-men-in-the-moon-1964</loc>
+  <lastmod>2026-05-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details?id=the-deadly-companions-1961</loc>
+  <lastmod>2026-05-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details?id=the-fbi-story-1959</loc>
+  <lastmod>2026-05-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details?id=the-treasure-of-the-sierra-madre-1948</loc>
+  <lastmod>2026-05-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
 </urlset>

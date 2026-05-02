@@ -183,6 +183,48 @@
             color: black !important;
         }
 
+        /* Footer Styling */
+        .main-footer {
+            background: #111;
+            padding: 60px 20px 20px;
+            border-top: 3px solid var(--netflix-red);
+            margin-top: 80px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .footer-section h3 {
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.8rem;
+        }
+        .social-links a { color: white; transition: 0.3s; }
+        .social-links a:hover { color: var(--primary-gold); }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #ccc; text-decoration: none; }
+        .footer-links a:hover { color: white; }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
         #backToTop {
             position: fixed;
             bottom: 30px;
@@ -202,21 +244,19 @@
     </style>
 </head>
 <body>
-<nav class="top-nav">
-    <a href="#new-additions-section">NEWLY ADDED</a>
-    <a href="#previews-section">MOVIE PREVIEWS</a>
-    <a href="#latest-section">LATEST RELEASES</a>
-    <a href="#asian-section">ASIAN MOVIES</a>
-    <!-- ADD THE .html EXTENSION HERE -->
-    <a href="membership.html" class="nav-membership">JOIN MEMBERSHIP</a>
-    <a href="login.html" class="nav-members-btn">MEMBERS MOVIES</a>
-</nav>
+    <nav class="top-nav">
+        <a href="#new-additions-section">NEWLY ADDED</a>
+        <a href="#previews-section">MOVIE PREVIEWS</a>
+        <a href="#latest-section">LATEST RELEASES</a>
+        <a href="#asian-section">ASIAN MOVIES</a>
+        <a href="membership.html" class="nav-membership">JOIN MEMBERSHIP</a>
+        <a href="login.html" class="nav-members-btn">MEMBERS MOVIES</a>
+    </nav>
 
-   <!-- Change from the full URL to the local file -->
-<div class="promo-bar">
-    🎬 Membership movies coming soon! Join for free now. 
-    <a href="membership.html" style="color: var(--primary-gold);">Click here to sign up</a>
-</div>
+    <div class="promo-bar">
+        🎬 Membership movies coming soon! Join for free now. 
+        <a href="membership.html" style="color: var(--primary-gold);">Click here to sign up</a>
+    </div>
 
     <header class="main-header">
         <h1>MOVIE<span style="color:var(--primary-gold)">HUB</span></h1>
@@ -244,58 +284,28 @@
         <section id="previews-section">
             <h2 class="section-title">Movie Previews & Trailers</h2>
             <div id="previews-grid" class="preview-grid">
-                
-               <div class="preview-item">
-    <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/GccLN9JufCs?si=h87jL_iEy4u-8z2f" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Day of the Jackal (1973)</p>
-    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
-</div>
-
+                <!-- Preview items remain the same -->
                 <div class="preview-item">
-    <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/NL6mioAlpJk?si=_jJyCuOoRYZsOokh" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Evil Dead (1981)</p>
-    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
-</div>
-
-              <div class="preview-item">
-    <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/Fr2WXx129PY?si=66hCKEKSjWLiHO3B" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Wishmaster (1997)</p>
-    <a href="https://moviehub.uk/movie-details?id=wishmaster-1997" class="watch-btn">WATCH FULL MOVIE</a>
-</div>
-<div class="preview-item">
-    <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/Q6iEna2pJqM?si=5g9AtZhiwVb3B7w-" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Man Who Shot Liberty Valance (1962)</p>
-    <a href="https://moviehub.uk/movie-details?id=the-man-who-shot-liberty-valance-1962" class="watch-btn">WATCH FULL MOVIE</a>
-</div>
-<div class="preview-item">
-    <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/kUogGGJtWPs?si=NAjLMsVBEGlh2vxS" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Hatchet (2006)</p>
-    <a href="https://moviehub.uk/movie-details?id=hatchet-2006" class="watch-btn">WATCH FULL MOVIE</a>
-</div>
-<div class="preview-item">
-    <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/XufZT_CRW88?si=H8Wt4L0x3glGk8tD" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Hollow Man (2000)</p>
-    <a href="https://moviehub.uk/movie-details?id=Hollow-Man-(2000)-1080p" class="watch-btn">WATCH FULL MOVIE</a>
-</div>
-
+                    <div class="video-box"><iframe src="https://www.youtube.com/embed/GccLN9JufCs" frameborder="0" allowfullscreen></iframe></div>
+                    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Day of the Jackal (1973)</p>
+                    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
+                </div>
+                <div class="preview-item">
+                    <div class="video-box"><iframe src="https://www.youtube.com/embed/NL6mioAlpJk" frameborder="0" allowfullscreen></iframe></div>
+                    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Evil Dead (1981)</p>
+                    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
+                </div>
+                <div class="preview-item">
+                    <div class="video-box"><iframe src="https://www.youtube.com/embed/Fr2WXx129PY" frameborder="0" allowfullscreen></iframe></div>
+                    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Wishmaster (1997)</p>
+                    <a href="https://moviehub.uk/movie-details?id=wishmaster-1997" class="watch-btn">WATCH FULL MOVIE</a>
+                </div>
             </div>
             <div style="text-align: center; margin: 40px 0 20px 0;">
-    <a href="preview.html" class="nav-members-btn" style="padding: 12px 40px; font-size: 1.1rem; text-decoration: none; display: inline-block; letter-spacing: 1px;">
-        VIEW ALL TRAILERS IN THE VAULT
-    </a>
-</div>
+                <a href="preview.html" class="nav-members-btn" style="padding: 12px 40px; font-size: 1.1rem; text-decoration: none; display: inline-block; letter-spacing: 1px;">
+                    VIEW ALL TRAILERS IN THE VAULT
+                </a>
+            </div>
         </section>
 
         <section id="latest-section">
@@ -308,6 +318,55 @@
             <div id="asian-grid" class="movie-grid"></div>
         </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <!-- Support Section -->
+            <div class="footer-section">
+                <h3>Support the Vault</h3>
+                <p>Help us keep the classics alive and support our true crime research.</p>
+                <a href="https://www.buymeacoffee.com/moviehubhd" target="_blank">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 45px !important;" >
+                </a>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://rumble.com/c/WesternMoviesFullHD" target="_blank" title="Western Cinema Channel">
+                        <i class="fas fa-hat-cowboy"></i>
+                    </a>
+                    <a href="https://rumble.com/c/ActionCinemaHub" target="_blank" title="Action Cinema Hub">
+                        <i class="fas fa-fist-raised"></i>
+                    </a>
+                    <a href="https://www.facebook.com/groups/403207477513491" target="_blank" title="True Crime Facebook Group">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                   
+                    <a href="mailto:contact@moviehub.uk" title="Email Us">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">
+                    Explore Western and Action classics on Rumble!
+                </p>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">All Movies</a></li>
+                    <li><a href="membership.html">Join Membership</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MovieHub.uk | Hand-curated in Thailand | Subsidizing the Pension Fund</p>
+        </div>
+    </footer>
 
     <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
 

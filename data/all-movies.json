@@ -1,5 +1,77 @@
 [
    {
+  "id": "the-treasure-of-the-sierra-madre-1948",
+  "title": "The Treasure of the Sierra Madre (1948) Full Movie | Humphrey Bogart | Classic Western Adventure",
+  "year": 1948,
+  "director": "John Huston",
+  "quality": "HD",
+  "genres": "Western, Adventure, Drama, Classics",
+  "description": "Two down-on-their-luck Americans searching for work in Mexico convince an old prospector to help them mine for gold in the Sierra Madre Mountains. A masterpiece of greed and survival. Watch now on MovieHub.",
+  "embedId": "v77207i",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjA1NjI5NjA1Ml5BMl5BanBnXkFtZTcwMTY4OTcyMw@@._V1_.jpg"
+},
+   {
+  "id": "the-fbi-story-1959",
+  "title": "The FBI Story (1959) Full Movie | James Stewart | Classic Crime Drama",
+  "year": 1959,
+  "director": "Mervyn LeRoy",
+  "quality": "HD",
+  "genres": "Crime, Drama, History, Classics",
+  "description": "A dedicated FBI agent looks back on his long career, tracing the history of the Bureau through some of its most famous cases. Starring James Stewart.",
+  "embedId": "v771w4u",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzQ4MzA5OTY5NF5BMl5BanBnXkFtZTYwMjEyMzI5._V1_.jpg"
+},
+   {
+  "id": "the-deadly-companions-1961",
+  "title": "The Deadly Companions (1961) Full Movie | Maureen O'Hara & Brian Keith | Sam Peckinpah Western",
+  "year": 1961,
+  "director": "Sam Peckinpah",
+  "quality": "HD",
+  "genres": "Western, Action, Classics",
+  "description": "An ex-army officer accidentally kills a woman's son and tries to make amends by escorting the funeral procession through dangerous Apache territory. The directorial debut of Sam Peckinpah.",
+  "embedId": "v771vxa",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ4MDQzOTM5Nl5BMl5BanBnXkFtZTcwNjQ0OTUyMQ@@._V1_.jpg"
+},
+   {
+  "id": "first-men-in-the-moon-1964",
+  "title": "First Men in the Moon (1964) Full Movie | H.G. Wells | Ray Harryhausen Effects",
+  "year": 1964,
+  "director": "Nathan Juran",
+  "quality": "HD",
+  "genres": "Sci-Fi, Adventure, Classics",
+  "description": "A Victorian era team of explorers travels to the moon in a sphere protected by a gravity-defying paste, only to discover a civilization of insect-like Selenites. Features incredible Ray Harryhausen effects.",
+  "embedId": "v771uk4",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGRiNjdkMjktNjA0NS00NDUxLWEzZWQtYTI5MTZhYTM2YjYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+},
+   {
+  "id": "house-of-horrors-1946",
+  "title": "House of Horrors (1946) Full Movie | Rondo Hatton as The Creeper | Classic Horror",
+  "year": 1946,
+  "director": "Jean Yarbrough",
+  "quality": "HD",
+  "genres": "Horror, Noir, Classics",
+  "description": "An unsuccessful sculptor saves a drowning man known as 'The Creeper' and uses him to take revenge on his critics. A legendary cult classic horror film. Watch now on MovieHub.",
+  "embedId": "v771q0u",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjA5MzE1NDc0OV5BMl5BanBnXkFtZTcwMjY2OTMyMQ@@._V1_.jpg"
+},
+   {
+  "id": "a-study-in-terror-1965",
+  "title": "A Study In Terror (1965) Full Movie | Sherlock Holmes vs Jack the Ripper | Classic Mystery",
+  "year": 1965,
+  "director": "James Hill",
+  "quality": "HD",
+  "genres": "Mystery, Thriller, Crime, Classics",
+  "description": "The world's greatest detective, Sherlock Holmes, takes on the hunt for history's most notorious killer, Jack the Ripper. A high-stakes classic mystery thriller. Watch now on MovieHub.",
+  "embedId": "v771pp2",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTg4MDQwNjM1OF5BMl5BanBnXkFtZTYwMzk5NzQ5._V1_.jpg"
+},
+   {
   "id": "trap-48-2025",
   "title": "Trap 48 (2025) Full Movie | Intense Psychological Thriller | MovieHub Exclusive",
   "year": 2025,
@@ -12516,15 +12588,7 @@
         "embedId": "v71j3gg"
     },
            
-     {
-        "id": "DeadlyCompanions",
-        "title": "The Deadly Companions (1961)",
-        "description": "In Sam Peckinpah's directorial debut, an ex-Union officer accidentally kills a young boy and is forced to escort the grieving mother through dangerous Apache territory. A tense study of guilt and redemption.",
-        "genres": ["Western", "Drama"],
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ4MDQzOTM5Nl5BMl5BanBnXkFtZTcwNjQ0OTUyMQ@@._V1_.jpg",
-        "source": "rumble",
-        "embedId": "v71j2r4"
-    },
+    
             {
         "id": "RobbersRoost",
         "title": "Robbers' Roost (1955)",

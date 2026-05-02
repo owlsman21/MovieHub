@@ -157,3 +157,132 @@ body {
     z-index: 1001;      /* Add this */
     cursor: pointer;    /* Add this to force the hand icon */
 }
+/* Store Page Styling */
+body {
+    background-color: #000; /* Keeps it consistent with MovieHub */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers all your text and images */
+}
+
+header {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+    border-bottom: 2px solid #333;
+}
+
+.store-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.product-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px; /* Keeps the framed poster at a good viewing size */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.02); /* Subtle lift when you hover over it */
+    border-color: #e50914; /* Optional: A cinematic red border on hover */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #f3ce13; /* Gold color for the price to make it look premium */
+    font-weight: bold;
+}
+
+.details {
+    color: #bbb;
+    margin-bottom: 25px;
+}
+.main-footer {
+    background: #111;
+    padding: 60px 20px 20px;
+    border-top: 3px solid var(--netflix-red);
+    margin-top: 80px;
+    color: #fff;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+.footer-section h3 {
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.8rem;
+}
+.social-links a { color: white; transition: 0.3s; }
+.social-links a:hover { color: var(--primary-gold); }
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #ccc; text-decoration: none; }
+.footer-links a:hover { color: white; }
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #ffd700; /* Primary Gold */
+    color: #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: none; /* Controlled by JS */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 99999 !important; /* Forces it above all movie posters */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    border: 2px solid #000;
+}
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5rem !important; /* Smaller logo for mobile */
+    }
+    body {
+        padding-top: 180px; /* Adjust spacing for mobile */
+    }
+    #search-input {
+        width: 80%; /* Search bar fits phone screens */
+    }
+}
