@@ -286,3 +286,36 @@ h2 {
         width: 80%; /* Search bar fits phone screens */
     }
 }
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.coffee-btn {
+    background-color: #ffd700; /* MovieHub Gold */
+    color: #000 !important;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #ffd700;
+    transition: all 0.3s ease;
+}
+
+.coffee-btn:hover {
+    background-color: transparent;
+    color: #ffd700 !important;
+}
+
+/* Ensure Font Awesome icons are sized right */
+.coffee-btn i {
+    font-size: 0.9rem;
+}

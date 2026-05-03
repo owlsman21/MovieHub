@@ -2434,4 +2434,58 @@
   <changefreq>monthly</changefreq>
   <priority>0.6</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=fright-night-1985</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=freebie-and-the-bean-1974</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-reptile-1966</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=when-dinosaurs-ruled-the-earth-1970</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=roommates-2026</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-whistler-2026</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=bad-men-must-bleed-2026</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-gates-2026</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-lawnmower-man-1992</loc>
+  <lastmod>2026-05-03</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>

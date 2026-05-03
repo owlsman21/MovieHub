@@ -18,18 +18,48 @@
             background-color: var(--bg-black);
             color: #e0e0e0;
             font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
-        /* Vault Branding */
+        /* --- INTEGRATED TOP MENU --- */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(0, 0, 0, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-logo { color: var(--primary-gold); font-weight: bold; text-decoration: none; font-size: 1.5rem; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-gold); }
+
+        /* Hide Membership links while in the Vault */
+        .vault-hide { display: none !important; }
+
+        .coffee-btn {
+            background: #ffdd00;
+            color: #000 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* --- VAULT BRANDING --- */
         .vault-header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             background: linear-gradient(180deg, #1a1a2e 0%, var(--bg-black) 100%);
             border-bottom: 2px solid var(--primary-gold);
         }
 
         .vault-header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary-gold);
             text-transform: uppercase;
             letter-spacing: 5px;
@@ -43,62 +73,74 @@
             padding: 5px 15px;
             font-weight: bold;
             border-radius: 20px;
-            margin-top: 10px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         .content { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { font-size: 2rem; color: #fff; border-left: 5px solid var(--primary-gold); padding-left: 15px; margin-bottom: 30px; }
         
-        .section-title {
-            font-size: 2rem;
-            color: #fff;
-            border-left: 5px solid var(--primary-gold);
-            padding-left: 15px;
-            margin-bottom: 30px;
-        }
-
-        /* The Grid */
         .movie-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 25px;
         }
 
-        .logout-link {
-            display: block;
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-            text-decoration: none;
-            transition: 0.3s;
+        #backToTopBtn {
+            display: none; position: fixed; bottom: 30px; right: 30px; z-index: 99;
+            border: none; background-color: var(--primary-gold); color: black;
+            padding: 15px; border-radius: 50%; font-size: 20px; cursor: pointer;
         }
-
-        .logout-link:hover { color: var(--primary-gold); }
 
         @media (max-width: 600px) {
             .movie-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-links { gap: 10px; }
+            .nav-links a { font-size: 0.7rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Menu -->
+    <nav class="main-nav">
+        <a href="https://moviehub.uk/" class="nav-logo">MOVIEHUB</a>
+        <div class="nav-links">
+            <a href="https://moviehub.uk/">HOME</a>
+            <a href="#" class="vault-hide">JOIN MEMBERSHIP</a> <!-- Hidden -->
+            <a href="#" class="vault-hide">PRIVATE VAULT</a> <!-- Hidden -->
+            <a href="https://www.buymeacoffee.com/moviehubhd" class="coffee-btn" target="_blank">
+                <i class="fas fa-coffee"></i> BUY ME A COFFEE
+            </a>
+        </div>
+    </nav>
+
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
     <header class="vault-header">
         <div class="vault-badge"><i class="fas fa-star"></i> Founding Member Access</div>
         <h1>The Private Vault</h1>
-        <p>Welcome back, Dennis. Enjoy these exclusive premium classics.</p>
+        <p>Welcome back, Dennis. Your exclusive premium archive.</p>
     </header>
 
     <main class="content">
         <section>
             <h2 class="section-title">Exclusive Premium Titles</h2>
             <div id="members-grid" class="movie-grid">
-                </div>
+                <!-- Movies like "The Whistler" and "The Gates" load here -->
+            </div>
         </section>
 
-        <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Exit Private Vault</a>
+        <a href="https://moviehub.uk/" class="logout-link" style="display: block; text-align: center; margin: 40px; color: #666; text-decoration: none;">
+            <i class="fas fa-sign-out-alt"></i> Exit to Main Home
+        </a>
     </main>
 
+    <script>
+        let mybutton = document.getElementById("backToTopBtn");
+        window.onscroll = function() { if (document.documentElement.scrollTop > 300) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; } };
+        function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
