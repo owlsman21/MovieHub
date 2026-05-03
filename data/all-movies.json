@@ -1,17 +1,5 @@
 [
- {
-  "id": "the-lawnmower-man-1992",
-  "title": "The Lawnmower Man (1992) Full Movie | Pierce Brosnan & Jeff Fahey | Sci-Fi Classic",
-  "year": 1992,
-  "director": "Brett Leonard",
-  "quality": "HD",
-  "genres": "Sci-Fi, Thriller, Classics",
-  "description": "A scientist performs experiments involving virtual reality and cognitive enhancement on a simple-minded gardener, leading to god-like powers and dangerous consequences. Starring Pierce Brosnan and Jeff Fahey.",
-  "embedId": "1514289039910",
-  "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2JlNzVmN2QtM2IwYS00ZjVmLWI4NDMtYTU4MmEzMzRmYzNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-},
-   {
+     {
   "id": "the-gates-2026",
   "title": "The Gates (2026) Full Movie | Supernatural Thriller | MovieHub Members Exclusive",
   "year": 2026,
@@ -24,6 +12,19 @@
   "source": "ok.ru",
   "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS5hM8boeHDHzlL30MxCwGyIdfcWIrBGyPig&s"
 },
+ {
+  "id": "the-lawnmower-man-1992",
+  "title": "The Lawnmower Man (1992) Full Movie | Pierce Brosnan & Jeff Fahey | Sci-Fi Classic",
+  "year": 1992,
+  "director": "Brett Leonard",
+  "quality": "HD",
+  "genres": "Sci-Fi, Thriller, Classics",
+  "description": "A scientist performs experiments involving virtual reality and cognitive enhancement on a simple-minded gardener, leading to god-like powers and dangerous consequences. Starring Pierce Brosnan and Jeff Fahey.",
+  "embedId": "1514289039910",
+  "source": "ok.ru",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2JlNzVmN2QtM2IwYS00ZjVmLWI4NDMtYTU4MmEzMzRmYzNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+},
+ 
    {
   "id": "bad-men-must-bleed-2026",
   "title": "Bad Men Must Bleed (2026) Full Movie | Modern Western Thriller | MovieHub Members Exclusive",
