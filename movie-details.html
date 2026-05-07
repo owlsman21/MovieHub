@@ -8,11 +8,16 @@
       gtag('js', new Date());
       gtag('config', 'G-WY3DHDXQWH');
     </script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+
+    <link rel="canonical" href="https://moviehub.uk/movie-details.html" />
+
     <title>MovieHub - Loading...</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         /* Essential styles for the Player Wrapper */
         #wrapper {
@@ -30,7 +35,7 @@
             border: none;
         }
 
-        /* MEGA Shield remains as it's useful for blocking accidental downloads */
+        /* MEGA Shield for blocking accidental downloads */
         #mega-shield {
             position: absolute;
             top: 0;
@@ -77,9 +82,12 @@
         </div>
 
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
-            <h1 id="movie-title">Loading...</h1>
-            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;"></p>
-            <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
+            <h1 id="movie-title">MovieHub Digital Vault</h1>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Archival Film Collection</p>
+            <p id="movie-desc" style="line-height:1.6; color:#ccc;">
+                Welcome to the MovieHub Vault. We are currently retrieving the high-definition stream 
+                and full production credits for this title from our secure archive.
+            </p>
         </div>
     </main>
 
@@ -107,6 +115,7 @@
                 const movie = movies.find(m => m.id === movieId);
                 
                 if (movie) {
+                    // Overwrite the static "Bot-Bait" text with the real movie data
                     document.title = "MovieHub - " + movie.title;
                     document.getElementById('movie-title').innerText = movie.title;
                     document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'N/A'} | ${Array.isArray(movie.genres) ? movie.genres.join(', ') : (movie.genres || 'N/A')}`;
