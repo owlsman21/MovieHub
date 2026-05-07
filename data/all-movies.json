@@ -12,18 +12,6 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDAxNmQyNjAtZDRkYS00MGYyLTlmZmMtYTdmMDBmMGU0MDIyXkEyXkFqcGc@._V1_.jpg"
 },
    {
-  "id": "jack-slade-1953",
-  "title": "Jack Slade (1953) Full Movie | Mark Stevens & Dorothy Malone | Classic Western",
-  "year": 1953,
-  "director": "Harold D. Schuster",
-  "quality": "HD",
-  "genres": "Western, Action, Classics",
-  "description": "The brutal and true-life inspired story of Jack Slade, a legal enforcer who becomes as feared and violent as the outlaws he hunts. Starring Mark Stevens and Dorothy Malone. Explore the full Jack Slade collection in the Vault at https://moviehub.uk",
-  "embedId": "v7783to",
-  "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmQzMGEzZjktNmM5Yi00ZTZmLWFiYTAtZjE3NjcwYjcxM2U4XkEyXkFqcGc@._V1_.jpg"
-},
-   {
   "id": "the-return-of-jack-slade-1955",
   "title": "The Return of Jack Slade (1955) Full Movie | John Ericson & Mari Blanchard | Classic Western",
   "year": 1955,
@@ -35,6 +23,19 @@
   "source": "rumble",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BZmJiZTlhN2MtZTE5Ny00YTU2LWJhYTUtYTNjODY4ZTU2ZjE3XkEyXkFqcGc@._V1_.jpg"
 },
+   {
+  "id": "jack-slade-1953",
+  "title": "Jack Slade (1953) Full Movie | Mark Stevens & Dorothy Malone | Classic Western",
+  "year": 1953,
+  "director": "Harold D. Schuster",
+  "quality": "HD",
+  "genres": "Western, Action, Classics",
+  "description": "The brutal and true-life inspired story of Jack Slade, a legal enforcer who becomes as feared and violent as the outlaws he hunts. Starring Mark Stevens and Dorothy Malone. Explore the full Jack Slade collection in the Vault at https://moviehub.uk",
+  "embedId": "v7783to",
+  "source": "rumble",
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmQzMGEzZjktNmM5Yi00ZTZmLWFiYTAtZjE3NjcwYjcxM2U4XkEyXkFqcGc@._V1_.jpg"
+},
+
    {
   "id": "i-saw-what-you-did-1965",
   "title": "I Saw What You Did (1965) Full Movie | Joan Crawford & John Ireland | Classic Horror Thriller",
