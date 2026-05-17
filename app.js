@@ -20,6 +20,26 @@ async function initMovieVault() {
             return;
         }
 
+        // 1b. CLASSIC MOVIES VAULT: Check if we are on the classic-movies.html page
+        const classicsGrid = document.getElementById('classics-grid');
+        if (classicsGrid) {
+            // Filter down to classic titles
+            const classicMovies = publicMovies.filter(m => 
+                m.genres && Array.isArray(m.genres) && 
+                m.genres.some(genre => genre.toLowerCase().includes('classic'))
+            );
+
+            // Clean up titles on the fly by splitting out SEO data after the '|' divider
+            const polishedClassics = classicMovies.map(movie => ({
+                ...movie,
+                title: movie.title ? movie.title.split('|')[0].trim() : 'Untitled Classic'
+            }));
+
+            renderGrid(classicsGrid, polishedClassics);
+            setupSearch(publicMovies); // Keep search working on the classics page
+            return;
+        }
+
         // 2. NEW ADDITIONS: Takes first 24 items from PUBLIC list
         const newAdditions = publicMovies.slice(0, 24); 
         renderGrid(document.getElementById('latest-grid'), newAdditions);
@@ -108,10 +128,11 @@ function setupSearch(searchableList) {
             const homepageSearchSection = document.getElementById('homepage-search-section');
             
             const contentSections = [
-                document.getElementById('new-additions-section'), // Updated to match your new ID
+                document.getElementById('new-additions-section'), 
                 document.getElementById('latest-section'),
                 document.getElementById('hitchcock-section'),
-                document.getElementById('asian-section')
+                document.getElementById('asian-section'),
+                document.getElementById('classics-section') 
             ];
 
             if (homepageSearchResultsContainer && homepageSearchSection) {
@@ -132,6 +153,23 @@ function setupSearch(searchableList) {
                 const catalogGridContainer = document.getElementById('movie-grid-container');
                 if (catalogGridContainer) {
                     renderGrid(catalogGridContainer, filteredMovies);
+                } else {
+                    // If searching on the standalone classic-movies page
+                    const classicsGrid = document.getElementById('classics-grid');
+                    if (classicsGrid) {
+                        const classicsOnlySearch = filteredMovies.filter(m => 
+                            m.genres && Array.isArray(m.genres) && 
+                            m.genres.some(genre => genre.toLowerCase().includes('classic'))
+                        );
+                        
+                        // Apply the same title-cleaning layout rules during typing/filtering
+                        const polishedSearch = classicsOnlySearch.map(movie => ({
+                            ...movie,
+                            title: movie.title ? movie.title.split('|')[0].trim() : 'Untitled Classic'
+                        }));
+
+                        renderGrid(classicsGrid, polishedSearch);
+                    }
                 }
             }
         });
