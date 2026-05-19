@@ -2554,4 +2554,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=now-voyager-1942</loc>
+  <lastmod>2026-05-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=the-letter-1940</loc>
+  <lastmod>2026-05-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=the-great-lie-1941</loc>
+  <lastmod>2026-05-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=juarez-1939</loc>
+  <lastmod>2026-05-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>

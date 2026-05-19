@@ -149,29 +149,6 @@
             padding: 0 20px;
         }
 
-        .preview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        .video-box {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid #333;
-            background: #000;
-        }
-
-        .video-box iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-        }
-
         /* Watch Button Style */
         .watch-btn {
             display: block;
@@ -190,6 +167,19 @@
         .watch-btn:hover {
             background: var(--primary-gold);
             color: black !important;
+        }
+
+        /* Section Header Layout for Curated Vault Links */
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 60px 20px 30px 0;
+        }
+        
+        .section-header-row .section-title {
+            margin: 0;
         }
 
         /* Footer Styling */
@@ -255,7 +245,7 @@
 <body>
   <nav class="top-nav">
     <a href="#new-additions-section">NEWLY ADDED</a>
-    <a href="#previews-section">MOVIE PREVIEWS</a>
+    <a href="#bette-davis-section">BETTE DAVIS COLLECTION</a>
     <a href="#latest-section">LATEST RELEASES</a>
     <a href="classic-movies.html" class="nav-link">Classic Movies</a>
     <a href="#asian-section">ASIAN MOVIES</a>
@@ -294,30 +284,14 @@
             <div id="latest-grid" class="movie-grid"></div>
         </section>
 
-        <section id="previews-section">
-            <h2 class="section-title">Movie Previews & Trailers</h2>
-            <div id="previews-grid" class="preview-grid">
-                <div class="preview-item">
-                    <div class="video-box"><iframe src="https://www.youtube.com/embed/GccLN9JufCs" frameborder="0" allowfullscreen></iframe></div>
-                    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Day of the Jackal (1973)</p>
-                    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
-                </div>
-                <div class="preview-item">
-                    <div class="video-box"><iframe src="https://www.youtube.com/embed/NL6mioAlpJk" frameborder="0" allowfullscreen></iframe></div>
-                    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">The Evil Dead (1981)</p>
-                    <a href="https://moviehub.uk/" class="watch-btn">WATCH FULL MOVIE</a>
-                </div>
-                <div class="preview-item">
-                    <div class="video-box"><iframe src="https://www.youtube.com/embed/Fr2WXx129PY" frameborder="0" allowfullscreen></iframe></div>
-                    <p style="text-align:center; font-weight:bold; margin-top:10px; color:#fff;">Wishmaster (1997)</p>
-                    <a href="https://moviehub.uk/movie-details?id=wishmaster-1997" class="watch-btn">WATCH FULL MOVIE</a>
-                </div>
-            </div>
-            <div style="text-align: center; margin: 40px 0 20px 0;">
-                <a href="preview.html" class="nav-members-btn" style="padding: 12px 40px; font-size: 1.1rem; text-decoration: none; display: inline-block; letter-spacing: 1px;">
-                    VIEW ALL TRAILERS IN THE VAULT
+        <section id="bette-davis-section">
+            <div class="section-header-row">
+                <h2 class="section-title">The Bette Davis & Drama Collection</h2>
+                <a href="catalog.html?search=Bette+Davis" class="nav-members-btn" style="font-size: 0.85rem; letter-spacing: 0.5px;">
+                    SEARCH THE BETTE DAVIS COLLECTION IN THE VAULT
                 </a>
             </div>
+            <div id="bette-davis-grid" class="movie-grid"></div>
         </section>
 
         <section id="latest-section">

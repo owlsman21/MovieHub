@@ -44,6 +44,17 @@ async function initMovieVault() {
         const newAdditions = publicMovies.slice(0, 24); 
         renderGrid(document.getElementById('latest-grid'), newAdditions);
 
+        // --- 2b. NEW: BETTE DAVIS & DRAMA COLLECTION ---
+        // Filters public database automatically by searching titles, descriptions, or specific hardcoded anchors
+        const betteDavisMovies = publicMovies.filter(m => {
+            const titleLower = m.title ? m.title.toLowerCase() : '';
+            const descLower = m.description ? m.description.toLowerCase() : '';
+            return titleLower.includes('bette davis') || 
+                   descLower.includes('bette davis') || 
+                   titleLower.includes('the furies');
+        }).slice(0, 24); // Locks the row limit to exactly 24 cards
+        renderGrid(document.getElementById('bette-davis-grid'), betteDavisMovies);
+
         // 3. LATEST RELEASES: Sort the PUBLIC library by Year
         const latestReleases = [...publicMovies]
             .sort((a, b) => b.year - a.year)
@@ -127,8 +138,10 @@ function setupSearch(searchableList) {
             const homepageSearchResultsContainer = document.getElementById('homepage-search-results');
             const homepageSearchSection = document.getElementById('homepage-search-section');
             
+            // Includes your brand-new collection block to toggle smoothly with search states
             const contentSections = [
                 document.getElementById('new-additions-section'), 
+                document.getElementById('bette-davis-section'),
                 document.getElementById('latest-section'),
                 document.getElementById('hitchcock-section'),
                 document.getElementById('asian-section'),

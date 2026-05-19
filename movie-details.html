@@ -1,341 +1,199 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-
     <script>
-
       window.dataLayer = window.dataLayer || [];
-
       function gtag(){dataLayer.push(arguments);}
-
       gtag('js', new Date());
-
       gtag('config', 'G-WY3DHDXQWH');
-
     </script>
-
-    <meta name="description" content="Watch classic movies on MovieHub.">
-
     
-
+    <meta name="description" content="Watch classic movies on MovieHub.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
 
-
-
-    <link rel="canonical" href="https://moviehub.uk/movie-details.html" />
-
-
+    <link id="canonical-link" rel="canonical" href="https://moviehub.uk/movie-details.html" />
 
     <title>MovieHub - Loading...</title>
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     
-
     <style>
-
         /* Essential styles for the Player Wrapper */
-
         #wrapper {
-
             position: relative;
-
             width: 100%;
-
             max-width: 850px;
-
             margin: 0 auto;
-
             background: #000;
-
             aspect-ratio: 16 / 9;
-
             overflow: hidden; 
-
         }
-
         #movie-iframe {
-
             width: 100%;
-
             height: 100%;
-
             border: none;
-
         }
-
-
 
         /* MEGA Shield for blocking accidental downloads */
-
         #mega-shield {
-
             position: absolute;
-
             top: 0;
-
             right: 0;
-
             width: 25%;  
-
             height: 20%; 
-
             z-index: 10;
-
             background: transparent;
-
             cursor: default;
-
             display: none; 
-
         }
-
     </style>
-
 </head>
-
 <body>
 
-
-
     <header class="main-header">
-
         <h2>Movie<span>Hub</span></h2>
-
         <div class="controls-container">
-
             <div class="nav-buttons">
-
                 <a href="index.html"><i class="fas fa-home"></i> Home</a>
-
                 <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
-
             </div>
-
             <div class="search-container">
-
                 <input type="text" id="search-input" placeholder="Search the Vault...">
-
             </div>
-
             <select class="genre-select" onchange="location = this.value;">
-
                 <option value="">Filter by Genre</option>
-
                 <option value="catalog.html?genre=Action">Action</option>
-
                 <option value="catalog.html?genre=Thriller">Thriller</option>
-
                 <option value="catalog.html?genre=Drama">Drama</option>
-
                 <option value="catalog.html?genre=Hitchcock">Hitchcock</option>
-
                 <option value="catalog.html?genre=Horror">Horror</option>
-
                 <option value="catalog.html?genre=Sci-Fi">Sci-Fi</option>
-
                 <option value="catalog.html?genre=Musical">Musical</option>
-
                 <option value="catalog.html?genre=History">History</option>
-
             </select>
-
         </div>
-
     </header>
 
-
-
     <main class="content">
-
         <div id="wrapper">
-
             <div id="mega-shield"></div>
-
             <iframe id="movie-iframe" src="" allowfullscreen></iframe>
-
         </div>
-
-
 
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
-
             <h1 id="movie-title">MovieHub Digital Vault</h1>
-
             <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Archival Film Collection</p>
-
             <p id="movie-desc" style="line-height:1.6; color:#ccc;">
-
                 Welcome to the MovieHub Vault. We are currently retrieving the high-definition stream 
-
                 and full production credits for this title from our secure archive.
-
             </p>
-
         </div>
-
     </main>
 
-
-
     <script>
-
         document.getElementById('search-input').addEventListener('keypress', (e) => {
-
             if (e.key === 'Enter') {
-
                 window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
-
             }
-
         });
 
-
-
         async function loadMovieDetails() {
-
             const params = new URLSearchParams(window.location.search);
-
             const movieId = params.get('id');
-
             const iframe = document.getElementById('movie-iframe');
-
             const megaShield = document.getElementById('mega-shield');
 
-
-
             if (!movieId) {
-
                 document.getElementById('movie-title').innerText = "Movie ID not specified.";
-
                 return;
-
             }
 
-
+            // Sync dynamic canonical tag for Google Bot
+            document.getElementById('canonical-link').setAttribute('href', window.location.href);
 
             try {
-
                 const response = await fetch('data/all-movies.json'); 
-
                 const movies = await response.json();
-
                 const movie = movies.find(m => m.id === movieId);
-
                 
-
                 if (movie) {
+                    // Polish long SEO titles by splitting on the '|' divider
+                    const cleanTitle = movie.title ? movie.title.split('|')[0].trim() : 'Untitled Movie';
+                    const releaseYear = movie.year || 'N/A';
+                    const parsedGenres = Array.isArray(movie.genres) ? movie.genres : (movie.genres ? movie.genres.split(',').map(g => g.trim()) : []);
 
-                    // Overwrite the static "Bot-Bait" text with the real movie data
-
-                    document.title = "MovieHub - " + movie.title;
-
-                    document.getElementById('movie-title').innerText = movie.title;
-
-                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'N/A'} | ${Array.isArray(movie.genres) ? movie.genres.join(', ') : (movie.genres || 'N/A')}`;
-
+                    // Update layouts
+                    document.title = `${cleanTitle} (${releaseYear}) Full Movie HD | MovieHub`;
+                    document.getElementById('movie-title').innerText = cleanTitle;
+                    document.getElementById('movie-meta').innerText = `${releaseYear} | ${movie.quality || 'HD'} | ${parsedGenres.join(', ')}`;
                     document.getElementById('movie-desc').innerText = movie.description;
-
                     
-
                     let videoUrl = "";
 
-
-
                     // Reset shields
-
                     megaShield.style.display = "none";
-
                     iframe.removeAttribute("sandbox");
 
-
-
                     if (movie.source === "mega" && movie.embedId) {
-
                         videoUrl = movie.embedId.replace("/file/", "/embed/"); 
-
                         megaShield.style.display = "block"; 
-
                         iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-popups allow-storage-access-by-user-activation"); 
-
                     } else if (movie.source === "ok.ru" && movie.embedId) {
-
                         videoUrl = `https://ok.ru/videoembed/${movie.embedId}`;
-
                     } else if (movie.source === "rumble" && movie.embedId) {
-
                         videoUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
-
                     } else {
-
                         videoUrl = "about:blank";
-
                     }
-
                     
-
                     iframe.src = videoUrl;
 
-
-
-                    // SEO - Generate VideoObject JSON-LD
-
+                    // --- GOOGLE STRONG SEARCH STRUCTURE (JSON-LD) ---
                     const scriptElement = document.createElement('script');
-
                     scriptElement.type = 'application/ld+json';
-
-                    const videoSchema = {
-
+                    
+                    const richSchema = {
                         "@context": "https://schema.org",
-
-                        "@type": "VideoObject",
-
-                        "name": movie.title,
-
-                        "description": movie.description,
-
-                        "thumbnailUrl": movie.posterUrl || '',
-
-                        "uploadDate": movie.year ? `${movie.year}-01-01T00:00:00Z` : "2026-01-01T00:00:00Z",
-
-                        "embedUrl": videoUrl
-
+                        "@graph": [
+                            {
+                                "@type": "Movie",
+                                "@id": window.location.href,
+                                "name": cleanTitle,
+                                "url": window.location.href,
+                                "image": movie.posterUrl || 'https://via.placeholder.com/300x450?text=Poster',
+                                "description": movie.description,
+                                "dateCreated": releaseYear !== 'N/A' ? String(releaseYear) : "2026",
+                                "genre": parsedGenres,
+                                "director": {
+                                    "@type": "Person",
+                                    "name": movie.director || "Unknown Director"
+                                }
+                            },
+                            {
+                                "@type": "VideoObject",
+                                "name": movie.title,
+                                "description": movie.description,
+                                "thumbnailUrl": movie.posterUrl || 'https://via.placeholder.com/300x450?text=Poster',
+                                "uploadDate": releaseYear !== 'N/A' ? `${releaseYear}-01-01T00:00:00Z` : "2026-01-01T00:00:00Z",
+                                "embedUrl": videoUrl
+                            }
+                        ]
                     };
-
-                    scriptElement.textContent = JSON.stringify(videoSchema);
-
-                    document.body.appendChild(scriptElement);
-
-
+                    
+                    scriptElement.textContent = JSON.stringify(richSchema);
+                    document.head.appendChild(scriptElement);
 
                 } else {
-
                     document.getElementById('movie-title').innerText = "Movie Not Found";
-
                 }
-
             } catch (e) { 
-
                 console.error("Error:", e); 
-
             }
-
         }
-
         loadMovieDetails();
-
     </script>
-
     <script src="app.js"></script>
-
 </body>
-
 </html>
