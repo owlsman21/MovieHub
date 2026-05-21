@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
     <meta name="p:domain_verify" content="30789ae1d2b6c65e8dc30669dfef3027"/>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-WY3DHDXQWH');
+
+      // Enhanced configuration to accurately capture dynamic single-page interactions
+      gtag('config', 'G-WY3DHDXQWH', {
+        'send_page_view': true,
+        'cookie_flags': 'SameSite=None;Secure',
+        'enhanced_measurement': true
+      });
     </script>
     
     <meta name="msvalidate.01" content="5BEE6161720DE2491A17E5167612730B" />
@@ -192,7 +199,7 @@
         }
         .footer-content {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 :auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
@@ -256,7 +263,7 @@
     <a href="https://www.buymeacoffee.com/moviehubhd" target="_blank" class="coffee-btn">
         <i class="fas fa-coffee"></i> Support
     </a>
-</nav>
+  </nav>
 
     <div style="text-align: center; padding: 20px; font-style: italic;">
         "Welcome to MovieHub.uk, the ultimate digital vault for classic cinema, Westerns, and true crime. Explore our hand-picked collections of Alfred Hitchcock masterpieces, 1950s Technicolor Westerns, and rare archival films—all hosted on Rumble for an ad-free viewing experience."
@@ -329,13 +336,16 @@
                     <a href="https://www.facebook.com/groups/403207477513491" target="_blank" title="True Crime Facebook Group">
                         <i class="fab fa-facebook"></i>
                     </a>
+                    <a href="https://www.pinterest.com/TheMovieHubVault/_saved/" target="_blank" title="MovieHub Pinterest Vault">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
                    
                     <a href="mailto:contact@moviehub.uk" title="Email Us">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
                 <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">
-                    Explore Western and Action classics on Rumble!
+                    Explore Western, Action, and curated Pin boards!
                 </p>
             </div>
 
