@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieHub | Category View</title>
+    <style>
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
+        .grid img { width: 100%; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <h1 id="cat-title">Loading...</h1>
+    <div class="grid" id="movie-grid"></div>
+
+    <script>
+        async function loadCategory() {
+            // Get the keyword from the URL (e.g., ?q=Western)
+            const params = new URLSearchParams(window.location.search);
+            const keyword = params.get('q');
+            document.getElementById('cat-title').innerText = keyword + " Collection";
+
+            const response = await fetch('data/all-movies.json');
+            const movies = await response.json();
+
+            // Filter movies that match the keyword
+            const filtered = movies.filter(m => 
+                (m.title && m.title.includes(keyword)) || 
+                (m.genres && m.genres.includes(keyword))
+            );
+
+            const grid = document.getElementById('movie-grid');
+            filtered.forEach(m => {
+                grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}">`;
+            });
+        }
+        loadCategory();
+    </script>
+</body>
+</html>
