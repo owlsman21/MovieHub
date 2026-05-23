@@ -2578,4 +2578,34 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>[https://moviehub.uk/movie/the-cocoanuts-1929](https://moviehub.uk/movie/the-cocoanuts-1929)</loc>
+  <lastmod>2026-05-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>[https://moviehub.uk/movie/animal-crackers](https://moviehub.uk/movie/animal-crackers)</-1930</loc>
+  <lastmod>2026-05-23</lastmod>
+  <changefreq>monthly<changefreq>
+  <priority>0.8```priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/tarzan-triumphs-1943</loc>
+  <lastmod>2026-05-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/the-lady-vanishes-1938</loc>
+  <lastmod>2026-05-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/africa-screams-1949</loc>
+  <lastmod>2026-05-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>

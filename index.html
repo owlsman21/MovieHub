@@ -9,9 +9,26 @@
         header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
         .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
         
-        /* Search Bar */
+        /* Search Bar Wrapper */
         .search-row { text-align: center; padding: 20px; }
-        #search-input { padding: 10px; width: 300px; border-radius: 5px; border: none; }
+        .search-wrapper { position: relative; display: inline-block; width: 320px; }
+        #search-input { padding: 10px 40px 10px 12px; width: 100%; border-radius: 5px; border: none; box-sizing: border-box; }
+        
+        /* Clear Button Style */
+        .clear-btn { 
+            position: absolute; 
+            right: 12px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            background: none; 
+            border: none; 
+            color: #666; 
+            cursor: pointer; 
+            font-size: 1.1rem; 
+            display: none; /* Hidden by default */
+            padding: 0;
+        }
+        .clear-btn:hover { color: #e50914; }
 
         /* Shelves */
         .shelf { margin: 40px 20px; }
@@ -28,7 +45,7 @@
 </head>
 <body>
 
-  <header>
+    <header>
         <h1>MOVIEHUB VAULT</h1>
         <nav class="nav-links">
             <a href="index.html">HOME</a>
@@ -39,14 +56,18 @@
     </header>
 
     <div class="search-row">
-        <input type="text" id="search-input" placeholder="Search the vault...">
+        <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="Search the vault...">
+            <button id="clear-search" class="clear-btn" title="Clear search"><i class="fas fa-times-circle"></i></button>
+        </div>
     </div>
 
     <div id="shelf-container"></div>
 
-   <footer>
+    <footer>
         <div class="footer-icons">
             <a href="#"><i class="fas fa-hat-cowboy"></i></a>
+            <a href="#"><i class="fas fa-ghost"></i></a>
             <a href="#"><i class="fas fa-fist-raised"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-pinterest"></i></a>
@@ -68,64 +89,86 @@
     </div>
 
     <script>
+        let allMoviesData = []; // Store globally to reuse during reset
+
         // 1. Fetch and Build
         async function init() {
             const response = await fetch('data/all-movies.json');
-            const movies = await response.json();
-            renderShelves(movies);
+            allMoviesData = await response.json();
+            renderShelves(allMoviesData);
             
+            const searchInput = document.getElementById('search-input');
+            const clearBtn = document.getElementById('clear-search');
+
             // 2. Search Logic
-            document.getElementById('search-input').addEventListener('input', (e) => {
+            searchInput.addEventListener('input', (e) => {
                 const term = e.target.value.toLowerCase();
-                const filtered = movies.filter(m => m.title.toLowerCase().includes(term));
-                renderShelves(filtered, true); // True means search mode
+                
+                if (term.length > 0) {
+                    clearBtn.style.display = 'block'; // Show clear button when typing
+                    const filtered = allMoviesData.filter(m => m.title.toLowerCase().includes(term));
+                    renderShelves(filtered, true); // True means search mode
+                } else {
+                    clearBtn.style.display = 'none'; // Hide if input empty
+                    renderShelves(allMoviesData, false);
+                }
+            });
+
+            // 3. Clear Button Click Logic
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                clearBtn.style.display = 'none';
+                searchInput.focus();
+                renderShelves(allMoviesData, false); // Reset back to categorized rows
             });
         }
 
-       function renderShelves(movies, isSearch = false) {
+        function renderShelves(movies, isSearch = false) {
             const container = document.getElementById('shelf-container');
             container.innerHTML = '';
             
             if (isSearch) {
                 container.innerHTML = `<section class="shelf"><h2>Search Results</h2><div class="shelf-grid" id="search-grid"></div></section>`;
                 const grid = document.getElementById('search-grid');
-                movies.forEach(m => grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}">`);
+                movies.forEach(m => {
+                    grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
+                });
             } else {
-                // ADD ALL YOUR CATEGORIES HERE
+                // CATEGORIES ARRAY
                 const categories = [
                     { title: "Bette Davis Collection", keyword: "Bette Davis" },
                     { title: "Westerns", keyword: "Western" },
                     { title: "Hitchcock Collection", keyword: "Hitchcock" },
+                    { title: "Horror & Thriller Vault", keyword: "Horror" },
                     { title: "Classic Movies", keyword: "Classics" },
                     { title: "Action Collection", keyword: "Action" },
                     { title: "Latest Releases", keyword: "New" }
                 ];
 
-              categories.forEach(cat => {
-    const filtered = movies.filter(m => 
-        (m.title && m.title.includes(cat.keyword)) || 
-        (m.genres && m.genres.includes(cat.keyword))
-    );
-    
-    if (filtered.length === 0) return;
-    
-    const section = document.createElement('section');
-    section.className = 'shelf';
-    // Added a span for the "View All" link
-    section.innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:baseline;">
-            <h2>${cat.title}</h2>
-            <a href="category.html?q=${cat.keyword}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
-        </div>
-        <div class="shelf-grid"></div>
-    `;
-    container.appendChild(section);
-    
-    const grid = section.querySelector('.shelf-grid');
-    filtered.forEach(m => {
-        grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
-    });
-});
+                categories.forEach(cat => {
+                    const filtered = movies.filter(m => 
+                        (m.title && m.title.includes(cat.keyword)) || 
+                        (m.genres && m.genres.includes(cat.keyword))
+                    );
+                    
+                    if (filtered.length === 0) return;
+                    
+                    const section = document.createElement('section');
+                    section.className = 'shelf';
+                    section.innerHTML = `
+                        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                            <h2>${cat.title}</h2>
+                            <a href="category.html?q=${cat.keyword}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                        </div>
+                        <div class="shelf-grid"></div>
+                    `;
+                    container.appendChild(section);
+                    
+                    const grid = section.querySelector('.shelf-grid');
+                    filtered.forEach(m => {
+                        grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
+                    });
+                });
             }
         }
         init();
