@@ -1,117 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WY3DHDXQWH');
-    </script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>MovieHub - Catalog</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MovieHub | Premium Vault</title>
+    <meta name="description" content="Browse our complete streaming vault of public domain films. Filter by genre to find classic slapstick, vintage mystery thrillers, rare cinema treasures, and more.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <style>
-        /* Floating Header Styles */
-        .main-header {
-            position: fixed !important;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999;
-            background-color: #0a0a0a;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 3px solid #e50914; /* Red accent line */
-            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
-        }
-
-        /* Big Logo Style to match Home Page */
-        .main-header h1 {
-            font-size: 4.5rem !important;
-            margin: 0 0 15px 0;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            font-weight: 900;
-            color: white;
-        }
-        .main-header h1 span { color: #ffd700; } /* Gold Hub */
-
-        /* Navigation Links */
-        .nav-links {
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-        }
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; }
+        header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
+        h1 span { color: #e50914; }
+        .nav-links { margin-bottom: 15px; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
         .nav-links a:hover { color: #ffd700; }
+        
+        /* Controls Alignment */
+        .controls-container { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; }
+        #search-input { padding: 10px 12px; width: 320px; border-radius: 5px; border: none; box-sizing: border-box; font-size: 1rem; }
+        .genre-select { padding: 10px; width: 160px; border-radius: 5px; border: none; background: white; font-weight: bold; cursor: pointer; }
 
-        /* Search and Filter Row */
-        .controls-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            max-width: 90%;
-            margin: 0 auto;
+        /* The Missing Catalog Grid Structure */
+        .content { padding: 40px 20px; }
+        /* Style the catalog movie title links */
+.movie-grid a {
+    color: #ffd700; /* Changes the text to your theme gold */
+    text-decoration: none; /* Removes the ugly default underline */
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 8px;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+/* Make it highlight white when hovered over */
+.movie-grid a:hover {
+    color: white; 
+}
+        .movie-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .movie-grid img { 
+            width: 100%; 
+            height: 240px; 
+            border-radius: 6px; 
+            object-fit: cover; 
+            cursor: pointer; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .movie-grid img:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 5px 15px rgba(229, 9, 20, 0.5); 
         }
 
-        #search-input {
-            width: 500px;
-            padding: 12px 20px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 4px;
-            color: white;
-            font-size: 1rem;
+        /* Back to Top Floating Arrow */
+        #backToTop { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background: #ffd700; 
+            width: 45px; 
+            height: 45px; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            color: black; 
+            display: none; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            z-index: 1000;
         }
-
-        .genre-select {
-            padding: 11px;
-            background: #1a1a1a;
-            color: white;
-            border: 1px solid #333;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        /* Prevent content from hiding behind fixed header */
-        body {
-            padding-top: 260px; 
-            background-color: #0a0a0a;
-        }
-
-        /* High-Priority Back to Top Button */
-        #backToTop {
-            position: fixed !important;
-            bottom: 30px !important;
-            right: 30px !important;
-            background-color: #ffd700 !important;
-            color: #000 !important;
-            width: 55px !important;
-            height: 55px !important;
-            border-radius: 50% !important;
-            display: none; /* Controlled by JS */
-            align-items: center;
-            justify-content: center;
-            font-size: 22px !important;
-            cursor: pointer !important;
-            z-index: 10000 !important;
-            border: 2px solid #000 !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
-        }
+        #backToTop:hover { background: #white; color: #e50914; }
     </style>
 </head>
 <body>

@@ -2608,4 +2608,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://moviehub.uk/movie/jack-and-the-beanstalk-1952</loc>
+  <lastmod>2026-05-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/the-amazing-mr-x-1948</loc>
+  <lastmod>2026-05-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/the-animal-kingdom-1932</loc>
+  <lastmod>2026-05-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/at-war-with-the-army-1950</loc>
+  <lastmod>2026-05-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/beat-the-devil-1953</loc>
+  <lastmod>2026-05-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>

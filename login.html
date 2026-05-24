@@ -2,41 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Login | MovieHub.uk</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MovieHub | Premium Vault</title>
+    <meta name="description" content="Log in to your MovieHub account to access your personalized classic movie streaming vault, saved watchlists, and community features.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-card { background: #161625; padding: 40px; border-radius: 15px; border: 1px solid #ffd700; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 400px; }
-        h2 { color: #ffd700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-        input { width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #333; background: #000; color: #fff; text-align: center; font-size: 1.1rem; box-sizing: border-box; }
-        .btn-login { background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%); color: #000; font-weight: bold; padding: 15px; border: none; border-radius: 5px; width: 100%; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
-        .btn-login:hover { transform: scale(1.02); filter: brightness(1.1); }
-        .back-link { display: block; margin-top: 20px; color: #666; text-decoration: none; font-size: 0.9rem; }
-        .back-link:hover { color: #ffd700; }
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Matching Site Header Layout */
+        header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
+        header h1 { margin: 0 0 10px 0; font-size: 2rem; letter-spacing: 1px; }
+        header h1 span { color: #e50914; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        .nav-links a:hover { color: #ffd700; }
+
+        /* Centered Login Viewport Wrapper */
+        .login-container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        
+        /* Premium Login Box Card */
+        .login-card { 
+            background: #111; 
+            padding: 40px; 
+            border-radius: 8px; 
+            border: 1px solid #333; 
+            text-align: center; 
+            width: 100%; 
+            max-width: 360px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+        }
+        .login-card h2 { color: #ffd700; margin-top: 0; font-size: 1.8rem; }
+        .login-card p { color: #ccc; font-size: 1rem; margin-bottom: 25px; }
+        
+        /* Styled Access Code Input */
+        #memberPass { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border-radius: 5px; 
+            border: 1px solid #444; 
+            background: #222; 
+            color: white; 
+            font-size: 1rem; 
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #memberPass:focus { border-color: #e50914; outline: none; }
+
+        /* Premium Crimson Action Button */
+        .btn-login { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 5px; 
+            border: none; 
+            background: #e50914; 
+            color: white; 
+            font-size: 1.1rem; 
+            font-weight: bold; 
+            cursor: pointer; 
+            transition: background 0.2s ease;
+            margin-bottom: 20px;
+        }
+        .btn-login:hover { background: #b20710; }
+
+        /* Fixed High-Contrast Back Navigation Link */
+        .back-link { 
+            display: inline-block; 
+            color: #ffd700; 
+            text-decoration: none; 
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover { color: white; text-decoration: underline; }
     </style>
 </head>
 <body>
 
-<div class="login-card">
-    <h2>Members Vault</h2>
-    <p>Please enter your access code</p>
-    <input type="password" id="memberPass" placeholder="Enter Code">
-    <button class="btn-login" onclick="validateAccess()">Enter Vault</button>
-    <a href="index.html" class="back-link">← Back to MovieHub.uk</a>
-</div>
+    <header class="main-header">
+        <h1>MOVIE<span>HUB</span></h1>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+            <a href="catalog.html"><i class="fas fa-film"></i> ALL MOVIES</a>
+        </div>
+    </header>
 
-<script>
-    function validateAccess() {
-        var pass = document.getElementById("memberPass").value;
-        // You can change "MovieHub2026" to any code you want
-        if (pass === "MovieHub2026") { 
-            window.location.href = "members-vault.html"; 
-        } else {
-            alert("Incorrect code. Please check your founding member email!");
+    <main class="login-container">
+        <div class="login-card">
+            <h2>Members Vault</h2>
+            <p>Please enter your access code</p>
+            <input type="password" id="memberPass" placeholder="Enter Code">
+            <button class="btn-login" onclick="validateAccess()">Enter Vault</button>
+            <a href="index.html" class="back-link">← Back to MovieHub.uk</a>
+        </div>
+    </main>
+
+    <script>
+        function validateAccess() {
+            var pass = document.getElementById("memberPass").value;
+            if (pass === "MovieHub2026") { 
+                window.location.href = "members-vault.html"; 
+            } else {
+                alert("Incorrect code. Please check your founding member email!");
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
