@@ -26,22 +26,22 @@
             color: #666; 
             cursor: pointer; 
             font-size: 1.1rem; 
-            display: none; /* Hidden by default */
+            display: none; 
             padding: 0;
         }
         .clear-btn:hover { color: #e50914; }
 
         /* Shelves */
-        .shelf { margin: 40px 20px; }
+        .shelf { margin: 40px 20px; min-height: 310px; } 
         .shelf h2 { color: #ffd700; border-left: 4px solid #e50914; padding-left: 10px; }
         .shelf-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; }
-        .shelf-grid img { width: 160px; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; }
+        .shelf-grid img { width: 160px; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; background-color: #111; display: block; }
 
         /* Footer & Icons */
         footer { background: #111; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
         .footer-icons { font-size: 1.5rem; margin: 15px 0; }
         .footer-icons a { color: #ffd700; margin: 0 10px; }
-        #back-to-top { position: fixed; bottom: 20px; right: 20px; background: #ffd700; padding: 10px 15px; border-radius: 50%; cursor: pointer; color: black; }
+        #back-to-top { position: fixed; bottom: 20px; right: 20px; background: #ffd700; padding: 10px 15px; border-radius: 50%; cursor: pointer; color: black; display: none; z-index: 999; }
     </style>
 </head>
 <body>
@@ -90,9 +90,8 @@
     </div>
 
     <script>
-        let allMoviesData = []; // Store globally to reuse during reset
+        let allMoviesData = []; 
 
-        // 1. Fetch and Build
         async function init() {
             const response = await fetch('data/all-movies.json');
             allMoviesData = await response.json();
@@ -101,26 +100,23 @@
             const searchInput = document.getElementById('search-input');
             const clearBtn = document.getElementById('clear-search');
 
-            // 2. Search Logic
             searchInput.addEventListener('input', (e) => {
                 const term = e.target.value.toLowerCase();
-                
                 if (term.length > 0) {
-                    clearBtn.style.display = 'block'; // Show clear button when typing
+                    clearBtn.style.display = 'block';
                     const filtered = allMoviesData.filter(m => m.title.toLowerCase().includes(term));
-                    renderShelves(filtered, true); // True means search mode
+                    renderShelves(filtered, true); 
                 } else {
-                    clearBtn.style.display = 'none'; // Hide if input empty
+                    clearBtn.style.display = 'none';
                     renderShelves(allMoviesData, false);
                 }
             });
 
-            // 3. Clear Button Click Logic
             clearBtn.addEventListener('click', () => {
                 searchInput.value = '';
                 clearBtn.style.display = 'none';
                 searchInput.focus();
-                renderShelves(allMoviesData, false); // Reset back to categorized rows
+                renderShelves(allMoviesData, false); 
             });
         }
 
@@ -135,15 +131,16 @@
                     grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
                 });
             } else {
-                // CATEGORIES ARRAY
+                // FIXED ORDER SECTIONS ARRAY
                 const categories = [
-                    { title: "Bette Davis Collection", keyword: "Bette Davis" },
+                    { title: "Latest Releases", keyword: "New" },
                     { title: "Westerns", keyword: "Western" },
-                    { title: "Hitchcock Collection", keyword: "Hitchcock" },
                     { title: "Horror & Thriller Vault", keyword: "Horror" },
-                    { title: "Classic Movies", keyword: "Classics" },
                     { title: "Action Collection", keyword: "Action" },
-                    { title: "Latest Releases", keyword: "New" }
+                    { title: "Classic Movies", keyword: "Classics" },
+                    { title: "Comedy, Romance & Fantasy", keyword: "Comedy" },
+                    { title: "Bette Davis Collection", keyword: "Bette Davis" },
+                    { title: "Hitchcock Collection", keyword: "Hitchcock" }
                 ];
 
                 categories.forEach(cat => {
@@ -156,22 +153,50 @@
                     
                     const section = document.createElement('section');
                     section.className = 'shelf';
+                    
                     section.innerHTML = `
                         <div style="display:flex; justify-content:space-between; align-items:baseline;">
                             <h2>${cat.title}</h2>
                             <a href="category.html?q=${cat.keyword}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                         </div>
-                        <div class="shelf-grid"></div>
+                        <div class="shelf-grid" id="grid-${btoa(cat.keyword).replace(/=/g, '')}"></div>
                     `;
                     container.appendChild(section);
                     
                     const grid = section.querySelector('.shelf-grid');
-                    filtered.forEach(m => {
-                        grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
-                    });
+                    const homepageLimit = filtered.slice(0, 6);
+
+                    if ("IntersectionObserver" in window) {
+                        let shelfObserver = new IntersectionObserver(function(entries, observer) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    homepageLimit.forEach(m => {
+                                        grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
+                                    });
+                                    shelfObserver.unobserve(entry.target);
+                                }
+                            });
+                        }, { rootMargin: "0px 0px 200px 0px" });
+                        
+                        shelfObserver.observe(section);
+                    } else {
+                        homepageLimit.forEach(m => {
+                            grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
+                        });
+                    }
                 });
             }
         }
+
+        window.addEventListener('scroll', () => {
+            const btt = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                btt.style.display = 'block';
+            } else {
+                btt.style.display = 'none';
+            }
+        });
+
         init();
     </script>
 </body>

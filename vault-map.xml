@@ -2638,4 +2638,32 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/vault/becky-sharp-1935.html</loc>
+  <lastmod>2026-05-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://moviehub.uk/south-of-st-louis-1949</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://moviehub.uk/behind-office-doors-1931</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+ <url>
+  <loc>https://moviehub.uk/movie/the-big-wheel-1949</loc>
+  <lastmod>2026-05-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://moviehub.uk/miracle-beach-1992</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
