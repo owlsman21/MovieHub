@@ -2,103 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MovieHub | Category View</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MovieHub | Category</title>
     <style>
-        body { background-color: #0a0a0a; color: white; font-family: sans-serif; padding: 20px; position: relative; }
-        
-        /* Home Button Style */
-        .home-nav { margin-bottom: 20px; }
-        .home-nav a { color: #ffd700; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px; }
-        .home-nav a:hover { color: #white; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
-        
-        /* Fixed layout sizes to prevent shifts while images load */
-        .grid img { width: 100%; height: 240px; border-radius: 6px; cursor: pointer; object-fit: cover; background-color: #111; display: block; }
-        
-        /* Back to Top Arrow */
-        #back-to-top { position: fixed; bottom: 20px; right: 20px; background: #ffd700; padding: 10px 15px; border-radius: 50%; cursor: pointer; color: black; display: none; z-index: 999; }
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }
+        .grid img { width: 100%; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; background: #111; }
+        .pagination { margin-top: 30px; text-align: center; }
+        .pagination button { padding: 10px 20px; cursor: pointer; background: #e50914; color: white; border: none; border-radius: 5px; margin: 0 5px; }
+        .pagination button:disabled { background: #333; cursor: not-allowed; }
     </style>
 </head>
 <body>
-
-    <!-- Home Navigation Link -->
-    <div class="home-nav">
-        <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-    </div>
-
+    <a href="index.html" style="color: #ffd700; text-decoration: none;">← BACK TO HOME</a>
     <h1 id="cat-title">Loading...</h1>
     <div class="grid" id="movie-grid"></div>
-
-    <!-- Back to Top Button Component -->
-    <div id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <i class="fas fa-arrow-up"></i>
+    
+    <div class="pagination" id="pagination">
+        <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+        <span id="page-info" style="margin: 0 15px;"></span>
+        <button id="next-btn" onclick="changePage(1)">Next</button>
     </div>
 
     <script>
-        async function loadCategory() {
+        let movies = [];
+        let filtered = [];
+        let currentPage = 1;
+        const itemsPerPage = 18;
+
+        async function initCategory() {
             const params = new URLSearchParams(window.location.search);
             const keyword = params.get('q');
-            
-            // Fix the title mismatch from image_45ecfc.jpg
-            if (keyword === 'Comedy') {
-                document.getElementById('cat-title').innerText = "Comedy, Romance & Fantasy Collection";
-            } else {
-                document.getElementById('cat-title').innerText = keyword + " Collection";
-            }
+            document.getElementById('cat-title').innerText = keyword ? `${keyword} Collection` : "Full Movie Collection";
 
             const response = await fetch('data/all-movies.json');
-            const movies = await response.json();
+            movies = await response.json();
+            filtered = keyword 
+                ? movies.filter(m => (m.title && m.title.includes(keyword)) || (m.genres && m.genres.includes(keyword)))
+                : movies;
 
-            const filtered = movies.filter(m => 
-                (m.title && m.title.includes(keyword)) || 
-                (m.genres && m.genres.includes(keyword))
-            );
+            renderPage();
+        }
 
+        function renderPage() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedItems = filtered.slice(start, end);
+            
             const grid = document.getElementById('movie-grid');
             grid.innerHTML = '';
             
-            // Render images with blank placeholder sources first to force true lazy-loading execution
-            filtered.forEach(m => {
-                grid.innerHTML += `<img data-src="${m.posterUrl}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='240' viewBox='0 0 160 240'></svg>" alt="${m.title}" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
+            paginatedItems.forEach(m => {
+                const img = document.createElement('img');
+                img.src = m.posterUrl;
+                img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                grid.appendChild(img);
             });
 
-            // True Lazy Loading Intersector: Only downloads image bytes when scrolled into view
-            const lazyImages = [].slice.call(document.querySelectorAll("#movie-grid img"));
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            } else {
-                // Fallback for primitive setups
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImage.src = lazyImage.dataset.src;
-                });
-            }
+            document.getElementById('page-info').innerText = `Page ${currentPage} of ${Math.ceil(filtered.length / itemsPerPage)}`;
+            document.getElementById('prev-btn').disabled = currentPage === 1;
+            document.getElementById('next-btn').disabled = currentPage >= Math.ceil(filtered.length / itemsPerPage);
         }
 
-        // Show/Hide back-to-top arrow based on layout scroll depth
-        window.addEventListener('scroll', () => {
-            const btt = document.getElementById('back-to-top');
-            if (window.scrollY > 300) {
-                btt.style.display = 'block';
-            } else {
-                btt.style.display = 'none';
-            }
-        });
+        function changePage(direction) {
+            currentPage += direction;
+            renderPage();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
 
-        loadCategory();
+        initCategory();
     </script>
 </body>
 </html>

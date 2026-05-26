@@ -2,135 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MovieHub | Premium Vault</title>
-    <meta name="description" content="Browse our complete streaming vault of public domain films. Filter by genre to find classic slapstick, vintage mystery thrillers, rare cinema treasures, and more.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MovieHub | All Movies</title>
     <style>
-        body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; }
-        header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
-        h1 span { color: #e50914; }
-        .nav-links { margin-bottom: 15px; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
-        .nav-links a:hover { color: #ffd700; }
-        
-        /* Controls Alignment */
-        .controls-container { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; }
-        #search-input { padding: 10px 12px; width: 320px; border-radius: 5px; border: none; box-sizing: border-box; font-size: 1rem; }
-        .genre-select { padding: 10px; width: 160px; border-radius: 5px; border: none; background: white; font-weight: bold; cursor: pointer; }
-
-        /* The Missing Catalog Grid Structure */
-        .content { padding: 40px 20px; }
-        /* Style the catalog movie title links */
-.movie-grid a {
-    color: #ffd700; /* Changes the text to your theme gold */
-    text-decoration: none; /* Removes the ugly default underline */
-    font-weight: bold;
-    font-size: 0.95rem;
-    display: block;
-    margin-top: 8px;
-    line-height: 1.4;
-    transition: color 0.2s ease;
-}
-
-/* Make it highlight white when hovered over */
-.movie-grid a:hover {
-    color: white; 
-}
-        .movie-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
-            gap: 20px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-        .movie-grid img { 
-            width: 100%; 
-            height: 240px; 
-            border-radius: 6px; 
-            object-fit: cover; 
-            cursor: pointer; 
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .movie-grid img:hover { 
-            transform: scale(1.05); 
-            box-shadow: 0 5px 15px rgba(229, 9, 20, 0.5); 
-        }
-
-        /* Back to Top Floating Arrow */
-        #backToTop { 
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            background: #ffd700; 
-            width: 45px; 
-            height: 45px; 
-            border-radius: 50%; 
-            cursor: pointer; 
-            color: black; 
-            display: none; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            z-index: 1000;
-        }
-        #backToTop:hover { background: #white; color: #e50914; }
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }
+        .grid img { width: 100%; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; background: #111; }
+        .pagination { margin-top: 30px; text-align: center; }
+        .pagination button { padding: 10px 20px; cursor: pointer; background: #e50914; color: white; border: none; border-radius: 5px; margin: 0 5px; }
+        .pagination button:disabled { background: #333; cursor: not-allowed; }
     </style>
 </head>
 <body>
-
-    <header class="main-header">
-        <h1>MOVIE<span>HUB</span></h1>
-        
-        <div class="nav-links">
-            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-            <a href="catalog.html"><i class="fas fa-film"></i> ALL MOVIES</a>
-        </div>
-
-        <div class="controls-container">
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search the Catalog...">
-            </div>
-
-            <select class="genre-select" onchange="location = this.value;">
-                <option value="">Filter by Genre</option>
-                <option value="catalog.html?genre=Action">Action</option>
-                <option value="catalog.html?genre=Thriller">Thriller</option>
-                <option value="catalog.html?genre=Drama">Drama</option>
-                <option value="catalog.html?genre=Hitchcock">Hitchcock</option>
-                <option value="catalog.html?genre=Horror">Horror</option>
-                <option value="catalog.html?genre=Sci-Fi">Sci-Fi</option>
-                <option value="catalog.html?genre=Musical">Musical</option>
-                <option value="catalog.html?genre=History">History</option>
-            </select>
-        </div>
-    </header>
-
-    <main class="content">
-        <div id="movie-grid-container" class="movie-grid"></div>
-    </main>
-
-    <div id="backToTop" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
+    <a href="index.html" style="color: #ffd700; text-decoration: none;">← BACK TO HOME</a>
+    <h1>All Movies</h1>
+    <div class="grid" id="movie-grid"></div>
+    
+    <div class="pagination" id="pagination">
+        <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+        <span id="page-info" style="margin: 0 15px;"></span>
+        <button id="next-btn" onclick="changePage(1)">Next</button>
     </div>
 
-    <script src="app.js"></script>
     <script>
-        // Back to Top and Floating Header logic
-        const btt = document.getElementById("backToTop");
-        
-        window.addEventListener('scroll', function() {
-            // Show/Hide Back to Top Arrow
-            if (window.pageYOffset > 400) {
-                btt.style.display = "flex";
-            } else {
-                btt.style.display = "none";
-            }
-        }, true);
+        let allMovies = [];
+        let currentPage = 1;
+        const itemsPerPage = 24;
 
-        btt.onclick = function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
+        async function initCatalog() {
+            const response = await fetch('data/all-movies.json');
+            allMovies = await response.json();
+            renderPage();
+        }
+
+        function renderPage() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedItems = allMovies.slice(start, end);
+            
+            const grid = document.getElementById('movie-grid');
+            grid.innerHTML = '';
+            
+            paginatedItems.forEach(m => {
+                const img = document.createElement('img');
+                img.src = m.posterUrl;
+                img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                grid.appendChild(img);
+            });
+
+            document.getElementById('page-info').innerText = `Page ${currentPage} of ${Math.ceil(allMovies.length / itemsPerPage)}`;
+            document.getElementById('prev-btn').disabled = currentPage === 1;
+            document.getElementById('next-btn').disabled = currentPage >= Math.ceil(allMovies.length / itemsPerPage);
+        }
+
+        function changePage(direction) {
+            currentPage += direction;
+            renderPage();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        initCatalog();
     </script>
 </body>
 </html>

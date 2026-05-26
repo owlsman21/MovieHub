@@ -35,7 +35,24 @@
         .shelf { margin: 40px 20px; min-height: 310px; } 
         .shelf h2 { color: #ffd700; border-left: 4px solid #e50914; padding-left: 10px; }
         .shelf-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; min-height: 240px; }
-        .shelf-grid img { width: 160px; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; background-color: #111; display: block; }
+        
+        /* Dedicated Responsive Layout Grid for Live Search Display */
+        .search-grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; padding-bottom: 20px; }
+
+        /* Solid layout dimensions preserve consistency across view changes */
+        .shelf-grid img, .search-grid-layout img { 
+            width: 160px; 
+            height: 240px; 
+            min-width: 160px;
+            min-height: 240px;
+            flex-shrink: 0;
+            border-radius: 6px; 
+            object-fit: cover; 
+            cursor: pointer; 
+            background-color: #111; 
+            display: block; 
+        }
+        .search-grid-layout img { width: 100%; }
 
         /* Footer & Icons */
         footer { background: #111; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
@@ -89,12 +106,12 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <script>
+   <script>
         let allMoviesData = []; 
 
         async function init() {
             try {
-                const cachedData = sessionStorage.getItem('movieHubDatabase');
+                const cachedData = sessionStorage.getItem('mov ieHubDatabase');
                 if (cachedData) {
                     allMoviesData = JSON.parse(cachedData);
                 } else {
@@ -108,15 +125,20 @@
             }
 
             renderShelves(allMoviesData);
-            
+
+            window.addEventListener('scroll', () => {
+                const btt = document.getElementById('back-to-top');
+                if (window.scrollY > 300) { btt.style.display = 'block'; } else { btt.style.display = 'none'; }
+            });
+
             const searchInput = document.getElementById('search-input');
             const clearBtn = document.getElementById('clear-search');
 
             searchInput.addEventListener('input', (e) => {
-                const term = e.target.value.toLowerCase();
+                const term = e.target.value.toLowerCase().trim();
                 if (term.length > 0) {
                     clearBtn.style.display = 'block';
-                    const filtered = allMoviesData.filter(m => m.title.toLowerCase().includes(term));
+                    const filtered = allMoviesData.filter(m => m.title && m.title.toLowerCase().includes(term));
                     renderShelves(filtered, true); 
                 } else {
                     clearBtn.style.display = 'none';
@@ -137,11 +159,28 @@
             container.innerHTML = '';
             
             if (isSearch) {
-                container.innerHTML = `<section class="shelf"><h2>Search Results</h2><div class="shelf-grid" id="search-grid"></div></section>`;
+                const section = document.createElement('section');
+                section.className = 'shelf';
+                section.innerHTML = `<h2>Search Results</h2><div class="search-grid-layout" id="search-grid"></div>`;
+                container.appendChild(section);
+
                 const grid = document.getElementById('search-grid');
+                const fragment = document.createDocumentFragment();
+
                 movies.forEach(m => {
-                    grid.innerHTML += `<img src="${m.posterUrl}" alt="${m.title}" loading="lazy" onclick="window.location.href='movie-details.html?id=${m.id}'">`;
+                    const img = document.createElement('img');
+                    img.src = m.posterUrl;
+                    img.alt = m.title || 'Movie Poster';
+                    img.onclick = () => {
+                        window.location.href = `movie-details.html?id=${m.id}`;
+                    };
+                    img.onerror = function() {
+                        this.src = 'images/poster-placeholder.jpg';
+                    };
+                    fragment.appendChild(img);
                 });
+                grid.appendChild(fragment);
+
             } else {
                 const categories = [
                     { title: "Latest Releases", keyword: "New", domId: "latest" },
@@ -176,59 +215,28 @@
                     
                     const grid = document.getElementById(`grid-${cat.domId}`);
                     const homepageLimit = filtered.slice(0, 6);
+                    const fragment = document.createDocumentFragment();
 
-                    if ("IntersectionObserver" in window) {
-                        let shelfObserver = new IntersectionObserver(function(entries, observer) {
-                            entries.forEach(function(entry) {
-                                if (entry.isIntersecting) {
-                                    // High-performance DOM construction using memory fragments
-                                    const fragment = document.createDocumentFragment();
-                                    
-                                    homepageLimit.forEach(m => {
-                                        const img = document.createElement('img');
-                                        img.src = m.posterUrl;
-                                        img.alt = m.title;
-                                        img.loading = "lazy";
-                                        img.onclick = () => {
-                                            window.location.href = `movie-details.html?id=${m.id}`;
-                                        };
-                                        fragment.appendChild(img);
-                                    });
-                                    
-                                    // Injects the shelf items instantly in a single paint operation
-                                    grid.appendChild(fragment);
-                                    shelfObserver.unobserve(entry.target);
-                                }
-                            });
-                        }, { rootMargin: "0px 0px 400px 0px" });
+                    homepageLimit.forEach(m => {
+                        const img = document.createElement('img');
+                        img.src = m.posterUrl; 
+                        img.alt = m.title || 'Movie Poster';
                         
-                        shelfObserver.observe(grid);
-                    } else {
-                        const fragment = document.createDocumentFragment();
-                        homepageLimit.forEach(m => {
-                            const img = document.createElement('img');
-                            img.src = m.posterUrl;
-                            img.alt = m.title;
-                            img.loading = "lazy";
-                            img.onclick = () => {
-                                window.location.href = `movie-details.html?id=${m.id}`;
-                            };
-                            fragment.appendChild(img);
-                        });
-                        grid.appendChild(fragment);
-                    }
+                        img.onclick = () => {
+                            window.location.href = `movie-details.html?id=${m.id}`;
+                        };
+                        
+                        img.onerror = function() {
+                            this.src = 'images/poster-placeholder.jpg';
+                        };
+
+                        fragment.appendChild(img);
+                    });
+                    
+                    grid.appendChild(fragment);
                 });
             }
         }
-
-        window.addEventListener('scroll', () => {
-            const btt = document.getElementById('back-to-top');
-            if (window.scrollY > 300) {
-                btt.style.display = 'block';
-            } else {
-                btt.style.display = 'none';
-            }
-        });
 
         init();
     </script>

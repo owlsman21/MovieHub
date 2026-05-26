@@ -1,4 +1,5 @@
 [
+
    {
   "id": "miracle-beach-1992",
   "title": "Miracle Beach (1992) Full Movie | Dean Cameron & Ami Dolenz | Classic Comedy",
@@ -1946,7 +1947,7 @@
 },
    {
     "id": "Pulse-(2006)-1080p",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTMyOTg5MjY1OF5BMl5BanBnXkFtZTcwNTM1ODYzMQ@@._V1_.jpg",
+    "posterUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FyqH1TXsuuplNDileUXMRe1AvKf9.jpg&f=1&nofb=1&ipt=5d20e535a0164aec664c7cc039738fa82dbac30436f8d5a39a5d6bd03feac855",
     "year": 2006,
     "title": "Pulse (2006) 1080p",
     "description": "After a series of suicides and strange disappearances, a group of friends discovers a malevolent digital presence that uses the internet and Wi-Fi signals to manifest. These entities feed on human loneliness and turn people into spectral beings, creating a terrifying epidemic where technology itself becomes a gateway to the afterlife. Starring Kristen Bell, Ian Somerhalder, and Christina Milian.",
@@ -3308,7 +3309,7 @@
   "quality": "HD",
   "genres": ["Martial Arts", "Action", "Thriller", "Thai"],
   "description": "Witness the film that made Bruce Lee a global icon! In \"The Big Boss\" (1971), also known as \"Fists of Fury\" in some releases, Cheng Chao-an (Bruce Lee), a young man who has sworn off fighting, travels from China to Thailand to work in an ice factory with his cousins. When his family members mysteriously disappear after uncovering the factory's dark secret – a drug-trafficking operation run by the ruthless Big Boss – Cheng's vow of non-violence is shattered. Fueled by revenge, he unleashes his unparalleled martial arts skills in a brutal quest for justice. Directed by Lo Wei, this action-packed martial arts classic is celebrated for its raw kung fu, intense fight sequences, and powerful story of exploitation and vengeance. Experience the film that reshaped martial arts cinema in stunning quality. Watch the full movie now.",
-  "embedId": "",
+  "embedId": "v759kx2",
   "source": "rumble",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2E0MjE2YjQtZDJjZC00ZjdiLWFiZDUtMTVhMzNjZmIyYTIyXkEyXkFqcGc@._V1_.jpg",
   "duration": "1Hr.33"
@@ -9241,16 +9242,7 @@
         "genres": ["Sci-Fi","Thriller"],
         "source": "ok.ru"
      },
-     {
-        "id": "Cowboys-and-Aliens",
-        "posterUrl":"images/Cowboys & Aliens.jpg",
-        "year":2011,
-        "title": "Cowboys and Aliens",
-        "description": "A spaceship arrives in 1873 Arizona to take over the Earth, starting with the Wild West region. All that stands in their way: a posse of cowboys and natives",
-        "embedId": "37439867626",
-        "genres": ["Western","Sci-Fi","Action"],
-        "source": "ok.ru"
-     },
+   
      {
         "id": "Bad-Teacher",
         "posterUrl":  "images/Bad Teacher.jpg",
@@ -10249,7 +10241,7 @@
      
       {
         "id": "Calamity-Jane",
-        "posterUrl":  "images/Calamity Jane.jpg",
+        "posterUrl":  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BYjQ0ZTZiYjctOWQ3Ni00MTdhLWJhOWItOGQ1OTdiNTY0YWE0XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg&f=1&nofb=1&ipt=38d663b5c506801b10f2771c6b1bddfb117d7d405f5bb32c62150be55c7ec14e",
         "year":2024,
         "title": "Calamity Jane",
         "description": "After her husband-to-be Wild Bill Hickok is killed in an infamous poker game, Calamity Jane must break out of prison and find his murderers before Deadwood's Sheriff can arrest her.",
@@ -11531,7 +11523,7 @@
   "year": 1963,
   "description": "An arrogant, rebellious rancher's son in Texas clashes with his principled father while his nephew watches the conflict unfold.",
   "genres": ["Western", "Drama", "Classic", "Movie"],
-  "posterUrl": "images/hud.jpg",
+  "posterUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMmM5MzlkNTQtZDVlMi00ZjMyLWFhMDQtNWViYzI3ZDFlZDUzXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg&f=1&nofb=1&ipt=c2c382639de38f8321cfda2760dff482bfbcd97a8d7f770b4d325169d58c997c",
    "source": "rumble",
   "embedId": "v71rb1m"
 },
@@ -12849,16 +12841,7 @@
         "genres": ["Western"],
         "source": "ok.ru"
      },
-             {
-        "id": "Cowboys-and-Aliens",
-        "posterUrl":"images/Cowboys & Aliens.jpg",
-        "year":2011,
-        "title": "Cowboys and Aliens",
-        "description": "A spaceship arrives in 1873 Arizona to take over the Earth, starting with the Wild West region. All that stands in their way: a posse of cowboys and natives",
-        "embedId": "37439867626",
-        "genres": ["Western","Sci-Fi","Action"],
-        "source": "ok.ru"
-     },
+            
              {
         "id": "The-Old-Way",
         "posterUrl":  "images/The Old Way.jpg",
