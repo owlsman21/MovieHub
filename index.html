@@ -10,51 +10,31 @@
         header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
         .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
         
-        /* Search Bar Wrapper */
         .search-row { text-align: center; padding: 20px; }
         .search-wrapper { position: relative; display: inline-block; width: 320px; }
         #search-input { padding: 10px 40px 10px 12px; width: 100%; border-radius: 5px; border: none; box-sizing: border-box; }
         
-        /* Clear Button Style */
         .clear-btn { 
-            position: absolute; 
-            right: 12px; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            background: none; 
-            border: none; 
-            color: #666; 
-            cursor: pointer; 
-            font-size: 1.1rem; 
-            display: none; 
-            padding: 0;
+            position: absolute; right: 12px; top: 50%; transform: translateY(-50%); 
+            background: none; border: none; color: #666; cursor: pointer; font-size: 1.1rem; 
+            display: none; padding: 0;
         }
         .clear-btn:hover { color: #e50914; }
 
-        /* Shelves */
         .shelf { margin: 40px 20px; min-height: 310px; } 
         .shelf h2 { color: #ffd700; border-left: 4px solid #e50914; padding-left: 10px; }
         .shelf-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; min-height: 240px; }
         
-        /* Dedicated Responsive Layout Grid for Live Search Display */
         .search-grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; padding-bottom: 20px; }
 
-        /* Solid layout dimensions preserve consistency across view changes */
         .shelf-grid img, .search-grid-layout img { 
-            width: 160px; 
-            height: 240px; 
-            min-width: 160px;
-            min-height: 240px;
-            flex-shrink: 0;
-            border-radius: 6px; 
-            object-fit: cover; 
-            cursor: pointer; 
-            background-color: #111; 
-            display: block; 
+            width: 160px; height: 240px; min-width: 160px; min-height: 240px;
+            flex-shrink: 0; border-radius: 6px; object-fit: cover; cursor: pointer; 
+            background-color: #111; display: block; 
+            content-visibility: auto; /* Optimization for faster page rendering */
         }
         .search-grid-layout img { width: 100%; }
 
-        /* Footer & Icons */
         footer { background: #111; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
         .footer-icons { font-size: 1.5rem; margin: 15px 0; }
         .footer-icons a { color: #ffd700; margin: 0 10px; }
@@ -91,13 +71,6 @@
             <a href="#"><i class="fab fa-pinterest"></i></a>
             <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
-
-        <div style="margin: 20px 0;">
-            <a href="https://buymeacoffee.com/moviehubhd" style="background:#ffd700; color:black; padding:10px 20px; text-decoration:none; border-radius:5px; font-weight:bold;">
-                <i class="fas fa-coffee"></i> Buy me a coffee
-            </a>
-        </div>
-
         <p>&copy; 2026 MovieHub. All rights reserved.</p>
         <p>Hand-curated in Thailand | Subsidizing the Pension Fund</p>
     </footer>
@@ -111,7 +84,7 @@
 
         async function init() {
             try {
-                const cachedData = sessionStorage.getItem('mov ieHubDatabase');
+                const cachedData = sessionStorage.getItem('movieHubDatabase');
                 if (cachedData) {
                     allMoviesData = JSON.parse(cachedData);
                 } else {
@@ -120,15 +93,14 @@
                     sessionStorage.setItem('movieHubDatabase', JSON.stringify(allMoviesData));
                 }
             } catch (error) {
-                const response = await fetch('data/all-movies.json');
-                allMoviesData = await response.json();
+                console.error("Error loading data:", error);
             }
 
             renderShelves(allMoviesData);
 
             window.addEventListener('scroll', () => {
                 const btt = document.getElementById('back-to-top');
-                if (window.scrollY > 300) { btt.style.display = 'block'; } else { btt.style.display = 'none'; }
+                btt.style.display = (window.scrollY > 300) ? 'block' : 'none';
             });
 
             const searchInput = document.getElementById('search-input');
@@ -138,8 +110,7 @@
                 const term = e.target.value.toLowerCase().trim();
                 if (term.length > 0) {
                     clearBtn.style.display = 'block';
-                    const filtered = allMoviesData.filter(m => m.title && m.title.toLowerCase().includes(term));
-                    renderShelves(filtered, true); 
+                    renderShelves(allMoviesData.filter(m => m.title && m.title.toLowerCase().includes(term)), true); 
                 } else {
                     clearBtn.style.display = 'none';
                     renderShelves(allMoviesData, false);
@@ -149,8 +120,7 @@
             clearBtn.addEventListener('click', () => {
                 searchInput.value = '';
                 clearBtn.style.display = 'none';
-                searchInput.focus();
-                renderShelves(allMoviesData, false); 
+                renderShelves(allMoviesData, false);
             });
         }
 
@@ -163,24 +133,14 @@
                 section.className = 'shelf';
                 section.innerHTML = `<h2>Search Results</h2><div class="search-grid-layout" id="search-grid"></div>`;
                 container.appendChild(section);
-
                 const grid = document.getElementById('search-grid');
-                const fragment = document.createDocumentFragment();
-
                 movies.forEach(m => {
                     const img = document.createElement('img');
                     img.src = m.posterUrl;
-                    img.alt = m.title || 'Movie Poster';
-                    img.onclick = () => {
-                        window.location.href = `movie-details.html?id=${m.id}`;
-                    };
-                    img.onerror = function() {
-                        this.src = 'images/poster-placeholder.jpg';
-                    };
-                    fragment.appendChild(img);
+                    img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                    img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                    grid.appendChild(img);
                 });
-                grid.appendChild(fragment);
-
             } else {
                 const categories = [
                     { title: "Latest Releases", keyword: "New", domId: "latest" },
@@ -193,51 +153,35 @@
                     { title: "Hitchcock Collection", keyword: "Hitchcock", domId: "hitchcock" }
                 ];
 
-                categories.forEach(cat => {
-                    const filtered = movies.filter(m => 
-                        (m.title && m.title.includes(cat.keyword)) || 
-                        (m.genres && m.genres.includes(cat.keyword))
-                    );
-                    
-                    if (filtered.length === 0) return;
-                    
-                    const section = document.createElement('section');
-                    section.className = 'shelf';
-                    
-                    section.innerHTML = `
-                        <div style="display:flex; justify-content:space-between; align-items:baseline;">
-                            <h2>${cat.title}</h2>
-                            <a href="category.html?q=${cat.keyword}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
-                        </div>
-                        <div class="shelf-grid" id="grid-${cat.domId}"></div>
-                    `;
-                    container.appendChild(section);
-                    
-                    const grid = document.getElementById(`grid-${cat.domId}`);
-                    const homepageLimit = filtered.slice(0, 6);
-                    const fragment = document.createDocumentFragment();
-
-                    homepageLimit.forEach(m => {
-                        const img = document.createElement('img');
-                        img.src = m.posterUrl; 
-                        img.alt = m.title || 'Movie Poster';
+                function renderBatch(batch) {
+                    batch.forEach(cat => {
+                        const filtered = movies.filter(m => (m.title && m.title.includes(cat.keyword)) || (m.genres && m.genres.includes(cat.keyword)));
+                        if (filtered.length === 0) return;
                         
-                        img.onclick = () => {
-                            window.location.href = `movie-details.html?id=${m.id}`;
-                        };
-                        
-                        img.onerror = function() {
-                            this.src = 'images/poster-placeholder.jpg';
-                        };
-
-                        fragment.appendChild(img);
+                        const section = document.createElement('section');
+                        section.className = 'shelf';
+                        section.innerHTML = `
+                            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                                <h2>${cat.title}</h2>
+                                <a href="category.html?q=${cat.keyword}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                            </div>
+                            <div class="shelf-grid" id="grid-${cat.domId}"></div>
+                        `;
+                        container.appendChild(section);
+                        const grid = document.getElementById(`grid-${cat.domId}`);
+                        filtered.slice(0, 6).forEach(m => {
+                            const img = document.createElement('img');
+                            img.src = m.posterUrl;
+                            img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                            img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                            grid.appendChild(img);
+                        });
                     });
-                    
-                    grid.appendChild(fragment);
-                });
+                }
+                renderBatch(categories.slice(0, 2));
+                setTimeout(() => renderBatch(categories.slice(2)), 100);
             }
         }
-
         init();
     </script>
 </body>
