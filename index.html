@@ -48,8 +48,8 @@
         <nav class="nav-links">
             <a href="index.html">HOME</a>
             <a href="catalog.html">ALL MOVIES</a>
-            <a href="membership.html">MEMBERSHIP</a>
-            <a href="login.html" style="color:#ffd700; font-weight:bold;">MEMBERS ENTER HERE</a>
+            <a href="login.html">Login</a> 
+            <a href="membership.html">membership</a>
         </nav>
     </header>
 
@@ -79,12 +79,11 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-   <script>
+    <script>
         let allMoviesData = []; 
 
         async function init() {
             try {
-                // Force fresh fetch with cache-buster timestamp
                 const response = await fetch('data/all-movies.json?t=' + new Date().getTime());
                 allMoviesData = await response.json();
             } catch (error) {
@@ -139,6 +138,11 @@
             } else {
                 const categories = [
                     { title: "Latest Releases", keyword: "New", domId: "latest" },
+                    { title: "Drama Collection", keyword: "Drama", domId: "drama" },
+                    { title: "Biography Selection", keyword: "Biography", domId: "biography" },
+                    { title: "History Vault", keyword: "History", domId: "history" },
+                    { title: "Sci-Fi Collection", keyword: "Sci-Fi", domId: "scifi" },
+                    { title: "War Movies", keyword: "War", domId: "war" },
                     { title: "Westerns", keyword: "Western", domId: "western" },
                     { title: "Horror & Thriller Vault", keyword: "Horror", domId: "horror" },
                     { title: "Action Collection", keyword: "Action", domId: "action" },
