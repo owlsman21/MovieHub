@@ -2840,4 +2840,22 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=deliverance-1972</loc>
+  <lastmod>2026-05-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=reservoir-dogs-1992</loc>
+  <lastmod>2026-05-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=and-justice-for-all-1979</loc>
+  <lastmod>2026-05-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
