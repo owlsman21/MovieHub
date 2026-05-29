@@ -9,10 +9,9 @@
       gtag('config', 'G-WY3DHDXQWH');
     </script>
     
-    <meta name="description" content="Watch classic movies on MovieHub.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch classic movies on MovieHub.">
     <link id="canonical-link" rel="canonical" href="https://moviehub.uk/movie-details.html" />
 
     <title>MovieHub - Loading...</title>
@@ -20,31 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        #wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 850px;
-            margin: 0 auto;
-            background: #000;
-            aspect-ratio: 16 / 9;
-            overflow: hidden; 
-        }
-        #movie-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        #mega-shield {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 25%;  
-            height: 20%; 
-            z-index: 10;
-            background: transparent;
-            cursor: default;
-            display: none; 
-        }
+        #wrapper { position: relative; width: 100%; max-width: 850px; margin: 0 auto; background: #000; aspect-ratio: 16 / 9; overflow: hidden; }
+        #movie-iframe { width: 100%; height: 100%; border: none; }
+        #mega-shield { position: absolute; top: 0; right: 0; width: 25%; height: 20%; z-index: 10; background: transparent; cursor: default; display: none; }
         .related-section { margin-top: 40px; padding: 20px; }
         .related-grid { display: flex; gap: 15px; flex-wrap: wrap; }
         .related-grid a img { width: 150px; border-radius: 8px; transition: 0.3s; }
@@ -55,38 +32,22 @@
 
     <header class="main-header">
         <h2>Movie<span>Hub</span></h2>
-        <div class="controls-container">
-            <div class="nav-buttons">
-                <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
-            </div>
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search the Vault...">
-            </div>
-            <select class="genre-select" onchange="location = this.value;">
-                <option value="">Filter by Genre</option>
-                <option value="catalog.html?genre=Action">Action</option>
-                <option value="catalog.html?genre=Thriller">Thriller</option>
-                <option value="catalog.html?genre=Drama">Drama</option>
-                <option value="catalog.html?genre=Hitchcock">Hitchcock</option>
-                <option value="catalog.html?genre=Horror">Horror</option>
-                <option value="catalog.html?genre=Sci-Fi">Sci-Fi</option>
-                <option value="catalog.html?genre=Musical">Musical</option>
-                <option value="catalog.html?genre=History">History</option>
-            </select>
+        <div class="nav-buttons">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="catalog.html"><i class="fas fa-film"></i> All Movies</a>
         </div>
     </header>
 
     <main class="content">
         <div id="wrapper">
             <div id="mega-shield"></div>
-            <iframe id="movie-iframe" src="" allowfullscreen></iframe>
+            <iframe id="movie-iframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
         </div>
 
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
             <h1 id="movie-title">MovieHub Digital Vault</h1>
-            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Archival Film Collection</p>
-            <p id="movie-desc" style="line-height:1.6; color:#ccc;">Retrieving movie details...</p>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Loading...</p>
+            <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
         </div>
 
         <div class="related-section">
@@ -96,74 +57,63 @@
     </main>
 
     <script>
-        document.getElementById('search-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                window.location.href = `catalog.html?search=${encodeURIComponent(e.target.value)}`;
-            }
-        });
-
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('id');
-            const iframe = document.getElementById('movie-iframe');
-            const megaShield = document.getElementById('mega-shield');
-
             if (!movieId) return;
 
             document.getElementById('canonical-link').setAttribute('href', window.location.href);
 
             try {
-                const response = await fetch('data/all-movies.json'); 
+                const response = await fetch('data/all-movies.json');
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
                 
                 if (movie) {
-                    const cleanTitle = movie.title ? movie.title.split('|')[0].trim() : 'Untitled';
-                    const parsedGenres = Array.isArray(movie.genres) ? movie.genres : (movie.genres ? movie.genres.split(',').map(g => g.trim()) : []);
+                    const cleanTitle = movie.title ? movie.title.split('|')[0].trim() : 'Movie';
+                    const iframe = document.getElementById('movie-iframe');
+                    let embedUrl = "";
 
-                    document.title = `${cleanTitle} (${movie.year || ''}) Full Movie HD | MovieHub`;
-                    document.getElementById('movie-title').innerText = cleanTitle;
-                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${parsedGenres.join(', ')}`;
-                    document.getElementById('movie-desc').innerText = movie.description;
-                    
-                    // Video Source Logic
+                    // Assign source
                     if (movie.source === "mega") {
-                        iframe.src = movie.embedId.replace("/file/", "/embed/");
-                        megaShield.style.display = "block";
-                        iframe.setAttribute("sandbox", "allow-scripts allow-same-origin allow-forms allow-popups allow-storage-access-by-user-activation");
+                        embedUrl = movie.embedId.replace("/file/", "/embed/");
+                        document.getElementById('mega-shield').style.display = "block";
                     } else if (movie.source === "ok.ru") {
-                        iframe.src = `https://ok.ru/videoembed/${movie.embedId}`;
-                    } else if (movie.source === "rumble") {
-                        iframe.src = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+                        embedUrl = `https://ok.ru/videoembed/${movie.embedId}`;
+                    } else {
+                        embedUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
                     }
+                    iframe.src = embedUrl;
 
-                    // Dynamic Related Movies
-                    const relatedGrid = document.getElementById('related-grid');
-                    const others = movies.filter(m => m.id !== movieId).sort(() => 0.5 - Math.random()).slice(0, 4);
-                    others.forEach(m => {
-                        const a = document.createElement('a');
-                        a.href = `movie-details.html?id=${m.id}`;
-                        a.innerHTML = `<img src="${m.posterUrl}" alt="${m.title}">`;
-                        relatedGrid.appendChild(a);
-                    });
+                    // Update Page
+                    document.title = `${cleanTitle} (${movie.year || ''}) | MovieHub`;
+                    document.getElementById('movie-title').innerText = cleanTitle;
+                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${movie.genres || ''}`;
+                    document.getElementById('movie-desc').innerText = movie.description;
 
-                    // Schema.org
+                    // Inject VideoObject Schema for Google
                     const script = document.createElement('script');
                     script.type = 'application/ld+json';
                     script.textContent = JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Movie",
+                        "@type": "VideoObject",
                         "name": cleanTitle,
                         "description": movie.description,
-                        "image": movie.posterUrl,
-                        "director": {"@type": "Person", "name": movie.director || "N/A"}
+                        "thumbnailUrl": movie.posterUrl,
+                        "uploadDate": new Date().toISOString(),
+                        "contentUrl": window.location.href,
+                        "embedUrl": embedUrl,
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "MovieHub",
+                            "logo": { "@type": "ImageObject", "url": "https://moviehub.uk/logo.png" }
+                        }
                     });
                     document.head.appendChild(script);
                 }
-            } catch (e) { console.error(e); }
+            } catch (e) { console.error("Error loading movie:", e); }
         }
         loadMovieDetails();
     </script>
-    <script src="app.js"></script>
 </body>
 </html>
