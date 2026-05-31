@@ -1,5 +1,54 @@
 [
    {
+  "id": "salvation-boulevard-2011",
+  "title": "Salvation Boulevard (2011) Full Movie | Pierce Brosnan, Greg Kinnear | Comedy, Crime, Drama",
+  "year": 2011,
+  "director": "George Ratliff",
+  "quality": "HD",
+  "genres": "Comedy, Crime, Drama",
+  "description": "A born-again Christian finds himself on the run from a charismatic pastor and his devoted followers after witnessing a crime. Starring Pierce Brosnan and Greg Kinnear. Watch the full movie at https://moviehub.uk/",
+  "embedId": "3824645638711",
+  "source": "ok.ru",
+  "posterUrl": "images/salvation-boulevard-2011.jpg"
+},
+   {
+  "id": "bobby-2006",
+  "title": "Bobby (2006) Full Movie | Anthony Hopkins, Demi Moore | Biography, Drama, History",
+  "year": 2006,
+  "director": "Emilio Estevez",
+  "quality": "HD",
+  "genres": "Biography, Drama, History",
+  "description": "A fictionalized account of the lives of 22 people who were at the Ambassador Hotel on the night that U.S. Senator Robert F. Kennedy was assassinated. Starring Anthony Hopkins and Demi Moore. Watch the full movie at https://moviehub.uk/",
+  "embedId": "34149960378",
+  "source": "ok.ru",
+  "posterUrl": "images/bobby-2006.jpg"
+},
+   {
+  "id": "j-edgar-2011",
+  "title": "J. Edgar (2011) Full Movie | Leonardo DiCaprio | Biography, Crime, Drama",
+  "year": 2011,
+  "director": "Clint Eastwood",
+  "quality": "HD",
+  "genres": "Biography, Crime, Drama",
+  "description": "A look at the life of J. Edgar Hoover, who served as the Director of the FBI for nearly 50 years, exploring both his professional legacy and his personal struggles. Starring Leonardo DiCaprio. Watch the full movie at https://moviehub.uk/",
+  "embedId": "34353121872",
+  "source": "ok.ru",
+  "posterUrl": "images/j-edgar-2011.jpg"
+},
+ 
+  {
+  "id": "indiana-jones-and-the-last-crusade-1989",
+  "title": "Indiana Jones and the Last Crusade (1989) Full Movie | Harrison Ford & Sean Connery | Action Adventure",
+  "year": 1989,
+  "director": "Steven Spielberg",
+  "quality": "HD",
+  "genres": "Action, Adventure, Classics",
+  "description": "In 1938, after his father Professor Henry Jones Sr. goes missing while pursuing the Holy Grail, Professor Indiana Jones finds himself up against the Nazis again to stop them from obtaining its powers. Starring Harrison Ford and Sean Connery. Watch the full movie at https://moviehub.uk/",
+  "embedId": "34446445135",
+  "source": "ok.ru",
+  "posterUrl": "images/indiana-jones-and-the-last-crusade-1989.jpg"
+},
+   {
   "id": "and-justice-for-all-1979",
   "title": "...And Justice for All (1979) Full Movie | Al Pacino | Courtroom Drama",
   "year": 1979,
@@ -8554,26 +8603,8 @@
         "genres": ["Drama","Thriller","Crime"],
         "source": "ok.ru"
      },
-     {
-        "id": "Deliverance",
-        "posterUrl":  "images/Deliverance.jpg",
-        "year":1972 ,
-        "title": "Deliverance",
-        "description": "Intent on seeing the Cahulawassee River before it's dammed and turned into a lake, outdoor fanatic Lewis Medlock takes his friends on a canoeing trip they'll never forget into the dangerous American back-country.",
-        "embedId": "493303630394",
-        "genres": ["Drama","Action","Thriller"],
-        "source": "ok.ru"
-     },
-      {
-        "id": "Reservoir-Dogs",
-        "posterUrl":  "images/Reservoir Dogs.jpg",
-        "year":1992 ,
-        "title": "Reservoir Dogs",
-        "description": "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.",
-        "embedId": "39032523339",
-        "genres": ["Thriller","Crime","Drama"],
-        "source": "ok.ru"
-     },
+   
+     
       {
         "id": "Raiders-of-the-Lost-Ark",
         "posterUrl":  "images/Raiders of the Lost Ark.jpg",
