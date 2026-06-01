@@ -2888,4 +2888,22 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=ace-ventura-pet-detective-1994</loc>
+  <lastmod>2026-06-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=ace-ventura-when-nature-calls-1995</loc>
+  <lastmod>2026-06-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=homefront-2013</loc>
+  <lastmod>2026-06-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>

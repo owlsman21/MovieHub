@@ -1,5 +1,41 @@
 [
    {
+  "id": "homefront-2013",
+  "title": "Homefront (2013) Full Movie | Jason Statham, James Franco | Action, Thriller",
+  "year": 2013,
+  "director": "Gary Fleder",
+  "quality": "HD",
+  "genres": "Action, Thriller, Crime",
+  "description": "A former DEA agent moves his family to a quiet town, only to be forced back into action when a local drug lord threatens their safety. Starring Jason Statham, James Franco, and Winona Ryder. Watch the full movie at https://moviehub.uk/",
+  "embedId": "32647088827",
+  "source": "ok.ru",
+  "posterUrl": "images/homefront-2013.jpg"
+},
+   {
+  "id": "ace-ventura-when-nature-calls-1995",
+  "title": "Ace Ventura: When Nature Calls (1995) Full Movie | Jim Carrey | Comedy, Adventure",
+  "year": 1995,
+  "director": "Steve Oedekerk",
+  "quality": "HD",
+  "genres": "Comedy, Adventure",
+  "description": "Ace Ventura, the eccentric private detective, emerges from a spiritual retreat to travel to Africa and locate a sacred bat, which is the only thing that can prevent a war between two local tribes. Starring Jim Carrey. Watch the full movie at https://moviehub.uk/",
+  "embedId": "475822033425",
+  "source": "ok.ru",
+  "posterUrl": "images/ace-ventura-when-nature-calls-1995.jpg"
+},
+  {
+  "id": "ace-ventura-pet-detective-1994",
+  "title": "Ace Ventura: Pet Detective (1994) Full Movie | Jim Carrey | Comedy, Crime",
+  "year": 1994,
+  "director": "Tom Shadyac",
+  "quality": "HD",
+  "genres": "Comedy, Crime",
+  "description": "Ace Ventura, an eccentric Miami-based private detective who specializes in retrieving abducted animals, is tasked with finding the Miami Dolphins' missing mascot, Snowflake, just before the Super Bowl. Starring Jim Carrey, Courteney Cox, and Sean Young. Watch the full movie at https://moviehub.uk/",
+  "embedId": "416146000401",
+  "source": "ok.ru",
+  "posterUrl": "images/ace-ventura-pet-detective-1994.jpg"
+},
+   {
   "id": "salvation-boulevard-2011",
   "title": "Salvation Boulevard (2011) Full Movie | Pierce Brosnan, Greg Kinnear | Comedy, Crime, Drama",
   "year": 2011,
