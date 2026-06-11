@@ -2978,4 +2978,10 @@
   <changefreq>yearly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://moviehub.uk/the-brain-from-planet-arous-1957</loc>
+  <lastmod>2026-06-09</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
