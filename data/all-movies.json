@@ -2672,20 +2672,7 @@
     "quality": "1080p",
     "duration": "02:03:00"
 },
-   {
-    "id": "Avatar-Fire-and-Ash-(2025)-1080p",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "year": 2025,
-    "category": "private",
-    "title": "Avatar: Fire and Ash (2025) 1080p",
-    "description": "The third installment in James Cameron's groundbreaking 'Avatar' series, 'Avatar: Fire and Ash' continues the saga on the lush moon of Pandora. Following the events of 'The Way of Water,' Jake Sully, Neytiri, and their children face new challenges and explore new regions of their world. As tensions with humanity persist, the Na'vi must confront new threats and forge new alliances to protect their way of life and the sacred balance of Pandora.",
-    "director": "James Cameron",
-    "embedId": "13333963213410",
-    "genres": ["Sci-Fi", "Action", "Adventure"],
-    "source": "ok.ru",
-    "quality": "1080p",
-    "duration": "03:10:00"
-},
+  
    {
     "id": "Burning-Bright-(2010)-1080p",
     "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDE2NTM1MWMtNGYxNS00ZmE2LWFjMWMtMTY5MjI3NGQxMmNmXkEyXkFqcGc@._V1_.jpg",
@@ -3516,18 +3503,18 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjk0Y2NlNzUtNDA2MS00ODM1LThkNTctYmQ4NzQ0M2EwNTM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", 
   "duration": "1Hr.26" 
 },
-   {
-  "id": "killing-all-my-sisters-2024-full-movie",
-  "title": "Killing All My Sisters (2024) Full Movie | Haylie Duff, Isabella Carlsen, Muguet Del Toro | Lifetime Thriller, Sorority Mystery | Streaming on Prime Video, The Roku Channel",
+ {
+  "id": "killing-all-my-sisters-2024",
+  "title": "Killing All My Sisters (2024) Full Movie | Haylie Duff | Lifetime Thriller",
   "year": 2024,
   "director": "Haylie Duff",
-  "quality": "1080p",
-  "genres": ["Thriller", "Drama", "Mystery", "Crime"],
-  "description": "Directed by Haylie Duff, 'Killing All My Sisters' (2024) is a suspenseful Lifetime thriller centering on Emily (Isabella Carlsen) and Jenna (Muguet Del Toro), best friends who get accepted into their dream university. Their friendship is tested during rush week when Jenna is drawn into an elite sorority known for its dark secrets and extreme rituals. When Jenna mysteriously vanishes, Emily launches a desperate search, only to uncover the sorority's dangerous underbelly and the shocking truths they will kill to keep hidden. This film delves into themes of ambition, betrayal, and the lethal consequences of desperate sisterhood. Remastered in 1080p, it's available for streaming on Prime Video (with/without ads) and The Roku Channel.",
+  "quality": "1080p HD",
+  "duration": "1h 30min",
+  "genres": "Thriller, Drama, Mystery, Crime",
+  "description": "Directed by Haylie Duff, this suspenseful Lifetime thriller follows best friends Emily and Jenna as they rush an elite university sorority. The dream turns into a nightmare when Jenna is drawn into dark rituals and mysteriously vanishes. Emily must uncover the sorority's deadly secrets before she becomes the next target. A gripping story of betrayal and dangerous sisterhood. Stream this thriller and explore more at https://moviehub.uk/.",
   "embedId": "9365452163605",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMmRiMzdmMzEtZDZjYS00ZjRjLWExY2EtNzc1ZDU1NzI2N2Q2XkEyXkFqcGc@._V1_.jpg",
-  "duration": "1Hr.30"
+  "posterUrl": "/images/killing-all-my-sisters-2024.jpg"
 },
    {
   "id": "lake-george-2024-full-movie",
@@ -4418,19 +4405,7 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTYxNTYzODU4MV5BMl5BanBnXkFtZTcwNjEzNzIzMQ@@._V1_.jpg",
   "duration": "1Hr.31"
 },
-   {
-  "id": "halloween-1978-full-movie",
-  "title": "Halloween (1978) Full Movie | 1080p | John Carpenter's Original Horror Masterpiece",
-  "year": 1978,
-  "director": "John Carpenter",
-  "quality": "1080p",
-  "genres": ["Horror", "Slasher", "Thriller", "Classic"],
-  "description": "Experience the terrifying birth of a horror icon with John Carpenter's Halloween (1978), presented in stunning 1080p. On a cold Halloween night, 15 years after brutally murdering his sister, Michael Myers escapes a mental institution and returns to Haddonfield to stalk babysitter Laurie Strode. Witness the suspense, dread, and pure terror that defined a generation of slasher films. Watch the full original movie now.",
-  "embedId": "v751dv8",
-  "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzZiNTdiYTgtYjNkMS00MmJmLWEwZGQtNmY0NGJkMGE0YmYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-  "duration": "1Hr.31"
-},
+
    {
   "id": "ghosts-of-war-2020-full-movie",
   "title": "Ghosts Of War (2020) Full Movie | 1080p | Supernatural Horror Thriller",
@@ -6947,15 +6922,18 @@
         "genres": ["Horror"],
         "source": "ok.ru"
     },
-    {   "id": "I-am-omega",
-        "posterUrl":  "images/I am omega.jpg",
-        "year": 2007,
-        "title": "I am omega 2007",
-        "description": "Father-daughter archaeologists Miles (Denis O'Hare) and Nora Holden (Ashley Hinshaw) discover a unique pyramid that has been buried beneath the Egyptian desert for 5,000 years. Accompanied by a newswoman (Christa-Marie Nicola) and her team, the archaeologists enter the tomb and promptly become trapped. Hopelessly lost within the pyramid's labyrinthine structure, the group faces deadly perils that threaten their escape, including collapsing floors and bloodthirsty predators.",
-        "embedId": "981271186073",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-    },
+   {
+  "id": "i-am-omega-2007",
+  "title": "I Am Omega (2007) Full Movie | Mark Dacascos | Sci-Fi Action Horror",
+  "year": 2007,
+  "director": "Griff Furst",
+  "quality": "HD",
+  "genres": "Sci-Fi, Action, Horror, Post-Apocalyptic",
+  "description": "In a post-apocalyptic world overrun by the infected, a lone survivor must navigate a dangerous wasteland to deliver a cure that could save the remains of humanity. Starring Mark Dacascos, this intense action-horror film is a gripping take on survival against all odds. Stream this sci-fi thriller and explore our full collection at https://moviehub.uk/.",
+  "embedId": "981271186073",
+  "source": "rumble",
+  "posterUrl": "/images/i-am-omega-2007.jpg"
+},
     {   "id": "The-Tommyknockers",
         "posterUrl":  "images/The Tommyknockers.jpg",
         "year": 1993,
@@ -9896,16 +9874,18 @@
         "genres": ["Action","Comedy","Crime","Thriller"],
         "source": "ok.ru"
      },
-      {
-        "id": "Deja-Vu",
-        "posterUrl":  "images/Deja Vu.jpg",
-        "year":2006,
-        "title": "Deja Vu",
-        "description": "After a ferry is bombed in New Orleans, an A.T.F. agent joins a unique investigation using experimental surveillance technology to find the bomber, but soon finds himself becoming obsessed with one of the victims",
-        "embedId": "36781230639",
-        "genres": ["Thriller","Action","Sci-Fi","Crime"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "deja-vu-2006",
+  "title": "Déjà Vu (2006) Full Movie | Denzel Washington | Sci-Fi Action Thriller",
+  "year": 2006,
+  "director": "Tony Scott",
+  "quality": "HD",
+  "genres": "Thriller, Action, Sci-Fi, Crime",
+  "description": "After a devastating ferry bombing in New Orleans, an ATF agent joins a unique investigation utilizing experimental time-shifting surveillance technology. As he tracks the bomber, he finds himself becoming dangerously obsessed with a victim from the past. Starring Denzel Washington, this mind-bending thriller is a must-watch. Stream it and explore our full collection at https://moviehub.uk/.",
+  "embedId": "36781230639",
+  "source": "ok.ru",
+  "posterUrl": "/images/deja-vu-2006.jpg"
+},
       {
         "id": "X-Men-The-Last-Stand",
         "posterUrl":  "images/X Men The Last Stand.jpg",
@@ -10872,16 +10852,18 @@
         "genres": ["Serial Killers","Crime","Biography","Drama"],
         "source": "ok.ru"
      },
-      {
-        "id": "Gacy-Serial-Killer-Next-Door",
-        "posterUrl":  "images/Gacy Serial Killer Next Door.jpg",
-        "year":2024,
-        "title": "Gacy Serial Killer Next Door",
-        "description": "A teenager's life in a quiet suburb changes drastically when John Wayne Gacy, a famed serial killer, becomes his neighbor. His curiosity leads to dark secrets and a frightening journey from innocence to a dire clash with evil.",
-        "embedId": "7854166772245",
-        "genres": ["Horror","Crime","Serial Killers"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "gacy-serial-killer-next-door-2024",
+  "title": "Gacy: Serial Killer Next Door (2024) Full Movie | True Crime Horror",
+  "year": 2024,
+  "director": "Unknown",
+  "quality": "HD",
+  "genres": "Horror, Crime, Serial Killers, True Crime",
+  "description": "A teenager's life in a quiet suburb changes drastically when he discovers that his new neighbor is none other than the notorious serial killer John Wayne Gacy. His growing curiosity leads to the discovery of dark secrets and a terrifying journey from innocence to a deadly clash with evil. Stream this chilling crime drama and explore more at https://moviehub.uk/.",
+  "embedId": "7854166772245",
+  "source": "ok.ru",
+  "posterUrl": "/images/gacy-serial-killer-next-door-2024.jpg"
+},
       {
         "id": "The-Menendez-Brothers",
         "posterUrl":  "images/The Menendez Brothers.jpg",
@@ -11984,15 +11966,18 @@
         "source": "rumble",
         "embedId": "v71j1g6"
     },
-               {
-        "id": "Halloween1978",
-        "title": "Halloween (1978)",
-        "description": "John Carpenter's masterpiece of suspense. Fifteen years after murdering his sister on Halloween night, Michael Myers escapes from a mental hospital and returns to Haddonfield to kill again. A chilling study of 'pure evil'.",
-        "genres": ["Horror", "Thriller", "Psychological"],
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzZiNTdiYTgtYjNkMS00MmJmLWEwZGQtNmY0NGJkMGE0YmYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        "source": "rumble",
-        "embedId": "v71hex2"
-    },
+              {
+  "id": "halloween-1978",
+  "title": "Halloween (1978) Full Movie | John Carpenter | Slasher Horror Classic",
+  "year": 1978,
+  "director": "John Carpenter",
+  "quality": "HD",
+  "genres": "Horror, Thriller, Slasher, Classics",
+  "description": "Experience John Carpenter's definitive masterpiece of suspense. Fifteen years after murdering his sister on Halloween night, Michael Myers escapes from a mental hospital and returns to his hometown of Haddonfield to kill again. This chilling study of 'pure evil' defined the slasher genre. Stream this iconic horror film and explore our full collection at https://moviehub.uk/.",
+  "embedId": "v71hex2",
+  "source": "rumble",
+  "posterUrl": "/images/halloween-1978.jpg"
+},
                  {
         "id": "PhantomOpera1925",
         "title": "The Phantom of the Opera (1925)",
@@ -12002,15 +11987,18 @@
         "source": "rumble",
         "embedId": "v71hfqm"
     },
-               {
-        "id": "Christine1983",
-        "title": "Christine (1983)",
-        "description": "Based on the Stephen King novel and directed by John Carpenter. High school geek Arnie Cunningham develops a dangerous obsession with a 1958 Plymouth Fury named Christine. A dark study of obsession, transformation, and a machine with a murderous soul.",
-        "genres": ["Horror", "Thriller", "Psychological"],
-        "posterUrl": "images/christine.jpg",
-        "source": "rumble",
-        "embedId": "v71hkr8"
-    },
+   {
+  "id": "christine-1983",
+  "title": "Christine (1983) Full Movie | Stephen King & John Carpenter | Horror Classic",
+  "year": 1983,
+  "director": "John Carpenter",
+  "quality": "HD",
+  "genres": "Horror, Thriller, Psychological, Supernatural",
+  "description": "Based on the terrifying Stephen King novel and directed by horror master John Carpenter. High school geek Arnie Cunningham develops a dangerous, life-altering obsession with a 1958 Plymouth Fury named Christine. This chilling classic is a dark study of obsession, transformation, and a machine with a murderous soul. Stream this supernatural thriller and explore more at https://moviehub.uk/.",
+  "embedId": "v71hkr8",
+  "source": "rumble",
+  "posterUrl": "/images/christine-1983.jpg"
+},
             {
         "id": "FreaksOfNature2015",
         "title": "Freaks of Nature (2015)",
@@ -14057,15 +14045,17 @@
   "source": "rumble",
   "embedId": "v71skqy"
 },
-   {
-  "id": "high-noon",
-  "title": "High Noon",
+  {
+  "id": "high-noon-1952",
+  "title": "High Noon (1952) Full Movie | Gary Cooper | Classic Western Drama",
   "year": 1952,
-  "description": "A small-town marshal, newly married and about to retire, must face a gang of killers alone when the townspeople refuse to help him.",
-  "genres": ["Western", "Drama", "Classic", "Movie"],
-  "posterUrl": "https://images.archambault.ca/images/PG/815/815825-gf.jpg?404=default&w=400",
+  "director": "Fred Zinnemann",
+  "quality": "HD",
+  "genres": "Western, Drama, Classics",
+  "description": "In this iconic Western, Marshal Will Kane must face a gang of vengeful outlaws alone when he learns they are arriving on the noon train to kill him. As the townspeople abandon him, Kane must choose between his duty and his life. Starring Gary Cooper and Grace Kelly, this masterpiece is a quintessential piece of American cinema. Stream this classic and explore our full archive at https://moviehub.uk/.",
+  "embedId": "v71sl2s/",
   "source": "rumble",
-  "embedId": "v71snru"
+  "posterUrl": "/images/high-noon-1952.jpg"
 },
  
   {
@@ -14128,16 +14118,18 @@
   "genres": ["Western", "Action", "Thriller"],
   "source": "rumble"
 },
-      {
-    "id": "Apache-Rifles-1964",
-    "posterUrl": "https://m.media-amazon.com/images/I/91D6Cz9VM3L._AC_UF894,1000_QL80_.jpg",
-    "year": 1964,
-    "title": "Apache Rifles",
-    "description": "A tough cavalry officer must choose between his military orders and justice when greedy gold miners provoke a war with the Apache nation.",
-    "embedId": "v72cb6q",
-    "genres": ["Western", "Action", "Drama"],
-    "source": "rumble"
-  },
+    {
+  "id": "apache-rifles-1964",
+  "title": "Apache Rifles (1964) Full Movie | Audie Murphy | Classic Western",
+  "year": 1964,
+  "director": "William Witney",
+  "quality": "HD",
+  "genres": "Western, Action, Drama, Classics",
+  "description": "In this classic Western, a tough cavalry officer finds his loyalties tested when greedy gold miners provoke a war with the Apache nation. Caught between military orders and his sense of justice, he must prevent a full-scale conflict. Starring Audie Murphy, this action-packed drama is a staple for Western fans. Stream it and explore our full archive at https://moviehub.uk/.",
+  "embedId": "v72cb6q",
+  "source": "rumble",
+  "posterUrl": "/images/apache-rifles-1964.jpg"
+},
   {
     "id": "Blood-Moon-2014",
     "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk4NTY4MDk4Ml5BMl5BanBnXkFtZTgwMzk4NzI0NjE@._V1_.jpg",
