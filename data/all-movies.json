@@ -1322,18 +1322,7 @@
   "source": "rumble",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWU1ZjM1ZWUtNDMzMy00ZWFiLWIzYmItMGIwMzhhYzZlMjUxXkEyXkFqcGc@._V1_.jpg"
 },
-   {
-  "id": "the-reptile-1966",
-  "title": "The Reptile (1966) Full Movie | Hammer Horror Classic | Noel Willman & Jacqueline Pearce",
-  "year": 1966,
-  "director": "John Gilling",
-  "quality": "HD",
-  "genres": "Horror, Classics, British",
-  "description": "After his brother dies under mysterious circumstances in a Cornish village, a man uncovers a sinister connection between a local doctor and a legendary creature with a deadly bite.",
-  "embedId": "v7751k0",
-  "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjE4ODY1NDgzMV5BMl5BanBnXkFtZTYwOTU2NTE5._V1_.jpg"
-},
+ 
    {
   "id": "freebie-and-the-bean-1974",
   "title": "Freebie and the Bean (1974) Full Movie | James Caan & Alan Arkin | Classic Action Comedy Police Thriller",
@@ -1574,17 +1563,18 @@
   "source": "rumble",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjQ2NTE5NTQtMjYyMC00YjUyLTk2ZGUtMGZmNzFiNjM2NWFhXkEyXkFqcGc@._V1_.jpg"
 },
-   {
+ {
   "id": "barefoot-in-the-park-1967",
-  "title": "Barefoot in the Park (1967) Full Movie | Robert Redford & Jane Fonda | Classic Romantic Comedy",
+  "title": "Barefoot in the Park (1967) Full Movie | Robert Redford & Jane Fonda | Romantic Comedy",
   "year": 1967,
   "director": "Gene Saks",
   "quality": "HD",
+  "duration": "1h 46m",
   "genres": "Comedy, Romance, Classics",
-  "description": "Paul and Corie Bratter are newlyweds in every sense of the word. After a six-day honeymoon, they move into a tiny top-floor apartment. Paul is a straight-laced attorney, while Corie is a free spirit who wants him to be more adventurous—like walking barefoot in the park.",
+  "description": "Paul and Corie Bratter are newlyweds who move into a tiny, top-floor apartment after a whirlwind six-day honeymoon. As they settle into married life, the straight-laced attorney and his free-spirited wife must balance their opposing personalities. Experience this timeless romantic comedy and explore our full collection at https://moviehub.uk/.",
   "embedId": "3877416798823",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjExMTg2MzczMl5BMl5BanBnXkFtZTYwMzcxMjI5._V1_.jpg"
+  "posterUrl": "/images/barefoot-in-the-park-1967.jpg"
 },
    {
   "id": "the-day-of-the-jackal-1973",
@@ -2011,18 +2001,18 @@
   "source": "rumble",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMmU3ZmUyMTktYzI4OS00ZWE2LTkyN2MtYTI0YjVlMDQ3ZDQ2XkEyXkFqcGc@._V1_.jpg"
 },
-   {
+  {
   "id": "splash-1984",
   "title": "Splash (1984) Full Movie | Tom Hanks & Daryl Hannah | Classic Romantic Comedy",
   "year": 1984,
   "director": "Ron Howard",
   "quality": "HD",
-  "duration": "1h 51min",
-  "genres": "Comedy, Fantasy, Romance",
-  "description": "Splash (1984). Allen Bauer (Tom Hanks) falls for a mysterious woman (Daryl Hannah) in New York City, only to discover she is actually the mermaid who saved him twice. A classic 80s rom-com featuring John Candy and Eugene Levy.",
+  "duration": "1h 51m",
+  "genres": "Comedy, Fantasy, Romance, Classics",
+  "description": "Allen Bauer (Tom Hanks) falls for a mysterious woman (Daryl Hannah) in New York City, only to discover she is actually the mermaid who saved him twice. This 80s rom-com classic also features John Candy and Eugene Levy. Stream this beloved film and explore our full collection at https://moviehub.uk/.",
   "embedId": "9582339361349",
   "source": "ok.ru",
-  "posterUrl": "https://around80s.blubrry.net/wp-content/uploads/2018/04/splashposter.jpg"
+  "posterUrl": "/images/splash-1984.jpg"
 },
    {
   "id": "mr-peabody-and-the-mermaid",
@@ -2314,7 +2304,7 @@
   "source": "ok.ru",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTgwNTc3MjI3M15BMl5BanBnXkFtZTcwMTIyODQ0Mg@@._V1_.jpg"
 },
-   {
+ {
   "id": "pretty-lethal-2026",
   "title": "Pretty Lethal (2026) Full Movie | Uma Thurman & Maddie Ziegler | Action Thriller",
   "year": 2026,
@@ -2322,10 +2312,10 @@
   "quality": "HD",
   "duration": "1h 28m",
   "genres": "Action, Thriller, Horror",
-  "description": "When their bus breaks down on the way to a competition, a troupe of competitive ballerinas seeks shelter at a remote roadside inn. They soon discover the inn is a front for a violent crime family and must weaponize their elite dance training to survive the night. Starring Uma Thurman and Maddie Ziegler.",
+  "description": "When their bus breaks down, a troupe of competitive ballerinas seeks shelter at a remote roadside inn, only to discover it's a front for a violent crime family. They must weaponize their elite dance training to survive the night. Stream this action thriller and explore our full collection at https://moviehub.uk/.",
   "embedId": "14693138959079",
   "source": "ok.ru",
-  "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbEsN4LVXFfV0qTICYWajuoOxSGFC5uxJ3-g&s"
+  "posterUrl": "/images/pretty-lethal-2026.jpg"
 },
   {
   "id": "31-candles-2025",
@@ -2586,17 +2576,18 @@
   "source": "rumble",
   "posterUrl": "/images/hatchet-2006.jpg"
 },
-   {
+ {
   "id": "jaws-1975",
-  "title": "Jaws (1975) Full Movie | Roy Scheider & Robert Shaw | Classic Thriller",
+  "title": "Jaws (1975) Full Movie | Steven Spielberg | Classic Thriller",
   "year": 1975,
   "director": "Steven Spielberg",
   "quality": "HD",
+  "duration": "2h 4m",
   "genres": "Thriller, Adventure, Classics",
-  "description": "When a giant great white shark begins to menace the small island community of Amity, a police chief, a marine scientist, and a grizzled fisherman set out to stop it. The definitive summer blockbuster directed by Steven Spielberg.",
+  "description": "When a giant great white shark begins to menace the small island community of Amity, a police chief, a marine scientist, and a grizzled fisherman set out to stop it. Experience the definitive summer blockbuster directed by Steven Spielberg and explore our full collection at https://moviehub.uk/.",
   "embedId": "10210916502231",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjViNDQzNmUtYzkxZi00NTk5LTljMmItYjJlZmZkODIxNjU1XkEyXkFqcGc@._V1_.jpg"
+  "posterUrl": "/images/jaws-1975.png"
 },
    {
   "id": "the-shooting-1966",
@@ -2883,18 +2874,18 @@
     "quality": "1080p",
     "duration": "01:36:00"
 },
-   {
-    "id": "The-Exorcist-Believer-(2023)-1080p",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDg4OTViMWYtOGFlNi00Mjg3LWJhNDktYTVmYjBjOGQ0YmEyXkEyXkFqcGc@._V1_.jpg",
-    "year": 2023,
-    "title": "The Exorcist: Believer (2023) 1080p",
-    "description": "When his daughter and her friend show signs of demonic possession after a disappearance in the woods, Victor Fielding (Leslie Odom Jr.) is forced to confront the ultimate evil. Desperate for help, he tracks down Chris MacNeil (Ellen Burstyn), the only living person who has experienced such horror before. Directed by David Gordon Green, this film continues the terrifying legacy of 'The Exorcist' with a chilling new chapter.",
-    "director": "David Gordon Green",
-    "embedId": "8570359843349",
-    "genres": ["Horror", "Thriller"],
-    "source": "ok.ru",
-    "quality": "1080p",
-    "duration": "01:51:00"
+ {
+  "id": "the-exorcist-believer-2023",
+  "title": "The Exorcist: Believer (2023) Full Movie | Horror | Thriller",
+  "year": 2023,
+  "director": "David Gordon Green",
+  "quality": "1080p",
+  "duration": "1h 51m",
+  "genres": "Horror, Thriller",
+  "description": "When his daughter and her friend show signs of demonic possession after a disappearance in the woods, Victor Fielding is forced to confront the ultimate evil. Desperate for help, he tracks down Chris MacNeil, the only living person who has witnessed such horror before. Stream this chilling chapter and explore our full collection at https://moviehub.uk/.",
+  "embedId": "8570359843349",
+  "source": "ok.ru",
+  "posterUrl": "/images/the-exorcist-believer-2023.jpg"
 },
    {
     "id": "Close-Encounters-of-the-Third-Kind-(1977)-1080p",
@@ -2961,18 +2952,18 @@
     "quality": "720p",
     "duration": "02:00:00"
 },
-   {
-    "id": "The-Professionals-(1966)-1080p",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU3NzQyOTk3OF5BMl5BanBnXkFtZTcwNDM5OTU3MQ@@._V1_.jpg",
-    "year": 1966,
-    "title": "The Professionals (1966) 1080p",
-    "description": "Four highly specialized mercenaries – a demolitions expert, a horseman, a tracker, and a weapons specialist – are hired by a wealthy Texas oilman (Ralph Bellamy) to rescue his beautiful wife (Claudia Cardinale) from a Mexican revolutionary (Jack Palance). Led by a former revolutionary (Lee Marvin) and a charismatic marksman (Burt Lancaster), their dangerous mission across the desert becomes complicated when they discover the true nature of the abduction. A stylish and intense Western adventure.",
-    "director": "Richard Brooks",
-    "embedId": "v75xv1u/",
-    "genres": ["Action", "Adventure", "Western"],
-    "source": "rumble",
-    "quality": "1080p",
-    "duration": "01:57:00"
+  {
+  "id": "the-professionals-1966",
+  "title": "The Professionals (1966) Full Movie | Burt Lancaster & Lee Marvin | Western Adventure",
+  "year": 1966,
+  "director": "Richard Brooks",
+  "quality": "1080p HD",
+  "duration": "1h 57m",
+  "genres": "Action, Adventure, Western, Classics",
+  "description": "A wealthy Texas oilman hires four specialized mercenaries to rescue his kidnapped wife from a Mexican revolutionary. Led by Burt Lancaster and Lee Marvin, this group of professionals embarks on a dangerous mission across the desert that soon reveals a shocking truth. Experience this stylish and intense Western classic and explore our full archive at https://moviehub.uk/.",
+  "embedId": "v75xv1u/",
+  "source": "rumble",
+  "posterUrl": "/images/the-professionals-1966.jpg"
 },
    {
     "id": "Andromeda-Strain-(1971)-720p",
@@ -3334,19 +3325,7 @@
         "genres": ["Horror"],
         "source": "youtube"
      },
-   {
-  "id": "long-shadows-2025-full-movie",
-  "title": "Long Shadows (2025) Full Movie | Director's Name Here | Mystery Thriller, Psychological Suspense",
-  "year": 2025,
-  "director": ["Director's Name Here"],
-  "quality": "Not Specified",
-  "genres": ["Mystery", "Thriller", "Suspense"],
-  "description": "The past casts a deadly shadow. Unravel the chilling secrets of Long Shadows (2025), a brand new mystery thriller that will keep you on the edge of your seat. When a long-buried secret resurfaces, it forces a protagonist to confront dark truths and a relentless threat. Prepare for twists, turns, and heart-pounding suspense.",
-  "embedId": "10768314206758",
-  "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BZmQxOTliMDgtNzc0Zi00NWY3LTgxYWUtZjZkMDg4OGUzMjEwXkEyXkFqcGc@._V1_.jpg",
-  "duration": "1Hr.40"
-},
+   
    {
   "id": "a-gunfighters-deal-2025-full-movie",
   "title": "A Gunfighter's Deal (2025) Full Movie | Director's Name Here | Western Action, Outlaw Thriller",
@@ -3425,18 +3404,18 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzRlZGUyMzItMWQzOC00YjU3LThkMDktMGFlOTNmYzZhN2E0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
   "duration": "3Hrs.5"
 },
-   {
-  "id": "curse-of-the-fly-1965-full-movie",
-  "title": "Curse of the Fly (1965) Full Movie | Don Sharp | Classic Sci-Fi Horror, Genetic Experiment Thriller",
+  {
+  "id": "curse-of-the-fly-1965",
+  "title": "Curse of the Fly (1965) Full Movie | Sci-Fi Horror Classic",
   "year": 1965,
-  "director": ["Don Sharp"],
-  "quality": "Not Specified",
-  "genres": ["Sci-Fi", "Horror", "Thriller"],
-  "description": "Experience the original genetic horror! Uncover the terrifying secrets of the Delambre family in this chilling sci-fi masterpiece. A woman escapes a mental hospital only to confront monstrous experiments. Perfect for fans of vintage creature features and classic sci-fi thrillers.",
+  "director": "Don Sharp",
+  "quality": "HD",
+  "duration": "1h 26m",
+  "genres": "Sci-Fi, Horror, Thriller, Classics",
+  "description": "Uncover the terrifying secrets of the Delambre family in this classic genetic horror film. A woman escapes a mental hospital only to find herself trapped in a world of monstrous experiments. Stream this vintage creature feature and explore our full collection at https://moviehub.uk/.",
   "embedId": "v75pyqs",
-   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTQzYjUzNzItODYxYS00ZjJkLTk0MzYtNDhhNDcxMjQ5MGRlXkEyXkFqcGc@._V1_.jpg",
-  "duration": "1Hr.26"
+  "source": "rumble",
+  "posterUrl": "/images/curse-of-the-fly-1965.jpg"
 },
    {
   "id": "parallel-2024-full-movie",
@@ -3529,18 +3508,18 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2RlZDU5YTktMDZiNC00ZmQ3LWFmYWEtZmU3Y2RmNWY0YWFmXkEyXkFqcGc@._V1_.jpg",
   "duration": "1Hr.58"
 },
-   {
-  "id": "breakup-season-2024-full-movie",
-  "title": "Breakup Season (2024) Full Movie | H. Nelson Tracey, Chandler Riggs, Samantha Isler | Indie Christmas Dramedy, Heartbreak | Streaming on Plex, Hoopla, Fandango at Home Free",
+  {
+  "id": "breakup-season-2024",
+  "title": "Breakup Season (2024) Full Movie | Chandler Riggs & Samantha Isler | Holiday Drama",
   "year": 2024,
   "director": "H. Nelson Tracey",
   "quality": "1080p",
-  "genres": ["Drama", "Comedy", "Holiday", "Romance"],
-  "description": "In H. Nelson Tracey's feature directorial debut, 'Breakup Season' (2024), Ben (Chandler Riggs) brings his girlfriend Cassie (Samantha Isler) to his rural Oregon hometown for Christmas to meet his family. What begins as a hopeful holiday introduction quickly takes a turn when a late-night argument leads to a breakup. With a snowstorm making travel impossible, Cassie finds herself stuck with her new ex and his family for the remainder of the holidays. This film explores the awkward, often humorous, and genuinely painful nuances of a relationship ending amidst the forced cheer of Christmas, making for a refreshingly honest and grounded holiday dramedy. Remastered in 1080p, it's available for streaming on Plex, Hoopla, and Fandango at Home Free, among others.",
+  "duration": "1h 42m",
+  "genres": "Drama, Comedy, Holiday, Romance",
+  "description": "Ben brings his girlfriend Cassie to his rural Oregon hometown for Christmas, but a late-night argument leads to an unexpected breakup. Trapped by a snowstorm, the former couple must endure the holidays together with Ben's family. Experience this honest holiday dramedy and explore our full collection at https://moviehub.uk/.",
   "embedId": "9514036955669",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzQ5OWZiNGEtODMxMS00YjlmLTg5NjUtM2NiOWZjMGNkNTY0XkEyXkFqcGc@._V1_.jpg",
-  "duration": "1Hr.42"
+  "posterUrl": "/images/breakup-season-2024.jpg"
 },
    {
   "id": "first-contact-2023-full-movie",
@@ -3594,48 +3573,34 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTM1NjM1NTQ3Ml5BMl5BanBnXkFtZTYwNjgwNTg4._V1_.jpg",
   "duration": "1Hr.41"
 },
-   {
-  "id": "mike-nick-nick-alice-2026-full-movie",
-  "title": "Mike & Nick & Nick & Alice (2026) Full Movie | Vince Vaughn, James Marsden, Eiza González | R-Rated Action-Comedy, Time Travel, Gangster Film | Hulu/Disney+ 1080p",
-   "category": "private",
+ {
+  "id": "mike-nick-nick-alice-2026",
+  "title": "Mike & Nick & Nick & Alice (2026) Full Movie | Vince Vaughn | Action Comedy",
   "year": 2026,
   "director": "BenDavid Grabinski",
   "quality": "1080p",
-  "genres": ["Action", "Comedy", "Science Fiction", "Crime"],
-  "description": "Buckle up for a \"time-traveling, double-crossing, ass-kicking comedy\" with \"Mike & Nick & Nick & Alice\" (2026), the R-rated genre-bender now streaming on Hulu (US) and Disney+ (International)! Directed and written by BenDavid Grabinski, this wild ride stars Vince Vaughn (in a dual role as Present Nick and Future Nick), James Marsden as Mike, and Eiza González as Alice. The story plunges two gangsters and the woman they love into a perilous night complicated by the arrival of a time-traveling Future Nick, desperate to save Mike from a false accusation by crime boss Sosa (Keith David). Joined by a stellar cast including Jimmy Tatro, Stephen Root, Lewis Tan, Ben Schwartz, Emily Hampshire, and Arturo Castro, the film delivers kinetic action, sharp humor, and unexpected heart. Produced by Andrew Lazar, with cinematography by Larry Fong, \"Mike & Nick & Nick & Alice\" premiered at the SXSW Film & TV Festival on March 14, 2026, before its streaming debut on March 27, 2026. This 1 hour 47 minute action-comedy is lauded for its eccentric personality, well-choreographed stunts, and unique blend of gangster and sci-fi elements. Watch the full movie in stunning 1080p now.",
+  "duration": "1h 47m",
+  "genres": "Action, Comedy, Sci-Fi, Crime",
+  "description": "Two gangsters and the woman they love are thrust into a perilous night when a time-traveling future version of one of them arrives to stop a deadly false accusation. Starring Vince Vaughn, James Marsden, and Eiza González, this genre-bending ride delivers kinetic action and sharp humor. Stream this 2026 release and explore our full collection at https://moviehub.uk/.",
   "embedId": "12810405415502",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDBiNjIyNjUtNWZlYy00MGU4LWFjNDUtMGExYTZlNmNhZTY4XkEyXkFqcGc@._V1_.jpg",
-  "duration": "1Hr.47"
+  "posterUrl": "/images/mike-nick-nick-alice-2026.jpg"
 },
-   {
-  "id": "the-mortuary-assistant-2026-full-movie",
-  "title": "The Mortuary Assistant (2026) Full Movie | Willa Holland, Paul Sparks | Horror, Supernatural Thriller, Video Game Adaptation | Shudder 1080p",
-   "category": "private",
+  {
+  "id": "the-mortuary-assistant-2026",
+  "title": "The Mortuary Assistant (2026) Full Movie | Horror Supernatural Thriller",
   "year": 2026,
   "director": "Jeremiah Kipp",
   "quality": "1080p",
-  "genres": ["Horror", "Mystery", "Thriller"],
-  "description": "Prepare for an unforgettable night shift with \"The Mortuary Assistant\" (2026), the highly anticipated R-rated horror film based on the viral 2022 video game! Directed by Jeremiah Kipp, this chilling adaptation stars Willa Holland as Rebecca Owens, a newly certified mortician, and Paul Sparks as her enigmatic mentor, Raymond Delver. Rebecca's routine night shift at the ominous River Fields Mortuary quickly descends into a terrifying battle against supernatural forces. As disturbing events escalate, she uncovers demonic rituals, dark secrets, and her own buried traumas, all while fighting to survive the night before her body is claimed for possession. Released in select theaters on February 13, 2026, and now streaming on Shudder since March 27, 2026, this 1 hour 31 minute supernatural thriller promises a faithful yet expanded dive into the game's lore. Experience the claustrophobic setting, psychological terror, and unsettling atmosphere that made the original game a cult favorite, brought to life with impressive practical effects and a unique narrative that blends mortuary procedures with demonic mythology. Watch the full movie now in pristine 1080p.",
+  "duration": "1h 31m",
+  "genres": "Horror, Mystery, Thriller, Supernatural",
+  "category": "private",
+  "description": "In this chilling adaptation of the viral video game, a newly certified mortician's night shift at River Fields Mortuary descends into a terrifying battle against supernatural forces. As she uncovers demonic rituals and dark secrets, she must fight to survive the night before she is claimed for possession. Stream this 1080p horror thriller and explore our full collection at https://moviehub.uk/.",
   "embedId": "13303842081318",
-  "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzYwYmYzNGEtOTRhMi00MTc3LTlkYzQtOTA2OTUxODE3ZmY4XkEyXkFqcGc@._V1_.jpg",
-  "duration": "PT1H31M"
+  "source": "rumble",
+  "posterUrl": "/images/the-mortuary-assistant-2026.jpg"
 },
-   {
-  "id": "pretty-lethal-2026-full-movie",
-  "title": "Pretty Lethal (2026) Full Movie | Uma Thurman, Maddie Ziegler, Lana Condor | Ballet-Fu Action Thriller, Survival Horror | Prime Video 1080p",
-   "category": "private",
-  "year": 2026,
-  "director": "Vicky Jewson",
-  "quality": "1080p",
-  "genres": ["Action", "Thriller", "Comedy", "Drama", "Horror"],
-  "description": "Get ready for \"Blood, Sweat, and Tutus\" with \"Pretty Lethal\" (2026), the R-rated action thriller now streaming on Amazon Prime Video! Directed by Vicky Jewson and written by Kate Freund, this film takes a darkly comedic dive into survival horror. Starring Uma Thurman as a mysterious former prima ballerina turned innkeeper, Devora Kasimer, alongside Maddie Ziegler (Bones), Lana Condor (Princess), Iris Apatow (Zoe), Millicent Simmonds (Chloe), and Avantika (Grace), \"Pretty Lethal\" follows a dysfunctional American ballet troupe. En route to a prestigious Budapest competition, their bus breaks down in a remote Hungarian forest. Seeking shelter, they find themselves trapped in Devora's unsettling roadside inn, which quickly becomes a deadly battleground against local gangsters. The ballerinas must unleash their years of disciplined training, transforming elegant ballet moves and even pointe shoes into lethal weapons in what's been dubbed \"Ballet-Fu\". Premiering at the SXSW Film & TV Festival on March 13, 2026, and released globally on Prime Video on March 25, 2026, this 88-minute genre-bender combines action, thriller, and dark comedy with strong female leads. Experience this unique blend of grace and grit in stunning 1080p. Watch the full movie now.",
-  "embedId": "13264104524326",
-  "source": "ok.ru",
-  "posterUrl": "https://spcdn.shortpixel.ai/spio/ret_img,q_cdnize,to_webp,s_webp/www.flickeringmyth.com/wp-content/uploads/2026/02/Pretty-Lethal-1-600x941.jpg",
-  "duration": "1Hr.28"
-},
+  
    {
   "id": "the-assignment-1997-full-movie",
   "title": "The Assignment (1997) Full Movie | Aidan Quinn, Donald Sutherland, Ben Kingsley | Spy Action Thriller, Carlos the Jackal, CIA vs Mossad | 1080p",
@@ -3796,18 +3761,18 @@
 },
   
  
-   {
-  "id": "dead-again",
-  "title": "Dead Again (1991) Full Movie | Kenneth Branagh, Emma Thompson, Robin Williams | Neo-Noir Romantic Thriller",
+ {
+  "id": "dead-again-1991",
+  "title": "Dead Again (1991) Full Movie | Kenneth Branagh & Emma Thompson | Neo-Noir Thriller",
   "year": 1991,
   "director": "Kenneth Branagh",
-  "quality": "1080p BluRay",
-  "duration": "1h 48min",
-  "genres": "Thriller, Mystery, Romance, Neo-Noir",
-  "description": "Dead Again (1991). A private detective takes on the case of a mysterious amnesiac woman haunted by violent nightmares. As he delves into her past, he uncovers a chilling connection to a sensational 1940s murder case. A masterfully directed neo-noir thriller by Kenneth Branagh.",
+  "quality": "1080p HD",
+  "duration": "1h 48m",
+  "genres": "Thriller, Mystery, Romance, Neo-Noir, Classics",
+  "description": "A private detective takes on the case of a mysterious amnesiac woman haunted by violent, recurring nightmares. As he delves into her past, he uncovers a chilling, centuries-old connection to a sensational 1940s murder case. Directed by and starring Kenneth Branagh in this masterfully crafted neo-noir thriller. Stream it and explore our full collection at https://moviehub.uk/.",
   "embedId": "12462642629198",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTc4MTEwNTcxNF5BMl5BanBnXkFtZTcwODQzMzgxMQ@@._V1_.jpg"
+  "posterUrl": "/images/dead-again-1991.jpg"
 },
   {
   "id": "dark-of-the-sun-1968-full-movie",
@@ -3926,31 +3891,31 @@
   "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvA5weI4hmnxcw2flf659rmR7rh6xuh6XPzg&s",
   "duration": "1Hr.26"
 },
-   {
-  "id": "sirens-1994-full-movie",
-  "title": "Sirens (1994) Full Movie | Hugh Grant, Elle Macpherson | Comedy Drama | Bohemian Lifestyle",
+  {
+  "id": "sirens-1994",
+  "title": "Sirens (1994) Full Movie | Hugh Grant & Elle Macpherson | Comedy Drama",
   "year": 1994,
   "director": "John Duigan",
-  "quality": "1080p BluRay",
-  "genres": ["Comedy", "Drama", "Romance"],
-  "description": "Set in 1930s Australia, a conservative English clergyman (Hugh Grant) and his wife (Tara Fitzgerald) visit the eccentric, free-spirited artist Norman Lindsay (Sam Neill) and his bohemian household, filled with his beautiful muses (including Elle Macpherson and Portia de Rossi). Their encounter challenges their rigid beliefs and ignites unexpected passions, leading to a hilarious and liberating awakening. Sirens (1994) is a charming and sensuous comedy-drama, celebrating art, love, and unconventional lifestyles. Experience this beautiful film in 1080p BluRay. Watch the full movie now.",
+  "quality": "1080p",
+  "duration": "1h 33m",
+  "genres": "Comedy, Drama, Romance",
+  "description": "In 1930s Australia, a conservative English clergyman and his wife visit the eccentric artist Norman Lindsay and his bohemian household. Their encounter challenges their rigid beliefs and leads to a hilarious, liberating awakening. Experience this charming comedy-drama and explore our full collection at https://moviehub.uk/.",
   "embedId": "9721541823054",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTM1NTA2Mzk0MV5BMl5BanBnXkFtZTYwODc2MTg4._V1_.jpg",
-  "duration": "1Hr.33"
+  "posterUrl": "/images/sirens-1994.jpg"
 },
    {
-  "id": "bring-me-the-head-of-alfredo-garcia-1974-remastered-full-movie",
-  "title": "Bring Me the Head of Alfredo Garcia (1974) Full Movie | Remastered 1080p BluRay | Classic Neo-Western Thriller",
+  "id": "bring-me-the-head-of-alfredo-garcia-1974",
+  "title": "Bring Me the Head of Alfredo Garcia (1974) Full Movie | Sam Peckinpah | Thriller",
   "year": 1974,
   "director": "Sam Peckinpah",
-  "quality": "1080p BluRay Remastered",
-  "genres": ["Neo-Western", "Thriller", "Crime", "Action", "Drama", "Cult Classic"],
-  "description": "In this cult classic neo-western, a desperate bar musician (Warren Oates) is offered a fortune to deliver the head of a notorious bandit, Alfredo Garcia. What begins as a quest for riches quickly descends into a brutal and bloody odyssey through the Mexican landscape, filled with double-crosses, violence, and a haunting sense of fate. Bring Me the Head of Alfredo Garcia (1974), now available in stunning remastered 1080p BluRay, is a raw and unflinching thriller from legendary director Sam Peckinpah. Watch the full movie now.",
+  "quality": "1080p",
+  "duration": "1h 51m",
+  "genres": "Neo-Western, Thriller, Crime, Action, Drama, Classics",
+  "description": "A desperate bar musician is offered a fortune to deliver the head of a notorious bandit, Alfredo Garcia. What begins as a quest for riches quickly descends into a brutal and bloody odyssey through the Mexican landscape. Experience this raw cult classic and explore our full collection at https://moviehub.uk/.",
   "embedId": "9725473851982",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ1NDE3NjE2OF5BMl5BanBnXkFtZTYwNzYxNzU5._V1_FMjpg_UX1000_.jpg",
-  "duration": "1HR.51"
+  "posterUrl": "/images/bring-me-the-head-of-alfredo-garcia-1974.jpg"
 },
    {
   "id": "dragon-the-bruce-lee-story-1993-full-movie",
@@ -4082,17 +4047,17 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzYzNDYxMTQtMTU4OS00MTdlLThhMTQtZjI4NGJmMTZmNmRiXkEyXkFqcGc@._V1_.jpg"
 },
 {
-  "id": "mae-nak-3d-2012-full-movie",
-  "title": "Mae Nak 3D (2012) Full Movie | Thai Horror Legend | Ghost Wife | Phichai Noirod",
+  "id": "mae-nak-3d-2012",
+  "title": "Mae Nak 3D (2012) Full Movie | Thai Horror Legend | Ghost Story",
   "year": 2012,
   "director": "Phichai Noirod",
   "quality": "HD",
-  "genres": ["Horror", "Supernatural", "Thai"],
-  "description": "Experience the terrifying Thai legend of Mae Nak like never before in \"Mae Nak 3D\" (2012). This 22nd cinematic adaptation brings the classic ghost story to life in a new dimension. Mae Nak tragically dies during childbirth while her husband, Mak, is away fighting in a war. Unaware of her death, Mak returns home to his devoted wife, who is now a vengeful ghost. Directed by Phichai Noirod, this supernatural horror film delves into themes of undying love, tragic loss, and chilling vengeance. Watch the full movie now.",
+  "duration": "1h 31m",
+  "genres": "Horror, Supernatural, Thai, Classics",
+  "description": "Experience the terrifying Thai legend of Mae Nak. When Mak returns home from war, he is unaware that his wife tragically died during childbirth and has returned as a vengeful ghost. This supernatural horror film explores themes of undying love and chilling vengeance. Watch it now and explore our full collection at https://moviehub.uk/.",
   "embedId": "v759k70",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTZkNTZhMzctYWI5NS00NzI1LWI4NjEtYWJiNDdkN2ViNzc1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-  "duration": "1Hr.31"
+  "posterUrl": "/images/mae-nak-3d-2012.jpg"
 },
 {
   "id": "make-me-shudder-2-shudder-me-mae-nak-2014-full-movie",
@@ -4120,31 +4085,31 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2E0MjE2YjQtZDJjZC00ZjdiLWFiZDUtMTVhMzNjZmIyYTIyXkEyXkFqcGc@._V1_.jpg",
   "duration": "1Hr.33"
 },
-   {
-  "id": "the-treasure-of-the-silver-lake-1962-full-movie",
-  "title": "The Treasure Of The Silver Lake (1962) Full Movie | Lex Barker & Pierre Brice | Classic Western Adventure",
+  {
+  "id": "the-treasure-of-the-silver-lake-1962",
+  "title": "The Treasure of the Silver Lake (1962) Full Movie | Lex Barker & Pierre Brice | Western",
   "year": 1962,
   "director": "Harald Reinl",
   "quality": "HD",
-  "genres": ["Western", "Adventure", "Classic"],
-  "description": "The legendary Winnetou (Pierre Brice) and Old Surehand (Lex Barker) embark on a perilous quest to find the fabled Treasure of Silver Lake, battling ruthless bandits and navigating dangerous wilderness. This exciting 1962 European Western, based on Karl May's famous novels, is packed with adventure, stunning landscapes, and heroic action. Co-starring Götz George, it's a classic frontier tale. Watch the full movie now.",
+  "duration": "1h 51m",
+  "genres": "Western, Adventure, Classics",
+  "description": "The legendary Winnetou and Old Surehand embark on a perilous quest to find the fabled Treasure of Silver Lake, battling ruthless bandits and navigating the dangerous wilderness. Based on Karl May's famous novels, this classic European Western is packed with adventure and heroic action. Explore our full collection at https://moviehub.uk/.",
   "embedId": "v757tv0",
   "source": "rumble",
-  "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQow1jrjEIn3bJdHvKS53L8YcuJ19g3GpwOAg&s",
-  "duration": "1HR.51"
+  "posterUrl": "/images/the-treasure-of-the-silver-lake-1962.jpg"
 },
-   {
-  "id": "the-reptile-1966-full-movie",
+  {
+  "id": "the-reptile-1966",
   "title": "The Reptile (1966) Full Movie | Hammer Horror Classic | Supernatural Mystery",
   "year": 1966,
   "director": "John Gilling",
   "quality": "HD",
-  "genres": ["Horror", "Mystery", "Supernatural", "Classic"],
-  "description": "When his brother dies under mysterious circumstances, Harry Spalding investigates a remote Cornish village, only to uncover a sinister curse and a terrifying secret involving a monstrous reptilian creature. The Reptile (1966) is a chilling Hammer Film Productions classic that blends gothic atmosphere, supernatural horror, and a touch of mystery, featuring fantastic creature effects and a suspenseful plot. Watch the full movie now.",
+  "duration": "1h 31m",
+  "genres": "Horror, Mystery, Supernatural, Classics",
+  "description": "After his brother dies under mysterious circumstances, Harry Spalding investigates a remote Cornish village, only to uncover a sinister curse and a terrifying secret involving a monstrous creature. Experience this chilling Hammer Horror classic and explore our full collection at https://moviehub.uk/.",
   "embedId": "v757tg6",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjE4ODY1NDgzMV5BMl5BanBnXkFtZTYwOTU2NTE5._V1_.jpg",
-  "duration": "1Hr.31"
+  "posterUrl": "/images/the-reptile-1966.jpg"
 },
    {
   "id": "the-rare-breed-1966-full-movie",
@@ -4160,18 +4125,18 @@
   "duration": "1H.37"
 },
 
-   {
-  "id": "the-naked-spur-1953-full-movie",
-  "title": "The Naked Spur (1953) Full Movie | James Stewart & Robert Ryan | Classic Psychological Western",
+ {
+  "id": "the-naked-spur-1953",
+  "title": "The Naked Spur (1953) Full Movie | James Stewart & Robert Ryan | Western",
   "year": 1953,
   "director": "Anthony Mann",
   "quality": "HD",
-  "genres": ["Western", "Thriller", "Drama", "Classic"],
-  "description": "Howard Kemp (James Stewart), a bounty hunter, tracks a wanted outlaw (Robert Ryan) through the treacherous Rocky Mountains. As their perilous journey unfolds, a tense psychological battle emerges between the two men and their uneasy companions. Directed by Anthony Mann, The Naked Spur (1953) is a taut, thrilling, and visually stunning classic Western that delves deep into themes of greed, morality, and desperation. Watch the full movie now.",
+  "duration": "1h 31m",
+  "genres": "Western, Thriller, Drama, Classics",
+  "description": "Howard Kemp (James Stewart), a bounty hunter, tracks a wanted outlaw (Robert Ryan) through the treacherous Rocky Mountains. As their perilous journey unfolds, a tense psychological battle emerges between the two men and their uneasy companions. Experience this classic Western and explore our full collection at https://moviehub.uk/.",
   "embedId": "v756msw",
   "source": "rumble",
-  "posterUrl": "https://media-cache.cinematerial.com/p/500x/beckpzax/the-naked-spur-movie-poster.jpg?v=1456343478",
-  "duration": "1Hr.31"
+  "posterUrl": "/images/the-naked-spur-1953.jpg"
 },
    {
   "id": "the-man-from-laramie-1955-full-movie",
@@ -4212,18 +4177,18 @@
   "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgbWWXH4_3tjskgfTt2Imxh8VHIaPLl3zDaw&s",
   "duration": "1Hr.47"
 },
-   {
-  "id": "run-for-cover-1955-full-movie",
-  "title": "Run For Cover (1955) Full Movie | James Cagney & Viveca Lindfors | Classic Western Drama",
+ {
+  "id": "run-for-cover-1955",
+  "title": "Run for Cover (1955) Full Movie | James Cagney & Viveca Lindfors | Classic Western Drama",
   "year": 1955,
   "director": "Nicholas Ray",
   "quality": "HD",
-  "genres": ["Western", "Drama", "Classic"],
-  "description": "Matt Dow (James Cagney), a man with a troubled past, tries to start a new life in a small Western town but finds himself entangled in a web of suspicion and violence. Co-starring Viveca Lindfors, Run For Cover (1955) is a gripping classic Western that explores themes of prejudice, redemption, and mistaken identity against a rugged frontier backdrop. Watch the full movie now.",
+  "duration": "1h 33m",
+  "genres": "Western, Drama, Classics",
+  "description": "Matt Dow (James Cagney), a man with a troubled past, tries to start a new life in a small Western town but finds himself entangled in a web of suspicion and violence. Co-starring Viveca Lindfors, this gripping classic Western explores themes of prejudice, redemption, and mistaken identity against a rugged frontier backdrop. Stream this iconic film and explore our full collection at https://moviehub.uk/.",
   "embedId": "v756lvc",
   "source": "rumble",
-  "posterUrl": "https://images.sr.roku.com/idType/roku/context/global/id/b65e8ba4ea5750e598a3ab9c588423bb/images/gracenote/assets/p1917_v_v8_aa.jpg/magic/396x0/filters:quality(70)",
-  "duration": "1Hr.33"
+  "posterUrl": "/images/run-for-cover-1955.jpg"
 },
    {
   "id": "the-spy-with-my-face-1965-full-movie",
@@ -4251,18 +4216,18 @@
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzk0MTg5MzEyOF5BMl5BanBnXkFtZTcwNDUyMzIzMQ@@._V1_.jpg",
   "duration": "1Hr.47"
 },
-   {
-  "id": "the-mummys-shroud-1967-full-movie",
-  "title": "The Mummy's Shroud (1967) Full Movie | Hammer Horror Classic | Supernatural Thriller",
+  {
+  "id": "the-mummys-shroud-1967",
+  "title": "The Mummy's Shroud (1967) Full Movie | Hammer Horror Classic",
   "year": 1967,
   "director": "John Gilling",
   "quality": "HD",
-  "genres": ["Horror", "Supernatural", "Mystery", "Classic"],
-  "description": "When an archaeological expedition disturbs the tomb of a young pharaoh, a deadly curse is unleashed, leading to a series of gruesome murders. The Mummy's Shroud (1967) is a chilling Hammer Film Productions classic that combines ancient Egyptian lore with gothic horror and supernatural suspense. Witness the terror as a reanimated mummy seeks revenge. Watch the full movie now.",
+  "duration": "1h 30m",
+  "genres": "Horror, Supernatural, Mystery, Classics",
+  "description": "When an archaeological expedition disturbs the tomb of a young pharaoh, a deadly curse is unleashed, leading to a series of gruesome murders. Witness the terror as a reanimated mummy seeks revenge in this chilling Hammer Horror classic. Explore our full collection at https://moviehub.uk/.",
   "embedId": "v7563v4",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk0OTEyMDM5N15BMl5BanBnXkFtZTYwMjc2MzE5._V1_.jpg",
-  "duration": ""
+  "posterUrl": "/images/the-mummys-shroud-1967.jpg"
 },
    {
   "id": "swallowed-2022-full-movie",
@@ -4327,18 +4292,18 @@
     "source": "ok.ru",
     "posterUrl": "images/mohawk.jpg"
  },
-   {
-  "id": "Lock",
-  "title": "Lock, Stock and Two Smoking Barrels (1998) Full Movie | Guy Ritchie's Cult Classic Crime Comedy",
+  {
+  "id": "lock-stock-and-two-smoking-barrels-1998",
+  "title": "Lock, Stock and Two Smoking Barrels (1998) Full Movie | Guy Ritchie | Crime Comedy",
   "year": 1998,
   "director": "Guy Ritchie",
   "quality": "HD",
-  "genres": ["Crime", "Comedy", "Action", "Cult Classic"],
-  "description": "Four London friends find themselves in deep trouble after a rigged poker game, owing a local crime lord half a million pounds. With only a week to pay, they hatch a desperate plan involving drugs, antique guns, and rival gangs. Guy Ritchie's iconic 1998 cult classic, Lock, Stock and Two Smoking Barrels, is a fast-paced, darkly comedic, and brilliantly convoluted British crime caper. Watch the full movie now.",
+  "duration": "1h 47m",
+  "genres": "Crime, Comedy, Action, Classics",
+  "description": "Four London friends find themselves in deep trouble after a rigged poker game, owing a local crime lord half a million pounds. With only a week to pay, they hatch a desperate plan involving antique guns and rival gangs. Stream this iconic British crime caper and explore our full collection at https://moviehub.uk/.",
   "embedId": "9602459634262",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMmY1M2M5ZmMtYzllZC00YzAxLTk4MjktZDJkNjA1MTUwMGQ4XkEyXkFqcGc@._V1_.jpg",
-  "duration": "2Hrs.14"
+  "posterUrl": "/images/lock-stock-and-two-smoking-barrels-1998.jpg"
 },
 {
   "id": "Snatch",
@@ -4736,17 +4701,18 @@
   "source": "rumble",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjMzNjAxNTY0NF5BMl5BanBnXkFtZTgwOTQwMTYwODE@._V1_.jpg"
 },
-    {
-  "id": "suez",
+   {
+  "id": "suez-1938",
   "title": "Suez (1938) Full Movie | Tyrone Power & Loretta Young | Classic Adventure Drama",
   "year": 1938,
   "director": "Allan Dwan",
   "quality": "HD",
+  "duration": "1h 48m",
   "genres": "Adventure, Drama, History, Classics",
-  "description": "Ferdinand de Lesseps travels to Egypt with a grand vision: to build a canal connecting the Mediterranean and the Red Sea. Facing political sabotage and a massive sandstorm, he must choose between his ambition and his heart. Watch the full movie on MovieHub: https://moviehub.zya.me/",
+  "description": "Ferdinand de Lesseps travels to Egypt with a grand vision: to build a canal connecting the Mediterranean and the Red Sea. Facing political sabotage and a massive sandstorm, he must choose between his ambition and his heart. Stream this classic adventure drama and explore our full collection at https://moviehub.uk/.",
   "embedId": "v73q9lo",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDNkYjdhMTAtOWVjNy00YjRjLTlkMzgtMTYyMDMyMjFmOWMwXkEyXkFqcGc@._V1_.jpg"
+  "posterUrl": "/images/suez-1938.jpg"
 },
     {
   "id": "cover-up-1949",
@@ -4975,18 +4941,18 @@
   "source": "rumble",
   "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/House_on_Haunted_Hill.jpg"
 },
-  {
+ {
   "id": "tales-of-manhattan-1942",
-  "title": "Tales of Manhattan (1942) Full Movie | Rita Hayworth, Charles Boyer & Henry Fonda",
+  "title": "Tales of Manhattan (1942) Full Movie | Rita Hayworth & Henry Fonda | Anthology",
   "year": 1942,
   "director": "Julien Duvivier",
   "quality": "HD",
-  "genres": ["Drama", "Romantic Comedy", "Anthology", "Classic"],
-  "description": "Experience the star-studded classic, Tales of Manhattan (1942), a captivating anthology drama featuring Rita Hayworth, Charles Boyer, Henry Fonda, Ginger Rogers, and more. Follow an elegant, seemingly cursed tailcoat as it weaves through the lives of diverse New Yorkers – from a Broadway star to down-on-their-luck sharecroppers. Discover intertwined stories of romance, drama, and unexpected fate. Watch the full movie now for a timeless cinematic journey.",
+  "duration": "1h 33m",
+  "genres": "Drama, Comedy, Anthology, Classics",
+  "description": "Follow an elegant, seemingly cursed tailcoat as it weaves through the lives of diverse New Yorkers—from a Broadway star to down-on-their-luck sharecroppers. This star-studded anthology features Rita Hayworth, Charles Boyer, and Henry Fonda. Stream this timeless classic and explore our full collection at https://moviehub.uk/.",
   "embedId": "v73g6qg",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWU3OWE2NDAtNWQzYS00ZTM5LTkzY2MtMTgzMTVhYzRiNjdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-  "duration": "1Hr.33"
+  "posterUrl": "/images/tales-of-manhattan-1942.jpg"
 },
     {
   "id": "goodbye-again-1961",
@@ -6144,15 +6110,19 @@
         "genres": ["War"],
         "source": "ok.ru"
     },
-     {  "id": "Black-Hawk-Down",
-        "posterUrl":  "images/Black Hawk Down.jpg",
-        "year": 2001,
-        "title": "Black Hawk Down",
-        "description": " Action/war drama based on the best-selling book detailing a near-disastrous mission in Somalia on October 3, 1993. On this date nearly 100 U.S. Army Rangers, commanded by Capt. Mike Steele, were dropped by helicopter deep into the capital city of Mogadishu to capture two top lieutenants of a Somali warlord. This led to a large and drawn-out firefight between the Army Ranges, US Special Forces, and hundreds of Somali gunmen; resulting in the destruction of two U.S. Black Hawk helicopters. The film focuses on the heroic efforts of various Rangers to get to the downed black hawks, centering on SSG Eversmann, leading the Ranger unit Chalk Four to the first black hawk crash site, Chief Warrant Officer Durant who was captured after being the only survivor of the second black hawk crash, as well as many others who were involved.",
-        "embedId": "1440484952729",
-        "genres": ["War"],
-        "source": "ok.ru"
-    },
+     {
+  "id": "black-hawk-down-2001",
+  "title": "Black Hawk Down (2001) Full Movie | Ridley Scott | War Drama",
+  "year": 2001,
+  "director": "Ridley Scott",
+  "quality": "HD",
+  "duration": "2h 24m",
+  "genres": "War, Action, Drama, History",
+  "description": "Based on the harrowing true events of October 3, 1993, this war drama details a near-disastrous mission in Mogadishu, Somalia. After two U.S. Black Hawk helicopters are shot down, Army Rangers and Special Forces must fight to survive a drawn-out firefight against overwhelming odds. Stream this intense masterpiece and explore our full collection at https://moviehub.uk/.",
+  "embedId": "1440484952729",
+  "source": "ok.ru",
+  "posterUrl": "/images/black-hawk-down-2001.jpg"
+},
      {  "id": "Green-Street-Hooligans-2",
         "posterUrl":  "images/Green Street Hooligans 2.jpg",
         "year": 2009,
@@ -6427,15 +6397,19 @@
         "genres": ["Drama","Sci-Fi"],
         "source": "ok.ru"
     },
-     {  "id": "Chaplin",
-        "posterUrl":  "images/Chaplin.jpg",
-        "year": 1992,
-        "title": "Chaplin (1992)",
-        "description": "An elderly Charlie Chaplin discusses his autobiography with his editor, recounting his amazing journey from his poverty-stricken childhood to world-wide success after the ingenious invention of the Little Tramp.",
-        "embedId": "9513004239398",
-        "genres": ["Drama"],
-        "source": "ok.ru"
-    },
+   {
+  "id": "chaplin-1992",
+  "title": "Chaplin (1992) Full Movie | Robert Downey Jr. | Biographical Drama",
+  "year": 1992,
+  "director": "Richard Attenborough",
+  "quality": "HD",
+  "duration": "2h 23m",
+  "genres": "Drama, Biography, Classics",
+  "description": "An elderly Charlie Chaplin recounts his incredible journey from a poverty-stricken childhood to worldwide fame after creating his iconic 'Little Tramp' persona. Featuring a legendary performance by Robert Downey Jr., this biographical drama covers the highs and lows of a cinematic genius. Stream this classic and explore our full collection at https://moviehub.uk/.",
+  "embedId": "9513004239398",
+  "source": "ok.ru",
+  "posterUrl": "/images/chaplin.jpg"
+},
      {  "id": "The Nanny",
         "posterUrl":  "images/The Nanny.jpg",
         "year": 2023,
@@ -6566,15 +6540,7 @@
         "genres": ["Drama"],
         "source": "ok.ru"
     },
-     {  "id": "Jaws",
-        "posterUrl":  "images/Jaws.jpg",
-        "year": 1995,
-        "title": "Jaws 1995",
-        "description": "When a massive killer shark unleashes chaos on a beach community off Long Island, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.",
-        "embedId": "9666610006702",
-        "genres": ["Action"],
-        "source": "ok.ru"
-    },
+    
      {  "id": "The-Dark-Knight",
         "posterUrl":  "images/The Dark Knight.jpg",
         "year": 2008,
@@ -7414,16 +7380,18 @@
         "genres": ["Western","Drama"],
         "source": "ok.ru"
      },
-      {
-        "id": "Shaman",
-        "posterUrl":  "images/Shaman.jpg",
-        "year":2025,
-        "title": "Shaman",
-        "description": "A Missionary converting an Indigenous Community in a remote Ecuadorian volcano must come to terms with her own Faith when her son is possessed by dark forces.",
-        "embedId": "12312423238251",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "shaman-2025",
+  "title": "Shaman (2025) Full Movie | Horror Thriller | Supernatural Possession",
+  "year": 2025,
+  "director": "Unknown",
+  "quality": "HD",
+  "genres": "Horror, Thriller, Supernatural, Possession",
+  "description": "While attempting to convert an indigenous community living in the shadow of a remote Ecuadorian volcano, a missionary is forced to confront the limits of her own faith. The situation turns dire when her son becomes possessed by ancient, dark forces. Stream this intense supernatural thriller and explore our full collection at https://moviehub.uk/.",
+  "embedId": "10443796122174",
+  "source": "ok.ru",
+  "posterUrl": "/images/shaman-2025.jpg"
+},
       { 
         "id": "Ghost-Town",
         "posterUrl":  "images/Ghost Town.jpg",
@@ -7479,15 +7447,19 @@
         "genres": ["Drama","Thriller"],
         "source": "ok.ru"
      },
-      { "id": "Michael-Collins",
-        "posterUrl":  "images/Michael Collins.jpg",
-        "year": 1996,
-        "title": "Michael Collins 1996  720p",
-        "description": "Neil Jordan's historical biopic of Irish revolutionary Michael Collins, the man who led a guerrilla war against the UK, helped negotiate the creation of the Irish Free State, and led the National Army during the Irish Civil War.",
-        "embedId": "1078123301423",
-        "genres": ["Drama","Thriller","War"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "michael-collins-1996",
+  "title": "Michael Collins (1996) Full Movie | Liam Neeson | Historical Drama",
+  "year": 1996,
+  "director": "Neil Jordan",
+  "quality": "HD",
+  "duration": "2h 12m",
+  "genres": "Drama, Thriller, War, History",
+  "description": "Neil Jordan's sweeping historical biopic of Irish revolutionary Michael Collins, the man who led a guerrilla war against the UK, helped negotiate the creation of the Irish Free State, and led the National Army during the Irish Civil War. Stream this epic historical drama and explore our full collection at https://moviehub.uk/.",
+  "embedId": "1078123301423",
+  "source": "ok.ru",
+  "posterUrl": "/images/michael-collins-1996.jpg"
+},
       { "id": "Outlaw King",
         "posterUrl":  "images/Outlaw King.jpg",
         "year": 2018,
@@ -7737,16 +7709,19 @@
         "genres": ["Comedy","Drama"],
         "source": "ok.ru"
      },
-     {
-        "id": "Finding-Graceland",
-        "posterUrl":  "images/Finding Graceland.jpg",
-        "year": 1998,
-        "title": "Finding Graceland (1998) (1080p)",
-        "description": "An eccentric drifter claiming to be Elvis Presley hitches a ride with a young man and they find themselves on an adventurous road trip to Memphis.",
-        "embedId": "9813091158555",
-        "genres": ["Drama"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "finding-graceland-1998",
+  "title": "Finding Graceland (1998) Full Movie | Harvey Keitel | Road Trip Drama",
+  "year": 1998,
+  "director": "David Winkler",
+  "quality": "HD",
+  "duration": "1h 37m",
+  "genres": "Drama, Comedy, Road Trip",
+  "description": "An eccentric drifter claiming to be Elvis Presley hitches a ride with a grieving young man, leading them on an unforgettable road trip to Memphis. Discover this touching story of connection and discovery. Stream it now and explore our full collection at https://moviehub.uk/.",
+  "embedId": "9813091158555",
+  "source": "ok.ru",
+  "posterUrl": "/images/finding-graceland-1998.jpg"
+},
      {
         "id": "The-Patriot",
         "posterUrl":  "images/The Patriot.jpg",
@@ -7961,16 +7936,19 @@
         "source": "ok.ru",
         "year": 1977
     },
-     {
-        "id": "Smokey-And-The-Bandit-2",
-        "title": "Smokey And The Bandit 2",
-        "description": "The Bandit goes on another cross-country run, transporting an elephant from Florida to Texas. And, once again, Sheriff Buford T. Justice is on his tail.",
-        "embedId": "7792984590958",
-        "posterUrl": "images/smokey2.jpg", 
-        "genres": ["Action"],
-        "source": "ok.ru",
-        "year": 1980
-    },
+   {
+  "id": "smokey-and-the-bandit-ii-1980",
+  "title": "Smokey and the Bandit II (1980) Full Movie | Action Comedy",
+  "year": 1980,
+  "director": "Hal Needham",
+  "quality": "HD",
+  "duration": "1h 40m",
+  "genres": "Action, Comedy, Adventure",
+  "description": "The Bandit goes on another cross-country run, this time tasked with transporting an elephant from Florida to Texas. And, once again, the relentless Sheriff Buford T. Justice is hot on his tail. Experience this high-octane sequel and explore our full collection at https://moviehub.uk/.",
+  "embedId": "7792984590958",
+  "source": "ok.ru",
+  "posterUrl": "/images/smokey-and-the-bandit-2-1980.jpg"
+},
      {
         "id": "Smokey-And-The-Bandit-3",
         "title": "Smokey And The Bandit 3",
@@ -8219,16 +8197,19 @@
         "genres": ["Action"],
         "source": "ok.ru"
      },
-      {
-        "id": "Under-Siege-2",
-        "posterUrl":  "images/Under Siege 2.jpg",
-        "year": 1995,
-        "title": "Under Siege 2 Dark Territory(1995)",
-        "description": "Casey Ryback, is on vacation, with his recently orphaned niece to attend his brothers funeral by train but when terrorists hijack it, to use as a mobile base to hack a top secret destructive US satellite, Ryback must stop them.",
-        "embedId": "9569632651950",
-        "genres": ["Action"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "under-siege-2-dark-territory-1995",
+  "title": "Under Siege 2: Dark Territory (1995) Full Movie | Steven Seagal | Action Thriller",
+  "year": 1995,
+  "director": "Geoff Murphy",
+  "quality": "HD",
+  "duration": "1h 40m",
+  "genres": "Action, Thriller, Adventure",
+  "description": "Casey Ryback is on a train journey through the Rocky Mountains when it is hijacked by terrorists intending to use it as a mobile base to control a top-secret satellite weapon. Ryback must fight to save the passengers and stop the villains before they launch their attack. Stream this action classic and explore our full collection at https://moviehub.uk/.",
+  "embedId": "9569632651950",
+  "source": "ok.ru",
+  "posterUrl": "/images/under-siege-2-1995.jpg"
+},
      
       {
         "id": "Echo-Valley",
@@ -8371,16 +8352,18 @@
         "genres": ["Horror","Comedy"],
         "source": "ok.ru"
      },
-     {
-        "id": "Tremors-II-Aftershocks",
-        "posterUrl":  "images/Tremors II Aftershocks.jpg",
-        "year": 1996,
-        "title": "Tremors II: Aftershocks",
-        "description": "Earl Bassett, now a washed-up ex-celebrity, is hired by a Mexican oil company to eradicate a Graboid epidemic that's killing more people each day. However, the humans aren't the only one with a new battle plan.",
-        "embedId": "",
-        "genres": ["Horror","Comedy"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "tremors-ii-aftershocks-1996",
+  "title": "Tremors II: Aftershocks (1996) Full Movie | Fred Ward | Horror Comedy",
+  "year": 1996,
+  "director": "S. S. Wilson",
+  "quality": "HD",
+  "genres": "Horror, Comedy, Sci-Fi, Creatures",
+  "description": "Earl Bassett, a washed-up hero, is hired by a Mexican oil company to eradicate a deadly Graboid epidemic. As he tries to contain the threat, he realizes that the creatures have developed a new, terrifying battle plan. Stream this cult classic creature feature and explore our full collection at https://moviehub.uk/.",
+  "embedId": "9073849666138",
+  "source": "ok.ru",
+  "posterUrl": "/images/tremors-ii-aftershocks-1996.jpg"
+},
      {
         "id": "Futureworld",
         "posterUrl":  "images/futureworld.jpg",
@@ -9092,16 +9075,18 @@
         "genres": ["Sci-Fi","Action","Adventure"],
         "source": "ok.ru"
      },
-      {
-        "id": "Star-Trek-2009",
-        "posterUrl":  "images/Star Trek 2009.jpg",
-        "year":2009,
-        "title": "Star Trek 2009",
-        "description": "The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.",
-        "embedId": "4720045394592",
-        "genres": ["Sci-Fi","Action","Adventure"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "star-trek-2009",
+  "title": "Star Trek (2009) Full Movie | J.J. Abrams | Sci-Fi Action Adventure",
+  "year": 2009,
+  "director": "J.J. Abrams",
+  "quality": "HD",
+  "genres": "Sci-Fi, Action, Adventure, Space",
+  "description": "In this high-stakes reboot, the brash James T. Kirk tries to live up to his father's legacy while the logical Mr. Spock attempts to keep him in check. Together, they must stop a vengeful Romulan from the future who is destroying Federation planets one by one. Stream this blockbuster sci-fi adventure and explore our full collection at https://moviehub.uk/.",
+  "embedId": "4720045394592",
+  "source":"ok.ru",
+  "posterUrl": "/images/star-trek-2009.jpg"
+},
       {
         "id": "Star-Trek-Into-Darkness",
         "posterUrl":  "images/Star Trek Into Darkness.jpg",
@@ -9225,16 +9210,18 @@
         "genres": ["Action","War"],
         "source": "ok.ru"
      },
-     {
-        "id": "salems-lot",
-        "posterUrl":  "images/salems lot.jpg",
-        "year":1979 ,
-        "title": "salems lot",
-        "description": "A novelist and a young horror fan attempt to save a small New England town which has been invaded by vampires.",
-        "embedId": "6202421480034",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "salems-lot-1979",
+  "title": "Salem's Lot (1979) Full Movie | Tobe Hooper | Stephen King Horror Classic",
+  "year": 1979,
+  "director": "Tobe Hooper",
+  "quality": "HD",
+  "genres": "Horror, Supernatural, Vampires, Classics",
+  "description": "Directed by horror icon Tobe Hooper, this classic adaptation of the Stephen King novel follows a novelist and a young horror fan as they attempt to save a small New England town from a terrifying vampire invasion. Experience the chilling atmosphere of this supernatural masterpiece. Stream it and explore our full collection at https://moviehub.uk/.",
+  "embedId": "6202421480034",
+  "source": "rumble",
+  "posterUrl": "/images/salems-lot-1979.jpg"
+},
       {
         "id": "Basic-Instinct",
         "posterUrl":  "images/Basic Instinct.jpg",
@@ -9305,16 +9292,19 @@
         "genres": ["Drama","Music"],
         "source": "ok.ru"
      },
-      {
-        "id": "The-Girl-with-the-Dragon-Tattoo",
-        "posterUrl":  "images/The Girl with the Dragon Tattoo.jpg",
-        "year":2011,
-        "title": "The Girl with the Dragon Tattoo",
-        "description": "Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years by hacker Lisbeth Salander.",
-        "embedId": "27642890864",
-        "genres": ["Thriller","Drama","Crime"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "the-girl-with-the-dragon-tattoo-2011",
+  "title": "The Girl with the Dragon Tattoo (2011) Full Movie | David Fincher | Thriller",
+  "year": 2011,
+  "director": "David Fincher",
+  "quality": "HD",
+  "duration": "2h 38m",
+  "genres": "Thriller, Drama, Crime, Mystery",
+  "description": "Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years by computer hacker Lisbeth Salander. As they work together, they uncover dark secrets that the powerful Vanger family has kept hidden for decades. Experience this gripping thriller and explore our full collection at https://moviehub.uk/.",
+  "embedId": "27642890864",
+  "source": "ok.ru",
+  "posterUrl": "/images/the-girl-with-the-dragon-tattoo-2011.jpg"
+},
       {
         "id": "The-Gunman",
         "posterUrl":  "images/The Gunman.jpg",
@@ -9543,16 +9533,19 @@
         "genres": ["Drama","Crime"],
         "source": "ok.ru"
      },
-      {
-        "id": "Definitely-Maybe",
-        "posterUrl":  "images/Definitely Maybe.jpg",
-        "year":2008,
-        "title": "Definitely Maybe",
-        "description": "A political consultant tries to explain his impending divorce and past relationships to his 11-year-old daughter.",
-        "embedId": "33007667960",
-        "genres": ["Comedy","Drama"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "definitely-maybe-2008",
+  "title": "Definitely, Maybe (2008) Full Movie | Romantic Comedy Drama",
+  "year": 2008,
+  "director": "Adam Brooks",
+  "quality": "HD",
+  "duration": "1h 52m",
+  "genres": "Comedy, Drama, Romance",
+  "description": "A political consultant in the midst of a divorce tries to explain his past relationships to his 11-year-old daughter by recounting the stories of the three women he once loved. Stream this heartwarming romantic comedy and explore our full collection at https://moviehub.uk/.",
+  "embedId": "33007667960",
+  "source": "ok.ru",
+  "posterUrl": "/images/definitely-maybe-2008.jpg"
+},
      {
         "id": "Knight-and-Day",
         "posterUrl":  "images/Knight and Day.jpg",
@@ -9624,15 +9617,18 @@
         "source": "ok.ru"
      },
       {
-        "id": "Star-Wars-Episode-II-Attack-of-the-Clones",
-        "posterUrl":  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.mycast.io%2Fposters%2Fstar-war-episode-ii-attack-of-the-clones-fan-casting-poster-109208-large.jpg%3F1623805250&f=1&nofb=1&ipt=1488d7ba14c0a6f4721772b89c981a1fe218e2401d3b1aa5844975b2c733ded8",
-        "year":2002,
-        "title": "Star Wars Episode II  Attack of the Clones",
-        "description": "Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi discovers a secret clone army crafted for the Jedi.",
-        "embedId": "28569635336",
-        "genres":["Sci-Fi","Action","Adventure"],
-        "source": "ok.ru"
-     },
+  "id": "star-wars-episode-ii-attack-of-the-clones-2002",
+  "title": "Star Wars: Episode II - Attack of the Clones (2002) Full Movie | Sci-Fi Action",
+  "year": 2002,
+  "director": "George Lucas",
+  "quality": "HD",
+  "duration": "2h 22m",
+  "genres": "Sci-Fi, Action, Adventure, Fantasy",
+  "description": "Ten years after the events of The Phantom Menace, Anakin Skywalker shares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi discovers a massive secret clone army crafted for the Republic. Experience this epic chapter of the Skywalker saga and explore our full collection at https://moviehub.uk/.",
+  "embedId": "28569635336",
+  "source": "ok.ru",
+  "posterUrl": "/images/star-wars-episode-ii-attack-of-the-clones-2002.jpg"
+},
      {
         "id": "Star-Wars-Episode-III-Revenge-of-the-Sith",
         "posterUrl":  "images/Star Wars Episode III Revenge of the Sith.jpg",
@@ -9834,16 +9830,18 @@
         "genres": ["Western"],
         "source": "ok.ru"
      },
-     {
-        "id": "Little Fockers",
-        "posterUrl":  "images/Little Fockers.jpg",
-        "year":2010,
-        "title": "Little Fockers",
-        "description": "Family-patriarch Jack Byrnes wants to appoint a successor. Does his son-in-law, the male nurse Greg Focker, have what it takes?",
-        "embedId": "31968135839",
-        "genres": ["Comedy"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "little-fockers-2010",
+  "title": "Little Fockers (2010) Full Movie | Ben Stiller & Robert De Niro | Comedy Sequel",
+  "year": 2010,
+  "director": "Paul Weitz",
+  "quality": "HD",
+  "genres": "Comedy, Family, Classics",
+  "description": "In this hilarious sequel, family patriarch Jack Byrnes is on the hunt for a successor to take over the family legacy. The pressure is on for male nurse Greg Focker to prove he has what it takes to be the new patriarch, but a series of misunderstandings and hijinks threaten to ruin everything. Starring Ben Stiller and Robert De Niro. Stream this comedy hit and explore our full collection at https://moviehub.uk/.",
+  "embedId": "31968135839",
+  "source": "ok.ru",
+  "posterUrl": "/images/little-fockers-2010.jpg"
+},
      {
         "id": "Salt",
         "posterUrl":  "images/Salt.jpg",
@@ -10447,15 +10445,17 @@
         "source": "youtube"
      },
       {
-        "id": "My Little Sister",
-        "posterUrl":  "images/My Little Sister.jpg",
-        "year":2016,
-        "title": "My Little Sister",
-        "description": "A group of friends go against warnings not to camp in the local woods, where a legendary monster named Little Sister is rumored to exist. As they defy all advice, one by one they soon fall victim to a family of deformed killers.",
-        "embedId": "3500442389047",
-        "genres": ["Horror","Slasher"],
-        "source": "ok.ru"
-     },
+  "id": "my-little-sister-2016",
+  "title": "My Little Sister (2016) Full Movie | Indie Horror | Slasher Thriller",
+  "year": 2016,
+  "director": "Unknown",
+  "quality": "HD",
+  "genres": "Horror, Slasher, Thriller",
+  "description": "Ignoring dire warnings, a group of friends ventures into the local woods, unaware that they are entering the hunting grounds of a legendary terror known as the 'Little Sister.' As they defy all advice, the group is picked off one by one by a family of deformed killers. Experience this intense indie slasher and explore our full collection at https://moviehub.uk/.",
+  "embedId": "3500442389047",
+  "source": "rumble",
+  "posterUrl": "/images/my-little-sister-2016.jpg"
+},
      {
         "id": "Robert the Bruce",
         "posterUrl":  "images/Robert the Bruce.jpg",
@@ -10667,19 +10667,19 @@
         "genres": ["Drama","Action","Horror"],
         "source": "ok.ru"
      },
-     {
-  "id": "the-girl-2012-full-movie",
-  "title": "The Girl (2012) Full Movie | Alfred Hitchcock & Tippi Hedren | Biography Drama | Behind the Scenes",
+    {
+  "id": "the-girl-2012",
+  "title": "The Girl (2012) Full Movie | Alfred Hitchcock & Tippi Hedren | Biography Drama",
   "year": 2012,
   "director": "Julian Jarrold",
   "quality": "HD",
-  "genres": ["Biography", "Drama", "History","Hitchcock"],
-   "category": "Hitchcock",
-  "description": "Delve into the tumultuous and disturbing relationship between legendary filmmaker Sir Alfred Hitchcock (Toby Jones) and his muse, actress Tippi Hedren (Sienna Miller). This gripping 2012 biographical drama offers a raw look behind the glamour of Hollywood, exploring the psychological complexities and dark obsession that unfolded during the making of classic films like 'The Birds' and 'Marnie.' The Girl (2012) reveals a compelling, often unsettling, chapter in cinematic history. Watch the full movie now.",
+  "duration": "1h 30m",
+  "genres": "Biography, Drama, History, Hitchcock",
+  "category": "Hitchcock",
+  "description": "Delve into the tumultuous relationship between legendary filmmaker Sir Alfred Hitchcock and his muse, Tippi Hedren. This gripping biographical drama offers a raw look behind the glamour of Hollywood, exploring the psychological complexities and obsession that unfolded during the making of 'The Birds' and 'Marnie.' Stream this unsettling chapter in cinematic history and explore our full Hitchcock collection at https://moviehub.uk/.",
   "embedId": "9618328652326",
-  "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/I/61lBYJlnqPL._AC_UF894,1000_QL80_.jpg",
-  "duration": "1HR.30"
+  "source": "rumble",
+  "posterUrl": "/images/the-girl-2012.jpg"
 },
      {
         "id": "Bring-Him-Back-Dead",
@@ -10702,15 +10702,18 @@
         "source": "ok.ru"
      },
       {
-        "id": "Stealing Candy",
-        "posterUrl":  "images/Stealing Candy.jpg",
-        "year":2003,
-        "title": "Stealing Candy",
-        "description": "Three ex-cons kidnap a famous movie star and force her to shoot a live sex tape to be aired over the internet for a paying audience.",
-        "embedId": "6583789685286",
-        "genres": ["erotic Thriller","Thriller"],
-        "source": "ok.ru"
-     },
+  "id": "stealing-candy-2003",
+  "title": "Stealing Candy (2003) Full Movie | Erotic Thriller",
+  "year": 2003,
+  "director": "Mark L. Lester",
+  "quality": "HD",
+  "duration": "1h 35m",
+  "genres": "Thriller, Erotic Thriller",
+  "description": "Three ex-cons kidnap a famous movie star and force her into a dangerous situation, demanding she shoot a live production to be aired over the internet for a captive audience. Stream this tense thriller and explore our full collection at https://moviehub.uk/.",
+  "embedId": "6583789685286",
+  "source": "ok.ru",
+  "posterUrl": "/images/stealing-candy-2003.jpg"
+},
      {
         "id": "Open",
         "posterUrl":  "images/Open.jpg",
@@ -11266,16 +11269,19 @@
         "genres": ["Horror","Slasher"],
         "source": "ok.ru"
      },
-      {
-        "id": "Leprechaun The Beginning",
-        "posterUrl":  "images/Leprechaun The Beginning.jpg",
-        "year":2025,
-        "title": "Leprechaun The Beginning",
-        "description": "A family discovers a treasure box of gold in their late father's house. What seems like a dream come true turns into a nightmare. They are stalked and killed by the real owner of the gold, the mischievous and deadly Leprechaun.",
-        "embedId": "9728788138534",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "leprechaun-the-beginning-2025",
+  "title": "Leprechaun: The Beginning (2025) Full Movie | Horror",
+  "year": 2025,
+  "director": "Various",
+  "quality": "HD",
+  "duration": "1h 30m",
+  "genres": "Horror, Supernatural, Slasher",
+  "description": "A family discovers a treasure box of gold in their late father's house, but what seems like a dream quickly turns into a nightmare. They are stalked and killed by the real owner of the gold, a mischievous and deadly Leprechaun. Experience this modern horror tale and explore our full collection at https://moviehub.uk/.",
+  "embedId": "9728788138534",
+  "source": "ok.ru",
+  "posterUrl": "/images/leprechaun-the-beginning-2025.jpg"
+},
       {
         "id": "Leave-No-Trace",
         "posterUrl":  "images/leave no trace.jpg",
@@ -11679,16 +11685,19 @@
         "genres": ["Horror","Thriller"],
         "source": "ok.ru"
      },
-       {
-       "id": "The-Hunt-For-The-BTK-Killer",
-         "posterUrl": "images/btk-killer.jpg",
-       "year": 2005,
-       "title": "The Hunt For The BTK Killer",
-        "description": "After 31 years at-large, detectives in Wichita, Kansas home in on the serial killer known as BTK.Dennis Rader, infamously known as the BTK killer, is a convicted American serial killer responsible for a series of murders in Wichita, Kansas, between 1974 and 1991. Rader's criminal activities began with the brutal killings of the Otero family, where he bound, tortured, and killed four members. He evaded capture for decades, taunting law enforcement and the media with letters that detailed his crimes, which led to the nickname BTK, standing for Bind, Torture, Kill. Rader's life appeared normal on the surface; he was a family man, worked in various jobs including at a security company, and was active in his church and community.His killing spree came to an abrupt halt in 1979, and Rader seemingly disappeared until he resurfaced in 2004, prompting a renewed investigation that ultimately led to his arrest in 2005. He was sentenced to ten consecutive life sentences without the possibility of parole. Over the years,",
-       "embedId": "6409514060345",
-       "genres": ["Crime","Action"],
-       "source": "ok.ru"
-            },
+      {
+  "id": "the-hunt-for-the-btk-killer-2005",
+  "title": "The Hunt For The BTK Killer (2005) Full Movie | True Crime Documentary",
+  "year": 2005,
+  "director": "Stephen Kay",
+  "quality": "HD",
+  "duration": "1h 30m",
+  "genres": "Crime, Documentary, True Crime",
+  "description": "After 31 years at large, detectives in Wichita, Kansas, finally close in on the serial killer known as BTK. This gripping true crime film follows the investigation into Dennis Rader, who evaded capture for decades while taunting authorities. Explore this chilling chapter of American crime history and browse our full archive at https://moviehub.uk/.",
+  "embedId": "6409514060345",
+  "source": "ok.ru",
+  "posterUrl": "/images/the-hunt-for-the-btk-killer-2005.jpg"
+},
       {
         "id": "Kindred-Spirits",
         "posterUrl":  "images/Kindred Spirits.jpg",
@@ -11809,16 +11818,18 @@
         "genres": ["Action","Adventure","Drama","Thriller"],
         "source": "ok.ru"
      },
-             {
-        "id": "Stan-the-Man",
-        "posterUrl":  "images/stan the man.jpg",
-        "year":2025,
-        "title": "Stan The Man",
-        "description": "From coaching football in the Pros to living on the streets. Stan must choose to face his demons and beat his addiction if he is to turn his life around and take a small Christian High School to it's first ever state football championship",
-        "embedId": "10332941453862",
-        "genres": ["Drama"],
-        "source": "ok.ru"
-     },
+           {
+  "id": "stan-the-man-2025",
+  "title": "Stan The Man (2025) Full Movie | Sports Drama | Inspirational Story",
+  "year": 2025,
+  "director": "Unknown",
+  "quality": "HD",
+  "genres": "Drama, Sports, Inspirational",
+  "description": "From coaching professional football to living on the streets, Stan’s life has hit rock bottom. To turn his life around, he must face his inner demons and battle his addiction. His road to redemption leads him to a small Christian High School, where he hopes to guide the underdog team to their first-ever state football championship. Stream this inspiring sports drama and explore our full collection at https://moviehub.uk/.",
+  "embedId": "10332941453862",
+  "source": "ok.ru",
+  "posterUrl": "/images/stan-the-man-2025.jpg"
+},
              {
         "id": "Witchy-Ways",
         "posterUrl":  "images/Witchy Ways.jpg",
@@ -11898,16 +11909,19 @@
         "genres": ["Action,Thriller"],
         "source": "ok.ru"
      },
-              {
-        "id": "long_shadows",
-        "posterUrl": "images/Long.jpg",
-        "year":2025,
-        "title": "long shadows ",
-        "description": "When a young boy's mother and father are savagely murdered, he ages out of an orphanage intent on revenge, but the love of a girl and psychological trauma lead him down a mystifying path.",
-        "embedId": "10768314206758",
-        "genres": ["Action,Western"],
-        "source": "ok.ru"
-     },
+           {
+  "id": "long-shadows-2025",
+  "title": "Long Shadows (2025) Full Movie | Western Action",
+  "year": 2025,
+  "director": "Unknown",
+  "quality": "HD",
+  "duration": "1h 30m",
+  "genres": "Action, Western, Drama",
+  "description": "After his parents are savagely murdered, a young man ages out of an orphanage with a single intent: revenge. However, the love of a girl and the weight of his psychological trauma lead him down a complex and mystifying path. Explore this Western action drama and our full collection at https://moviehub.uk/.",
+  "embedId": "10768314206758",
+  "source": "ok.ru",
+  "posterUrl": "/images/long-shadows-2025.jpg"
+},
      {
         "id": "ZandysBride",
         "title": "Zandy's Bride (1974)",
@@ -12087,14 +12101,17 @@
   },
  
   {
-    "id": "stranger-at-my-door-1956",
-    "title": "Stranger At My Door (1956)",
-    "description": "A psychological Western focusing on a preacher's attempt to reform a violent outlaw who seeks refuge in his home.",
-    "genres": ["Western", "Psychological", "Movie"],
-    "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/87120dc319613c7212c958a16d29562eec14ee4cb73c756eb668affab497f043.jpg",
-    "source": "rumble",
-    "embedId": "v71m0ba"
-  },
+  "id": "stranger-at-my-door-1956",
+  "title": "Stranger at My Door (1956) Full Movie | William Witney | Psychological Western",
+  "year": 1956,
+  "director": "William Witney",
+  "quality": "HD",
+  "genres": "Western, Drama, Classics, Psychological",
+  "description": "In this intense psychological Western, a compassionate preacher takes a grave risk by offering refuge to a notorious, violent outlaw. As the outlaw hides in his home, the preacher attempts to guide him toward redemption, leading to a tense moral standoff. Stream this classic Western and explore our full collection at https://moviehub.uk/.",
+  "embedId": "v71m0ba",
+  "source": "rumble",
+  "posterUrl": "/images/stranger-at-my-door-1956.jpg"
+},
 
   {
     "id": "guns-of-fort-petticoat-1957",
@@ -13112,16 +13129,19 @@
     "genres": ["Thriller", "Horror", "Mystery"],
     "source": "rumble"
   },
-  {
-    "id": "Out-for-Blood-2004",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjNmZjQzMmUtOTRhOS00YzcyLTkyYjgtZjEwMDgzMjc2MWI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "year": 2004,
-    "title": "Out for Blood",
-    "description": "A detective investigating missing persons discovers a nest of vampires preying on the underground rave scene in Los Angeles.",
-    "embedId": "v72jc26",
-    "genres": ["Horror", "Action", "Thriller"],
-    "source": "rumble"
-  },
+ {
+  "id": "out-for-blood-2004",
+  "title": "Out for Blood (2004) Full Movie | Horror Action",
+  "year": 2004,
+  "director": "Richard Brandes",
+  "quality": "HD",
+  "duration": "1h 30m",
+  "genres": "Horror, Action, Thriller",
+  "description": "A detective investigating a series of missing persons cases discovers a dangerous nest of vampires preying on the underground rave scene in Los Angeles. Experience this gritty vampire thriller and explore our full collection at https://moviehub.uk/.",
+  "embedId": "v72jc26",
+  "source": "rumble",
+  "posterUrl": "/images/out-for-blood-2004.jpg"
+},
    {
     "id": "55-Days-at-Peking-1963",
     "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWI5NjEwZWYtZjVkNy00NTExLTg0MTctMjkxNDZkMjJmMjc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -14377,15 +14397,18 @@
     "year": 1960
   },
    
-  {
-    "id": "raid-on-entebbe",
-    "title": "Raid on Entebbe",
-    "description": "Based on a true story: Israeli commandos carry out a daring rescue mission to save hostages from a hijacked plane held at an airport in Uganda.",
-    "embedId": "v731cmg",
-    "genres": ["Action", "Drama", "History"],
-    "source": "rumble",
-    "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg5cQ_QVX5YkUFB-tpWn_NR89i-Ntmzx8psA&s",
-    "year": 1977
+ {
+  "id": "raid-on-entebbe-1977",
+  "title": "Raid on Entebbe (1977) Full Movie | Action Drama History",
+  "year": 1977,
+  "director": "Irvin Kershner",
+  "quality": "HD",
+  "duration": "2h 30m",
+  "genres": "Action, Drama, History, Classics",
+  "description": "Based on a true story, Israeli commandos carry out a daring rescue mission to save hostages from a hijacked plane held at an airport in Uganda. Experience this gripping historical drama and explore our full collection at https://moviehub.uk/.",
+  "embedId": "v731cmg",
+  "source": "rumble",
+  "posterUrl": "/images/raid-on-entebbe-1977.jpg"
 },
     {
     "id": "the-unforgiven-1960",
@@ -14686,16 +14709,18 @@
   "url": "v738edy",
   "posterUrl": "https://resizing.flixster.com/n0wx6e8DrKfIHIeH_HobGRhTfgg=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p39289_p_v8_ab.jpg"
 },
-    {
-  "id": "On-the-Buses-1971",
-  "title": "On the Buses",
-  "year": "1971",
-  "quality": "1080p WebRip",
-  "genres": "Comedy",
-  "description": "Bus driver Stan Butler and his conductor Jack Harper scheme to sabotage the bus company's new plan to hire female drivers to protect their own overtime pay.",
+   {
+  "id": "on-the-buses-1971",
+  "title": "On the Buses (1971) Full Movie | British Comedy Classic",
+  "year": 1971,
+  "director": "Harry Booth",
+  "quality": "1080p",
+  "duration": "1h 25m",
+  "genres": "Comedy, British, Classics",
+  "description": "Bus driver Stan Butler and his conductor Jack Harper scheme to sabotage the bus company's new plan to hire female drivers to protect their own overtime pay in this British comedy classic. Stream this hilarious film and explore our full collection at https://moviehub.uk/.",
+  "embedId": "v738er6",
   "source": "rumble",
-  "url": "v738er6",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjE5YmFjOTEtZDhmMy00MDYxLWJhMDMtZDc1ZTRkZDBhYjNjXkEyXkFqcGc@._V1_.jpg"
+  "posterUrl": "/images/on-the-buses-1971.jpg"
 },
     {
   "id": "Mutiny-on-the-Buses-1972",

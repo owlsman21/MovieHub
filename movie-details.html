@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+  (function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    if (id) {
+      // This sends them to the new clean structure
+      window.location.replace("https://moviehub.uk/movies/" + id.toLowerCase());
+    }
+  })();
+</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
