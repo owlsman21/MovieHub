@@ -85,7 +85,7 @@
 
         async function init() {
             try {
-                const response = await fetch('data/all-movies.json?t=' + new Date().getTime());
+             const response = await fetch('all-movies.json?t=' + new Date().getTime());
                 allMoviesData = await response.json();
             } catch (error) {
                 console.error("Error loading data:", error);
@@ -137,8 +137,30 @@
                     grid.appendChild(img);
                 });
             } else {
+                // 1. Generate LATEST ADDITIONS Row at the absolute top (First 6 entries in the array)
+                const latestAddedSection = document.createElement('section');
+                latestAddedSection.className = 'shelf';
+                latestAddedSection.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                        <h2>Latest Additions</h2>
+                        <a href="catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                    </div>
+                    <div class="shelf-grid" id="grid-latest-additions"></div>
+                `;
+                container.appendChild(latestAddedSection);
+
+                const latestAddedGrid = document.getElementById('grid-latest-additions');
+                movies.slice(0, 6).forEach(m => {
+                    const img = document.createElement('img');
+                    img.src = m.posterUrl;
+                    img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                    img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                    latestAddedGrid.appendChild(img);
+                });
+
+                // 2. Define the keyword-filtered categories (With New Releases placed under Latest Additions)
                 const categories = [
-                    { title: "Latest Releases", keyword: "New", domId: "latest" },
+                    { title: "New Releases", keyword: "New", domId: "latest" },
                     { title: "Drama Collection", keyword: "Drama", domId: "drama" },
                     { title: "Biography Selection", keyword: "Biography", domId: "biography" },
                     { title: "History Vault", keyword: "History", domId: "history" },
@@ -178,8 +200,10 @@
                         });
                     });
                 }
-                renderBatch(categories.slice(0, 2));
-                setTimeout(() => renderBatch(categories.slice(2)), 100);
+                
+                // Render content in chunks to maintain performance and layout stability
+                renderBatch(categories.slice(0, 2)); // New Releases and Drama Collection render next
+                setTimeout(() => renderBatch(categories.slice(2)), 100); // Remaining categories follow
             }
         }
         init();
