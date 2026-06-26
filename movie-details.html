@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; }
         #wrapper { position: relative; width: 100%; max-width: 850px; margin: 0 auto; background: #000; aspect-ratio: 16 / 9; overflow: hidden; }
         #movie-iframe { width: 100%; height: 100%; border: none; }
         #mega-shield { position: absolute; top: 0; right: 0; width: 25%; height: 20%; z-index: 10; background: transparent; cursor: default; display: none; }
         .related-section { margin-top: 40px; padding: 20px; }
-        .related-grid { display: flex; gap: 15px; flex-wrap: wrap; }
-        .related-grid a img { width: 150px; border-radius: 8px; transition: 0.3s; }
+        .related-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; }
+        .related-grid a img { width: 150px; height: 225px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
         .related-grid a img:hover { transform: scale(1.05); }
     </style>
 </head>
@@ -57,7 +58,8 @@
             document.getElementById('canonical-link').setAttribute('href', window.location.href);
 
             try {
-                const response = await fetch('data/all-movies.json');
+                // FIXED PATH: Changed from 'data/all-movies.json' to 'all-movies.json' and added cache busting
+                const response = await fetch('all-movies.json?t=' + new Date().getTime());
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
                 
@@ -81,6 +83,7 @@
                     document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${movie.genres || ''}`;
                     document.getElementById('movie-desc').innerText = movie.description;
 
+                    // Populate JSON-LD Schema
                     const script = document.createElement('script');
                     script.type = 'application/ld+json';
                     script.textContent = JSON.stringify({
@@ -99,9 +102,49 @@
                         }
                     });
                     document.head.appendChild(script);
+
+                    // Render Related "You Might Also Like" Movies Based on Shared Genres
+                    renderRelatedMovies(movies, movie);
+                } else {
+                    document.getElementById('movie-meta').innerText = "Movie not found in the vault selection.";
                 }
-            } catch (e) { console.error("Error loading movie:", e); }
+            } catch (e) { 
+                console.error("Error loading movie:", e); 
+                document.getElementById('movie-meta').innerText = "Error loading data.";
+            }
         }
+
+        function renderRelatedMovies(allMovies, currentMovie) {
+            const grid = document.getElementById('related-grid');
+            grid.innerHTML = '';
+            
+            if (!currentMovie.genres) return;
+            
+            // Extract individual genre tags
+            const targetGenres = currentMovie.genres.split(',').map(g => g.trim().toLowerCase());
+            
+            // Filter out the active movie, then match by common genres
+            const related = allMovies.filter(m => {
+                if (m.id === currentMovie.id || !m.genres) return false;
+                const movieGenres = m.genres.split(',').map(g => g.trim().toLowerCase());
+                return movieGenres.some(g => targetGenres.includes(g));
+            });
+
+            // Display up to 6 recommendations
+            related.slice(0, 6).forEach(m => {
+                const link = document.createElement('a');
+                link.href = `movie-details.html?id=${m.id}`;
+                
+                const img = document.createElement('img');
+                img.src = m.posterUrl;
+                img.alt = m.title || "Recommended Movie";
+                img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                
+                link.appendChild(img);
+                grid.appendChild(link);
+            });
+        }
+
         loadMovieDetails();
     </script>
 </body>
