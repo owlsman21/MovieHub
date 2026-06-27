@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Watch classic movies on MovieHub.">
+    
+    <meta id="meta-description" name="description" content="Stream fully restored classic cinema collections, Hollywood golden era westerns, vintage film noir, and rare horror movies completely free on MovieHub.">
     <link id="canonical-link" rel="canonical" href="https://moviehub.uk/movie-details.html" />
 
     <title>MovieHub - Loading...</title>
@@ -38,9 +39,11 @@
         </div>
 
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
-            <h1 id="movie-title">MovieHub Digital Vault</h1>
-            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Loading...</p>
-            <p id="movie-desc" style="line-height:1.6; color:#ccc;"></p>
+            <h1 id="movie-title">MovieHub Digital Vault Cinema</h1>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Restored Classics | Full Movie Stream</p>
+            <p id="movie-desc" style="line-height:1.6; color:#ccc;">
+                Welcome to the Vault. We are preparing your classic movie presentation. If your feature film stream does not initialize momentarily, please verify that JavaScript is enabled to view our vintage Hollywood cinema archives.
+            </p>
         </div>
 
         <div class="related-section">
@@ -58,7 +61,6 @@
             document.getElementById('canonical-link').setAttribute('href', window.location.href);
 
             try {
-                // FIXED PATH: Changed from 'data/all-movies.json' to 'all-movies.json' and added cache busting
                 const response = await fetch('all-movies.json?t=' + new Date().getTime());
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
@@ -78,12 +80,21 @@
                     }
                     iframe.src = embedUrl;
 
+                    // Dynamic Title Update
                     document.title = `${cleanTitle} (${movie.year || ''}) | MovieHub`;
+                    
+                    // Dynamic SEO Meta Description Update for Crawlers
+                    const metaDescriptionElement = document.getElementById('meta-description');
+                    if (metaDescriptionElement && movie.description) {
+                        metaDescriptionElement.setAttribute('content', movie.description.substring(0, 160).trim() + '...');
+                    }
+
+                    // Interface Content Population
                     document.getElementById('movie-title').innerText = cleanTitle;
                     document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${movie.genres || ''}`;
                     document.getElementById('movie-desc').innerText = movie.description;
 
-                    // Populate JSON-LD Schema
+                    // Structured Data Injection
                     const script = document.createElement('script');
                     script.type = 'application/ld+json';
                     script.textContent = JSON.stringify({
@@ -103,7 +114,6 @@
                     });
                     document.head.appendChild(script);
 
-                    // Render Related "You Might Also Like" Movies Based on Shared Genres
                     renderRelatedMovies(movies, movie);
                 } else {
                     document.getElementById('movie-meta').innerText = "Movie not found in the vault selection.";
@@ -120,17 +130,14 @@
             
             if (!currentMovie.genres) return;
             
-            // Extract individual genre tags
             const targetGenres = currentMovie.genres.split(',').map(g => g.trim().toLowerCase());
             
-            // Filter out the active movie, then match by common genres
             const related = allMovies.filter(m => {
                 if (m.id === currentMovie.id || !m.genres) return false;
                 const movieGenres = m.genres.split(',').map(g => g.trim().toLowerCase());
                 return movieGenres.some(g => targetGenres.includes(g));
             });
 
-            // Display up to 6 recommendations
             related.slice(0, 6).forEach(m => {
                 const link = document.createElement('a');
                 link.href = `movie-details.html?id=${m.id}`;
