@@ -3093,4 +3093,106 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- The Heroes of Telemark (1965) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-heroes-of-telemark-1965</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Robinson Crusoe (1954) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=robinson-crusoe-1954-4k</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- She (1935) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=she-1935-colorized</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- A Bullet Is Waiting (1954) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=a-bullet-is-waiting-1954</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Shallow Hal (2001) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=shallow-hal-2001</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
+<!-- Singing Guns (1950) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=singing-guns-1950</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- The Road to Hong Kong (1962) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-road-to-hong-kong-1962-hd</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- The Road to Hong Kong (1962) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-road-to-hong-kong-1962-hd</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- The Big Combo (1955) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-big-combo-1955-colorized</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- The Snows of Kilimanjaro (1952) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-snows-of-kilimanjaro-1952</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Meteor (1979) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=meteor-1979</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tornado: The Last Blood (1983) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=tornado-the-last-blood-1983</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- The Jungle Book (1942) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-jungle-book-1942</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
