@@ -3195,4 +3195,25 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- We're Not Married! (1952) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=were-not-married-1952</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- The Hound of the Baskervilles (1959) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-hound-of-the-baskervilles-1959</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Run Silent, Run Deep (1958) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=run-silent-run-deep-1958</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
