@@ -1,4 +1,16 @@
 [
+    {
+  "id": "run-silent-run-deep-1958",
+  "title": "Run Silent, Run Deep (1958) Full Movie | Clark Gable & Burt Lancaster | Classic Submarine Naval Romance Drama",
+  "year": 1958,
+  "director": "Robert Wise",
+  "quality": "HD",
+  "genres": "Romance, Drama, Action, Classics",
+  "description": "An obsessive submarine commander seeking revenge against a deadly enemy destroyer clashes with his skeptical executive officer under the Pacific. A tense, star-studded WWII naval masterpiece starring Clark Gable and Burt Lancaster.",
+  "embedId": "v7a1ur6",
+  "source": "rumble",
+  "posterUrl": "/images/run-silent-run-deep-1958.jpg"
+},
      {
   "id": "the-hound-of-the-baskervilles-1959",
   "title": "The Hound of the Baskervilles (1959) Full Movie | Peter Cushing & Christopher Lee | Classic Hammer Gothic Mystery Horror",
@@ -11,20 +23,8 @@
   "source": "rumble",
   "posterUrl": "/images/the-hound-of-the-baskervilles-1959.jpg"
 },
-   {
-  "id": "run-silent-run-deep-1958",
-  "title": "Run Silent, Run Deep (1958) Full Movie | Clark Gable & Burt Lancaster | Classic Submarine Naval Romance Drama",
-  "year": 1958,
-  "director": "Robert Wise",
-  "quality": "HD",
-  "genres": "Romance, Drama, Action, Classics",
-  "description": "An obsessive submarine commander seeking revenge against a deadly enemy destroyer clashes with his skeptical executive officer under the Pacific. A tense, star-studded WWII naval masterpiece starring Clark Gable and Burt Lancaster.",
-  "embedId": "v7a1ur6",
-  "source": "rumble",
-  "posterUrl": "/images/run-silent-run-deep-1958.jpg"
-},
- 
-   {
+  
+ {
   "id": "theres-no-business-like-show-business-1954",
   "title": "There's No Business Like Show Business (1954) Full Movie | Marilyn Monroe & Ethel Merman | Classic Musical Romance Drama",
   "year": 1954,
@@ -15227,11 +15227,7 @@
   "posterUrl": "https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-1givdux_c0e35a77.jpeg"
 }
     
-    
-    
-  
-
-]
+    ]
  
  
 
