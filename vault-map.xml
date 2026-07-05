@@ -3216,4 +3216,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- King Solomon's Mines (2004) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=king-solomons-mines-2004</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Sherlock Holmes in New York (1976) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=sherlock-holmes-in-new-york-1976</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
