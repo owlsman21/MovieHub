@@ -3230,4 +3230,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Destination Gobi (1953) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=destination-gobi-1953</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Twelve O'Clock High (1949) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=twelve-oclock-high-1949</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Wing and a Prayer (1944) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=wing-and-a-prayer-1944</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- The Outsider (1961) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=the-outsider-1961</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- A Bridge Too Far (1977) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=a-bridge-too-far-1977</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Battle of the Commandos (1969) -->
+  <url>
+    <loc>https://moviehub.uk/movie.html?id=battle-of-the-commandos-1969</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
