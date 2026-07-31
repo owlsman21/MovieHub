@@ -1,0 +1,6 @@
+    # _config.yml
+    # This ensures .xml files are served with the correct Content-Type for sitemaps.
+    # It might also be beneficial to add other types like .json if you have them.
+    static_files:
+      - filename: sitemap.xml
+        type: application/xml

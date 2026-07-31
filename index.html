@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="msvalidate.01" content="AD92F5D90C30A5F6AAA353777F300D67" />
+    <meta charset="UTF-8">
+    <title>MovieHub | Premium Vault</title>
+    <meta name="description" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; }
+        header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        
+        .search-row { text-align: center; padding: 20px; }
+        .search-wrapper { position: relative; display: inline-block; width: 320px; }
+        #search-input { padding: 10px 40px 10px 12px; width: 100%; border-radius: 5px; border: none; box-sizing: border-box; }
+        
+        .clear-btn { 
+            position: absolute; right: 12px; top: 50%; transform: translateY(-50%); 
+            background: none; border: none; color: #666; cursor: pointer; font-size: 1.1rem; 
+            display: none; padding: 0;
+        }
+        .clear-btn:hover { color: #e50914; }
+
+        .shelf { margin: 40px 20px; min-height: 310px; } 
+        .shelf h2 { color: #ffd700; border-left: 4px solid #e50914; padding-left: 10px; }
+        .shelf-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; min-height: 240px; }
+        
+        .search-grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; padding-bottom: 20px; }
+
+        .shelf-grid img, .search-grid-layout img { 
+            width: 160px; height: 240px; min-width: 160px; min-height: 240px;
+            flex-shrink: 0; border-radius: 6px; object-fit: cover; cursor: pointer; 
+            background-color: #111; display: block; 
+            content-visibility: auto;
+        }
+        .search-grid-layout img { width: 100%; }
+
+        footer { background: #111; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
+        .footer-icons { font-size: 1.5rem; margin: 15px 0; }
+        .footer-icons a { color: #ffd700; margin: 0 10px; }
+        #back-to-top { position: fixed; bottom: 20px; right: 20px; background: #ffd700; padding: 10px 15px; border-radius: 50%; cursor: pointer; color: black; display: none; z-index: 999; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MOVIEHUB VAULT</h1>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="catalog.html">ALL MOVIES</a>
+            <a href="login.html">Login</a> 
+            <a href="Membership.html">membership</a>
+        </nav>
+    </header>
+
+    <div class="search-row">
+        <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="Search the vault...">
+            <button id="clear-search" class="clear-btn" title="Clear search"><i class="fas fa-times-circle"></i></button>
+        </div>
+    </div>
+
+    <div id="shelf-container"></div>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="#"><i class="fas fa-hat-cowboy"></i></a>
+            <a href="#"><i class="fas fa-ghost"></i></a>
+            <a href="#"><i class="fas fa-fist-raised"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 MovieHub. All rights reserved.</p>
+        <p>Hand-curated in Thailand | Subsidizing the Pension Fund</p>
+    </footer>
+
+    <div id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        let allMoviesData = []; 
+
+        async function init() {
+            try {
+                const response = await fetch('all-movies.json?t=' + new Date().getTime());
+                allMoviesData = await response.json();
+            } catch (error) {
+                console.error("Error loading data:", error);
+            }
+
+            renderShelves(allMoviesData);
+
+            window.addEventListener('scroll', () => {
+                const btt = document.getElementById('back-to-top');
+                if (btt) btt.style.display = (window.scrollY > 300) ? 'block' : 'none';
+            });
+
+            const searchInput = document.getElementById('search-input');
+            const clearBtn = document.getElementById('clear-search');
+
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase().trim();
+                if (term.length > 0) {
+                    clearBtn.style.display = 'block';
+                    renderShelves(allMoviesData.filter(m => m.title && m.title.toLowerCase().includes(term)), true); 
+                } else {
+                    clearBtn.style.display = 'none';
+                    renderShelves(allMoviesData, false);
+                }
+            });
+
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                clearBtn.style.display = 'none';
+                renderShelves(allMoviesData, false);
+            });
+        }
+
+        function renderShelves(movies, isSearch = false) {
+            const container = document.getElementById('shelf-container');
+            container.innerHTML = '';
+            
+            if (isSearch) {
+                const section = document.createElement('section');
+                section.className = 'shelf';
+                section.innerHTML = `<h2>Search Results</h2><div class="search-grid-layout" id="search-grid"></div>`;
+                container.appendChild(section);
+                const grid = document.getElementById('search-grid');
+                movies.forEach(m => {
+                    const img = document.createElement('img');
+                    img.src = m.posterUrl;
+                    img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                    img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                    grid.appendChild(img);
+                });
+            } else {
+                // 1. Generate LATEST ADDITIONS Row at the absolute top (First 12 entries in the array)
+                const latestAddedSection = document.createElement('section');
+                latestAddedSection.className = 'shelf';
+                latestAddedSection.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                        <h2>Latest Additions</h2>
+                        <a href="catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                    </div>
+                    <div class="shelf-grid" id="grid-latest-additions"></div>
+                `;
+                container.appendChild(latestAddedSection);
+
+                const latestAddedGrid = document.getElementById('grid-latest-additions');
+                movies.slice(0, 12).forEach(m => {
+                    const img = document.createElement('img');
+                    img.src = m.posterUrl;
+                    img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                    img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                    latestAddedGrid.appendChild(img);
+                });
+
+                // 2. Define the keyword-filtered categories
+                const categories = [
+                    { title: "New Releases", keyword: "New", domId: "latest" },
+                    { title: "Classic Cinema & Noir", keyword: "Classics", domId: "classics" },
+                    { title: "Drama Collection", keyword: "Drama", domId: "drama" },
+                    { title: "Biography Selection", keyword: "Biography", domId: "biography" },
+                    { title: "History Vault", keyword: "History", domId: "history" },
+                    { title: "Sci-Fi Collection", keyword: "Sci-Fi", domId: "scifi" },
+                    { title: "War Movies", keyword: "War", domId: "war" },
+                    { title: "Westerns", keyword: "Western", domId: "western" },
+                    { title: "Horror & Thriller Vault", keyword: "Horror", domId: "horror" },
+                    { title: "Action Collection", keyword: "Action", domId: "action" },
+                    { title: "Comedy, Romance & Fantasy", keyword: "Comedy", domId: "comedy" },
+                    { title: "Bette Davis Collection", keyword: "Bette Davis", domId: "bettedavis" },
+                    { title: "Hitchcock Collection", keyword: "Hitchcock", domId: "hitchcock" }
+                ];
+
+                function renderBatch(batch) {
+                    batch.forEach(cat => {
+                        let filtered = [];
+
+                        if (cat.keyword === "New") {
+                            // Filter by year for recent releases (2024 and newer) sorted descending
+                            filtered = movies
+                                .filter(m => parseInt(m.year, 10) >= 2024)
+                                .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
+                        } else {
+                            // General filter checking title or genres
+                            const kw = cat.keyword.toLowerCase();
+                            filtered = movies.filter(m => {
+                                const inTitle = m.title && m.title.toLowerCase().includes(kw);
+                                let inGenres = false;
+                                if (m.genres) {
+                                    if (Array.isArray(m.genres)) {
+                                        inGenres = m.genres.some(g => g.toLowerCase().includes(kw));
+                                    } else if (typeof m.genres === 'string') {
+                                        inGenres = m.genres.toLowerCase().includes(kw);
+                                    }
+                                }
+                                return inTitle || inGenres;
+                            });
+                        }
+
+                        if (filtered.length === 0) return;
+                        
+                        const section = document.createElement('section');
+                        section.className = 'shelf';
+                        section.innerHTML = `
+                            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                                <h2>${cat.title}</h2>
+                                <a href="category.html?q=${encodeURIComponent(cat.keyword)}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                            </div>
+                            <div class="shelf-grid" id="grid-${cat.domId}"></div>
+                        `;
+                        container.appendChild(section);
+                        const grid = document.getElementById(`grid-${cat.domId}`);
+                        filtered.slice(0, 12).forEach(m => {
+                            const img = document.createElement('img');
+                            img.src = m.posterUrl;
+                            img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                            img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                            grid.appendChild(img);
+                        });
+                    });
+                }
+                
+                // Render batch in chunks to maintain UI responsiveness
+                renderBatch(categories.slice(0, 2)); 
+                setTimeout(() => renderBatch(categories.slice(2)), 100); 
+            }
+        }
+        init();
+    </script>
+</body>
+</html>

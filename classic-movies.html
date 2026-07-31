@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Movies Vault | Stream Golden Age Cinema | MovieHub</title>
+    <meta name="description" content="Step into the golden age of cinema. Stream fully restored classic dramas, Hollywood melodramas, and timeless vintage films.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Top Navigation Bar Branding */
+        .site-header {
+            background-color: #0b0b0b;
+            border-bottom: 2px solid #ff003c;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        @media(min-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        /* Navigation Links Menu */
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #ff003c;
+        }
+        
+        /* Specialized Styled Menu Buttons */
+        .btn-membership {
+            color: #ffcc00;
+        }
+        .btn-membership:hover {
+            color: #ffffff;
+        }
+        .btn-members-movies {
+            border: 2px solid #ffcc00;
+            border-radius: 6px;
+            padding: 6px 12px;
+            color: #ffcc00;
+        }
+        .btn-members-movies:hover {
+            background-color: #ffcc00;
+            color: #000000;
+        }
+        .btn-support {
+            background-color: #ffcc00;
+            color: #000000;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-support:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Search Bar Controller Layout */
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: #ff003c;
+        }
+
+        /* Main Page Layout Sections */
+        .vault-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+        .vault-header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-bottom: 1px solid #222; 
+            padding-bottom: 20px; 
+        }
+        .vault-header h1 {
+            font-size: 2.2rem;
+            color: #fff;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+        .vault-header p {
+            color: #888;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        /* Native Grid Config */
+        .movie-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 25px; 
+        }
+
+        /* Back to Top Floating Arrow Component */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff003c;
+            color: #ffffff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            background-color: #ffffff;
+            color: #ff003c;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+  <header class="site-header">
+        <div class="header-container">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#new-additions-section" class="nav-link">Newly Added</a></li>
+                    <li><a href="index.html#previews" class="nav-link">Movie Previews</a></li>
+                    <li><a href="index.html#latest" class="nav-link">Latest Releases</a></li>
+                    <li><a href="index.html#asian" class="nav-link">Asian Movies</a></li>
+                    <li><a href="membership.html" class="nav-link btn-membership">Join Membership</a></li>
+                    <li><a href="members-vault.html" class="nav-link btn-members-movies">Members Movies</a></li>
+                    <li><a href="support.html" class="nav-link btn-support">☕ Support</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search classics vault...">
+            </div>
+        </div>
+    </header>
+
+    <main class="vault-container">
+        <div class="vault-header">
+            <h1>THE CLASSIC MOVIES VAULT</h1>
+            <p>Step back in time with fully restored treasures from Hollywood's Golden Age.</p>
+        </div>
+
+        <div class="movie-grid" id="classics-grid"></div>
+    </main>
+
+    <a href="#" class="back-to-top" id="scrollTopBtn" title="Back to Top">↑</a>
+
+    <script src="app.js"></script>
+
+    <script>
+        // Back To Top Button visibility dynamic toggling monitor
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add("visible");
+            } else {
+                scrollTopBtn.classList.remove("visible");
+            }
+        });
+
+        // Smooth scroll implementation loop interceptor
+        scrollTopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

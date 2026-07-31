@@ -1,0 +1,321 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Header & Navigation Area */
+.main-header {
+    text-align: center;
+    padding: 20px 10px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+    border-bottom: 1px solid #222;
+}
+
+.main-header h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.main-header h2 span { color: #e50914; }
+
+/* Search and Dropdown */
+.controls-container {
+    width: 95%;
+    max-width: 400px;
+    margin: 15px auto;
+}
+
+#search-input, .genre-select {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* THE GRID - High Specificity to beat Tailwind */
+.content {
+    padding: 5px !important; 
+    width: 100% !important;
+}
+
+/* Targeting with .content prefix to override utility frameworks */
+.content .movie-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 10px !important;
+    width: 100% !important;
+}
+
+/* RESPONSIVE UPGRADES */
+@media (min-width: 768px) {
+    .content .movie-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content .movie-grid {
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 25px !important;
+    }
+}
+
+/* MOVIE CARDS */
+.movie-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.movie-card:hover {
+    border: 1px solid #e50914;
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-card .info {
+    padding: 8px;
+    text-align: center;
+}
+
+.movie-card h3 {
+    font-size: 0.75rem;
+    color: #fff;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+/* Video Player & OK.ru Shielding */
+#wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+}
+
+.ok-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.ok-video-container iframe {
+    position: absolute;
+    top: -40px; 
+    left: 0;
+    width: 100%;
+    height: calc(100% + 45px);
+}
+
+/* Back to Top */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffd700;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+}
+/* Update your navigation link style to ensure they are clickable */
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800; 
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative; /* Add this */
+    z-index: 1001;      /* Add this */
+    cursor: pointer;    /* Add this to force the hand icon */
+}
+/* Store Page Styling */
+body {
+    background-color: #000; /* Keeps it consistent with MovieHub */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers all your text and images */
+}
+
+header {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+    border-bottom: 2px solid #333;
+}
+
+.store-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.product-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px; /* Keeps the framed poster at a good viewing size */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.02); /* Subtle lift when you hover over it */
+    border-color: #e50914; /* Optional: A cinematic red border on hover */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #f3ce13; /* Gold color for the price to make it look premium */
+    font-weight: bold;
+}
+
+.details {
+    color: #bbb;
+    margin-bottom: 25px;
+}
+.main-footer {
+    background: #111;
+    padding: 60px 20px 20px;
+    border-top: 3px solid var(--netflix-red);
+    margin-top: 80px;
+    color: #fff;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+.footer-section h3 {
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.8rem;
+}
+.social-links a { color: white; transition: 0.3s; }
+.social-links a:hover { color: var(--primary-gold); }
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #ccc; text-decoration: none; }
+.footer-links a:hover { color: white; }
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #ffd700; /* Primary Gold */
+    color: #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: none; /* Controlled by JS */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 99999 !important; /* Forces it above all movie posters */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    border: 2px solid #000;
+}
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5rem !important; /* Smaller logo for mobile */
+    }
+    body {
+        padding-top: 180px; /* Adjust spacing for mobile */
+    }
+    #search-input {
+        width: 80%; /* Search bar fits phone screens */
+    }
+}
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.coffee-btn {
+    background-color: #ffd700; /* MovieHub Gold */
+    color: #000 !important;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #ffd700;
+    transition: all 0.3s ease;
+}
+
+.coffee-btn:hover {
+    background-color: transparent;
+    color: #ffd700 !important;
+}
+
+/* Ensure Font Awesome icons are sized right */
+.coffee-btn i {
+    font-size: 0.9rem;
+}

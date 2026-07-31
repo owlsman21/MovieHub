@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieHub | Category</title>
+    <style>
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }
+        .grid img { width: 100%; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; background: #111; }
+        .pagination { margin-top: 30px; text-align: center; }
+        .pagination button { padding: 10px 20px; cursor: pointer; background: #e50914; color: white; border: none; border-radius: 5px; margin: 0 5px; }
+        .pagination button:disabled { background: #333; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <a href="index.html" style="color: #ffd700; text-decoration: none;">← BACK TO HOME</a>
+    <h1 id="cat-title">Loading...</h1>
+    <div class="grid" id="movie-grid"></div>
+    
+    <div class="pagination" id="pagination">
+        <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+        <span id="page-info" style="margin: 0 15px;"></span>
+        <button id="next-btn" onclick="changePage(1)">Next</button>
+    </div>
+
+    <script>
+        let movies = [];
+        let filtered = [];
+        let currentPage = 1;
+        const itemsPerPage = 18;
+
+        async function initCategory() {
+            const params = new URLSearchParams(window.location.search);
+            const keyword = params.get('q');
+            document.getElementById('cat-title').innerText = keyword ? `${keyword} Collection` : "Full Movie Collection";
+
+            const response = await fetch('data/all-movies.json');
+            movies = await response.json();
+            filtered = keyword 
+                ? movies.filter(m => (m.title && m.title.includes(keyword)) || (m.genres && m.genres.includes(keyword)))
+                : movies;
+
+            renderPage();
+        }
+
+        function renderPage() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedItems = filtered.slice(start, end);
+            
+            const grid = document.getElementById('movie-grid');
+            grid.innerHTML = '';
+            
+            paginatedItems.forEach(m => {
+                const img = document.createElement('img');
+                img.src = m.posterUrl;
+                img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                grid.appendChild(img);
+            });
+
+            document.getElementById('page-info').innerText = `Page ${currentPage} of ${Math.ceil(filtered.length / itemsPerPage)}`;
+            document.getElementById('prev-btn').disabled = currentPage === 1;
+            document.getElementById('next-btn').disabled = currentPage >= Math.ceil(filtered.length / itemsPerPage);
+        }
+
+        function changePage(direction) {
+            currentPage += direction;
+            renderPage();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        initCategory();
+    </script>
+</body>
+</html>

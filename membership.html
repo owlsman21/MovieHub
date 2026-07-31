@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieHub | Premium Vault</title>
+    <meta name="description" content="Join the MovieHub community. Create a free account to unlock exclusive features, curate your personal classic movie watchlist, and track your streaming history.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Matching Site Header Layout with Required H1 */
+        header { background: #111; padding: 20px; text-align: center; border-bottom: 2px solid #e50914; }
+        header h1 { margin: 0 0 10px 0; font-size: 2rem; letter-spacing: 1px; }
+        header h1 span { color: #e50914; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        .nav-links a:hover { color: #ffd700; }
+
+        /* Centered Sign Up Viewport Wrapper */
+        .signup-container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        
+        /* Premium Registration Box Card */
+        .signup-card { 
+            background: #111; 
+            padding: 40px; 
+            border-radius: 8px; 
+            border: 1px solid #333; 
+            text-align: center; 
+            width: 100%; 
+            max-width: 380px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+        }
+        .signup-card h2 { color: #ffd700; margin-top: 0; font-size: 1.8rem; }
+        .signup-card p { color: #ccc; font-size: 1rem; margin-bottom: 25px; line-height: 1.4; }
+        
+        /* Styled Form Inputs */
+        .signup-card input[type="text"],
+        .signup-card input[type="email"] { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border-radius: 5px; 
+            border: 1px solid #444; 
+            background: #222; 
+            color: white; 
+            font-size: 1rem; 
+            box-sizing: border-box;
+        }
+        .signup-card input:focus { border-color: #e50914; outline: none; }
+
+        /* Premium Crimson Submit Button */
+        .btn-submit { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 5px; 
+            border: none; 
+            background: #e50914; 
+            color: white; 
+            font-size: 1.1rem; 
+            font-weight: bold; 
+            cursor: pointer; 
+            transition: background 0.2s ease;
+            margin-bottom: 20px;
+        }
+        .btn-submit:hover { background: #b20710; }
+
+        /* High-Contrast Navigation Link */
+        .back-link { 
+            display: inline-block; 
+            color: #ffd700; 
+            text-decoration: none; 
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover { color: white; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>MOVIE<span>HUB</span></h1>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+            <a href="catalog.html"><i class="fas fa-film"></i> ALL MOVIES</a>
+        </div>
+    </header>
+
+    <main class="signup-container">
+        <div class="signup-card">
+            <h2>Founding Member Signup</h2>
+            <p>Register for free to receive your private vault access code.</p>
+            
+            <!-- Formspree endpoint updated for moviehub.uk -->
+            <form action="https://formspree.io/f/xqabalea" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email Address" required>
+                <button type="submit" class="btn-submit">Request Access Code</button>
+            </form>
+
+            <a href="index.html" class="back-link">← Return to Home</a>
+        </div>
+    </main>
+
+</body>
+</html>
