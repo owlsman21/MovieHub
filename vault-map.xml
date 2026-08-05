@@ -3677,4 +3677,63 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Take My Life (1947) -->
+  <url>
+    <loc>https://moviehub.uk/watch.html?id=take-my-life-1947</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Lady Gangster (1942) -->
+  <url>
+    <loc>https://moviehub.uk/watch.html?id=lady-gangster-1942</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- The Snows of Kilimanjaro (1952) -->
+  <url>
+    <loc>https://moviehub.uk/watch.html?id=the-snows-of-kilimanjaro-1952</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- We're Not Married! (1952) -->
+  <url>
+    <loc>https://moviehub.uk/watch.html?id=were-not-married-1952</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- As Young as You Feel (1951) -->
+  <url>
+    <loc>https://moviehub.uk/watch.html?id=as-young-as-you-feel-1951</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Monkey Business (1952) -->
+  <url>
+    <loc>https://moviehub.uk/watch.html?id=monkey-business-1952</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moviehub.uk/?movie=711-ocean-drive-1950</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://moviehub.uk/?movie=diplomatic-courier-1952</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 </urlset>

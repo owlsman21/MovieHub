@@ -1,4 +1,64 @@
 [
+   {
+  "id": "the-lighthorsemen-1987",
+  "title": "The Lighthorsemen (1987) Full Movie | Peter Phelps & Jon Blake | Legendary WWI Epic",
+  "year": 1987,
+  "director": "Simon Wincer",
+  "quality": "HD",
+  "genres": "War, Drama, Action, History",
+  "description": "In 1917 Palestine, four Australian cavalrymen face the trials of World War I, culminating in the heroic and legendary charge at the Battle of Beersheba. Starring Peter Phelps, Jon Blake, and Gary Sweet.",
+  "embedId": "v7bkap6",
+  "source": "rumble",
+  "posterUrl": "images/The Lighthorsemen (1987).jpg"
+},
+   {
+  "id": "diplomatic-courier-1952",
+  "title": "Diplomatic Courier (1952) Full Movie | Tyrone Power & Patricia Neal | Classic Spy Film Noir",
+  "year": 1952,
+  "director": "Henry Hathaway",
+  "quality": "HD",
+  "genres": "Crime, Film Noir, Thriller, Mystery, Drama",
+  "description": "An American diplomatic courier is plunged into a dangerous net of Cold War espionage and double agents after a contact is murdered on a train. Starring Tyrone Power, Patricia Neal, and Karl Malden.",
+  "embedId": "YOUR_RUMBLE_EMBED_ID",
+  "source": "rumble",
+ "posterUrl": "images/Diplomatic-Courier.jpg"
+},
+   {
+  "id": "711-ocean-drive-1950",
+  "title": "711 Ocean Drive (1950) Full Movie | Edmond O'Brien & Joanne Dru | Classic Film Noir Crime Drama",
+  "year": 1950,
+  "director": "Joseph M. Newman",
+  "quality": "HD",
+  "genres": "Crime, Film Noir, Drama, Thriller",
+  "description": "A clever telephone worker uses his knowledge to set up a widespread wire service for bookmakers, climbing to the top of an organized crime ring. Starring Edmond O'Brien and Joanne Dru.",
+  "embedId": "v7bjwe0",
+  "source": "rumble",
+ "posterUrl": "images/711.jpg"
+},
+   {
+  "id": "dragonwyck-1946",
+  "title": "Dragonwyck (1946) Full Movie | Gene Tierney & Vincent Price | Classic Gothic Mystery",
+  "year": 1946,
+  "director": "Joseph L. Mankiewicz",
+  "quality": "HD",
+  "genres": "Drama, Gothic, Mystery, Romance, Thriller",
+  "description": "A country girl moves into the grand Hudson Valley manor of her wealthy aristocratic cousin, only to find herself trapped in a web of dark secrets, tyranny, and madness. Starring Gene Tierney, Vincent Price, and Walter Huston.",
+  "embedId": "v7bgbqo",
+  "source": "rumble",
+   "posterUrl": "images/Dragonwyck.jpg"
+},
+   {
+  "id": "monkey-business-1952",
+  "title": "Monkey Business (1952) Full Movie | Cary Grant, Ginger Rogers & Marilyn Monroe | Classic Hollywood Comedy",
+  "year": 1952,
+  "director": "Howard Hawks",
+  "quality": "HD",
+  "genres": "Comedy, Sci-Fi, Classics",
+  "description": "A scientist accidentally drinks a youth-restoring potion concocted by a lab chimpanzee, sparking hilarious consequences. Starring Cary Grant, Ginger Rogers, and Marilyn Monroe.",
+  "embedId": "v7bdlu0",
+  "source": "rumble",
+  "posterUrl": "images/Monkey Business (1952).jpg"
+},
   {
   "id": "scary-movie-2026",
   "title": "Scary Movie (2026) Full Movie | Anna Faris & Marlon Wayans | Horror Comedy",
@@ -14211,18 +14271,7 @@
     "embedId": "v72o1nw",  
     "source": "rumble"
   },
-   {
-    "id": "rebecca-1940",
-    "title": "Rebecca (1940)",
-    "description": "Alfred Hitchcock's gothic masterpiece and Best Picture winner about a haunted marriage.",
-    "genres": ["Thriller"],
-    "year": 1940,
-    "quality": "1080p",
-    "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Rebecca_%281939_poster%29.jpeg",
-    "category": "Hitchcock",
-    "embedId": "v72o6c2",
-    "source": "rumble"
-  },
+   
   
   {
     "id": "great-expectations-1946",
