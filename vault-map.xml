@@ -1,5 +1,6 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://moviehub.uk/</loc>
     <lastmod>2026-04-01T13:15:00+07:00</lastmod>
@@ -3652,18 +3653,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://yourwebsite.com/movies/the-spiral-staircase-1946</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <video:video>
-      <video:thumbnail_loc>https://yourwebsite.com/images/The%20Spiral%20Staircase%20(1946).jpg</video:thumbnail_loc>
-      <video:title>The Spiral Staircase (1946) | Classic Psychological Horror</video:title>
-      <video:description>In a storm-battered New England mansion, a mute young woman becomes the next target of a serial killer preying on women with physical afflictions. Starring Dorothy McGuire, George Brent, and Ethel Barrymore.</video:description>
-      <video:player_loc>https://rumble.com/embed/YOUR_EMBED_ID_HERE/</video:player_loc>
-      <video:publication_date>1946-02-01</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
+ <!-- The Spiral Staircase (1946) -->
+<url>
+  <loc>https://moviehub.uk/movie-details.html?id=the-spiral-staircase-1946</loc>
+  <lastmod>2026-08-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
