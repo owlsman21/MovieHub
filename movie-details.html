@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta id="meta-description" name="description" content="Stream fully restored classic cinema collections, Hollywood golden era westerns, vintage film noir, and rare horror movies completely free on MovieHub.">
-    <link id="canonical-link" rel="canonical" href="https://moviehub.uk/movie-details.html" />
+    
+    <!-- REMOVED: Static canonical tag pointing to base movie-details.html -->
 
-    <title>MovieHub - Loading...</title>
+    <title>Watch Classic Movies Free | MovieHub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -39,11 +40,15 @@
         </div>
 
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
-            <h1 id="movie-title">MovieHub Digital Vault Cinema</h1>
-            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Restored Classics | Full Movie Stream</p>
-            <p id="movie-desc" style="line-height:1.6; color:#ccc;">
-                Welcome to the Vault. We are preparing your classic movie presentation. If your feature film stream does not initialize momentarily, please verify that JavaScript is enabled to view our vintage Hollywood cinema archives.
-            </p>
+            <h1 id="movie-title">Classic Movie Stream</h1>
+            <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Restored Golden Age Cinema</p>
+            <div id="movie-desc" style="line-height:1.6; color:#ccc;">
+                Loading full feature presentation details...
+            </div>
+            
+            <noscript>
+                <p>This movie stream requires JavaScript to load data dynamically. Please enable JavaScript in your browser to view our classic cinema archive.</p>
+            </noscript>
         </div>
 
         <div class="related-section">
@@ -58,10 +63,18 @@
             const movieId = params.get('id');
             if (!movieId) return;
 
-            document.getElementById('canonical-link').setAttribute('href', window.location.href);
+            // Dynamically create self-referential canonical for the full URL (including ID)
+            let canonicalTag = document.querySelector("link[rel='canonical']");
+            if (!canonicalTag) {
+                canonicalTag = document.createElement('link');
+                canonicalTag.setAttribute('rel', 'canonical');
+                document.head.appendChild(canonicalTag);
+            }
+            canonicalTag.setAttribute('href', window.location.origin + window.location.pathname + '?id=' + movieId);
 
             try {
-                const response = await fetch('all-movies.json?t=' + new Date().getTime());
+                // Fetch JSON without cache-busting timestamp so Googlebot can cache the response
+                const response = await fetch('all-movies.json');
                 const movies = await response.json();
                 const movie = movies.find(m => m.id === movieId);
                 
@@ -80,21 +93,20 @@
                     }
                     iframe.src = embedUrl;
 
-                    // Dynamic Title Update
-                    document.title = `${cleanTitle} (${movie.year || ''}) | MovieHub`;
+                    // Update Title & Meta Description
+                    document.title = `${cleanTitle} (${movie.year || ''}) Full Movie | MovieHub`;
                     
-                    // Dynamic SEO Meta Description Update for Crawlers
                     const metaDescriptionElement = document.getElementById('meta-description');
                     if (metaDescriptionElement && movie.description) {
-                        metaDescriptionElement.setAttribute('content', movie.description.substring(0, 160).trim() + '...');
+                        metaDescriptionElement.setAttribute('content', movie.description.substring(0, 155).trim() + '...');
                     }
 
                     // Interface Content Population
                     document.getElementById('movie-title').innerText = cleanTitle;
-                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${movie.genres || ''}`;
+                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${movie.genres || 'Classics'}`;
                     document.getElementById('movie-desc').innerText = movie.description;
 
-                    // Structured Data Injection
+                    // Inject Structured Data (VideoObject Schema)
                     const script = document.createElement('script');
                     script.type = 'application/ld+json';
                     script.textContent = JSON.stringify({
@@ -102,8 +114,8 @@
                         "@type": "VideoObject",
                         "name": cleanTitle,
                         "description": movie.description,
-                        "thumbnailUrl": movie.posterUrl,
-                        "uploadDate": new Date().toISOString(),
+                        "thumbnailUrl": [movie.posterUrl],
+                        "uploadDate": movie.year ? `${movie.year}-01-01T08:00:00+00:00` : "1950-01-01T08:00:00+00:00",
                         "contentUrl": window.location.href,
                         "embedUrl": embedUrl,
                         "publisher": {
