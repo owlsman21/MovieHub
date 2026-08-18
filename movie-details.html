@@ -6,8 +6,6 @@
     
     <meta id="meta-description" name="description" content="Stream fully restored classic cinema collections, Hollywood golden era westerns, vintage film noir, and rare horror movies completely free on MovieHub.">
     
-    <!-- REMOVED: Static canonical tag pointing to base movie-details.html -->
-
     <title>Watch Classic Movies Free | MovieHub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -58,12 +56,30 @@
     </main>
 
     <script>
+        // Helper to safely parse genres regardless of whether they are strings, arrays, or undefined
+        function safeParseGenres(genres) {
+            if (!genres) return [];
+            if (Array.isArray(genres)) {
+                return genres.map(g => String(g).trim().toLowerCase());
+            }
+            if (typeof genres === 'string') {
+                return genres.split(',').map(g => g.trim().toLowerCase());
+            }
+            return [];
+        }
+
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
-            const movieId = params.get('id');
-            if (!movieId) return;
+            const rawId = params.get('id');
+            
+            // Trim whitespace to handle accidental "%20" or URL space formatting issues
+            const movieId = rawId ? rawId.trim() : null;
+            if (!movieId) {
+                document.getElementById('movie-meta').innerText = "No movie specified.";
+                return;
+            }
 
-            // Dynamically create self-referential canonical for the full URL (including ID)
+            // Dynamically create self-referential canonical tag
             let canonicalTag = document.querySelector("link[rel='canonical']");
             if (!canonicalTag) {
                 canonicalTag = document.createElement('link');
@@ -73,10 +89,9 @@
             canonicalTag.setAttribute('href', window.location.origin + window.location.pathname + '?id=' + movieId);
 
             try {
-                // Fetch JSON without cache-busting timestamp so Googlebot can cache the response
                 const response = await fetch('all-movies.json');
                 const movies = await response.json();
-                const movie = movies.find(m => m.id === movieId);
+                const movie = movies.find(m => m && m.id === movieId);
                 
                 if (movie) {
                     const cleanTitle = movie.title ? movie.title.split('|')[0].trim() : 'Movie';
@@ -84,7 +99,7 @@
                     let embedUrl = "";
 
                     if (movie.source === "mega") {
-                        embedUrl = movie.embedId.replace("/file/", "/embed/");
+                        embedUrl = movie.embedId ? movie.embedId.replace("/file/", "/embed/") : "";
                         document.getElementById('mega-shield').style.display = "block";
                     } else if (movie.source === "ok.ru") {
                         embedUrl = `https://ok.ru/videoembed/${movie.embedId}`;
@@ -101,61 +116,75 @@
                         metaDescriptionElement.setAttribute('content', movie.description.substring(0, 155).trim() + '...');
                     }
 
+                    // Format genres for display string
+                    const genreDisplay = Array.isArray(movie.genres) 
+                        ? movie.genres.join(', ') 
+                        : (movie.genres || 'Classics');
+
                     // Interface Content Population
                     document.getElementById('movie-title').innerText = cleanTitle;
-                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${movie.genres || 'Classics'}`;
-                    document.getElementById('movie-desc').innerText = movie.description;
+                    document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${genreDisplay}`;
+                    document.getElementById('movie-desc').innerText = movie.description || '';
 
                     // Inject Structured Data (VideoObject Schema)
-                    const script = document.createElement('script');
-                    script.type = 'application/ld+json';
-                    script.textContent = JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "VideoObject",
-                        "name": cleanTitle,
-                        "description": movie.description,
-                        "thumbnailUrl": [movie.posterUrl],
-                        "uploadDate": movie.year ? `${movie.year}-01-01T08:00:00+00:00` : "1950-01-01T08:00:00+00:00",
-                        "contentUrl": window.location.href,
-                        "embedUrl": embedUrl,
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "MovieHub",
-                            "logo": { "@type": "ImageObject", "url": "https://moviehub.uk/logo.png" }
-                        }
-                    });
-                    document.head.appendChild(script);
+                    try {
+                        const script = document.createElement('script');
+                        script.type = 'application/ld+json';
+                        script.textContent = JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "VideoObject",
+                            "name": cleanTitle,
+                            "description": movie.description || "",
+                            "thumbnailUrl": movie.posterUrl ? [movie.posterUrl] : [],
+                            "uploadDate": movie.year ? `${movie.year}-01-01T08:00:00+00:00` : "1950-01-01T08:00:00+00:00",
+                            "contentUrl": window.location.href,
+                            "embedUrl": embedUrl,
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "MovieHub",
+                                "logo": { "@type": "ImageObject", "url": "https://moviehub.uk/logo.png" }
+                            }
+                        });
+                        document.head.appendChild(script);
+                    } catch (schemaErr) {
+                        console.warn("Schema injection skipped:", schemaErr);
+                    }
 
-                    renderRelatedMovies(movies, movie);
+                    // Render recommended grid in isolated try-block so errors don't break main UI
+                    try {
+                        renderRelatedMovies(movies, movie);
+                    } catch (relatedErr) {
+                        console.warn("Related movies failed to load:", relatedErr);
+                    }
                 } else {
                     document.getElementById('movie-meta').innerText = "Movie not found in the vault selection.";
                 }
             } catch (e) { 
-                console.error("Error loading movie:", e); 
+                console.error("Error loading movie details:", e); 
                 document.getElementById('movie-meta').innerText = "Error loading data.";
             }
         }
 
         function renderRelatedMovies(allMovies, currentMovie) {
             const grid = document.getElementById('related-grid');
+            if (!grid) return;
             grid.innerHTML = '';
             
-            if (!currentMovie.genres) return;
-            
-            const targetGenres = currentMovie.genres.split(',').map(g => g.trim().toLowerCase());
+            const targetGenres = safeParseGenres(currentMovie.genres);
+            if (targetGenres.length === 0) return;
             
             const related = allMovies.filter(m => {
-                if (m.id === currentMovie.id || !m.genres) return false;
-                const movieGenres = m.genres.split(',').map(g => g.trim().toLowerCase());
+                if (!m || m.id === currentMovie.id) return false;
+                const movieGenres = safeParseGenres(m.genres);
                 return movieGenres.some(g => targetGenres.includes(g));
             });
 
             related.slice(0, 6).forEach(m => {
                 const link = document.createElement('a');
-                link.href = `movie-details.html?id=${m.id}`;
+                link.href = `movie-details.html?id=${encodeURIComponent(m.id)}`;
                 
                 const img = document.createElement('img');
-                img.src = m.posterUrl;
+                img.src = m.posterUrl || 'images/poster-placeholder.jpg';
                 img.alt = m.title || "Recommended Movie";
                 img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
                 
