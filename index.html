@@ -24,17 +24,50 @@
 
         .shelf { margin: 40px 20px; min-height: 310px; } 
         .shelf h2 { color: #ffd700; border-left: 4px solid #e50914; padding-left: 10px; }
-        .shelf-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; min-height: 240px; }
+        .shelf-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; min-height: 270px; }
         
         .search-grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; padding-bottom: 20px; }
 
-        .shelf-grid img, .search-grid-layout img { 
-            width: 160px; height: 240px; min-width: 160px; min-height: 240px;
-            flex-shrink: 0; border-radius: 6px; object-fit: cover; cursor: pointer; 
-            background-color: #111; display: block; 
+        /* MOVIE CARD CONTAINER */
+        .movie-card {
+            width: 160px;
+            min-width: 160px;
+            flex-shrink: 0;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out;
+        }
+        .movie-card:hover {
+            transform: scale(1.03);
+        }
+
+        .search-grid-layout .movie-card {
+            width: 100%;
+            min-width: unset;
+        }
+
+        .movie-card img { 
+            width: 100%; 
+            height: 240px; 
+            border-radius: 6px; 
+            object-fit: cover; 
+            background-color: #111; 
+            display: block; 
             content-visibility: auto;
         }
-        .search-grid-layout img { width: 100%; }
+
+        /* MOVIE TITLE UNDERNEATH POSTER */
+        .movie-card-title {
+            color: #ffffff;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
 
         footer { background: #111; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
         .footer-icons { font-size: 1.5rem; margin: 15px 0; }
@@ -119,6 +152,26 @@
             });
         }
 
+        // Helper function to build a card element with image and title
+        function createMovieCard(movie) {
+            const card = document.createElement('div');
+            card.className = 'movie-card';
+            card.onclick = () => window.location.href = `movie-details.html?id=${movie.id}`;
+
+            const img = document.createElement('img');
+            img.src = movie.posterUrl;
+            img.alt = movie.title || 'Movie Poster';
+            img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+
+            const title = document.createElement('div');
+            title.className = 'movie-card-title';
+            title.textContent = movie.title || 'Untitled Movie';
+
+            card.appendChild(img);
+            card.appendChild(title);
+            return card;
+        }
+
         function renderShelves(movies, isSearch = false) {
             const container = document.getElementById('shelf-container');
             container.innerHTML = '';
@@ -130,11 +183,7 @@
                 container.appendChild(section);
                 const grid = document.getElementById('search-grid');
                 movies.forEach(m => {
-                    const img = document.createElement('img');
-                    img.src = m.posterUrl;
-                    img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
-                    img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
-                    grid.appendChild(img);
+                    grid.appendChild(createMovieCard(m));
                 });
             } else {
                 // 1. Generate LATEST ADDITIONS Row at the absolute top (First 12 entries in the array)
@@ -151,11 +200,7 @@
 
                 const latestAddedGrid = document.getElementById('grid-latest-additions');
                 movies.slice(0, 12).forEach(m => {
-                    const img = document.createElement('img');
-                    img.src = m.posterUrl;
-                    img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
-                    img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
-                    latestAddedGrid.appendChild(img);
+                    latestAddedGrid.appendChild(createMovieCard(m));
                 });
 
                 // 2. Define the keyword-filtered categories
@@ -215,11 +260,7 @@
                         container.appendChild(section);
                         const grid = document.getElementById(`grid-${cat.domId}`);
                         filtered.slice(0, 12).forEach(m => {
-                            const img = document.createElement('img');
-                            img.src = m.posterUrl;
-                            img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
-                            img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
-                            grid.appendChild(img);
+                            grid.appendChild(createMovieCard(m));
                         });
                     });
                 }
