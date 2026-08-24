@@ -19,6 +19,45 @@
         .related-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; }
         .related-grid a img { width: 150px; height: 225px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
         .related-grid a img:hover { transform: scale(1.05); }
+
+        /* BUY ME A COFFEE BANNER */
+        .coffee-support-card {
+            margin-top: 25px;
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .coffee-support-card p {
+            margin: 0;
+            color: #ddd;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .coffee-support-btn {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .coffee-support-btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.03);
+        }
     </style>
 </head>
 <body>
@@ -47,6 +86,14 @@
             <noscript>
                 <p>This movie stream requires JavaScript to load data dynamically. Please enable JavaScript in your browser to view our classic cinema archive.</p>
             </noscript>
+        </div>
+
+        <!-- BUY ME A COFFEE BANNER -->
+        <div class="coffee-support-card">
+            <p><strong>Enjoying MovieHub?</strong> Grab Dennis a coffee to support server costs and keep the vault free for everyone!</p>
+            <a class="coffee-support-btn" href="https://buymeacoffee.com/moviehubhd" target="_blank">
+                <i class="fas fa-coffee"></i> Buy Me a Coffee
+            </a>
         </div>
 
         <div class="related-section">
