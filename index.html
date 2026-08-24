@@ -286,46 +286,68 @@
                     latestAddedGrid.appendChild(createMovieCard(m));
                 });
 
-                // 2. Define the keyword-filtered categories
+                // 2. Category definitions with specific filtering rules
                 const categories = [
-                    { title: "New Releases", keyword: "New", domId: "latest" },
-                    { title: "Classic Cinema & Noir", keyword: "Classics", domId: "classics" },
-                    { title: "Drama Collection", keyword: "Drama", domId: "drama" },
-                    { title: "Biography Selection", keyword: "Biography", domId: "biography" },
-                    { title: "History Vault", keyword: "History", domId: "history" },
-                    { title: "Sci-Fi Collection", keyword: "Sci-Fi", domId: "scifi" },
-                    { title: "War Movies", keyword: "War", domId: "war" },
-                    { title: "Westerns", keyword: "Western", domId: "western" },
-                    { title: "Horror & Thriller Vault", keyword: "Horror", domId: "horror" },
-                    { title: "Action Collection", keyword: "Action", domId: "action" },
-                    { title: "Comedy, Romance & Fantasy", keyword: "Comedy", domId: "comedy" },
-                    { title: "Bette Davis Collection", keyword: "Bette Davis", domId: "bettedavis" },
-                    { title: "Hitchcock Collection", keyword: "Hitchcock", domId: "hitchcock" }
+                    { title: "New Releases", keywords: ["new"], domId: "latest" },
+                    { title: "Classic Cinema", keywords: ["classic"], domId: "classics" },
+                    { title: "Film Noir", keywords: ["noir"], domId: "filmnoir" },
+                    { title: "Drama Collection", keywords: ["drama"], domId: "drama" },
+                    { title: "Biography Selection", keywords: ["biography", "biopic"], domId: "biography" },
+                    { title: "History Vault", keywords: ["history", "historical"], domId: "history" },
+                    { title: "Sci-Fi Collection", keywords: ["sci-fi", "science fiction"], domId: "scifi" },
+                    { title: "War Movies", keywords: ["war"], domId: "war" },
+                    { title: "Westerns", keywords: ["western"], domId: "western" },
+                    { title: "Horror & Thriller Vault", keywords: ["horror", "thriller"], domId: "horror" },
+                    { title: "Action Collection", keywords: ["action"], domId: "action" },
+                    { title: "Comedy, Romance & Fantasy", keywords: ["comedy", "romance", "fantasy"], domId: "comedy" },
+                    { title: "Bette Davis Collection", keywords: ["bette davis"], domId: "bettedavis" },
+                    { title: "Hitchcock Collection", keywords: ["hitchcock"], domId: "hitchcock" }
                 ];
 
                 function renderBatch(batch) {
                     batch.forEach(cat => {
                         let filtered = [];
 
-                        if (cat.keyword === "New") {
-                            // Filter by year for recent releases (2024 and newer) sorted descending
+                        if (cat.keywords.includes("new")) {
+                            // Filter for recent releases (2024 and newer)
                             filtered = movies
                                 .filter(m => parseInt(m.year, 10) >= 2024)
                                 .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
+                        } else if (cat.domId === "classics") {
+                            // Classic Cinema: Matches "classic" OR pre-1980 releases, excluding Noir titles
+                            filtered = movies.filter(m => {
+                                const titleText = (m.title || '').toLowerCase();
+                                const genreText = Array.isArray(m.genres) 
+                                    ? m.genres.join(' ').toLowerCase() 
+                                    : (m.genres || '').toLowerCase();
+                                const yr = parseInt(m.year, 10) || 0;
+                                const isNoir = titleText.includes('noir') || genreText.includes('noir');
+                                
+                                return !isNoir && ((titleText.includes('classic') || genreText.includes('classic')) || (yr > 0 && yr < 1980));
+                            });
+                        } else if (cat.domId === "filmnoir") {
+                            // Film Noir: Matches "noir" with a pre-1960 release limit
+                            filtered = movies.filter(m => {
+                                const titleText = (m.title || '').toLowerCase();
+                                const genreText = Array.isArray(m.genres) 
+                                    ? m.genres.join(' ').toLowerCase() 
+                                    : (m.genres || '').toLowerCase();
+                                const yr = parseInt(m.year, 10) || 0;
+                                const isNoir = titleText.includes('noir') || genreText.includes('noir');
+
+                                return isNoir && (yr === 0 || yr < 1960);
+                            });
                         } else {
                             // General filter checking title or genres
-                            const kw = cat.keyword.toLowerCase();
                             filtered = movies.filter(m => {
-                                const inTitle = m.title && m.title.toLowerCase().includes(kw);
-                                let inGenres = false;
-                                if (m.genres) {
-                                    if (Array.isArray(m.genres)) {
-                                        inGenres = m.genres.some(g => g.toLowerCase().includes(kw));
-                                    } else if (typeof m.genres === 'string') {
-                                        inGenres = m.genres.toLowerCase().includes(kw);
-                                    }
-                                }
-                                return inTitle || inGenres;
+                                const titleText = (m.title || '').toLowerCase();
+                                const genreText = Array.isArray(m.genres) 
+                                    ? m.genres.join(' ').toLowerCase() 
+                                    : (m.genres || '').toLowerCase();
+                                
+                                return cat.keywords.some(kw => 
+                                    titleText.includes(kw) || genreText.includes(kw)
+                                );
                             });
                         }
 
@@ -336,7 +358,7 @@
                         section.innerHTML = `
                             <div style="display:flex; justify-content:space-between; align-items:baseline;">
                                 <h2>${cat.title}</h2>
-                                <a href="category.html?q=${encodeURIComponent(cat.keyword)}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                                <a href="category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                             </div>
                             <div class="shelf-grid" id="grid-${cat.domId}"></div>
                         `;
@@ -349,8 +371,8 @@
                 }
                 
                 // Render batch in chunks to maintain UI responsiveness
-                renderBatch(categories.slice(0, 2)); 
-                setTimeout(() => renderBatch(categories.slice(2)), 100); 
+                renderBatch(categories.slice(0, 3)); 
+                setTimeout(() => renderBatch(categories.slice(3)), 100); 
             }
         }
         init();
