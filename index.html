@@ -7,7 +7,6 @@
     <meta name="description" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Google Tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -314,7 +313,7 @@
                                 .filter(m => parseInt(m.year, 10) >= 2024)
                                 .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
                         } else if (cat.domId === "classics") {
-                            // Classic Cinema: Matches "classic" OR pre-1980 releases, excluding Noir titles
+                            // Classic Cinema: Strict pre-1980 release limit, excluding Film Noir
                             filtered = movies.filter(m => {
                                 const titleText = (m.title || '').toLowerCase();
                                 const genreText = Array.isArray(m.genres) 
@@ -323,7 +322,7 @@
                                 const yr = parseInt(m.year, 10) || 0;
                                 const isNoir = titleText.includes('noir') || genreText.includes('noir');
                                 
-                                return !isNoir && ((titleText.includes('classic') || genreText.includes('classic')) || (yr > 0 && yr < 1980));
+                                return !isNoir && yr > 0 && yr < 1980;
                             });
                         } else if (cat.domId === "filmnoir") {
                             // Film Noir: Matches "noir" with a pre-1960 release limit
