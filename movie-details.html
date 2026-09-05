@@ -6,7 +6,6 @@
     
     <meta id="meta-description" name="description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     
-    <!-- Updated fallback title for crawlers -->
     <title>Movie Details & Archive Stream | MovieHub</title>
     
     <link rel="stylesheet" href="style.css">
@@ -86,7 +85,7 @@
                 Loading full feature presentation details...
             </div>
 
-            <!-- NEW STRUCTURED METADATA GRID FOR SEARCH ENGINES -->
+            <!-- STRUCTURED METADATA GRID -->
             <div id="movie-details-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; background: #111; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #222;">
                 <div><strong style="color:#888;">Director:</strong><br><span id="movie-director">Loading...</span></div>
                 <div><strong style="color:#888;">Starring:</strong><br><span id="movie-cast">Loading...</span></div>
@@ -94,10 +93,10 @@
                 <div><strong style="color:#888;">Archive Status:</strong><br><span id="movie-license">Public Domain / Stream</span></div>
             </div>
 
-            <!-- NEW TRIVIA & HIGHLIGHTS SECTION -->
-            <div class="movie-highlights" style="background:#111; padding: 15px; border-radius: 6px; border: 1px solid #222;">
-                <h3 style="color: #ffd700; margin-top: 0; font-size: 1.1rem;"><i class="fas fa-star"></i> Film Highlights & Notes</h3>
-                <ul id="movie-trivia" style="color: #bbb; line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+            <!-- TRIVIA & HIGHLIGHTS SECTION -->
+            <div class="movie-highlights" style="background:#111; padding: 15px; border-radius: 6px; border: 1px solid #222; text-align: left;">
+                <h3 style="color: #ffd700; margin-top: 0; font-size: 1.1rem; text-align: left;"><i class="fas fa-star"></i> Film Highlights & Notes</h3>
+                <ul id="movie-trivia" style="color: #bbb; line-height: 1.6; padding-left: 20px; margin: 0; text-align: left;">
                     <li>Classic feature presentation archived for free online streaming.</li>
                 </ul>
             </div>
@@ -192,7 +191,7 @@
                     document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${genreDisplay}`;
                     document.getElementById('movie-desc').innerText = movie.description || 'No overview available for this title.';
 
-                    // 5. POPULATE NEW STRUCTURED METADATA FIELDS
+                    // 5. POPULATE STRUCTURED METADATA FIELDS
                     document.getElementById('movie-director').innerText = movie.director || 'N/A';
                     document.getElementById('movie-cast').innerText = movie.cast || 'N/A';
                     document.getElementById('movie-year').innerText = movie.year || 'N/A';
@@ -206,8 +205,18 @@
                                                     <li>Available to stream on MovieHub Vault.</li>`;
                     }
 
-                    // 7. INJECT SCHEMA (VideoObject)
+                    // 7. INJECT SCHEMA (VideoObject) WITH ABSOLUTE ENCODED THUMBNAIL URL
                     try {
+                        let formattedThumbnail = "";
+                        if (movie.posterUrl) {
+                            if (movie.posterUrl.startsWith('http')) {
+                                formattedThumbnail = movie.posterUrl;
+                            } else {
+                                const cleanPath = movie.posterUrl.startsWith('/') ? movie.posterUrl : '/' + movie.posterUrl;
+                                formattedThumbnail = encodeURI(window.location.origin + cleanPath);
+                            }
+                        }
+
                         const script = document.createElement('script');
                         script.type = 'application/ld+json';
                         script.textContent = JSON.stringify({
@@ -215,7 +224,7 @@
                             "@type": "VideoObject",
                             "name": cleanTitle,
                             "description": movie.description || "",
-                            "thumbnailUrl": movie.posterUrl ? [movie.posterUrl] : [],
+                            "thumbnailUrl": formattedThumbnail ? [formattedThumbnail] : [],
                             "uploadDate": movie.year ? `${movie.year}-01-01T08:00:00+00:00` : "1950-01-01T08:00:00+00:00",
                             "contentUrl": window.location.href,
                             "embedUrl": embedUrl,
