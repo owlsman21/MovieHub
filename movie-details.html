@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta id="meta-description" name="description" content="Stream fully restored classic cinema collections, Hollywood golden era westerns, vintage film noir, and rare horror movies completely free on MovieHub.">
+    <meta id="meta-description" name="description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     
-    <title>Watch Classic Movies Free | MovieHub</title>
+    <!-- Updated fallback title for crawlers -->
+    <title>Movie Details & Archive Stream | MovieHub</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -79,8 +81,25 @@
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
             <h1 id="movie-title">Classic Movie Stream</h1>
             <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Restored Golden Age Cinema</p>
-            <div id="movie-desc" style="line-height:1.6; color:#ccc;">
+            
+            <div id="movie-desc" style="line-height:1.6; color:#ccc; margin-bottom: 20px;">
                 Loading full feature presentation details...
+            </div>
+
+            <!-- NEW STRUCTURED METADATA GRID FOR SEARCH ENGINES -->
+            <div id="movie-details-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; background: #111; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #222;">
+                <div><strong style="color:#888;">Director:</strong><br><span id="movie-director">Loading...</span></div>
+                <div><strong style="color:#888;">Starring:</strong><br><span id="movie-cast">Loading...</span></div>
+                <div><strong style="color:#888;">Release Year:</strong><br><span id="movie-year">Loading...</span></div>
+                <div><strong style="color:#888;">Archive Status:</strong><br><span id="movie-license">Public Domain / Stream</span></div>
+            </div>
+
+            <!-- NEW TRIVIA & HIGHLIGHTS SECTION -->
+            <div class="movie-highlights" style="background:#111; padding: 15px; border-radius: 6px; border: 1px solid #222;">
+                <h3 style="color: #ffd700; margin-top: 0; font-size: 1.1rem;"><i class="fas fa-star"></i> Film Highlights & Notes</h3>
+                <ul id="movie-trivia" style="color: #bbb; line-height: 1.6; padding-left: 20px; margin-bottom: 0;">
+                    <li>Classic feature presentation archived for free online streaming.</li>
+                </ul>
             </div>
             
             <noscript>
@@ -103,7 +122,6 @@
     </main>
 
     <script>
-        // Helper to safely parse genres regardless of whether they are strings, arrays, or undefined
         function safeParseGenres(genres) {
             if (!genres) return [];
             if (Array.isArray(genres)) {
@@ -118,15 +136,14 @@
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
             const rawId = params.get('id');
-            
-            // Trim whitespace to handle accidental "%20" or URL space formatting issues
             const movieId = rawId ? rawId.trim() : null;
+            
             if (!movieId) {
                 document.getElementById('movie-meta').innerText = "No movie specified.";
                 return;
             }
 
-            // Dynamically create self-referential canonical tag
+            // Clean Self-Referential Canonical Tag Setup
             let canonicalTag = document.querySelector("link[rel='canonical']");
             if (!canonicalTag) {
                 canonicalTag = document.createElement('link');
@@ -142,6 +159,7 @@
                 
                 if (movie) {
                     const cleanTitle = movie.title ? movie.title.split('|')[0].trim() : 'Movie';
+                    const releaseYear = movie.year ? `(${movie.year})` : '';
                     const iframe = document.getElementById('movie-iframe');
                     let embedUrl = "";
 
@@ -155,25 +173,40 @@
                     }
                     iframe.src = embedUrl;
 
-                    // Update Title & Meta Description
-                    document.title = `${cleanTitle} (${movie.year || ''}) Full Movie | MovieHub`;
+                    // 1. DYNAMIC SEARCH-FRIENDLY TITLE
+                    document.title = `${cleanTitle} ${releaseYear} - Watch Stream Online | MovieHub`;
                     
+                    // 2. META DESCRIPTION
                     const metaDescriptionElement = document.getElementById('meta-description');
                     if (metaDescriptionElement && movie.description) {
                         metaDescriptionElement.setAttribute('content', movie.description.substring(0, 155).trim() + '...');
                     }
 
-                    // Format genres for display string
+                    // 3. GENRE FORMATTING
                     const genreDisplay = Array.isArray(movie.genres) 
                         ? movie.genres.join(', ') 
                         : (movie.genres || 'Classics');
 
-                    // Interface Content Population
+                    // 4. POPULATE MAIN UI FIELDS
                     document.getElementById('movie-title').innerText = cleanTitle;
                     document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${genreDisplay}`;
-                    document.getElementById('movie-desc').innerText = movie.description || '';
+                    document.getElementById('movie-desc').innerText = movie.description || 'No overview available for this title.';
 
-                    // Inject Structured Data (VideoObject Schema)
+                    // 5. POPULATE NEW STRUCTURED METADATA FIELDS
+                    document.getElementById('movie-director').innerText = movie.director || 'N/A';
+                    document.getElementById('movie-cast').innerText = movie.cast || 'N/A';
+                    document.getElementById('movie-year').innerText = movie.year || 'N/A';
+                    
+                    // 6. POPULATE TRIVIA / HIGHLIGHTS
+                    const triviaContainer = document.getElementById('movie-trivia');
+                    if (movie.trivia && Array.isArray(movie.trivia) && movie.trivia.length > 0) {
+                        triviaContainer.innerHTML = movie.trivia.map(item => `<li>${item}</li>`).join('');
+                    } else {
+                        triviaContainer.innerHTML = `<li>Full feature presentation restored for high-quality playback.</li>
+                                                    <li>Available to stream on MovieHub Vault.</li>`;
+                    }
+
+                    // 7. INJECT SCHEMA (VideoObject)
                     try {
                         const script = document.createElement('script');
                         script.type = 'application/ld+json';
@@ -197,7 +230,7 @@
                         console.warn("Schema injection skipped:", schemaErr);
                     }
 
-                    // Render recommended grid in isolated try-block so errors don't break main UI
+                    // 8. RENDER RELATED MOVIES
                     try {
                         renderRelatedMovies(movies, movie);
                     } catch (relatedErr) {
