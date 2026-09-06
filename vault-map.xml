@@ -1854,10 +1854,9 @@
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>https://moviehub.uk/nothing-to-lose-1997</loc>
-  <lastmod>2026-04-09</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://moviehub.uk/movies/nothing-to-lose-1997.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://moviehub.uk/aladdin-2026</loc>
@@ -2610,10 +2609,9 @@
     <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://moviehub.uk/movie/jack-and-the-beanstalk-1952</loc>
-  <lastmod>2026-05-24</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://moviehub.uk/movies/jack-and-the-beanstalk-1952.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://moviehub.uk/movie/the-amazing-mr-x-1948</loc>
@@ -3874,4 +3872,29 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://moviehub.uk/movies/south-solitary-2010.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movies/north-by-northwest-1959.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movies/training-day-2001.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movies/death-camp-2020.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movies/the-shawshank-redemption-1994.html</loc>
+  <lastmod>2026-09-07</lastmod>
+  <priority>0.80</priority>
+</url>
 </urlset>

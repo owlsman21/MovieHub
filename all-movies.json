@@ -2659,17 +2659,23 @@
   "source": "rumble",
   "posterUrl": "images/The Amazing Mr. X (1948)"
 },
-   {
+  {
   "id": "jack-and-the-beanstalk-1952",
-  "title": "Jack and the Beanstalk (1952) Full Movie | Abbott & Costello | Classic Comedy",
+  "title": "Jack and the Beanstalk (1952)",
   "year": 1952,
-  "director": "Jean Yarbrough",
   "quality": "HD",
-  "genres": "Comedy, Family, Fantasy, Classics",
-  "description": "A classic comic revision of the timeless fairy tale. When a bumbling babysitter falls asleep reading aloud, he dreams himself and his smooth-talking partner into a magical world up the beanstalk complete with giants and golden geese. Starring Bud Abbott and Lou Costello.",
-  "embedId": "v783xia",
+  "genres": ["Comedy", "Family", "Fantasy"],
+  "director": "Jean Yarbrough",
+  "cast": "Bud Abbott, Lou Costello, Buddy Baer, Dorothy Ford, Shaye Cogan",
   "source": "rumble",
-   "posterUrl": "images/Jack and the Beanstalk (1952).jpg"
+  "embedId": "v783xia",
+  "posterUrl": "/images/jack-and-the-beanstalk-1952.jpg",
+  "description": "Jack and the Beanstalk (1952) is a classic musical comedy revision of the timeless fairy tale starring legendary duo Bud Abbott and Lou Costello. When a bumbling babysitter falls asleep reading aloud, he dreams himself and his smooth-talking partner into a magical world up the beanstalk complete with giants, singing harps, and golden geese. Stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "First feature film produced by Abbott and Costello in full color (SuperCinecolor).",
+    "Features former heavyweight boxer Buddy Baer in the dual role of Sergeant Riley and the Giant.",
+    "Mel Blanc provided uncredited voice work for several animals in the giant's realm."
+  ]
 },
    {
   "id": "africa-screams-1949",
@@ -4225,17 +4231,23 @@
   "source": "ok.ru",
   "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmE1M2JiYmUtYjE4Mi00ZjU2LTg0MTMtOWFjMTBmZjU0N2JkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
 },
-   {
+  {
   "id": "nothing-to-lose-1997",
-  "title": "Nothing to Lose (1997) Full Movie | Martin Lawrence & Tim Robbins | Classic Buddy Comedy",
+  "title": "Nothing to Lose (1997)",
   "year": 1997,
-  "director": "Steve Oedekerk",
   "quality": "HD",
-  "genres": "Comedy, Action, Adventure",
-  "description": "After discovering his wife is having an affair, an advertising executive's life takes a wild turn when he's kidnapped by a fast-talking carjacker. The two form an unlikely bond during a chaotic road trip. Starring Tim Robbins and Martin Lawrence.",
-  "embedId": "13767084870182",
+  "genres": ["Comedy", "Action", "Adventure"],
+  "director": "Steve Oedekerk",
+  "cast": "Tim Robbins, Martin Lawrence, John C. McGinley, Giancarlo Esposito, Kelly Preston",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BOWQ2NmNlYjEtOGViNC00MzA0LTgzMjQtMzU2ZTgwMDJkZDU5XkEyXkFqcGc@._V1_.jpg"
+  "embedId": "13767084870182",
+  "posterUrl": "/images/nothing-to-lose-1997.jpg",
+  "description": "Nothing to Lose (1997) is a hilarious action comedy directed by Steve Oedekerk starring Martin Lawrence and Tim Robbins. Believing his wife is having an affair with his boss, advertising executive Nick Beam hits rock bottom and is carjacked by desperate thief Terrance Paul. With nothing left to lose, Nick kidnaps his carjacker, throwing them both into a chaotic road trip full of revenge schemes and unexpected friendship. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "Features an iconic spider dance scene set to Scatman John's 'Scatman (Ski-Ba-Bop-Ba-Dop-Bop)'.",
+    "Written and directed by Steve Oedekerk, who also makes a cameo appearance as a dancing security guard.",
+    "The hit soundtrack included Coolio's popular single 'CU When U Get There'."
+  ]
 },
    {
   "id": "hatchet-iii-2013",
@@ -6921,16 +6933,24 @@
         "posterUrl":  "https://m.media-amazon.com/images/I/71k+9MUKVsL._AC_UF894,1000_QL80_.jpg",
         "year": 1959
     },
-    {
-        "id": "Training-Day", 
-        "title": "Training Day",
-        "description": "A rookie detective is pushed to his limits by a corrupt narcotics officer during a single, intense day.",
-        "embedId": "6458634209830",
-        "source": "ok.ru",
-        "genres": ["Thriller"],
-        "posterUrl":  "images/training day.jpg",
-        "year": 2001
-    },
+{
+  "id": "training-day-2001",
+  "title": "Training Day (2001)",
+  "year": 2001,
+  "quality": "HD",
+  "genres": ["Crime", "Drama", "Thriller"],
+  "director": "Antoine Fuqua",
+  "cast": "Denzel Washington, Ethan Hawke, Scott Glenn, Eva Mendes, Cliff Curtis",
+  "source": "ok.ru",
+  "embedId": "6458634209830",
+  "posterUrl": "/images/training-day-2001.jpg",
+  "description": "Training Day (2001) is an intense, Oscar-winning crime thriller directed by Antoine Fuqua. Over a single 24-hour evaluation period, rookie LAPD narcotics officer Jake Hoyt is paired with rogue veteran detective Alonzo Harris, forcing him into a high-stakes, morally dangerous web of street violence and corruption. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "Denzel Washington won the Academy Award for Best Actor for his role as Detective Alonzo Harris.",
+    "Ethan Hawke received an Academy Award nomination for Best Supporting Actor.",
+    "Filmed on location in actual high-crime neighborhoods across Los Angeles, including Imperial Courts and Baldwin Village."
+  ]
+},
     { 
         "id": "Wrong-Turn", 
         "title": "wrong turn",
@@ -8128,15 +8148,24 @@
         "genres": ["Horror"],
         "source": "ok.ru"
     },
-     {  "id": "The-Shawshank-Redemption",
-        "posterUrl":  "images/shThe Shawank Redemption.jpg",
-        "year": 1994,
-        "title": "The Shawshank Redemption.1994",
-        "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
-        "embedId": "15835359939117",
-        "genres": ["Drama","Crime"],
-        "source": "ok.ru"
-    },
+    {
+  "id": "the-shawshank-redemption-1994",
+  "title": "The Shawshank Redemption (1994)",
+  "year": 1994,
+  "quality": "HD",
+  "genres": ["Drama", "Crime"],
+  "director": "Frank Darabont",
+  "cast": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler, Clancy Brown",
+  "source": "ok.ru",
+  "embedId": "15835359939117",
+  "posterUrl": "/images/the-shawshank-redemption-1994.jpg",
+  "description": "The Shawshank Redemption (1994) is an acclaimed drama directed by Frank Darabont, based on Stephen King's novella. Accused of a crime he maintains he didn't commit, banker Andy Dufresne begins a decades-long sentence at Shawshank State Penitentiary, forming an enduring bond with fellow inmate Red while clinging to hope through compassion and resilience. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "Nominated for 7 Academy Awards, including Best Picture and Best Actor for Morgan Freeman.",
+    "Adapted from Stephen King's 1982 novella 'Rita Hayworth and Shawshank Redemption'.",
+    "Filmed primarily at the historic Ohio State Reformatory in Mansfield, Ohio."
+  ]
+},
      {  "id": "The-Godfather-2",
         "posterUrl":  "images/the godfather 2.jpg",
         "year": 1974,
@@ -11076,16 +11105,24 @@
     "embedId": "v72o6c2",
     "source": "rumble"
   },
-      {
-        "id": "North-by-Northwest",
-        "posterUrl":  "images/North by Northwest.jpg",
-        "year":1959,
-        "title": "North by Northwest",
-        "description": "A New York City advertising executive goes on the run after being mistaken for a government agent by a group of foreign spies, and falls for a woman whose loyalties he begins to doubt.",
-        "embedId": "33495386654",
-        "genres": ["Adventure","Drama","Thriller","Hitchcock"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "north-by-northwest-1959",
+  "title": "North by Northwest (1959)",
+  "year": 1959,
+  "quality": "HD",
+  "genres": ["Action", "Adventure", "Mystery", "Thriller"],
+  "director": "Alfred Hitchcock",
+  "cast": "Cary Grant, Eva Marie Saint, James Mason, Jessie Royce Landis, Leo G. Carroll",
+  "source": "rumble",
+  "embedId": "",
+  "posterUrl": "/images/north-by-northwest-1959.jpg",
+  "description": "North by Northwest (1959) is Alfred Hitchcock's iconic espionage thriller starring Cary Grant and Eva Marie Saint. When suave New York advertising executive Roger Thornhill is mistaken for a non-existent government agent, he is framed for murder and pursued across America by ruthless foreign spies and federal authorities. Featuring iconic set pieces like the rural crop-duster chase and the Mount Rushmore climax, stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "The fourth and final film collaboration between director Alfred Hitchcock and star Cary Grant.",
+    "Features two of cinema history's most iconic set pieces: the crop-duster attack in Prairie Dell, Indiana, and the cliffhanger climax atop Mount Rushmore.",
+    "Nominated for three Academy Awards, including Best Original Screenplay for writer Ernest Lehman."
+  ]
+},
       {
         "id": "Cool-Hand-Luke",
         "posterUrl":  "https://ih1.redbubble.net/image.4814966508.1019/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
@@ -11902,16 +11939,24 @@
         "source": "ok.ru"
      },
      
-    {
-        "id": "South-Solitary",
-        "posterUrl":  "images/South Solitary.jpg",
-        "year":2010,
-        "title": "South Solitary",
-        "description": "Set in 1928, Meredith is a 35 year-old unmarried woman who arrives at a remote lighthouse island with her uncle, the new head keeper.",
-        "embedId": "4030059383351",
-        "genres": ["Drama","Romance"],
-        "source": "ok.ru"
-     },
+   {
+  "id": "south-solitary-2010",
+  "title": "South Solitary (2010)",
+  "year": 2010,
+  "quality": "HD",
+  "genres": ["Drama", "Romance"],
+  "director": "Shirley Barrett",
+  "cast": "Miranda Otto, Barry Otto, Rohan Nichol, Essie Davis, Marton Csokas",
+  "source": "ok.ru",
+  "embedId": "4030059383351",
+  "posterUrl": "/images/south-solitary-2010.jpg",
+  "description": "South Solitary (2010) is a moving Australian period drama set in 1928, directed by Shirley Barrett and starring Miranda Otto. Meredith, an unmarried 35-year-old woman, arrives at a harsh and isolated lighthouse island alongside her uncle, the newly appointed head keeper. Amidst extreme weather and social isolation, she finds unexpected human connection with the island's taciturn assistant keeper. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "Reunited real-life father and daughter actors Barry Otto and Miranda Otto on screen.",
+    "Filmed on location at the historic Cape Nelson Lighthouse near Portland, Victoria, Australia.",
+    "Written and directed by Shirley Barrett, who won the Camera d'Or at Cannes earlier in her career."
+  ]
+},
      
 {
         "id": "The-Runner-from-Ravenshead",
@@ -12101,16 +12146,24 @@
         "genres": ["Horror","Thriller"],
         "source": "ok.ru"
      },
-      {
-        "id": "Death-Camp",
-        "posterUrl":  "images/Death Camp.jpg",
-        "year":2020,
-        "title": "Death Camp",
-        "description": "Emmy Award winner Bill Oberst, Jr. Stars as the former owner of the abandoned cabin a group of Teenagers go to where twelve kids were killed 20 years earlier. Emmy Award winning Composer Kevin McDaniels composes the Music.",
-        "embedId": "4223334091302",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-     },
+     {
+  "id": "death-camp-2020",
+  "title": "Death Camp (2020)",
+  "year": 2020,
+  "quality": "HD",
+  "genres": ["Horror"],
+  "director": "Kevin McDaniels",
+  "cast": "Bill Oberst Jr., Taylor Banning, Ryan Brown, Megan Davis",
+  "source": "ok.ru",
+  "embedId": "4223334091302",
+  "posterUrl": "/images/death-camp-2020.jpg",
+  "description": "Death Camp (2020) is a chilling indie horror starring Emmy Award winner Bill Oberst Jr. A group of teenagers ventures out to an abandoned cabin where twelve kids were brutally killed two decades prior, only to discover that the dark history of the campsite is far from buried. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
+  "trivia": [
+    "Stars cult horror icon and Emmy Award winner Bill Oberst Jr.",
+    "Features a score composed by Emmy Award winner Kevin McDaniels.",
+    "Filmed on location in remote forested camp grounds to enhance the isolated atmosphere."
+  ]
+},
      {
         "id": "September-Dawn",
         "posterUrl":  "images/September Dawn.jpg",
