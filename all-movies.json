@@ -1791,14 +1791,23 @@
   "source": "rumble",
   "posterUrl": "images/human-desire-1954.jpg"
 },
-   {
+  {
   "id": "panic-in-the-streets-1950",
   "title": "Panic in the Streets (1950) Full Movie | Film Noir | Classics | HD",
   "year": 1950,
   "director": "Elia Kazan",
   "quality": "HD",
+  "duration": "1h 36m",
   "genres": "Film Noir, Thriller, Classics",
-  "description": "Starring Richard Widmark and Jack Palance, a public health officer and a police captain have just 48 hours to find a killer carrying a deadly disease in this 1950 noir classic. Watch more classic and indie films at https://moviehub.uk/.",
+  "starring": "Richard Widmark, Paul Douglas, Barbara Bel Geddes, Jack Palance, Zero Mostel",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "Set in the gritty port district of New Orleans, Panic in the Streets is a tense film noir thriller following U.S. Public Health Service officer Lt. Commander Clinton Reed. After an unidentified murder victim is found carrying pneumonic plague, Reed joins forces with skeptical police captain Tom Warren to prevent a devastating outbreak. With only 48 hours to locate the killer and his accomplices before the disease spreads, they navigate a dangerous criminal underworld led by ruthless mobster Blackie. Directed by Elia Kazan, the film blends documentary-style realism with high-stakes suspense.",
+  "highlights": [
+    "Directed by Academy Award winner Elia Kazan (On the Waterfront, East of Eden).",
+    "Starring Richard Widmark, Paul Douglas, Barbara Bel Geddes, and Jack Palance in his feature film debut.",
+    "Filmed on location in New Orleans, delivering an authentic atmospheric noir setting.",
+    "Winner of the Academy Award for Best Motion Picture Story at the 23rd Academy Awards."
+  ],
   "embedId": "v78zdk8",
   "source": "rumble",
   "posterUrl": "images/panic-in-the-streets-1950.jpg"
@@ -2285,14 +2294,22 @@
   "source": "ok.ru",
   "posterUrl": "images/spirited-2022.jpg"
 },
-   {
+  {
   "id": "the-notorious-bettie-page-2005",
-  "title": "The Notorious Bettie Page (2005) | Biographical Drama",
+  "title": "The Notorious Bettie Page (2005) Full Movie | Gretchen Mol | Biographical Drama",
   "year": 2005,
   "director": "Mary Harron",
   "quality": "720p",
   "genres": "Biography, Drama, Cult",
-  "description": "A stylish biographical look at the life and career of the legendary 1950s pin-up queen Bettie Page, tracing her rise to fame and the cultural impact of her image. Starring Gretchen Mol.",
+  "starring": "Gretchen Mol, Chris Bauer, Jared Harris, Sarah Paulson, Lili Taylor",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "A stylish biographical drama exploring the life and career of iconic 1950s pin-up queen Bettie Page. Following a quiet upbringing in Tennessee and early struggles in New York, Bettie becomes an unwitting sensation in the underground photography world. Directed by Mary Harron and starring Gretchen Mol alongside David Strathairn, the film traces her sudden rise to fame, her struggle to balance her deep religious faith with her modeling, and the famous Senate pornography investigation that made her an enduring cultural symbol.",
+  "highlights": [
+    "Directed by acclaimed filmmaker Mary Harron (American Psycho).",
+    "Starring Gretchen Mol in a critically praised performance as pin-up icon Bettie Page.",
+    "Features key supporting roles from Sarah Paulson, Jared Harris, and Lili Taylor.",
+    "Includes a rich 1950s period soundtrack and aesthetic restoration."
+  ],
   "embedId": "5216194529890",
   "source": "ok.ru",
   "posterUrl": "images/the-notorious-bettie-page-2005.jpg"
@@ -3194,17 +3211,26 @@
   "source": "rumble",
   "posterUrl": "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2Ff%2Fgracenote%2Ffba7549e18adbef2adbbe5f45d0476ec.jpg"
 },
-   {
+  {
   "id": "meteor-1979",
   "title": "Meteor (1979) Full Movie | Sean Connery & Natalie Wood | Classic Sci-Fi Disaster",
   "year": 1979,
   "director": "Ronald Neame",
   "quality": "HD",
+  "duration": "1h 47m",
   "genres": "Sci-Fi, Action, Classics",
-  "description": "After a collision between a comet and an asteroid, a massive fragment heads toward Earth. The United States and the Soviet Union must set aside Cold War tensions to use their orbiting nuclear missiles to destroy the threat before it's too late.",
+  "starring": "Sean Connery, Natalie Wood, Karl Malden, Brian Keith, Martin Landau, Trevor Howard, Henry Fonda",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "When a five-mile-wide asteroid fragment named Orpheus is sent hurtling directly toward Earth following a collision with a comet, humanity faces imminent extinction. Desperate to prevent global destruction, the United States turns to Dr. Paul Bradley, the designer of an orbiting nuclear missile system. Recognizing that American weapons alone are insufficient, the U.S. and the Soviet Union must set aside intense Cold War tensions to combine their orbital nuclear arsenals. Directed by Ronald Neame, Meteor is a star-studded classic 1970s disaster thriller featuring Sean Connery, Natalie Wood, and Henry Fonda.",
+  "highlights": [
+    "Directed by Ronald Neame (The Poseidon Adventure).",
+    "Starring Academy Award winner Sean Connery alongside Natalie Wood, Karl Malden, and Henry Fonda.",
+    "Features a high-stakes Cold War political storyline blended with sci-fi disaster action.",
+    "Nominated for Best Sound at the 52nd Academy Awards."
+  ],
   "embedId": "v7707pu",
   "source": "rumble",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BODRkNzZjYWYtZjE2OS00NDYyLWFiNmItNTQyOGU2ZTQ5NTcxXkEyXkFqcGc@._V1_.jpg"
+  "posterUrl": "images/meteor-1979.jpg"
 },
    {
   "id": "mad-love-1935",
@@ -4571,7 +4597,7 @@
     "quality": "1080p",
     "duration": "01:36:00"
 },
- {
+{
   "id": "the-exorcist-believer-2023",
   "title": "The Exorcist: Believer (2023) Full Movie | Horror | Thriller",
   "year": 2023,
@@ -4579,10 +4605,18 @@
   "quality": "1080p",
   "duration": "1h 51m",
   "genres": "Horror, Thriller",
-  "description": "When his daughter and her friend show signs of demonic possession after a disappearance in the woods, Victor Fielding is forced to confront the ultimate evil. Desperate for help, he tracks down Chris MacNeil, the only living person who has witnessed such horror before. Stream this chilling chapter and explore our full collection at https://moviehub.uk/.",
+  "starring": "Leslie Odom Jr., Lidya Jewett, Olivia O'Neill, Jennifer Nettles, Norbert Leo Butz, Ann Dowd, Ellen Burstyn",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "Thirteen years after surviving a tragic Haitian earthquake that took his wife's life, single father Victor Fielding is thrust into a nightmare when his young daughter Angela and her best friend Katherine disappear into the woods. Reappearing three days later with no memory of what transpired, the girls display signs of terrifying demonic possession. Desperate for answers, Victor tracks down Chris MacNeil, whose daughter Regan survived a similar ordeal fifty years prior. Together with an ecumenical group of spiritual leaders, they prepare for a harrowing battle against a ruthless ancient evil.",
+  "highlights": [
+    "Directed by David Gordon Green (Halloween trilogy) as a direct legacy sequel to the 1973 classic.",
+    "Features the long-awaited return of Oscar winner Ellen Burstyn reprising her role as Chris MacNeil.",
+    "Starring Tony Award winner Leslie Odom Jr. alongside supporting performances by Ann Dowd and Jennifer Nettles.",
+    "Presents an intense dual-possession narrative blending diverse spiritual and cultural rituals."
+  ],
   "embedId": "8570359843349",
   "source": "ok.ru",
-  "posterUrl": "/images/the-exorcist-believer-2023.jpg"
+  "posterUrl": "images/the-exorcist-believer-2023.jpg"
 },
    {
     "id": "Close-Encounters-of-the-Third-Kind-(1977)-1080p",
@@ -5707,17 +5741,26 @@
   "posterUrl": "images/The Bayou 2025.jpg",
   "duration": "PT1H30M"
 },
-     {
+    {
   "id": "frankenstein-2025",
   "title": "Frankenstein (2025) Full Movie | Oscar Isaac | Guillermo del Toro Horror",
   "year": 2025,
   "director": "Guillermo del Toro",
-  "quality": "HD",
+  "quality": "1080p",
+  "duration": "2h 30m",
   "genres": "Drama, Horror, Sci-Fi",
-  "description": "In this lavish Gothic reimagining of Mary Shelley's classic, a brilliant but tormented scientist brings a creature to life, sparking a tragic journey of abandonment, discovery, and existential horror. Directed by Guillermo del Toro and starring Oscar Isaac and Jacob Elordi.",
+  "starring": "Oscar Isaac, Jacob Elordi, Mia Goth, Christoph Waltz, Felix Kammerer, Lars Mikkelsen, David Bradley",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "Academy Award-winning director Guillermo del Toro brings his vision to Mary Shelley's iconic 1818 Gothic masterpiece Frankenstein. Set against a dark 19th-century European backdrop, brilliant but obsessively driven scientist Victor Frankenstein achieves his dream of creating life from death. However, horrified by the grotesque form of his creation, Victor abandons the newborn Creature to a harsh and unaccepting world. Wandering in isolation and learning the complexities of human nature, the intelligent Creature seeks out its creator to demand companionship—igniting a tragic cycle of rejection, revenge, and existential horror.",
+  "highlights": [
+    "Written and directed by visionary filmmaker Guillermo del Toro (The Shape of Water, Pan's Labyrinth).",
+    "Starring Oscar Isaac as Dr. Victor Frankenstein and Jacob Elordi as the Creature.",
+    "Features an stellar supporting cast including Mia Goth, Christoph Waltz, and Lars Mikkelsen.",
+    "A faithful, emotionally complex Gothic reimagining of Mary Shelley's classic literary story."
+  ],
   "embedId": "12681960032806",
   "source": "ok.ru",
-  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzYzNDYxMTQtMTU4OS00MTdlLThhMTQtZjI4NGJmMTZmNmRiXkEyXkFqcGc@._V1_.jpg"
+  "posterUrl": "images/frankenstein-2025.jpg"
 },
 {
   "id": "mae-nak-3d-2012",
@@ -6265,17 +6308,26 @@
 },
 
 
-    {
+   {
   "id": "double-bunk-1961",
   "title": "Double Bunk (1961) Full Movie | Sid James & Ian Carmichael | Classic British Comedy",
   "year": 1961,
   "director": "C.M. Pennington-Richards",
   "quality": "HD",
+  "duration": "1h 32m",
   "genres": "Comedy, Adventure, Classics",
-  "description": "Newlyweds Jack and Peggy are tricked into buying a rundown houseboat. With their friends Sid and Sandra, they set off on a chaotic trip down the Thames that accidentally lands them in France with no fuel. Starring comedy legends Sid James and Ian Carmichael. Watch the full movie on MovieHub: https://moviehub.zya.me/",
+  "starring": "Ian Carmichael, Janette Scott, Sid James, Liz Fraser, Dennis Price, Reginald Beckwith",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "When newlywed couple Jack and Peggy find themselves priced out of London's expensive housing market, they are tricked into purchasing an old, dilapidated houseboat named the 'Enterprise'. Desperate to make the vessel livable, they enlist the help of their friend Sid and his girlfriend Sandra for a weekend cruise down the River Thames. However, after navigating various nautical mishaps, bad advice, and fog, the group accidentally drifts across the English Channel and gets stranded in France without fuel or passports. Directed by C.M. Pennington-Richards, this vintage British comedy features star performances from Ian Carmichael and Sid James.",
+  "highlights": [
+    "Directed by C.M. Pennington-Richards, featuring classic 1960s British humor and Thames scenery.",
+    "Starring comedy icons Ian Carmichael, Sid James, Janette Scott, and Liz Fraser.",
+    "Features memorable supporting roles from Dennis Price and Naunton Wayne.",
+    "A charming, lighthearted maritime farce about young couples making the best of a floating home."
+  ],
   "embedId": "v73qif2",
   "source": "rumble",
-  "posterUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p44209_p_v10_aa.jpg"
+  "posterUrl": "images/double-bunk-1961.jpg"
 },
     {
   "id": "walkabout-1971",
@@ -7180,16 +7232,27 @@
 },
     
     
-    {
-        "id": "Dead-Rush",
-        "title": "Dead Rush",
-        "description": "ADavid's life is turned upside down when an unknown illness ignites a full-blown zombie epidemic, leaving survivors with few places to hide. David rushes home to protect his pregnant wife, along the way gathering survivors.",
-        "embedId": "6410479798937",
-        "genres": ["Horror"],
-        "source": "ok.ru",
-        "posterUrl":  "images/dead rush.jpg",
-        "year": 2016
-    },
+   {
+  "id": "dead-rush-2016",
+  "title": "Dead Rush (2016) Full Movie | First-Person POV Zombie Horror",
+  "year": 2016,
+  "director": "Zachary Ramelan",
+  "quality": "1080p",
+  "duration": "1h 24m",
+  "genres": "Horror, Action, Sci-Fi",
+  "starring": "David Michael Moote, Steven Kartchner, Cally Koukoui, Rich Piatkowski, Charlie Hamilton",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "Told entirely from a first-person point-of-view POV perspective, Dead Rush captures the nightmare of a world plunging into chaos as a deadly unknown illness ignites a full-blown zombie epidemic. David's quiet life is shattered when the outbreak hits, forcing him into a desperate struggle for survival. Rushing to reunite with and protect his pregnant wife, David navigates ruined streets and decaying hideouts, banding together with a ragtag group of survivors. As infected hordes close in and human trust breaks down, David must endure a relentless rush through horror to keep his family alive.",
+  "highlights": [
+    "Innovative POV Horror: Filmed completely from the protagonist's first-person perspective for maximum immersion.",
+    "Directed by Zachary Ramelan, delivering a fast-paced, visceral take on the classic zombie outbreak theme.",
+    "Starring David Michael Moote alongside Steven Kartchner, Cally Koukoui, and Rich Piatkowski.",
+    "Combines intense survival action with psychological suspense as the apocalypse unfolds."
+  ],
+  "embedId": "6410479798937",
+  "source": "ok.ru",
+  "posterUrl": "images/dead-rush-2016.jpg"
+},
     {
         "id": "Fragile",
         "title": "Fragile 2005 BluRay 720p",
@@ -9406,16 +9469,27 @@
         "genres": ["Drama"],
         "source": "ok.ru"
      },
-     {
-        "id": "ConAir",
-        "posterUrl":  "images/ConAir.jpg",
-        "year": 1997,
-        "title": "ConAir 1997",
-        "description": "Former US Amy Ranger, Cameron Poe, has just been paroled for manslaughter, but must stop a group of violent and deadly criminals from escaping the country after they seizes control of the prison transport plane he is on.",
-        "embedId": "10328404003438",
-        "genres": ["Action"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "con-air-1997",
+  "title": "Con Air (1997) Full Movie | Nicolas Cage, John Malkovich & John Cusack | Action Thriller",
+  "year": 1997,
+  "director": "Simon West",
+  "quality": "1080p",
+  "duration": "1h 55m",
+  "genres": "Action, Thriller, Crime",
+  "starring": "Nicolas Cage, John Malkovich, John Cusack, Steve Buscemi, Ving Rhames, Colm Meaney, Mykelti Williamson",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "Newly paroled Army Ranger Cameron Poe is eager to return home to his wife and daughter after serving eight years for a tragic bar fight defending his spouse. His ride home turns into a nightmare when he boards the Jailbird, a high-security prison transport plane carrying the nation's most dangerous felons. Led by brilliant mastermind Cyrus 'The Virus' Grissom and murderous enforcer Diamond Dog, the inmates stage a bloody mid-air takeover. Determined to save his diabetic friend and innocent guards onboard, Poe stays behind to work covertly with U.S. Marshal Vince Larkin on the ground to foil the hijackers' escape plans.",
+  "highlights": [
+    "Directed by Simon West and produced by Jerry Bruckheimer, delivering high-octane 90s action spectacle.",
+    "Starring Nicolas Cage alongside John Malkovich as Cyrus 'The Virus' and John Cusack as Marshal Vince Larkin.",
+    "Features iconic supporting roles from Steve Buscemi, Ving Rhames, Colm Meaney, and Dave Chappelle.",
+    "Nominated for two Academy Awards, including Best Original Song for 'How Do I Live'."
+  ],
+  "embedId": "10328404003438",
+  "source": "ok.ru",
+  "posterUrl": "images/con-air-1997.jpg"
+},
      {
         "id": "A-Chefs-Deadly-Revenge",
         "posterUrl":  "images/A Chefs Deadly Revenge.jpg",
@@ -10669,16 +10743,27 @@
         "genres": ["Sci-Fi","Action","Adventure"],
         "source": "ok.ru"
      },
-      {
-        "id": "Star-Trek-V-The-Final-Frontier",
-        "posterUrl":  "images/Star Trek V The Final Frontier.jpg",
-        "year":1989,
-        "title": "Star Trek V The Final Frontier",
-        "description": "Captain Kirk and his crew must deal with Mr. Spock's long-lost half-brother who hijacks the Enterprise for an obsessive search for God at the center of the galaxy.",
-        "embedId": "29607856717",
-        "genres": ["Sci-Fi","Action","Adventure"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "star-trek-v-the-final-frontier-1989",
+  "title": "Star Trek V: The Final Frontier (1989) Full Movie | William Shatner & Leonard Nimoy | Sci-Fi Adventure",
+  "year": 1989,
+  "director": "William Shatner",
+  "quality": "1080p",
+  "duration": "1h 47m",
+  "genres": "Sci-Fi, Action, Adventure",
+  "starring": "William Shatner, Leonard Nimoy, DeForest Kelley, James Doohan, Walter Koenig, Nichelle Nichols, George Takei, Laurence Luckinbill",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "While enjoying shore leave on Earth, Captain James T. Kirk, Mr. Spock, and Dr. Leonard McCoy are abruptly recalled to duty when a Vulcan renegade named Sybok takes diplomats hostage on the planet Nimbus III. Sybok, who reveals himself to be Spock's long-lost half-brother, hijacks the starship USS Enterprise-A using unique telepathic powers to erase emotional pain. Driven by a fanatical religious vision, Sybok forces the crew to navigate past the dangerous Great Barrier at the center of the galaxy in search of Sha Ka Ree, the mythical domain of God.",
+  "highlights": [
+    "Directed by series star William Shatner, who also co-wrote the original story.",
+    "Starring the iconic original series cast including William Shatner, Leonard Nimoy, and DeForest Kelley.",
+    "Features Laurence Luckinbill in a memorable performance as the charismatic Vulcan renegade Sybok.",
+    "Composed by Academy Award  Jerry Goldsmith, returning to the franchise score."
+  ],
+  "embedId": "29607856717",
+  "source": "ok.ru",
+  "posterUrl": "images/star-trek-v-the-final-frontier-1989.jpg"
+},
       {
         "id": "Star-Trek-VI-The-Undiscovered-Country",
         "posterUrl":  "images/Star Trek VI The Undiscovered Country.jpg",
@@ -10886,16 +10971,27 @@
         "genres": ["Thriller"],
         "source": "ok.ru"
      },
-      {
-        "id": "All-Fun-and-Games",
-        "posterUrl":  "images/All Fun and Games.jpg",
-        "year":2023,
-        "title": "All Fun and Games",
-        "description": "A group of Salem teens discover a cursed knife that unleashes a demon that forces them to play gruesome, deadly versions of childhood games where there can be no winners, only survivors.",
-        "embedId": "6104609786466",
-        "genres": ["Horror"],
-        "source": "ok.ru"
-     },
+    {
+  "id": "all-fun-and-games-2023",
+  "title": "All Fun and Games (2023) Full Movie | Asa Butterfield & Natalia Dyer | Horror Thriller",
+  "year": 2023,
+  "director": "Eren Celeboglu, Ari Costa",
+  "quality": "1080p",
+  "duration": "1h 16m",
+  "genres": "Horror, Thriller",
+  "starring": "Asa Butterfield, Natalia Dyer, Benjamin Evan Ainsworth, Laurel Marsden, Annabeth Gish",
+  "archiveStatus": "Feature Presentation / Stream",
+  "description": "In the historic town of Salem, Massachusetts, a group of local teenagers comes across a strange, cursed knife carved from human bone. Upon unleashing the malevolent spirit trapped within the artifact, the demonic entity possesses Marcus and forces the group into playing violent, blood-soaked twists on classic childhood games like Hangman, Flashlight Tag, and Hide and Seek. As the night unfolds, Jo and her friends must fight against their possessed friend and find a way to break the curse before every one of them is eliminated.",
+  "highlights": [
+    "Co-directed by Ari Costa and Eren Celeboglu, executive produced by the Russo Brothers.",
+    "Starring Natalia Dyer (Stranger Things) and Asa Butterfield (Sex Education).",
+    "Set in Salem, blending historic witch-lore with high-stakes supernatural survival.",
+    "Features chilling dark twists on traditional childhood games."
+  ],
+  "embedId": "6104609786466",
+  "source": "ok.ru",
+  "posterUrl": "images/all-fun-and-games-2023.jpg"
+},
       {
         "id": "Badlands",
         "posterUrl":  "images/Badlands.jpg",
@@ -12356,7 +12452,7 @@
   "category": "Hitchcock",
   "description": "Delve into the tumultuous relationship between legendary filmmaker Sir Alfred Hitchcock and his muse, Tippi Hedren. This gripping biographical drama offers a raw look behind the glamour of Hollywood, exploring the psychological complexities and obsession that unfolded during the making of 'The Birds' and 'Marnie.' Stream this unsettling chapter in cinematic history and explore our full Hitchcock collection at https://moviehub.uk/.",
   "embedId": "9618328652326",
-  "source": "rumble",
+  "source":"ok.ru",
   "posterUrl": "/images/the-girl-2012.jpg"
 },
      {
