@@ -2,8 +2,9 @@ let allMoviesCache = [];
 
 async function initMovieVault() {
     try {
-        const response = await fetch('data/all-movies.json');
-        if (!response.ok) throw new Error("Could not find data");
+        // Fetch the movie database
+        const response = await fetch('all-movies.json');
+        if (!response.ok) throw new Error("Could not find all-movies.json data");
         allMoviesCache = await response.json();
 
         // 1. DYNAMIC CANONICAL TAG FIX (Solves Search Console Indexing Issue)
@@ -19,7 +20,42 @@ async function initMovieVault() {
             canonicalLink.setAttribute('href', `https://moviehub.uk/movie-details.html?id=${movieId}`);
         }
 
-        // 2. HELPER TO MATCH GENRES (Handles both comma-separated strings and arrays)
+        // 2. MOVIE DETAILS PAGE RENDERER (Loads specific movie by ID)
+        if (movieId) {
+            const movie = allMoviesCache.find(m => m.id.toLowerCase() === movieId.toLowerCase());
+            if (movie) {
+                document.title = `${movie.title} - MovieHub`;
+
+                const titleEl = document.getElementById('movie-title') || document.querySelector('h1');
+                if (titleEl) titleEl.textContent = movie.title;
+
+                const descEl = document.getElementById('movie-description') || document.querySelector('.description');
+                if (descEl) descEl.textContent = movie.description;
+
+                const yearEl = document.getElementById('movie-year');
+                if (yearEl) yearEl.textContent = movie.year;
+
+                const genreEl = document.getElementById('movie-genre');
+                if (genreEl) {
+                    genreEl.textContent = Array.isArray(movie.genres) ? movie.genres.join(', ') : movie.genres;
+                }
+
+                // Update Embed Player Source
+                const iframe = document.querySelector('iframe');
+                if (iframe) {
+                    if (movie.source === 'ok.ru') {
+                        iframe.src = `https://ok.ru/videoembed/${movie.embedId}`;
+                    } else if (movie.source === 'rumble') {
+                        iframe.src = `https://rumble.com/embed/${movie.embedId}/`;
+                    } else if (movie.source === 'youtube') {
+                        iframe.src = `https://www.youtube.com/embed/${movie.embedId}`;
+                    }
+                }
+                return; // Stop further grid rendering on the details page
+            }
+        }
+
+        // 3. HELPER TO MATCH GENRES (Handles both comma-separated strings and arrays)
         const hasGenre = (movie, target) => {
             if (!movie.genres) return false;
             const term = target.toLowerCase();
@@ -55,7 +91,7 @@ async function initMovieVault() {
             return;
         }
 
-        // 3. HOMEPAGE GRIDS (Cleaned up duplicate declarations)
+        // 4. HOMEPAGE GRIDS
         renderGrid(document.getElementById('latest-grid'), publicMovies.slice(0, 18));
 
         const latestReleases = [...publicMovies]

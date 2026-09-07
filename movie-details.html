@@ -135,47 +135,28 @@
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
             const rawId = params.get('id');
-            const searchInput = rawId ? rawId.trim() : null;
+            const movieId = rawId ? rawId.trim() : null;
             
-            if (!searchInput) {
+            if (!movieId) {
                 document.getElementById('movie-meta').innerText = "No movie specified.";
                 return;
             }
 
+            // Clean Self-Referential Canonical Tag Setup
+            let canonicalTag = document.querySelector("link[rel='canonical']");
+            if (!canonicalTag) {
+                canonicalTag = document.createElement('link');
+                canonicalTag.setAttribute('rel', 'canonical');
+                document.head.appendChild(canonicalTag);
+            }
+            canonicalTag.setAttribute('href', window.location.origin + window.location.pathname + '?id=' + movieId);
+
             try {
-                const response = await fetch('data/all-movies.json');
+                const response = await fetch('all-movies.json');
                 const movies = await response.json();
-                
-                // Flexible Lookup: 
-                // 1. Exact ID match
-                // 2. Case-insensitive match
-                // 3. Partial fallback match (e.g., Gacy-Serial-Killer-Next-Door matching gacy-serial-killer-next-door-2024)
-                const targetLower = searchInput.toLowerCase();
-                let movie = movies.find(m => m && m.id === searchInput);
-                
-                if (!movie) {
-                    movie = movies.find(m => m && m.id && m.id.toLowerCase() === targetLower);
-                }
-                
-                if (!movie) {
-                    movie = movies.find(m => {
-                        if (!m || !m.id) return false;
-                        const cleanId = m.id.toLowerCase();
-                        const cleanBase = cleanId.replace(/-\d{4}$/, '');
-                        return cleanId.includes(targetLower) || targetLower.includes(cleanBase);
-                    });
-                }
+                const movie = movies.find(m => m && m.id === movieId);
                 
                 if (movie) {
-                    // Clean Self-Referential Canonical Tag Setup using resolved movie.id
-                    let canonicalTag = document.querySelector("link[rel='canonical']");
-                    if (!canonicalTag) {
-                        canonicalTag = document.createElement('link');
-                        canonicalTag.setAttribute('rel', 'canonical');
-                        document.head.appendChild(canonicalTag);
-                    }
-                    canonicalTag.setAttribute('href', `https://moviehub.uk/movie-details.html?id=${movie.id}`);
-
                     const cleanTitle = movie.title ? movie.title.split('|')[0].trim() : 'Movie';
                     const releaseYear = movie.year ? `(${movie.year})` : '';
                     const iframe = document.getElementById('movie-iframe');
