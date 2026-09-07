@@ -6,21 +6,46 @@ async function initMovieVault() {
         if (!response.ok) throw new Error("Could not find data");
         allMoviesCache = await response.json();
 
+        // 1. DYNAMIC CANONICAL TAG FIX (Solves Search Console Indexing Issue)
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id');
+        if (movieId) {
+            let canonicalLink = document.querySelector("link[rel='canonical']");
+            if (!canonicalLink) {
+                canonicalLink = document.createElement('link');
+                canonicalLink.setAttribute('rel', 'canonical');
+                document.head.appendChild(canonicalLink);
+            }
+            canonicalLink.setAttribute('href', `https://moviehub.uk/movie-details.html?id=${movieId}`);
+        }
+
+        // 2. HELPER TO MATCH GENRES (Handles both comma-separated strings and arrays)
+        const hasGenre = (movie, target) => {
+            if (!movie.genres) return false;
+            const term = target.toLowerCase();
+            if (Array.isArray(movie.genres)) {
+                return movie.genres.some(g => g.toLowerCase().includes(term));
+            }
+            if (typeof movie.genres === 'string') {
+                return movie.genres.toLowerCase().includes(term);
+            }
+            return false;
+        };
+
         const publicMovies = allMoviesCache.filter(m => m.category !== 'private');
         const privateMovies = allMoviesCache.filter(m => m.category === 'private');
 
+        // Render Members Page Grid
         const membersGrid = document.getElementById('members-grid');
         if (membersGrid) {
             renderGrid(membersGrid, privateMovies);
             return;
         }
 
+        // Render Classics Page Grid
         const classicsGrid = document.getElementById('classics-grid');
         if (classicsGrid) {
-            const classicMovies = publicMovies.filter(m => 
-                m.genres && Array.isArray(m.genres) && 
-                m.genres.some(genre => genre.toLowerCase().includes('classic'))
-            );
+            const classicMovies = publicMovies.filter(m => hasGenre(m, 'classic'));
             const polishedClassics = classicMovies.map(movie => ({
                 ...movie,
                 title: movie.title ? movie.title.split('|')[0].trim() : 'Untitled Classic'
@@ -30,39 +55,26 @@ async function initMovieVault() {
             return;
         }
 
-        // --- ALL SECTIONS NOW CAPPED AT 18 ---
+        // 3. HOMEPAGE GRIDS (Cleaned up duplicate declarations)
         renderGrid(document.getElementById('latest-grid'), publicMovies.slice(0, 18));
 
-     const latestReleases = [...publicMovies]
-    .sort((a, b) => {
-        const yearA = parseInt(a.year, 10) || 0;
-        const yearB = parseInt(b.year, 10) || 0;
-        return yearB - yearA;
-    })
-    .slice(0, 18);
-
-renderGrid(document.getElementById('latest-releases-grid'), latestReleases);
-       const latestReleases = [...publicMovies]
-    .sort((a, b) => (parseInt(b.year) || 0) - (parseInt(a.year) || 0))
-    .slice(0, 18);
+        const latestReleases = [...publicMovies]
+            .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0))
+            .slice(0, 18);
         renderGrid(document.getElementById('latest-releases-grid'), latestReleases);
 
-        const hitchcockMovies = publicMovies.filter(m => 
-            m.genres && Array.isArray(m.genres) && m.genres.some(genre => genre.toLowerCase() === 'hitchcock')
-        ).slice(0, 18);
+        const hitchcockMovies = publicMovies.filter(m => hasGenre(m, 'hitchcock')).slice(0, 18);
         renderGrid(document.getElementById('hitchcock-grid'), hitchcockMovies);
 
-        const asianMovies = publicMovies.filter(m => 
-            m.genres && Array.isArray(m.genres) && m.genres.some(genre => genre.toLowerCase() === 'thai')
-        ).slice(0, 18);
+        const asianMovies = publicMovies.filter(m => hasGenre(m, 'thai') || hasGenre(m, 'asian')).slice(0, 18);
         renderGrid(document.getElementById('asian-grid'), asianMovies);
 
         const homepageSearchSection = document.getElementById('homepage-search-section');
         if (homepageSearchSection) homepageSearchSection.style.display = 'none';
 
+        // Catalog Grid or URL Search Handling
         const catalogGridContainer = document.getElementById('movie-grid-container');
         if (catalogGridContainer) {
-            const urlParams = new URLSearchParams(window.location.search);
             const genre = urlParams.get('genre');
             const searchTermFromURL = urlParams.get('search');
 
@@ -96,8 +108,22 @@ function renderGrid(container, movieList) {
 function showGenre(genre, sourceList) {
     const container = document.getElementById('movie-grid-container'); 
     if (!container) return;
-    const filtered = genre === 'All' ? sourceList : sourceList.filter(m => m.genres && Array.isArray(m.genres) && m.genres.map(g => g.toLowerCase()).includes(genre.toLowerCase()));
-    renderGrid(container, filtered.slice(0, 18)); // Capped here too
+    
+    const filtered = genre === 'All' 
+        ? sourceList 
+        : sourceList.filter(m => {
+            if (!m.genres) return false;
+            const term = genre.toLowerCase();
+            if (Array.isArray(m.genres)) {
+                return m.genres.map(g => g.toLowerCase()).includes(term);
+            }
+            if (typeof m.genres === 'string') {
+                return m.genres.toLowerCase().includes(term);
+            }
+            return false;
+        });
+        
+    renderGrid(container, filtered.slice(0, 18));
 }
 
 function setupSearch(searchableList) {
@@ -115,7 +141,7 @@ function setupSearch(searchableList) {
             ];
 
             if (homepageSearchResultsContainer && homepageSearchSection) {
-                renderGrid(homepageSearchResultsContainer, filteredMovies.slice(0, 18)); // Capped here too
+                renderGrid(homepageSearchResultsContainer, filteredMovies.slice(0, 18));
                 if (term.length > 0) {
                     homepageSearchSection.style.display = 'block';
                     contentSections.forEach(s => { if(s) s.style.display = 'none'; });
@@ -126,7 +152,7 @@ function setupSearch(searchableList) {
             } else {
                 const catalogGridContainer = document.getElementById('movie-grid-container');
                 if (catalogGridContainer) {
-                    renderGrid(catalogGridContainer, filteredMovies.slice(0, 18)); // Capped here too
+                    renderGrid(catalogGridContainer, filteredMovies.slice(0, 18));
                 }
             }
         });
