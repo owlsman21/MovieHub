@@ -1,4 +1,56 @@
 [
+  {
+  "id": "spider-noir-2026",
+  "title": "Spider-Noir (2026)",
+  "year": 2026,
+  "quality": "HD",
+  "genres": "Action, Crime, Film Noir, Classics",
+  "director": "Harry Bradbeer, Oren Uziel",
+  "cast": "Nicolas Cage, Lamorne Morris, Li Jun Li, Karen Rodriguez, Jack Huston, Brendan Gleeson",
+  "source": "ok.ru",
+  "embedId": "16835815934502",
+  "posterUrl": "images/spider-noir-2026.jpg",
+  "description": "Set in 1930s New York City, a seasoned, down-on-his-luck private investigator named Ben Reilly (Nicolas Cage) is forced to grapple with his past life as the city's one and only superhero. Blending classic hard-boiled detective noir with high-stakes crime drama, this atmospheric thrill-ride follows Reilly navigating dangerous underbellies, mob bosses, and mysterious conspiracies. Stream the full feature presentation on MovieHub. https://moviehub.uk/"
+},
+  {
+  "id": "he-walked-by-night-1948",
+  "title": "He Walked by Night (1948)",
+  "year": 1948,
+  "quality": "HD",
+  "genres": "Crime, Film Noir, Action Classics",
+  "director": "Alfred L. Werker, Anthony Mann",
+  "cast": "Richard Basehart, Scott Brady, Roy Roberts, Whit Bissell, Jack Webb",
+  "source": "rumble",
+  "embedId": "v7d1xyg",
+  "posterUrl": "images/he-walked-by-night-1948.jpg",
+  "description": "When a brilliant, elusive burglar (Richard Basehart) murders a police officer in cold blood, the LAPD launches a massive manhunt utilizing early forensic science and procedural crime analysis to track him down. Co-directed by Anthony Mann with iconic high-contrast cinematography by John Alton, this groundbreaking true-crime docu-noir leads to a climactic hunt through the Los Angeles storm sewers. Stream the full restored presentation on MovieHub. https://moviehub.uk/"
+},
+  {
+  "id": "the-st-louis-bank-robbery-1959",
+  "title": "The St. Louis Bank Robbery (1959)",
+  "year": 1959,
+  "quality": "HD",
+  "genres": "Crime, Film Noir, Action Classics",
+  "director": "Charles Guggenheim, John Stix",
+  "cast": "Steve McQueen, David Clarke, Graham Denton, Molly McCarthy, James Dukas",
+  "source": "rumble",
+  "embedId": "v7d1tjw",
+  "posterUrl": "images/the-st-louis-bank-robbery-1959.jpg",
+  "description": "Desperate for money, former college football player George Fowler (Steve McQueen) joins a gang of hardened criminals to serve as the getaway driver for a major bank heist. Filmed on location in St. Louis with a gritty docu-noir feel, tension builds as paranoia and betrayal threaten to tear the gang apart before the police move in. Stream the full classic feature presentation on MovieHub. https://moviehub.uk/"
+},
+  {
+  "id": "arsenic-and-old-lace-1944",
+  "title": "Arsenic and Old Lace (1944)",
+  "year": 1944,
+  "quality": "HD",
+  "genres": "Comedy, Crime, Classics",
+  "director": "Frank Capra",
+  "cast": "Cary Grant, Priscilla Lane, Raymond Massey, Jack Carson, Edward Everett Horton, Peter Lorre",
+  "source": "rumble",
+  "embedId": "v7d1r82",
+  "posterUrl": "images/arsenic-and-old-lace-1944.jpg",
+  "description": "Newlywed drama critic Mortimer Brewster (Cary Grant) visits his sweet, elderly aunts, only to discover they have been poisoning lonely old gentlemen with arsenic-laced elderberry wine out of 'charity.' Directed by Frank Capra, this legendary screwball dark comedy features hilarious performances alongside Raymond Massey and Peter Lorre. Stream the full restored feature presentation on MovieHub. https://moviehub.uk/"
+},
  {
   "id": "The-Shepherd",
   "title": "The Shepherd of the Hills (1941)",
@@ -1740,8 +1792,8 @@
   "quality": "HD",
   "genres": "Thriller, Mystery, Drama",
   "description": "After moving into a new home, a woman finds herself increasingly unsettled as she discovers evidence that someone—or something—is living in the attic.",
-  "embedId": "9421254756921",
-  "source": "ok.ru",
+  "embedId": "v7d20q8",
+  "source": "rumble",
   "posterUrl": "images/the-man-in-the-attic-1995.jpg"
 },
   {
