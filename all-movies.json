@@ -1,5 +1,29 @@
 [
   {
+  "id": "big-town-after-dark-1947",
+  "title": "Big Town After Dark (1947) Full Movie | Phillip Reed & Hillary Brooke | Classic Film Noir",
+  "year": 1947,
+  "director": "William C. Thomas",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Mystery",
+  "description": "A fearless crusade reporter takes on a crooked gambling syndicate controlling the city, only to discover a high-stakes connection to the newspaper's own publishing family.",
+  "embedId": "v7d3i8k/",
+  "source": "rumble",
+  "posterUrl": "images/big-town-after-dark-1947.jpg"
+},
+  {
+  "id": "behind-green-lights-1946",
+  "title": "Behind Green Lights (1946) Full Movie | Carole Landis & William Gargan | Classic Film Noir",
+  "year": 1946,
+  "director": "Otto Brower",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Mystery, Drama",
+  "description": "When a corrupt political power broker is found dead in a car parked outside police headquarters, a dedicated lieutenant must navigate blackmail, dirty politics, and conflicting alibis to catch the killer.",
+  "embedId": "v7d3fnk",
+  "source": "rumble",
+  "posterUrl": "images/behind-green-lights-1946.jpg"
+},
+  {
   "id": "back-to-bataan-1945",
   "title": "Back to Bataan (1945)",
   "year": 1945,
@@ -15861,16 +15885,7 @@
   "source": "rumble",
   "embedId": "v71s91m"
 },
-            {
-  "id": "california",
-  "title": "In Old California",
-  "year": 1942,
-  "description": "A Boston pharmacist moves to Sacramento and clashes with a local boss while trying to establish a new life during the Gold Rush.",
-  "genres": ["Western", "Drama", "Classic", "Movie"],
-  "posterUrl": "images/in-old-california-1942.jpg",
-  "source": "rumble",
-  "embedId": "v71scwe"
-},
+        
           {
   "id": "renegade",
   "title": "Renegade Girl",
