@@ -1,4 +1,52 @@
 [
+  {
+  "id": "confinement-2026",
+  "title": "Confinement (2026) Full Movie | Psychological Horror Thriller",
+  "year": 2026,
+  "director": "Peter Howitt",
+  "quality": "HD",
+  "genres": "Horror, Mystery, Thriller",
+  "description": "Pregnant and recently widowed, Stella is taken in by her late husband's estranged family at their isolated countryside estate. However, beneath their warm hospitality lies a sinister obsession with her unborn child, forcing her into a desperate struggle for survival. Starring Nathalie Emmanuel and Claire Forlani.",
+  "embedId": "16819236637222",
+  "source": "ok.ru",
+  "posterUrl": "images/confinement-2026.jpg"
+},
+  {
+  "id": "thine-ears-shall-bleed-2024",
+  "title": "Thine Ears Shall Bleed (2024) Full Movie | Western Horror Thriller",
+  "year": 2024,
+  "director": "Ben Bigelow",
+  "quality": "HD",
+  "genres": "Horror, Western, Mystery, Thriller",
+  "description": "In the 1860s American West, a minister and his family traveling in a covered wagon hear a mysterious, enchanting sound from the deep woods. Believing it to be the voice of God, they worship it, only to realize the sound originates from a far darker, sinister force. Starring Andrew Hovelson and Hannah Cabell.",
+  "embedId": "16900974709286",
+  "source": "ok.ru",
+  "posterUrl": "images/thine-ears-shall-bleed-2024.jpg"
+},
+  {
+  "id": "echo-point-2026",
+  "title": "Echo Point (2026) Full Movie | Horror Psychological Thriller",
+  "year": 2026,
+  "director": "Evan Marcewicz",
+  "quality": "HD",
+  "genres": "Horror, Mystery, Thriller",
+  "description": "A man inherits a secluded cabin from his estranged father and discovers an old radio emitting eerie signals. As he unravels the mystery, he realizes the haunting voices on the other end belong to a killer's victims.",
+  "embedId": "16901025958438",
+  "source": "ok.ru",
+  "posterUrl": "images/echo-point-2026.jpg"
+},
+  {
+  "id": "resident-dead-2026",
+  "title": "Resident Dead (2026) Full Movie | Zombie Horror Thriller",
+  "year": 2026,
+  "director": "Ryan Ebert",
+  "quality": "HD",
+  "genres": "Horror, Sci-Fi, Action",
+  "description": "A father fights his way through hordes of the ferocious undead alongside his infected daughter, desperate to reach a hidden laboratory with a cure before she fully transforms.",
+  "embedId": "16901013244454",
+  "source": "ok.ru",
+  "posterUrl": "images/resident-dead-2026.jpg"
+},
  {
   "id": "the-secret-of-the-whistler-1946",
   "title": "The Secret of the Whistler (1946) Full Movie | Richard Dix & Leslie Brooks | Classic Film Noir",
@@ -12,18 +60,7 @@
   "posterUrl": "images/the-secret-of-the-whistler-1946.jpg"
 },
   
-  {
-    "id": "the-hunted-2026",
-    "title": "The Hunted (2026) Full Movie | Action Horror Thriller",
-    "year": 2026,
-    "director": "Unknown",
-    "quality": "HD",
-    "genres": "Action, Horror, Thriller",
-    "description": "Three deadly stories of pursuit collide in this pulse-pounding thriller: a concussed runner is stalked in the wilderness, a serial killer targets an abusive husband, and bank robbers turn on each other over a massive score.",
-    "embedId": "16872815856166",
-    "source": "ok.ru",
-    "posterUrl": "images/the-hunted-2026.jpg"
-  },
+ 
   {
     "id": "portal-to-hell-2026",
     "title": "Portal to Hell (2026) Full Movie | Keith David & Richard Kind | Horror Comedy",
