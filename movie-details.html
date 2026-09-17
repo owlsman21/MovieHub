@@ -6,6 +6,12 @@
     
     <meta id="meta-description" name="description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     
+    <!-- DYNAMIC OG TAGS FOR SEARCH BOT INDEXING -->
+    <meta id="og-title" property="og:title" content="Movie Details & Archive Stream | MovieHub">
+    <meta id="og-description" property="og:description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
+    <meta id="og-url" property="og:url" content="https://moviehub.uk/movie-details.html">
+    <meta id="og-image" property="og:image" content="https://moviehub.uk/images/poster-placeholder.jpg">
+    
     <title>Movie Details & Archive Stream | MovieHub</title>
     
     <link rel="stylesheet" href="style.css">
@@ -142,14 +148,15 @@
                 return;
             }
 
-            // Clean Self-Referential Canonical Tag Setup
+            // FORCE FULL ABSOLUTE CANONICAL PATH INCLUDING .html
+            const cleanCanonicalUrl = `https://moviehub.uk/movie-details.html?id=${encodeURIComponent(movieId)}`;
             let canonicalTag = document.querySelector("link[rel='canonical']");
             if (!canonicalTag) {
                 canonicalTag = document.createElement('link');
                 canonicalTag.setAttribute('rel', 'canonical');
                 document.head.appendChild(canonicalTag);
             }
-            canonicalTag.setAttribute('href', window.location.origin + window.location.pathname + '?id=' + movieId);
+            canonicalTag.setAttribute('href', cleanCanonicalUrl);
 
             try {
                 const response = await fetch('all-movies.json');
@@ -175,11 +182,16 @@
                     // 1. DYNAMIC SEARCH-FRIENDLY TITLE
                     document.title = `${cleanTitle} ${releaseYear} - Watch Stream Online | MovieHub`;
                     
-                    // 2. META DESCRIPTION
+                    // 2. META DESCRIPTION & OPEN GRAPH FOR BOT PARSING
+                    const descText = movie.description ? movie.description.substring(0, 155).trim() + '...' : 'Stream classic movies online on MovieHub.';
                     const metaDescriptionElement = document.getElementById('meta-description');
-                    if (metaDescriptionElement && movie.description) {
-                        metaDescriptionElement.setAttribute('content', movie.description.substring(0, 155).trim() + '...');
+                    if (metaDescriptionElement) {
+                        metaDescriptionElement.setAttribute('content', descText);
                     }
+                    
+                    document.getElementById('og-title').setAttribute('content', `${cleanTitle} ${releaseYear}`);
+                    document.getElementById('og-description').setAttribute('content', descText);
+                    document.getElementById('og-url').setAttribute('content', cleanCanonicalUrl);
 
                     // 3. GENRE FORMATTING
                     const genreDisplay = Array.isArray(movie.genres) 
@@ -202,7 +214,7 @@
                         triviaContainer.innerHTML = movie.trivia.map(item => `<li>${item}</li>`).join('');
                     } else {
                         triviaContainer.innerHTML = `<li>Full feature presentation restored for high-quality playback.</li>
-                                                    <li>Available to stream on MovieHub Vault.</li>`;
+                                                     <li>Available to stream on MovieHub Vault.</li>`;
                     }
 
                     // 7. INJECT SCHEMA (VideoObject) WITH ABSOLUTE ENCODED THUMBNAIL URL
@@ -213,8 +225,12 @@
                                 formattedThumbnail = movie.posterUrl;
                             } else {
                                 const cleanPath = movie.posterUrl.startsWith('/') ? movie.posterUrl : '/' + movie.posterUrl;
-                                formattedThumbnail = encodeURI(window.location.origin + cleanPath);
+                                formattedThumbnail = encodeURI('https://moviehub.uk' + cleanPath);
                             }
+                        }
+
+                        if (formattedThumbnail) {
+                            document.getElementById('og-image').setAttribute('content', formattedThumbnail);
                         }
 
                         const script = document.createElement('script');
@@ -226,7 +242,7 @@
                             "description": movie.description || "",
                             "thumbnailUrl": formattedThumbnail ? [formattedThumbnail] : [],
                             "uploadDate": movie.year ? `${movie.year}-01-01T08:00:00+00:00` : "1950-01-01T08:00:00+00:00",
-                            "contentUrl": window.location.href,
+                            "contentUrl": cleanCanonicalUrl,
                             "embedUrl": embedUrl,
                             "publisher": {
                                 "@type": "Organization",

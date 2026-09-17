@@ -1,5 +1,53 @@
 [
   {
+  "id": "shock-1946",
+  "title": "Shock (1946) Full Movie | Vincent Price & Lynn Bari | Classic Film Noir Thriller",
+  "year": 1946,
+  "director": "Alfred L. Werker",
+  "quality": "HD",
+  "genres": "Crime, Drama, Film-Noir, Thriller",
+  "description": "A distraught woman in a hotel room witnesses a man murder his wife with a candlestick. When she goes into a state of severe shock, a psychiatrist is called in—only for her to realize he is the very killer she witnessed. Starring Vincent Price, Lynn Bari, and Frank Latimore.",
+  "embedId": "YOUR_EMBED_ID",
+  "source": "rumble",
+  "posterUrl": "images/shock-1946.jpg"
+},
+  {
+  "id": "the-strange-love-of-martha-ivers-1946",
+  "title": "The Strange Love of Martha Ivers (1946) Full Movie | Barbara Stanwyck & Kirk Douglas | Film Noir Classic",
+  "year": 1946,
+  "director": "Lewis Milestone",
+  "quality": "HD",
+  "genres": "Crime, Drama, Film-Noir, Mystery",
+  "description": "A wealthy heiress, her district attorney husband, and a childhood friend are bound together by a lethal childhood secret. When the friend unexpectedly returns to town years later, fear, obsession, and blackmail surface. Starring Barbara Stanwyck, Van Heflin, Lizabeth Scott, and Kirk Douglas.",
+  "embedId": "v7dfoaa",
+  "source": "rumble",
+  "posterUrl": "images/the-strange-love-of-martha-ivers-1946.jpg"
+},
+  {
+  "id": "fear-in-the-night-1947",
+  "title": "Fear in the Night (1947) Full Movie | DeForest Kelley & Paul Kelly | Classic Film Noir",
+  "year": 1947,
+  "director": "Maxwell Shane",
+  "quality": "HD",
+  "genres": "Crime, Drama, Film-Noir, Mystery",
+  "description": "A bank teller wakes up from a terrifying nightmare in which he murdered a man in a mirrored room, only to find physical evidence suggesting the crime actually occurred. Teaming up with his detective brother-in-law, he races to untangle a hypnotic web of deception. Starring DeForest Kelley, Paul Kelly, and Ann Doran.",
+  "embedId": "v7dfnc2",
+  "source": "rumble",
+  "posterUrl": "images/fear-in-the-night-1947.jpg"
+},
+  {
+  "id": "meet-john-doe-1941",
+  "title": "Meet John Doe (1941) Full Movie | Gary Cooper & Barbara Stanwyck | Frank Capra Classic",
+  "year": 1941,
+  "director": "Frank Capra",
+  "quality": "HD",
+  "genres": "Comedy, Drama, Romance",
+  "description": "To save her job, a desperate reporter fabricates a letter from a fictional man threatening self-harm in protest of political corruption. When the story causes a national frenzy, an unemployed ballplayer is hired to embody 'John Doe', sparking an unintended mass movement. Starring Gary Cooper, Barbara Stanwyck, and Edward Arnold.",
+  "embedId": "v7dfbj0",
+  "source": "rumble",
+  "posterUrl": "images/meet-john-doe-1941.jpg"
+},
+  {
   "id": "confinement-2026",
   "title": "Confinement (2026) Full Movie | Psychological Horror Thriller",
   "year": 2026,
@@ -1329,18 +1377,7 @@
   "source": "ok.ru",
   "posterUrl": "images/midnight-run-1988.jpg"
 },
-   {
-  "id": "a-farewell-to-arms-1957",
-  "title": "A Farewell to Arms (1957) Full Movie | Epic WW2 Romance & War Drama | Rock Hudson & Jennifer Jones",
-  "year": 1957,
-  "director": "Charles Vidor",
-  "quality": "HD",
-  "genres": "Drama, War, Romance, Classics",
-  "description": "An epic, large-scale adaptation of Ernest Hemingway's classic novel following the intense and tragic wartime romance between an American ambulance driver and a British nurse on the Italian front during WWI.",
-  "embedId": "YOUR_RUMBLE_EMBED_ID_HERE",
-  "source": "rumble",
-  "posterUrl": "images/a-farewell-to-arms-1957.jpg"
-},
+ 
    {
   "id": "ithaca-2015",
   "title": "Ithaca (2015) Full Movie | Emotional WW2 Homefront Drama | Tom Hanks & Meg Ryan",
