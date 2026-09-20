@@ -1,4 +1,71 @@
 [
+  {
+  "id": "please-murder-me-1956",
+  "title": "Please Murder Me (1956) Full Movie HD | Raymond Burr & Angela Lansbury | Film Noir Thriller",
+  "year": 1956,
+  "director": "Peter Godfrey",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Thriller",
+  "description": "A defense lawyer clears a woman of murder, only to learn she manipulated him and is guilty. He sets a deadly trap to catch her by offering himself as her next target.",
+  "embedId": "v7djtxs",
+  "source": "rumble",
+  "posterUrl": "images/please-murder-me-1956.jpg"
+},
+  {
+  "id": "they-made-me-a-killer-1946",
+  "title": "They Made Me A Killer (1946) Full Movie | Robert Lowery & Barbara Britton | Film Noir",
+  "year": 1946,
+  "director": "William C. Thomas",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Action",
+  "description": "An innocent man forced at gunpoint to be a bank robbery getaway driver is framed for murder. He escapes custody to track down the real culprits with the help of a victim's sister.",
+  "embedId": "v7die5s",
+  "source": "rumble",
+  "posterUrl": "images/they-made-me-a-killer-1946.jpg"
+},
+  {
+  "id": "shock-1946",
+  "title": "Shock (1946) Full Movie | Vincent Price | Classic Film Noir",
+  "year": 1946,
+  "director": "Alfred L. Werker",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Psychological Thriller",
+  "description": "A woman in a catatonic state after witnessing a murder is treated by a psychiatrist who turns out to be the killer. Vincent Price stars in his very first leading role.",
+  "embedId": "v7diasu",
+  "source": "rumble",
+  "posterUrl": "images/shock-1946.jpg"
+},
+  {
+  "id": "borderline-1950",
+  "title": "Borderline (1950)",
+  "year": 1950,
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Comedy",
+  "director": "William A. Seiter",
+  "cast": "Fred MacMurray, Claire Trevor, Raymond Burr, Morris Ankrum",
+  "source": "rumble",
+  "embedId": "v7dgzjs",
+  "posterUrl": "images/borderline-1950.jpg",
+  "description": "Two undercover law enforcement agents, sent separately to Mexico to dismantle a narcotics smuggling ring, meet and team up without realizing they are both on the same side of the law."
+},
+  {
+  "id": "cause-for-alarm-1951",
+  "title": "Cause for Alarm! (1951)",
+  "year": 1951,
+  "quality": "HD",
+  "genres": "Film Noir, Drama, Mystery, Thriller",
+  "director": "Tay Garnett",
+  "cast": "Loretta Young, Barry Sullivan, Bruce Cowling, Margalo Gillmore",
+  "source": "rumble",
+  "embedId": "v7dgwj4",
+  "posterUrl": "images/cause-for-alarm-1951.jpg",
+  "description": "A sick man with an obsessive jealousy mistakingly believes his wife and doctor are plotting to kill him. He writes a letter to the prosecutor accusing them of his murder, hands it to the mailman, and promptly dies of natural causes—leaving his innocent wife in a desperate panic to retrieve the letter before it is delivered.",
+  "trivia": [
+    "Entered the public domain in the United States in 1979 due to non-renewal of its original copyright.",
+    "Based on an original radio play story written by Larry Marcus.",
+    "Features a tense, real-time style narrative centered around the everyday operations of the US Postal Service."
+  ]
+},
  
   {
   "id": "the-strange-love-of-martha-ivers-1946",
