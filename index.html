@@ -3,15 +3,15 @@
 <head>
     <meta name="msvalidate.01" content="AD92F5D90C30A5F6AAA353777F300D67" />
     <meta charset="UTF-8">
-    <title>MovieHub | Premium Vault</title>
-    <meta name="description" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free.">
+    <title id="page-title">MovieHub | Premium Vault</title>
+    <meta name="description" id="page-desc" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free.">
     
     <!-- FACEBOOK / OPEN GRAPH PREVIEW TAGS -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://moviehub.uk/" />
-    <meta property="og:title" content="MovieHub | Premium Vault" />
-    <meta property="og:description" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free." />
-    <meta property="og:image" content="https://moviehub.uk/images/film-noir-grid.jpg" />
+    <meta property="og:title" id="og-title" content="MovieHub | Premium Vault" />
+    <meta property="og:description" id="og-desc" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free." />
+    <meta property="og:image" id="og-image" content="https://moviehub.uk/images/film-noir-grid.jpg" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -149,6 +149,86 @@
             text-align: left;
         }
 
+        /* MOVIE DETAIL PAGE STYLES */
+        .movie-detail-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .player-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .player-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .movie-info-header {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .movie-info-header img {
+            width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .movie-meta {
+            flex: 1;
+        }
+
+        .movie-meta h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            color: #ffd700;
+        }
+
+        .movie-meta-tags {
+            margin-bottom: 15px;
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        .movie-meta-tags span {
+            margin-right: 15px;
+            background: #222;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+
+        .movie-description {
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 600px) {
+            .movie-info-header {
+                flex-direction: column;
+            }
+            .movie-info-header img {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+
         footer { background: #111; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
         .footer-icons { font-size: 1.5rem; margin: 15px 0; }
         .footer-icons a { color: #ffd700; margin: 0 10px; }
@@ -174,13 +254,15 @@
         </nav>
     </header>
 
-    <div class="search-row">
+    <div class="search-row" id="search-container">
         <div class="search-wrapper">
             <input type="text" id="search-input" placeholder="Search the vault...">
             <button id="clear-search" class="clear-btn" title="Clear search"><i class="fas fa-times-circle"></i></button>
         </div>
     </div>
 
+    <!-- Main View Containers -->
+    <div id="movie-detail-view" style="display: none;"></div>
     <div id="shelf-container"></div>
 
     <footer>
@@ -204,23 +286,31 @@
         let allMoviesData = []; 
 
         async function init() {
-            // Redirect legacy URL queries (e.g. ?id=movie-slug) or hashes to clean path
-            const urlParams = new URLSearchParams(window.location.search);
-            const legacyId = urlParams.get('id');
-            if (legacyId) {
-                window.location.replace(`/movie/${legacyId}`);
-                return;
-            }
-
             try {
-                // Absolute path so it always fetches from root regardless of route depth
                 const response = await fetch('/all-movies.json?t=' + new Date().getTime());
                 allMoviesData = await response.json();
             } catch (error) {
                 console.error("Error loading data:", error);
             }
 
-            renderShelves(allMoviesData);
+            // Check if URL is a clean movie URL like /movie/shark-frenzy-2026 or query string ?id=shark-frenzy-2026
+            const pathname = window.location.pathname;
+            const urlParams = new URLSearchParams(window.location.search);
+            const legacyId = urlParams.get('id');
+
+            let movieId = null;
+
+            if (pathname.startsWith('/movie/')) {
+                movieId = pathname.split('/movie/')[1].replace(/\/$/, '');
+            } else if (legacyId) {
+                movieId = legacyId;
+            }
+
+            if (movieId) {
+                renderMovieDetail(movieId);
+            } else {
+                renderShelves(allMoviesData);
+            }
 
             window.addEventListener('scroll', () => {
                 const btt = document.getElementById('back-to-top');
@@ -232,6 +322,11 @@
 
             searchInput.addEventListener('input', (e) => {
                 const term = e.target.value.toLowerCase().trim();
+                
+                // If user starts searching while on a movie detail page, switch back to home grid
+                document.getElementById('movie-detail-view').style.display = 'none';
+                document.getElementById('shelf-container').style.display = 'block';
+
                 if (term.length > 0) {
                     clearBtn.style.display = 'block';
                     renderShelves(allMoviesData.filter(m => m.title && m.title.toLowerCase().includes(term)), true); 
@@ -248,14 +343,69 @@
             });
         }
 
-        // Helper function to build a card element with image and title
+        function renderMovieDetail(id) {
+            const movie = allMoviesData.find(m => m.id === id);
+            const searchContainer = document.getElementById('search-container');
+            const shelfContainer = document.getElementById('shelf-container');
+            const detailView = document.getElementById('movie-detail-view');
+
+            if (!movie) {
+                shelfContainer.style.display = 'block';
+                shelfContainer.innerHTML = '<div style="text-align:center; padding: 50px;"><h2>Movie Not Found</h2><a href="/" style="color:#e50914;">Return to Home</a></div>';
+                return;
+            }
+
+            // Update Metadata / Document Title
+            document.title = `${movie.title} | MovieHub`;
+
+            shelfContainer.style.display = 'none';
+            detailView.style.display = 'block';
+
+            const posterSrc = movie.posterUrl || '';
+            const fullPosterUrl = (posterSrc.startsWith('http') || posterSrc.startsWith('/')) ? posterSrc : '/' + posterSrc;
+
+            // Generate iframe src based on source provider
+            let embedUrl = '';
+            if (movie.source === 'rumble') {
+                embedUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+            } else if (movie.source === 'okru' || movie.source === 'ok.ru') {
+                embedUrl = `//ok.ru/videoembed/${movie.embedId}`;
+            } else if (movie.source === 'youtube') {
+                embedUrl = `https://www.youtube.com/embed/${movie.embedId}`;
+            } else {
+                embedUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
+            }
+
+            const genresText = Array.isArray(movie.genres) ? movie.genres.join(', ') : (movie.genres || 'Classic');
+
+            detailView.innerHTML = `
+                <div class="movie-detail-container">
+                    <div class="player-wrapper">
+                        <iframe src="${embedUrl}" allowfullscreen></iframe>
+                    </div>
+                    <div class="movie-info-header">
+                        <img src="${fullPosterUrl}" alt="${movie.title}" onerror="this.src='/images/poster-placeholder.jpg'">
+                        <div class="movie-meta">
+                            <h1>${movie.title}</h1>
+                            <div class="movie-meta-tags">
+                                <span>${movie.year || 'N/A'}</span>
+                                <span>${movie.quality || 'HD'}</span>
+                                <span>${genresText}</span>
+                            </div>
+                            ${movie.director ? `<p><strong>Director:</strong> ${movie.director}</p>` : ''}
+                            <p class="movie-description">${movie.description || ''}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function createMovieCard(movie) {
             const card = document.createElement('div');
             card.className = 'movie-card';
             card.onclick = () => window.location.href = `/movie/${movie.id}`;
 
             const img = document.createElement('img');
-            // Ensure poster URL is absolute if stored relatively
             const posterSrc = movie.posterUrl || '';
             img.src = (posterSrc.startsWith('http') || posterSrc.startsWith('/')) ? posterSrc : '/' + posterSrc;
             img.alt = movie.title || 'Movie Poster';
@@ -284,7 +434,6 @@
                     grid.appendChild(createMovieCard(m));
                 });
             } else {
-                // 1. Generate LATEST ADDITIONS Row at the absolute top (First 12 entries in the array)
                 const latestAddedSection = document.createElement('section');
                 latestAddedSection.className = 'shelf';
                 latestAddedSection.innerHTML = `
@@ -301,7 +450,6 @@
                     latestAddedGrid.appendChild(createMovieCard(m));
                 });
 
-                // 2. Category definitions with specific filtering rules
                 const categories = [
                     { title: "New Releases", keywords: ["new"], domId: "latest" },
                     { title: "Classic Cinema", keywords: ["classic"], domId: "classics" },
