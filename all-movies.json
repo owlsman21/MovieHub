@@ -1,5 +1,137 @@
 [
   {
+  "id": "nimrods-2026",
+  "title": "Nimrods (2026) Full Movie | Mason Thames & Mckenna Grace | Classic Comedy",
+  "year": 2026,
+  "director": "Unknown",
+  "quality": "HD",
+  "genres": "Comedy, Music, Drama, Classics",
+  "description": "Three high school friends embark on a wild road trip to Los Angeles under the mistaken belief that their band has been booked to open for Green Day on New Year's Eve.",
+  "embedId": "16959474567718",
+  "source": "ok.ru",
+  "posterUrl": "images/nimrods-2026.jpg"
+},
+  {
+  "id": "shark-frenzy-2026",
+  "title": "Shark Frenzy (2026) Full Movie | Survival Horror Thriller",
+  "year": 2026,
+  "director": "Unknown",
+  "quality": "HD",
+  "genres": "Horror, Thriller, Action",
+  "description": "Stranded survivors in open waters face a desperate battle for survival as predatory sharks circle their position.",
+  "embedId": "16965502568998",
+  "source": "ok.ru",
+  "posterUrl": "images/shark-frenzy-2026.jpg"
+},
+  {
+  "id": "norton-creek-massacre-1971",
+  "title": "Norton Creek Massacre (1971) Full Movie | Classic Western",
+  "year": 1971,
+  "director": "Earl Bellamy",
+  "quality": "HD",
+  "genres": "Western, Action, Classics",
+  "description": "A prejudiced rancher and a skilled scout form an uneasy alliance to track down the outlaws who kidnapped the rancher's daughter.",
+  "embedId": "590905198374",
+  "source": "ok.ru",
+  "posterUrl": "images/norton-creek-massacre-1971.jpg"
+},
+  {
+  "id": "highway-dragnet-1954",
+  "title": "Highway Dragnet (1954) Full Movie | Richard Conte & Joan Bennett | Classic Film Noir",
+  "year": 1954,
+  "director": "Nathan Juran",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Thriller, Classics",
+  "description": "A wrongly accused war veteran flees police across the Nevada desert in the company of two women, unaware one of them holds the key to the murder. Starring Richard Conte and Joan Bennett.",
+  "embedId": "v7dqkxq",
+  "source": "rumble",
+  "posterUrl": "images/highway-dragnet-1954.jpg"
+},
+  {
+  "id": "plunder-road-1957",
+  "title": "Plunder Road (1957) Full Movie | Gene Raymond & Elisha Cook Jr. | Classic Heist Film Noir",
+  "year": 1957,
+  "director": "Hubert Cornfield",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Thriller, Classics",
+  "description": "Five men pull off a $10 million train gold heist and split up in three trucks, leading to a tense race against the law across California. Starring Gene Raymond, Jeanne Cooper, and Elisha Cook Jr.",
+  "embedId": "v7dqiw0",
+  "source": "rumble",
+  "posterUrl": "images/plunder-road-1957.jpg"
+},
+  {
+  "id": "submarine-2010",
+  "title": "Submarine (2010) Full Movie | Craig Roberts & Yasmin Paige | Coming-of-Age Comedy Drama",
+  "year": 2010,
+  "director": "Richard Ayoade",
+  "quality": "HD",
+  "genres": "Comedy, Drama, Romance, Coming-of-Age",
+  "description": "An eccentric 15-year-old Welsh teenager has two major goals: save his parents' failing marriage from a creepy ex-boyfriend and lose his virginity before his next birthday.",
+  "embedId": "218599787246",
+  "source": "ok.ru",
+  "posterUrl": "images/submarine-2010.jpg"
+},
+  {
+  "id": "dont-be-afraid-of-the-dark-2010",
+  "title": "Don't Be Afraid of the Dark (2010) Full Movie | Katie Holmes & Guy Pearce | Horror Thriller",
+  "year": 2010,
+  "director": "Troy Nixey",
+  "quality": "HD",
+  "genres": "Horror, Fantasy, Mystery, Thriller",
+  "description": "A young girl sent to live with her father and his new girlfriend in a Victorian mansion unwittingly unleashes ancient, demonic creatures that inhabit the sealed basement.",
+  "embedId": "218839059182",
+  "source": "ok.ru",
+  "posterUrl": "images/dont-be-afraid-of-the-dark-2010.jpg"
+},
+  {
+  "id": "london-boulevard-2010",
+  "title": "London Boulevard (2010) Full Movie | Colin Farrell & Keira Knightley | Crime Drama",
+  "year": 2010,
+  "director": "William Monahan",
+  "quality": "HD",
+  "genres": "Crime, Drama, Thriller, Action",
+  "description": "An ex-con attempting to go straight takes a job as a bodyguard for a reclusive movie star. However, his past catches up with him when a ruthless crime boss tries to force him back into London's dangerous underworld.",
+  "embedId": "218889063150",
+  "source": "ok.ru",
+  "posterUrl": "images/london-boulevard-2010.jpg"
+},
+  {
+  "id": "house-by-the-river-1950",
+  "title": "House by the River (1950) Full Movie | Louis Hayward & Jane Wyatt | Fritz Lang Film Noir",
+  "year": 1950,
+  "director": "Fritz Lang",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Psychological Thriller, Classics",
+  "description": "A writer accidentally kills his housekeeper and convinces his brother to help hide the body. As paranoia mounts, the river begins to surface the dark secret.",
+  "embedId": "v7dozmy",
+  "source": "rumble",
+  "posterUrl": "images/house-by-the-river-1950.jpg"
+},
+  {
+  "id": "the-naked-kiss-1964",
+  "title": "The Naked Kiss (1964) Full Movie | Constance Towers & Anthony Eisley | Neo-Noir Classic",
+  "year": 1964,
+  "director": "Samuel Fuller",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Thriller, Classics",
+  "description": "A former prostitute tries to rebuild her life in a quiet suburb, but her path to redemption is shattered when she uncovers a dark secret hidden by a wealthy benefactor.",
+  "embedId": "v7dn9zy",
+  "source": "rumble",
+  "posterUrl": "images/the-naked-kiss-1964.jpg"
+},
+  {
+  "id": "the-dark-mirror-1946",
+  "title": "The Dark Mirror (1946) Full Movie | Olivia de Havilland & Lew Ayres | Classic Film Noir",
+  "year": 1946,
+  "director": "Robert Siodmak",
+  "quality": "HD",
+  "genres": "Film Noir, Mystery, Psychological Thriller, Classics",
+  "description": "A clever doctor's murder leads police to twin sisters, one of whom is a killer. Unable to break their alibi, detectives enlist a psychiatrist to unmask the deadly twin.",
+  "embedId": "v7dmwdc",
+  "source": "rumble",
+  "posterUrl": "images/the-dark-mirror-1946.jpg"
+},
+  {
   "id": "eyes-in-the-night-1942",
   "title": "Eyes in the Night (1942) Full Movie HD | Edward Arnold & Donna Reed | Mystery Thriller",
   "year": 1942,
@@ -101,9 +233,7 @@
   "year": 1950,
   "quality": "HD",
   "genres": "Film Noir, Crime, Drama, Comedy",
-  "director": "William A. Seiter",
-  "cast": "Fred MacMurray, Claire Trevor, Raymond Burr, Morris Ankrum",
-  "source": "rumble",
+  "director": "William A. Seiter",  "source": "rumble",
   "embedId": "v7dgzjs",
   "posterUrl": "images/borderline-1950.jpg",
   "description": "Two undercover law enforcement agents, sent separately to Mexico to dismantle a narcotics smuggling ring, meet and team up without realizing they are both on the same side of the law."
@@ -114,17 +244,11 @@
   "year": 1951,
   "quality": "HD",
   "genres": "Film Noir, Drama, Mystery, Thriller",
-  "director": "Tay Garnett",
-  "cast": "Loretta Young, Barry Sullivan, Bruce Cowling, Margalo Gillmore",
-  "source": "rumble",
+  "director": "Tay Garnett",  "source": "rumble",
   "embedId": "v7dgwj4",
   "posterUrl": "images/cause-for-alarm-1951.jpg",
   "description": "A sick man with an obsessive jealousy mistakingly believes his wife and doctor are plotting to kill him. He writes a letter to the prosecutor accusing them of his murder, hands it to the mailman, and promptly dies of natural causes—leaving his innocent wife in a desperate panic to retrieve the letter before it is delivered.",
-  "trivia": [
-    "Entered the public domain in the United States in 1979 due to non-renewal of its original copyright.",
-    "Based on an original radio play story written by Larry Marcus.",
-    "Features a tense, real-time style narrative centered around the everyday operations of the US Postal Service."
-  ]
+ 
 },
  
   {
@@ -340,9 +464,7 @@
   "year": 1945,
   "quality": "HD",
   "genres": "Action, Drama, Classics",
-  "director": "Edward Dmytryk",
-  "cast": "John Wayne, Anthony Quinn, Beulah Bondi, Fely Franquelli, Richard Loo, Philip Ahn",
-  "source": "rumble",
+  "director": "Edward Dmytryk",  "source": "rumble",
   "embedId": "v7d22v6",
   "posterUrl": "images/back-to-bataan-1945.jpg",
   "description": "Following the collapse of American defenses in the Philippines, US Army Colonel Joseph Madden (John Wayne) remains behind to rally a guerrilla force of local fighters. Partnering with a heroic Filipino captain (Anthony Quinn), they execute dangerous raids and sabotage operations against occupying forces in preparation for the Allied return. Stream the full restored WWII classic feature presentation on MovieHub. https://moviehub.uk/"
@@ -353,9 +475,7 @@
   "year": 2026,
   "quality": "HD",
   "genres": "Action, Horror, Thriller, Action Classics",
-  "director": "Noah Luke",
-  "cast": "Adam Huss, Gina Vitori, Rachel Emma Goodwin, Brian Lemmons, Tony Bottorff",
-  "source": "ok.ru",
+  "director": "Noah Luke",  "source": "ok.ru",
   "embedId": "16826009127462",
   "posterUrl": "images/shark-thrash-2026.jpg",
   "description": "When an unprecedented mega-storm strikes a small touristy beachside town, rapid floodwaters submerge the streets and trap a newly arrived family alongside terrified locals. Survival becomes a desperate race against time as deadly sharks swim into the flooded neighborhood, turning the rising water into a feeding frenzy. Stream the full feature presentation on MovieHub. https://moviehub.uk/"
@@ -366,9 +486,7 @@
   "year": 2026,
   "quality": "HD",
   "genres": "Action, Crime, Film Noir, Classics",
-  "director": "Harry Bradbeer, Oren Uziel",
-  "cast": "Nicolas Cage, Lamorne Morris, Li Jun Li, Karen Rodriguez, Jack Huston, Brendan Gleeson",
-  "source": "ok.ru",
+  "director": "Harry Bradbeer, Oren Uziel",  "source": "ok.ru",
   "embedId": "16835815934502",
   "posterUrl": "images/spider-noir-2026.jpg",
   "description": "Set in 1930s New York City, a seasoned, down-on-his-luck private investigator named Ben Reilly (Nicolas Cage) is forced to grapple with his past life as the city's one and only superhero. Blending classic hard-boiled detective noir with high-stakes crime drama, this atmospheric thrill-ride follows Reilly navigating dangerous underbellies, mob bosses, and mysterious conspiracies. Stream the full feature presentation on MovieHub. https://moviehub.uk/"
@@ -379,9 +497,7 @@
   "year": 1948,
   "quality": "HD",
   "genres": "Crime, Film Noir, Action Classics",
-  "director": "Alfred L. Werker, Anthony Mann",
-  "cast": "Richard Basehart, Scott Brady, Roy Roberts, Whit Bissell, Jack Webb",
-  "source": "rumble",
+  "director": "Alfred L. Werker, Anthony Mann",  "source": "rumble",
   "embedId": "v7d1xyg",
   "posterUrl": "images/he-walked-by-night-1948.jpg",
   "description": "When a brilliant, elusive burglar (Richard Basehart) murders a police officer in cold blood, the LAPD launches a massive manhunt utilizing early forensic science and procedural crime analysis to track him down. Co-directed by Anthony Mann with iconic high-contrast cinematography by John Alton, this groundbreaking true-crime docu-noir leads to a climactic hunt through the Los Angeles storm sewers. Stream the full restored presentation on MovieHub. https://moviehub.uk/"
@@ -392,9 +508,7 @@
   "year": 1959,
   "quality": "HD",
   "genres": "Crime, Film Noir, Action Classics",
-  "director": "Charles Guggenheim, John Stix",
-  "cast": "Steve McQueen, David Clarke, Graham Denton, Molly McCarthy, James Dukas",
-  "source": "rumble",
+  "director": "Charles Guggenheim, John Stix",  "source": "rumble",
   "embedId": "v7d1tjw",
   "posterUrl": "images/the-st-louis-bank-robbery-1959.jpg",
   "description": "Desperate for money, former college football player George Fowler (Steve McQueen) joins a gang of hardened criminals to serve as the getaway driver for a major bank heist. Filmed on location in St. Louis with a gritty docu-noir feel, tension builds as paranoia and betrayal threaten to tear the gang apart before the police move in. Stream the full classic feature presentation on MovieHub. https://moviehub.uk/"
@@ -405,9 +519,7 @@
   "year": 1944,
   "quality": "HD",
   "genres": "Comedy, Crime, Classics",
-  "director": "Frank Capra",
-  "cast": "Cary Grant, Priscilla Lane, Raymond Massey, Jack Carson, Edward Everett Horton, Peter Lorre",
-  "source": "rumble",
+  "director": "Frank Capra",  "source": "rumble",
   "embedId": "v7d1r82",
   "posterUrl": "images/arsenic-and-old-lace-1944.jpg",
   "description": "Newlywed drama critic Mortimer Brewster (Cary Grant) visits his sweet, elderly aunts, only to discover they have been poisoning lonely old gentlemen with arsenic-laced elderberry wine out of 'charity.' Directed by Frank Capra, this legendary screwball dark comedy features hilarious performances alongside Raymond Massey and Peter Lorre. Stream the full restored feature presentation on MovieHub. https://moviehub.uk/"
@@ -418,9 +530,7 @@
   "year": 1941,
   "quality": "HD",
   "genres": "Western, Drama, Action Classics",
-  "director": "Henry Hathaway",
-  "cast": "John Wayne, Harry Carey, Betty Field, Beulah Bondi, Ward Bond, Marjorie Main",
-  "source": "ok.ru",
+  "director": "Henry Hathaway",  "source": "ok.ru",
   "embedId": "2383824161446",
   "posterUrl": "images/the-shepherd-of-the-hills-1941.jpg",
   "description": "In the Ozark Mountains, hotheaded moonshiner Young Matt Matthews (John Wayne) lives bound by an oath to find and kill the father who abandoned his dying mother years ago. When a gentle stranger named Daniel Howitt (Harry Carey) arrives in the community and buys the cursed Moanin Meadow, he earns the nickname The Shepherd of the Hills for his selfless acts of kindness. As secrets surface, Matt comes face-to-face with the truth behind his family feud in this classic Ozark Western drama directed by Henry Hathaway. Stream the full restored color feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/"
@@ -431,17 +541,11 @@
   "year": 1947,
   "quality": "HD",
   "genres": ["Film Noir", "Drama", "Crime"],
-  "director": "Vincent Sherman",
-  "cast": "Ann Sheridan, Kent Smith, Bruce Bennett, Robert Alda",
-  "source": "ok.ru",
+  "director": "Vincent Sherman",  "source": "ok.ru",
   "embedId": "9399428385307",
   "posterUrl": "images/nora-prentiss-1947.jpg",
   "description": "Nora Prentiss (1947) is a gripping Warner Bros. film noir starring Ann Sheridan and Kent Smith. A respectable doctor falls into a dangerous affair with a nightclub singer, leading him to fake his own death with fatal consequences. Stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Starring Ann Sheridan alongside Kent Smith and Bruce Bennett.",
-    "Directed by Vincent Sherman with cinematography by legendary DP James Wong Howe.",
-    "Features an evocative musical score composed by Franz Waxman."
-  ]
+  
 },
    {
   "id": "the-wrong-girls-2026",
@@ -449,16 +553,11 @@
   "year": 2026,
   "quality": "HD",
   "genres": ["Comedy"],
-  "director": "Dylan Meyer",
-  "cast": "Kristen Stewart, Alia Shawkat, LaKeith Stanfield, Kate McKinnon, Geena Davis",
-  "source": "ok.ru",
+  "director": "Dylan Meyer",  "source": "ok.ru",
   "embedId": "16783024327206",
   "posterUrl": "images/the-wrong-girls-2026.jpg",
   "description": "The Wrong Girls (2026) is an outrageous stoner comedy written and directed by Dylan Meyer in her directorial debut. Starring Kristen Stewart and Alia Shawkat, the story follows two codependent best friends whose lives turn upside down when an experimental drug grants them telepathic powers, pitting them against dangerous rivals. Stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Feature directorial debut of Dylan Meyer, starring Kristen Stewart and Alia Shawkat.",
-    "Features vocal performances by Seth Rogen and Kumail Nanjiani as cats."
-  ]
+ 
 },
  {
   "id": "the-weight-2026",
@@ -466,16 +565,11 @@
   "year": 2026,
   "quality": "HD",
   "genres": ["Drama", "Thriller"],
-  "director": "Padraic McKinley",
-  "cast": "Ethan Hawke, Russell Crowe, Julia Jones",
-  "source": "ok.ru",
+  "director": "Padraic McKinley",  "source": "ok.ru",
   "embedId": "16783052769830",
   "posterUrl": "images/the-weight-2026.jpg",
   "description": "The Weight (2026) is a compelling drama thriller that explores high-stakes moral dilemmas and emotional tension. Packed with atmospheric storytelling and strong performances, this feature presentation delivers top-tier cinematic entertainment. Stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.zya.me/",
-  "trivia": [
-    "A featured 2026 dramatic thriller addition to the MovieHub library.",
-    "Streamable online via MovieHub Vault in full high definition."
-  ]
+ 
 },
 {
     "id": "mayday-2026",
@@ -483,17 +577,11 @@
     "year": 2026,
     "quality": "HD",
     "genres": ["Action", "Adventure", "Thriller"],
-    "director": "Jonathan Goldstein, John Francis Daley",
-    "cast": "Ryan Reynolds, Kenneth Branagh, Maria Bakalova, Marcin Dorociński",
-    "source": "ok.ru",
+    "director": "Jonathan Goldstein, John Francis Daley",    "source": "ok.ru",
     "embedId": "16800268683814",
     "posterUrl": "images/mayday 2026.jpg",
     "description": "Mayday is a high-octane 2026 action-adventure thriller starring Ryan Reynolds and Kenneth Branagh, directed by the acclaimed filmmaking duo Jonathan Goldstein and John Francis Daley. The plot follows an unlikely duo caught in a high-stakes global espionage crisis where quick thinking and intense tactical maneuvers determine survival. Packed with sharp wit, explosive set pieces, and fast-paced narrative twists, this feature presentation delivers top-tier modern cinematic entertainment. Stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata.",
-    "trivia": [
-      "Stars Ryan Reynolds alongside Academy Award winner Kenneth Branagh.",
-      "Helmed by directors Jonathan Goldstein and John Francis Daley (Dungeons & Dragons, Game Night).",
-      "Produced as a major joint action venture between Skydance Media and Apple Original Films."
-    ]
+   
   },
    {
   "id": "life-with-father-1947",
@@ -3098,16 +3186,11 @@
   "quality": "HD",
   "genres": ["Comedy", "Family", "Fantasy"],
   "director": "Jean Yarbrough",
-  "cast": "Bud Abbott, Lou Costello, Buddy Baer, Dorothy Ford, Shaye Cogan",
   "source": "rumble",
   "embedId": "v783xia",
   "posterUrl": "images/jack-and-the-beanstalk-1952.jpg",
   "description": "Jack and the Beanstalk (1952) is a classic musical comedy revision of the timeless fairy tale starring legendary duo Bud Abbott and Lou Costello. When a bumbling babysitter falls asleep reading aloud, he dreams himself and his smooth-talking partner into a magical world up the beanstalk complete with giants, singing harps, and golden geese. Stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "First feature film produced by Abbott and Costello in full color (SuperCinecolor).",
-    "Features former heavyweight boxer Buddy Baer in the dual role of Sergeant Riley and the Giant.",
-    "Mel Blanc provided uncredited voice work for several animals in the giant's realm."
-  ]
+  
 },
    {
   "id": "africa-screams-1949",
@@ -4678,17 +4761,11 @@
   "year": 1997,
   "quality": "HD",
   "genres": ["Comedy", "Action", "Adventure"],
-  "director": "Steve Oedekerk",
-  "cast": "Tim Robbins, Martin Lawrence, John C. McGinley, Giancarlo Esposito, Kelly Preston",
-  "source": "ok.ru",
+  "director": "Steve Oedekerk",  "source": "ok.ru",
   "embedId": "13767084870182",
   "posterUrl": "images/nothing-to-lose-1997.jpg",
-  "description": "Nothing to Lose (1997) is a hilarious action comedy directed by Steve Oedekerk starring Martin Lawrence and Tim Robbins. Believing his wife is having an affair with his boss, advertising executive Nick Beam hits rock bottom and is carjacked by desperate thief Terrance Paul. With nothing left to lose, Nick kidnaps his carjacker, throwing them both into a chaotic road trip full of revenge schemes and unexpected friendship. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Features an iconic spider dance scene set to Scatman John's 'Scatman (Ski-Ba-Bop-Ba-Dop-Bop)'.",
-    "Written and directed by Steve Oedekerk, who also makes a cameo appearance as a dancing security guard.",
-    "The hit soundtrack included Coolio's popular single 'CU When U Get There'."
-  ]
+  "description": "Nothing to Lose (1997) is a hilarious action comedy directed by Steve Oedekerk starring Martin Lawrence and Tim Robbins. Believing his wife is having an affair with his boss, advertising executive Nick Beam hits rock bottom and is carjacked by desperate thief Terrance Paul. With nothing left to lose, Nick kidnaps his carjacker, throwing them both into a chaotic road trip full of revenge schemes and unexpected friendship. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/"
+ 
 },
    {
   "id": "hatchet-iii-2013",
@@ -7406,17 +7483,11 @@
   "year": 2001,
   "quality": "HD",
   "genres": ["Crime", "Drama", "Thriller"],
-  "director": "Antoine Fuqua",
-  "cast": "Denzel Washington, Ethan Hawke, Scott Glenn, Eva Mendes, Cliff Curtis",
-  "source": "ok.ru",
+  "director": "Antoine Fuqua",  "source": "ok.ru",
   "embedId": "6458634209830",
   "posterUrl": "images/training-day-2001.jpg",
   "description": "Training Day (2001) is an intense, Oscar-winning crime thriller directed by Antoine Fuqua. Over a single 24-hour evaluation period, rookie LAPD narcotics officer Jake Hoyt is paired with rogue veteran detective Alonzo Harris, forcing him into a high-stakes, morally dangerous web of street violence and corruption. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Denzel Washington won the Academy Award for Best Actor for his role as Detective Alonzo Harris.",
-    "Ethan Hawke received an Academy Award nomination for Best Supporting Actor.",
-    "Filmed on location in actual high-crime neighborhoods across Los Angeles, including Imperial Courts and Baldwin Village."
-  ]
+ 
 },
     { 
         "id": "Wrong-Turn", 
@@ -8632,17 +8703,10 @@
   "year": 1994,
   "quality": "HD",
   "genres": ["Drama", "Crime"],
-  "director": "Frank Darabont",
-  "cast": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler, Clancy Brown",
-  "source": "ok.ru",
+  "director": "Frank Darabont",  "source": "ok.ru",
   "embedId": "15835359939117",
   "posterUrl": "images/the-shawshank-redemption-1994.jpg",
-  "description": "The Shawshank Redemption (1994) is an acclaimed drama directed by Frank Darabont, based on Stephen King's novella. Accused of a crime he maintains he didn't commit, banker Andy Dufresne begins a decades-long sentence at Shawshank State Penitentiary, forming an enduring bond with fellow inmate Red while clinging to hope through compassion and resilience. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Nominated for 7 Academy Awards, including Best Picture and Best Actor for Morgan Freeman.",
-    "Adapted from Stephen King's 1982 novella 'Rita Hayworth and Shawshank Redemption'.",
-    "Filmed primarily at the historic Ohio State Reformatory in Mansfield, Ohio."
-  ]
+  "description": "The Shawshank Redemption (1994) is an acclaimed drama directed by Frank Darabont, based on Stephen King's novella. Accused of a crime he maintains he didn't commit, banker Andy Dufresne begins a decades-long sentence at Shawshank State Penitentiary, forming an enduring bond with fellow inmate Red while clinging to hope through compassion and resilience. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/" 
 },
      {  "id": "The-Godfather-2",
         "posterUrl":  "images/the godfather 2.jpg",
@@ -11613,17 +11677,11 @@
   "year": 1959,
   "quality": "HD",
   "genres": ["Action", "Adventure", "Mystery", "Thriller"],
-  "director": "Alfred Hitchcock",
-  "cast": "Cary Grant, Eva Marie Saint, James Mason, Jessie Royce Landis, Leo G. Carroll",
-  "source": "rumble",
+  "director": "Alfred Hitchcock",  "source": "rumble",
   "embedId": "",
   "posterUrl": "images/north-by-northwest-1959.jpg",
   "description": "North by Northwest (1959) is Alfred Hitchcock's iconic espionage thriller starring Cary Grant and Eva Marie Saint. When suave New York advertising executive Roger Thornhill is mistaken for a non-existent government agent, he is framed for murder and pursued across America by ruthless foreign spies and federal authorities. Featuring iconic set pieces like the rural crop-duster chase and the Mount Rushmore climax, stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "The fourth and final film collaboration between director Alfred Hitchcock and star Cary Grant.",
-    "Features two of cinema history's most iconic set pieces: the crop-duster attack in Prairie Dell, Indiana, and the cliffhanger climax atop Mount Rushmore.",
-    "Nominated for three Academy Awards, including Best Original Screenplay for writer Ernest Lehman."
-  ]
+ 
 },
       {
         "id": "Cool-Hand-Luke",
@@ -12447,17 +12505,11 @@
   "year": 2010,
   "quality": "HD",
   "genres": ["Drama", "Romance"],
-  "director": "Shirley Barrett",
-  "cast": "Miranda Otto, Barry Otto, Rohan Nichol, Essie Davis, Marton Csokas",
-  "source": "ok.ru",
+  "director": "Shirley Barrett",  "source": "ok.ru",
   "embedId": "4030059383351",
   "posterUrl": "images/south-solitary-2010.jpg",
   "description": "South Solitary (2010) is a moving Australian period drama set in 1928, directed by Shirley Barrett and starring Miranda Otto. Meredith, an unmarried 35-year-old woman, arrives at a harsh and isolated lighthouse island alongside her uncle, the newly appointed head keeper. Amidst extreme weather and social isolation, she finds unexpected human connection with the island's taciturn assistant keeper. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Reunited real-life father and daughter actors Barry Otto and Miranda Otto on screen.",
-    "Filmed on location at the historic Cape Nelson Lighthouse near Portland, Victoria, Australia.",
-    "Written and directed by Shirley Barrett, who won the Camera d'Or at Cannes earlier in her career."
-  ]
+  
 },
      
 {
@@ -12654,17 +12706,11 @@
   "year": 2020,
   "quality": "HD",
   "genres": ["Horror"],
-  "director": "Kevin McDaniels",
-  "cast": "Bill Oberst Jr., Taylor Banning, Ryan Brown, Megan Davis",
-  "source": "ok.ru",
+  "director": "Kevin McDaniels",  "source": "ok.ru",
   "embedId": "4223334091302",
   "posterUrl": "images/death-camp-2020.jpg",
   "description": "Death Camp (2020) is a chilling indie horror starring Emmy Award winner Bill Oberst Jr. A group of teenagers ventures out to an abandoned cabin where twelve kids were brutally killed two decades prior, only to discover that the dark history of the campsite is far from buried. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/",
-  "trivia": [
-    "Stars cult horror icon and Emmy Award winner Bill Oberst Jr.",
-    "Features a score composed by Emmy Award winner Kevin McDaniels.",
-    "Filmed on location in remote forested camp grounds to enhance the isolated atmosphere."
-  ]
+ 
 },
      {
         "id": "September-Dawn",
@@ -14926,8 +14972,8 @@
   "description": "A lone dissenting juror in a murder trial slowly manages to convince the others that the case is not as open-and-shut as it appears, forcing them to confront their own prejudices.",
   "genres": ["Drama", "Crime", "Classic", "Movie"],
   "posterUrl": "images/angrymen.jpg",
-  "source": "rumble",
-  "embedId": "v7227yu"
+  "source": "ok.ru",
+  "embedId": "97575832302"
 },
             {
   "id": "a-beautiful-mind-2001",
@@ -14936,8 +14982,8 @@
   "description": "After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.",
   "genres": ["Drama", "Biography", "Classic", "Movie"],
   "posterUrl": "images/abeautifulmind.jpg",
-  "source": "rumble",
-  "embedId": "v722936"
+  "source": "ok.ru",
+  "embedId": "15028511312596"
 },
             {
   "id": "dial-m-for-murder-1954",

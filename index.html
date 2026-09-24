@@ -11,7 +11,6 @@
     <meta property="og:url" content="https://moviehub.uk/" />
     <meta property="og:title" content="MovieHub | Premium Vault" />
     <meta property="og:description" content="Stream hundreds of fully restored Hollywood cinema classics, 1940s-1970s westerns, vintage film noir, rare horror, and classic British comedies completely free." />
-    <!-- CHANGE THE IMAGE PATH BELOW TO YOUR DESIRED PREVIEW IMAGE -->
     <meta property="og:image" content="https://moviehub.uk/images/film-noir-grid.jpg" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -28,7 +27,6 @@
     <style>
         body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; }
         
-        /* BALANCED HEADER LAYOUT */
         header { 
             background: #111; 
             padding: 20px 30px; 
@@ -112,7 +110,6 @@
         
         .search-grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; padding-bottom: 20px; }
 
-        /* MOVIE CARD CONTAINER */
         .movie-card {
             width: 160px;
             min-width: 160px;
@@ -141,7 +138,6 @@
             content-visibility: auto;
         }
 
-        /* MOVIE TITLE UNDERNEATH POSTER */
         .movie-card-title {
             color: #ffffff;
             font-size: 0.85rem;
@@ -208,6 +204,14 @@
         let allMoviesData = []; 
 
         async function init() {
+            // Redirect legacy URL queries (e.g. ?id=movie-slug) or hashes to clean path
+            const urlParams = new URLSearchParams(window.location.search);
+            const legacyId = urlParams.get('id');
+            if (legacyId) {
+                window.location.replace(`/movie/${legacyId}`);
+                return;
+            }
+
             try {
                 const response = await fetch('all-movies.json?t=' + new Date().getTime());
                 allMoviesData = await response.json();
@@ -247,7 +251,7 @@
         function createMovieCard(movie) {
             const card = document.createElement('div');
             card.className = 'movie-card';
-            card.onclick = () => window.location.href = `movie-details.html?id=${movie.id}`;
+            card.onclick = () => window.location.href = `/movie/${movie.id}`;
 
             const img = document.createElement('img');
             img.src = movie.posterUrl;
@@ -317,12 +321,10 @@
                         let filtered = [];
 
                         if (cat.keywords.includes("new")) {
-                            // Filter for recent releases (2024 and newer)
                             filtered = movies
                                 .filter(m => parseInt(m.year, 10) >= 2024)
                                 .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
                         } else if (cat.domId === "classics") {
-                            // Classic Cinema: Strict pre-1980 release limit, excluding Film Noir
                             filtered = movies.filter(m => {
                                 const titleText = (m.title || '').toLowerCase();
                                 const genreText = Array.isArray(m.genres) 
@@ -334,7 +336,6 @@
                                 return !isNoir && yr > 0 && yr < 1980;
                             });
                         } else if (cat.domId === "filmnoir") {
-                            // Film Noir: Matches "noir" with a pre-1960 release limit
                             filtered = movies.filter(m => {
                                 const titleText = (m.title || '').toLowerCase();
                                 const genreText = Array.isArray(m.genres) 
@@ -346,7 +347,6 @@
                                 return isNoir && (yr === 0 || yr < 1960);
                             });
                         } else {
-                            // General filter checking title or genres
                             filtered = movies.filter(m => {
                                 const titleText = (m.title || '').toLowerCase();
                                 const genreText = Array.isArray(m.genres) 
@@ -378,7 +378,6 @@
                     });
                 }
                 
-                // Render batch in chunks to maintain UI responsiveness
                 renderBatch(categories.slice(0, 3)); 
                 setTimeout(() => renderBatch(categories.slice(3)), 100); 
             }
