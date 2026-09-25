@@ -4053,4 +4053,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://moviehub.uk/movie.html?id=rhinestone-1984</loc>
+  <lastmod>2026-09-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie.html?id=straight-talk-1992</loc>
+  <lastmod>2026-09-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/eye-of-the-needle-1981</loc>
+  <lastmod>2026-09-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://moviehub.uk/movie/the-guilty-2018</loc>
+  <lastmod>2026-09-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>

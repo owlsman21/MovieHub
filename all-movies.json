@@ -1,4 +1,65 @@
 [
+ 
+  {
+  "id": "the-guilty-2018",
+  "title": "The Guilty",
+  "year": 2018,
+  "director": "Gustav Möller",
+  "quality": "HD",
+  "genres": "Drama, Mystery, Thriller",
+  "description": "An alarm dispatch officer and former police officer, demoted to desk duty, enters a race against time when he answers an emergency call from a kidnapped woman. Working strictly from his workstation, he must rely entirely on his instincts and the phone line to save her. Starring Jakob Cedergren.",
+  "embedId": "4866535590498",
+  "source": "ok.ru",
+  "posterUrl": "images/the-guilty-2018.jpg"
+},
+  {
+  "id": "eye-of-the-needle-1981",
+  "title": "Eye of the Needle",
+  "year": 1981,
+  "director": "Richard Marquand",
+  "quality": "HD",
+  "genres": "Drama, Mystery, Romance, Thriller",
+  "description": "A ruthless German spy discovers vital intelligence regarding the Allied invasion plans for D-Day. Stranded on an isolated Scottish island after a shipwreck, he develops a dangerous relationship with a lonely resident while attempting to deliver his secret to Germany. Starring Donald Sutherland and Kate Nelligan.",
+  "embedId": "3737867979360",
+  "source": "ok.ru",
+  "posterUrl": "images/eye-of-the-needle-1981.jpg"
+},
+  {
+  "id": "straight-talk-1992",
+  "title": "Straight Talk (1992) Full Movie | Dolly Parton & James Woods | Classic Comedy",
+  "year": 1992,
+  "director": "Barnet Kellman",
+  "quality": "HD",
+  "genres": "Comedy, Romance",
+  "description": "A small-town woman moves to Chicago and accidentally lands a job as a radio talk show host, giving down-to-earth advice while trying to outsmart an inquisitive reporter. Starring Dolly Parton and James Woods.",
+  "embedId": "4926831528475",
+  "source": "ok.ru",
+  "posterUrl": "images/straight-talk-1992.jpg"
+},
+  {
+  "id": "rhinestone-1984",
+  "title": "Rhinestone (1984) Full Movie | Sylvester Stallone & Dolly Parton | Classic Comedy",
+  "year": 1984,
+  "director": "Bob Clark",
+  "quality": "HD",
+  "genres": "Comedy, Music",
+  "description": "A country music star bets that she can turn an obnoxious New York taxi driver into a country singer within two weeks. Starring Sylvester Stallone and Dolly Parton.",
+  "embedId": "1497613404751",
+  "source": "ok.ru",
+  "posterUrl": "images/rhinestone-1984.jpg"
+},
+  {
+  "id": "escape-in-the-fog-1945",
+  "title": "Escape In The Fog (1945) Full Movie | Otto Kruger & Nina Foch | Classic Film Noir Thriller",
+  "year": 1945,
+  "director": "Oscar Boetticher Jr.",
+  "quality": "HD",
+  "genres": "Film Noir, Mystery, Crime, Thriller",
+  "description": "A shock-stricken nurse experiencing premonitions of a murder becomes entangled in a dangerous wartime espionage conspiracy. Starring Otto Kruger, Nina Foch, and William Wright.",
+  "embedId": "v7ds4pk",
+  "source": "rumble",
+  "posterUrl": "images/escape-in-the-fog-1945.jpg"
+},
    {
     "id": "shark-frenzy-2026",
     "title": "Shark Frenzy (2026) Full Movie | Survival Horror Thriller",
