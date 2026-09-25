@@ -1,5 +1,17 @@
 [
- 
+  {
+  "id": "mackennas-gold-1969",
+  "title": "Mackenna's Gold",
+  "year": 1969,
+  "director": "J. Lee Thompson",
+  "quality": "HD",
+  "genres": "Western, Action, Adventure",
+  "description": "A marshal is kidnapped by an Apache-led bandit gang who possesses a map to a legendary valley of gold. As greed takes hold of the group, they are pursued by both cavalry soldiers and vengeful warriors. Starring Gregory Peck, Omar Sharif, and Telly Savalas.",
+  "embedId": "v7dte94",
+  "source": "rumble",
+  "posterUrl": "images/mackennas-gold-1969.jpg"
+},
+  
   {
   "id": "the-guilty-2018",
   "title": "The Guilty",
