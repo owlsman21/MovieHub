@@ -9,6 +9,7 @@
             --bg-color: #141414;
             --card-bg: #1f1f1f;
             --accent-color: #e50914;
+            --gold-accent: #ffdd00;
             --text-color: #ffffff;
             --text-secondary: #aaaaaa;
         }
@@ -27,6 +28,7 @@
             padding-bottom: 50px;
         }
 
+        /* HEADER LAYOUT: Left Logo + Center Stack (Title & Search) + Right Support Button */
         header {
             background-color: rgba(0, 0, 0, 0.95);
             position: sticky;
@@ -34,24 +36,43 @@
             z-index: 1000;
             padding: 15px 40px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             border-bottom: 1px solid #222;
+            gap: 12px;
+            position: relative;
         }
 
+        /* Left Side Graphic Logo - Made Bigger */
+        .header-logo-img {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 90px; /* Increased from 55px */
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Centered MovieHub Logo Text - Made Bigger */
         .logo {
-            font-size: 24px;
+            font-size: 42px; /* Increased from 28px */
             font-weight: bold;
             color: var(--accent-color);
             text-decoration: none;
             letter-spacing: 1px;
+            white-space: nowrap;
+            text-align: center;
         }
 
+        /* Search Bar Centered Directly Under Logo Text */
         .search-container {
             position: relative;
             display: flex;
             align-items: center;
-            width: 300px;
+            width: 320px;
+            max-width: 90%;
         }
 
         .search-container input {
@@ -63,10 +84,12 @@
             color: #fff;
             font-size: 14px;
             outline: none;
+            text-align: center;
         }
 
         .search-container input:focus {
             border-color: var(--accent-color);
+            text-align: left;
         }
 
         #clear-search {
@@ -76,6 +99,31 @@
             color: var(--text-secondary);
             display: none;
             font-weight: bold;
+        }
+
+        /* Support Us Button Positioned Top-Right */
+        .support-btn {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--gold-accent);
+            color: #000;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .support-btn:hover {
+            background-color: #f3ce00;
+            transform: translateY(-50%) scale(1.05);
         }
 
         main {
@@ -92,7 +140,35 @@
             color: #fff;
         }
 
-        .shelf-grid, .search-grid-layout {
+        /* ONE LINE PER SHELF WITH HORIZONTAL SCROLL */
+        .shelf-grid {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .shelf-grid::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .shelf-grid::-webkit-scrollbar-track {
+            background: #141414;
+        }
+
+        .shelf-grid::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        .shelf-grid::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        /* Search Layout Grid */
+        .search-grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 20px;
@@ -105,6 +181,8 @@
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
+            flex: 0 0 160px;
+            width: 160px;
         }
 
         .movie-card:hover {
@@ -213,7 +291,23 @@
         }
 
         @media (max-width: 768px) {
-            header, main {
+            header {
+                padding: 15px 20px;
+            }
+            .header-logo-img {
+                position: static;
+                transform: none;
+                height: 60px;
+            }
+            .support-btn {
+                position: static;
+                transform: none;
+                margin-top: 5px;
+            }
+            .support-btn:hover {
+                transform: scale(1.05);
+            }
+            main {
                 padding: 15px 20px;
             }
             .movie-info-header {
@@ -229,11 +323,24 @@
 <body>
 
     <header>
+        <!-- Far Left Graphic Logo (Updated name to moviehub.png) -->
+        <a href="/">
+            <img src="images/moviehub.png" alt="MovieHub Logo" class="header-logo-img">
+        </a>
+
+        <!-- Center Title -->
         <a href="/" class="logo">MovieHub</a>
+
+        <!-- Search Bar Directly Below Center Title -->
         <div class="search-container">
             <input type="text" id="search-input" placeholder="Search movies...">
             <span id="clear-search">&times;</span>
         </div>
+
+        <!-- Far Right Support Button -->
+        <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="support-btn">
+            ☕ Support Us
+        </a>
     </header>
 
     <main>
@@ -246,6 +353,14 @@
     <script>
         let allMoviesData = []; 
 
+        function getPosterUrl(posterUrl) {
+            if (!posterUrl) return 'images/poster-placeholder.jpg';
+            if (posterUrl.startsWith('http://') || posterUrl.startsWith('https://')) {
+                return posterUrl;
+            }
+            return posterUrl.replace(/^\/+/, '');
+        }
+
         async function init() {
             try {
                 const response = await fetch('/all-movies.json?t=' + new Date().getTime());
@@ -254,10 +369,8 @@
                 console.error("Error loading data:", error);
             }
 
-            // Route handler on load
             checkAndRenderRoute();
 
-            // Handle browser back and forward button navigation
             window.addEventListener('popstate', () => {
                 checkAndRenderRoute();
             });
@@ -315,7 +428,6 @@
         }
 
         function openMovieDetail(movieId) {
-            // Update URL without triggering a full page reload or 404 error
             history.pushState({ id: movieId }, '', `?id=${movieId}`);
             renderMovieDetail(movieId);
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -338,8 +450,7 @@
             shelfContainer.style.display = 'none';
             detailView.style.display = 'block';
 
-            const posterSrc = movie.posterUrl || '';
-            const fullPosterUrl = (posterSrc.startsWith('http') || posterSrc.startsWith('/')) ? posterSrc : '/' + posterSrc;
+            const fullPosterUrl = getPosterUrl(movie.posterUrl);
 
             let embedUrl = '';
             if (movie.source === 'rumble') {
@@ -360,7 +471,7 @@
                         <iframe src="${embedUrl}" allowfullscreen></iframe>
                     </div>
                     <div class="movie-info-header">
-                        <img src="${fullPosterUrl}" alt="${movie.title}" onerror="this.src='/images/poster-placeholder.jpg'">
+                        <img src="${fullPosterUrl}" alt="${movie.title}" onerror="this.src='images/poster-placeholder.jpg'">
                         <div class="movie-meta">
                             <h1>${movie.title}</h1>
                             <div class="movie-meta-tags">
@@ -380,14 +491,12 @@
             const card = document.createElement('div');
             card.className = 'movie-card';
             
-            // Fixed: Calls openMovieDetail() directly on click
             card.onclick = () => openMovieDetail(movie.id);
 
             const img = document.createElement('img');
-            const posterSrc = movie.posterUrl || '';
-            img.src = (posterSrc.startsWith('http') || posterSrc.startsWith('/')) ? posterSrc : '/' + posterSrc;
+            img.src = getPosterUrl(movie.posterUrl);
             img.alt = movie.title || 'Movie Poster';
-            img.onerror = function() { this.src = '/images/poster-placeholder.jpg'; };
+            img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
 
             const title = document.createElement('div');
             title.className = 'movie-card-title';
@@ -415,7 +524,7 @@
                 const latestAddedSection = document.createElement('section');
                 latestAddedSection.className = 'shelf';
                 latestAddedSection.innerHTML = `
-                    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
                         <h2>Latest Additions</h2>
                         <a href="/catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                     </div>
@@ -493,7 +602,7 @@
                         const section = document.createElement('section');
                         section.className = 'shelf';
                         section.innerHTML = `
-                            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
                                 <h2>${cat.title}</h2>
                                 <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                             </div>
@@ -501,6 +610,7 @@
                         `;
                         container.appendChild(section);
                         const grid = document.getElementById(`grid-${cat.domId}`);
+                        
                         filtered.slice(0, 12).forEach(m => {
                             grid.appendChild(createMovieCard(m));
                         });
