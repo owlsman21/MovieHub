@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-WY3DHDXQWH');
-</script>
+      gtag('config', 'G-WY3DHDXQWH');
+    </script>
     <meta charset="UTF-8">
     <title>MovieHub | Category</title>
     <style>
@@ -40,16 +40,43 @@
 
         async function initCategory() {
             const params = new URLSearchParams(window.location.search);
-            const keyword = params.get('q');
-            document.getElementById('cat-title').innerText = keyword ? `${keyword} Collection` : "Full Movie Collection";
+            const keyword = (params.get('q') || params.get('genre') || '').toLowerCase().trim();
+            
+            const titleKeyword = params.get('q') || params.get('genre') || 'Full Movie';
+            document.getElementById('cat-title').innerText = `${titleKeyword.charAt(0).toUpperCase() + titleKeyword.slice(1)} Collection`;
 
-            const response = await fetch('data/all-movies.json');
-            movies = await response.json();
-            filtered = keyword 
-                ? movies.filter(m => (m.title && m.title.includes(keyword)) || (m.genres && m.genres.includes(keyword)))
-                : movies;
+            try {
+                // Fixed path to look in the root folder where all-movies.json actually lives
+                const response = await fetch('all-movies.json');
+                if (!response.ok) throw new Error("Could not load movies database");
+                movies = await response.json();
 
-            renderPage();
+                filtered = keyword === '' || keyword === 'all'
+                    ? movies 
+                    : movies.filter(m => {
+                        const titleMatch = m.title && m.title.toLowerCase().includes(keyword);
+                        
+                        if (!m.genres) return titleMatch;
+                        
+                        const genreString = Array.isArray(m.genres) 
+                            ? m.genres.join(', ').toLowerCase() 
+                            : String(m.genres).toLowerCase();
+
+                        if (keyword === 'noir' || keyword === 'film noir') {
+                            return titleMatch || genreString.includes('noir');
+                        }
+                        if (keyword.includes('classic')) {
+                            return titleMatch || genreString.includes('classic');
+                        }
+
+                        return titleMatch || genreString.includes(keyword);
+                    });
+
+                renderPage();
+            } catch (err) {
+                console.error("Category Load Error:", err);
+                document.getElementById('cat-title').innerText = "Error Loading Collection";
+            }
         }
 
         function renderPage() {
@@ -60,17 +87,22 @@
             const grid = document.getElementById('movie-grid');
             grid.innerHTML = '';
             
+            if (paginatedItems.length === 0) {
+                grid.innerHTML = '<p>No movies found in this collection.</p>';
+            }
+
             paginatedItems.forEach(m => {
                 const img = document.createElement('img');
                 img.src = m.posterUrl;
                 img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
-                img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                img.onerror = function() { this.src = 'https://via.placeholder.com/300x450?text=Poster+Missing'; };
                 grid.appendChild(img);
             });
 
-            document.getElementById('page-info').innerText = `Page ${currentPage} of ${Math.ceil(filtered.length / itemsPerPage)}`;
+            const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
+            document.getElementById('page-info').innerText = `Page ${currentPage} of ${totalPages}`;
             document.getElementById('prev-btn').disabled = currentPage === 1;
-            document.getElementById('next-btn').disabled = currentPage >= Math.ceil(filtered.length / itemsPerPage);
+            document.getElementById('next-btn').disabled = currentPage >= totalPages;
         }
 
         function changePage(direction) {
