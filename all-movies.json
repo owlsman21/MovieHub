@@ -1,5 +1,203 @@
 [
   {
+  "id": "among-the-living-1941",
+  "title": "Among The Living (1941) Full Movie | Albert Dekker & Susan Hayward | Classic Film Noir Thriller",
+  "year": 1941,
+  "director": "Stuart Heisler",
+  "quality": "HD",
+  "genres": "Film Noir, Drama, Mystery, Thriller, Classics",
+  "description": "A man attends his father's funeral only to discover that his mentally unstable twin brother, long believed dead, is alive and locked away. When the twin escapes and commits murder, the innocent brother is blamed. Starring Albert Dekker, Susan Hayward, and Harry Carey.",
+  "embedId": "3886932888091",
+  "source": "ok.ru",
+  "posterUrl": "images/among-the-living-1941.jpg"
+},
+  {
+  "id": "suspicion-1941",
+  "title": "Suspicion (1941) Full Movie | Cary Grant & Joan Fontaine | Classic Hitchcock Psychological Thriller",
+  "year": 1941,
+  "director": "Alfred Hitchcock",
+  "quality": "HD",
+  "genres": "Mystery, Psychological Thriller, Film Noir, Classics",
+  "description": "A shy, wealthy young woman marries a charming playboy, only to gradually become convinced that he is a penniless gambler who plans to murder her for her inheritance. Starring Cary Grant and Joan Fontaine in her Academy Award-winning role.",
+  "embedId": "3046813927963",
+  "source": "ok.ru",
+  "posterUrl": "images/suspicion-1941.jpg"
+},
+  {
+  "id": "act-of-violence-1948",
+  "title": "Act of Violence (1948) Full Movie | Van Heflin & Robert Ryan | Classic Film Noir",
+  "year": 1948,
+  "director": "Fred Zinnemann",
+  "quality": "HD",
+  "genres": [
+    "Film Noir",
+    "Crime",
+    "Drama",
+    "Classics"
+  ],
+  "description": "A decorated WWII veteran built a quiet life in California, but his dark secret catches up with him when a vengeful, limping soldier tracks him down. Starring Van Heflin and Robert Ryan. Watch full movie on https://moviehub.uk/.",
+  "embedId": "7789616761371",
+  "source": "ok.ru",
+  "posterUrl": "images/act-of-violence-1948.jpg"
+},
+  {
+  "id": "hold-the-fort-2026",
+  "title": "Hold the Fort (2026) Full Movie | Chris Mayers & Haley Leary | Horror Comedy",
+  "year": 2026,
+  "director": "William Bagley",
+  "quality": "HD",
+  "genres": [
+    "Horror",
+    "Comedy",
+    "Classics"
+  ],
+  "description": "A newly married couple moves into the suburbs only to become trapped in a violent battle between their local HOA and an onslaught of monsters from hell. Starring Chris Mayers and Haley Leary. Watch full movie on https://moviehub.uk/.",
+  "embedId": "15796920519206",
+  "source": "ok.ru",
+  "posterUrl": "images/hold-the-fort-2026.jpg"
+},
+  {
+  "id": "love-is-the-monster-2025",
+  "title": "Love Is the Monster (2025) Full Movie | Madeline Zima & Leonardo Nam | Horror Thriller",
+  "year": 2025,
+  "director": "Alex Noyer",
+  "quality": "HD",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Classics"
+  ],
+  "description": "Troubled couples attending a couples retreat in Finland fall prey to an ancient, malevolent goddess of love. Starring Madeline Zima and Leonardo Nam. Watch full movie on https://moviehub.uk/.",
+  "embedId": "15848303168038",
+  "source": "ok.ru",
+  "posterUrl": "images/love-is-the-monster-2025.jpg"
+},
+  {
+  "id": "beverly-hills-vamp-1989",
+  "title": "Beverly Hills Vamp (1989) Full Movie | Eddie Deezen & Britt Ekland | Cult Horror Comedy",
+  "year": 1989,
+  "director": "Fred Olen Ray",
+  "quality": "HD",
+  "genres": [
+    "Horror",
+    "Comedy",
+    "Cult",
+    "Classics"
+  ],
+  "description": "Three nerdy film students travel to Beverly Hills to shoot a movie, unaware that their mansion location is run by a sultry coven of vampires. Starring Eddie Deezen and Britt Ekland. Watch full movie on https://moviehub.uk/.",
+  "embedId": "15869314730534",
+  "source": "ok.ru",
+  "posterUrl": "images/beverly-hills-vamp-1989.jpg"
+},
+  {
+  "id": "undertow-1949",
+  "title": "Undertow (1949) Full Movie | Scott Brady & Peggy Dow | Classic Film Noir",
+  "year": 1949,
+  "director": "William Castle",
+  "quality": "HD",
+  "genres": [
+    "Film Noir",
+    "Crime",
+    "Drama",
+    "Classics"
+  ],
+  "description": "An ex-con attempting to go straight is framed for the murder of a Chicago mob boss and must evade a police dragnet to clear his name. Starring Scott Brady, Peggy Dow, and Rock Hudson. Watch full movie on https://moviehub.uk/.",
+  "embedId": "7441017801243",
+  "source": "ok.ru",
+  "posterUrl": "images/undertow-1949.jpg"
+},
+  {
+  "id": "the-woman-on-the-beach-1947",
+  "title": "The Woman on the Beach (1947) Full Movie | Joan Bennett & Robert Ryan | Classic Film Noir",
+  "year": 1947,
+  "director": "Jean Renoir",
+  "quality": "HD",
+  "genres": [
+    "Film Noir",
+    "Drama",
+    "Mystery",
+    "Classics"
+  ],
+  "description": "A traumatized Coast Guard officer becomes obsessed with an alluring woman married to a bitter, blind painter on a lonely stretch of coast. Starring Joan Bennett and Robert Ryan. Watch full movie on https://moviehub.uk/.",
+  "embedId": "4810886023707",
+  "source": "ok.ru",
+  "posterUrl": "images/the-woman-on-the-beach-1947.jpg"
+},
+  {
+  "id": "the-damned-dont-cry-1950",
+  "title": "The Damned Don't Cry (1950) Full Movie | Joan Crawford & David Brian | Classic Film Noir",
+  "year": 1950,
+  "director": "Vincent Sherman",
+  "quality": "HD",
+  "genres": [
+    "Film Noir",
+    "Crime",
+    "Drama",
+    "Classics"
+  ],
+  "description": "A determined woman leaves her drab working-class life to climb the ranks of a sophisticated criminal syndicate, only to spark a deadly power struggle. Starring Joan Crawford and David Brian. Watch full movie on https://moviehub.uk/.",
+  "embedId": "YOUR_RUMBLE_EMBED_ID",
+  "source": "rumble",
+  "posterUrl": "images/the-damned-dont-cry-1950.jpg"
+},
+  {
+  "id": "susan-and-god-1940",
+  "title": "Susan and God (1940) Full Movie | Joan Crawford & Fredric March | Classic Drama",
+  "year": 1940,
+  "director": "George Cukor",
+  "quality": "HD",
+  "genres": [
+    "Classics",
+    "Drama",
+    "Comedy"
+  ],
+  "description": "A self-absorbed socialite embraces a new religious movement and tries to reform her estranged husband and daughter with hilariously chaotic results. Starring Joan Crawford and Fredric March. Watch full movie on https://moviehub.uk/.",
+  "embedId": "1624785554160",
+  "source": "ok.ru",
+  "posterUrl": "images/susan-and-god-1940.jpg"
+},
+  {
+  "id": "nightmare-1956",
+  "title": "Nightmare (1956) Full Movie | Edward G. Robinson & Kevin McCarthy | Classic Film Noir",
+  "year": 1956,
+  "director": "Maxwell Shane",
+  "quality": "HD",
+  "genres": [
+    "Film Noir",
+    "Crime",
+    "Mystery",
+    "Classics"
+  ],
+  "description": "A jazz musician dreams he commits a murder in a strange mirrored room, only to wake up with blood and physical proof that the crime actually happened. Starring Edward G. Robinson and Kevin McCarthy. Watch full movie on https://moviehub.uk/.",
+  "embedId": "v7enk0c",
+  "source": "rumble",
+  "posterUrl": "images/nightmare-1956.jpg"
+},
+  {
+  "id": "nobody-lives-forever-1946",
+  "title": "Nobody Lives Forever (1946) Full Movie | John Garfield & Geraldine Fitzgerald | Classic Film Noir",
+  "year": 1946,
+  "director": "Jean Negulesco",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Classics",
+  "description": "A smooth-talking con artist returns from the war and targets a wealthy, unsuspecting widow, only to find himself genuinely falling for his mark. Watch full movie on https://moviehub.uk/.",
+  "embedId": "6637048105499",
+  "source": "ok.ru",
+  "posterUrl": "images/nobody-lives-forever-1946.jpg"
+},
+  {
+  "id": "step-by-step-1946",
+  "title": "Step By Step (1946) Full Movie | Lawrence Tierney & Anne Jeffreys | Classic Film Noir",
+  "year": 1946,
+  "director": "Phil Rosen",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Classics",
+  "description": "An honorably discharged WWII veteran and a senator's secretary are framed for murder by a ruthless gang of Nazi subversives hiding out in California. Watch full movie on https://moviehub.uk/.",
+  "embedId": "v7en8i2",
+  "source": "rumble",
+  "posterUrl": "images/step-by-step-1946.jpg"
+},
+  {
   "id": "the-thin-man-1934",
   "title": "The Thin Man (1934) Full Movie | William Powell & Myrna Loy | Classic Comedy Mystery",
   "year": 1934,
@@ -17271,18 +17469,23 @@
     "embedId": "v717tu2",
     "posterUrl": "https://sp.rmbl.ws/s8/1/A/B/C/D.jpg"
   },
-  {
-    "id": "zombie-nightmare-1987",
-    "title": "Zombie Nightmare (1987)",
-    "source": "rumble",
-    "embedId": "v719128",
-    "posterUrl": "images/zom.jpg",
-    "genres": [
-      "Horror",
-      "Zombies"
-    ],
-    "year": 1987
-  },
+{
+  "id": "zombie-nightmare-1987",
+  "title": "Zombie Nightmare (1987) Full Movie | Adam West & Tia Carrere | Cult Horror",
+  "year": 1987,
+  "director": "John S. Glazer",
+  "quality": "HD",
+  "genres": [
+    "Horror",
+    "Zombies",
+    "Cult",
+    "Classics"
+  ],
+  "description": "A murdered teen is resurrected via voodoo magic to seek bloody revenge against the reckless teenagers who killed him. Starring Adam West and Tia Carrere. Watch full movie on https://moviehub.uk/.",
+  "embedId": "v719128",
+  "source": "rumble",
+  "posterUrl": "images/zom.jpg"
+},
   {
     "id": "Custer-of-the-West",
     "title": "Custer of the West (1967) | Robert Shaw | Epic Cinerama Western | Full Movie",
