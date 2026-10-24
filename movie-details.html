@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-WY3DHDXQWH');
-</script>
+      gtag('config', 'G-WY3DHDXQWH');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CANONICAL LINK FOR SEARCH CONSOLE INDEXING -->
+    <link id="dynamic-canonical" rel="canonical" href="https://moviehub.uk/movie-details.html">
     
     <meta id="meta-description" name="description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     
@@ -124,7 +128,7 @@
         <!-- BUY ME A COFFEE BANNER -->
         <div class="coffee-support-card">
             <p><strong>Enjoying MovieHub?</strong> Grab Dennis a coffee to support server costs and keep the vault free for everyone!</p>
-            <a class="coffee-support-btn" href="https://buymeacoffee.com/moviehubhd" target="_blank">
+            <a class="coffee-support-btn" href="https://buymeacoffee.com/moviehubhd" target="_blank" rel="noopener">
                 <i class="fas fa-coffee"></i> Buy Me a Coffee
             </a>
         </div>
@@ -157,11 +161,12 @@
                 return;
             }
 
-            // FORCE FULL ABSOLUTE CANONICAL PATH INCLUDING .html
+            // FORCE FULL ABSOLUTE CANONICAL PATH INCLUDING QUERY PARAMETERS
             const cleanCanonicalUrl = `https://moviehub.uk/movie-details.html?id=${encodeURIComponent(movieId)}`;
-            let canonicalTag = document.querySelector("link[rel='canonical']");
+            let canonicalTag = document.getElementById('dynamic-canonical');
             if (!canonicalTag) {
                 canonicalTag = document.createElement('link');
+                canonicalTag.setAttribute('id', 'dynamic-canonical');
                 canonicalTag.setAttribute('rel', 'canonical');
                 document.head.appendChild(canonicalTag);
             }
@@ -188,7 +193,7 @@
                     }
                     iframe.src = embedUrl;
 
-                    // 1. DYNAMIC SEARCH-FRIENDLY TITLE
+                    // 1. DYNAMIC SEARCH-FRIENDLY TITLE (CLEANED AND FORMATTED)
                     document.title = `${cleanTitle} ${releaseYear} - Watch Stream Online | MovieHub`;
                     
                     // 2. META DESCRIPTION & OPEN GRAPH FOR BOT PARSING
