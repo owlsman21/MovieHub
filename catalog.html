@@ -2,33 +2,132 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-WY3DHDXQWH');
-</script>
+      gtag('config', 'G-WY3DHDXQWH');
+    </script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieHub | All Movies</title>
     <style>
-        body { background-color: #0a0a0a; color: white; font-family: sans-serif; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; margin-top: 20px; }
-        .grid img { width: 100%; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer; background: #111; }
-        .pagination { margin-top: 30px; text-align: center; }
-        .pagination button { padding: 10px 20px; cursor: pointer; background: #e50914; color: white; border: none; border-radius: 5px; margin: 0 5px; }
-        .pagination button:disabled { background: #333; cursor: not-allowed; }
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #1f1f1f;
+            --accent-color: #e50914;
+            --gold-accent: #ffdd00;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px 40px;
+        }
+
+        .back-link {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin: 20px 0 10px 0;
+            font-size: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .movie-card {
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            z-index: 10;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background: #111;
+        }
+
+        .movie-card-title {
+            padding: 10px;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+
+        .pagination {
+            margin-top: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #f40612;
+        }
+
+        .pagination button:disabled {
+            background: #333;
+            color: #777;
+            cursor: not-allowed;
+        }
+
+        #page-info {
+            font-size: 15px;
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" style="color: #ffd700; text-decoration: none;">← BACK TO HOME</a>
+    <a href="index.html" class="back-link">← BACK TO HOME</a>
     <h1>All Movies</h1>
+    
     <div class="grid" id="movie-grid"></div>
     
     <div class="pagination" id="pagination">
         <button id="prev-btn" onclick="changePage(-1)">Previous</button>
-        <span id="page-info" style="margin: 0 15px;"></span>
+        <span id="page-info"></span>
         <button id="next-btn" onclick="changePage(1)">Next</button>
     </div>
 
@@ -37,10 +136,23 @@
         let currentPage = 1;
         const itemsPerPage = 24;
 
+        function getPosterUrl(posterUrl) {
+            if (!posterUrl) return 'images/poster-placeholder.jpg';
+            if (posterUrl.startsWith('http://') || posterUrl.startsWith('https://')) {
+                return posterUrl;
+            }
+            return posterUrl.replace(/^\/+/, '');
+        }
+
         async function initCatalog() {
-            const response = await fetch('data/all-movies.json');
-            allMovies = await response.json();
-            renderPage();
+            try {
+                // Fixed path to match root json location used on index.html
+                const response = await fetch('/all-movies.json?t=' + new Date().getTime());
+                allMovies = await response.json();
+                renderPage();
+            } catch (error) {
+                console.error("Error loading movie catalog:", error);
+            }
         }
 
         function renderPage() {
@@ -52,16 +164,28 @@
             grid.innerHTML = '';
             
             paginatedItems.forEach(m => {
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                card.onclick = () => window.location.href = `movie-details.html?id=${encodeURIComponent(m.id)}`;
+
                 const img = document.createElement('img');
-                img.src = m.posterUrl;
-                img.onclick = () => window.location.href = `movie-details.html?id=${m.id}`;
+                img.src = getPosterUrl(m.posterUrl);
+                img.alt = m.title || 'Movie Poster';
                 img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
-                grid.appendChild(img);
+
+                const title = document.createElement('div');
+                title.className = 'movie-card-title';
+                title.textContent = m.title || 'Untitled Movie';
+
+                card.appendChild(img);
+                card.appendChild(title);
+                grid.appendChild(card);
             });
 
-            document.getElementById('page-info').innerText = `Page ${currentPage} of ${Math.ceil(allMovies.length / itemsPerPage)}`;
+            const totalPages = Math.ceil(allMovies.length / itemsPerPage) || 1;
+            document.getElementById('page-info').innerText = `Page ${currentPage} of ${totalPages}`;
             document.getElementById('prev-btn').disabled = currentPage === 1;
-            document.getElementById('next-btn').disabled = currentPage >= Math.ceil(allMovies.length / itemsPerPage);
+            document.getElementById('next-btn').disabled = currentPage >= totalPages;
         }
 
         function changePage(direction) {
