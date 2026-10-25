@@ -188,6 +188,9 @@
             border-radius: 6px;
             overflow: hidden;
             cursor: pointer;
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             flex: 0 0 160px;
@@ -335,17 +338,12 @@
             return String(name).replace(/[:\\/*?"<>|]/g, '-');
         }
 
-        // STATIC FILE FIX: Directs clicks straight to the pre-rendered static pages in /movies/
-        function openMovieDetail(movieId) {
-            const safeId = sanitizeFilename(movieId);
-            window.location.href = `movies/${safeId}.html`;
-        }
-
+        // Pure native anchor tag creation for direct browser navigation
         function createMovieCard(movie) {
-            const card = document.createElement('div');
+            const safeId = sanitizeFilename(movie.id);
+            const card = document.createElement('a');
             card.className = 'movie-card';
-            
-            card.onclick = () => openMovieDetail(movie.id);
+            card.href = `movies/${safeId}.html`;
 
             const img = document.createElement('img');
             img.src = getPosterUrl(movie.posterUrl);
@@ -457,7 +455,7 @@
                         section.className = 'shelf';
                         section.innerHTML = `
                             <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
-                               <h2>${cat.title}</h2>
+                                <h2>${cat.title}</h2>
                                 <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                             </div>
                             <div class="shelf-grid" id="grid-${cat.domId}"></div>
