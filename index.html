@@ -338,12 +338,12 @@
             return String(name).replace(/[:\\/*?"<>|]/g, '-');
         }
 
-        // Pure native anchor tag creation for direct browser navigation
+        // FIXED: Point directly to query parameter movie-details.html page
         function createMovieCard(movie) {
             const safeId = sanitizeFilename(movie.id);
             const card = document.createElement('a');
             card.className = 'movie-card';
-            card.href = `movies/${safeId}.html`;
+            card.href = `/movie-details.html?id=${safeId}`;
 
             const img = document.createElement('img');
             img.src = getPosterUrl(movie.posterUrl);
