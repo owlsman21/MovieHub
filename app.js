@@ -126,7 +126,7 @@ function renderGrid(container, movieList) {
             const posterSrc = poster.startsWith('images/') ? `/${poster}` : `/images/${poster}`;
 
             return `
-                <div class="movie-card" onclick="window.location.href='/movies/${safeId}.html'" style="cursor: pointer;">
+                <div class="movie-card" onclick="window.location.href='/movie-details.html?id=${safeId}'" style="cursor: pointer;">
                     <img src="${posterSrc}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Poster+Missing'" alt="${movie.title} poster">
                     <h3>${movie.title} (${movie.year})</h3>
                 </div>
