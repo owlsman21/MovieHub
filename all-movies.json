@@ -1,5 +1,89 @@
 [
-    {
+  {
+  "id": "a-life-at-stake-1955",
+  "title": "A Life at Stake (1955) Full Movie | Angela Lansbury & Keith Andes | Classic Film Noir",
+  "year": 1955,
+  "director": "Paul Guilfoyle",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Classics",
+  "description": "An ambitious real estate broker finds himself reeled into a dangerous web of romance, greed, and murder when he takes a job offer from a mysterious, alluring married woman and her shadowy associates. Directed by Paul Guilfoyle and starring Angela Lansbury, Keith Andes, and Claudia Barrett.",
+  "embedId": "v7f68b0",
+  "source": "rumble",
+  "posterUrl": "images/a-life-at-stake-1955.jpg"
+},
+  {
+  "id": "wiretapper-1955",
+  "title": "Wiretapper (1955) Full Movie | Bill Williams & Georgia Lee | Classic Mob Crime Drama",
+  "year": 1955,
+  "director": "Dick Ross",
+  "quality": "HD",
+  "genres": "Crime, Film Noir, Drama, Classics",
+  "description": "A struggling WWII veteran and electronics expert sells his specialized wiretapping skills to a syndicate mob boss, plunging into a dangerous world of organized crime and deception. Directed by Dick Ross and starring Bill Williams, Georgia Lee, Douglas Kennedy, and Paul Picerni.",
+  "embedId": "v7f5dis",
+  "source": "rumble",
+  "posterUrl": "images/wiretapper-1955.jpg"
+},
+  {
+  "id": "nightmare-beach-1989",
+  "title": "Nightmare Beach (1989) | John Saxon & Sarah Buxton | Classic Spring Break Slasher",
+  "year": 1989,
+  "director": "Umberto Lenzi",
+  "quality": "HD",
+  "genres": "Horror, Mystery, Thriller, Classics",
+  "description": "After a notorious biker gang leader is executed in the electric chair for a murder he swore he didn't commit, a mysterious helmeted killer on a motorcycle begins electrocuting spring breakers in Miami. Directed by Umberto Lenzi and starring John Saxon, Nicolas De Toth, Sarah Buxton, and Michael Parks.",
+  "embedId": "16259212905203",
+  "source": "ok.ru",
+  "posterUrl": "images/nightmare-beach-1989.jpg"
+},
+  {
+  "id": "the-night-of-the-generals-1967",
+  "title": "The Night of the Generals (1967) | Peter O'Toole & Omar Sharif | WWII Crime Mystery",
+  "year": 1967,
+  "director": "Anatole Litvak",
+  "quality": "HD",
+  "genres": "Drama, Crime, War, Classics",
+  "description": "During World War II, a meticulous German intelligence officer investigates the brutal murder of a prostitute in Warsaw, leading him to suspect three high-ranking Nazi generals—one of whom is a sadistic, psychotic officer hiding dark secrets. Directed by Anatole Litvak and starring Peter O'Toole, Omar Sharif, Tom Courtenay, Donald Pleasence, and Joanna Pettet.",
+  "embedId": "16376063658739",
+  "source": "ok.ru",
+  "posterUrl": "images/the-night-of-the-generals-1967.jpg"
+},
+  {
+  "id": "gothic-1986",
+  "title": "Gothic (1986) | Gabriel Byrne & Julian Sands | Ken Russell Classic Horror",
+  "year": 1986,
+  "director": "Ken Russell",
+  "quality": "HD",
+  "genres": "Horror, Drama, Mystery, Classics",
+  "description": "Five literary companions gather at Lord Byron's Swiss villa on a stormy night, where a hallucinatory game of scary stories awakens their deepest, darkest monsters. Directed by Ken Russell and starring Gabriel Byrne, Julian Sands, Natasha Richardson, and Timothy Spall.",
+  "embedId": "16390278810355",
+  "source": "ok.ru",
+  "posterUrl": "images/gothic-1986.jpg"
+},
+   {
+  "id": "touch-of-evil-1958",
+  "title": "Touch of Evil (1958) Full Movie | Charlton Heston & Janet Leigh | Orson Welles Noir",
+  "year": 1958,
+  "director": "Orson Welles",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Classics",
+  "description": "A stark, obsessive tale of corruption and murder along the U.S.-Mexico border, where an upright Mexican narcotics prosecutor clashes with a crooked, larger-than-life American police captain. Directed by and starring Orson Welles, alongside Charlton Heston and Janet Leigh.",
+  "embedId": "10300365277936",
+  "source": "ok.ru",
+  "posterUrl": "images/touch-of-evil-1958.jpg"
+},
+  {
+  "id": "tension-1949",
+  "title": "Tension (1949) Full Movie | Richard Basehart & Audrey Totter | Classic Film Noir",
+  "year": 1949,
+  "director": "John Berry",
+  "quality": "HD",
+  "genres": "Film Noir, Crime, Drama, Classics",
+  "description": "A meek pharmacist creates a dark alter ego to plan the perfect murder of his unfaithful wife's lover, only for his rival to turn up dead before he can execute his scheme—leaving him framed for a murder he did not commit. Directed by John Berry and starring Richard Basehart, Audrey Totter, Cyd Charisse, and Barry Sullivan.",
+  "embedId": "10345684601584",
+  "source": "ok.ru",
+  "posterUrl": "images/tension-1949.jpg"
+},
+ {
   "id": "smooth-as-silk-1946",
   "title": "Smooth as Silk (1946) Full Movie | Kent Taylor & Virginia Grey | Classic Film Noir",
   "year": 1946,

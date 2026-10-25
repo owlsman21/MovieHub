@@ -329,9 +329,16 @@
             });
         }
 
-        // SEO FIX: Directs movie clicks straight to movie-details.html for Google Search Console indexing
+        // Helper to sanitize filename matching build.py
+        function sanitizeFilename(name) {
+            if (!name) return '';
+            return String(name).replace(/[:\\/*?"<>|]/g, '-');
+        }
+
+        // STATIC FILE FIX: Directs clicks straight to the pre-rendered static pages in /movies/
         function openMovieDetail(movieId) {
-            window.location.href = `movie-details.html?id=${encodeURIComponent(movieId)}`;
+            const safeId = sanitizeFilename(movieId);
+            window.location.href = `movies/${safeId}.html`;
         }
 
         function createMovieCard(movie) {
@@ -450,7 +457,7 @@
                         section.className = 'shelf';
                         section.innerHTML = `
                             <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
-                                <h2>${cat.title}</h2>
+                               <h2>${cat.title}</h2>
                                 <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                             </div>
                             <div class="shelf-grid" id="grid-${cat.domId}"></div>

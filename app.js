@@ -1,5 +1,10 @@
 let allMoviesCache = [];
 
+function sanitizeFilename(name) {
+    if (!name) return '';
+    return String(name).replace(/[:\\/*?"<>|]/g, '-');
+}
+
 async function initMovieVault() {
     try {
         // Fetch the movie database
@@ -17,45 +22,10 @@ async function initMovieVault() {
                 canonicalLink.setAttribute('rel', 'canonical');
                 document.head.appendChild(canonicalLink);
             }
-            canonicalLink.setAttribute('href', `https://moviehub.uk/movie-details.html?id=${movieId}`);
+            canonicalLink.setAttribute('href', `https://moviehub.uk/movies/${sanitizeFilename(movieId)}.html`);
         }
 
-        // 2. MOVIE DETAILS PAGE RENDERER (Loads specific movie by ID)
-        if (movieId) {
-            const movie = allMoviesCache.find(m => m.id && m.id.toLowerCase() === movieId.toLowerCase());
-            if (movie) {
-                document.title = `${movie.title} | MovieHub`;
-
-                const titleEl = document.getElementById('movie-title') || document.querySelector('h1');
-                if (titleEl) titleEl.textContent = movie.title;
-
-                const descEl = document.getElementById('movie-description') || document.querySelector('.description');
-                if (descEl) descEl.textContent = movie.description;
-
-                const yearEl = document.getElementById('movie-year');
-                if (yearEl) yearEl.textContent = movie.year;
-
-                const genreEl = document.getElementById('movie-genre');
-                if (genreEl) {
-                    genreEl.textContent = Array.isArray(movie.genres) ? movie.genres.join(', ') : movie.genres;
-                }
-
-                // Update Embed Player Source
-                const iframe = document.querySelector('iframe');
-                if (iframe) {
-                    if (movie.source === 'ok.ru') {
-                        iframe.src = `https://ok.ru/videoembed/${movie.embedId}`;
-                    } else if (movie.source === 'rumble') {
-                        iframe.src = `https://rumble.com/embed/${movie.embedId}/`;
-                    } else if (movie.source === 'youtube') {
-                        iframe.src = `https://www.youtube.com/embed/${movie.embedId}`;
-                    }
-                }
-                return; // Stop further grid rendering on the details page
-            }
-        }
-
-        // 3. HELPER TO MATCH GENRES
+        // 2. HELPER TO MATCH GENRES
         const hasGenre = (movie, target) => {
             if (!movie || !movie.genres) return false;
             const term = target.toLowerCase().trim();
@@ -97,7 +67,7 @@ async function initMovieVault() {
             return;
         }
 
-        // 4. HOMEPAGE GRIDS
+        // 3. HOMEPAGE GRIDS
         if (document.getElementById('latest-grid')) {
             renderGrid(document.getElementById('latest-grid'), publicMovies.slice(0, 18));
         }
@@ -122,7 +92,7 @@ async function initMovieVault() {
         const homepageSearchSection = document.getElementById('homepage-search-section');
         if (homepageSearchSection) homepageSearchSection.style.display = 'none';
 
-        // 5. CATEGORY & COLLECTION PAGE HANDLER (Checks all potential grid IDs)
+        // 4. CATEGORY & COLLECTION PAGE HANDLER
         const catalogGridContainer = document.getElementById('movie-grid-container') || 
                                      document.getElementById('category-grid') || 
                                      document.getElementById('movies-grid') ||
@@ -150,17 +120,23 @@ function renderGrid(container, movieList) {
     if (!container) return; 
 
     container.innerHTML = movieList.length > 0
-        ? movieList.map(movie => `
-            <div class="movie-card">
-                <a href="movie-details.html?id=${movie.id}">
-                    <img src="${movie.posterUrl}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Poster+Missing'" alt="${movie.title} poster">
-                    <h3>${movie.title} (${movie.year})</h3>
-                </a>
-            </div>
-        `).join('')
+        ? movieList.map(movie => {
+            const safeId = sanitizeFilename(movie.id);
+            const poster = movie.posterUrl ? movie.posterUrl.replace('../', '').replace(/^\/+/, '') : '';
+            const posterSrc = poster.startsWith('images/') ? `../${poster}` : `images/${poster}`;
+
+            return `
+                <div class="movie-card">
+                    <a href="movies/${safeId}.html">
+                        <img src="${posterSrc}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Poster+Missing'" alt="${movie.title} poster">
+                        <h3>${movie.title} (${movie.year})</h3>
+                    </a>
+                </div>
+            `;
+        }).join('')
         : "<p>No movies found.</p>";
 
-    // Update pagination count text if present (e.g. Page 1 of 1)
+    // Update pagination count text if present
     const pageInfoText = document.querySelector('.pagination span, #page-info, .page-number');
     if (pageInfoText && movieList.length > 0) {
         const totalPages = Math.ceil(movieList.length / 18) || 1;

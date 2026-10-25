@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creepshow 2 | MovieHub</title>
+    <meta name="description" content="Three macabre tales from the latest issue of a boy's favorite comic book, dealing with a vengeful wooden Native American, a monstrous blob in a lake, and an undying hitchhiker.">
+
+    <!-- Open Graph Social & Search Tags -->
+    <meta property="og:title" content="Creepshow 2">
+    <meta property="og:description" content="Three macabre tales from the latest issue of a boy's favorite comic book, dealing with a vengeful wooden Native American, a monstrous blob in a lake, and an undying hitchhiker.">
+    <meta property="og:image" content="https://moviehub.uk/../images/Creepshow%202.jpg">
+    <meta property="og:type" content="video.movie">
+    <meta property="og:url" content="https://moviehub.uk/movies/Creepshow-2.html">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        :root {
+            --bg-color: #141414;
+            --card-bg: #1f1f1f;
+            --accent-color: #e50914;
+            --gold-accent: #ffdd00;
+            --text-color: #ffffff;
+            --text-secondary: #aaaaaa;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        .movie-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .meta {
+            text-align: center;
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .video-player {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            margin-bottom: 30px;
+        }
+        .video-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .movie-details {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .poster {
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .synopsis h2 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .synopsis p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+        /* Additional Info Cards & Fixed Bullets */
+        .info-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        .info-card ul {
+            margin: 10px 0 0 20px;
+            color: #ccc;
+            padding-left: 10px;
+        }
+        .info-card li {
+            margin-bottom: 6px;
+        }
+        .support-box {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .support-btn {
+            background-color: var(--gold-accent);
+            color: #000;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        /* You Might Also Like Shelf */
+        .shelf-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #fff;
+            text-align: center;
+        }
+        .shelf-grid {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+        .mini-card {
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            min-width: 140px;
+            width: 140px;
+            text-decoration: none;
+            color: #fff;
+            overflow: hidden;
+            flex-shrink: 0;
+            transition: transform 0.2s;
+        }
+        .mini-card:hover {
+            transform: scale(1.05);
+        }
+        .mini-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .mini-card-title {
+            padding: 8px;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid #222;
+            margin-top: 50px;
+        }
+    </style>
+
+    <!-- Structured Schema.org Data for Google Search Console -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Creepshow 2",
+      "description": "Three macabre tales from the latest issue of a boy's favorite comic book, dealing with a vengeful wooden Native American, a monstrous blob in a lake, and an undying hitchhiker.",
+      "thumbnailUrl": "https://moviehub.uk/../images/Creepshow%202.jpg",
+      "uploadDate": "2026-10-25T08:00:00+00:00",
+      "embedUrl": "https://ok.ru/videoembed/9572763896358"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">MovieHub</a>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../catalog.html">Catalog</a>
+        </nav>
+    </header>
+
+    <main class="movie-container">
+        <h1>Creepshow 2</h1>
+        <p class="meta">1987 | Genres: Horror, Fantasy</p>
+        
+        <div class="video-player">
+            <iframe src="https://ok.ru/videoembed/9572763896358" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        </div>
+
+        <div class="movie-details">
+            <img src="../../images/Creepshow%202.jpg" alt="Creepshow 2 Poster" class="poster">
+            <div class="synopsis">
+                <h2>Synopsis</h2>
+                <p>Three macabre tales from the latest issue of a boy's favorite comic book, dealing with a vengeful wooden Native American, a monstrous blob in a lake, and an undying hitchhiker.</p>
+            </div>
+        </div>
+
+        <!-- Extra Info Box -->
+        <div class="info-card">
+            <h3>⭐ Film Highlights & Notes</h3>
+            <ul>
+                <li>Full feature presentation restored for high-quality playback.</li>
+                <li>Available to stream on MovieHub Vault.</li>
+            </ul>
+        </div>
+
+        <!-- Buy Me a Coffee Support Box -->
+        <div class="support-box">
+            <p><strong>Enjoying MovieHub?</strong> Grab Dennis a coffee to support server costs and keep the vault free for everyone!</p>
+            <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="support-btn">☕ Buy Me a Coffee</a>
+        </div>
+
+        <!-- You Might Also Like Section -->
+        <h3 class="shelf-title">You Might Also Like</h3>
+        <div class="shelf-grid">
+            
+            <a href="Hunting-Grounds.html" class="mini-card">
+                <img src="../images/Hunting%20Grounds.jpg" alt="Hunting Grounds" loading="lazy" onerror="this.src='../images/moviehub.png'">
+                <div class="mini-card-title">Hunting Grounds</div>
+            </a>
+        
+            <a href="big-foot-burger-2026.html" class="mini-card">
+                <img src="../images/big-foot-burger-2026.jpg" alt="Big Foot Burger (2026) Full Movie | Comedy | HD" loading="lazy" onerror="this.src='../images/moviehub.png'">
+                <div class="mini-card-title">Big Foot Burger (2026) Full Movie | Comedy | HD</div>
+            </a>
+        
+            <a href="House-of-Inequity.html" class="mini-card">
+                <img src="../images/House%20of%20Inequity.jpg" alt="House of Inequity 2021" loading="lazy" onerror="this.src='../images/moviehub.png'">
+                <div class="mini-card-title">House of Inequity 2021</div>
+            </a>
+        
+            <a href="blood-on-the-sun-1945.html" class="mini-card">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BODg5OTQ2YjAtODRlZC00YTRmLTk0M2EtZmQyMmRjMjY0OTRlXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg&f=1&nofb=1&ipt=c22a2a18568174b88dd7bdbb2e3fb6e51a716432a158c7f4981e795f86049026" alt="Blood on the Sun (1945) Full Movie | James Cagney | Classic Thriller" loading="lazy" onerror="this.src='../images/moviehub.png'">
+                <div class="mini-card-title">Blood on the Sun (1945) Full Movie | James Cagney | Classic Thriller</div>
+            </a>
+        
+            <a href="Rear-Window.html" class="mini-card">
+                <img src="../images/Rear%20Window.jpg" alt="Rear Window" loading="lazy" onerror="this.src='../images/moviehub.png'">
+                <div class="mini-card-title">Rear Window</div>
+            </a>
+        
+            <a href="THE_HALLELUJAH_TRAIL.html" class="mini-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTExMTgyMDUwNDdeQTJeQWpwZ15BbWU3MDAwOTI5MzQ@._V1_.jpg" alt="THE HALLELUJAH TRAIL Bert Lancaster (1965)" loading="lazy" onerror="this.src='../images/moviehub.png'">
+                <div class="mini-card-title">THE HALLELUJAH TRAIL Bert Lancaster (1965)</div>
+            </a>
+        
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MovieHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
