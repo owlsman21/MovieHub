@@ -1,5 +1,41 @@
 [
     {
+        "id": "i-spit-on-your-grave-1978",
+        "title": "I Spit on Your Grave (1978) Full Movie | Camille Keaton & Emanual Azenberg | Cult Horror Thriller",
+        "year": 1978,
+        "director": "Meir Zarchi",
+        "quality": "HD",
+        "genres": "Horror, Thriller, Drama",
+        "description": "A young New York City writer renting a cabin in the country to work on her novel is brutally assaulted and left for dead by a group of local men, leading to a calculated and horrifying vengeance.",
+        "embedId": "16017228892915",
+        "source": "ok.ru",
+        "posterUrl": "images/i-spit-on-your-grave-1978.jpg"
+    },
+    {
+        "id": "dawn-of-the-dead-1978",
+        "title": "Dawn of the Dead (1978) Full Movie | David Emge & Ken Foree | Classic Horror",
+        "year": 1978,
+        "director": "George A. Romero",
+        "quality": "HD",
+        "genres": "Horror, Action, Thriller",
+        "description": "Following an ever-growing epidemic of zombies that have risen from the dead, two Philadelphia SWAT team members, a traffic reporter, and his television executive girlfriend seek refuge in a deserted suburban shopping mall.",
+        "embedId": "16208276032243",
+        "source": "ok.ru",
+        "posterUrl": "images/dawn-of-the-dead-1978.jpg"
+    },
+    {
+        "id": "battleship-2012",
+        "title": "Battleship (2012) Full Movie | Taylor Kitsch, Rihanna & Liam Neeson | Sci-Fi Action",
+        "year": 2012,
+        "director": "Peter Berg",
+        "quality": "HD",
+        "genres": "Action, Sci-Fi, Adventure",
+        "description": "During an international naval war games exercise off the coast of Hawaii, an armada of warships is trapped under an alien forcefield and forced to do battle with an advanced extraterrestrial fleet.",
+        "embedId": "16900994107942",
+        "source": "ok.ru",
+        "posterUrl": "images/battleship-2012.jpg"
+    },
+    {
         "id": "i-want-your-sex-2026",
         "title": "I Want Your Sex (2026) Full Movie | Olivia Wilde & Cooper Hoffman | Erotic Comedy Thriller",
         "year": 2026,
