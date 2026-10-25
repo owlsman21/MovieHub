@@ -123,11 +123,11 @@ function renderGrid(container, movieList) {
         ? movieList.map(movie => {
             const safeId = sanitizeFilename(movie.id);
             const poster = movie.posterUrl ? movie.posterUrl.replace('../', '').replace(/^\/+/, '') : '';
-            const posterSrc = poster.startsWith('images/') ? `../${poster}` : `images/${poster}`;
+            const posterSrc = poster.startsWith('images/') ? `/${poster}` : `/images/${poster}`;
 
             return `
                 <div class="movie-card">
-                    <a href="movies/${safeId}.html">
+                    <a href="/movies/${safeId}.html">
                         <img src="${posterSrc}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450?text=Poster+Missing'" alt="${movie.title} poster">
                         <h3>${movie.title} (${movie.year})</h3>
                     </a>
