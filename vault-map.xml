@@ -13,6 +13,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://moviehub.uk/movie-details.html?id=little-big-horn-1951</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moviehub.uk/movie-details.html?id=shotgun-1955</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://moviehub.uk/movie-details.html?id=horsegirls-2026</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
