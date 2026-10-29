@@ -1,5 +1,43 @@
 [
     {
+        "id": "the-tijuana-story-1957",
+        "title": "The Tijuana Story (1957) Full Movie | Rodolfo Acosta & James Darren | Classic Crime Drama Noir",
+        "year": 1957,
+        "director": "Leslie Kardos",
+        "actors": "Rodolfo Acosta, James Darren, Robert Blake, Joy Page",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama",
+        "description": "Based on a real-life crusading journalist, a courageous Mexican newspaper publisher stands up against a ruthless syndicate controlling vice, drugs, and gambling in Tijuana. His fearless exposé puts his career, his family, and his life on the line.",
+        "embedId": "4918410283760",
+        "source": "ok.ru",
+        "posterUrl": "images/the-tijuana-story-1957.jpg"
+    },
+    {
+        "id": "conflict-1945",
+        "title": "Conflict (1945) Full Movie | Humphrey Bogart & Alexis Smith | Classic Film Noir Psychological Thriller",
+        "year": 1945,
+        "director": "Curtis Bernhardt",
+        "actors": "Humphrey Bogart, Alexis Smith, Sydney Greenstreet, Rose Hobart",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Mystery",
+        "description": "An engineer falls deeply in love with his wife's younger sister and cold-bloodedly murders his spouse on a lonely mountain road. Believing he has committed the perfect crime, he soon becomes haunted by strange clues and eerie sightings suggesting she may still be alive.",
+        "embedId": "9379305229040",
+        "source": "ok.ru",
+        "posterUrl": "images/conflict-1945.jpg"
+    },
+    {
+        "id": "they-drive-by-night-1940",
+        "title": "They Drive by Night (1940) Full Movie | George Raft & Humphrey Bogart | Classic Film Noir Drama",
+        "year": 1940,
+        "director": "Raoul Walsh",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Thriller",
+        "description": "Two hard-working independent truck-driver brothers struggle against corrupt loan sharks and grueling road exhaustion. When one brother loses an arm in a crash, the other takes a management job at a trucking firm, only to be framed for murder by his boss's obsessed, unhinged wife.",
+        "embedId": "9379343239920",
+        "source": "ok.ru",
+        "posterUrl": "images/they-drive-by-night-1940.jpg"
+    },
+    {
         "id": "the-big-sleep-1945-alternate-version",
         "title": "The Big Sleep (1945 Alternate Version) Full Movie | Humphrey Bogart & Lauren Bacall | Classic Film Noir",
         "year": 1945,
@@ -8,7 +46,7 @@
         "genres": "Film Noir, Crime, Drama, Mystery",
         "description": "The original, unreleased 1945 pre-release cut of Howard Hawks' noir masterpiece. Private detective Philip Marlowe is hired by a wealthy general to settle his daughter's gambling debts, plunging him into a web of blackmail, murder, and deception. Features scenes omitted from the 1946 theatrical release.",
         "embedId": "9495917955824",
-        "source": "rumble",
+        "source": "ok.ru",
         "posterUrl": "images/the-big-sleep-1945-alternate-version.jpg"
     },
     {
@@ -20,7 +58,7 @@
         "genres": "Film Noir, Crime, Drama, Mystery",
         "description": "A WWII veteran investigates the mysterious disappearance and sudden murder of his war buddy. His search leads him into a murky underworld of corrupt night clubs, ruthless gangsters, and a sultry, dangerous lounge singer.",
         "embedId": "17434277317305",
-        "source": "rumble",
+        "source": "okru",
         "posterUrl": "images/dead-reckoning-1947.jpg"
     },
     {
@@ -32,7 +70,7 @@
         "genres": "Film Noir, Crime, Drama, Mystery",
         "description": "A suave junior partner in a high-class illegal gambling casino becomes the prime suspect when a corrupt police officer and a hatcheck girl turn up dead. He must navigate a dangerous web of betrayal, crooked partners, and a relentless homicide detective to prove his innocence.",
         "embedId": "17442058799801",
-        "source": "rumble",
+        "source": "ok.ru",
         "posterUrl": "images/johnny-oclock-1947.jpg"
     },
     {
@@ -43,8 +81,8 @@
         "quality": "HD",
         "genres": "Film Noir, Crime, Drama, Mystery",
         "description": "An Irish seaman becomes fascinated by a stunning blonde femme fatale and takes a job aboard her husband's luxury yacht. He soon finds himself entangled in a complex web of murder, intrigue, and betrayal culminating in a famous mirror-maze showdown.",
-        "embedId": "https://ok.ru/video/17442456537785",
-        "source": "rumble",
+        "embedId": "17442456537785",
+        "source": "ok.ru",
         "posterUrl": "images/the-lady-from-shanghai-1947.jpg"
     },
     {
@@ -56,7 +94,7 @@
         "genres": "Film Noir, Crime, Drama, Mystery",
         "description": "An innocent inventor accidentally becomes entangled in a brutal murder scheme. Fearing he will be framed, he flees, assumes a dead man's identity, and finds himself trapped in a deep web of extortion and blackmail.",
         "embedId": "17447052839609",
-        "source": "rumble",
+        "source": "ok.ru",
         "posterUrl": "images/key-witness-1947.jpg"
     },
     {
