@@ -1,5 +1,65 @@
 [
     {
+        "id": "dead-reckoning-1947",
+        "title": "Dead Reckoning (1947) Full Movie | Humphrey Bogart & Lizabeth Scott | Classic Film Noir",
+        "year": 1947,
+        "director": "John Cromwell",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Mystery",
+        "description": "A WWII veteran investigates the mysterious disappearance and sudden murder of his war buddy. His search leads him into a murky underworld of corrupt night clubs, ruthless gangsters, and a sultry, dangerous lounge singer.",
+        "embedId": "17434277317305",
+        "source": "rumble",
+        "posterUrl": "images/dead-reckoning-1947.jpg"
+    },
+    {
+        "id": "johnny-oclock-1947",
+        "title": "Johnny O'Clock (1947) Full Movie | Dick Powell & Evelyn Keyes | Classic Film Noir",
+        "year": 1947,
+        "director": "Robert Rossen",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Mystery",
+        "description": "A suave junior partner in a high-class illegal gambling casino becomes the prime suspect when a corrupt police officer and a hatcheck girl turn up dead. He must navigate a dangerous web of betrayal, crooked partners, and a relentless homicide detective to prove his innocence.",
+        "embedId": "17442058799801",
+        "source": "rumble",
+        "posterUrl": "images/johnny-oclock-1947.jpg"
+    },
+    {
+        "id": "the-lady-from-shanghai-1947",
+        "title": "The Lady From Shanghai (1947) Full Movie | Rita Hayworth & Orson Welles | Classic Film Noir",
+        "year": 1947,
+        "director": "Orson Welles",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Mystery",
+        "description": "An Irish seaman becomes fascinated by a stunning blonde femme fatale and takes a job aboard her husband's luxury yacht. He soon finds himself entangled in a complex web of murder, intrigue, and betrayal culminating in a famous mirror-maze showdown.",
+        "embedId": "https://ok.ru/video/17442456537785",
+        "source": "rumble",
+        "posterUrl": "images/the-lady-from-shanghai-1947.jpg"
+    },
+    {
+        "id": "key-witness-1947",
+        "title": "Key Witness (1947) Full Movie | Trudy Marshall & John Beal | Classic Film Noir Crime Drama",
+        "year": 1947,
+        "director": "D. Ross Lederman",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Mystery",
+        "description": "An innocent inventor accidentally becomes entangled in a brutal murder scheme. Fearing he will be framed, he flees, assumes a dead man's identity, and finds himself trapped in a deep web of extortion and blackmail.",
+        "embedId": "17447052839609",
+        "source": "rumble",
+        "posterUrl": "images/key-witness-1947.jpg"
+    },
+    {
+        "id": "the-gentleman-next-door-1949",
+        "title": "The Gentleman Next Door (1949) Full Movie | Walter Briggs | Classic Film Noir Thriller",
+        "year": 1949,
+        "director": "Unknown",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Mystery, Thriller",
+        "description": "An outwardly charming and respectable man named Elliot Crane moves into a quiet suburban neighborhood. Beneath his polished manners lies a sinister secret, and as his friendly facade begins to unravel, his neighbors find themselves trapped in a web of deceit and noir tension.",
+        "embedId": "HgMDSUYKTRg",
+        "source": "youtube",
+        "posterUrl": "images/the-gentleman-next-door-1949.jpg"
+    },
+    {
         "id": "brute-force-1947",
         "title": "Brute Force (1947) Full Movie | Burt Lancaster & Hume Cronyn | Classic Film Noir",
         "year": 1947,
