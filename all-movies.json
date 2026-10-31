@@ -1,5 +1,125 @@
 [
     {
+        "id": "the-crossfire-1967",
+        "title": "The Crossfire (1967) Full Movie | Eric Portman, Ian Hendry & Peter Wyngarde | Classic British Drama",
+        "year": 1967,
+        "director": "John Jacobs",
+        "quality": "HD",
+        "genres": "Drama, History, Classics",
+        "description": "Set during the Algerian War, an elderly, distinguished physician finds himself caught directly in the crossfire when he adheres to his medical oath and treats wounded soldiers from both sides of the conflict.",
+        "embedId": "4281843650943",
+        "source": "ok.ru",
+        "posterUrl": "images/the-crossfire-1967.jpg"
+    },
+    {
+        "id": "the-day-will-dawn-1942",
+        "title": "The Day Will Dawn (1942) Full Movie | Deborah Kerr & Hugh Williams | Classic WWII War Thriller",
+        "year": 1942,
+        "director": "Harold French",
+        "quality": "HD",
+        "genres": "War, Drama, Thriller, Classics",
+        "description": "A British journalist in occupied Norway teams up with local underground resistance fighters to expose a secret German U-boat base to the Allies. Starring Hugh Williams, Deborah Kerr, and Ralph Richardson.",
+        "embedId": "v7dwr70",
+        "source": "rumble",
+        "posterUrl": "images/the-day-will-dawn-1942.jpg"
+    },
+    {
+        "id": "white-fire-1953",
+        "title": "White Fire (1953) Full Movie | Scott Brady & Mary Castle | Classic Film Noir Thriller",
+        "year": 1953,
+        "director": "John Gilling",
+        "quality": "HD",
+        "genres": "Crime, Drama, Film Noir, Classics",
+        "description": "An American merchant captain arrives in London and discovers his brother has been framed for murder and sentenced to hang. With only three days left, he plunges into the underworld to uncover a diamond smuggling ring.",
+        "embedId": "4281850794367",
+        "source": "ok.ru",
+        "posterUrl": "images/white-fire-1953.jpg"
+    },
+    {
+        "id": "they-made-me-a-fugitive-1947",
+        "title": "They Made Me a Fugitive (1947) Full Movie | Trevor Howard & Sally Gray | Classic British Film Noir",
+        "year": 1947,
+        "director": "Alberto Cavalcanti",
+        "quality": "HD",
+        "genres": "Crime, Drama, Film Noir, Classics",
+        "description": "A disillusioned ex-RAF pilot joins a black-market smuggling gang, only to be framed for murder and sent to prison. Escaping from Dartmoor, he embarks on a relentless quest for revenge across post-war London.",
+        "embedId": "4281854267775",
+        "source": "ok.ru",
+        "posterUrl": "images/they-made-me-a-fugitive-1947.jpg"
+    },
+    {
+        "id": "the-navy-lark-1959",
+        "title": "The Navy Lark (1959) Full Movie | Cecil Parker, Ronald Shiner & Leslie Phillips | Classic British Comedy",
+        "year": 1959,
+        "director": "Gordon Parry",
+        "quality": "HD",
+        "genres": "Comedy, Classics",
+        "description": "Stationed on a forgotten island naval base, a misbehaved crew runs illegal smuggling operations until an unexpected inspection threatens to shut them down.",
+        "embedId": "4281859969407",
+        "source": "ok.ru",
+        "posterUrl": "images/the-navy-lark-1959.jpg"
+    },
+    {
+        "id": "carry-on-dick-1974",
+        "title": "Carry On Dick (1974) Full Movie | Sid James & Barbara Windsor | Classic British Comedy",
+        "year": 1974,
+        "director": "Gerald Thomas",
+        "quality": "HD",
+        "genres": "Comedy, History, Classics",
+        "description": "Notorious highwayman Dick Turpin disguises himself as a reverend in a small village to evade Bow Street Runners while continuing his robbery spree by night.",
+        "embedId": "4281861869951",
+        "source": "ok.ru",
+        "posterUrl": "images/carry-on-dick-1974.jpg"
+    },
+    {
+        "id": "made-in-heaven-1952",
+        "title": "Made in Heaven (1952) Full Movie | David Tomlinson & Petula Clark | Classic British Comedy",
+        "year": 1952,
+        "director": "John Paddy Carstairs",
+        "quality": "HD",
+        "genres": "Comedy, Romance, Classics",
+        "description": "A young married couple enters a traditional English village contest to win a prize for perfect marital bliss, but their household is thrown into chaos by the arrival of a gorgeous Hungarian maid.",
+        "embedId": "4281868095871",
+        "source": "ok.ru",
+        "posterUrl": "images/made-in-heaven-1952.jpg"
+    },
+    {
+        "id": "crackerjack-1938",
+        "title": "Crackerjack (1938) Full Movie | Tom Walls & Lilli Palmer | Classic British Mystery Comedy",
+        "year": 1938,
+        "director": "Albert de Courville",
+        "quality": "HD",
+        "genres": "Mystery, Comedy, Crime, Classics",
+        "description": "A suave, modern-day Robin Hood uses clever disguises and sharp wit to steal from ruthless criminals and fund charitable causes, only to get entangled with a captivating woman.",
+        "embedId": "v7fgnvs",
+        "source": "rumble",
+        "posterUrl": "images/crackerjack-1938.jpg"
+    },
+    {
+        "id": "that-night-in-rio-1941",
+        "title": "That Night in Rio (1941) Full Movie | Alice Faye, Don Ameche & Carmen Miranda | Classic Musical",
+        "year": 1941,
+        "director": "Irving Cummings",
+        "quality": "HD",
+        "genres": "Comedy, Musical, Romance, Classics",
+        "description": "An American entertainer in Rio de Janeiro is hired to double for a high-flying baron who looks just like him, creating hilarious complications with both of their romantic partners.",
+        "embedId": "5092978395775",
+        "source": "rumble",
+        "posterUrl": "images/that-night-in-rio-1941.jpg"
+    },
+    {
+        "id": "angelas-ashes-1999",
+        "title": "Angela's Ashes (1999) Full Movie | Emily Watson & Robert Carlyle | Classic Drama",
+        "year": 1999,
+        "director": "Alan Parker",
+        "quality": "HD",
+        "genres": "Drama, History, Classics",
+        "description": "Based on Frank McCourt's Pulitzer Prize-winning memoir, a young boy grows up in severe poverty in 1930s and 40s Limerick, Ireland, while dreaming of escaping to America.",
+        "embedId": "6766699743871",
+        "source": "ok.ru",
+        "posterUrl": "images/angelas-ashes-1999.jpg"
+    },
+    {
         "id": "whispering-city-1947",
         "title": "Whispering City (1947) Full Movie | Paul Lukas & Mary Anderson | Classic Film Noir Thriller",
         "year": 1947,
@@ -7,8 +127,8 @@
         "quality": "HD",
         "genres": "Film Noir, Crime, Drama, Mystery, Thriller",
         "description": "An investigative reporter and a troubled composer uncover a dark web of murder and blackmail orchestrated by a prominent, ruthless lawyer.",
-        "embedId": "1900736154239",
-        "source": "ok.ru",
+        "embedId": "v7ff48o",
+        "source": "rumble",
         "posterUrl": "images/whispering-city-1947.jpg"
     },
     {
@@ -1924,18 +2044,6 @@
         "embedId": "v7dwwue",
         "source": "rumble",
         "posterUrl": "images/nocturne-1946.jpg"
-    },
-    {
-        "id": "the-day-will-dawn-1942",
-        "title": "The Day Will Dawn (1942) Full Movie | Deborah Kerr & Hugh Williams | Classic WWII War Thriller",
-        "year": 1942,
-        "director": "Harold French",
-        "quality": "HD",
-        "genres": "War, Drama, Thriller, Classics",
-        "description": "A British journalist in occupied Norway teams up with local underground resistance fighters to expose a secret German U-boat base to the Allies. Starring Hugh Williams, Deborah Kerr, and Ralph Richardson.",
-        "embedId": "v7dwr70",
-        "source": "rumble",
-        "posterUrl": "images/the-day-will-dawn-1942.jpg"
     },
     {
         "id": "free-state-of-jones-2016",
