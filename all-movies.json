@@ -1,5 +1,41 @@
 [
     {
+        "id": "beneath-the-light-2025",
+        "title": "Beneath the Light (2025) Full Movie | Zach Tinker & John Pyper-Ferguson | Horror Thriller",
+        "year": 2025,
+        "director": "John Baumgartner",
+        "quality": "HD",
+        "genres": "Horror, Mystery, Thriller",
+        "description": "A troubled man taking a job to restore an isolated lighthouse is haunted by eerie visions of a young girl, drawing him into a terrifying web of past secrets and psychological horror. Starring Zach Tinker, John Pyper-Ferguson, and Ana Nicolle Chavez.",
+        "embedId": "15750027545126",
+        "source": "ok.ru",
+        "posterUrl": "images/beneath-the-light-2025.jpg"
+    },
+    {
+        "id": "couples-weekend-2026",
+        "title": "Couples Weekend (2026) Full Movie | Alexandra Daddario & Josh Gad | Comedy Drama",
+        "year": 2026,
+        "director": "Nora Kirkpatrick",
+        "quality": "HD",
+        "genres": "Comedy, Drama",
+        "description": "Trapped in a remote cabin during a New Year's Eve blizzard, two couples drink a mysterious homemade cocktail that strips away inhibitions, leading to a chaotic showdown of secrets and betrayals. Starring Alexandra Daddario, Daveed Diggs, Josh Gad, and Ashley Park.",
+        "embedId": "15848310442534",
+        "source": "ok.ru",
+        "posterUrl": "images/couples-weekend-2026.jpg"
+    },
+    {
+        "id": "supergirl-2026",
+        "title": "Supergirl (2026) Full Movie | Milly Alcock | Action Sci-Fi",
+        "year": 2026,
+        "director": "Craig Gillespie",
+        "quality": "HD",
+        "genres": "Action, Adventure, Sci-Fi",
+        "description": "Kara Zor-El travels across the galaxy to celebrate her 21st birthday alongside Krypto the Superdog, taking on a perilous mission of vengeance and justice. Starring Milly Alcock, Matthias Schoenaerts, and Eve Ridley.",
+        "embedId": "15848959445542",
+        "source": "ok.ru",
+        "posterUrl": "images/supergirl-2026.jpg"
+    },
+    {
         "id": "stargate-origins-catherine-2018",
         "title": "Stargate Origins: Catherine (2018) Full Movie | Ellie Gall & Connor Trinneer | Sci-Fi Adventure",
         "year": 2018,
