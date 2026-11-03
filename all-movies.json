@@ -1,5 +1,89 @@
 [
     {
+        "id": "stargate-origins-catherine-2018",
+        "title": "Stargate Origins: Catherine (2018) Full Movie | Ellie Gall & Connor Trinneer | Sci-Fi Adventure",
+        "year": 2018,
+        "director": "Mercedes Bryce Morgan",
+        "quality": "HD",
+        "genres": "Sci-Fi, Adventure, Action",
+        "description": "In 1939, young Catherine Langford embarks on a dangerous rescue mission through the Stargate to save her kidnapped father from a Nazi occult officer. Starring Ellie Gall, Connor Trinneer, Aylam Orian, and Philip Alexander.",
+        "embedId": "15855781808678",
+        "source": "ok.ru",
+        "posterUrl": "images/stargate-origins-catherine-2018.jpg"
+    },
+    {
+        "id": "gale-yellow-brick-road-2026",
+        "title": "Gale: Yellow Brick Road (2026) Full Movie | Chloë Crump & Laura Kay Bailey | Horror Fantasy",
+        "year": 2026,
+        "director": "Daniel Alexander",
+        "quality": "HD",
+        "genres": "Horror, Fantasy, Thriller",
+        "description": "Tormented by visions of a dark realm, the granddaughter of Dorothy Gale is drawn into the unsettling legacy of Oz—now a world of decay and nightmares. Starring Chloë Crump, Laura Kay Bailey, and Karen Swan.",
+        "embedId": "15922893425190",
+        "source": "ok.ru",
+        "posterUrl": "images/gale-yellow-brick-road-2026.jpg"
+    },
+    {
+        "id": "the-pretty-one-2013",
+        "title": "The Pretty One (2013) Full Movie | Zoe Kazan & Jake Johnson | Comedy Drama",
+        "year": 2013,
+        "director": "Jenée LaMarque",
+        "quality": "HD",
+        "genres": "Comedy, Drama, Romance",
+        "description": "After a tragic accident, a eccentric young woman who lived in her popular twin sister's shadow takes on her sister's identity to start a new life in the big city. Starring Zoe Kazan, Jake Johnson, and Ron Livingston.",
+        "embedId": "15967495653926",
+        "source": "ok.ru",
+        "posterUrl": "images/the-pretty-one-2013.jpg"
+    },
+    {
+        "id": "hangin-with-the-homeboys-1991",
+        "title": "Hangin' with the Homeboys (1991) Full Movie | Doug E. Doug & John Leguizamo | Comedy Drama",
+        "year": 1991,
+        "director": "Joseph B. Vasquez",
+        "quality": "HD",
+        "genres": "Comedy, Drama, Independent",
+        "description": "Four young men from the Bronx—two Black and two Puerto Rican—spend a wild Friday night out in Manhattan, navigating romance, identity, and shifting friendships. Starring Doug E. Doug, John Leguizamo, Mario Joyner, and Nestor Serrano.",
+        "embedId": "15987464931878",
+        "source": "ok.ru",
+        "posterUrl": "images/hangin-with-the-homeboys-1991.jpg"
+    },
+    {
+        "id": "jumping-ship-2001",
+        "title": "Jumping Ship (2001) Full Movie | Joey Lawrence, Matthew Lawrence & Andrew Lawrence",
+        "year": 2001,
+        "director": "Michael Lange",
+        "quality": "HD",
+        "genres": "Adventure, Comedy, Family",
+        "description": "When modern-day pirates attack their boat off Australia, three young men must survive on a deserted island and outsmart the crew. Starring Joey, Matthew, and Andrew Lawrence.",
+        "embedId": "16294920325670",
+        "source": "ok.ru",
+        "posterUrl": "images/jumping-ship-2001.jpg"
+    },
+    {
+        "id": "spider-man-brand-new-day-2026",
+        "title": "Spider-Man: Brand New Day (2026) Full Movie | Tom Holland, Zendaya & Sadie Sink",
+        "year": 2026,
+        "director": "Destin Daniel Cretton",
+        "quality": "HD",
+        "genres": "Action, Adventure, Sci-Fi",
+        "description": "With the world forgetting Peter Parker, Spider-Man dedicates himself entirely to fighting crime in New York City until a dangerous new telepathic threat forces him to confront his past. Starring Tom Holland, Zendaya, and Sadie Sink.",
+        "embedId": "16371273370150",
+        "source": "ok.ru",
+        "posterUrl": "images/spider-man-brand-new-day-2026.jpg"
+    },
+    {
+        "id": "f-scott-fitzgerald-and-the-last-of-the-belles-1974",
+        "title": "F. Scott Fitzgerald and 'The Last of the Belles' (1974) Full Movie | Richard Chamberlain & Blythe Danner",
+        "year": 1974,
+        "director": "George Schaefer",
+        "quality": "HD",
+        "genres": "Drama, Romance, Biography",
+        "description": "A biographical drama chronicling F. Scott Fitzgerald's 1919 romance with Zelda Sayre alongside an adaptation of his famed short story. Starring Richard Chamberlain, Blythe Danner, and Susan Sarandon.",
+        "embedId": "v7flvcw",
+        "source": "rumble",
+        "posterUrl": "images/f-scott-fitzgerald-and-the-last-of-the-belles-1974.jpg"
+    },
+    {
         "id": "murder-can-be-deadly-1962",
         "title": "Murder Can Be Deadly (1962) Full Movie | Liz Fraser & Kenneth Griffith | Classic Thriller",
         "year": 1962,
@@ -9,7 +93,7 @@
         "description": "An innocent student falls under suspicion of murder after being tricked by a nightclub hostess into helping dispose of a body. Starring Liz Fraser, Kenneth Griffith, and David Hemmings.",
         "embedId": "v7fkgag",
         "source": "rumble",
-        "posterUrl": "images/murder-can-be-deadly-1962"
+        "posterUrl": "images/murder-can-be-deadly-1962.jpg"
     },
     {
         "id": "made-for-each-other-1939",
