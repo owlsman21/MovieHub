@@ -1,64 +1,123 @@
 [
-   {
-  "id": "the-wind-that-shakes-the-barley-2006",
-  "title": "The Wind That Shakes the Barley (2006) Full Movie | Cillian Murphy & Padraic Delaney | Classic War Drama",
-  "year": 2006,
-  "director": "Ken Loach",
-  "quality": "HD",
-  "genres": "Drama, History, War",
-  "description": "During the Irish War of Independence, two brothers join the Irish Republican Army to fight for freedom from British rule, but find themselves on opposing sides during the subsequent civil war. Starring Cillian Murphy, Padraic Delaney, and Liam Cunningham.",
-  "embedId": "12606031923865",
-  "source": "ok.ru",
-  "posterUrl": "images/the-wind-that-shakes-the-barley-2006.jpg"
-},
-  {
-  "id": "rob-roy-1995",
-  "title": "Rob Roy (1995) Full Movie | Liam Neeson & Jessica Lange | Classic Historical Drama",
-  "year": 1995,
-  "director": "Michael Caton-Jones",
-  "quality": "HD",
-  "genres": "Action, Adventure, Biography",
-  "description": "In the Scottish Highlands of 1713, clan leader Rob Roy MacGregor borrows money from the ruthless Marquis of Montrose to sustain his people, but is forced into outlawry when a sadistic aristocrat steals the funds. Starring Liam Neeson, Jessica Lange, John Hurt, and Tim Roth.",
-  "embedId": "11101965716023",
-  "source": "ok.ru",
-  "posterUrl": "images/rob-roy-1995.jpg"
-},
-  {
-  "id": "the-long-good-friday-1980",
-  "title": "The Long Good Friday (1980) Full Movie | Bob Hoskins & Helen Mirren | Classic Crime Drama",
-  "year": 1980,
-  "director": "John Mackenzie",
-  "quality": "HD",
-  "genres": "Crime, Drama, Thriller",
-  "description": "An ambitious London gangster tries to become a legitimate businessman, but his empire is suddenly threatened by a series of mysterious bombings orchestrated by an unknown enemy. Starring Bob Hoskins, Helen Mirren, and Pierce Brosnan.",
-  "embedId": "4122259622611",
-  "source": "ok.ru",
-  "posterUrl": "images/the-long-good-friday-1980.jpg"
-},
-  {
-  "id": "caesar-and-cleopatra-1945",
-  "title": "Caesar and Cleopatra (1945) Full Movie | Claude Rains & Vivien Leigh | Classic Historical Drama",
-  "year": 1945,
-  "director": "Gabriel Pascal",
-  "quality": "HD",
-  "genres": "Drama, History, Romance",
-  "description": "An aging Julius Caesar arrives in Egypt and takes the young, headstrong Cleopatra under his wing, mentoring her in the art of politics and power. Starring Claude Rains, Vivien Leigh, Stewart Granger, and Flora Robson.",
-  "embedId": "7717244373710",
-  "source": "ok.ru",
-  "posterUrl": "images/caesar-and-cleopatra-1945.jpg"
-},
-  {
-  "id": "blithe-spirit-1945",
-  "title": "Blithe Spirit (1945) Full Movie | Rex Harrison & Margaret Rutherford | Fantasy Comedy",
-  "year": 1945,
-  "director": "David Lean",
-  "quality": "HD",
-  "genres": "Comedy, Fantasy, Romance",
-  "description": "A novelist hosting a seance to gather material for a new book is hilariously haunted when an eccentric medium accidentally summons the ghost of his glamorous, mischievous first wife. Starring Rex Harrison, Constance Cummings, Kay Hammond, and Margaret Rutherford.",
-  "embedId": "8083640486606",
-  "source": "ok.ru",
- "posterUrl": "images/blithe-spirit-1945.jpg"
-},
+    {
+        "id": "the-ghost-and-mrs-muir-1947",
+        "title": "The Ghost and Mrs. Muir (1947) Full Movie | Gene Tierney & Rex Harrison | Classic Romantic Fantasy",
+        "year": 1947,
+        "director": "Joseph L. Mankiewicz",
+        "quality": "HD",
+        "genres": "Fantasy, Romance, Drama, Classics",
+        "description": "A young widow moves into a seaside cottage and forms a unique bond with the ghost of the former owner, a stubborn sea captain. Starring Gene Tierney, Rex Harrison, and George Sanders.",
+        "embedId": "2364116044425",
+        "source": "ok.ru",
+        "posterUrl": "images/the-ghost-and-mrs-muir-1947.jpg"
+    },
+    {
+        "id": "blind-spot-1947",
+        "title": "Blind Spot (1947) Full Movie | Chester Morris & Constance Dowling | Classic Film Noir",
+        "year": 1947,
+        "director": "Robert Gordon",
+        "quality": "HD",
+        "genres": "Crime, Mystery, Film Noir",
+        "description": "A struggling mystery writer becomes the prime suspect in a murder investigation when his publisher is found dead in a manner mirroring one of his proposed storylines. Starring Chester Morris and Constance Dowling.",
+        "embedId": "YOUR_EMBED_ID_HERE",
+        "source": "rumble",
+        "posterUrl": "images/blind-spot-1947.jpg"
+    },
+    {
+        "id": "a-step-out-of-line-1971",
+        "title": "A Step Out of Line (1971) Full Movie | Peter Falk & Vic Morrow | Crime Thriller",
+        "year": 1971,
+        "director": "Bernard McEveety",
+        "quality": "HD",
+        "genres": "Crime, Drama, Thriller",
+        "description": "Three Korean War buddies down on their luck in San Francisco decide to use their military expertise to pull off a sophisticated bank heist. Starring Peter Falk, Vic Morrow, and Peter Lawford.",
+        "embedId": "16708342386957",
+        "source": "ok.ru",
+        "posterUrl": "images/a-step-out-of-line-1971.jpg"
+    },
+    {
+        "id": "for-you-i-die-1947",
+        "title": "For You I Die (1947) Full Movie | Cathy Downs & Paul Langton | Classic Film Noir",
+        "year": 1947,
+        "director": "John Reinhardt",
+        "quality": "HD",
+        "genres": "Crime, Drama, Film Noir",
+        "description": "A convict forced into a prison break takes refuge at a remote diner, where a sympathetic waitress tries to help him go straight while his former gang tracks him down. Starring Cathy Downs, Paul Langton, and Mischa Auer.",
+        "embedId": "v7ftavy",
+        "source": "rumble",
+        "posterUrl": "images/for-you-i-die-1947.jpg"
+    },
+    {
+        "id": "dont-trust-your-husband-1948",
+        "title": "Don't Trust Your Husband (1948) Full Movie | Fred MacMurray & Madeleine Carroll | Classic Comedy",
+        "year": 1948,
+        "director": "Lloyd Bacon",
+        "quality": "HD",
+        "genres": "Comedy, Romance, Classics",
+        "description": "An advertising executive tries to land an account with his wealthy ex-fiancée, sparking deep jealousy in his wife, who hires a charming actor to make him pay back in kind. Starring Fred MacMurray and Madeleine Carroll.",
+        "embedId": "v7ft5ve",
+        "source": "rumble",
+        "posterUrl": "images/dont-trust-your-husband-1948.jpg"
+    },
+    {
+        "id": "the-wind-that-shakes-the-barley-2006",
+        "title": "The Wind That Shakes the Barley (2006) Full Movie | Cillian Murphy & Padraic Delaney | Classic War Drama",
+        "year": 2006,
+        "director": "Ken Loach",
+        "quality": "HD",
+        "genres": "Drama, History, War",
+        "description": "During the Irish War of Independence, two brothers join the Irish Republican Army to fight for freedom from British rule, but find themselves on opposing sides during the subsequent civil war. Starring Cillian Murphy, Padraic Delaney, and Liam Cunningham.",
+        "embedId": "12606031923865",
+        "source": "ok.ru",
+        "posterUrl": "images/the-wind-that-shakes-the-barley-2006.jpg"
+    },
+    {
+        "id": "rob-roy-1995",
+        "title": "Rob Roy (1995) Full Movie | Liam Neeson & Jessica Lange | Classic Historical Drama",
+        "year": 1995,
+        "director": "Michael Caton-Jones",
+        "quality": "HD",
+        "genres": "Action, Adventure, Biography",
+        "description": "In the Scottish Highlands of 1713, clan leader Rob Roy MacGregor borrows money from the ruthless Marquis of Montrose to sustain his people, but is forced into outlawry when a sadistic aristocrat steals the funds. Starring Liam Neeson, Jessica Lange, John Hurt, and Tim Roth.",
+        "embedId": "11101965716023",
+        "source": "ok.ru",
+        "posterUrl": "images/rob-roy-1995.jpg"
+    },
+    {
+        "id": "the-long-good-friday-1980",
+        "title": "The Long Good Friday (1980) Full Movie | Bob Hoskins & Helen Mirren | Classic Crime Drama",
+        "year": 1980,
+        "director": "John Mackenzie",
+        "quality": "HD",
+        "genres": "Crime, Drama, Thriller",
+        "description": "An ambitious London gangster tries to become a legitimate businessman, but his empire is suddenly threatened by a series of mysterious bombings orchestrated by an unknown enemy. Starring Bob Hoskins, Helen Mirren, and Pierce Brosnan.",
+        "embedId": "4122259622611",
+        "source": "ok.ru",
+        "posterUrl": "images/the-long-good-friday-1980.jpg"
+    },
+    {
+        "id": "caesar-and-cleopatra-1945",
+        "title": "Caesar and Cleopatra (1945) Full Movie | Claude Rains & Vivien Leigh | Classic Historical Drama",
+        "year": 1945,
+        "director": "Gabriel Pascal",
+        "quality": "HD",
+        "genres": "Drama, History, Romance",
+        "description": "An aging Julius Caesar arrives in Egypt and takes the young, headstrong Cleopatra under his wing, mentoring her in the art of politics and power. Starring Claude Rains, Vivien Leigh, Stewart Granger, and Flora Robson.",
+        "embedId": "7717244373710",
+        "source": "ok.ru",
+        "posterUrl": "images/caesar-and-cleopatra-1945.jpg"
+    },
+    {
+        "id": "blithe-spirit-1945",
+        "title": "Blithe Spirit",
+        "year": "1945",
+        "quality": "HD",
+        "genres": "Comedy, Fantasy, Romance",
+        "description": "A fussy novelist is haunted by the ghost of his late first wife after a séance goes hilariously wrong, creating a spectral mess for his current marriage.",
+        "source": "rumble",
+        "url": "v73bmlq",
+        "posterUrl": "https://s3.amazonaws.com/criterion-production/films/700cdf843d9e0b61059e89897e49f240/n5pDONxrIiOlyCJR7T6elIdkBhiMHv_large.jpg"
+    },
     {
         "id": "beneath-the-light-2025",
         "title": "Beneath the Light (2025) Full Movie | Zach Tinker & John Pyper-Ferguson | Horror Thriller",
@@ -10322,17 +10381,6 @@
         "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzBkNmYzN2MtNDVmMi00ZjQ0LTk0MDYtMDMwOGVmYjBiODk1XkEyXkFqcGc@._V1_.jpg"
     },
     {
-        "id": "blithe-spirit-1945",
-        "title": "Blithe Spirit",
-        "year": "1945",
-        "quality": "HD",
-        "genres": "Comedy, Fantasy, Romance",
-        "description": "A fussy novelist is haunted by the ghost of his late first wife after a séance goes hilariously wrong, creating a spectral mess for his current marriage.",
-        "source": "rumble",
-        "url": "v73bmlq",
-        "posterUrl": "https://s3.amazonaws.com/criterion-production/films/700cdf843d9e0b61059e89897e49f240/n5pDONxrIiOlyCJR7T6elIdkBhiMHv_large.jpg"
-    },
-    {
         "id": "love-on-the-dole-1941",
         "title": "Love on the Dole",
         "year": "1941",
@@ -14559,16 +14607,16 @@
         "source": "ok.ru"
     },
     {
-        "id": "Bring-Her-Back",
-        "posterUrl": "images/Bring Her Back.jpg",
+        "id": "bring-her-back-2025",
+        "title": "Bring Her Back (2025) Full Movie | Classic Horror",
         "year": 2025,
-        "title": "Bring Her Back",
+        "director": "Danny Philippou, Michael Philippou",
+        "quality": "HD",
+        "genres": "Horror",
         "description": "A brother and sister uncover a terrifying ritual at the secluded home of their new foster mother.",
         "embedId": "10147631139414",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru"
+        "source": "ok.ru",
+        "posterUrl": "images/bring-her-back-2025.jpg"
     },
     {
         "id": "2-0-Lucy",
@@ -17292,16 +17340,16 @@
         "posterUrl": "images/the-girl-2012.jpg"
     },
     {
-        "id": "Bring-Him-Back-Dead",
-        "posterUrl": "images/Bring Him Back Dead.jpg",
+        "id": "bring-him-back-dead-2022",
+        "title": "Bring Him Back Dead (2022) Full Movie | Gary Daniels & Louis Mandylor | Action Thriller",
         "year": 2022,
-        "title": "Bring Him Back Dead",
-        "description": "A violent gang of criminals is ordered, after a botched heist, to track down and eliminate the man who betrayed them and ran off with their loot. Daniels plays the anti-hero, while Mandylor plays the leader of the gang and Baldwin a man with mysterious motives.",
+        "director": "Mark Savage",
+        "quality": "HD",
+        "genres": "Action, Crime, Thriller",
+        "description": "A violent gang of criminals is ordered, after a botched heist, to track down and eliminate the man who betrayed them and ran off with their loot. Starring Gary Daniels, Louis Mandylor, and Daniel Baldwin.",
         "embedId": "9611885021734",
-        "genres": [
-            "Action"
-        ],
-        "source": "ok.ru"
+        "source": "ok.ru",
+        "posterUrl": "images/bring-him-back-dead-2022.jpg"
     },
     {
         "id": "Knight-Moves",
@@ -22330,5 +22378,29 @@
         "source": "rumble",
         "url": "v736764/",
         "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTM0NDY1MTQyOV5BMl5BanBnXkFtZTYwMTg3NDQ5._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+        "id": "Bring-Her-Back",
+        "posterUrl": "images/Bring Her Back.jpg",
+        "year": 2025,
+        "title": "Bring Her Back",
+        "description": "A brother and sister uncover a terrifying ritual at the secluded home of their new foster mother.",
+        "embedId": "10147631139414",
+        "genres": [
+            "Horror"
+        ],
+        "source": "ok.ru"
+    },
+    {
+        "id": "Bring-Him-Back-Dead",
+        "posterUrl": "images/Bring Him Back Dead.jpg",
+        "year": 2022,
+        "title": "Bring Him Back Dead",
+        "description": "A violent gang of criminals is ordered, after a botched heist, to track down and eliminate the man who betrayed them and ran off with their loot. Daniels plays the anti-hero, while Mandylor plays the leader of the gang and Baldwin a man with mysterious motives.",
+        "embedId": "9611885021734",
+        "genres": [
+            "Action"
+        ],
+        "source": "ok.ru"
     }
 ]
