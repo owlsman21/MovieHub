@@ -1,5 +1,77 @@
 [
     {
+        "id": "eyewitness-1956",
+        "title": "Eyewitness (1956) | Donald Sinden & Muriel Pavlow | British Crime Thriller",
+        "year": 1956,
+        "director": "Muriel Box",
+        "quality": "HD",
+        "genres": "Crime, Thriller, Drama, Mystery",
+        "description": "After witnessing a robbery and murder at a cinema, a young woman is injured while escaping. Recovering in a hospital, she finds herself in deadly peril when the killers break in to eliminate the only witness. Starring Donald Sinden, Muriel Pavlow, and Belinda Lee.",
+        "embedId": "v7fyham",
+        "source": "rumble",
+        "posterUrl": "images/eyewitness-1956.jpg"
+    },
+    {
+        "id": "knock-on-any-door-1949",
+        "title": "Knock on Any Door (1949) | Humphrey Bogart & John Derek | Crime Noir",
+        "year": 1949,
+        "director": "Nicholas Ray",
+        "quality": "HD",
+        "genres": "Crime, Drama, Film-Noir",
+        "description": "An idealistic lawyer raised in the slums defends a troubled young man accused of killing a police officer, attempting to prove that society's neglect shaped the boy into a criminal. Starring Humphrey Bogart, John Derek, and George Macready.",
+        "embedId": "16155680770800",
+        "source": "ok.ru",
+        "posterUrl": "images/knock-on-any-door-1949.jpg"
+    },
+    {
+        "id": "the-shaggy-da-1976",
+        "title": "The Shaggy D.A. (1976) | Dean Jones & Tim Conway | Family Comedy",
+        "year": 1976,
+        "director": "Robert Stevenson",
+        "quality": "HD",
+        "genres": "Comedy, Family, Fantasy",
+        "description": "An adult Wilby Daniels runs for District Attorney, but his campaign is thrown into chaos when the magical ring returns and transforms him back into a sheepdog at the most inconvenient times. Starring Dean Jones, Tim Conway, and Suzanne Pleshette.",
+        "embedId": "16155636796144",
+        "source": "ok.ru",
+        "posterUrl": "images/the-shaggy-da-1976.jpg"
+    },
+    {
+        "id": "the-last-crooked-mile-1946",
+        "title": "The Last Crooked Mile (1946) | Don 'Red' Barry & Ann Savage | Crime Noir",
+        "year": 1946,
+        "director": "Philip Ford",
+        "quality": "HD",
+        "genres": "Crime, Film-Noir, Drama, Mystery",
+        "description": "A private detective sets out to locate $300,000 in stolen bank loot after a getaway vehicle crashes, resulting in a dangerous web of betrayal, double-crosses, and murder. Starring Don 'Red' Barry, Ann Savage, and Adele Mara.",
+        "embedId": "the-last-crooked-mile-1946",
+        "source": "ok.ru",
+        "posterUrl": "images/the-last-crooked-mile-1946.jpg"
+    },
+    {
+        "id": "the-shaggy-dog-1959",
+        "title": "The Shaggy Dog (1959) Full Movie | Fred MacMurray & Tommy Kirk | Classic Comedy",
+        "year": 1959,
+        "director": "Charles Barton",
+        "quality": "HD",
+        "genres": "Comedy, Family, Fantasy",
+        "description": "A teenager accidentally transforms into a sheepdog after finding an ancient Borgia ring, creating chaos at home while stumbling upon a local spy ring. Starring Fred MacMurray, Tommy Kirk, and Jean Hagen.",
+        "embedId": "16170784656112",
+        "source": "ok.ru",
+        "posterUrl": "images/the-shaggy-dog-1959.jpg"
+    },
+    {
+        "id": "the-strongest-man-in-the-world-1975",
+        "title": "The Strongest Man in the World (1975) Full Movie | Kurt Russell | Classic Comedy",
+        "year": 1975,
+        "director": "Vincent McEveety",
+        "quality": "HD",
+        "genres": "Comedy, Family, Sci-Fi",
+        "description": "When a Medfield College student accidentally mixes a secret formula into his cereal, it grants him superhuman strength, sparking a wild competition between rival cereal companies and college rivals. Starring Kurt Russell, Joe Flynn, and Eve Arden.",
+        "embedId": "16171745938160",
+        "source": "ok.ru",
+        "posterUrl": "images/the-strongest-man-in-the-world-1975.jpg"
+    },
+    {
         "id": "leave-her-to-heaven-1945",
         "title": "Leave Her to Heaven (1945) Full Movie | Gene Tierney & Cornel Wilde | Classic Film Noir Drama",
         "year": 1945,
