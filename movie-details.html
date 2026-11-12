@@ -183,18 +183,22 @@
                     const iframe = document.getElementById('movie-iframe');
                     let embedUrl = "";
 
-                    if (movie.source === "mega") {
+                    const source = (movie.source || 'rumble').toLowerCase();
+
+                    if (source === "mega") {
                         embedUrl = movie.embedId ? movie.embedId.replace("/file/", "/embed/") : "";
                         document.getElementById('mega-shield').style.display = "block";
-                    } else if (movie.source === "ok.ru") {
+                    } else if (source === "ok" || source === "ok.ru") {
                         embedUrl = `https://ok.ru/videoembed/${movie.embedId}`;
+                    } else if (source === "youtube") {
+                        embedUrl = `https://www.youtube.com/embed/${movie.embedId}`;
                     } else {
                         embedUrl = `https://rumble.com/embed/${movie.embedId}/?pub=4`;
                     }
                     iframe.src = embedUrl;
 
                     // 1. DYNAMIC SEARCH-FRIENDLY TITLE (CLEANED AND FORMATTED)
-                    document.title = `${cleanTitle} ${releaseYear} - Watch Stream Online | MovieHub`;
+                    document.title = `${cleanTitle} ${releaseYear} Watch Stream Online | MovieHub`;
                     
                     // 2. META DESCRIPTION & OPEN GRAPH FOR BOT PARSING
                     const descText = movie.description ? movie.description.substring(0, 155).trim() + '...' : 'Stream classic movies online on MovieHub.';

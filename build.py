@@ -6,7 +6,7 @@ from datetime import datetime
 JSON_DIR = './data'
 ALL_MOVIES_FILE = 'all-movies.json'
 SITEMAP_FILE = 'vault-map.xml'
-BASE_URL = 'https://moviehub.uk/movie-details.html'
+BASE_URL = 'https://moviehub.uk/'
 
 def sanitize_filename(name):
     name = str(name)
@@ -56,6 +56,9 @@ def load_and_consolidate_movies():
 def main():
     movies = load_and_consolidate_movies()
     
+    # Sort movies alphabetically by their ID
+    movies = sorted(movies, key=lambda m: m.get('id', ''))
+    
     # Automatically Build vault-map.xml with correct query parameter URLs
     today = datetime.now().strftime('%Y-%m-%d')
     xml_lines = [
@@ -95,7 +98,7 @@ def main():
     with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
         f.write('\n'.join(xml_lines))
 
-    print(f"Successfully generated {SITEMAP_FILE} with {len(seen_ids)} movie URLs!")
+    print(f"Successfully generated {SITEMAP_FILE} with {len(seen_ids)} sorted movie URLs!")
 
 if __name__ == '__main__':
     main()
