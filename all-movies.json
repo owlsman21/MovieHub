@@ -1,5 +1,149 @@
 [
     {
+        "id": "the-debt-collector-2-2020",
+        "title": "The Debt Collector 2 (2020) Full Movie | Scott Adkins & Louis Mandylor | Action Comedy",
+        "year": 2020,
+        "director": "Jesse V. Johnson",
+        "cast": "Scott Adkins, Louis Mandylor, Vladimir Kulich, Marina Sirtis, Mayling Ng, Ski Carr",
+        "quality": "HD",
+        "genres": "Action, Comedy, Crime, Thriller",
+        "description": "Martial arts enforcers French and Sue return to action, given just days to collect on multiple debts while simultaneously trying to evade a ruthless crime lord seeking deadly revenge. Starring Scott Adkins and Louis Mandylor.",
+        "embedId": "8395440720570",
+        "source": "ok.ru",
+        "posterUrl": "images/the-debt-collector-2-2020.jpg",
+        "trivia": [
+            "Direct sequel to the 2018 action-comedy hit 'The Debt Collector', also directed by Jesse V. Johnson.",
+            "Features returning lead dynamic duo Scott Adkins and Louis Mandylor.",
+            "Released on VOD platforms by Samuel Goldwyn Films in May 2020."
+        ]
+    },
+    {
+        "id": "the-debt-collector-2018",
+        "title": "The Debt Collector (2018) Full Movie | Scott Adkins & Louis Mandylor | Action Thriller",
+        "year": 2018,
+        "director": "Jesse V. Johnson",
+        "cast": "Scott Adkins, Louis Mandylor, Michael Paré, Tony Todd, Vladimir Kulich, Selina Lo",
+        "quality": "HD",
+        "genres": "Action, Comedy, Crime, Thriller",
+        "description": "A classically trained martial artist desperate for money takes a job as a debt collector for a local mob. Paired with a grizzled veteran of the profession, he quickly finds out that the work is far more dangerous than expected when a high-stakes client pulls them deep into a perilous underworld. Starring Scott Adkins and Louis Mandylor.",
+        "embedId": "8395440917178",
+        "source": "ok.ru",
+        "posterUrl": "images/the-debt-collector-2018.jpg",
+        "trivia": [
+            "Directed by acclaimed action filmmaker Jesse V. Johnson.",
+            "Spawned a successful sequel titled 'Debt Collectors' in 2020.",
+            "Features iconic horror and action veteran Tony Todd in a prominent supporting role as a crime boss."
+        ]
+    },
+    {
+        "id": "the-gray-man-2022",
+        "title": "The Gray Man (2022) Full Movie | Ryan Gosling & Chris Evans | Action Thriller",
+        "year": 2022,
+        "director": "Anthony Russo, Joe Russo",
+        "cast": "Ryan Gosling, Chris Evans, Ana de Armas, Jessica Henwick, Regé-Jean Page, Wagner Moura, Julia Butters, Dhanush, Alfre Woodard, Billy Bob Thornton",
+        "quality": "HD",
+        "genres": "Action, Thriller, Mystery, Crime",
+        "description": "When a CIA mercenary known as 'Sierra Six' accidentally uncovers dark agency secrets, he becomes the primary target in a global manhunt launched by his sociopathic former colleague. Spanning across multiple continents, an intense game of cat-and-mouse ensues as elite assassins hunt him down. Starring Ryan Gosling and Chris Evans.",
+        "embedId": "8409175820986",
+        "source": "ok.ru",
+        "posterUrl": "images/the-gray-man-2022.jpg",
+        "trivia": [
+            "Based on the 2009 bestselling debut novel of the same name by Mark Greaney.",
+            "Directed by the Russo brothers (Anthony and Joe Russo), famed for their work on major Marvel Cinematic Universe blockbusters.",
+            "One of the largest-budget feature film productions for Netflix, featuring extensive international location shoots across Prague, Vienna, Baku, and Bangkok."
+        ]
+    },
+    {
+        "id": "the-long-kiss-goodnight-1996",
+        "title": "The Long Kiss Goodnight (1996) Full Movie | Geena Davis & Samuel L. Jackson | Action Thriller",
+        "year": 1996,
+        "director": "Renny Harlin",
+        "cast": "Geena Davis, Samuel L. Jackson, Yvonne Zima, Craig Bierko, Tom Amandes, Brian Cox",
+        "quality": "HD",
+        "genres": "Action, Thriller, Mystery, Crime",
+        "description": "A suburban schoolteacher suffering from severe amnesia slowly discovers her former life as a lethal, highly trained covert CIA assassin after a minor accident triggers buried memories. Teaming up with a low-rent private investigator, she must race against time to stop a massive domestic false-flag conspiracy. Starring Geena Davis and Samuel L. Jackson.",
+        "embedId": "8409176345274",
+        "source": "ok.ru",
+        "posterUrl": "images/the-long-kiss-goodnight-1996.jpg",
+        "trivia": [
+            "Written by acclaimed action screenwriter Shane Black, who secured a then-record $4 million spec script fee for the project.",
+            "Directed by Renny Harlin during the peak of 1990s high-octane blockbuster filmmaking.",
+            "Has gained a massive cult following over the years for its witty dialogue, explosive set pieces, and unique blend of holiday-setting action."
+        ]
+    },
+    {
+        "id": "unleashed-2005",
+        "title": "Unleashed (2005) Full Movie | Jet Li & Morgan Freeman | Action Thriller",
+        "year": 2005,
+        "director": "Louis Leterrier",
+        "cast": "Jet Li, Morgan Freeman, Bob Hoskins, Kerry Condon, Scott Adkins",
+        "quality": "HD",
+        "genres": "Action, Crime, Drama, Thriller",
+        "description": "A man raised by a ruthless mobster like a vicious guard dog escapes his captivity after a deadly ambush and finds shelter with a compassionate blind piano tuner and his stepdaughter, slowly discovering what it means to be human. Starring Jet Li, Morgan Freeman, and Bob Hoskins.",
+        "embedId": "8409176476346",
+        "source": "ok.ru",
+        "posterUrl": "images/unleashed-2005.jpg",
+        "trivia": [
+            "Written and produced by acclaimed French filmmaker Luc Besson.",
+            "Features a memorable original score and soundtrack created by the trip-hop group Massive Attack.",
+            "Widely praised by critics as one of Jet Li's strongest English-language dramatic and action performances."
+        ]
+    },
+    {
+        "id": "omen-iv-the-awakening-1991",
+        "title": "Omen IV: The Awakening (1991) Full Movie | Faye Grant & Michael Woods | Supernatural Horror",
+        "year": 1991,
+        "director": "Jorge Montesi, Dominique Othenin-Girard",
+        "cast": "Faye Grant, Michael Woods, Michael Lerner, Asia Vieira, Madison Mason, Ann Hearn",
+        "quality": "HD",
+        "genres": "Horror, Thriller, Classics",
+        "description": "Though Damien Thorn is gone, the prophecy of the Antichrist is reborn through a mysterious young girl adopted by a prominent Virginia congressman and his wife. As bizarre and fatal accidents begin surrounding the child, the mother grows desperate to uncover her true origins. Starring Faye Grant and Michael Woods.",
+        "embedId": "8481529596602",
+        "source": "ok.ru",
+        "posterUrl": "images/omen-iv-the-awakening-1991.jpg",
+        "trivia": [
+            "Originally produced as a made-for-television movie and broadcast on the Fox network on May 20, 1991.",
+            "Serves as the fourth installment in The Omen horror franchise, shifting the demonic successor from a boy to a young girl named Delia.",
+            "Produced by veteran franchise producer Harvey Bernhard in his final producing credit for the series."
+        ]
+    },
+    {
+        "id": "dodgeball-a-true-underdog-story-2004",
+        "title": "Dodgeball: A True Underdog Story (2004) Full Movie | Vince Vaughn & Ben Stiller | Sports Comedy",
+        "year": 2004,
+        "director": "Rawson Marshall Thurber",
+        "cast": "Vince Vaughn, Ben Stiller, Christine Taylor, Rip Torn, Justin Long, Alan Tudyk, Stephen Root",
+        "quality": "HD",
+        "genres": "Comedy, Sports, Classics",
+        "description": "A group of misfits enter an eccentric Las Vegas dodgeball tournament to save their beloved local gym from being bought out by a ruthless corporate fitness conglomerate. Starring Vince Vaughn and Ben Stiller.",
+        "embedId": "8481529727674",
+        "source": "ok.ru",
+        "posterUrl": "images/dodgeball-a-true-underdog-story-2004.jpg",
+        "trivia": [
+            "Written and directed by Rawson Marshall Thurber in his feature film directorial debut.",
+            "Features memorable cameos including Chuck Norris, David Hasselhoff, and Lance Armstrong.",
+            "Won the MTV Movie Award for Best Villain for Ben Stiller's iconic portrayal of White Goodman."
+        ]
+    },
+    {
+        "id": "an-amish-murder-2013",
+        "title": "An Amish Murder (2013) Full Movie | Neve Campbell & C. Thomas Howell | Mystery Thriller",
+        "year": 2013,
+        "director": "Stephen Gyllenhaal",
+        "cast": "Neve Campbell, Christian Campbell, Noam Jenkins, C. Thomas Howell, Jilon VanOver",
+        "quality": "HD",
+        "genres": "Mystery, Thriller, Drama, Crime",
+        "description": "A brutal murder investigation in her hometown triggers deep-seated, painful memories for an Ohio police chief who left her Amish community years earlier. As she digs deeper to stop a ruthless killer, she must confront dark secrets from her past. Starring Neve Campbell and based on Linda Castillo's bestselling novel 'Sworn to Silence'.",
+        "embedId": "8481529793210",
+        "source": "ok.ru",
+        "posterUrl": "images/an-amish-murder-2013.jpg",
+        "trivia": [
+            "Based on the acclaimed suspense novel 'Sworn to Silence' by author Linda Castillo.",
+            "Directed by veteran filmmaker Stephen Gyllenhaal.",
+            "Real-life siblings Neve Campbell and Christian Campbell star alongside each other as brother and sister in the film."
+        ]
+    },
+    {
         "id": "the-creation-of-the-humanoids-1962",
         "title": "The Creation of the Humanoids (1962) Full Movie | Don Megowan & Erica Elliott | Cult Sci-Fi Classic",
         "year": 1962,
