@@ -87,7 +87,8 @@ def main():
         if safe_id not in seen_ids:
             seen_ids.add(safe_id)
             xml_lines.append('  <url>')
-            xml_lines.append(f'    <loc>{BASE_URL}?id={safe_id}</loc>')
+            # Updated to point explicitly to movie-details.html?id=
+            xml_lines.append(f'    <loc>{BASE_URL}movie-details.html?id={safe_id}</loc>')
             xml_lines.append(f'    <lastmod>{today}</lastmod>')
             xml_lines.append('  </url>')
 
