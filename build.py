@@ -59,7 +59,7 @@ def main():
     # Sort movies alphabetically by their ID
     movies = sorted(movies, key=lambda m: m.get('id', ''))
     
-    # Automatically Build vault-map.xml with correct query parameter URLs
+    # Automatically Build vault-map.xml optimized for Google indexing
     today = datetime.now().strftime('%Y-%m-%d')
     xml_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -89,8 +89,6 @@ def main():
             xml_lines.append('  <url>')
             xml_lines.append(f'    <loc>{BASE_URL}?id={safe_id}</loc>')
             xml_lines.append(f'    <lastmod>{today}</lastmod>')
-            xml_lines.append('    <changefreq>monthly</changefreq>')
-            xml_lines.append('    <priority>0.8</priority>')
             xml_lines.append('  </url>')
 
     xml_lines.append('</urlset>')
@@ -98,7 +96,7 @@ def main():
     with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
         f.write('\n'.join(xml_lines))
 
-    print(f"Successfully generated {SITEMAP_FILE} with {len(seen_ids)} sorted movie URLs!")
+    print(f"Successfully generated optimized {SITEMAP_FILE} with {len(seen_ids)} sorted movie URLs!")
 
 if __name__ == '__main__':
     main()
