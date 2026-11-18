@@ -1,5 +1,209 @@
 [
     {
+        "id": "smiley-2012",
+        "title": "Smiley (2012) Full Movie | Caitlin Gerard & Melanie Papalia | Cyber Horror Thriller",
+        "year": 2012,
+        "director": "Michael J. Gallagher",
+        "cast": "Caitlin Gerard, Melanie Papalia, Shane Dawson, Andrew James Allen, Toby Turner, Roger Bart, Keith David",
+        "quality": "HD",
+        "genres": "Horror, Thriller, Mystery",
+        "description": "Directed by Michael J. Gallagher, this 2012 indie psychological cyber-horror thriller follows Ashley (Caitlin Gerard), a college freshman who discovers an urban legend online about 'Smiley,' a deranged serial killer who can be summoned across the internet if a user types the phrase 'I did it for the lulz' three times in an online chat room. As Ashley begins seeing glimpses of the faceless, stitched-up killer, she struggles to determine whether the terrifying encounters are real or a psychological breakdown.",
+        "embedId": "8606255811254",
+        "source": "ok.ru",
+        "posterUrl": "images/smiley-2012.jpg",
+        "trivia": [
+            "Features notable appearances and cameos from several prominent internet personalities and YouTube creators, including Shane Dawson, Toby Turner (TobyGames), and Philip DeFranco.",
+            "Co-written and directed by Michael J. Gallagher, who developed the film leveraging internet culture, web forums, and creepypasta urban legends.",
+            "Distributed theatrically through AMC Independent select screenings and video-on-demand platforms."
+        ]
+    },
+    {
+        "id": "ouija-2014",
+        "title": "Ouija (2014) Full Movie | Olivia Cooke & Daren Kagasoff | Supernatural Horror",
+        "year": 2014,
+        "director": "Stiles White",
+        "cast": "Olivia Cooke, Daren Kagasoff, Douglas Smith, Bianca Santos, Ana Coto, Shelley Hennig, Lin Shaye, Matthew Settle",
+        "quality": "HD",
+        "genres": "Horror, Mystery, Thriller",
+        "description": "Directed by Stiles White, this 2014 supernatural horror thriller follows Laine Morris (Olivia Cooke) and her close-knit group of friends as they use an antique Ouija board to try to make contact with their recently deceased best friend. Instead of finding closure, they awaken a malevolent spirit bound to the house, forcing them to uncover the board's dark history before they become its next victims.",
+        "embedId": "8604828175030",
+        "source": "ok.ru",
+        "posterUrl": "images/ouija-2014.jpg",
+        "trivia": [
+            "Marked the feature directorial debut of screenwriter Stiles White, who co-wrote the script with frequent collaborator Juliet Snowden.",
+            "Produced by Blumhouse Productions, Platinum Dunes, and Hasbro Studios, the film became a major box office hit, grossing over $103 million worldwide against a $5 million budget.",
+            "Features horror veteran Lin Shaye as Paulina Zander, a role she later reprised in Mike Flanagan's critically acclaimed 2016 prequel, Ouija: Origin of Evil."
+        ]
+    },
+    {
+        "id": "the-green-berets-1968",
+        "title": "The Green Berets (1968) Full Movie | John Wayne & David Janssen | Vietnam War Classic",
+        "year": 1968,
+        "director": "John Wayne and Ray Kellogg",
+        "cast": "John Wayne, David Janssen, Jim Hutton, Aldo Ray, Raymond St. Jacques, Bruce Cabot, Jack Soo",
+        "quality": "HD",
+        "genres": "Action, Drama, War, Classics",
+        "description": "Co-directed by and starring John Wayne alongside David Janssen, this 1968 Warner Bros. war drama follows a skeptical cynical reporter (Janssen) who accompanies a unit of elite U.S. Army Green Berets into the thick of the Vietnam War. Stationed at a Nam Dong-style fire base, the soldiers must defend their post against a massive enemy assault while the journalist witnesses firsthand the realities of counterinsurgency combat.",
+        "embedId": "1447574112921",
+        "source": "ok.ru",
+        "posterUrl": "images/the-green-berets-1968.jpg",
+        "trivia": [
+            "Released at the height of the Vietnam War in 1968, it remains one of the few major Hollywood motion pictures produced during the conflict to actively support U.S. military involvement.",
+            "John Wayne was so committed to the project that he successfully lobbied the Pentagon for active logistical support, utilizing real U.S. Army equipment, weapons, and advisors during filming at Fort Benning, Georgia.",
+            "Features a memorable musical score by legendary composer Miklós Rózsa, alongside the famous title song 'The Ballad of the Green Berets'."
+        ]
+    },
+    {
+        "id": "the-four-feathers-1939",
+        "title": "The Four Feathers (1939) Full Movie | John Clements & Ralph Richardson | Technicolor Adventure",
+        "year": 1939,
+        "director": "Zoltan Korda",
+        "cast": "John Clements, Ralph Richardson, C. Aubrey Smith, June Duprez, Allan Jeayes, Jack Allen, Donald Gray",
+        "quality": "HD",
+        "genres": "Adventure, Drama, War, Classics",
+        "description": "Directed by Zoltan Korda and produced by Alexander Korda in breathtaking three-strip Technicolor, this sweeping 1939 British adventure epic stars John Clements as Harry Faversham, a young Victorian officer who resigns his commission on the eve of his regiment's deployment to the Sudan. Branded a coward with four white feathers from three fellow officers and his fiancée (June Duprez), Harry travels secretly to Egypt disguised as a mute native to risk his life and save his comrades on the battlefield.",
+        "embedId": "16217942397337",
+        "source": "ok.ru",
+        "posterUrl": "images/the-four-feathers-1939.jpg",
+        "trivia": [
+            "Filmed extensively on location in the Sudan using real desert locations and thousands of local extras rather than studio backlots.",
+            "Nominated for the Academy Award for Best Color Cinematography for Georges Périnal and Osmond Borradaile's stunning three-strip Technicolor photography.",
+            "Widely regarded by film historians as the definitive adaptation of A.E.W. Mason's 1902 novel, inspiring numerous remakes over the decades."
+        ]
+    },
+    {
+        "id": "hellraiser-2022",
+        "title": "Hellraiser (2022) Full Movie | Odessa A'zion & Jamie Clayton | Supernatural Horror",
+        "year": 2022,
+        "director": "David Bruckner",
+        "cast": "Odessa A'zion, Jamie Clayton, Adam Faison, Drew Starkey, Brandon Flynn, Aoife Hinds, Jason Liles, Goran Višnjić",
+        "quality": "HD",
+        "genres": "Horror, Mystery, Thriller",
+        "description": "Directed by David Bruckner, this reimagining of Clive Barker's classic horror franchise follows Riley (Odessa A'zion), a young woman struggling with addiction who comes into possession of an ancient puzzle box with shifting configurations. Unaware that the artifact is designed to summon the Cenobites—a group of sadistic, supernatural beings led by the Priest (Jamie Clayton)—Riley must confront the dark forces unleashed when those around her begin solving the box.",
+        "embedId": "16664694884902",
+        "source": "ok.ru",
+        "posterUrl": "images/hellraiser-2022.jpg",
+        "trivia": [
+            "Directed by David Bruckner (The Night House, The Ritual) with original Hellraiser creator Clive Barker returning as a producer on the project.",
+            "Jamie Clayton portrays the iconic lead Cenobite, known as 'The Priest' (Pinhead), in a design inspired directly by Clive Barker's original novella The Hellbound Heart.",
+            "Features six distinct puzzle box configurations—Lament, Lore, Lauderant, Liminal, Lazarus, and Leviathan—each carrying a different supernatural consequence."
+        ]
+    },
+    {
+        "id": "an-american-abroad-2025",
+        "title": "an-american-abroad-2025 Full Movie | Marcia Kimpton, Brian Gross & Jacy King | Comedy Romance",
+        "year": 2025,
+        "director": "Marcia Kimpton",
+        "quality": "HD",
+        "genres": "Comedy, Romance",
+        "description": "A free-spirited travel host navigates love and life while teaming up with local comedians to explore hidden gems around the world. Starring Marcia Kimpton, Brian Gross, and Jacy King. Watch more at https://moviehub.uk/",
+        "embedId": "16681393064486",
+        "source": "ok.ru",
+        "posterUrl": "images/an-american-abroad-2025.jpg"
+    },
+    {
+        "id": "pirates-of-the-plain-1999",
+        "title": "Pirates of the Plain (1999) Full Movie | Tim Curry & Seth Adkins | Family Fantasy Adventure",
+        "year": 1999,
+        "director": "John R. Cherry III",
+        "cast": "Tim Curry, Seth Adkins, Charles Napier, Dee Wallace, Jeffrey Jones, Hart Bochner, Shauna O'Brien",
+        "quality": "HD",
+        "genres": "Adventure, Family, Fantasy, Comedy",
+        "description": "Directed by John R. Cherry III, this whimsical 1999 family fantasy adventure stars Tim Curry as Jezebel Jack, a flamboyant 18th-century pirate captain whose galleon is swept through a time portal and stranded in a rural Nebraska farm field. Befriended by imaginative young Bobby (Seth Adkins), Captain Jack must defend his ship from greedy local land developers while searching for the magic needed to return to the high seas.",
+        "embedId": "16708217145894",
+        "source": "ok.ru",
+        "posterUrl": "images/pirates-of-the-plain-1999.jpg",
+        "trivia": [
+            "Directed by John R. Cherry III, best known as the creator and director of the popular Ernest P. Worrell comedy film series.",
+            "Features a lively, theatrical performance by Tim Curry several years after his iconic turn as Long John Silver in Muppet Treasure Island (1996).",
+            "Shot on location in South Africa, utilizing rural farmlands to double for the American Midwest."
+        ]
+    },
+    {
+        "id": "passed-away-1992",
+        "title": "Passed Away (1992) Full Movie | Bob Hoskins, Blair Brown & Tim Curry | Dark Comedy",
+        "year": 1992,
+        "director": "Charlie Peters",
+        "cast": "Bob Hoskins, Blair Brown, Tim Curry, Frances McDormand, William Petersen, Pamela Reed, Peter Riegert, Maureen Stapleton, Nancy Travis, Jack Warden, Teri Polo",
+        "quality": "HD",
+        "genres": "Comedy, Drama",
+        "description": "Written and directed by Charlie Peters, this ensemble dark comedy brings together an all-star cast led by Bob Hoskins as Johnny Scanlan, the eldest son trying to keep the peace when his father's sudden death forces his dysfunctional Irish-American family back under one roof in Pittsburgh. Over the course of an eventful wake and funeral, old grudges, financial surprises, and a mysterious stranger turn a solemn farewell into a chaotic family reckoning.",
+        "embedId": "16708216949286",
+        "source": "ok.ru",
+        "posterUrl": "images/passed-away-1992.jpg",
+        "trivia": [
+            "Features a powerhouse ensemble cast including Academy Award winner Frances McDormand, Bob Hoskins, Tim Curry, Jack Warden, and Maureen Stapleton.",
+            "Filmed on location in Pittsburgh, Pennsylvania, capturing authentic neighborhood funeral parlor and family home settings.",
+            "Marked the feature directorial debut of screenwriter Charlie Peters, who previously wrote Paternity (1981) and Three Men and a Little Lady (1990)."
+        ]
+    },
+    {
+        "id": "water-rites-2026",
+        "title": "Water Rites (2026) Full Movie | Drama & Thriller",
+        "year": 2026,
+        "director": "A.D. Calvo",
+        "cast": "Elena Kampouris, David Arquette, Illeana Douglas, Ilfenesh Hadera, Tovah Feldshuh",
+        "quality": "HD",
+        "genres": "Thriller, Drama, Mystery",
+        "description": "Set against the backdrop of a looming water crisis in a drought-stricken community, a young woman uncovers dark secrets and desperate measures as neighbors turn against one another over dwindling resources. Directed by A.D. Calvo, this tense contemporary thriller explores survival, greed, and moral compromise when the taps run dry.",
+        "embedId": "16708322724390",
+        "source": "ok.ru",
+        "posterUrl": "images/water-rites-2026.jpg",
+        "trivia": [
+            "Written and directed by independent filmmaker A.D. Calvo, known for atmospheric psychological thrillers and mysteries.",
+            "Features an ensemble cast led by Elena Kampouris alongside veteran actors David Arquette, Illeana Douglas, and Tovah Feldshuh."
+        ]
+    },
+    {
+        "id": "flight-93-2006",
+        "title": "Flight 93 (2006) Full Movie | Jeffrey Nordling & Brennan Elliott | Historical Drama",
+        "year": 2006,
+        "director": "Peter Markle",
+        "cast": "Jeffrey Nordling, Brennan Elliott, Ty Olsson, Colin Glazer, Jacqueline Ann Steuart, Laura Mennell, Barry W. Levy, Dominic Rains",
+        "quality": "HD",
+        "genres": "Drama, History, Thriller",
+        "description": "Directed by Peter Markle, this Emmy-winning 2006 docudrama reconstructs the harrowing events aboard United Airlines Flight 93 on September 11, 2001. Drawing on extensive interviews with victims' families and official air-traffic control records, the film follows passengers Tom Burnett (Jeffrey Nordling), Todd Beamer (Brennan Elliott), Mark Bingham (Ty Olsson), and Jeremy Glick (Colin Glazer) as they learn via phone calls what has happened in New York and Washington—and band together to fight back against the hijackers.",
+        "embedId": "YOUR_RUMBLE_ID",
+        "source": "rumble",
+        "posterUrl": "images/flight-93-2006.jpg",
+        "trivia": [
+            "Won the Primetime Emmy Award for Outstanding Sound Editing for a Miniseries, Movie or a Special in 2006.",
+            "Producer David Gerber conducted extensive research with the families of the passengers and crew, limiting dialogue strictly to verified phone transcripts and documented accounts.",
+            "Premiered on A&E on January 30, 2006, three months prior to the theatrical release of Paul Greengrass's United 93."
+        ]
+    },
+    {
+        "id": "tales-of-manhattan-1942",
+        "title": "Tales of Manhattan (1942) Full Movie | Rita Hayworth & Henry Fonda | Anthology",
+        "year": 1942,
+        "director": "Julien Duvivier",
+        "quality": "HD",
+        "duration": "1h 33m",
+        "genres": "Drama, Comedy, Anthology, Classics",
+        "description": "Follow an elegant, seemingly cursed tailcoat as it weaves through the lives of diverse New Yorkers—from a Broadway star to down-on-their-luck sharecroppers. This star-studded anthology features Rita Hayworth, Charles Boyer, and Henry Fonda. Stream this timeless classic and explore our full collection at https://moviehub.uk/.",
+        "embedId": "v73g6qg",
+        "source": "rumble",
+        "posterUrl": "images/tales-of-manhattan-1942.jpg"
+    },
+    {
+        "id": "the-blonde-bandit-1950",
+        "title": "The Blonde Bandit (1950) Full Movie | Gerald Mohr & Dorothy Patrick | Classic Film Noir",
+        "year": 1950,
+        "director": "Harry Keller",
+        "cast": "Gerald Mohr, Dorothy Patrick, Robert Rockwell, Charles Cane, Larry J. Blake, Argentina Brunetti",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Classics",
+        "description": "Directed by Harry Keller, this brisk 60-minute Republic Pictures crime noir stars Dorothy Patrick as Gloria Dell, a young woman jilted by a bigamist fiancé and falsely framed for a jewelry store heist. When charismatic syndicate bookmaker Joe Sapelli (Gerald Mohr) posts her bail and takes her under his wing, romance blossoms between them—until an ambitious District Attorney (Robert Rockwell) forces Gloria to choose between protecting Joe and saving herself from prison.",
+        "embedId": "v7gbtlw",
+        "source": "rumble",
+        "posterUrl": "images/the-blonde-bandit-1950.jpg",
+        "trivia": [
+            "Directed by Harry Keller, a prolific Republic Pictures editor-turned-director known for tight, fast-paced 60-minute crime programmers.",
+            "Features leading man Gerald Mohr, famous to classic radio and noir fans for voicing Philip Marlowe on radio and starring in Gilda (1946) and Detective Story (1951).",
+            "Shot on location and on Republic's backlot in late 1949 before hitting wide theatrical release in early 1950."
+        ]
+    },
+    {
         "id": "the-cable-guy-1996",
         "title": "The Cable Guy (1996) Full Movie | Jim Carrey & Matthew Broderick | Dark Comedy Thriller",
         "year": 1996,
@@ -62,7 +266,7 @@
         "quality": "HD",
         "genres": "Film Noir, Mystery, Thriller, Classics",
         "description": "Widely regarded as one of the most atmospheric and chilling psychological thrillers of the 1940s, The Red House stars Edward G. Robinson as Pete Morgan, a rugged farmer hiding a terrible, violent secret connected to a mysterious abandoned structure deep in the woods. When he warns local farmhand Meg (Allene Roberts) and her friend Nath (Lon McCallister) never to cross the forest, their curiosity draws them into a dark web of obsession and danger. Directed by Delmer Daves with an eerie musical score by Miklós Rózsa, this gripping noir classic keeps you guessing until the final frame.",
-        "embedId": "YOUR_RUMBLE_ID",
+        "embedId": "v7gbt7m",
         "source": "rumble",
         "posterUrl": "images/the-red-house-1947.jpg",
         "trivia": [
@@ -4071,18 +4275,6 @@
         "embedId": "16681392146982",
         "source": "ok.ru",
         "posterUrl": "images/inglourious-basterds-2009.jpg"
-    },
-    {
-        "id": "an-american-abroad-2025",
-        "title": "an-american-abroad-2025 Full Movie | Marcia Kimpton, Brian Gross & Jacy King | Comedy Romance",
-        "year": 2025,
-        "director": "Marcia Kimpton",
-        "quality": "HD",
-        "genres": "Comedy, Romance",
-        "description": "A free-spirited travel host navigates love and life while teaming up with local comedians to explore hidden gems around the world. Starring Marcia Kimpton, Brian Gross, and Jacy King. Watch more at https://moviehub.uk/",
-        "embedId": "16681393064486",
-        "source": "ok.ru",
-        "posterUrl": "images/an-american-abroad-2025.jpg"
     },
     {
         "id": "the-miracle-of-the-bells-1948",
@@ -10924,19 +11116,6 @@
         "embedId": "v73g9dg",
         "source": "rumble",
         "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/House_on_Haunted_Hill.jpg"
-    },
-    {
-        "id": "tales-of-manhattan-1942",
-        "title": "Tales of Manhattan (1942) Full Movie | Rita Hayworth & Henry Fonda | Anthology",
-        "year": 1942,
-        "director": "Julien Duvivier",
-        "quality": "HD",
-        "duration": "1h 33m",
-        "genres": "Drama, Comedy, Anthology, Classics",
-        "description": "Follow an elegant, seemingly cursed tailcoat as it weaves through the lives of diverse New Yorkers—from a Broadway star to down-on-their-luck sharecroppers. This star-studded anthology features Rita Hayworth, Charles Boyer, and Henry Fonda. Stream this timeless classic and explore our full collection at https://moviehub.uk/.",
-        "embedId": "v73g6qg",
-        "source": "rumble",
-        "posterUrl": "images/tales-of-manhattan-1942.jpg"
     },
     {
         "id": "goodbye-again-1961",
