@@ -1,5 +1,23 @@
 [
     {
+        "id": "samson-and-delilah-1949",
+        "title": "Samson and Delilah (1949) Full Movie | Victor Mature, Hedy Lamarr & George Sanders | Technicolor Epic",
+        "year": 1949,
+        "director": "Cecil B. DeMille",
+        "cast": "Hedy Lamarr, Victor Mature, George Sanders, Angela Lansbury, Henry Wilcoxon, Olive Deering, Fay Holden, Julia Faye, Russ Tamblyn, Lane Chandler, Moroni Olsen, John Miljan, Mike Mazurki, George Reeves",
+        "quality": "HD",
+        "genres": "Adventure, Drama, Romance, Classics",
+        "description": "Produced and directed by Cecil B. DeMille in Technicolor with screenplay by Jesse L. Lasky Jr., Fredric M. Frank, and Harold Lamb, cinematography by George Barnes, editing by Anne Bauchens, and music by Victor Young (134 mins with overture and exit music, distributed by Paramount Pictures). Starring Hedy Lamarr as Delilah, Victor Mature as Samson, George Sanders as The Saran of Gaza, Angela Lansbury as Semadar, Henry Wilcoxon as Prince Ahtur, Olive Deering as Miriam, Fay Holden as Hazelelponit, Julia Faye as Hisham, and Russ Tamblyn as Saul. When the Israelite strongman Samson falls for Delilah, their fiery romance and political intrigue lead to a devastating betrayal and a climactic showdown. Short Review: Cecil B. DeMille at his most sweeping and theatrical—a lush Technicolor epic packed with grand sets, Oscar-winning costumes and art direction, and big melodrama anchored by Victor Mature and Hedy Lamarr.",
+        "embedId": "v7ge3as",
+        "source": "rumble",
+        "posterUrl": "images/samson-and-delilah-1949.jpg",
+        "trivia": [
+            "Won Academy Awards for Best Art Direction (Color) and Best Costume Design (Color).",
+            "Became a massive box-office success for Paramount (reported around $25.6 million against a roughly $2.9–3.1 million budget).",
+            "It took two attempts to film the destruction of the Temple of Dagon after some dynamite charges in the miniature temple failed on the first try."
+        ]
+    },
+    {
         "id": "attica-1980",
         "title": "Attica (1980) Full Movie | Morgan Freeman, Charles Durning & George Grizzard | Prison Drama",
         "year": 1980,
@@ -36,17 +54,17 @@
         ]
     },
     {
-  "id": "five-minutes-to-live-1961",
-  "title": "Five Minutes to Live (1961) Full Movie | Johnny Cash, Donald Woods & Ron Howard | Classic Crime Noir",
-  "year": 1961,
-  "director": "Bill Karn",
-  "quality": "HD",
-  "genres": "Crime, Thriller, Film Noir, Classics",
-  "description": "After a bank robbery goes awry, ruthless criminal Johnny Cabot holds a bank executive's wife hostage as the clock ticks down on a tense ransom standoff. Starring Johnny Cash, Donald Woods, and a young Ron Howard.",
-  "embedId": "",
-  "source": "rumble",
-  "posterUrl": "images/five-minutes-to-live-1961.jpg"
-},
+        "id": "five-minutes-to-live-1961",
+        "title": "Five Minutes to Live (1961) Full Movie | Johnny Cash, Donald Woods & Ron Howard | Classic Crime Noir",
+        "year": 1961,
+        "director": "Bill Karn",
+        "quality": "HD",
+        "genres": "Crime, Thriller, Film Noir, Classics",
+        "description": "After a bank robbery goes awry, ruthless criminal Johnny Cabot holds a bank executive's wife hostage as the clock ticks down on a tense ransom standoff. Starring Johnny Cash, Donald Woods, and a young Ron Howard.",
+        "embedId": "",
+        "source": "rumble",
+        "posterUrl": "images/five-minutes-to-live-1961.jpg"
+    },
     {
         "id": "raw-deal-1948",
         "title": "Raw Deal (1948) Full Movie | Dennis O'Keefe & Claire Trevor | Classic Film Noir",
