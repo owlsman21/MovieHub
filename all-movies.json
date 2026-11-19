@@ -1,5 +1,53 @@
 [
     {
+        "id": "quicksand-1950",
+        "title": "Quicksand (1950) Full Movie | Mickey Rooney, Peter Lorre & Jeanne Cagney | Classic Film Noir",
+        "year": 1950,
+        "director": "Irving Pichel",
+        "cast": "Mickey Rooney, Jeanne Cagney, Barbara Bates, Peter Lorre, Taylor Holmes, Art Smith, Wally Cassell, Richard Lane, Patsy O'Connor, John Gallaudet, Minerva Urecal, Sidney Marion, Jimmie Dodd, Lester Dorr, Kitty O'Neil, Red Nichols, Jack Elam",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Classics",
+        "description": "Directed by Irving Pichel, written by Robert Smith, produced by Mort Briskin and Samuel H. Stiefel, and shot by cinematographer Lionel Lindon with music by Louis Gruenberg (79 mins, released March 24, 1950 via United Artists). When Santa Monica auto mechanic Dan Brady (Mickey Rooney) sneaks $20 from his boss's cash register for a date with manipulative diner waitress Vera Novak (Jeanne Cagney), an unexpected audit triggers a spiraling trap of petty theft, pawnshop schemes, and blackmail from crooked penny-arcade owner Nick Dramoshag (Peter Lorre). Short Review: A taut, fatalistic 1950 film noir where Mickey Rooney breaks away from his Andy Hardy image in one of his strongest dramatic turns, backed by Jeanne Cagney's cool femme fatale, a standout villain turn from Peter Lorre, and atmospheric location photography.",
+        "embedId": "v7gdx28",
+        "source": "rumble",
+        "posterUrl": "images/quicksand-1950.jpg",
+        "trivia": [
+            "Mickey Rooney and Peter Lorre co-financed the independent production together so Rooney could play a darker, grittier dramatic role away from his wholesome MGM image.",
+            "Leading lady Jeanne Cagney was the real-life younger sister of screen legend James Cagney.",
+            "Filmed on real Southern California locations including the Santa Monica Pier and downtown Los Angeles, with an uncredited early appearance by Jack Elam."
+        ]
+    },
+    {
+  "id": "five-minutes-to-live-1961",
+  "title": "Five Minutes to Live (1961) Full Movie | Johnny Cash, Donald Woods & Ron Howard | Classic Crime Noir",
+  "year": 1961,
+  "director": "Bill Karn",
+  "quality": "HD",
+  "genres": "Crime, Thriller, Film Noir, Classics",
+  "description": "After a bank robbery goes awry, ruthless criminal Johnny Cabot holds a bank executive's wife hostage as the clock ticks down on a tense ransom standoff. Starring Johnny Cash, Donald Woods, and a young Ron Howard.",
+  "embedId": "",
+  "source": "rumble",
+  "posterUrl": "images/five-minutes-to-live-1961.jpg"
+},
+    {
+        "id": "raw-deal-1948",
+        "title": "Raw Deal (1948) Full Movie | Dennis O'Keefe & Claire Trevor | Classic Film Noir",
+        "year": 1948,
+        "director": "Anthony Mann",
+        "cast": "Dennis O'Keefe, Claire Trevor, Marsha Hunt, John Ireland, Raymond Burr, Curt Bois, Chili Williams",
+        "quality": "HD",
+        "genres": "Film Noir, Crime, Drama, Classics",
+        "description": "Directed by Anthony Mann with stunning, high-contrast cinematography by John Alton, this 1948 Eagle-Lion classic noir stars Dennis O'Keefe as escaped convict Joe Sullivan. Double-crossed by his former syndicate boss (John Ireland) and accompanied by his loyal girlfriend Pat (Claire Trevor) alongside an innocent hostage (Marsha Hunt), Joe fights for survival and vengeance on a desperate, shadowy flight across state lines.",
+        "embedId": "v7gccxo",
+        "source": "rumble",
+        "posterUrl": "images/raw-deal-1948.jpg",
+        "trivia": [
+            "Renowned for John Alton's signature expressionistic, shadowy cinematography, which defines the visual look of classic 1940s film noir.",
+            "Features a chilling early villain performance by Raymond Burr as the sadistic mob enforcer 'Spider'.",
+            "Directed by Anthony Mann, who helmed a legendary string of gritty 1940s noir masterpieces before transitioning to defining Westerns of the 1950s."
+        ]
+    },
+    {
         "id": "smiley-2012",
         "title": "Smiley (2012) Full Movie | Caitlin Gerard & Melanie Papalia | Cyber Horror Thriller",
         "year": 2012,
@@ -163,7 +211,7 @@
         "quality": "HD",
         "genres": "Drama, History, Thriller",
         "description": "Directed by Peter Markle, this Emmy-winning 2006 docudrama reconstructs the harrowing events aboard United Airlines Flight 93 on September 11, 2001. Drawing on extensive interviews with victims' families and official air-traffic control records, the film follows passengers Tom Burnett (Jeffrey Nordling), Todd Beamer (Brennan Elliott), Mark Bingham (Ty Olsson), and Jeremy Glick (Colin Glazer) as they learn via phone calls what has happened in New York and Washington—and band together to fight back against the hijackers.",
-        "embedId": "YOUR_RUMBLE_ID",
+        "embedId": "v7gc782",
         "source": "rumble",
         "posterUrl": "images/flight-93-2006.jpg",
         "trivia": [
