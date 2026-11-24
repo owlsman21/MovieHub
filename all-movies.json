@@ -1,5 +1,41 @@
 [
     {
+        "id": "dodge-city-1939",
+        "title": "Dodge City (1939) Full Movie | Errol Flynn, Olivia de Havilland & Ann Sheridan | Classic Technicolor Western",
+        "year": 1939,
+        "director": "Michael Curtiz",
+        "cast": "Errol Flynn, Olivia de Havilland, Ann Sheridan, Bruce Cabot, Frank McHugh, Alan Hale, John Litel, Henry Travers, Henry O'Neill, Victor Jory, William Lundigan, Guinn 'Big Boy' Williams, Bobs Watson, Gloria Holden",
+        "quality": "HD",
+        "genres": "Western, Action, Classics",
+        "description": "Directed by Michael Curtiz and produced by Robert Lord with executive producer Hal B. Wallis, original screenplay by Robert Buckner, Technicolor cinematography by Sol Polito and Ray Rennahan, and music by Max Steiner (104 mins). Starring Errol Flynn as Wade Hatton, Olivia de Havilland as Abbie Irving, Ann Sheridan as Ruby Gilman, Bruce Cabot as Jeff Surrett, Frank McHugh as Joe Clemens, Alan Hale as Rusty Hart, John Litel as Matt Cole, Henry Travers as Dr. Irving, Henry O'Neill as Colonel Dodge, Victor Jory as Yancey, William Lundigan as Lee Irving, Guinn 'Big Boy' Williams as Tex Baird, Bobs Watson as Harry Cole, and Gloria Holden as Mrs. Cole. When a ruthless gang leader turns the booming Kansas cattle town of Dodge City into a lawless haven of corruption and murder, a rugged Irish-born trail boss and former British Army officer pins on the sheriff's badge to restore order while falling for a spirited young journalist. Short Review: A rousing, big-budget 1939 Warner Bros. Technicolor Western directed at breakneck pace by Michael Curtiz, packed with sweeping cattle drives, one of cinema's greatest saloon brawls, and effortless star chemistry between Errol Flynn, Olivia de Havilland, and Ann Sheridan.",
+        "embedId": "8806542478048",
+        "source": "ok.ru",
+        "posterUrl": "images/dodge-city-1939.jpg",
+        "trivia": [
+            "This was Errol Flynn's first Western and his first film shot in three-strip Technicolor, becoming Warner Bros.' highest-grossing movie of 1939.",
+            "To promote the premiere, Warner Bros. chartered a special train carrying Flynn, Olivia de Havilland, Ann Sheridan, and Hollywood reporters to Dodge City, Kansas, drawing over 100,000 fans.",
+            "The film's sprawling, multi-minute saloon brawl became a benchmark for Hollywood stunt choreography and was later parodied in Mel Brooks' Blazing Saddles."
+        ]
+    },
+    {
+        "id": "key-to-the-city-1950",
+        "title": "Key to the City (1950) Full Movie | Clark Gable, Loretta Young & Frank Morgan | Classic Romantic Comedy",
+        "year": 1950,
+        "director": "George Sidney",
+        "cast": "Clark Gable, Loretta Young, Frank Morgan, Marilyn Maxwell, Raymond Burr, James Gleason, Lewis Stone, Raymond Walburn, Pamela Britton, Zamah Cunningham, Clinton Sundberg, Marion Martin, Bert Freed, Emory Parnell",
+        "quality": "HD",
+        "genres": "Comedy, Romance, Classics",
+        "description": "Directed by George Sidney and produced by Z. Wayne Griffin, screenplay by Robert Riley Crutcher based on a story by Albert Beich, cinematography by Harold Rosson, and music by Bronislau Kaper (100 mins). Starring Clark Gable as Steve Fisk, Loretta Young as Clarissa Standish, Frank Morgan as Fire Chief Duggan, Marilyn Maxwell as Sheila, Raymond Burr as Les Taggart, James Gleason as Sergeant Hogan, Lewis Stone as Judge Silas Standish, Raymond Walburn as Mayor Billy Butler, Pamela Britton as Miss Unconscious, Zamah Cunningham as Mrs. Butler, Clinton Sundberg as Clerk, Marion Martin as Emmy, Bert Freed as Emmy's Husband, and Emory Parnell as Council Chairman. While attending a lively mayors' convention in San Francisco, a roguish former dockworker turned small-town California mayor sparks an instant, whirlwind romance with a prim, Harvard-educated New England mayor—landing them both in hilarious civic and romantic trouble. Short Review: A brisk, sparkling 1950 MGM romantic comedy directed with infectious energy by George Sidney, pairing Clark Gable and Loretta Young in their first screen reunion since 1935 alongside delightful supporting turns from Frank Morgan and Raymond Burr.",
+        "embedId": "8897095600864",
+        "source": "ok.ru",
+        "posterUrl": "images/key-to-the-city-1950.jpg",
+        "trivia": [
+            "This was the final film appearance of beloved character actor Frank Morgan (best known as the Wizard in The Wizard of Oz), who passed away in September 1949 before the movie was released.",
+            "The film reunited Clark Gable and Loretta Young on screen fifteen years after they starred together in The Call of the Wild (1935).",
+            "Raymond Burr plays a corrupt, smooth-talking San Francisco adversary to Clark Gable's mayor—years before Burr became famous as television's Perry Mason."
+        ]
+    },
+    {
         "id": "ivy-1947",
         "title": "Ivy (1947) Full Movie | Joan Fontaine, Patric Knowles & Herbert Marshall | Classic Film Noir Thriller",
         "year": 1947,

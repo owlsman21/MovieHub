@@ -31,6 +31,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        /* Bright pill buttons for Home and All Movies */
+header a,
+nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  margin: 4px 6px;
+  background-color: #1f242d;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #3a414e;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+header a:hover,
+nav a:hover {
+  background-color: #e50914; /* Matches the red 'HUB' in your logo */
+  border-color: #e50914;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+}
         body { background-color: #0a0a0a; color: white; font-family: sans-serif; margin: 0; }
         #wrapper { position: relative; width: 100%; max-width: 850px; margin: 0 auto; background: #000; aspect-ratio: 16 / 9; overflow: hidden; }
         #movie-iframe { width: 100%; height: 100%; border: none; }
