@@ -1,5 +1,36 @@
 [
     {
+        "id": "ivy-1947",
+        "title": "Ivy (1947) Full Movie | Joan Fontaine, Patric Knowles & Herbert Marshall | Classic Film Noir Thriller",
+        "year": 1947,
+        "director": "Sam Wood",
+        "cast": "Joan Fontaine, Patric Knowles, Herbert Marshall, Richard Ney, Cedric Hardwicke, Lucile Watson, Sara Allgood, Henry Stephenson, Rosalind Ivan, Lillian Fontaine, Molly Lamont, Una O'Connor, Isobel Elsom, Alan Napier",
+        "quality": "HD",
+        "genres": "Film Noir, Thriller, Drama, Classics",
+        "description": "Directed by Sam Wood and produced by William Cameron Menzies, screenplay by Charles Bennett based on the 1927 novel 'The Story of Ivy' by Marie Belloc Lowndes, cinematography by Russell Metty, and music by Daniele Amfitheatrof with title song by Hoagy Carmichael (99 mins). Starring Joan Fontaine as Ivy Lexton, Patric Knowles as Dr. Roger Gretorex, Herbert Marshall as Miles Rushworth, Richard Ney as Jervis Lexton, Cedric Hardwicke as Inspector Orpington, Lucile Watson as Mrs. Gretorex, Sara Allgood as Martha Huntley, Henry Stephenson as Judge, Rosalind Ivan as Emily, Lillian Fontaine as Lady Flora, Molly Lamont as Bella Crail, Una O'Connor as Mrs. Thrawn, Isobel Elsom as Miss Chattle, and Alan Napier as Sir Jonathan Wright. In Edwardian London, an ambitious and manipulative woman trapped in a loveless, impoverished marriage plots to poison her husband so she can pursue a wealthy suitor, framing her devoted former lover for the murder. Short Review: A lush, shadowy 1947 Universal film noir thriller directed by Sam Wood and designed by William Cameron Menzies, anchored by Joan Fontaine's chillingly icy performance against type and Russell Metty's atmospheric period cinematography.",
+        "embedId": "8908108466912",
+        "source": "ok.ru",
+        "posterUrl": "images/ivy-1947.jpg",
+        "trivia": [
+            "Joan Fontaine's real-life mother, Lillian Fontaine, appears in the film as Lady Flora—marking one of the few times mother and daughter shared the screen.",
+            "Producer and production designer William Cameron Menzies famously built compact, enclosed rooms with low ceilings so cinematographer Russell Metty could shoot from dramatic, claustrophobic angles.",
+            "The film was selected as an official entry at the 1947 Cannes Film Festival and was later adapted for radio in 1951 with Joan Fontaine reprising her role as Ivy Lexton."
+        ]
+    },
+    {
+        "id": "what-a-crazy-world-1963",
+        "title": "What a Crazy World (1963) Full Movie | Joe Brown & Marty Wilde | Classic British Musical Comedy",
+        "year": 1963,
+        "director": "Michael Carreras",
+        "cast": "Joe Brown, Susan Maughan, Marty Wilde, Harry H. Corbett, Avis Bunnage, Michael Goodman, Grazina Frame, Michael Ripper, Freddie Garrity, Alan Klein, Barry Bethel",
+        "quality": "HD",
+        "genres": "Musical, Comedy, Classics",
+        "description": "An unemployed young East Ender dreams of hitting the big time as a songwriter while juggling a rocky romance and life with his working-class London family. Starring Joe Brown, Susan Maughan, Marty Wilde, Harry H. Corbett, and Freddie and the Dreamers.",
+        "embedId": "1643352558304",
+        "source": "ok.ru",
+        "posterUrl": "images/what-a-crazy-world-1963.jpg"
+    },
+    {
         "id": "the-enchanted-cottage-1945",
         "title": "The Enchanted Cottage (1945) Full Movie | Dorothy McGuire, Robert Young & Herbert Marshall | Classic Romantic Drama",
         "year": 1945,
