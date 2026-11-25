@@ -29,7 +29,7 @@
             --text-secondary: #aaaaaa;
         }
 
-        * {
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -43,10 +43,9 @@
             padding-bottom: 50px;
         }
 
-        /* HEADER LAYOUT: Left Logo + Center Stack (Title & Search) + Right Support Button */
+        /* HEADER LAYOUT: Left Logo + Center Stack (Title & Search) + Right Header Actions */
         header {
             background-color: rgba(0, 0, 0, 0.95);
-            position: sticky;
             top: 0;
             z-index: 1000;
             padding: 15px 40px;
@@ -86,24 +85,32 @@
             position: relative;
             display: flex;
             align-items: center;
-            width: 320px;
+            width: 360px;
             max-width: 90%;
         }
 
         .search-container input {
             width: 100%;
-            padding: 8px 35px 8px 12px;
-            background-color: #000;
-            border: 1px solid #333;
-            border-radius: 4px;
+            padding: 10px 36px 10px 14px;
+            background-color: #1a1a1a;
+            border: 1px solid #555;
+            border-radius: 6px;
             color: #fff;
             font-size: 14px;
             outline: none;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .search-container input::placeholder {
+            color: #bbbbbb;
         }
 
         .search-container input:focus {
-            border-color: var(--accent-color);
+            background-color: #222222;
+            border-color: var(--gold-accent);
+            box-shadow: 0 0 0 2px rgba(255, 221, 0, 0.22);
             text-align: left;
         }
 
@@ -116,33 +123,189 @@
             font-weight: bold;
         }
 
-        /* Support Us Button Positioned Top-Right */
-        .support-btn {
+        @keyframes supportWiggle {
+            0%, 82%, 100% {
+                transform: rotate(0deg);
+            }
+            86% {
+                transform: rotate(-3deg);
+            }
+            90% {
+                transform: rotate(3deg);
+            }
+            94% {
+                transform: rotate(-2deg);
+            }
+            98% {
+                transform: rotate(2deg);
+            }
+        }
+
+        /* Right-aligned Action Group (Install App & Support Us) */
+        .header-actions {
             position: absolute;
             right: 40px;
             top: 50%;
             transform: translateY(-50%);
-            background-color: var(--gold-accent);
-            color: #000;
-            font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            gap: 10px;
+        }
+
+        .header-install-btn,
+        .support-btn {
+            height: 38px;
+            padding: 0 16px;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
             white-space: nowrap;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .header-install-btn {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid var(--gold-accent);
+        }
+
+        .header-install-btn:hover {
+            background-color: var(--gold-accent);
+            color: #000000;
+            transform: scale(1.04);
+        }
+
+        .support-btn {
+            background-color: var(--gold-accent);
+            color: #000000;
+            border: 1px solid var(--gold-accent);
+            box-shadow: 0 2px 10px rgba(255, 221, 0, 0.25);
+            animation: supportWiggle 4.5s infinite ease-in-out;
         }
 
         .support-btn:hover {
-            background-color: #f3ce00;
-            transform: translateY(-50%) scale(1.05);
+            background-color: #ffe84d;
+            border-color: #ffe84d;
+            box-shadow: 0 4px 16px rgba(255, 221, 0, 0.5);
+            animation: none;
+            transform: scale(1.05);
         }
 
         main {
             padding: 20px 40px;
+        }
+
+        /* Era Quick-Filter Bar */
+        .era-filter-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 26px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #242424;
+        }
+
+        .era-filter-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-right: 4px;
+            font-weight: 600;
+        }
+
+        .era-pill {
+            background-color: #1d1d1d;
+            color: #e4e4e7;
+            border: 1px solid #383838;
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .era-pill:hover {
+            border-color: var(--gold-accent);
+            color: #ffffff;
+        }
+
+        .era-pill.active {
+            background-color: var(--gold-accent);
+            color: #000000;
+            border-color: var(--gold-accent);
+            font-weight: 700;
+        }
+
+        .surprise-pill {
+            margin-left: auto;
+            background-color: #242008;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            border-radius: 999px;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .surprise-pill:hover {
+            background-color: var(--gold-accent);
+            color: #000000;
+            transform: scale(1.03);
+        }
+
+        .results-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .reset-filter-btn {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 7px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .reset-filter-btn:hover {
+            background-color: #f6121d;
+        }
+
+        .empty-state {
+            background-color: #1a1a1a;
+            border: 1px solid #2f2f2f;
+            border-radius: 8px;
+            padding: 36px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .empty-state h3 {
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-size: 18px;
         }
 
         .shelf {
@@ -182,34 +345,43 @@
             background: var(--accent-color);
         }
 
-        /* Search Layout Grid */
+        /* Search / Filtered Layout Grid */
         .search-grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 20px;
         }
 
-        .movie-card {
+        .movie-card-wrap {
             background-color: var(--card-bg);
             border-radius: 6px;
             overflow: hidden;
-            cursor: pointer;
-            text-decoration: none;
-            color: var(--text-color);
-            display: block;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             flex: 0 0 160px;
             width: 160px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .movie-card:hover {
-            transform: scale(1.05);
+        .search-grid-layout .movie-card-wrap {
+            width: 100%;
+            flex: initial;
+        }
+
+        .movie-card-wrap:hover {
+            transform: scale(1.04);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
             z-index: 10;
         }
 
-        .movie-card img {
+        .movie-card-link {
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+        }
+
+        .movie-card-link img {
             width: 100%;
             height: 240px;
             object-fit: cover;
@@ -217,12 +389,37 @@
         }
 
         .movie-card-title {
-            padding: 10px;
-            font-size: 14px;
+            padding: 8px 10px 4px;
+            font-size: 13px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             text-align: center;
+            font-weight: 600;
+        }
+
+        .watchlist-toggle-btn {
+            margin: 4px 10px 10px;
+            padding: 5px 8px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #262626;
+            color: #e4e4e7;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .watchlist-toggle-btn:hover {
+            border-color: var(--gold-accent);
+            color: #ffffff;
+        }
+
+        .watchlist-toggle-btn.saved {
+            background-color: var(--gold-accent);
+            color: #000000;
+            border-color: var(--gold-accent);
         }
 
         #back-to-top {
@@ -247,13 +444,18 @@
                 transform: none;
                 height: 60px;
             }
-            .support-btn {
+            .header-actions {
                 position: static;
                 transform: none;
-                margin-top: 5px;
+                margin-top: 6px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
-            .support-btn:hover {
-                transform: scale(1.05);
+            .support-btn {
+                animation: none;
+            }
+            .surprise-pill {
+                margin-left: 0;
             }
             main {
                 padding: 15px 20px;
@@ -274,24 +476,95 @@
 
         <!-- Search Bar Directly Below Center Title -->
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search movies...">
+            <input type="text" id="search-input" placeholder="🔍 Search movies, cast, year...">
             <span id="clear-search">&times;</span>
         </div>
 
-        <!-- Far Right Support Button -->
-        <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="support-btn">
-            ☕ Support Us
-        </a>
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+            <button id="header-install-btn" type="button" class="header-install-btn" style="display: none;">
+                📲 Install App
+            </button>
+            <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="support-btn" title="Enjoying the free classics? Support MovieHub">
+                ☕ Support Us
+            </a>
+        </div>
     </header>
 
     <main>
+        <div class="era-filter-bar" id="era-filter-bar">
+            <span class="era-filter-label">Era:</span>
+            <button type="button" class="era-pill active" data-era="all">All Eras</button>
+            <button type="button" class="era-pill" data-era="precode">Pre-Code (Pre-1935)</button>
+            <button type="button" class="era-pill" data-era="1930s">1930s</button>
+            <button type="button" class="era-pill" data-era="1940s">1940s</button>
+            <button type="button" class="era-pill" data-era="1950s">1950s</button>
+            <button type="button" class="era-pill" data-era="1960plus">1960s+</button>
+            <button type="button" id="surprise-me-btn" class="surprise-pill">🎁 Surprise Me</button>
+        </div>
+
         <div id="shelf-container"></div>
     </main>
 
     <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Top</button>
 
     <script>
-        let allMoviesData = []; 
+        const WATCHLIST_KEY = 'moviehub_watchlist_v1';
+        let allMoviesData = [];
+        let currentEra = 'all';
+
+        function getWatchlistIds() {
+            try {
+                const raw = localStorage.getItem(WATCHLIST_KEY);
+                const parsed = raw ? JSON.parse(raw) : [];
+                return Array.isArray(parsed) ? parsed : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveWatchlistIds(ids) {
+            try {
+                localStorage.setItem(WATCHLIST_KEY, JSON.stringify(ids));
+            } catch (e) {}
+        }
+
+        function toggleWatchlist(movieId) {
+            const cleanId = String(movieId || '');
+            if (!cleanId) return;
+            const list = getWatchlistIds();
+            const idx = list.indexOf(cleanId);
+            if (idx >= 0) {
+                list.splice(idx, 1);
+            } else {
+                list.unshift(cleanId);
+            }
+            saveWatchlistIds(list);
+            applyCurrentView();
+        }
+
+        function matchesEra(movie, era) {
+            if (!era || era === 'all') return true;
+            const yr = parseInt(movie.year, 10) || 0;
+            if (!yr) return false;
+            if (era === 'precode') return yr < 1935;
+            if (era === '1930s') return yr >= 1930 && yr <= 1939;
+            if (era === '1940s') return yr >= 1940 && yr <= 1949;
+            if (era === '1950s') return yr >= 1950 && yr <= 1959;
+            if (era === '1960plus') return yr >= 1960;
+            return true;
+        }
+
+        function getEraLabel(era) {
+            const labels = {
+                precode: 'Pre-Code (Pre-1935)',
+                '1930s': '1930s',
+                '1940s': '1940s',
+                '1950s': '1950s',
+                '1960plus': '1960s+'
+            };
+            return labels[era] || '';
+        }
 
         function getPosterUrl(posterUrl) {
             if (!posterUrl) return 'images/poster-placeholder.jpg';
@@ -301,55 +574,31 @@
             return posterUrl.replace(/^\/+/, '');
         }
 
-        async function init() {
-            try {
-                const response = await fetch('/all-movies.json?t=' + new Date().getTime());
-                allMoviesData = await response.json();
-            } catch (error) {
-                console.error("Error loading data:", error);
-            }
-
-            renderShelves(allMoviesData);
-
-            window.addEventListener('scroll', () => {
-                const btt = document.getElementById('back-to-top');
-                if (btt) btt.style.display = (window.scrollY > 300) ? 'block' : 'none';
-            });
-
-            const searchInput = document.getElementById('search-input');
-            const clearBtn = document.getElementById('clear-search');
-
-            searchInput.addEventListener('input', (e) => {
-                const term = e.target.value.toLowerCase().trim();
-                
-                if (term.length > 0) {
-                    clearBtn.style.display = 'block';
-                    renderShelves(allMoviesData.filter(m => m.title && m.title.toLowerCase().includes(term)), true); 
-                } else {
-                    clearBtn.style.display = 'none';
-                    renderShelves(allMoviesData, false);
-                }
-            });
-
-            clearBtn.addEventListener('click', () => {
-                searchInput.value = '';
-                clearBtn.style.display = 'none';
-                renderShelves(allMoviesData, false);
-            });
-        }
-
-        // Helper to sanitize filename matching build.py
         function sanitizeFilename(name) {
             if (!name) return '';
             return String(name).replace(/[:\\/*?"<>|]/g, '-');
         }
 
-        // FIXED: Point directly to query parameter movie-details.html page
+        function openSurpriseMovie() {
+            if (!Array.isArray(allMoviesData) || allMoviesData.length === 0) return;
+            const pick = allMoviesData[Math.floor(Math.random() * allMoviesData.length)];
+            if (pick && pick.id) {
+                const safeId = sanitizeFilename(pick.id);
+                window.location.href = `/movie-details.html?id=${encodeURIComponent(safeId)}`;
+            }
+        }
+
         function createMovieCard(movie) {
             const safeId = sanitizeFilename(movie.id);
-            const card = document.createElement('a');
-            card.className = 'movie-card';
-            card.href = `/movie-details.html?id=${safeId}`;
+            const rawId = String(movie.id || '');
+            const isSaved = getWatchlistIds().includes(rawId);
+
+            const wrap = document.createElement('div');
+            wrap.className = 'movie-card-wrap';
+
+            const link = document.createElement('a');
+            link.className = 'movie-card-link';
+            link.href = `/movie-details.html?id=${encodeURIComponent(safeId)}`;
 
             const img = document.createElement('img');
             img.src = getPosterUrl(movie.posterUrl);
@@ -360,124 +609,299 @@
             title.className = 'movie-card-title';
             title.textContent = movie.title || 'Untitled Movie';
 
-            card.appendChild(img);
-            card.appendChild(title);
-            return card;
+            link.appendChild(img);
+            link.appendChild(title);
+
+            const saveBtn = document.createElement('button');
+            saveBtn.type = 'button';
+            saveBtn.className = 'watchlist-toggle-btn' + (isSaved ? ' saved' : '');
+            saveBtn.textContent = isSaved ? '✓ Saved' : '+ Watchlist';
+            saveBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleWatchlist(rawId);
+            });
+
+            wrap.appendChild(link);
+            wrap.appendChild(saveBtn);
+            return wrap;
         }
 
-        function renderShelves(movies, isSearch = false) {
+        function applyCurrentView() {
+            const searchInput = document.getElementById('search-input');
+            const clearBtn = document.getElementById('clear-search');
+            const term = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+            if (clearBtn) {
+                clearBtn.style.display = term.length > 0 ? 'block' : 'none';
+            }
+
+            const hasSearch = term.length > 0;
+            const hasEra = currentEra !== 'all';
+
+            if (hasSearch || hasEra) {
+                const filtered = allMoviesData.filter(m => {
+                    if (!matchesEra(m, currentEra)) return false;
+                    if (!hasSearch) return true;
+                    const titleMatch = String(m.title || '').toLowerCase().includes(term);
+                    const directorMatch = String(m.director || '').toLowerCase().includes(term);
+                    const yearMatch = String(m.year || '').toLowerCase().includes(term);
+                    const castText = Array.isArray(m.cast) ? m.cast.join(' ') : String(m.cast || '');
+                    const castMatch = castText.toLowerCase().includes(term);
+                    return titleMatch || directorMatch || yearMatch || castMatch;
+                });
+
+                renderFilteredResults(filtered, term, currentEra);
+            } else {
+                renderShelves(allMoviesData);
+            }
+        }
+
+        function resetAllFilters() {
+            const searchInput = document.getElementById('search-input');
+            const clearBtn = document.getElementById('clear-search');
+            if (searchInput) searchInput.value = '';
+            if (clearBtn) clearBtn.style.display = 'none';
+            currentEra = 'all';
+            document.querySelectorAll('.era-pill').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.era === 'all');
+            });
+            renderShelves(allMoviesData);
+        }
+
+        function renderFilteredResults(movies, term, era) {
             const container = document.getElementById('shelf-container');
             container.innerHTML = '';
-            
-            if (isSearch) {
-                const section = document.createElement('section');
-                section.className = 'shelf';
-                section.innerHTML = `<h2>Search Results</h2><div class="search-grid-layout" id="search-grid"></div>`;
-                container.appendChild(section);
-                const grid = document.getElementById('search-grid');
-                movies.forEach(m => {
-                    grid.appendChild(createMovieCard(m));
-                });
-            } else {
-                const latestAddedSection = document.createElement('section');
-                latestAddedSection.className = 'shelf';
-                latestAddedSection.innerHTML = `
-                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
-                        <h2>Latest Additions</h2>
-                        <a href="/catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
-                    </div>
-                    <div class="shelf-grid" id="grid-latest-additions"></div>
+
+            const section = document.createElement('section');
+            section.className = 'shelf';
+
+            const headingText = term
+                ? `Search Results for "${term}"`
+                : `${getEraLabel(era)} Collection`;
+
+            const countLabel = `${movies.length} ${movies.length === 1 ? 'movie' : 'movies'} found${era !== 'all' && term ? ' in ' + getEraLabel(era) : ''}`;
+
+            const metaDiv = document.createElement('div');
+            metaDiv.className = 'results-meta';
+            metaDiv.innerHTML = `
+                <div>
+                    <h2 style="margin-bottom: 4px;">${headingText}</h2>
+                    <div class="results-count">${countLabel}</div>
+                </div>
+            `;
+
+            const resetBtn = document.createElement('button');
+            resetBtn.type = 'button';
+            resetBtn.className = 'reset-filter-btn';
+            resetBtn.textContent = 'Clear Filter';
+            resetBtn.addEventListener('click', resetAllFilters);
+            metaDiv.appendChild(resetBtn);
+
+            section.appendChild(metaDiv);
+
+            if (movies.length === 0) {
+                const emptyBox = document.createElement('div');
+                emptyBox.className = 'empty-state';
+                emptyBox.innerHTML = `
+                    <h3>No matching films found</h3>
+                    <p>Try searching a different title, actor, director, or year, or clear the active filter.</p>
                 `;
-                container.appendChild(latestAddedSection);
-
-                const latestAddedGrid = document.getElementById('grid-latest-additions');
-                movies.slice(0, 12).forEach(m => {
-                    latestAddedGrid.appendChild(createMovieCard(m));
-                });
-
-                const categories = [
-                    { title: "New Releases", keywords: ["new"], domId: "latest" },
-                    { title: "Classic Cinema", keywords: ["classic"], domId: "classics" },
-                    { title: "Film Noir", keywords: ["noir"], domId: "filmnoir" },
-                    { title: "Drama Collection", keywords: ["drama"], domId: "drama" },
-                    { title: "Biography Selection", keywords: ["biography", "biopic"], domId: "biography" },
-                    { title: "History Vault", keywords: ["history", "historical"], domId: "history" },
-                    { title: "Sci-Fi Collection", keywords: ["sci-fi", "science fiction"], domId: "scifi" },
-                    { title: "War Movies", keywords: ["war"], domId: "war" },
-                    { title: "Westerns", keywords: ["western"], domId: "western" },
-                    { title: "Horror & Thriller Vault", keywords: ["horror", "thriller"], domId: "horror" },
-                    { title: "Action Collection", keywords: ["action"], domId: "action" },
-                    { title: "Comedy, Romance & Fantasy", keywords: ["comedy", "romance", "fantasy"], domId: "comedy" },
-                    { title: "Bette Davis Collection", keywords: ["bette davis"], domId: "bettedavis" },
-                    { title: "Hitchcock Collection", keywords: ["hitchcock"], domId: "hitchcock" }
-                ];
-
-                function renderBatch(batch) {
-                    batch.forEach(cat => {
-                        let filtered = [];
-
-                        if (cat.keywords.includes("new")) {
-                            filtered = movies
-                                .filter(m => parseInt(m.year, 10) >= 2024)
-                                .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
-                        } else if (cat.domId === "classics") {
-                            filtered = movies.filter(m => {
-                                const titleText = (m.title || '').toLowerCase();
-                                const genreText = Array.isArray(m.genres) 
-                                    ? m.genres.join(' ').toLowerCase() 
-                                    : (m.genres || '').toLowerCase();
-                                const yr = parseInt(m.year, 10) || 0;
-                                const isNoir = titleText.includes('noir') || genreText.includes('noir');
-                                
-                                return !isNoir && yr > 0 && yr < 1980;
-                            });
-                        } else if (cat.domId === "filmnoir") {
-                            filtered = movies.filter(m => {
-                                const titleText = (m.title || '').toLowerCase();
-                                const genreText = Array.isArray(m.genres) 
-                                    ? m.genres.join(' ').toLowerCase() 
-                                    : (m.genres || '').toLowerCase();
-                                const yr = parseInt(m.year, 10) || 0;
-                                const isNoir = titleText.includes('noir') || genreText.includes('noir');
-
-                                return isNoir && (yr === 0 || yr < 1960);
-                            });
-                        } else {
-                            filtered = movies.filter(m => {
-                                const titleText = (m.title || '').toLowerCase();
-                                const genreText = Array.isArray(m.genres) 
-                                    ? m.genres.join(' ').toLowerCase() 
-                                    : (m.genres || '').toLowerCase();
-                                
-                                return cat.keywords.some(kw => 
-                                    titleText.includes(kw) || genreText.includes(kw)
-                                );
-                            });
-                        }
-
-                        if (filtered.length === 0) return;
-                        
-                        const section = document.createElement('section');
-                        section.className = 'shelf';
-                        section.innerHTML = `
-                            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
-                                <h2>${cat.title}</h2>
-                                <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
-                            </div>
-                            <div class="shelf-grid" id="grid-${cat.domId}"></div>
-                        `;
-                        container.appendChild(section);
-                        const grid = document.getElementById(`grid-${cat.domId}`);
-                        
-                        filtered.slice(0, 12).forEach(m => {
-                            grid.appendChild(createMovieCard(m));
-                        });
-                    });
-                }
-                
-                renderBatch(categories.slice(0, 3)); 
-                setTimeout(() => renderBatch(categories.slice(3)), 100); 
+                section.appendChild(emptyBox);
+            } else {
+                const grid = document.createElement('div');
+                grid.className = 'search-grid-layout';
+                movies.forEach(m => grid.appendChild(createMovieCard(m)));
+                section.appendChild(grid);
             }
+
+            container.appendChild(section);
+        }
+
+        function renderShelves(movies) {
+            const container = document.getElementById('shelf-container');
+            container.innerHTML = '';
+
+            const watchlistIds = getWatchlistIds();
+            if (watchlistIds.length > 0) {
+                const savedMovies = watchlistIds
+                    .map(id => movies.find(m => String(m.id || '') === String(id)))
+                    .filter(Boolean);
+
+                if (savedMovies.length > 0) {
+                    const watchlistSection = document.createElement('section');
+                    watchlistSection.className = 'shelf';
+                    watchlistSection.innerHTML = `
+                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
+                            <h2>My Watchlist (${savedMovies.length})</h2>
+                        </div>
+                        <div class="shelf-grid" id="grid-watchlist"></div>
+                    `;
+                    container.appendChild(watchlistSection);
+                    const watchlistGrid = document.getElementById('grid-watchlist');
+                    savedMovies.forEach(m => watchlistGrid.appendChild(createMovieCard(m)));
+                }
+            }
+
+            const latestAddedSection = document.createElement('section');
+            latestAddedSection.className = 'shelf';
+            latestAddedSection.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
+                    <h2>Latest Additions</h2>
+                    <a href="/catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                </div>
+                <div class="shelf-grid" id="grid-latest-additions"></div>
+            `;
+            container.appendChild(latestAddedSection);
+
+            const latestAddedGrid = document.getElementById('grid-latest-additions');
+            movies.slice(0, 12).forEach(m => {
+                latestAddedGrid.appendChild(createMovieCard(m));
+            });
+
+            const categories = [
+                { title: "New Releases", keywords: ["new"], domId: "latest" },
+                { title: "Classic Cinema", keywords: ["classic"], domId: "classics" },
+                { title: "Film Noir", keywords: ["noir"], domId: "filmnoir" },
+                { title: "Drama Collection", keywords: ["drama"], domId: "drama" },
+                { title: "Biography Selection", keywords: ["biography", "biopic"], domId: "biography" },
+                { title: "History Vault", keywords: ["history", "historical"], domId: "history" },
+                { title: "Sci-Fi Collection", keywords: ["sci-fi", "science fiction"], domId: "scifi" },
+                { title: "War Movies", keywords: ["war"], domId: "war" },
+                { title: "Westerns", keywords: ["western"], domId: "western" },
+                { title: "Horror & Thriller Vault", keywords: ["horror", "thriller"], domId: "horror" },
+                { title: "Action Collection", keywords: ["action"], domId: "action" },
+                { title: "Comedy, Romance & Fantasy", keywords: ["comedy", "romance", "fantasy"], domId: "comedy" },
+                { title: "Bette Davis Collection", keywords: ["bette davis"], domId: "bettedavis" },
+                { title: "Hitchcock Collection", keywords: ["hitchcock"], domId: "hitchcock" }
+            ];
+
+            function renderBatch(batch) {
+                batch.forEach(cat => {
+                    let filtered = [];
+
+                    if (cat.keywords.includes("new")) {
+                        filtered = movies
+                            .filter(m => parseInt(m.year, 10) >= 2024)
+                            .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
+                    } else if (cat.domId === "classics") {
+                        filtered = movies.filter(m => {
+                            const titleText = (m.title || '').toLowerCase();
+                            const genreText = Array.isArray(m.genres) 
+                                ? m.genres.join(' ').toLowerCase() 
+                                : (m.genres || '').toLowerCase();
+                            const yr = parseInt(m.year, 10) || 0;
+                            const isNoir = titleText.includes('noir') || genreText.includes('noir');
+                            
+                            return !isNoir && yr > 0 && yr < 1980;
+                        });
+                    } else if (cat.domId === "filmnoir") {
+                        filtered = movies.filter(m => {
+                            const titleText = (m.title || '').toLowerCase();
+                            const genreText = Array.isArray(m.genres) 
+                                ? m.genres.join(' ').toLowerCase() 
+                                : (m.genres || '').toLowerCase();
+                            const yr = parseInt(m.year, 10) || 0;
+                            const isNoir = titleText.includes('noir') || genreText.includes('noir');
+
+                            return isNoir && (yr === 0 || yr < 1960);
+                        });
+                    } else {
+                        filtered = movies.filter(m => {
+                            const titleText = (m.title || '').toLowerCase();
+                            const genreText = Array.isArray(m.genres) 
+                                ? m.genres.join(' ').toLowerCase() 
+                                : (m.genres || '').toLowerCase();
+                            
+                            return cat.keywords.some(kw => 
+                                titleText.includes(kw) || genreText.includes(kw)
+                            );
+                        });
+                    }
+
+                    if (filtered.length === 0) return;
+                    
+                    const section = document.createElement('section');
+                    section.className = 'shelf';
+                    section.innerHTML = `
+                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
+                            <h2>${cat.title}</h2>
+                            <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                        </div>
+                        <div class="shelf-grid" id="grid-${cat.domId}"></div>
+                    `;
+                    container.appendChild(section);
+                    const grid = document.getElementById(`grid-${cat.domId}`);
+                    
+                    filtered.slice(0, 12).forEach(m => {
+                        grid.appendChild(createMovieCard(m));
+                    });
+                });
+            }
+            
+            renderBatch(categories.slice(0, 3)); 
+            setTimeout(() => renderBatch(categories.slice(3)), 100); 
+        }
+
+        async function init() {
+            try {
+                const response = await fetch('/all-movies.json?t=' + new Date().getTime());
+                allMoviesData = await response.json();
+            } catch (error) {
+                console.error("Error loading data:", error);
+            }
+
+            window.addEventListener('scroll', () => {
+                const btt = document.getElementById('back-to-top');
+                if (btt) btt.style.display = (window.scrollY > 300) ? 'block' : 'none';
+            });
+
+            const searchInput = document.getElementById('search-input');
+            const clearBtn = document.getElementById('clear-search');
+            const surpriseBtn = document.getElementById('surprise-me-btn');
+
+            if (surpriseBtn) {
+                surpriseBtn.addEventListener('click', openSurpriseMovie);
+            }
+
+            const params = new URLSearchParams(window.location.search);
+            const initialSearch = params.get('search');
+            const initialEra = params.get('era');
+
+            if (initialEra && document.querySelector(`.era-pill[data-era="${initialEra}"]`)) {
+                currentEra = initialEra;
+                document.querySelectorAll('.era-pill').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.era === currentEra);
+                });
+            }
+
+            if (initialSearch && searchInput) {
+                searchInput.value = initialSearch;
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('input', applyCurrentView);
+            }
+
+            if (clearBtn && searchInput) {
+                clearBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    clearBtn.style.display = 'none';
+                    applyCurrentView();
+                });
+            }
+
+            document.querySelectorAll('.era-pill').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentEra = btn.dataset.era || 'all';
+                    document.querySelectorAll('.era-pill').forEach(pill => {
+                        pill.classList.toggle('active', pill === btn);
+                    });
+                    applyCurrentView();
+                });
+            });
+
+            applyCurrentView();
         }
 
         init();
@@ -511,6 +935,7 @@
     let deferredPrompt = null;
     const banner = document.getElementById('pwa-install-banner');
     const installBtn = document.getElementById('pwa-install-btn');
+    const headerInstallBtn = document.getElementById('header-install-btn');
     const dismissBtn = document.getElementById('pwa-dismiss-btn');
 
     if (!banner || !installBtn || !dismissBtn) return;
@@ -519,23 +944,33 @@
       window.matchMedia('(display-mode: standalone)').matches ||
       window.navigator.standalone === true;
 
-    if (isStandalone || sessionStorage.getItem('pwaBannerDismissed') === '1') {
+    if (isStandalone) {
+      if (headerInstallBtn) headerInstallBtn.style.display = 'none';
       return;
     }
+
+    const triggerInstall = async () => {
+      if (!deferredPrompt) return;
+      banner.style.display = 'none';
+      if (headerInstallBtn) headerInstallBtn.style.display = 'none';
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    };
 
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      banner.style.display = 'flex';
+      if (headerInstallBtn) headerInstallBtn.style.display = 'inline-flex';
+      if (sessionStorage.getItem('pwaBannerDismissed') !== '1') {
+        banner.style.display = 'flex';
+      }
     });
 
-    installBtn.addEventListener('click', async () => {
-      if (!deferredPrompt) return;
-      banner.style.display = 'none';
-      deferredPrompt.prompt();
-      await deferredPrompt.userChoice;
-      deferredPrompt = null;
-    });
+    installBtn.addEventListener('click', triggerInstall);
+    if (headerInstallBtn) {
+      headerInstallBtn.addEventListener('click', triggerInstall);
+    }
 
     dismissBtn.addEventListener('click', () => {
       banner.style.display = 'none';
@@ -544,6 +979,7 @@
 
     window.addEventListener('appinstalled', () => {
       banner.style.display = 'none';
+      if (headerInstallBtn) headerInstallBtn.style.display = 'none';
       deferredPrompt = null;
     });
   })();
