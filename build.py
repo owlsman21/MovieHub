@@ -31,7 +31,7 @@ def resolve_poster_url(poster_url):
 
 def build_share_page(movie, safe_id):
     raw_title = movie.get('title') or 'Classic Movie'
-    clean_title = raw_title.split('|')[0].strip()
+    clean_title = re.sub(r'\s*\(\d{4}\)\s*$', '', raw_title.split('|')[0]).strip()
     year = movie.get('year')
     display_title = f"{clean_title} ({year})" if year else clean_title
 
