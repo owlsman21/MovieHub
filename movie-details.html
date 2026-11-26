@@ -282,7 +282,12 @@ nav a:hover {
                 shareBtn.addEventListener('click', async () => {
                     const headingEl = document.getElementById('movie-title');
                     const titleText = (headingEl && headingEl.innerText.trim()) || document.title || 'Classic Movie on MovieHub';
-                    const shareUrl = window.location.href;
+                    const safeShareId = currentMovieId
+                        ? String(currentMovieId).replace(/[:\\/*?"<>|]/g, '-')
+                        : '';
+                    const shareUrl = safeShareId
+                        ? `https://moviehub.uk/share/${encodeURIComponent(safeShareId)}.html`
+                        : window.location.href;
                     const shareData = {
                         title: `${titleText} | MovieHub`,
                         text: `Watch "${titleText}" free on MovieHub:`,
