@@ -25,14 +25,14 @@
     <meta id="og-title" property="og:title" content="Movie Details & Archive Stream | MovieHub">
     <meta id="og-description" property="og:description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     <meta id="og-url" property="og:url" content="https://moviehub.uk/movie-details.html">
-    <meta id="og-image" property="og:image" content="https://moviehub.uk/images/poster-placeholder.jpg">
-    <meta id="og-image-secure" property="og:image:secure_url" content="https://moviehub.uk/images/poster-placeholder.jpg">
+    <meta id="og-image" property="og:image" content="https://moviehub.uk/images/moviehub.png">
+    <meta id="og-image-secure" property="og:image:secure_url" content="https://moviehub.uk/images/moviehub.png">
     <meta id="og-image-width" property="og:image:width" content="600">
     <meta id="og-image-height" property="og:image:height" content="900">
     <meta id="twitter-card" name="twitter:card" content="summary_large_image">
     <meta id="twitter-title" name="twitter:title" content="Movie Details & Archive Stream | MovieHub">
     <meta id="twitter-description" name="twitter:description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
-    <meta id="twitter-image" name="twitter:image" content="https://moviehub.uk/images/poster-placeholder.jpg">
+    <meta id="twitter-image" name="twitter:image" content="https://moviehub.uk/images/moviehub.png">
     
     <title>Movie Details & Archive Stream | MovieHub</title>
     
@@ -359,7 +359,6 @@ nav a:hover {
                 return;
             }
 
-            // FORCE FULL ABSOLUTE CANONICAL PATH INCLUDING QUERY PARAMETERS
             const cleanCanonicalUrl = `https://moviehub.uk/movie-details.html?id=${encodeURIComponent(movieId)}`;
             let canonicalTag = document.getElementById('dynamic-canonical');
             if (!canonicalTag) {
@@ -397,10 +396,8 @@ nav a:hover {
                     }
                     iframe.src = embedUrl;
 
-                    // 1. DYNAMIC SEARCH-FRIENDLY TITLE (CLEANED AND FORMATTED)
                     document.title = `${cleanTitle} ${releaseYear} Watch Stream Online | MovieHub`;
                     
-                    // 2. META DESCRIPTION & OPEN GRAPH FOR BOT PARSING
                     const descText = movie.description ? movie.description.substring(0, 155).trim() + '...' : 'Stream classic movies online on MovieHub.';
                     const metaDescriptionElement = document.getElementById('meta-description');
                     if (metaDescriptionElement) {
@@ -413,22 +410,18 @@ nav a:hover {
                     document.getElementById('twitter-title').setAttribute('content', `${cleanTitle} ${releaseYear}`);
                     document.getElementById('twitter-description').setAttribute('content', descText);
 
-                    // 3. GENRE FORMATTING
                     const genreDisplay = Array.isArray(movie.genres) 
                         ? movie.genres.join(', ') 
                         : (movie.genres || 'Classics');
 
-                    // 4. POPULATE MAIN UI FIELDS
                     document.getElementById('movie-title').innerText = cleanTitle;
                     document.getElementById('movie-meta').innerText = `${movie.year || 'N/A'} | ${movie.quality || 'HD'} | ${genreDisplay}`;
                     document.getElementById('movie-desc').innerText = movie.description || 'No overview available for this title.';
 
-                    // 5. POPULATE STRUCTURED METADATA FIELDS
                     document.getElementById('movie-director').innerText = movie.director || 'N/A';
                     document.getElementById('movie-cast').innerText = Array.isArray(movie.cast) ? movie.cast.join(', ') : (movie.cast || 'N/A');
                     document.getElementById('movie-year').innerText = movie.year || 'N/A';
                     
-                    // 6. POPULATE TRIVIA / HIGHLIGHTS
                     const triviaContainer = document.getElementById('movie-trivia');
                     if (movie.trivia && Array.isArray(movie.trivia) && movie.trivia.length > 0) {
                         triviaContainer.innerHTML = movie.trivia.map(item => `<li>${item}</li>`).join('');
@@ -437,23 +430,20 @@ nav a:hover {
                                                      <li>Available to stream on MovieHub Vault.</li>`;
                     }
 
-                    // 7. INJECT SCHEMA (VideoObject) WITH ABSOLUTE ENCODED THUMBNAIL URL
                     try {
-                        let formattedThumbnail = "";
+                        let formattedThumbnail = "https://moviehub.uk/images/moviehub.png";
                         if (movie.posterUrl) {
                             if (movie.posterUrl.startsWith('http')) {
                                 formattedThumbnail = movie.posterUrl;
                             } else {
-                                const cleanPath = movie.posterUrl.startsWith('/') ? movie.posterUrl : '/' + movie.posterUrl;
-                                formattedThumbnail = encodeURI('https://moviehub.uk' + cleanPath);
+                                const cleanRel = movie.posterUrl.replace(/^\/+/, '');
+                                formattedThumbnail = encodeURI('https://moviehub.uk/' + cleanRel);
                             }
                         }
 
-                        if (formattedThumbnail) {
-                            document.getElementById('og-image').setAttribute('content', formattedThumbnail);
-                            document.getElementById('og-image-secure').setAttribute('content', formattedThumbnail);
-                            document.getElementById('twitter-image').setAttribute('content', formattedThumbnail);
-                        }
+                        document.getElementById('og-image').setAttribute('content', formattedThumbnail);
+                        document.getElementById('og-image-secure').setAttribute('content', formattedThumbnail);
+                        document.getElementById('twitter-image').setAttribute('content', formattedThumbnail);
 
                         const script = document.createElement('script');
                         script.type = 'application/ld+json';
@@ -469,7 +459,7 @@ nav a:hover {
                             "publisher": {
                                 "@type": "Organization",
                                 "name": "MovieHub",
-                                "logo": { "@type": "ImageObject", "url": "https://moviehub.uk/logo.png" }
+                                "logo": { "@type": "ImageObject", "url": "https://moviehub.uk/images/moviehub.png" }
                             }
                         });
                         document.head.appendChild(script);
@@ -477,7 +467,6 @@ nav a:hover {
                         console.warn("Schema injection skipped:", schemaErr);
                     }
 
-                    // 8. RENDER RELATED MOVIES
                     try {
                         renderRelatedMovies(movies, movie);
                     } catch (relatedErr) {
@@ -511,9 +500,9 @@ nav a:hover {
                 link.href = `movie-details.html?id=${encodeURIComponent(m.id)}`;
                 
                 const img = document.createElement('img');
-                img.src = m.posterUrl || 'images/poster-placeholder.jpg';
+                img.src = m.posterUrl || 'images/moviehub.png';
                 img.alt = m.title || "Recommended Movie";
-                img.onerror = function() { this.src = 'images/poster-placeholder.jpg'; };
+                img.onerror = function() { this.src = 'images/moviehub.png'; };
                 
                 link.appendChild(img);
                 grid.appendChild(link);
@@ -522,5 +511,6 @@ nav a:hover {
 
         loadMovieDetails();
     </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"13a24ad8c023430a8710d4a6a2b94012","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
