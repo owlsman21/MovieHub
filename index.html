@@ -155,7 +155,7 @@
         .header-install-btn,
         .support-btn {
             height: 38px;
-            padding: 0 16px;
+            padding: 0 15px;
             border-radius: 5px;
             font-family: inherit;
             font-size: 13px;
@@ -164,11 +164,11 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 7px;
+            gap: 6px;
             white-space: nowrap;
             cursor: pointer;
             text-decoration: none;
-            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .header-install-btn {
@@ -224,7 +224,7 @@
         .era-pill {
             background-color: #1d1d1d;
             color: #e4e4e7;
-            border: 1px solid #383838;
+            border: 1px solid var(--gold-accent);
             border-radius: 999px;
             padding: 6px 14px;
             font-size: 12px;
@@ -234,7 +234,7 @@
         }
 
         .era-pill:hover {
-            border-color: var(--gold-accent);
+            border-color: #ffe84d;
             color: #ffffff;
         }
 
@@ -245,8 +245,33 @@
             font-weight: 700;
         }
 
-        .surprise-pill {
+        /* Right-side pair on the Era Bar (Share + Surprise Me) */
+        .bar-right-actions {
             margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bar-share-pill {
+            background-color: #1d1d1d;
+            color: #ffffff;
+            border: 1px solid var(--gold-accent);
+            border-radius: 999px;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .bar-share-pill:hover {
+            background-color: var(--gold-accent);
+            color: #000000;
+            transform: scale(1.03);
+        }
+
+        .surprise-pill {
             background-color: #242008;
             color: var(--gold-accent);
             border: 1px solid var(--gold-accent);
@@ -435,7 +460,7 @@
             display: none;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
             header {
                 padding: 15px 20px;
             }
@@ -454,7 +479,7 @@
             .support-btn {
                 animation: none;
             }
-            .surprise-pill {
+            .bar-right-actions {
                 margin-left: 0;
             }
             main {
@@ -500,7 +525,10 @@
             <button type="button" class="era-pill" data-era="1940s">1940s</button>
             <button type="button" class="era-pill" data-era="1950s">1950s</button>
             <button type="button" class="era-pill" data-era="1960plus">1960s+</button>
-            <button type="button" id="surprise-me-btn" class="surprise-pill">🎁 Surprise Me</button>
+            <div class="bar-right-actions">
+                <button type="button" id="bar-share-btn" class="bar-share-pill" title="Share MovieHub with friends">📤 Share</button>
+                <button type="button" id="surprise-me-btn" class="surprise-pill">🎁 Surprise Me</button>
+            </div>
         </div>
 
         <div id="shelf-container"></div>
@@ -855,6 +883,31 @@
                 const btt = document.getElementById('back-to-top');
                 if (btt) btt.style.display = (window.scrollY > 300) ? 'block' : 'none';
             });
+
+            const barShareBtn = document.getElementById('bar-share-btn');
+            if (barShareBtn) {
+                barShareBtn.addEventListener('click', async () => {
+                    const shareData = {
+                        title: 'MovieHub | Watch Free Classic Movies Online',
+                        text: 'Watch free classic cinema, film noir, and golden-age mysteries on MovieHub:',
+                        url: 'https://moviehub.uk/'
+                    };
+                    if (navigator.share) {
+                        try {
+                            await navigator.share(shareData);
+                            return;
+                        } catch (err) {
+                            if (err && err.name === 'AbortError') return;
+                        }
+                    }
+                    try {
+                        await navigator.clipboard.writeText(shareData.url);
+                        const orig = barShareBtn.textContent;
+                        barShareBtn.textContent = '✓ Link Copied!';
+                        setTimeout(() => { barShareBtn.textContent = orig; }, 2200);
+                    } catch (e) {}
+                });
+            }
 
             const searchInput = document.getElementById('search-input');
             const clearBtn = document.getElementById('clear-search');

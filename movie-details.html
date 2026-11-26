@@ -61,6 +61,64 @@ nav a:hover {
         #wrapper { position: relative; width: 100%; max-width: 850px; margin: 0 auto; background: #000; aspect-ratio: 16 / 9; overflow: hidden; }
         #movie-iframe { width: 100%; height: 100%; border: none; }
         #mega-shield { position: absolute; top: 0; right: 0; width: 25%; height: 20%; z-index: 10; background: transparent; cursor: default; display: none; }
+
+        /* PLAYER ACTION BAR (SHARE, WATCHLIST, SURPRISE ME) */
+        .player-action-bar {
+            max-width: 850px;
+            margin: 14px auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .player-action-btn {
+            height: 38px;
+            padding: 0 16px;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .player-action-btn:hover {
+            transform: scale(1.03);
+        }
+
+        #share-movie-btn {
+            background-color: #ffdd00;
+            color: #000000;
+            border: 1px solid #ffdd00;
+        }
+
+        #share-movie-btn:hover {
+            background-color: #ffe84d;
+        }
+
+        #watchlist-movie-btn,
+        #random-movie-btn {
+            background-color: #181818;
+            color: #ffffff;
+            border: 1px solid #ffdd00;
+        }
+
+        #watchlist-movie-btn:hover,
+        #random-movie-btn:hover {
+            background-color: #ffdd00;
+            color: #000000;
+        }
+
+        #watchlist-movie-btn.saved {
+            background-color: #e50914;
+            color: #ffffff;
+            border-color: #e50914;
+        }
+
         .related-section { margin-top: 40px; padding: 20px; }
         .related-grid { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 20px; }
         .related-grid a img { width: 150px; height: 225px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
@@ -122,6 +180,18 @@ nav a:hover {
             <iframe id="movie-iframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
         </div>
 
+        <div class="player-action-bar">
+            <button type="button" id="share-movie-btn" class="player-action-btn">
+                <i class="fas fa-share-alt"></i> Share This Movie
+            </button>
+            <button type="button" id="watchlist-movie-btn" class="player-action-btn">
+                <i class="fas fa-plus"></i> Add to Watchlist
+            </button>
+            <button type="button" id="random-movie-btn" class="player-action-btn">
+                <i class="fas fa-gift"></i> Surprise Me
+            </button>
+        </div>
+
         <div class="movie-info-block" style="margin-top:20px; background:#1a1a1a; padding:20px; border-radius:8px;">
             <h1 id="movie-title">Classic Movie Stream</h1>
             <p id="movie-meta" style="color:#e50914; font-weight:bold; margin: 10px 0;">Restored Golden Age Cinema</p>
@@ -166,6 +236,8 @@ nav a:hover {
     </main>
 
     <script>
+        const WATCHLIST_KEY = 'moviehub_watchlist_v1';
+
         function safeParseGenres(genres) {
             if (!genres) return [];
             if (Array.isArray(genres)) {
@@ -177,6 +249,96 @@ nav a:hover {
             return [];
         }
 
+        function getWatchlistIds() {
+            try {
+                const parsed = JSON.parse(localStorage.getItem(WATCHLIST_KEY) || '[]');
+                return Array.isArray(parsed) ? parsed : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveWatchlistIds(list) {
+            try {
+                localStorage.setItem(WATCHLIST_KEY, JSON.stringify(list));
+            } catch (e) {}
+        }
+
+        function setupPlayerActions(allMovies, currentMovieId) {
+            const shareBtn = document.getElementById('share-movie-btn');
+            const watchBtn = document.getElementById('watchlist-movie-btn');
+            const randomBtn = document.getElementById('random-movie-btn');
+
+            if (shareBtn) {
+                shareBtn.addEventListener('click', async () => {
+                    const headingEl = document.getElementById('movie-title');
+                    const titleText = (headingEl && headingEl.innerText.trim()) || document.title || 'Classic Movie on MovieHub';
+                    const shareUrl = window.location.href;
+                    const shareData = {
+                        title: `${titleText} | MovieHub`,
+                        text: `Watch "${titleText}" free on MovieHub:`,
+                        url: shareUrl
+                    };
+
+                    if (navigator.share) {
+                        try {
+                            await navigator.share(shareData);
+                            return;
+                        } catch (err) {
+                            if (err && err.name === 'AbortError') return;
+                        }
+                    }
+
+                    try {
+                        await navigator.clipboard.writeText(shareUrl);
+                        const origHtml = shareBtn.innerHTML;
+                        shareBtn.innerHTML = '<i class="fas fa-check"></i> Link Copied!';
+                        setTimeout(() => { shareBtn.innerHTML = origHtml; }, 2200);
+                    } catch (e) {}
+                });
+            }
+
+            if (watchBtn) {
+                if (!currentMovieId) {
+                    watchBtn.style.display = 'none';
+                } else {
+                    const refreshWatchUI = () => {
+                        const saved = getWatchlistIds().includes(String(currentMovieId));
+                        watchBtn.classList.toggle('saved', saved);
+                        watchBtn.innerHTML = saved
+                            ? '<i class="fas fa-check"></i> In My Watchlist'
+                            : '<i class="fas fa-plus"></i> Add to Watchlist';
+                    };
+                    refreshWatchUI();
+
+                    watchBtn.addEventListener('click', () => {
+                        const list = getWatchlistIds();
+                        const cleanId = String(currentMovieId);
+                        const idx = list.indexOf(cleanId);
+                        if (idx >= 0) {
+                            list.splice(idx, 1);
+                        } else {
+                            list.unshift(cleanId);
+                        }
+                        saveWatchlistIds(list);
+                        refreshWatchUI();
+                    });
+                }
+            }
+
+            if (randomBtn) {
+                randomBtn.addEventListener('click', () => {
+                    if (!Array.isArray(allMovies) || allMovies.length === 0) return;
+                    const pool = allMovies.filter(m => m && m.id && String(m.id) !== String(currentMovieId || ''));
+                    const candidates = pool.length > 0 ? pool : allMovies;
+                    const pick = candidates[Math.floor(Math.random() * candidates.length)];
+                    if (pick && pick.id) {
+                        window.location.href = `movie-details.html?id=${encodeURIComponent(pick.id)}`;
+                    }
+                });
+            }
+        }
+
         async function loadMovieDetails() {
             const params = new URLSearchParams(window.location.search);
             const rawId = params.get('id');
@@ -184,6 +346,7 @@ nav a:hover {
             
             if (!movieId) {
                 document.getElementById('movie-meta').innerText = "No movie specified.";
+                setupPlayerActions([], null);
                 return;
             }
 
@@ -201,6 +364,8 @@ nav a:hover {
             try {
                 const response = await fetch('all-movies.json');
                 const movies = await response.json();
+                setupPlayerActions(movies, movieId);
+
                 const movie = movies.find(m => m && m.id === movieId);
                 
                 if (movie) {
@@ -249,7 +414,7 @@ nav a:hover {
 
                     // 5. POPULATE STRUCTURED METADATA FIELDS
                     document.getElementById('movie-director').innerText = movie.director || 'N/A';
-                    document.getElementById('movie-cast').innerText = movie.cast || 'N/A';
+                    document.getElementById('movie-cast').innerText = Array.isArray(movie.cast) ? movie.cast.join(', ') : (movie.cast || 'N/A');
                     document.getElementById('movie-year').innerText = movie.year || 'N/A';
                     
                     // 6. POPULATE TRIVIA / HIGHLIGHTS
