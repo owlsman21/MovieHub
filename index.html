@@ -431,7 +431,7 @@
             <img src="images/moviehub.png" alt="MovieHub Logo" class="header-logo-img">
         </a>
 
-        <button id="header-install-btn" type="button" class="header-install-inline" style="display: none;">
+        <button id="header-install-btn" type="button" class="header-install-inline">
             📲 Install App
         </button>
 
@@ -864,7 +864,7 @@
     <img src="images/icon-192.png" alt="MovieHub" style="width: 36px; height: 36px; border-radius: 6px; flex-shrink: 0;">
     <div style="font-size: 14px; line-height: 1.35;">
       <strong style="color: #ffdd00;">Install MovieHub App</strong><br>
-      <span style="color: #d4d4d8; font-size: 12px;">Add to your home screen for quick access to classic films.</span>
+      <span id="pwa-banner-subtext" style="color: #d4d4d8; font-size: 12px;">Add to your home screen for quick access to classic films.</span>
     </div>
   </div>
   <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
@@ -880,6 +880,7 @@
   (() => {
     let deferredPrompt = null;
     const banner = document.getElementById('pwa-install-banner');
+    const subtext = document.getElementById('pwa-banner-subtext');
     const installBtn = document.getElementById('pwa-install-btn');
     const headerInstallBtn = document.getElementById('header-install-btn');
     const dismissBtn = document.getElementById('pwa-dismiss-btn');
@@ -895,19 +896,34 @@
       return;
     }
 
+    const showFallbackBanner = () => {
+      if (subtext) {
+        subtext.textContent = 'Use your browser menu (⋮ or share) and select "Install app" or "Add to Home Screen".';
+      }
+      banner.style.display = 'flex';
+    };
+
     const triggerInstall = async () => {
-      if (!deferredPrompt) return;
-      banner.style.display = 'none';
-      if (headerInstallBtn) headerInstallBtn.style.display = 'none';
-      deferredPrompt.prompt();
-      await deferredPrompt.userChoice;
-      deferredPrompt = null;
+      if (deferredPrompt) {
+        banner.style.display = 'none';
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        if (choice && choice.outcome === 'accepted' && headerInstallBtn) {
+          headerInstallBtn.style.display = 'none';
+        }
+        return;
+      }
+      showFallbackBanner();
     };
 
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
       if (headerInstallBtn) headerInstallBtn.style.display = 'inline-flex';
+      if (subtext) {
+        subtext.textContent = 'Add to your home screen for quick access to classic films.';
+      }
       if (sessionStorage.getItem('pwaBannerDismissed') !== '1') {
         banner.style.display = 'flex';
       }
