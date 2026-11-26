@@ -70,7 +70,6 @@ def build_share_page(movie, safe_id):
     <meta name="twitter:description" content="{esc_desc}">
     <meta name="twitter:image" content="{esc_poster}">
 
-    <meta http-equiv="refresh" content="0;url={esc_target}">
     <script>window.location.replace({json.dumps(target_url)});</script>
 </head>
 <body style="background:#0a0a0a;color:#fff;font-family:sans-serif;text-align:center;padding:40px;">
