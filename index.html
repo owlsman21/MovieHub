@@ -43,60 +43,65 @@
             padding-bottom: 50px;
         }
 
-        /* HEADER LAYOUT: Left Logo + Center Stack (Title & Search) + Right Header Actions */
+        /* COMPACT HEADER: Left Logo + Centered Title + Search Row (Share | Search | Support Us) */
         header {
-            background-color: rgba(0, 0, 0, 0.95);
-            top: 0;
-            z-index: 1000;
-            padding: 15px 40px;
+            background-color: rgba(0, 0, 0, 0.96);
+            padding: 10px 32px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid #222;
-            gap: 12px;
+            gap: 8px;
             position: relative;
         }
 
-        /* Left Side Graphic Logo */
         .header-logo-img {
             position: absolute;
-            left: 40px;
+            left: 32px;
             top: 50%;
             transform: translateY(-50%);
-            height: 90px;
+            height: 68px;
             width: auto;
             object-fit: contain;
         }
 
-        /* Centered MovieHub Logo Text */
         .logo {
-            font-size: 42px;
+            font-size: 33px;
             font-weight: bold;
             color: var(--accent-color);
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
+            line-height: 1.1;
             white-space: nowrap;
             text-align: center;
         }
 
-        /* Search Bar Centered Directly Under Logo Text */
+        .search-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 680px;
+        }
+
         .search-container {
             position: relative;
             display: flex;
             align-items: center;
-            width: 360px;
-            max-width: 90%;
+            flex: 1 1 280px;
+            max-width: 340px;
         }
 
         .search-container input {
             width: 100%;
-            padding: 10px 36px 10px 14px;
+            padding: 8px 34px 8px 12px;
             background-color: #1a1a1a;
-            border: 1px solid #555;
+            border: 1px solid var(--gold-accent);
             border-radius: 6px;
             color: #fff;
-            font-size: 14px;
+            font-size: 13px;
             outline: none;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -109,8 +114,8 @@
 
         .search-container input:focus {
             background-color: #222222;
-            border-color: var(--gold-accent);
-            box-shadow: 0 0 0 2px rgba(255, 221, 0, 0.22);
+            border-color: #ffe84d;
+            box-shadow: 0 0 0 2px rgba(255, 221, 0, 0.28);
             text-align: left;
         }
 
@@ -141,46 +146,35 @@
             }
         }
 
-        /* Right-aligned Action Group (Install App & Support Us) */
-        .header-actions {
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .header-install-btn,
+        .header-share-btn,
         .support-btn {
-            height: 38px;
-            padding: 0 15px;
-            border-radius: 5px;
+            height: 35px;
+            padding: 0 13px;
+            border-radius: 6px;
             font-family: inherit;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             line-height: 1;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
             white-space: nowrap;
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .header-install-btn {
-            background-color: transparent;
+        .header-share-btn {
+            background-color: #1a1a1a;
             color: #ffffff;
             border: 1px solid var(--gold-accent);
         }
 
-        .header-install-btn:hover {
+        .header-share-btn:hover {
             background-color: var(--gold-accent);
             color: #000000;
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
 
         .support-btn {
@@ -196,97 +190,36 @@
             border-color: #ffe84d;
             box-shadow: 0 4px 16px rgba(255, 221, 0, 0.5);
             animation: none;
-            transform: scale(1.05);
+            transform: scale(1.04);
+        }
+
+        .header-install-inline {
+            position: absolute;
+            right: 32px;
+            top: 14px;
+            height: 30px;
+            padding: 0 11px;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid var(--gold-accent);
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .header-install-inline:hover {
+            background-color: var(--gold-accent);
+            color: #000000;
         }
 
         main {
-            padding: 20px 40px;
-        }
-
-        /* Era Quick-Filter Bar */
-        .era-filter-bar {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 26px;
-            padding-bottom: 14px;
-            border-bottom: 1px solid #242424;
-        }
-
-        .era-filter-label {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-right: 4px;
-            font-weight: 600;
-        }
-
-        .era-pill {
-            background-color: #1d1d1d;
-            color: #e4e4e7;
-            border: 1px solid var(--gold-accent);
-            border-radius: 999px;
-            padding: 6px 14px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-        }
-
-        .era-pill:hover {
-            border-color: #ffe84d;
-            color: #ffffff;
-        }
-
-        .era-pill.active {
-            background-color: var(--gold-accent);
-            color: #000000;
-            border-color: var(--gold-accent);
-            font-weight: 700;
-        }
-
-        /* Right-side pair on the Era Bar (Share + Surprise Me) */
-        .bar-right-actions {
-            margin-left: auto;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .bar-share-pill {
-            background-color: #1d1d1d;
-            color: #ffffff;
-            border: 1px solid var(--gold-accent);
-            border-radius: 999px;
-            padding: 6px 15px;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-        }
-
-        .bar-share-pill:hover {
-            background-color: var(--gold-accent);
-            color: #000000;
-            transform: scale(1.03);
-        }
-
-        .surprise-pill {
-            background-color: #242008;
-            color: var(--gold-accent);
-            border: 1px solid var(--gold-accent);
-            border-radius: 999px;
-            padding: 6px 15px;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-        }
-
-        .surprise-pill:hover {
-            background-color: var(--gold-accent);
-            color: #000000;
-            transform: scale(1.03);
+            padding: 14px 32px 20px;
         }
 
         .results-meta {
@@ -295,7 +228,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 12px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .results-count {
@@ -334,12 +267,12 @@
         }
 
         .shelf {
-            margin-bottom: 40px;
+            margin-bottom: 34px;
         }
 
         .shelf h2 {
             font-size: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #fff;
         }
 
@@ -460,30 +393,33 @@
             display: none;
         }
 
-        @media (max-width: 960px) {
+        @media (max-width: 900px) {
             header {
-                padding: 15px 20px;
+                padding: 10px 16px;
             }
             .header-logo-img {
                 position: static;
                 transform: none;
-                height: 60px;
+                height: 52px;
             }
-            .header-actions {
+            .header-install-inline {
                 position: static;
-                transform: none;
-                margin-top: 6px;
+                margin-top: 2px;
+            }
+            .search-row {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            .search-container {
+                order: -1;
+                flex: 1 1 100%;
+                max-width: 340px;
             }
             .support-btn {
                 animation: none;
             }
-            .bar-right-actions {
-                margin-left: 0;
-            }
             main {
-                padding: 15px 20px;
+                padding: 12px 16px 20px;
             }
         }
     </style>
@@ -491,25 +427,26 @@
 <body>
 
     <header>
-        <!-- Far Left Graphic Logo -->
         <a href="/">
             <img src="images/moviehub.png" alt="MovieHub Logo" class="header-logo-img">
         </a>
 
-        <!-- Center Title -->
+        <button id="header-install-btn" type="button" class="header-install-inline" style="display: none;">
+            📲 Install App
+        </button>
+
         <a href="/" class="logo">MovieHub</a>
 
-        <!-- Search Bar Directly Below Center Title -->
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="🔍 Search movies, cast, year...">
-            <span id="clear-search">&times;</span>
-        </div>
-
-        <!-- Right Header Actions -->
-        <div class="header-actions">
-            <button id="header-install-btn" type="button" class="header-install-btn" style="display: none;">
-                📲 Install App
+        <div class="search-row">
+            <button type="button" id="header-share-btn" class="header-share-btn" title="Share MovieHub with friends">
+                📤 Share
             </button>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="🔍 Search movies, cast, year...">
+                <span id="clear-search">&times;</span>
+            </div>
+
             <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="support-btn" title="Enjoying the free classics? Support MovieHub">
                 ☕ Support Us
             </a>
@@ -517,20 +454,6 @@
     </header>
 
     <main>
-        <div class="era-filter-bar" id="era-filter-bar">
-            <span class="era-filter-label">Era:</span>
-            <button type="button" class="era-pill active" data-era="all">All Eras</button>
-            <button type="button" class="era-pill" data-era="precode">Pre-Code (Pre-1935)</button>
-            <button type="button" class="era-pill" data-era="1930s">1930s</button>
-            <button type="button" class="era-pill" data-era="1940s">1940s</button>
-            <button type="button" class="era-pill" data-era="1950s">1950s</button>
-            <button type="button" class="era-pill" data-era="1960plus">1960s+</button>
-            <div class="bar-right-actions">
-                <button type="button" id="bar-share-btn" class="bar-share-pill" title="Share MovieHub with friends">📤 Share</button>
-                <button type="button" id="surprise-me-btn" class="surprise-pill">🎁 Surprise Me</button>
-            </div>
-        </div>
-
         <div id="shelf-container"></div>
     </main>
 
@@ -605,15 +528,6 @@
         function sanitizeFilename(name) {
             if (!name) return '';
             return String(name).replace(/[:\\/*?"<>|]/g, '-');
-        }
-
-        function openSurpriseMovie() {
-            if (!Array.isArray(allMoviesData) || allMoviesData.length === 0) return;
-            const pick = allMoviesData[Math.floor(Math.random() * allMoviesData.length)];
-            if (pick && pick.id) {
-                const safeId = sanitizeFilename(pick.id);
-                window.location.href = `/movie-details.html?id=${encodeURIComponent(safeId)}`;
-            }
         }
 
         function createMovieCard(movie) {
@@ -691,9 +605,6 @@
             if (searchInput) searchInput.value = '';
             if (clearBtn) clearBtn.style.display = 'none';
             currentEra = 'all';
-            document.querySelectorAll('.era-pill').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.era === 'all');
-            });
             renderShelves(allMoviesData);
         }
 
@@ -760,7 +671,7 @@
                     const watchlistSection = document.createElement('section');
                     watchlistSection.className = 'shelf';
                     watchlistSection.innerHTML = `
-                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
+                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
                             <h2>My Watchlist (${savedMovies.length})</h2>
                         </div>
                         <div class="shelf-grid" id="grid-watchlist"></div>
@@ -774,7 +685,7 @@
             const latestAddedSection = document.createElement('section');
             latestAddedSection.className = 'shelf';
             latestAddedSection.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
                     <h2>Latest Additions</h2>
                     <a href="/catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                 </div>
@@ -852,7 +763,7 @@
                     const section = document.createElement('section');
                     section.className = 'shelf';
                     section.innerHTML = `
-                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 15px;">
+                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
                             <h2>${cat.title}</h2>
                             <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                         </div>
@@ -884,9 +795,9 @@
                 if (btt) btt.style.display = (window.scrollY > 300) ? 'block' : 'none';
             });
 
-            const barShareBtn = document.getElementById('bar-share-btn');
-            if (barShareBtn) {
-                barShareBtn.addEventListener('click', async () => {
+            const headerShareBtn = document.getElementById('header-share-btn');
+            if (headerShareBtn) {
+                headerShareBtn.addEventListener('click', async () => {
                     const shareData = {
                         title: 'MovieHub | Watch Free Classic Movies Online',
                         text: 'Watch free classic cinema, film noir, and golden-age mysteries on MovieHub:',
@@ -902,30 +813,22 @@
                     }
                     try {
                         await navigator.clipboard.writeText(shareData.url);
-                        const orig = barShareBtn.textContent;
-                        barShareBtn.textContent = '✓ Link Copied!';
-                        setTimeout(() => { barShareBtn.textContent = orig; }, 2200);
+                        const orig = headerShareBtn.textContent;
+                        headerShareBtn.textContent = '✓ Link Copied!';
+                        setTimeout(() => { headerShareBtn.textContent = orig; }, 2200);
                     } catch (e) {}
                 });
             }
 
             const searchInput = document.getElementById('search-input');
             const clearBtn = document.getElementById('clear-search');
-            const surpriseBtn = document.getElementById('surprise-me-btn');
-
-            if (surpriseBtn) {
-                surpriseBtn.addEventListener('click', openSurpriseMovie);
-            }
 
             const params = new URLSearchParams(window.location.search);
             const initialSearch = params.get('search');
             const initialEra = params.get('era');
 
-            if (initialEra && document.querySelector(`.era-pill[data-era="${initialEra}"]`)) {
+            if (initialEra && ['precode', '1930s', '1940s', '1950s', '1960plus'].includes(initialEra)) {
                 currentEra = initialEra;
-                document.querySelectorAll('.era-pill').forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.era === currentEra);
-                });
             }
 
             if (initialSearch && searchInput) {
@@ -943,16 +846,6 @@
                     applyCurrentView();
                 });
             }
-
-            document.querySelectorAll('.era-pill').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    currentEra = btn.dataset.era || 'all';
-                    document.querySelectorAll('.era-pill').forEach(pill => {
-                        pill.classList.toggle('active', pill === btn);
-                    });
-                    applyCurrentView();
-                });
-            });
 
             applyCurrentView();
         }
