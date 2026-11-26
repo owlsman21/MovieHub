@@ -19,11 +19,20 @@
     
     <meta id="meta-description" name="description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     
-    <!-- DYNAMIC OG TAGS FOR SEARCH BOT INDEXING -->
+    <!-- DYNAMIC OG & TWITTER TAGS FOR SOCIAL SHARES & SEARCH BOTS -->
+    <meta id="og-type" property="og:type" content="video.movie">
+    <meta id="og-site-name" property="og:site_name" content="MovieHub">
     <meta id="og-title" property="og:title" content="Movie Details & Archive Stream | MovieHub">
     <meta id="og-description" property="og:description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
     <meta id="og-url" property="og:url" content="https://moviehub.uk/movie-details.html">
     <meta id="og-image" property="og:image" content="https://moviehub.uk/images/poster-placeholder.jpg">
+    <meta id="og-image-secure" property="og:image:secure_url" content="https://moviehub.uk/images/poster-placeholder.jpg">
+    <meta id="og-image-width" property="og:image:width" content="600">
+    <meta id="og-image-height" property="og:image:height" content="900">
+    <meta id="twitter-card" name="twitter:card" content="summary_large_image">
+    <meta id="twitter-title" name="twitter:title" content="Movie Details & Archive Stream | MovieHub">
+    <meta id="twitter-description" name="twitter:description" content="Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.">
+    <meta id="twitter-image" name="twitter:image" content="https://moviehub.uk/images/poster-placeholder.jpg">
     
     <title>Movie Details & Archive Stream | MovieHub</title>
     
@@ -401,6 +410,8 @@ nav a:hover {
                     document.getElementById('og-title').setAttribute('content', `${cleanTitle} ${releaseYear}`);
                     document.getElementById('og-description').setAttribute('content', descText);
                     document.getElementById('og-url').setAttribute('content', cleanCanonicalUrl);
+                    document.getElementById('twitter-title').setAttribute('content', `${cleanTitle} ${releaseYear}`);
+                    document.getElementById('twitter-description').setAttribute('content', descText);
 
                     // 3. GENRE FORMATTING
                     const genreDisplay = Array.isArray(movie.genres) 
@@ -440,6 +451,8 @@ nav a:hover {
 
                         if (formattedThumbnail) {
                             document.getElementById('og-image').setAttribute('content', formattedThumbnail);
+                            document.getElementById('og-image-secure').setAttribute('content', formattedThumbnail);
+                            document.getElementById('twitter-image').setAttribute('content', formattedThumbnail);
                         }
 
                         const script = document.createElement('script');
