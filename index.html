@@ -896,10 +896,15 @@
       return;
     }
 
-    const showFallbackBanner = () => {
+    const setManualText = () => {
       if (subtext) {
-        subtext.textContent = 'Use your browser menu (⋮ or share) and select "Install app" or "Add to Home Screen".';
+        subtext.textContent = 'Use your browser menu (⋮ or share) to "Install app" or "Add to Home Screen".';
       }
+    };
+
+    const showBanner = (force = false) => {
+      if (!force && sessionStorage.getItem('pwaBannerDismissed') === '1') return;
+      if (!deferredPrompt) setManualText();
       banner.style.display = 'flex';
     };
 
@@ -914,7 +919,7 @@
         }
         return;
       }
-      showFallbackBanner();
+      showBanner(true);
     };
 
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -924,9 +929,15 @@
       if (subtext) {
         subtext.textContent = 'Add to your home screen for quick access to classic films.';
       }
-      if (sessionStorage.getItem('pwaBannerDismissed') !== '1') {
-        banner.style.display = 'flex';
-      }
+      showBanner(false);
+    });
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        if (!deferredPrompt && !isStandalone) {
+          showBanner(false);
+        }
+      }, 600);
     });
 
     installBtn.addEventListener('click', triggerInstall);
