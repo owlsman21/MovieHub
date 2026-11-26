@@ -1,21 +1,88 @@
 import os
 import json
 import re
+import html
 from datetime import datetime
 
 JSON_DIR = './data'
 ALL_MOVIES_FILE = 'all-movies.json'
 SITEMAP_FILE = 'vault-map.xml'
+SHARE_DIR = 'share'
 BASE_URL = 'https://moviehub.uk/'
+DEFAULT_POSTER = 'https://moviehub.uk/images/moviehub.png'
+DEFAULT_DESC = 'Stream restored classic cinema, golden era westerns, film noir, and rare movies completely free on MovieHub.'
+
 
 def sanitize_filename(name):
     name = str(name)
     return re.sub(r'[:\\/*?"<>|]', '-', name)
 
+
+def resolve_poster_url(poster_url):
+    if not poster_url:
+        return DEFAULT_POSTER
+    p = str(poster_url).strip()
+    if p.startswith('http://') or p.startswith('https://'):
+        return p
+    # Strip leading slashes so local paths like "images/foo.jpg" work cleanly
+    clean_rel = p.lstrip('/')
+    return f"{BASE_URL}{clean_rel}"
+
+
+def build_share_page(movie, safe_id):
+    raw_title = movie.get('title') or 'Classic Movie'
+    clean_title = raw_title.split('|')[0].strip()
+    year = movie.get('year')
+    display_title = f"{clean_title} ({year})" if year else clean_title
+
+    raw_desc = (movie.get('description') or DEFAULT_DESC).strip()
+    short_desc = (raw_desc[:155].strip() + '...') if len(raw_desc) > 155 else raw_desc
+
+    target_url = f"{BASE_URL}movie-details.html?id={safe_id}"
+    poster_full_url = resolve_poster_url(movie.get('posterUrl'))
+
+    esc_title = html.escape(display_title, quote=True)
+    esc_desc = html.escape(short_desc, quote=True)
+    esc_target = html.escape(target_url, quote=True)
+    esc_poster = html.escape(poster_full_url, quote=True)
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{esc_title} | MovieHub</title>
+    <meta name="description" content="{esc_desc}">
+    <link rel="canonical" href="{esc_target}">
+
+    <meta property="og:type" content="video.movie">
+    <meta property="og:site_name" content="MovieHub">
+    <meta property="og:title" content="{esc_title}">
+    <meta property="og:description" content="{esc_desc}">
+    <meta property="og:url" content="{esc_target}">
+    <meta property="og:image" content="{esc_poster}">
+    <meta property="og:image:secure_url" content="{esc_poster}">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="900">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{esc_title}">
+    <meta name="twitter:description" content="{esc_desc}">
+    <meta name="twitter:image" content="{esc_poster}">
+
+    <meta http-equiv="refresh" content="0;url={esc_target}">
+    <script>window.location.replace({json.dumps(target_url)});</script>
+</head>
+<body style="background:#0a0a0a;color:#fff;font-family:sans-serif;text-align:center;padding:40px;">
+    <p>Redirecting to <a href="{esc_target}" style="color:#ffdd00;">{esc_title}</a>...</p>
+</body>
+</html>
+"""
+
+
 def load_and_consolidate_movies():
     movies_map = {}
-    
-    # Load existing all-movies.json if present
+
     if os.path.exists(ALL_MOVIES_FILE):
         try:
             with open(ALL_MOVIES_FILE, 'r', encoding='utf-8') as f:
@@ -27,7 +94,6 @@ def load_and_consolidate_movies():
         except Exception as e:
             print(f"Error reading {ALL_MOVIES_FILE}: {e}")
 
-    # Load from ./data directory if present
     if os.path.exists(JSON_DIR):
         for filename in os.listdir(JSON_DIR):
             if filename.endswith('.json'):
@@ -45,21 +111,20 @@ def load_and_consolidate_movies():
                     print(f"Error reading {path}: {e}")
 
     all_movies = list(movies_map.values())
-    
-    # Save back consolidated list to all-movies.json
+
     with open(ALL_MOVIES_FILE, 'w', encoding='utf-8') as f:
         json.dump(all_movies, f, indent=4, ensure_ascii=False)
-    
+
     print(f"Consolidated {len(all_movies)} movies into {ALL_MOVIES_FILE}")
     return all_movies
 
+
 def main():
     movies = load_and_consolidate_movies()
-    
-    # Sort movies alphabetically by their ID
     movies = sorted(movies, key=lambda m: m.get('id', ''))
-    
-    # Automatically Build vault-map.xml optimized for Google indexing
+
+    os.makedirs(SHARE_DIR, exist_ok=True)
+
     today = datetime.now().strftime('%Y-%m-%d')
     xml_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -79,6 +144,8 @@ def main():
     ]
 
     seen_ids = set()
+    share_count = 0
+
     for movie in movies:
         movie_id = movie.get('id')
         if not movie_id:
@@ -86,8 +153,13 @@ def main():
         safe_id = sanitize_filename(movie_id)
         if safe_id not in seen_ids:
             seen_ids.add(safe_id)
+
+            share_path = os.path.join(SHARE_DIR, f"{safe_id}.html")
+            with open(share_path, 'w', encoding='utf-8') as sf:
+                sf.write(build_share_page(movie, safe_id))
+            share_count += 1
+
             xml_lines.append('  <url>')
-            # Updated to point explicitly to movie-details.html?id=
             xml_lines.append(f'    <loc>{BASE_URL}movie-details.html?id={safe_id}</loc>')
             xml_lines.append(f'    <lastmod>{today}</lastmod>')
             xml_lines.append('  </url>')
@@ -98,6 +170,8 @@ def main():
         f.write('\n'.join(xml_lines))
 
     print(f"Successfully generated optimized {SITEMAP_FILE} with {len(seen_ids)} sorted movie URLs!")
+    print(f"Generated {share_count} static share pages in ./{SHARE_DIR}/")
+
 
 if __name__ == '__main__':
     main()
