@@ -1,5 +1,28 @@
 [
     {
+  "id": "queen-of-the-damned-2002",
+  "title": "Queen of the Damned (2002) | Stuart Townsend & Aaliyah | Gothic Vampire Horror",
+  "year": 2002,
+  "director": "Michael Rymer",
+  "cast": [
+    "Stuart Townsend",
+    "Aaliyah",
+    "Marguerite Moreau",
+    "Vincent Pérez",
+    "Lena Olin",
+    "Paul McGann",
+    "Claudia Black",
+    "Bruce Spence"
+  ],
+  "duration": "101 min",
+  "quality": "1080p",
+  "genres": "Horror, Fantasy, Drama",
+  "description": "Awakened from a long slumber, the vampire Lestat becomes a rock star whose music draws the attention of ancient vampire queen Akasha and a curious young researcher.",
+  "embedId": "7132619344537",
+  "source": "ok.ru",
+  "posterUrl": "images/queen-of-the-damned-2002.jpg"
+},
+    {
         "id": "the-little-vampire-2000",
         "title": "The Little Vampire (2000) | Jonathan Lipnicki & Richard E. Grant | Family Fantasy Comedy",
         "year": 2000,
