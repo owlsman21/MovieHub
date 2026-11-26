@@ -1,5 +1,28 @@
 [
     {
+        "id": "the-little-vampire-2000",
+        "title": "The Little Vampire (2000) | Jonathan Lipnicki & Richard E. Grant | Family Fantasy Comedy",
+        "year": 2000,
+        "director": "Uli Edel",
+        "cast": [
+            "Jonathan Lipnicki",
+            "Rollo Weeks",
+            "Richard E. Grant",
+            "Jim Carter",
+            "Alice Krige",
+            "Pamela Gidley",
+            "Tommy Hinkley",
+            "Anna Popplewell"
+        ],
+        "duration": "95 min",
+        "quality": "HD",
+        "genres": "Family, Fantasy, Comedy, Adventure",
+        "description": "After moving from California to a remote Scottish village, a lonely nine-year-old boy befriends a young vampire and helps his family fend off a relentless vampire hunter.",
+        "embedId": "4209996597798",
+        "source": "ok.ru",
+        "posterUrl": "images/the-little-vampire-2000.jpg"
+    },
+    {
         "id": "night-nurse-1931",
         "title": "Night Nurse (1931) Full Movie | Barbara Stanwyck, Clark Gable & Joan Blondell | Pre-Code Crime Drama",
         "year": 1931,
