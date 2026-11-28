@@ -1,5 +1,64 @@
 [
     {
+        "id": "backdraft-2-2019",
+        "title": "Backdraft 2 (2019) Full Movie | Joe Anderson, William Baldwin & Donald Sutherland | Action Drama Thriller",
+        "year": 2019,
+        "director": "Gonzalo López-Gallego",
+        "cast": "Joe Anderson, William Baldwin, Donald Sutherland, Alisha Bailey, Alastair Mackenzie, Dominic Mafham, Jessamine-Bliss Bell, Aaron McCusker",
+        "quality": "HD",
+        "genres": [
+            "Action",
+            "Drama",
+            "Crime",
+            "Thriller"
+        ],
+        "topPick": "y",
+        "description": "A fire investigator with the Chicago Fire Department uncovers a sinister plot while tracking an arms dealer who uses deadly fires as a distraction, seeking help from jailed arsonist Ronald Bartel. Directed by Gonzalo López-Gallego. Watch more on MovieHub: https://moviehub.uk/",
+        "embedId": "8534998321740",
+        "source": "ok.ru",
+        "posterUrl": "images/backdraft 2 2019.jpg"
+    },
+    {
+        "id": "alien-vs-predator-2004",
+        "title": "Alien vs. Predator (2004) Full Movie | Sanaa Lathan, Raoul Bova & Lance Henriksen | Sci-Fi Action Horror",
+        "year": 2004,
+        "director": "Paul W. S. Anderson",
+        "cast": "Sanaa Lathan, Raoul Bova, Lance Henriksen, Ewen Bremner, Colin Salmon, Tommy Flanagan, Ian Whyte, Tom Woodruff Jr.",
+        "quality": "HD",
+        "genres": [
+            "Sci-Fi",
+            "Action",
+            "Horror",
+            "Thriller"
+        ],
+        "topPick": "y",
+        "description": "An expedition led by Charles Bishop Weyland (Lance Henriksen), guide Alexa Woods (Sanaa Lathan), and archaeologist Sebastian De Rosa (Raoul Bova) uncovers an ancient pyramid beneath the ice near Antarctica, caught in a deadly hunt between Aliens and Predators. Directed by Paul W. S. Anderson. Watch more on MovieHub: https://moviehub.uk/",
+        "embedId": "8510367337036",
+        "source": "ok.ru",
+        "posterUrl": "images/alien vs predator 2004.jpg"
+    },
+    {
+        "id": "the-woman-in-the-window-1944",
+        "title": "The Woman in the Window (1944) Full Movie | Edward G. Robinson, Joan Bennett & Dan Duryea | Classic Film Noir",
+        "year": 1944,
+        "director": "Fritz Lang",
+        "cast": "Edward G. Robinson, Joan Bennett, Raymond Massey, Edmund Breon, Dan Duryea, Thomas E. Jackson, Dorothy Peterson, Arthur Loft, Iris Adrian",
+        "quality": "HD",
+        "genres": [
+            "Film Noir",
+            "Mystery",
+            "Thriller",
+            "Crime",
+            "Drama",
+            "Classics"
+        ],
+        "topPick": "N",
+        "description": "While his family is away on vacation, a mild-mannered psychology professor (Edward G. Robinson) becomes entranced by a woman (Joan Bennett) pictured in a gallery window and is drawn into a deadly cover-up and blackmail plot. Directed by Fritz Lang. Watch more on MovieHub: https://moviehub.uk/",
+        "embedId": "16353931496176",
+        "source": "ok.ru",
+        "posterUrl": "images/the woman in the window 1944.jpg"
+    },
+    {
         "id": "out-of-the-blue-1947",
         "title": "Out of the Blue (1947) Full Movie | George Brent, Virginia Mayo, Turhan Bey & Ann Dvorak | Classic Comedy",
         "year": 1947,
@@ -21042,16 +21101,22 @@
     },
     {
         "id": "long-shadows-2025",
-        "title": "Long Shadows (2025) Full Movie | Western Action",
+        "title": "Long Shadows (2025) Full Movie | Dermot Mulroney, Jacqueline Bisset & Dominic Monaghan | Western Thriller",
         "year": 2025,
-        "director": "Unknown",
+        "director": "William Shockley",
         "quality": "HD",
         "duration": "1h 30m",
-        "genres": "Action, Western, Drama",
-        "description": "After his parents are savagely murdered, a young man ages out of an orphanage with a single intent: revenge. However, the love of a girl and the weight of his psychological trauma lead him down a complex and mystifying path. Explore this Western action drama and our full collection at https://moviehub.uk/.",
+        "genres": [
+            "Action",
+            "Western",
+            "Thriller"
+        ],
+        "description": "After witnessing the brutal murder of his parents as a boy, a young man ages out of an orphanage bent on vengeance, only to find his path complicated by love and lingering psychological trauma. Directed by William Shockley.",
         "embedId": "10768314206758",
         "source": "ok.ru",
-        "posterUrl": "images/long-shadows-2025.jpg"
+        "posterUrl": "images/Long.jpg",
+        "cast": "Brayden DeMorest, Jacqueline Bisset, Dermot Mulroney, Dominic Monaghan, Blaine Maye, Sarah Cortez, Ronnie Gene Blevins, Chris Mulkey",
+        "topPick": "N"
     },
     {
         "id": "ZandysBride",
@@ -22968,91 +23033,115 @@
         "posterUrl": "images/the last of the mohicans.jpg"
     },
     {
-        "id": "Wyatt-Earp",
-        "title": "Wyatt Earp.HD ",
-        "description": " The epic biography of western lawman Wyatt Earp, who at an early age, is taught that nothing matters more than family and the law. He becomes a respected sheriff in Dodge City and Tombstone. Joined by his brothers and Doc Holliday, Earp wages war on the dreaded Clanton and McLaury gangs.",
-        "embedId": "1010676468377",
+        "id": "wyatt-earp-1994",
+        "title": "Wyatt Earp (1994) Full Movie | Kevin Costner, Dennis Quaid & Gene Hackman | Epic Biographical Western",
+        "year": 1994,
+        "director": "Lawrence Kasdan",
+        "cast": "Kevin Costner, Dennis Quaid, Gene Hackman, Jeff Fahey, Mark Harmon, Michael Madsen, Catherine O'Hara, Bill Pullman, Isabella Rossellini, Tom Sizemore, JoBeth Williams, Mare Winningham",
+        "quality": "HD",
         "genres": [
-            "Western"
+            "Western",
+            "Biography",
+            "Drama",
+            "Action"
         ],
+        "topPick": "N",
+        "description": "Chronicling the life of frontier lawman Wyatt Earp (Kevin Costner) from his youth in Iowa to his days as a marshal in Dodge City and Tombstone, where he, his brothers, and Doc Holliday (Dennis Quaid) clash with the Clanton and McLaury gangs. Directed by Lawrence Kasdan.",
+        "embedId": "1010676468377",
         "source": "ok.ru",
-        "posterUrl": "images/wyatt earp.jpg",
-        "year": 1994
+        "posterUrl": "images/wyatt earp.jpg"
     },
     {
-        "id": "Forsaken",
-        "posterUrl": "images/Forsaken.jpg",
+        "id": "forsaken-2015",
+        "title": "Forsaken (2015) Full Movie | Kiefer Sutherland, Donald Sutherland & Demi Moore | Western Drama",
         "year": 2015,
-        "title": "Forsaken",
-        "description": "In 1872, an embittered gunslinger named John Henry Clayton attempts to make amends with his estranged father Reverend Samuel Clayton while their community is besieged by ruthless land-grabbers.",
-        "embedId": "3553582516791",
+        "director": "Jon Cassar",
+        "cast": "Kiefer Sutherland, Donald Sutherland, Brian Cox, Michael Wincott, Demi Moore, Aaron Poole, Greg Ellis, Landon Liboiron",
+        "quality": "HD",
         "genres": [
             "Western",
             "Drama"
         ],
-        "source": "ok.ru"
+        "topPick": "N",
+        "description": "In 1872, Civil War veteran and former gunslinger John Henry Clayton (Kiefer Sutherland) returns to his Wyoming hometown to repair his broken relationship with his estranged preacher father (Donald Sutherland), only to find the local ranchers terrorized by a ruthless land-grabber. Directed by Jon Cassar.",
+        "embedId": "3553582516791",
+        "source": "ok.ru",
+        "posterUrl": "images/Forsaken.jpg"
     },
     {
-        "id": "The-Magnificent-Seven",
-        "posterUrl": "images/the magnificent seven 1960.jpg",
+        "id": "the-magnificent-seven-1960",
+        "title": "The Magnificent Seven (1960) Full Movie | Yul Brynner, Steve McQueen & Charles Bronson | Classic Western",
         "year": 1960,
-        "title": "The Magnificent Seven",
-        "description": "Seven gunfighters are hired by Mexican peasants to liberate their village from oppressive bandits.",
-        "embedId": "9187069201058",
+        "director": "John Sturges",
+        "cast": "Yul Brynner, Eli Wallach, Steve McQueen, Charles Bronson, Robert Vaughn, Brad Dexter, James Coburn, Horst Buchholz",
+        "quality": "HD",
         "genres": [
             "Western",
             "Action",
             "Adventure"
         ],
-        "source": "ok.ru"
+        "topPick": "N",
+        "description": "Seven hired American gunfighters led by Chris Adams (Yul Brynner) band together to defend a poor Mexican farming village from ruthless bandit leader Calvera (Eli Wallach) and his gang. Directed by John Sturges.",
+        "embedId": "9187069201058",
+        "source": "ok.ru",
+        "posterUrl": "images/the magnificent seven 1960.jpg"
     },
     {
-        "id": "Stagecoach",
-        "title": "Stagecoach (1939) – John Wayne The Classic Western in Color",
-        "description": "Stagecoach (1939) – The Classic Western in Colour",
+        "id": "stagecoach-1939",
+        "title": "Stagecoach (1939) Full Movie | John Wayne, Claire Trevor & Thomas Mitchell | Classic Western",
+        "year": 1939,
+        "director": "John Ford",
+        "cast": "Claire Trevor, John Wayne, Andy Devine, John Carradine, Thomas Mitchell, Louise Platt, George Bancroft, Donald Meek, Berton Churchill, Tim Holt",
+        "quality": "HD",
         "genres": [
             "Western",
-            "Epic"
+            "Adventure",
+            "Drama",
+            "Classics"
         ],
-        "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/caf342e133b1d757a79420193f8c3f6c83fcd240d280390cd59eb6ae91674937.jpg",
+        "topPick": "N",
+        "description": "A diverse group of strangers boards an overland stagecoach traveling across dangerous Apache territory to Lordsburg, led by the Ringo Kid (John Wayne) and saloon girl Dallas (Claire Trevor). Directed by John Ford.",
+        "embedId": "v716bzc",
         "source": "rumble",
-        "embedId": "v716bzc"
+        "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/caf342e133b1d757a79420193f8c3f6c83fcd240d280390cd59eb6ae91674937.jpg"
     },
     {
-        "id": "long_shadows",
-        "posterUrl": "images/Long.jpg",
-        "year": 2025,
-        "title": "long shadows ",
-        "description": "When a young boy's mother and father are savagely murdered, he ages out of an orphanage intent on revenge, but the love of a girl and psychological trauma lead him down a mystifying path.",
-        "embedId": "10768314206758",
-        "genres": [
-            "Action,Western"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "3:10_to_YUMA",
-        "title": "3:10 to YUMA (1957)",
-        "description": "In order to safeguard his ranch, Dan Evans decides to escort an outlaw, Ben Wade, to Contention City for a paltry sum of two hundred dollars.",
+        "id": "3-10-to-yuma-1957",
+        "title": "3:10 to Yuma (1957) Full Movie | Glenn Ford, Van Heflin & Felicia Farr | Classic Western",
+        "year": 1957,
+        "director": "Delmer Daves",
+        "cast": "Glenn Ford, Van Heflin, Felicia Farr, Leora Dana, Henry Jones, Richard Jaeckel, Robert Emhardt, Sheridan Comerate",
+        "quality": "HD",
         "genres": [
             "Western",
-            "Epic"
+            "Drama",
+            "Thriller",
+            "Classics"
         ],
-        "posterUrl": "https://m.media-amazon.com/images/I/81VJfBNoKZL._AC_UF894,1000_QL80_.jpg",
+        "topPick": "N",
+        "description": "Desperate to save his drought-stricken ranch, impoverished farmer Dan Evans (Van Heflin) agrees to escort captured outlaw leader Ben Wade (Glenn Ford) to Contention City to catch the 3:10 train to Yuma prison while Wade's gang closes in. Directed by Delmer Daves.",
+        "embedId": "v71bqli",
         "source": "rumble",
-        "embedId": "v71bqli"
+        "posterUrl": "https://m.media-amazon.com/images/I/81VJfBNoKZL._AC_UF894,1000_QL80_.jpg"
     },
     {
-        "id": "Rawhide",
-        "title": "Rawhide (1951)",
-        "description": "A stagecoach stop employee and a stranded woman traveller find themselves at the mercy of four desperate outlaws, who are intent on robbing the next day's gold shipment.",
+        "id": "rawhide-1951",
+        "title": "Rawhide (1951) Full Movie | Tyrone Power, Susan Hayward & Hugh Marlowe | Classic Western Thriller",
+        "year": 1951,
+        "director": "Henry Hathaway",
+        "cast": "Tyrone Power, Susan Hayward, Hugh Marlowe, Dean Jagger, Edgar Buchanan, Jack Elam, George Tobias, Jeff Corey",
+        "quality": "HD",
         "genres": [
             "Western",
-            "Epic"
+            "Thriller",
+            "Drama",
+            "Classics"
         ],
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTVhM2IyM2YtNTM1Yy00M2I0LThlZmYtNjhjZjM4Yjg0ZjcwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "topPick": "N",
+        "description": "An isolated stagecoach station attendant (Tyrone Power) and a stranded woman passenger (Susan Hayward) are taken hostage by four ruthless outlaws waiting to ambush the next day's gold shipment. Directed by Henry Hathaway.",
+        "embedId": "v71bv8q",
         "source": "rumble",
-        "embedId": "v71bv8q"
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTVhM2IyM2YtNTM1Yy00M2I0LThlZmYtNjhjZjM4Yjg0ZjcwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
         "id": "WingsOfTheHawk",
