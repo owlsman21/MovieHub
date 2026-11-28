@@ -16007,17 +16007,25 @@
         "source": "ok.ru",
         "year": 1972
     },
-    {
-        "id": "pulp-fiction",
-        "title": "Pulp Fiction",
-        "description": "The lives of two mob hitmen, a boxer, a gangster\"s wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-        "posterUrl": "images/pulp fiction.jpg",
-        "genres": [
-            "Crime"
-        ],
-        "source": "ok.ru",
-        "year": 1994
-    },
+   {
+    "id": "pulp-fiction-1994",
+    "title": "Pulp Fiction (1994) Full Movie | John Travolta, Samuel L. Jackson & Uma Thurman | Crime Drama Thriller",
+    "year": 1994,
+    "director": "Quentin Tarantino",
+    "cast": "John Travolta, Samuel L. Jackson, Uma Thurman, Bruce Willis, Harvey Keitel, Tim Roth, Amanda Plummer, Ving Rhames, Eric Stoltz, Rosanna Arquette, Christopher Walken, Maria de Medeiros",
+    "quality": "HD",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller",
+      "Classics"
+    ],
+    "topPick": "y",
+    "description": "The lives of two mob hitmen (John Travolta and Samuel L. Jackson), a boxer (Bruce Willis), a gangster's wife (Uma Thurman), and a pair of diner bandits intertwine in four tales of violence and redemption across Los Angeles. Directed by Quentin Tarantino. Watch more on MovieHub: https://moviehub.uk/",
+    "embedId": "16702134291047",
+    "source": "ok.ru",
+    "posterUrl": "images/pulp fiction.jpg"
+  },
     {
         "id": "Smokey-And-The-Bandit",
         "title": "Smokey And The Bandit",
