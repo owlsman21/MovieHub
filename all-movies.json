@@ -1,5 +1,135 @@
 [
     {
+        "id": "out-of-the-blue-1947",
+        "title": "Out of the Blue (1947) Full Movie | George Brent, Virginia Mayo, Turhan Bey & Ann Dvorak | Classic Comedy",
+        "year": 1947,
+        "director": "Leigh Jason",
+        "cast": "George Brent, Virginia Mayo, Turhan Bey, Ann Dvorak, Carole Landis, Elizabeth Patterson, Julia Dean, Richard Lane",
+        "quality": "HD",
+        "genres": "Comedy, Classics",
+        "description": "A husband panics when a tipsy decorator passes out in his Greenwich Village apartment while his wife is away, sparking a clumsy blackmail plot and a neighborhood murder mix-up. Starring George Brent, Virginia Mayo, Turhan Bey, and Ann Dvorak.",
+        "embedId": "16357715282672",
+        "source": "ok.ru",
+        "posterUrl": "images/out-of-the-blue-1947.jpg"
+    },
+    {
+        "id": "our-blushing-brides-1930",
+        "title": "Our Blushing Brides (1930) Full Movie | Joan Crawford, Robert Montgomery & Anita Page | Pre-Code Drama",
+        "year": 1930,
+        "director": "Harry Beaumont",
+        "cast": "Joan Crawford, Robert Montgomery, Anita Page, Raymond Hackett, Dorothy Sebastian, Hedda Hopper, John Miljan",
+        "quality": "1080p",
+        "genres": "Drama, Romance, Classics",
+        "description": "Three department store shopgirls chase romance and security in New York—one wary of wealthy men, one dreaming of easy money, and one falling hard for the store heir. Starring Joan Crawford, Robert Montgomery, and Anita Page.",
+        "embedId": "16361105328880",
+        "source": "ok.ru",
+        "posterUrl": "images/our-blushing-brides-1930.jpg"
+    },
+    {
+        "id": "the-night-of-the-party-1934",
+        "title": "The Night of the Party (1934) Full Movie | Leslie Banks & Ian Hunter | British Mystery Thriller",
+        "year": 1934,
+        "director": "Michael Powell",
+        "cast": "Leslie Banks, Ian Hunter, Jane Baxter, Ernest Thesiger, Viola Keats, Malcolm Keen, Jane Millican, Muriel Aked",
+        "quality": "HD",
+        "genres": "Mystery, Thriller, Crime, Classics",
+        "description": "A ruthless newspaper magnate is found murdered during a parlour game after a dinner party, leaving detectives to sort through suspects among his guests. Directed by Michael Powell and starring Leslie Banks and Ian Hunter.",
+        "embedId": "16361122040560",
+        "source": "ok.ru",
+        "posterUrl": "images/the-night-of-the-party-1934.jpg"
+    },
+    {
+        "id": "rhinoceros-1974",
+        "title": "Rhinoceros (1974) Full Movie | Zero Mostel, Gene Wilder & Karen Black | Comedy Drama",
+        "year": 1974,
+        "director": "Tom O'Horgan",
+        "cast": "Zero Mostel, Gene Wilder, Karen Black, Joe Silver, Robert Weil, Marilyn Chris, Percy Rodrigues, Robert Fields",
+        "quality": "HD",
+        "genres": "Comedy, Drama, Fantasy, Classics",
+        "description": "Townspeople start turning into rhinoceroses while office clerk Stanley watches his friend John and girlfriend Daisy change around him. Starring Zero Mostel, Gene Wilder, and Karen Black.",
+        "embedId": "16365537331952",
+        "source": "ok.ru",
+        "posterUrl": "images/rhinoceros-1974.jpg"
+    },
+    {
+        "id": "romance-in-manhattan-1934",
+        "title": "Romance in Manhattan (1934) Full Movie | Francis Lederer & Ginger Rogers | Classic Comedy Drama",
+        "year": 1934,
+        "director": "Stephen Roberts",
+        "cast": "Francis Lederer, Ginger Rogers, Arthur Hohl, Jimmy Butler, J. Farrell MacDonald, Helen Ware, Eily Malyon, Lillian Harmer",
+        "quality": "HD",
+        "genres": "Comedy, Drama, Romance, Classics",
+        "description": "A naive Czech immigrant in New York gets help from a kindhearted chorus girl and a beat cop as he tries to stay in the country and make his way. Starring Francis Lederer and Ginger Rogers.",
+        "embedId": "16367445347056",
+        "source": "ok.ru",
+        "posterUrl": "images/romance-in-manhattan-1934.jpg"
+    },
+    {
+        "id": "the-last-flight-1931",
+        "title": "The Last Flight (1931) Full Movie | Richard Barthelmess & Helen Chandler | Pre-Code Drama",
+        "year": 1931,
+        "director": "William Dieterle",
+        "cast": "Richard Barthelmess, David Manners, John Mack Brown, Helen Chandler, Elliott Nugent, Walter Byron",
+        "quality": "HD",
+        "genres": "Drama, Classics",
+        "description": "Four disillusioned World War I pilots drift through post-war Paris with an aimless socialite as old wounds and tensions fracture their bond. Starring Richard Barthelmess and Helen Chandler.",
+        "embedId": "16368231320304",
+        "source": "ok.ru",
+        "posterUrl": "images/the-last-flight-1931.jpg"
+    },
+    {
+        "id": "woman-they-almost-lynched-1953",
+        "title": "Woman They Almost Lynched (1953) Full Movie | John Lund & Audrey Totter | Classic Western",
+        "year": 1953,
+        "director": "Allan Dwan",
+        "cast": "John Lund, Brian Donlevy, Audrey Totter, Joan Leslie, Ben Cooper",
+        "quality": "HD",
+        "genres": "Western, Drama, Classics",
+        "description": "During the Civil War on the Missouri-Kansas border, Quantrill's outlaw gang and a rival faction led by a vengeful woman clash in a lawless frontier town. Starring John Lund, Brian Donlevy, and Audrey Totter.",
+        "embedId": "16368522824432",
+        "source": "ok.ru",
+        "posterUrl": "images/woman-they-almost-lynched-1953.jpg"
+    },
+    {
+        "id": "a-very-honorable-guy-1934",
+        "title": "A Very Honorable Guy (1934) Full Movie | Joe E. Brown & Alice White | Classic Comedy",
+        "year": 1934,
+        "director": "Lloyd Bacon",
+        "cast": "Joe E. Brown, Alice White, Robert Barrat, Alan Dinehart, Irene Franklin",
+        "quality": "HD",
+        "genres": "Comedy, Crime, Classics",
+        "description": "Deep in gambling debt, kindhearted 'Feet' Samuels sells his body to an ambitious doctor for one last month of high living—only for his luck to suddenly turn around. Starring Joe E. Brown and Alice White.",
+        "embedId": "16379500890864",
+        "source": "ok.ru",
+        "posterUrl": "images/a-very-honorable-guy-1934.jpg"
+    },
+    {
+        "id": "and-then-there-were-none-1945",
+        "title": "And Then There Were None (1945) Full Movie | Barry Fitzgerald & Walter Huston | Classic Agatha Christie Mystery",
+        "year": 1945,
+        "director": "René Clair",
+        "quality": "HD",
+        "genres": "Mystery, Drama, Classics",
+        "description": "Ten strangers are lured to an isolated island mansion by an unseen host who accuses them of past crimes, before they begin mysteriously dying one by one. Starring Barry Fitzgerald and Walter Huston.",
+        "embedId": "v7a8awc",
+        "source": "rumble",
+        "posterUrl": "images/and-then-there-were-none-1945.jpg"
+    },
+    {
+        "id": "the-texas-chain-saw-massacre-1974",
+        "title": "The Texas Chain Saw Massacre (1974) Full Movie | Marilyn Burns, Gunnar Hansen & Edwin Neal | Classic Horror",
+        "year": 1974,
+        "director": "Tobe Hooper",
+        "cast": "Marilyn Burns, Gunnar Hansen, Paul A. Partain, Edwin Neal, Jim Siedow, Teri McMinn, Allen Danziger",
+        "duration": "83 min",
+        "quality": "HD",
+        "genres": "Horror, Thriller, Classics",
+        "description": "A group of friends traveling through rural Texas to check on a family grave stumble into a secluded farmhouse and fall prey to a terrifying family of killers led by Leatherface.",
+        "embedId": "9266949786249",
+        "source": "ok.ru",
+        "posterUrl": "images/the-texas-chain-saw-massacre-1974.jpg"
+    },
+    {
         "id": "murder-on-the-orient-express-1974",
         "title": "Murder on the Orient Express (1974) Full Movie | Albert Finney, Lauren Bacall & Ingrid Bergman | Classic Mystery",
         "year": 1974,
@@ -5972,18 +6102,6 @@
         "posterUrl": "images/the-million-pound-note-1954.jpg"
     },
     {
-        "id": "and-then-there-were-none-1945",
-        "title": "And Then There Were None (1945) Full Movie | Barry Fitzgerald & Walter Huston | Classic Agatha Christie Mystery",
-        "year": 1945,
-        "director": "René Clair",
-        "quality": "HD",
-        "genres": "Mystery, Drama, Classics",
-        "description": "Ten strangers are lured to an isolated island mansion by an unseen host who accuses them of past crimes, before they begin mysteriously dying one by one. Starring Barry Fitzgerald and Walter Huston.",
-        "embedId": "v7a8awc",
-        "source": "rumble",
-        "posterUrl": "images/and-then-there-were-none-1945.jpg"
-    },
-    {
         "id": "the-little-princess-1939",
         "title": "The Little Princess (1939) Full Movie | Shirley Temple & Richard Greene | Classic Hollywood Drama",
         "year": 1939,
@@ -11863,17 +11981,6 @@
         "posterUrl": "https://m.media-amazon.com/images/I/71MUxrwa3yL._AC_UF894,1000_QL80_.jpg"
     },
     {
-        "id": "The-Salvation-2014",
-        "title": "The Salvation (2014) | Mads Mikkelsen | Eva Green | Western Revenge | Full Movie",
-        "year": 2014,
-        "quality": "HD",
-        "genres": "Western, Action, Drama",
-        "description": "Mads Mikkelsen and Jeffrey Dean Morgan star in this brutal, old-school revenge Western. After a Danish settler kills the man who murdered his family, he unleashes the fury of a notorious gang leader and must hunt down the outlaws alone.",
-        "embedId": "11506100144793",
-        "source": "ok.ru",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTA5MTU2NjIxOTNeQTJeQWpwZ15BbWU4MDA5Njc0MDIx._V1_.jpg"
-    },
-    {
         "id": "The-Catch-2020",
         "title": "The Catch (2020) | Katia Winter | Kyle Gallner | True Crime Heist | Full Movie",
         "year": 2020,
@@ -12279,6 +12386,316 @@
         "posterUrl": "https://m.media-amazon.com/images/I/91McjFw6eIL._AC_UF894,1000_QL80_.jpg"
     },
     {
+        "id": "dragon-soldiers-2020",
+        "title": "Dragon Soldiers (2020) Full Movie | Antuone Torbert, Ruben Pla & Tarkan Dospil | Action Sci-Fi",
+        "year": 2020,
+        "director": "Hank Braxtan",
+        "cast": "Antuone Torbert, Ruben Pla, Tarkan Dospil, Heath C. Heine, Arielle Brachfeld, Dan Sinclair, Motown Maurice",
+        "quality": "HD",
+        "genres": [
+            "Sci-Fi"
+        ],
+        "topPick": "N",
+        "description": "A squad of mercenaries sent into the mountains to find missing hikers ends up battling a deadly dragon and a ruthless militia. Directed by Hank Braxtan and starring Antuone Torbert, Ruben Pla, and Tarkan Dospil.",
+        "embedId": "1630024567449",
+        "source": "ok.ru",
+        "posterUrl": "images/dragon soldiers.jpg"
+    },
+    {
+        "id": "the-punisher-1989",
+        "title": "The Punisher (1989) Full Movie | Dolph Lundgren & Louis Gossett Jr. | Action Thriller",
+        "year": 1989,
+        "director": "Mark Goldblatt",
+        "cast": "Dolph Lundgren, Louis Gossett Jr., Jeroen Krabbé, Kim Miyori, Bryan Marshall, Nancy Everhard, Barry Otto, Brian Rooney",
+        "quality": "HD",
+        "genres": [
+            "Action"
+        ],
+        "topPick": "N",
+        "description": "An ex-cop wages a one-man war against the criminal underworld after his family is murdered. Starring Dolph Lundgren and Louis Gossett Jr.",
+        "embedId": "2099299682969",
+        "source": "ok.ru",
+        "posterUrl": "images/the punisher.jpg"
+    },
+    {
+        "id": "i-am-wrath-2016",
+        "title": "I Am Wrath (2016) Full Movie | John Travolta & Christopher Meloni | Action Revenge Thriller",
+        "description": "A man seeks revenge for his wife's murder when corrupt police fail to catch the killers.",
+        "embedId": "1060182231705",
+        "genres": [
+            "Action, Thriller, Crime"
+        ],
+        "source": "ok.ru",
+        "posterUrl": "https://images.flickdirect.com/cache/movies/i-am-wrath/05000-i-am-wrath-poster.jpg",
+        "year": 2016
+    },
+    {
+        "id": "brawl-in-cell-block-99-2017",
+        "title": "Brawl in Cell Block 99 (2017) Full Movie | Vince Vaughn, Jennifer Carpenter & Don Johnson | Crime Action Drama",
+        "year": 2017,
+        "director": "S. Craig Zahler",
+        "cast": "Vince Vaughn, Jennifer Carpenter, Don Johnson, Udo Kier, Marc Blucas, Tom Guiry, Fred Melamed, Dion Mucciacciaro",
+        "quality": "1080p",
+        "genres": [
+            "Drama",
+            "Action"
+        ],
+        "topPick": "N",
+        "description": "A former boxer and drug runner ends up in a brutal prison, forced to make impossible choices. Starring Vince Vaughn, Jennifer Carpenter, and Don Johnson.",
+        "embedId": "1200399846041",
+        "source": "ok.ru",
+        "posterUrl": "images/brawl in cell block 99.jpg"
+    },
+    {
+        "id": "true-romance-1993",
+        "title": "True Romance (1993) Full Movie | Christian Slater, Patricia Arquette & Dennis Hopper | Crime Romance Action",
+        "year": 1993,
+        "director": "Tony Scott",
+        "cast": "Christian Slater, Patricia Arquette, Dennis Hopper, Val Kilmer, Gary Oldman, Christopher Walken, Brad Pitt, Michael Rapaport, Bronson Pinchot, Saul Rubinek",
+        "quality": "HD",
+        "genres": [
+            "Drama",
+            "Action"
+        ],
+        "topPick": "y",
+        "description": "A comic book nerd and a call girl fall in love and go on the run from the mob. Directed by Tony Scott and starring Christian Slater, Patricia Arquette, and Dennis Hopper.",
+        "embedId": "1189170907801",
+        "source": "ok.ru",
+        "posterUrl": "images/true-romance.jpg"
+    },
+    {
+        "id": "police-story-1985",
+        "title": "Police Story (1985) Full Movie | Jackie Chan & Brigitte Lin | Classic Martial Arts Action",
+        "year": 1985,
+        "director": "Jackie Chan",
+        "quality": "HD",
+        "genres": "Action, Crime, Martial Arts, Classics",
+        "description": "A virtuous Hong Kong police officer must clear his name after being framed for murder by a drug lord he was helping to prosecute. Featuring legendary stunts and intense martial arts. Watch the full movie on MovieHub: https://moviehub.zya.me/",
+        "embedId": "1189169334937",
+        "source": "ok.ru",
+        "posterUrl": "https://m.media-amazon.com/images/I/71j2lJAhamL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+        "id": "heat-1995",
+        "title": "Heat (1995) Full Movie | Al Pacino, Robert De Niro & Val Kilmer | Crime Action Drama",
+        "year": 1995,
+        "director": "Michael Mann",
+        "cast": "Al Pacino, Robert De Niro, Val Kilmer, Jon Voight, Tom Sizemore, Diane Venora, Amy Brenneman, Ashley Judd, Mykelti Williamson, Wes Studi",
+        "quality": "HD",
+        "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "topPick": "N",
+        "description": "A career thief and an obsessive LAPD detective square off in a high-stakes Los Angeles game of cat and mouse where both men's professional and personal lives collide. Directed by Michael Mann and starring Al Pacino and Robert De Niro.",
+        "embedId": "1189169138329",
+        "source": "ok.ru",
+        "posterUrl": "images/heat.jpg"
+    },
+    {
+        "id": "the-guvnors-2014",
+        "title": "The Guvnors (2014) Full Movie | Harley Sylvester, Doug Allen & Terry Stone | British Crime Action Drama",
+        "year": 2014,
+        "director": "Gabe Turner",
+        "cast": "Harley Sylvester, Doug Allen, Terry Stone, Richard Warwick, Jay Simpson, Thomas Turgoose, Vas Blackwood, Alex Reid, Keith-Lee Castle, Johnnie Stewart",
+        "quality": "HD",
+        "genres": [
+            "Action",
+            "Drama",
+            "Crime"
+        ],
+        "topPick": "N",
+        "description": "A retired gang leader is drawn back into London's violent underworld when a new generation of street fighters and old rivalries threaten his quiet life. Directed by Gabe Turner.",
+        "embedId": "1123590015641",
+        "source": "ok.ru",
+        "posterUrl": "images/the guvnors.jpg"
+    },
+    {
+        "id": "north-v-south-2015",
+        "title": "North v South (2015) Full Movie",
+        "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMjA4NTA5MzY5M15BMl5BanBnXkFtZTgwMDUyNzI3NTE@._V1_.jpg",
+        "uploadDate": "2026-02-17T08:00:00+00:00",
+        "year": 2015,
+        "director": "Steven Nesbit",
+        "quality": "HD",
+        "genres": "Action, Crime, Thriller, British Classics",
+        "description": "A gritty, modern-day Romeo and Juliet story set against the backdrop of a brutal UK gang war. As the criminal underworlds of the North and South clash, two star-crossed lovers must hide their relationship from rival gang leaders Vic Clarke and John Claridge. Starring Bernard Hill, Steven Berkoff, and Freema Agyeman.",
+        "embedId": "1157638130329",
+        "source": "ok.ru",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BODcwOTA3MDE1OV5BMl5BanBnXkFtZTgwMDYwNDMzNzE@._V1_.jpg"
+    },
+    {
+        "id": "dead-rush-2016",
+        "title": "Dead Rush (2016) Full Movie | Charlie Vaughn, Katie B & Richard H. Black | Zombie Horror Thriller",
+        "year": 2016,
+        "director": "Charlie Vaughn",
+        "quality": "HD",
+        "duration": "1h 24m",
+        "genres": [
+            "Horror",
+            "Thriller"
+        ],
+        "starring": "David Michael Moote, Steven Kartchner, Cally Koukoui, Rich Piatkowski, Charlie Hamilton",
+        "archiveStatus": "Feature Presentation / Stream",
+        "description": "A man's life is turned upside down when a sudden outbreak ignites a full-blown zombie epidemic, leaving survivors with few places to hide as he rushes home to protect his pregnant wife and gathers fellow survivors along the way. Directed by Charlie Vaughn.",
+        "highlights": [
+            "Innovative POV Horror: Filmed completely from the protagonist's first-person perspective for maximum immersion.",
+            "Directed by Zachary Ramelan, delivering a fast-paced, visceral take on the classic zombie outbreak theme.",
+            "Starring David Michael Moote alongside Steven Kartchner, Cally Koukoui, and Rich Piatkowski.",
+            "Combines intense survival action with psychological suspense as the apocalypse unfolds."
+        ],
+        "embedId": "6410479798937",
+        "source": "ok.ru",
+        "posterUrl": "images/dead rush.jpg",
+        "cast": "Charlie Vaughn, Katie B, Richard H. Black, Matt K. Smith, Alex Vea, Stephanie S. Martinez, Robert M. Reyes",
+        "topPick": "N"
+    },
+    {
+        "id": "fragile-2005",
+        "title": "Fragile (2005) Full Movie | Calista Flockhart, Richard Roxburgh & Elena Anaya | Supernatural Hospital Horror",
+        "year": 2005,
+        "director": "Jaume Balagueró",
+        "cast": "Calista Flockhart, Richard Roxburgh, Elena Anaya, Gemma Jones, Yasmin Murphy, Colin McFarlane, Michael Pennington, Daniel Ortiz",
+        "quality": "HD",
+        "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "At her new job in a rundown children's hospital preparing to close, an American nurse tries to keep her young patients safe from a string of mysterious, frightening attacks. Directed by Jaume Balagueró and starring Calista Flockhart.",
+        "embedId": "2575196097177",
+        "source": "ok.ru",
+        "posterUrl": "images/fragile.jpg"
+    },
+    {
+        "id": "the-ladykillers-1955",
+        "title": "The Ladykillers (1955) Full Movie | Alec Guinness & Peter Sellers | Classic British Comedy",
+        "year": 1955,
+        "director": "Alexander Mackendrick",
+        "quality": "1080p",
+        "genres": "Comedy, Crime, Classics",
+        "description": "A sweet old widow accidentally thwarts a gang of eccentric bank robbers posing as a string quintet in this legendary Ealing Studios dark comedy. Starring Alec Guinness and Peter Sellers.",
+        "embedId": "v75ujia",
+        "source": "rumble",
+        "posterUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BYTVlM2JmOGQtNWEwYy00NDQzLWIyZmEtOGZhMzgxZGRjZDA0XkEyXkFqcGdeQXVyMDI2NDg0NQ%40%40._V1_.jpg&f=1&nofb=1&ipt=9f32df6b6c3fd0d4f0579737c65752b30abbaf3e7933a96b2ea99c13adfc6499"
+    },
+    {
+        "id": "Merry-Christmas-Mr-Lawrence-(1983)-1080p",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWU3NzRlZTktZWFjMC00OWYzLTkzZTItMjI5Mjg5YmJjNGEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "year": 1983,
+        "title": "Merry Christmas Mr. Lawrence (1983) 1080p",
+        "description": "During WWII, a British soldier, Major Jack Celliers, arrives in a Japanese POW camp. The camp commander, Captain Yonoi, becomes obsessed with Celliers' defiant spirit, leading to a deep psychological conflict between Eastern and Western values. Meanwhile, Colonel Lawrence attempts to bridge the cultural gap between the captives and their captors.",
+        "director": "Nagisa Ôshima",
+        "embedId": "v7616q6",
+        "genres": [
+            "Drama",
+            "War"
+        ],
+        "source": "rumble",
+        "quality": "1080p",
+        "duration": "02:03:00"
+    },
+    {
+        "id": "sorcerer-1977-full-movie",
+        "title": "Sorcerer (1977) Full Movie | William Friedkin, Roy Scheider | Intense Action Thriller, Nitro Express, Tangerine Dream | Cult Classic 1080p",
+        "year": 1977,
+        "director": "William Friedkin",
+        "quality": "1080p",
+        "genres": [
+            "Thriller",
+            "Adventure",
+            "Drama"
+        ],
+        "description": "Embark on a heart-pounding journey into the unknown with \"Sorcerer\" (1977), William Friedkin's acclaimed action-thriller masterpiece. Starring Roy Scheider as Scanlon (aka \"Dominguez\"), Bruno Cremer as Victor Manzon (aka \"Serrano\"), Francisco Rabal as Nilo, and Amidou as Kassem (aka \"Martinez\"), this R-rated film plunges four desperate fugitives into a perilous mission in a remote South American jungle. They must transport unstable, sweating nitroglycerin in two dilapidated trucks (\"Lazaro\" and \"Salazar\") across 218 miles of treacherous terrain, including an unforgettable rope bridge crossing, to extinguish a raging oil well fire. Widely considered a more faithful adaptation of Georges Arnaud's novel The Wages of Fear, \"Sorcerer\" was initially overlooked but has since been critically reappraised as one of the most intense and visually stunning films of its era. Featuring an iconic, atmospheric electronic score by Tangerine Dream, this 2-hour, 1-minute journey into existential dread and human endurance is a testament to Friedkin's uncompromising vision and practical filmmaking. Experience the white-knuckle suspense in pristine 1080p. Watch the full movie now.",
+        "embedId": "v75ktty",
+        "source": "rumble",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ5ODA1NDk0Nl5BMl5BanBnXkFtZTgwNTc0OTIwOTE@._V1_.jpg",
+        "duration": "2Hrs"
+    },
+    {
+        "id": "i-went-down-1997-full-movie",
+        "title": "I Went Down (1997) Full Movie | Brendan Gleeson, Peter McDonald | Irish Crime Comedy, Road Movie | Paddy Breathnach | 1080p",
+        "year": 1997,
+        "director": "Paddy Breathnach",
+        "quality": "1080p",
+        "genres": [
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Action"
+        ],
+        "description": "Get ready for a darkly comedic ride through the Irish criminal underworld with \"I Went Down\" (1997)! This R-rated Irish crime comedy, directed by Paddy Breathnach and written by Conor McPherson, pairs two unlikely anti-heroes on a wild road trip. Recently released from prison, Git Hynes (Peter McDonald) finds himself in deep trouble with notorious crime boss Tom French (Tony Doyle) after defending his friend. To settle the debt, Git is forced to team up with the volatile and unpredictable Bunny Kelly (Brendan Gleeson) on a seemingly simple mission: retrieve a missing associate from Cork. What follows is a blend of sharp dialogue, unexpected twists, and a uniquely Irish charm that earned the film critical acclaim and made it Ireland's highest-grossing independent film upon its release. Also starring David Wilmot as Anto and Peter Caffrey as Frank Grogan, this 1 hour 47 minute adventure is a character-driven romp, often praised for its \"buddy picture\" dynamics and clever scripting. Experience this cult classic in stunning 1080p. Watch the full movie now.",
+        "embedId": "v75ks2g",
+        "source": "rumble",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWY3ZDU2NDEtYmU2Ni00OTU3LTk1NDAtMGQ5NzA3ODQyOGNiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "duration": "1Hr.47"
+    },
+    {
+        "id": "the-reptile-1966",
+        "title": "The Reptile (1966) Full Movie | Hammer Horror Classic | Supernatural Mystery",
+        "year": 1966,
+        "director": "John Gilling",
+        "quality": "HD",
+        "duration": "1h 31m",
+        "genres": "Horror, Mystery, Supernatural, Classics",
+        "description": "After his brother dies under mysterious circumstances, Harry Spalding investigates a remote Cornish village, only to uncover a sinister curse and a terrifying secret involving a monstrous creature. Experience this chilling Hammer Horror classic and explore our full collection at https://moviehub.uk/.",
+        "embedId": "v757tg6",
+        "source": "rumble",
+        "posterUrl": "images/the-reptile-1966.jpg"
+    },
+    {
+        "id": "strait-jacket-1964-full-movie",
+        "title": "Strait-Jacket (1964) Full Movie | 1080p | Joan Crawford",
+        "year": 1964,
+        "director": "William Castle",
+        "quality": "1080p",
+        "genres": [
+            "Horror",
+            "Thriller",
+            "Mystery",
+            "Psychological",
+            "Classic"
+        ],
+        "description": "Witness the chilling suspense of Strait-Jacket (1964) in brilliant 1080p. Starring the legendary Joan Crawford, this psychological horror thriller follows a woman returning home after twenty years in a mental institution for a brutal axe murder. As new slayings begin, is she innocent, or has the madness returned? Experience this cult classic directed by William Castle, packed with twists, turns, and unsettling atmosphere. Watch the full movie now.",
+        "embedId": "v74zos0",
+        "source": "rumble",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2MxZDllMDUtMzhkYi00Y2M2LTlhODItZjFiMjdiOTM0MGRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "duration": "1Hr.33"
+    },
+    {
+        "id": "the-unborn-child-expected-reborn-2011",
+        "title": "The Unborn Child: Expected Reborn (2011) | Thai Horror Film | ผีจ้างคนมาเกิด",
+        "year": 2011,
+        "director": "Poj Arnon",
+        "quality": "HD",
+        "genres": [
+            "Horror",
+            "Thriller",
+            "Thai",
+            "Supernatural",
+            "Mystery"
+        ],
+        "description": "Dive into the terrifying world of The Unborn Child: Expected Reborn (2011) ผีจ้างคนมาเกิด, a gripping Thai horror film centered on chilling supernatural events and the dark secrets of life and death. A young couple faces inexplicable horrors after a tragic incident, uncovering a dark past that refuses to stay buried. Experience intense suspense and psychological dread. Watch the full movie (ดูหนังเต็มเรื่อง) for a truly haunting experience. Perfect for fans of Thai horror (หนังสยองขวัญไทย) and Asian supernatural thrillers. พบกับความสยองขวัญจากภาพยนตร์ไทย 'ผีจ้างคนมาเกิด' (2011) ที่จะพาคุณดำดิ่งสู่เรื่องราวลึกลับของชีวิตและความตาย!",
+        "embedId": "v74wely",
+        "source": "rumble",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTM5NDY1MTk2Nl5BMl5BanBnXkFtZTcwNTMyNjkxMg@@._V1_.jpg",
+        "duration": "PT1H30M"
+    },
+    {
+        "id": "Training-Day",
+        "title": "Training Day",
+        "description": "A rookie detective is pushed to his limits by a corrupt narcotics officer during a single, intense day.",
+        "embedId": "6458634209830",
+        "source": "ok.ru",
+        "genres": [
+            "Thriller"
+        ],
+        "posterUrl": "images/training day.jpg",
+        "year": 2001
+    },
+    {
         "id": "Dragon-Soldiers",
         "title": "Dragon Soldiers",
         "description": "A group of soldiers must fight mythical creatures in a fantastical setting.",
@@ -12303,29 +12720,23 @@
         "year": 1989
     },
     {
-        "id": "Master-and-Commander",
-        "title": "Master and Commander: The Far Side of the World",
-        "description": "During the Napoleonic Wars, a daring British captain pursues a formidable French warship.",
-        "embedId": "1004226742937",
+        "id": "master-and-commander-2003",
+        "title": "Master and Commander (2003) Full Movie | Russell Crowe, Paul Bettany & Billy Boyd | Napoleonic War Adventure",
+        "year": 2003,
+        "director": "Peter Weir",
+        "cast": "Russell Crowe, Paul Bettany, Billy Boyd, James D'Arcy, Lee Ingleby, Mark Lewis Jones, Chris Larkin, Max Pirkis, Jack Randall, Max Benitz",
+        "quality": "HD",
         "genres": [
+            "Action",
+            "Adventure",
             "War",
-            "Action"
+            "Movie"
         ],
+        "topPick": "y",
+        "description": "During the Napoleonic Wars, a determined Royal Navy captain pushes his ship and crew to the limit across the high seas in pursuit of a formidable French privateer warship. Directed by Peter Weir and starring Russell Crowe and Paul Bettany.",
+        "embedId": "1004226742937",
         "source": "ok.ru",
-        "posterUrl": "images/master.jpg",
-        "year": 2003
-    },
-    {
-        "id": "i-am-wrath-2016",
-        "title": "I Am Wrath (2016) Full Movie | John Travolta & Christopher Meloni | Action Revenge Thriller",
-        "description": "A man seeks revenge for his wife's murder when corrupt police fail to catch the killers.",
-        "embedId": "1060182231705",
-        "genres": [
-            "Action, Thriller, Crime"
-        ],
-        "source": "ok.ru",
-        "posterUrl": "https://images.flickdirect.com/cache/movies/i-am-wrath/05000-i-am-wrath-poster.jpg",
-        "year": 2016
+        "posterUrl": "images/master-and-commander.jpg"
     },
     {
         "id": "Brawl-in-Cell-Block-99",
@@ -12354,244 +12765,236 @@
         "year": 1993
     },
     {
-        "id": "police-story-1985",
-        "title": "Police Story (1985) Full Movie | Jackie Chan & Brigitte Lin | Classic Martial Arts Action",
-        "year": 1985,
-        "director": "Jackie Chan",
+        "id": "darkness-falls-2020",
+        "title": "Darkness Falls (2020) Full Movie | Shawn Ashmore, Gary Cole & Richard Harmon | Crime Action Thriller",
+        "year": 2020,
+        "director": "Julien Maury",
+        "cast": "Shawn Ashmore, Gary Cole, Richard Harmon, Shannon Kook, Dylan Schmid, Agam Darshi, Stacey Farber, Jordan Claire Robbins",
         "quality": "HD",
-        "genres": "Action, Crime, Martial Arts, Classics",
-        "description": "A virtuous Hong Kong police officer must clear his name after being framed for murder by a drug lord he was helping to prosecute. Featuring legendary stunts and intense martial arts. Watch the full movie on MovieHub: https://moviehub.zya.me/",
-        "embedId": "1189169334937",
-        "source": "ok.ru",
-        "posterUrl": "https://m.media-amazon.com/images/I/71j2lJAhamL._AC_UF894,1000_QL80_.jpg"
-    },
-    {
-        "id": "Heat",
-        "title": "Heat full movie",
-        "description": "A professional thief and an obsessive detective engage in a high-stakes game of cat and mouse.",
-        "embedId": "1189169138329",
-        "genres": [
-            "Action"
-        ],
-        "source": "ok.ru",
-        "posterUrl": "images/heat.jpg",
-        "year": 1995
-    },
-    {
-        "id": "The-Guvnors",
-        "title": "The.Guvnors.2014.720p.BluRay",
-        "description": "A retired gang leader is drawn back into London's violent underworld.",
-        "embedId": "1123590015641",
-        "genres": [
-            "Action",
-            "Drama"
-        ],
-        "source": "ok.ru",
-        "posterUrl": "images/the guvnors.jpg",
-        "year": 2014
-    },
-    {
-        "id": "north-v-south-2015",
-        "title": "North v South (2015) Full Movie",
-        "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMjA4NTA5MzY5M15BMl5BanBnXkFtZTgwMDUyNzI3NTE@._V1_.jpg",
-        "uploadDate": "2026-02-17T08:00:00+00:00",
-        "year": 2015,
-        "director": "Steven Nesbit",
-        "quality": "HD",
-        "genres": "Action, Crime, Thriller, British Classics",
-        "description": "A gritty, modern-day Romeo and Juliet story set against the backdrop of a brutal UK gang war. As the criminal underworlds of the North and South clash, two star-crossed lovers must hide their relationship from rival gang leaders Vic Clarke and John Claridge. Starring Bernard Hill, Steven Berkoff, and Freema Agyeman.",
-        "embedId": "1157638130329",
-        "source": "ok.ru",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BODcwOTA3MDE1OV5BMl5BanBnXkFtZTgwMDYwNDMzNzE@._V1_.jpg"
-    },
-    {
-        "id": "dead-rush-2016",
-        "title": "Dead Rush (2016) Full Movie | First-Person POV Zombie Horror",
-        "year": 2016,
-        "director": "Zachary Ramelan",
-        "quality": "1080p",
-        "duration": "1h 24m",
-        "genres": "Horror, Action, Sci-Fi",
-        "starring": "David Michael Moote, Steven Kartchner, Cally Koukoui, Rich Piatkowski, Charlie Hamilton",
-        "archiveStatus": "Feature Presentation / Stream",
-        "description": "Told entirely from a first-person point-of-view POV perspective, Dead Rush captures the nightmare of a world plunging into chaos as a deadly unknown illness ignites a full-blown zombie epidemic. David's quiet life is shattered when the outbreak hits, forcing him into a desperate struggle for survival. Rushing to reunite with and protect his pregnant wife, David navigates ruined streets and decaying hideouts, banding together with a ragtag group of survivors. As infected hordes close in and human trust breaks down, David must endure a relentless rush through horror to keep his family alive.",
-        "highlights": [
-            "Innovative POV Horror: Filmed completely from the protagonist's first-person perspective for maximum immersion.",
-            "Directed by Zachary Ramelan, delivering a fast-paced, visceral take on the classic zombie outbreak theme.",
-            "Starring David Michael Moote alongside Steven Kartchner, Cally Koukoui, and Rich Piatkowski.",
-            "Combines intense survival action with psychological suspense as the apocalypse unfolds."
-        ],
-        "embedId": "6410479798937",
-        "source": "ok.ru",
-        "posterUrl": "images/dead-rush-2016.jpg"
-    },
-    {
-        "id": "Fragile",
-        "title": "Fragile 2005 BluRay 720p",
-        "description": "At her new job in a rundown children's hospital, a nurse desperately tries to keep her patients safe from a plague of random, mysterious attacks.",
-        "embedId": "2575196097177",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru",
-        "posterUrl": "images/fragile.jpg",
-        "year": 2005
-    },
-    {
-        "id": "Darkness-Falls",
-        "title": "Darkness Falls",
-        "description": "After his wife's suicide, Detective Jeff Anderson becomes convinced that she has been murdered. Obsessed with his investigation, he finds out that his wife was the victim of a team of father-and-son serial killers and sets out to stop them.",
-        "embedId": "2218518055577",
         "genres": [
             "Drama",
-            "Action"
+            "Action",
+            "Crime",
+            "Thriller"
         ],
+        "topPick": "N",
+        "description": "After his wife's apparent suicide, Detective Jeff Anderson becomes convinced she was murdered and uncovers a deadly team of father-and-son serial killers as his investigation turns obsessive. Directed by Julien Maury and starring Shawn Ashmore and Gary Cole.",
+        "embedId": "2218518055577",
         "source": "ok.ru",
-        "posterUrl": "images/darkness falls.jpg",
-        "year": 2020
+        "posterUrl": "images/darkness falls.jpg"
     },
     {
-        "id": "The-Babysitter",
-        "title": "The Babysitter 2017",
-        "description": "When Cole stays up past his bedtime, he discovers that his hot baby sitter belongs to a satanic cult",
-        "embedId": "1012486376089",
+        "id": "the-babysitter-2017",
+        "title": "The Babysitter (2017) Full Movie | Judah Lewis, Samara Weaving & Robbie Amell | Horror Comedy Thriller",
+        "year": 2017,
+        "director": "McG",
+        "cast": "Judah Lewis, Samara Weaving, Robbie Amell, Hana Mae Lee, Bella Thorne, Andrew Bachelor, Doug Haley, Emily Alyn Lind",
+        "quality": "HD",
         "genres": [
-            "Horror"
+            "Horror",
+            "Comedy",
+            "Thriller"
         ],
+        "topPick": "N",
+        "description": "When Cole stays up past his bedtime, he discovers that his charismatic babysitter belongs to a murderous satanic cult and must fight to survive the night. Directed by McG and starring Judah Lewis and Samara Weaving.",
+        "embedId": "1012486376089",
         "source": "ok.ru",
-        "posterUrl": "images/the babysitter.jpg",
-        "year": 2017
+        "posterUrl": "images/the babysitter.jpg"
     },
     {
-        "id": "Colditz",
-        "title": "Colditz",
-        "description": "While WWII Allied officer Jack Rose is held prisoner in Germany's notorious Colditz Castle, he recruits a band of fellow escape artists in the ultimate break-out only to discover that the greatest betrayal awaits him on safe ground.",
-        "embedId": "6YHTnOquIBY",
+        "id": "colditz-2005",
+        "title": "Colditz (2005) Full Movie | Damian Lewis, Tom Hardy & Lawrence Fox | WWII Escape Drama",
+        "year": 2005,
+        "director": "Stuart Orme",
+        "cast": "Damian Lewis, Tom Hardy, Lawrence Fox, Sophia Myles, James Fox, Jason Priestley, Rory Kinnear, Simon Paisley Day",
+        "quality": "HD",
         "genres": [
             "Drama",
             "War"
         ],
+        "topPick": "N",
+        "description": "Held prisoner in Germany's notorious Colditz Castle during World War II, Allied officer Jack Rose teams up with fellow inmates for a high-stakes escape only to face a shocking betrayal. Starring Damian Lewis and Tom Hardy.",
+        "embedId": "6YHTnOquIBY",
         "source": "youtube",
-        "posterUrl": "images/colditz.jpg",
-        "year": 2005
+        "posterUrl": "images/colditz.jpg"
     },
     {
-        "id": "Please-Sir",
-        "title": "Please Sir",
-        "description": "Fun with the Fenn st gang",
-        "embedId": "v6rgy5d/?pub=792qb",
+        "id": "please-sir-1968",
+        "title": "Please Sir! (1968) Full Movie | John Alderton, Deryck Guyler & Joan Sanderson | Classic British Comedy",
+        "year": 1968,
+        "director": "Mark Stuart",
+        "cast": "John Alderton, Deryck Guyler, Joan Sanderson, Noel Howlett, Penny Newell, Carol Hawkins, Peter Cleall, David Barry",
+        "quality": "HD",
         "genres": [
             "Comedy"
         ],
+        "topPick": "N",
+        "description": "Inexperienced teacher Bernard Hedges tries to keep order among the unruly students of Form 5B at Fenn Street School while navigating school politics and staffroom antics. Starring John Alderton and Deryck Guyler.",
+        "embedId": "v6rgy5d/?pub=792qb",
         "source": "rumble",
-        "posterUrl": "images/please sir.jpg",
-        "year": 1968
+        "posterUrl": "images/please sir.jpg"
     },
     {
-        "id": "cass",
-        "title": "Cass",
-        "description": " Cass is a 2008 British crime drama film. It stars Nonso Anozie as Cass Pennant and is directed by Jon S. Baird. Cass is based on the true story of the life of Cass Pennant, adapted from his book.",
-        "embedId": "_uurzT-1Sck",
-        "genres": [
-            "Drama"
-        ],
-        "source": "youtube",
-        "posterUrl": "images/cass.jpg",
-        "year": 2008
-    },
-    {
-        "id": "Rise-of-the-Footsoldier",
-        "title": "Rise of the Footsoldier 2021",
-        "description": " Rise of the Footsoldier is a British gangster film franchise written and directed by Julian Gilbey, Will Gilbey, Ricci Harnett, Zackary Adler, Andrew Loveday and Nick Nevern, ",
-        "embedId": "qLFepx1SF80",
-        "genres": [
-            "Drama"
-        ],
-        "source": "youtube",
-        "posterUrl": "images/rise of the foot soldier.jpg",
-        "year": 2007
-    },
-    {
-        "id": "The-Hot-Potato",
-        "title": "The Hot Potato ",
-        "description": " The Hot Potato is a 2012 British comedy crime thriller film. It was directed and written by Tim Lewiston and stars Ray Winstone, Colm Meaney and Jack Huston in the lead roles.",
-        "embedId": "O85tflN5Krg",
+        "id": "cass-2008",
+        "title": "Cass (2008) Full Movie | Nonso Anozie, Natalie Press & Leo Gregory | British Crime Drama",
+        "year": 2008,
+        "director": "Jon S. Baird",
+        "cast": "Nonso Anozie, Natalie Press, Leo Gregory, Gavin Brocker, Daniel Kaluuya, Tamer Hassan, Lorraine Stanley, Peter Wight",
+        "quality": "HD",
         "genres": [
             "Drama",
-            "Comedy"
+            "Crime",
+            "Biography"
         ],
+        "topPick": "N",
+        "description": "Based on the true life story of Cass Pennant, an orphaned Jamaican baby adopted by an elderly white couple in 1950s London who grows up to become one of Britain's most notorious football hooligan leaders before turning his life around. Directed by Jon S. Baird and starring Nonso Anozie.",
+        "embedId": "_uurzT-1Sck",
         "source": "youtube",
-        "posterUrl": "images/hot potato.jpg",
-        "year": 2011
+        "posterUrl": "images/cass.jpg"
     },
     {
-        "id": "Open-Graves",
-        "title": "Open Graves ",
-        "description": " A group of surfers discover an old board game which claims a life every time it is played.",
-        "embedId": "9519433386534",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru",
-        "posterUrl": "images/open graves.jpg",
-        "year": 2009
-    },
-    {
-        "id": "Abduct",
-        "title": "Abduct (2025) | Psychological Sci-Fi Thriller | Full Mystery Movie",
-        "year": 2025,
+        "id": "rise-of-the-footsoldier-2007",
+        "title": "Rise of the Footsoldier (2007) Full Movie | Ricci Harnett, Terry Stone & Craig Fairbrass | British Crime Drama",
+        "year": 2007,
+        "director": "Julian Gilbey",
+        "cast": "Ricci Harnett, Terry Stone, Craig Fairbrass, Roland Manookian, Coralie Rose, Neil Maskell, Billy Murray, Kierston Wareing",
         "quality": "HD",
-        "genres": "Thriller, Mystery, Sci-Fi, Drama",
-        "description": "A peaceful mountain getaway turns into a mind-bending nightmare when a woman's boyfriend vanishes, only for a mysterious stranger to appear claiming his identity in this tense psychological thriller.",
+        "genres": [
+            "Drama",
+            "Crime",
+            "Action"
+        ],
+        "topPick": "N",
+        "description": "The true story of Carlton Leach, tracing his rise from an Inter City Firm football hooligan in the 1980s to a feared bouncer and major player in the Essex underworld during the 1990s. Directed by Julian Gilbey and starring Ricci Harnett.",
+        "embedId": "qLFepx1SF80",
+        "source": "youtube",
+        "posterUrl": "images/rise of the foot soldier.jpg"
+    },
+    {
+        "id": "the-hot-potato-2011",
+        "title": "The Hot Potato (2011) Full Movie | Ray Winstone, Colm Meaney & Jack Huston | British Crime Comedy Thriller",
+        "year": 2011,
+        "director": "Tim Lewiston",
+        "cast": "Ray Winstone, Colm Meaney, Jack Huston, Lois Winstone, David Harewood, Jean Marsh, Derren Nesbitt, John Lynch",
+        "quality": "HD",
+        "genres": [
+            "Drama",
+            "Comedy",
+            "Crime",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "In 1960s London, two down-on-their-luck friends stumble upon a lump of stolen uranium and embark on a chaotic cross-country chase across Europe to offload it while pursued by gangsters and government agents. Directed by Tim Lewiston and starring Ray Winstone and Colm Meaney.",
+        "embedId": "O85tflN5Krg",
+        "source": "youtube",
+        "posterUrl": "images/hot potato.jpg"
+    },
+    {
+        "id": "open-graves-2009",
+        "title": "Open Graves (2009) Full Movie | Eliza Dushku, Mike Vogel & Ethan Rains | Supernatural Horror Thriller",
+        "year": 2009,
+        "director": "Álvaro de Armiñán",
+        "cast": "Eliza Dushku, Mike Vogel, Ethan Rains, Naike Rivelli, Lindsay Caroline Robba, Gary Piquer, Alex O'Dogherty, Ander Pardo",
+        "quality": "HD",
+        "genres": [
+            "Horror",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "A group of surfers off the coast of Spain discover Mamba, an ancient board game forged from the skin and bones of a witch that claims a life in a gruesome accident every time a player loses. Directed by Álvaro de Armiñán and starring Eliza Dushku and Mike Vogel.",
+        "embedId": "9519433386534",
+        "source": "ok.ru",
+        "posterUrl": "images/open graves.jpg"
+    },
+    {
+        "id": "abduct-2025",
+        "title": "Abduct (2025) Full Movie | Psychological Sci-Fi Thriller & Mystery",
+        "year": 2025,
+        "director": "Unknown",
+        "cast": "Unknown",
+        "quality": "HD",
+        "genres": [
+            "Thriller",
+            "Mystery",
+            "Sci-Fi",
+            "Drama"
+        ],
+        "topPick": "N",
+        "description": "A peaceful mountain getaway turns into a mind-bending nightmare when a woman's boyfriend vanishes, only for a mysterious stranger to appear claiming his identity in this tense psychological sci-fi thriller.",
         "embedId": "9517374966310",
         "source": "ok.ru",
         "posterUrl": "images/abduct.jpg"
     },
     {
-        "id": "I-Was-Honey-Boo-Boo",
-        "title": "I Was Honey Boo Boo (2025) | Alana Thompson Biopic | True Story | Full Movie",
+        "id": "i-was-honey-boo-boo-2025",
+        "title": "I Was Honey Boo Boo (2025) Full Movie | Alana Thompson Biopic | True Story Drama",
         "year": 2025,
+        "director": "Jared Cohn",
+        "cast": "Alana Thompson, Valarie Pettiford, Jaime Moyer, Landon Moss, Elise Luthman, Caden Dragomer",
         "quality": "HD",
-        "genres": "Biography, Drama, Reality-TV",
-        "description": "The revealing 2025 Lifetime biopic narrated by Alana Thompson herself. Go behind the scenes of child stardom, from Toddlers & Tiaras to the family scandals and legal battles involving Mama June, Sugar Bear, and her sister Pumpkin.",
+        "genres": [
+            "Biography",
+            "Drama"
+        ],
+        "topPick": "N",
+        "description": "Narrated by Alana Thompson herself, this revealing biopic goes behind the scenes of child stardom, from Toddlers & Tiaras to the family scandals and legal battles involving Mama June, Sugar Bear, and her sister Pumpkin. Directed by Jared Cohn.",
         "embedId": "9517224757798",
         "source": "ok.ru",
         "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDM0NjRkZjAtNTViZC00MDIyLWIxZTMtNTZhM2ViZDA1MjM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
-        "id": "The-Surrender",
-        "title": "The Surrender (2025) | Colby Minifie | Shudder Ritual Horror | Full Movie",
+        "id": "the-surrender-2025",
+        "title": "The Surrender (2025) Full Movie | Colby Minifie & Kate Burton | Supernatural Ritual Horror",
         "year": 2025,
+        "director": "Julia Max",
+        "cast": "Colby Minifie, Kate Burton, Neil Sandilands, Chelsea Alden, Vaughn Armstrong, Pete Ploszek",
         "quality": "HD",
-        "genres": "Horror, Supernatural, Thriller",
-        "description": "Starring Colby Minifie (The Boys) and Kate Burton. After the family patriarch dies, a grieving mother and daughter perform a brutal resurrection ritual. A chilling Shudder exclusive about the dark price of bringing back the dead.",
+        "genres": [
+            "Horror",
+            "Supernatural",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "After the family patriarch dies, a grieving mother and daughter hire a mysterious stranger to perform a brutal resurrection ritual, uncovering the dark price of bringing back the dead. Directed by Julia Max and starring Colby Minifie and Kate Burton.",
         "embedId": "10058253208150",
         "source": "ok.ru",
         "posterUrl": "images/the surrender.jpg"
     },
     {
-        "id": "Antisocial-2",
-        "title": "Antisocial 2 ",
-        "description": "Years after having her newborn child stolen from her, Sam searches a world infested with infected users from the Social Redroom website. After befriending a young girl named Bean, Sam is captured and locked in a facility dedicated to finding a cure for the Redroom Virus",
-        "embedId": "9506057947686",
+        "id": "antisocial-2-2015",
+        "title": "Antisocial 2 (2015) Full Movie | Michelle Mylett, Stephen Bogaert & Josette Halpert | Sci-Fi Horror",
+        "year": 2015,
+        "director": "Cody Calahan",
+        "cast": "Michelle Mylett, Stephen Bogaert, Josette Halpert, Samuel Faraci, Ana Alic, Jake Michaels, Romaine Waite",
+        "quality": "HD",
         "genres": [
-            "Horror"
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
         ],
+        "topPick": "N",
+        "description": "Years after having her newborn child stolen from her, Sam searches a world overrun by infected users of the Social Redroom website before being captured and locked inside a facility racing to find a cure for the Redroom Virus. Directed by Cody Calahan and starring Michelle Mylett.",
+        "embedId": "9506057947686",
         "source": "ok.ru",
-        "posterUrl": "images/antisocial 2.jpg",
-        "year": 2015
+        "posterUrl": "images/antisocial 2.jpg"
     },
     {
-        "id": "Antisocial",
-        "title": "Antisocial ",
-        "description": " Five university friends gather at a house party to ring in the New year. Unbeknownst to them, an epidemic has erupted outside, causing outbreaks around the world.",
-        "embedId": "9500551088678",
+        "id": "antisocial-2013",
+        "title": "Antisocial (2013) Full Movie | Michelle Mylett, Cody Ray Thompson & Adam Christie | Sci-Fi Horror",
+        "year": 2013,
+        "director": "Cody Calahan",
+        "cast": "Michelle Mylett, Cody Ray Thompson, Adam Christie, Ana Alic, Romaine Waite, Ry Barrett, E.J. Alon",
+        "quality": "HD",
         "genres": [
-            "Horror"
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
         ],
+        "topPick": "N",
+        "description": "Five university friends gather at a house party to ring in the New Year, unaware that a deadly epidemic linked to a social networking site has erupted outside and is turning users violently psychotic. Directed by Cody Calahan and starring Michelle Mylett.",
+        "embedId": "9500551088678",
         "source": "ok.ru",
-        "posterUrl": "images/antisocial.jpg",
-        "year": 2013
+        "posterUrl": "images/antisocial.jpg"
     },
     {
         "id": "Crossfire",
@@ -12606,199 +13009,267 @@
         "year": 2022
     },
     {
-        "id": "Blood-Predator",
-        "title": "Blood Predator",
-        "description": " A handful of people wind up stranded in a desolate snowy mountain area in the wake of an airplane crash. They seek refuge in an old abandoned cabin. The group find themselves being terrorized by a lethal predatory extraterrestrial beast residing in the basement of the cabin.",
+        "id": "blood-predator-2007",
+        "title": "Blood Predator (2007) Full Movie | Andrew R. Hill, Elizabeth Ann Bennett & Jeff Swarthout | Sci-Fi Creature Horror",
+        "year": 2007,
+        "director": "John Lechago",
+        "cast": "Andrew R. Hill, Elizabeth Ann Bennett, Jeff Swarthout, Kevin Shea, James Lee, Robert Pralgo, Brett Gentile, Mark Ashworth",
+        "quality": "HD",
+        "genres": [
+            "Horror",
+            "Sci-Fi"
+        ],
+        "topPick": "N",
+        "description": "Stranded in a desolate snowy mountain wilderness after a plane crash, a handful of survivors take refuge in an abandoned cabin, only to be hunted by a lethal extraterrestrial beast lurking in the basement. Directed by John Lechago.",
         "embedId": "wN6OhOR43a4",
-        "genres": [
-            "Horror"
-        ],
         "source": "youtube",
-        "posterUrl": "images/blood predator.jpg",
-        "year": 2007
+        "posterUrl": "images/blood predator.jpg"
     },
     {
-        "id": "Archangel",
-        "title": "Archangel",
-        "description": " A British college professor, working in Russia, investigates certain mysteries surrounding the life and death of Joseph Stalin.",
+        "id": "archangel-2005",
+        "title": "Archangel (2005) Full Movie | Daniel Craig, Yekaterina Rednikova & Gabriel Macht | Mystery Thriller Drama",
+        "year": 2005,
+        "director": "Jon Jones",
+        "cast": "Daniel Craig, Yekaterina Rednikova, Gabriel Macht, Lev Prygunov, Aleksey Dyakov, Avtandil Makharadze, Claudia Harrison, Harry Ditson",
+        "quality": "HD",
+        "genres": [
+            "Drama",
+            "Mystery",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "A British historian working in Moscow investigates dark secrets surrounding the final days of Joseph Stalin, uncovering a hidden notebook that leads him into the frozen northern city of Archangel. Directed by Jon Jones and starring Daniel Craig.",
         "embedId": "zsZYaPNWcl4",
-        "genres": [
-            "Drama"
-        ],
         "source": "youtube",
-        "posterUrl": "images/archangel.jpg",
-        "year": 2005
+        "posterUrl": "images/archangel.jpg"
     },
     {
-        "id": "Assassin",
-        "title": "Assassin",
-        "description": " Jamie is a contract killer tasked with eliminating a crooked official, but complications arise when he falls for the daughter of his target.",
+        "id": "assassin-2015",
+        "title": "Assassin (2015) Full Movie | Danny Dyer, Gary Kemp & Martin Kemp | British Crime Action Thriller",
+        "year": 2015,
+        "director": "J.K. Amalou",
+        "cast": "Danny Dyer, Gary Kemp, Martin Kemp, Anouska Mond, Deborah Moore, Holly Weston, Nick Nevern, Ricci Harnett",
+        "quality": "HD",
+        "genres": [
+            "Action",
+            "Crime",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "Jamie, a professional hitman hired to eliminate a corrupt official, finds his ruthless routine thrown into chaos when he falls for his target's daughter. Directed by J.K. Amalou and starring Danny Dyer, Gary Kemp, and Martin Kemp.",
         "embedId": "jTR6N8Ip6DM",
-        "genres": [
-            "Action"
-        ],
         "source": "youtube",
-        "posterUrl": "images/Assassin.jpg",
-        "year": 2015
+        "posterUrl": "images/Assassin.jpg"
     },
     {
-        "id": "Air-Force-One-Is-Down",
-        "title": " Air Force One Is Down ",
-        "description": " Alistair Maclean's highly charged novel is brought to life for a contemporary audience in this tense, international thriller.",
-        "embedId": "WzrYrcQPJqE",
+        "id": "air-force-one-is-down-2012",
+        "title": "Air Force One Is Down (2012) Full Movie | Jeremy Sisto, Emilie de Ravin & Linda Hamilton | Action Thriller",
+        "year": 2012,
+        "director": "Cilla Ware",
+        "cast": "Jeremy Sisto, Emilie de Ravin, Linda Hamilton, Rupert Graves, Jamie Thomas King, Ken Duken, Sylvestra Le Touzel, Tom Benedict Knight",
+        "quality": "HD",
         "genres": [
             "Action",
             "Thriller"
         ],
+        "topPick": "N",
+        "description": "Based on Alistair MacLean's thriller novel, rogue Serbian terrorists hijack Air Force One and kidnap the President of the United States, sparking a high-stakes international rescue operation. Directed by Cilla Ware and starring Jeremy Sisto, Emilie de Ravin, and Linda Hamilton.",
+        "embedId": "WzrYrcQPJqE",
         "source": "youtube",
-        "posterUrl": "images/Air Force One Is Down.jpg",
-        "year": 2012
+        "posterUrl": "images/Air Force One Is Down.jpg"
     },
     {
-        "id": "Union",
-        "title": "Union (2019) | Civil War Drama | Historical Romance | Full Movie",
+        "id": "union-2019",
+        "title": "Union (2019) Full Movie | Whitney Rose Pynn, Virginia Newcomb & Ben Edlin | Civil War Historical Romance Drama",
         "year": 2019,
+        "director": "Whitney Hamilton",
+        "cast": "Whitney Rose Pynn, Virginia Newcomb, Ben Edlin, Joseph Lopez, David DeLao, Kevin R. Kelly, Daniel J. Martin, Andrew J. Scott",
         "quality": "HD",
-        "genres": "Drama, History, War, Western",
-        "description": "Inspired by the true stories of women who fought in the Civil War. A woman disguises herself as her brother to survive the Confederate ranks, leading to a secret marriage and an epic journey of survival and love.",
+        "genres": [
+            "Drama",
+            "History",
+            "War",
+            "Western"
+        ],
+        "topPick": "N",
+        "description": "Inspired by the true stories of women who fought in the American Civil War, a woman disguises herself as her brother to survive within the Confederate ranks, leading to a secret marriage and an epic journey of survival and love. Directed by Whitney Hamilton and starring Whitney Rose Pynn and Virginia Newcomb.",
         "embedId": "1367854418585",
         "source": "ok.ru",
         "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjY2OTI4ODUtZjVhMS00YTQxLWE5ZmItMmNlNDM5N2M2YjIyXkEyXkFqcGc@._V1_.jpg"
     },
     {
-        "id": "Decoys",
-        "title": "Decoys ",
-        "description": " Luke and Roger are just another couple of college guys trying to lose their virginity. But when Luke sees something unusual, he begins to suspect that the girls on campus aren't exactly human.",
-        "embedId": "rWS9TaHh0Jo",
+        "id": "decoys-2004",
+        "title": "Decoys (2004) Full Movie | Corey Sevier, Meghan Ory & Kim Poirier | Sci-Fi Horror Comedy",
+        "year": 2004,
+        "director": "Matthew Hastings",
+        "cast": "Corey Sevier, Meghan Ory, Kim Poirier, Stefanie von Pfetten, Elias Toufexis, Richard Burgi, Nicole Eggert, Ennis Esmer",
+        "quality": "HD",
         "genres": [
             "Horror",
-            "Comedy"
+            "Comedy",
+            "Sci-Fi"
         ],
+        "topPick": "N",
+        "description": "College roommates Luke and Roger are just looking to get lucky on campus, until Luke notices strange clues suggesting the beautiful new sorority girls aren't human at all. Directed by Matthew Hastings and starring Corey Sevier and Meghan Ory.",
+        "embedId": "rWS9TaHh0Jo",
         "source": "youtube",
-        "posterUrl": "images/decoys.jpg",
-        "year": 2004
+        "posterUrl": "images/decoys.jpg"
     },
     {
-        "id": "Mercury-Plains",
-        "title": "Mercury Plains",
-        "description": " A troubled man runs away to Mexico and is recruited to join a paramilitary group of teens fighting the drug cartels. He proves himself to the group, but questions their motive.",
-        "embedId": "qwkiu0sk-9k",
+        "id": "mercury-plains-2016",
+        "title": "Mercury Plains (2016) Full Movie | Scott Eastwood, Angela Sarafyan & Nick Chinlund | Action Crime Drama",
+        "year": 2016,
+        "director": "Charles Burmeister",
+        "cast": "Scott Eastwood, Angela Sarafyan, Nick Chinlund, Justin Arnold, Andy Garcia, Jorge A. Jimenez, Brinlee Grace, Joe Gonzales",
+        "quality": "HD",
         "genres": [
             "Action",
-            "Drama"
+            "Drama",
+            "Crime"
         ],
+        "topPick": "N",
+        "description": "A troubled young man drifts south to Mexico and is recruited into a rogue paramilitary outfit of teenagers fighting drug cartels, proving his worth in combat while questioning their captain's true motives. Directed by Charles Burmeister and starring Scott Eastwood.",
+        "embedId": "qwkiu0sk-9k",
         "source": "youtube",
-        "posterUrl": "images/mercury plains.jpg",
-        "year": 2004
+        "posterUrl": "images/mercury plains.jpg"
     },
     {
-        "id": "Wolf-Town",
-        "title": " Wolf Town",
-        "description": " Kyle, a shy college student finds himself and three of his friends trapped in an old western ghost town by a pack of ferocious wolves and has to overcome his personal fears to confront the wolves and lead his friends to safety.",
+        "id": "wolf-town-2011",
+        "title": "Wolf Town (2011) Full Movie | Levi Fiehler, Max Adler & Alicia Ziegler | Survival Horror Thriller",
+        "year": 2011,
+        "director": "Paul Hart-Wilden",
+        "cast": "Levi Fiehler, Max Adler, Alicia Ziegler, Josh Kelly, Johnathan Tchaikovsky, Matt O'Neill",
+        "quality": "HD",
+        "genres": [
+            "Horror",
+            "Thriller"
+        ],
+        "topPick": "N",
+        "description": "Kyle, a shy college student, finds himself and three friends trapped inside an abandoned Old West ghost town by a pack of ferocious wolves and must overcome his fears to lead them to safety. Directed by Paul Hart-Wilden and starring Levi Fiehler and Max Adler.",
         "embedId": "978941381273",
-        "genres": [
-            "Horror"
-        ],
         "source": "ok.ru",
-        "posterUrl": "images/wolf town.jpg",
-        "year": 2011
+        "posterUrl": "images/wolf town.jpg"
     },
     {
-        "id": "Shadowland",
-        "title": "Shadowland 2008 ",
-        "description": "A taut reinvention of vampire lore, Shadowland opens in modern day North America, where construction workers uncover an old stone cross and what appears to be a wooden stake. They remove the stake from the ground, allowing Laura (Caitlin McIntosh), a slumbering vampire, to revive and rise from the earth",
-        "embedId": "979663850137",
+        "id": "shadowland-2008",
+        "title": "Shadowland (2008) Full Movie | Caitlin McIntosh, Jason Carter & Richard Shelton | Supernatural Vampire Horror",
+        "year": 2008,
+        "director": "Wyatt Weed",
+        "cast": "Caitlin McIntosh, Jason Carter, Richard Shelton, Jaqueline Fleming, Chris Mulkey, Lily Holleman, Rory Scovel, Christopher Matthew Cook",
+        "quality": "HD",
         "genres": [
-            "Horror"
+            "Horror",
+            "Thriller"
         ],
+        "topPick": "N",
+        "description": "In modern-day North America, construction workers unearth an old stone cross and remove a wooden stake from the ground, unintentionally reviving Laura, a slumbering vampire who rises from the earth. Directed by Wyatt Weed and starring Caitlin McIntosh.",
+        "embedId": "979663850137",
         "source": "ok.ru",
-        "posterUrl": "images/shadowland.jpg",
-        "year": 2008
+        "posterUrl": "images/shadowland.jpg"
     },
     {
         "id": "aliens-vs-predator-requiem-2007",
-        "title": "Aliens vs. Predator: Requiem (2007) Full Movie | Sci-Fi Horror | AVP2",
+        "title": "Aliens vs. Predator: Requiem (2007) Full Movie | Steven Pasquale, Reiko Aylesworth & John Ortiz | Sci-Fi Action Horror",
         "year": 2007,
         "director": "The Brothers Strause",
+        "cast": "Steven Pasquale, Reiko Aylesworth, John Ortiz, Johnny Lewis, Ariel Gade, Kristen Hager, Sam Trammell, Robert Joy",
         "quality": "HD",
-        "genres": "Sci-Fi, Horror, Action",
-        "description": "In this intense sequel, the iconic extraterrestrial rivals bring their war to a small Colorado town. As a deadly 'Predalien' hybrid begins terrorizing the residents, a veteran Predator arrives to 'clean up' the infestation. Starring Steven Pasquale and Reiko Aylesworth. Watch Aliens vs. Predator: Requiem online at https://moviehub.zya.me/.",
+        "genres": [
+            "Sci-Fi",
+            "Horror",
+            "Action"
+        ],
+        "topPick": "y",
+        "description": "Iconic extraterrestrial rivals bring their deadly war to a small Colorado town when a Predalien hybrid begins terrorizing residents and a veteran Predator arrives to clean up the infestation. Directed by The Brothers Strause and starring Steven Pasquale and Reiko Aylesworth. Watch more on MovieHub: https://moviehub.uk/",
         "embedId": "8884073138816",
         "source": "ok.ru",
         "posterUrl": "https://play-lh.googleusercontent.com/OFkL_Cl7KZmwrBqu9Wu1fZBo6sQvK2ZEzQ3hfdiLubq1PPRSv1GusdwaRBDM5wzixZ9P"
     },
     {
         "id": "the-devils-rock-2011",
-        "title": "The Devil's Rock (2011) Full Movie | WWII Supernatural Horror",
+        "title": "The Devil's Rock (2011) Full Movie | Craig Hall, Matthew Sunderland & Gina Varela | WWII Supernatural Horror",
         "year": 2011,
         "director": "Paul Campion",
+        "cast": "Craig Hall, Matthew Sunderland, Gina Varela, Karlos Drinkwater, Luke Hawker, Jessica Grace Smith, Geraldine Brophy, Hadleigh Walker",
         "quality": "HD",
-        "genres": "Horror, War, Thriller, Supernatural",
-        "description": "On the eve of D-Day, two New Zealand commandos are sent to the Channel Islands to destroy German gun emplacements. Instead, they uncover a terrifying Nazi occult experiment: a dark ritual designed to summon demonic forces to tip the balance of World War II. A gripping, high-tension blend of historical war drama and supernatural horror.",
+        "genres": [
+            "Horror",
+            "War",
+            "Thriller",
+            "Supernatural"
+        ],
+        "topPick": "y",
+        "description": "On the eve of D-Day, two New Zealand commandos sent to the Channel Islands to destroy German gun emplacements uncover a Nazi occult ritual summoning demonic forces to turn the tide of World War II. Directed by Paul Campion and starring Craig Hall and Matthew Sunderland.",
         "embedId": "979809208985",
         "source": "ok.ru",
         "posterUrl": "images/the-devils-rock-2011.jpg"
     },
     {
-        "id": "the-last-of-the-mohicans-1992",
-        "title": "The Last of the Mohicans (1992) Full Movie | Daniel Day-Lewis | Classic Western",
-        "year": 1992,
-        "director": "Michael Mann",
-        "quality": "HD",
-        "genres": "Western, Action, Classics",
-        "description": "The last members of a dying Native American tribe, the Mohicans, must rescue the daughters of a British colonel in the crossfire of a gruesome military conflict. Starring Daniel Day-Lewis. Watch more on MovieHub: https://moviehub.uk",
-        "embedId": "967004064409",
-        "source": "ok.ru",
-        "posterUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14197_p_v12_an.jpg"
-    },
-    {
         "id": "young-guns-ii-1990",
-        "title": "Young Guns II (1990) Full Movie | Emilio Estevez & Kiefer Sutherland | Western",
+        "title": "Young Guns II (1990) Full Movie | Emilio Estevez, Kiefer Sutherland & Lou Diamond Phillips | Western Action",
         "year": 1990,
         "director": "Geoff Murphy",
+        "cast": "Emilio Estevez, Kiefer Sutherland, Lou Diamond Phillips, Christian Slater, William Petersen, Alan Ruck, R.D. Call, James Coburn",
         "quality": "HD",
-        "genres": "Western, Action",
-        "description": "Billy the Kid and his gang are pursued by federal agents as they head for Old Mexico. To catch them, authorities enlist their former friend Pat Garrett. Starring Emilio Estevez, Kiefer Sutherland, and Lou Diamond Phillips. Watch more on MovieHub: https://moviehub.zya.me/",
+        "genres": [
+            "Western",
+            "Action"
+        ],
+        "topPick": "N",
+        "description": "Billy the Kid and his gang flee toward Old Mexico pursued by federal agents and their former friend Pat Garrett, who has been hired by authorities to bring them down. Directed by Geoff Murphy and starring Emilio Estevez, Kiefer Sutherland, and Lou Diamond Phillips. Watch more on MovieHub: https://moviehub.uk/",
         "embedId": "1012291275417",
         "source": "ok.ru",
         "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/0efffdccc195956f1b182cf85aff287df0df104284a7cdb9381dd2f8695a273e.png"
     },
     {
-        "id": "The-Salvation",
-        "title": "The.Salvation.720p.BluRay ",
-        "description": " After shooting the man who murdered his wife, a Danish settler (Mads Mikkelsen) incurs the wrath of the man's brother (Jeffrey Dean Morgan), a ruthless land baron who rules their frontier town.",
-        "embedId": "1010670897817",
+        "id": "the-salvation-2014",
+        "title": "The Salvation (2014) Full Movie | Mads Mikkelsen, Eva Green & Jeffrey Dean Morgan | Western",
+        "year": 2014,
+        "director": "Kristian Levring",
+        "cast": "Mads Mikkelsen, Eva Green, Jeffrey Dean Morgan, Eric Cantona, Mikael Persbrandt, Douglas Henshall, Michael Raymond-James, Jonathan Pryce",
+        "quality": "720p",
         "genres": [
             "Western"
         ],
+        "topPick": "Y",
+        "description": "After shooting the man who murdered his wife, a Danish settler (Mads Mikkelsen) incurs the wrath of the man's brother (Jeffrey Dean Morgan), a ruthless land baron who rules their frontier town. Directed by Kristian Levring and starring Mads Mikkelsen and Eva Green.",
+        "embedId": "1010670897817",
         "source": "ok.ru",
-        "posterUrl": "images/the salvation.jpg",
-        "year": 2014
+        "posterUrl": "images/the salvation.jpg"
     },
     {
-        "id": "The-Burrowers",
-        "title": "The.Burrowers. ",
-        "description": " A rescue party comes face to face with underground creatures attacking a town.",
-        "embedId": "1010671487641",
+        "id": "the-burrowers-2008",
+        "title": "The Burrowers (2008) Full Movie | Clancy Brown, William Mapother & Laura Leighton | Horror Western Creature Feature",
+        "year": 2008,
+        "director": "J.T. Petty",
+        "cast": "Clancy Brown, William Mapother, Laura Leighton, Sean Patrick Thomas, Doug Hutchison, Galen Hutchison, Harley Jane Kozak, Jocelin Donahue",
+        "quality": "HD",
         "genres": [
             "Horror",
-            "Western"
+            "Western",
+            "Thriller"
         ],
+        "topPick": "N",
+        "description": "On the 19th-century frontier, a rescue party tracking a missing family discovers they are being hunted by subterranean creatures beneath the plains. Directed by J.T. Petty and starring Clancy Brown and William Mapother. Watch more on MovieHub: https://moviehub.uk/",
+        "embedId": "1010671487641",
         "source": "ok.ru",
-        "posterUrl": "images/the burrowers.jpg",
-        "year": 2008
+        "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAnPzPJIOgNxNvZHiuu0seN35xf8tVzLvkKg&s"
     },
     {
-        "id": "The-Revenant",
-        "title": "The Revenant ",
-        "description": "While exploring the uncharted wilderness in 1823, frontiersman Hugh Glass (Leonardo DiCaprio) sustains life-threatening injuries from a brutal bear attack. When a member (Tom Hardy) of his hunting team kills his young son (Forrest Goodluck) and leaves him for dead, Glass must utilize his survival skills to find a way back to civilization. Grief-stricken and fueled by vengeance, the legendary fur trapper treks through the snowy terrain to track down the man who betrayed him.",
-        "embedId": "1009119464089",
+        "id": "the-revenant-2015",
+        "title": "The Revenant (2015) Full Movie | Leonardo DiCaprio & Tom Hardy | Survival Western Drama",
+        "year": 2015,
+        "director": "Alejandro G. Iñárritu",
+        "cast": "Leonardo DiCaprio, Tom Hardy, Domhnall Gleeson, Will Poulter, Forrest Goodluck, Paul Anderson, Lukas Haas, Brendan Fletcher, Kristoffer Joner",
+        "quality": "HD",
         "genres": [
             "Western"
         ],
+        "topPick": "N",
+        "description": "While exploring the uncharted wilderness in 1823, frontiersman Hugh Glass (Leonardo DiCaprio) sustains life-threatening injuries from a brutal bear attack. When a member (Tom Hardy) of his hunting team kills his young son (Forrest Goodluck) and leaves him for dead, Glass must utilize his survival skills to find a way back to civilization. Directed by Alejandro G. Iñárritu.",
+        "embedId": "1009119464089",
         "source": "ok.ru",
-        "posterUrl": "images/the revenant.jpg",
-        "year": 2015
+        "posterUrl": "images/the revenant.jpg"
     },
     {
         "id": "Hostiles",
@@ -13011,16 +13482,20 @@
         "source": "ok.ru"
     },
     {
-        "id": "Hamburger-Hill",
-        "posterUrl": "images/Hamburger Hill.jpg",
+        "id": "hamburger-hill-1987",
+        "title": "Hamburger Hill (1987) Full Movie | Anthony Barrile, Michael Boatman & Don Cheadle | Vietnam War Drama",
         "year": 1987,
-        "title": "Hamburger.Hill.1987 ",
-        "description": " A brutal and realistic war film focuses on the lives of a squad of 14 U.S. Army soldiers of B Company, 3rd Battalion, 187th Infanty Regiment, 101st Airborne Division during the brutal 10 day (May 11-20, 1969) battle for Hill 937 in the A Shau Valley of Vietnam as they try again and again to take the fortified hill held by the North Vietnamese, and the faults and casualties they take every time in which the battle was later dubbed Hamburger Hill because enemy fire was so fierce that the fusillade of bullets turned assaulting troops into shreded hamburger meat.",
-        "embedId": "1440487049881",
+        "director": "John Irvin",
+        "cast": "Anthony Barrile, Michael Boatman, Don Cheadle, Michael Dolan, Dylan McDermott, M.A. Nickles, Harry O'Reilly, Daniel O'Shea, Tim Quill, Tommy Swerdlow",
+        "quality": "HD",
         "genres": [
             "War"
         ],
-        "source": "ok.ru"
+        "topPick": "Y",
+        "description": "A realistic Vietnam War drama following a squad of U.S. Army soldiers from B Company, 3rd Battalion, 187th Infantry Regiment, 101st Airborne Division during the grueling ten-day battle for Hill 937 in the A Shau Valley in May 1969. Directed by John Irvin.",
+        "embedId": "1440487049881",
+        "source": "ok.ru",
+        "posterUrl": "images/Hamburger Hill.jpg"
     },
     {
         "id": "Threads",
@@ -13613,19 +14088,17 @@
         "source": "ok.ru"
     },
     {
-        "id": "the-shawshank-redemption-1994",
-        "title": "The Shawshank Redemption (1994)",
+        "id": "The-Shawshank-Redemption",
+        "posterUrl": "images/The Shawshank Redemption.jpg",
         "year": 1994,
-        "quality": "HD",
+        "title": "The Shawshank Redemption.1994",
+        "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+        "embedId": "7957536901741",
         "genres": [
             "Drama",
             "Crime"
         ],
-        "director": "Frank Darabont",
-        "source": "ok.ru",
-        "embedId": "15835359939117",
-        "posterUrl": "images/the-shawshank-redemption-1994.jpg",
-        "description": "The Shawshank Redemption (1994) is an acclaimed drama directed by Frank Darabont, based on Stephen King's novella. Accused of a crime he maintains he didn't commit, banker Andy Dufresne begins a decades-long sentence at Shawshank State Penitentiary, forming an enduring bond with fellow inmate Red while clinging to hope through compassion and resilience. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/"
+        "source": "ok.ru"
     },
     {
         "id": "The-Godfather-2",
@@ -15022,6 +15495,18 @@
         "source": "ok.ru"
     },
     {
+        "id": "Nothing-to-Lose",
+        "posterUrl": "images/Nothing to Lose.jpg",
+        "year": 1997,
+        "title": "Nothing to Lose 1997",
+        "description": "Nick's wife is in bed with his boss. He later gets a gun to his head by a carjacker but steps on the gas pedal. They end up friends after adventures together:holdups, burglary, reckless driving, and revenge. Twists follow.",
+        "embedId": "2677676706342",
+        "genres": [
+            "Comedy"
+        ],
+        "source": "ok.ru"
+    },
+    {
         "id": "Nothing-But-Trouble",
         "posterUrl": "images/Nothing But Trouble.jpg",
         "year": 1991,
@@ -15250,25 +15735,16 @@
         "source": "ok.ru"
     },
     {
-        "id": "con-air-1997",
-        "title": "Con Air (1997) Full Movie | Nicolas Cage, John Malkovich & John Cusack | Action Thriller",
+        "id": "ConAir",
+        "posterUrl": "images/ConAir.jpg",
         "year": 1997,
-        "director": "Simon West",
-        "quality": "1080p",
-        "duration": "1h 55m",
-        "genres": "Action, Thriller, Crime",
-        "starring": "Nicolas Cage, John Malkovich, John Cusack, Steve Buscemi, Ving Rhames, Colm Meaney, Mykelti Williamson",
-        "archiveStatus": "Feature Presentation / Stream",
-        "description": "Newly paroled Army Ranger Cameron Poe is eager to return home to his wife and daughter after serving eight years for a tragic bar fight defending his spouse. His ride home turns into a nightmare when he boards the Jailbird, a high-security prison transport plane carrying the nation's most dangerous felons. Led by brilliant mastermind Cyrus 'The Virus' Grissom and murderous enforcer Diamond Dog, the inmates stage a bloody mid-air takeover. Determined to save his diabetic friend and innocent guards onboard, Poe stays behind to work covertly with U.S. Marshal Vince Larkin on the ground to foil the hijackers' escape plans.",
-        "highlights": [
-            "Directed by Simon West and produced by Jerry Bruckheimer, delivering high-octane 90s action spectacle.",
-            "Starring Nicolas Cage alongside John Malkovich as Cyrus 'The Virus' and John Cusack as Marshal Vince Larkin.",
-            "Features iconic supporting roles from Steve Buscemi, Ving Rhames, Colm Meaney, and Dave Chappelle.",
-            "Nominated for two Academy Awards, including Best Original Song for 'How Do I Live'."
-        ],
+        "title": "ConAir 1997",
+        "description": "Former US Amy Ranger, Cameron Poe, has just been paroled for manslaughter, but must stop a group of violent and deadly criminals from escaping the country after they seizes control of the prison transport plane he is on.",
         "embedId": "10328404003438",
-        "source": "ok.ru",
-        "posterUrl": "images/con-air-1997.jpg"
+        "genres": [
+            "Action"
+        ],
+        "source": "ok.ru"
     },
     {
         "id": "A-Chefs-Deadly-Revenge",
@@ -16276,16 +16752,16 @@
         "source": "ok.ru"
     },
     {
-        "id": "bring-her-back-2025",
-        "title": "Bring Her Back (2025) Full Movie | Classic Horror",
+        "id": "Bring-Her-Back",
+        "posterUrl": "images/Bring Her Back.jpg",
         "year": 2025,
-        "director": "Danny Philippou, Michael Philippou",
-        "quality": "HD",
-        "genres": "Horror",
+        "title": "Bring Her Back",
         "description": "A brother and sister uncover a terrifying ritual at the secluded home of their new foster mother.",
         "embedId": "10147631139414",
-        "source": "ok.ru",
-        "posterUrl": "images/bring-her-back-2025.jpg"
+        "genres": [
+            "Horror"
+        ],
+        "source": "ok.ru"
     },
     {
         "id": "2-0-Lucy",
@@ -16815,25 +17291,18 @@
         "source": "ok.ru"
     },
     {
-        "id": "star-trek-v-the-final-frontier-1989",
-        "title": "Star Trek V: The Final Frontier (1989) Full Movie | William Shatner & Leonard Nimoy | Sci-Fi Adventure",
+        "id": "Star-Trek-V-The-Final-Frontier",
+        "posterUrl": "images/Star Trek V The Final Frontier.jpg",
         "year": 1989,
-        "director": "William Shatner",
-        "quality": "1080p",
-        "duration": "1h 47m",
-        "genres": "Sci-Fi, Action, Adventure",
-        "starring": "William Shatner, Leonard Nimoy, DeForest Kelley, James Doohan, Walter Koenig, Nichelle Nichols, George Takei, Laurence Luckinbill",
-        "archiveStatus": "Feature Presentation / Stream",
-        "description": "While enjoying shore leave on Earth, Captain James T. Kirk, Mr. Spock, and Dr. Leonard McCoy are abruptly recalled to duty when a Vulcan renegade named Sybok takes diplomats hostage on the planet Nimbus III. Sybok, who reveals himself to be Spock's long-lost half-brother, hijacks the starship USS Enterprise-A using unique telepathic powers to erase emotional pain. Driven by a fanatical religious vision, Sybok forces the crew to navigate past the dangerous Great Barrier at the center of the galaxy in search of Sha Ka Ree, the mythical domain of God.",
-        "highlights": [
-            "Directed by series star William Shatner, who also co-wrote the original story.",
-            "Starring the iconic original series cast including William Shatner, Leonard Nimoy, and DeForest Kelley.",
-            "Features Laurence Luckinbill in a memorable performance as the charismatic Vulcan renegade Sybok.",
-            "Composed by Academy Award  Jerry Goldsmith, returning to the franchise score."
-        ],
+        "title": "Star Trek V The Final Frontier",
+        "description": "Captain Kirk and his crew must deal with Mr. Spock's long-lost half-brother who hijacks the Enterprise for an obsessive search for God at the center of the galaxy.",
         "embedId": "29607856717",
-        "source": "ok.ru",
-        "posterUrl": "images/star-trek-v-the-final-frontier-1989.jpg"
+        "genres": [
+            "Sci-Fi",
+            "Action",
+            "Adventure"
+        ],
+        "source": "ok.ru"
     },
     {
         "id": "Star-Trek-VI-The-Undiscovered-Country",
@@ -17102,25 +17571,16 @@
         "source": "ok.ru"
     },
     {
-        "id": "all-fun-and-games-2023",
-        "title": "All Fun and Games (2023) Full Movie | Asa Butterfield & Natalia Dyer | Horror Thriller",
+        "id": "All-Fun-and-Games",
+        "posterUrl": "images/All Fun and Games.jpg",
         "year": 2023,
-        "director": "Eren Celeboglu, Ari Costa",
-        "quality": "1080p",
-        "duration": "1h 16m",
-        "genres": "Horror, Thriller",
-        "starring": "Asa Butterfield, Natalia Dyer, Benjamin Evan Ainsworth, Laurel Marsden, Annabeth Gish",
-        "archiveStatus": "Feature Presentation / Stream",
-        "description": "In the historic town of Salem, Massachusetts, a group of local teenagers comes across a strange, cursed knife carved from human bone. Upon unleashing the malevolent spirit trapped within the artifact, the demonic entity possesses Marcus and forces the group into playing violent, blood-soaked twists on classic childhood games like Hangman, Flashlight Tag, and Hide and Seek. As the night unfolds, Jo and her friends must fight against their possessed friend and find a way to break the curse before every one of them is eliminated.",
-        "highlights": [
-            "Co-directed by Ari Costa and Eren Celeboglu, executive produced by the Russo Brothers.",
-            "Starring Natalia Dyer (Stranger Things) and Asa Butterfield (Sex Education).",
-            "Set in Salem, blending historic witch-lore with high-stakes supernatural survival.",
-            "Features chilling dark twists on traditional childhood games."
-        ],
+        "title": "All Fun and Games",
+        "description": "A group of Salem teens discover a cursed knife that unleashes a demon that forces them to play gruesome, deadly versions of childhood games where there can be no winners, only survivors.",
         "embedId": "6104609786466",
-        "source": "ok.ru",
-        "posterUrl": "images/all-fun-and-games-2023.jpg"
+        "genres": [
+            "Horror"
+        ],
+        "source": "ok.ru"
     },
     {
         "id": "Badlands",
@@ -17391,21 +17851,19 @@
         "source": "rumble"
     },
     {
-        "id": "north-by-northwest-1959",
-        "title": "North by Northwest (1959)",
+        "id": "North-by-Northwest",
+        "posterUrl": "images/North by Northwest.jpg",
         "year": 1959,
-        "quality": "HD",
+        "title": "North by Northwest",
+        "description": "A New York City advertising executive goes on the run after being mistaken for a government agent by a group of foreign spies, and falls for a woman whose loyalties he begins to doubt.",
+        "embedId": "33495386654",
         "genres": [
-            "Action",
             "Adventure",
-            "Mystery",
-            "Thriller"
+            "Drama",
+            "Thriller",
+            "Hitchcock"
         ],
-        "director": "Alfred Hitchcock",
-        "source": "rumble",
-        "embedId": "",
-        "posterUrl": "images/north-by-northwest-1959.jpg",
-        "description": "North by Northwest (1959) is Alfred Hitchcock's iconic espionage thriller starring Cary Grant and Eva Marie Saint. When suave New York advertising executive Roger Thornhill is mistaken for a non-existent government agent, he is framed for murder and pursued across America by ruthless foreign spies and federal authorities. Featuring iconic set pieces like the rural crop-duster chase and the Mount Rushmore climax, stream the full restored HD feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/"
+        "source": "ok.ru"
     },
     {
         "id": "Cool-Hand-Luke",
@@ -18480,19 +18938,17 @@
         "source": "ok.ru"
     },
     {
-        "id": "south-solitary-2010",
-        "title": "South Solitary (2010)",
+        "id": "South-Solitary",
+        "posterUrl": "images/South Solitary.jpg",
         "year": 2010,
-        "quality": "HD",
+        "title": "South Solitary",
+        "description": "Set in 1928, Meredith is a 35 year-old unmarried woman who arrives at a remote lighthouse island with her uncle, the new head keeper.",
+        "embedId": "4030059383351",
         "genres": [
             "Drama",
             "Romance"
         ],
-        "director": "Shirley Barrett",
-        "source": "ok.ru",
-        "embedId": "4030059383351",
-        "posterUrl": "images/south-solitary-2010.jpg",
-        "description": "South Solitary (2010) is a moving Australian period drama set in 1928, directed by Shirley Barrett and starring Miranda Otto. Meredith, an unmarried 35-year-old woman, arrives at a harsh and isolated lighthouse island alongside her uncle, the newly appointed head keeper. Amidst extreme weather and social isolation, she finds unexpected human connection with the island's taciturn assistant keeper. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/"
+        "source": "ok.ru"
     },
     {
         "id": "The-Runner-from-Ravenshead",
@@ -18737,18 +19193,16 @@
         "source": "ok.ru"
     },
     {
-        "id": "death-camp-2020",
-        "title": "Death Camp (2020)",
+        "id": "Death-Camp",
+        "posterUrl": "images/Death Camp.jpg",
         "year": 2020,
-        "quality": "HD",
+        "title": "Death Camp",
+        "description": "Emmy Award winner Bill Oberst, Jr. Stars as the former owner of the abandoned cabin a group of Teenagers go to where twelve kids were killed 20 years earlier. Emmy Award winning Composer Kevin McDaniels composes the Music.",
+        "embedId": "4223334091302",
         "genres": [
             "Horror"
         ],
-        "director": "Kevin McDaniels",
-        "source": "ok.ru",
-        "embedId": "4223334091302",
-        "posterUrl": "images/death-camp-2020.jpg",
-        "description": "Death Camp (2020) is a chilling indie horror starring Emmy Award winner Bill Oberst Jr. A group of teenagers ventures out to an abandoned cabin where twelve kids were brutally killed two decades prior, only to discover that the dark history of the campsite is far from buried. Stream the full feature presentation online on MovieHub Vault with complete cast insights and production metadata. https://moviehub.uk/"
+        "source": "ok.ru"
     },
     {
         "id": "September-Dawn",
@@ -19009,16 +19463,16 @@
         "posterUrl": "images/the-girl-2012.jpg"
     },
     {
-        "id": "bring-him-back-dead-2022",
-        "title": "Bring Him Back Dead (2022) Full Movie | Gary Daniels & Louis Mandylor | Action Thriller",
+        "id": "Bring-Him-Back-Dead",
+        "posterUrl": "images/Bring Him Back Dead.jpg",
         "year": 2022,
-        "director": "Mark Savage",
-        "quality": "HD",
-        "genres": "Action, Crime, Thriller",
-        "description": "A violent gang of criminals is ordered, after a botched heist, to track down and eliminate the man who betrayed them and ran off with their loot. Starring Gary Daniels, Louis Mandylor, and Daniel Baldwin.",
+        "title": "Bring Him Back Dead",
+        "description": "A violent gang of criminals is ordered, after a botched heist, to track down and eliminate the man who betrayed them and ran off with their loot. Daniels plays the anti-hero, while Mandylor plays the leader of the gang and Baldwin a man with mysterious motives.",
         "embedId": "9611885021734",
-        "source": "ok.ru",
-        "posterUrl": "images/bring-him-back-dead-2022.jpg"
+        "genres": [
+            "Action"
+        ],
+        "source": "ok.ru"
     },
     {
         "id": "Knight-Moves",
@@ -20563,6 +21017,18 @@
         "embedId": "v71871i"
     },
     {
+        "id": "The_Searchers",
+        "title": "The Searchers (1956) - John Wayne Western Classic",
+        "description": "Ethan, who returns home after eight years, joins a group of rangers to recover lost cattle. The situation regresses after Comanches raid his town, kill his sister's family and abduct his niece.",
+        "genres": [
+            "Western",
+            "Epic"
+        ],
+        "posterUrl": "images/search.jpg",
+        "source": "rumble",
+        "embedId": "v716aug"
+    },
+    {
         "id": "Turbulence",
         "posterUrl": "images/turb.jpg",
         "year": 2025,
@@ -20910,20 +21376,6 @@
         "posterUrl": "images/vendetta.jpg",
         "source": "rumble",
         "embedId": "v71nlb6"
-    },
-    {
-        "id": "master-and-commander-2003",
-        "title": "Master and Commander (2003)",
-        "description": "During the Napoleonic Wars, a brash British captain pushes his ship and crew to the limit in pursuit of a formidable French warship.",
-        "genres": [
-            "Action",
-            "Adventure",
-            "War",
-            "Movie"
-        ],
-        "posterUrl": "images/master-and-commander.jpg",
-        "source": "rumble",
-        "embedId": "v71nml6"
     },
     {
         "id": "the-sweeney-2012",
@@ -22363,6 +22815,18 @@
         "source": "rumble"
     },
     {
+        "id": "howards-end-1992",
+        "title": "Howards End (1992)",
+        "description": "A 3-time Oscar-winning tale of class and inheritance starring Emma Thompson and Anthony Hopkins.",
+        "genres": "Drama",
+        "year": 1992,
+        "quality": "1080p",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk3MDY3NDc2NF5BMl5BanBnXkFtZTgwODcwNjgzOTE@._V1_.jpg",
+        "category": "Award Winners",
+        "embedId": "v72o31w",
+        "source": "rumble"
+    },
+    {
         "id": "great-expectations-1946",
         "title": "Great Expectations (1946)",
         "description": "The definitive Dickens adaptation by David Lean. A haunting, Oscar-winning tale of a young orphan's transformation.",
@@ -22483,16 +22947,25 @@
         "year": 1949
     },
     {
-        "id": "The-Last-of-the-Mohicans",
-        "title": "The Last of the Mohicans  ",
-        "description": "The last members of a dying Native American tribe, the Mohicans -- Uncas (Eric Schweig), his father Chingachgook (Russell Means), and his adopted half-white brother Hawkeye (Daniel Day-Lewis) -- live in peace alongside British colonists. But when the daughters (Madeleine Stowe, Jodhi May) of a British colonel are kidnapped by a traitorous scout, Hawkeye and Uncas must rescue them in the crossfire of a gruesome military conflict of which they wanted no part: the French and Indian War.",
-        "embedId": "967004064409",
+        "id": "the-last-of-the-mohicans-1992",
+        "title": "The Last of the Mohicans (1992) Full Movie | Daniel Day-Lewis, Madeleine Stowe & Russell Means | Historical Action Adventure",
+        "year": 1992,
+        "director": "Michael Mann",
+        "cast": "Daniel Day-Lewis, Madeleine Stowe, Russell Means, Eric Schweig, Jodhi May, Steven Waddington, Wes Studi, Maurice Roëves, Patrice Chéreau",
+        "quality": "HD",
         "genres": [
-            "Western"
+            "Western",
+            "Action",
+            "Adventure",
+            "Drama",
+            "History",
+            "War"
         ],
+        "topPick": "y",
+        "description": "During the French and Indian War in 1757, Hawkeye (Daniel Day-Lewis)—an adopted white frontier scout raised by the last members of the Mohican tribe—races to rescue the two daughters of a British colonel after they are ambushed and kidnapped in the wilderness. Directed by Michael Mann.",
+        "embedId": "967004064409",
         "source": "ok.ru",
-        "posterUrl": "images/the last of the mohicans.jpg",
-        "year": 1992
+        "posterUrl": "images/the last of the mohicans.jpg"
     },
     {
         "id": "Wyatt-Earp",
@@ -22505,18 +22978,6 @@
         "source": "ok.ru",
         "posterUrl": "images/wyatt earp.jpg",
         "year": 1994
-    },
-    {
-        "id": "the-burrowers-2008",
-        "title": "The Burrowers (2008) Full Movie | Clancy Brown & William Mapother | Horror Western Creature Feature",
-        "year": 2008,
-        "director": "J.T. Petty",
-        "quality": "HD",
-        "genres": "Horror, Western, Thriller",
-        "description": "In the Wild West, a rescue party searching for a missing family discovers a terrifying truth: they are being hunted by ancient underground creatures. A gritty survival horror that blends classic Western grit with supernatural terror. Watch the full movie at MovieHub: https://moviehub.zya.me/",
-        "embedId": "1010671487641",
-        "source": "ok.ru",
-        "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAnPzPJIOgNxNvZHiuu0seN35xf8tVzLvkKg&s"
     },
     {
         "id": "Forsaken",
@@ -23386,16 +23847,15 @@
         "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTRiOGMxYzctMTk3Ny00ODBkLWIyNTMtOGZhMWY0MjZiYzAxXkEyXkFqcGc@._V1_.jpg"
     },
     {
-        "id": "the-hitch-hiker-1953",
-        "title": "The Hitch-Hiker (1953) Full Movie | Edmond O'Brien & Frank Lovejoy | Classic Film-Noir Thriller",
-        "year": 1953,
-        "director": "Ida Lupino",
-        "quality": "HD",
+        "id": "The-Hitch-Hiker-1953",
+        "title": "The Hitch-Hiker",
+        "year": "1953",
+        "quality": "HD Remastered",
         "genres": "Crime, Film-Noir, Thriller",
-        "description": "Inspired by a terrifying true crime spree, two friends on a fishing trip pick up a stranded hitchhiker who turns out to be a psychotic serial killer. Directed by trailblazer Ida Lupino and starring Edmond O'Brien and Frank Lovejoy.",
-        "embedId": "v734lk4",
+        "description": "Inspired by a true crime spree, two friends on a fishing trip pick up a mysterious hitchhiker who turns out to be a serial killer.",
         "source": "rumble",
-        "posterUrl": "images/the-hitch-hiker-1953.jpg"
+        "url": "v734lk4",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDYwNzllZTAtYzUxMS00NTk0LWFkMjMtOTJkYjYzZjQ5NDZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
         "id": "Rage-at-Dawn-1955",
@@ -23420,28 +23880,37 @@
         "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzc5MjUyMWYtMDkyMi00YTc2LTg3ZDMtMjI3MmU3Nzg2YTExXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
-        "id": "the-glenn-miller-story-1953",
-        "title": "The Glenn Miller Story (1953) Full Movie | James Stewart & June Allyson | Classic Big-Band Drama",
-        "year": 1953,
-        "director": "Anthony Mann",
-        "quality": "HD",
+        "id": "The-Glenn-Miller-Story-1953",
+        "title": "The Glenn Miller Story",
+        "year": "1953",
+        "quality": "1080p BluRay",
         "genres": "Biography, Drama, Music",
-        "description": "The life story of legendary big-band leader Glenn Miller, from his early struggles as a trombone player to his rise as a world-famous conductor and his service during WWII. Starring James Stewart and June Allyson.",
-        "embedId": "1610401778400",
-        "source": "ok.ru",
-        "posterUrl": "images/the-glenn-miller-story-1953.jpg"
+        "description": "The life story of legendary big-band leader Glenn Miller, from his early struggles as a trombone player to his rise as a world-famous conductor and his service during WWII.",
+        "source": "rumble",
+        "url": "v734zaa",
+        "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/9306b0ed0504d946999839130ccd127f7c4e9a3aca153d6bd5b07cccd529f567.jpg"
     },
     {
-        "id": "bugsy-1991",
-        "title": "Bugsy (1991) Full Movie | Warren Beatty & Annette Bening | Classic Crime Drama",
-        "year": 1991,
-        "director": "Barry Levinson",
-        "quality": "HD",
+        "id": "Doc-Holliday-3-Colorado-Outlaws-2024",
+        "title": "Doc Holliday 3: Colorado Outlaws",
+        "year": "2024",
+        "quality": "1080p BluRay",
+        "genres": "Western, Action",
+        "description": "Doc Holliday retires to Colorado after a long battle with tuberculosis and finds himself in one final adventure to save a young man from ruthless outlaws.",
+        "source": "rumble",
+        "url": "v73505w",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTE5MjAwZGEtYzM3OC00M2YzLWI4NTktODgxYTBkODg2NmNiXkEyXkFqcGc@._V1_.jpg"
+    },
+    {
+        "id": "Bugsy-1991-Uncut",
+        "title": "Bugsy (Uncut)",
+        "year": "1991",
+        "quality": "1080p BluRay",
         "genres": "Biography, Crime, Drama",
-        "description": "The Uncut Director's Cut of the story of Benjamin 'Bugsy' Siegel, the playboy gangster who left New York to conquer Hollywood and ended up creating the Las Vegas Strip. Starring Warren Beatty and Annette Bening.",
-        "embedId": "992214256175",
-        "source": "ok.ru",
-        "posterUrl": "images/bugsy-1991.jpg"
+        "description": "The Uncut Director's Cut of the story of Benjamin 'Bugsy' Siegel, the playboy gangster who left New York to conquer Hollywood and ended up creating the Las Vegas Strip.",
+        "source": "rumble",
+        "url": "v736764/",
+        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTM0NDY1MTQyOV5BMl5BanBnXkFtZTYwMTg3NDQ5._V1_FMjpg_UX1000_.jpg"
     },
     {
         "id": "The-Philadelphia-Story-1940",
@@ -23738,338 +24207,5 @@
         "source": "rumble",
         "url": "v73ba6y",
         "posterUrl": "https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-1givdux_c0e35a77.jpeg"
-    },
-    {
-        "id": "the-ladykillers-1955",
-        "title": "The Ladykillers (1955) Full Movie | Alec Guinness & Peter Sellers | Classic British Comedy",
-        "year": 1955,
-        "director": "Alexander Mackendrick",
-        "quality": "1080p",
-        "genres": "Comedy, Crime, Classics",
-        "description": "A sweet old widow accidentally thwarts a gang of eccentric bank robbers posing as a string quintet in this legendary Ealing Studios dark comedy. Starring Alec Guinness and Peter Sellers.",
-        "embedId": "v75ujia",
-        "source": "rumble",
-        "posterUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BYTVlM2JmOGQtNWEwYy00NDQzLWIyZmEtOGZhMzgxZGRjZDA0XkEyXkFqcGdeQXVyMDI2NDg0NQ%40%40._V1_.jpg&f=1&nofb=1&ipt=9f32df6b6c3fd0d4f0579737c65752b30abbaf3e7933a96b2ea99c13adfc6499"
-    },
-    {
-        "id": "Merry-Christmas-Mr-Lawrence-(1983)-1080p",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWU3NzRlZTktZWFjMC00OWYzLTkzZTItMjI5Mjg5YmJjNGEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        "year": 1983,
-        "title": "Merry Christmas Mr. Lawrence (1983) 1080p",
-        "description": "During WWII, a British soldier, Major Jack Celliers, arrives in a Japanese POW camp. The camp commander, Captain Yonoi, becomes obsessed with Celliers' defiant spirit, leading to a deep psychological conflict between Eastern and Western values. Meanwhile, Colonel Lawrence attempts to bridge the cultural gap between the captives and their captors.",
-        "director": "Nagisa Ôshima",
-        "embedId": "v7616q6",
-        "genres": [
-            "Drama",
-            "War"
-        ],
-        "source": "rumble",
-        "quality": "1080p",
-        "duration": "02:03:00"
-    },
-    {
-        "id": "sorcerer-1977-full-movie",
-        "title": "Sorcerer (1977) Full Movie | William Friedkin, Roy Scheider | Intense Action Thriller, Nitro Express, Tangerine Dream | Cult Classic 1080p",
-        "year": 1977,
-        "director": "William Friedkin",
-        "quality": "1080p",
-        "genres": [
-            "Thriller",
-            "Adventure",
-            "Drama"
-        ],
-        "description": "Embark on a heart-pounding journey into the unknown with \"Sorcerer\" (1977), William Friedkin's acclaimed action-thriller masterpiece. Starring Roy Scheider as Scanlon (aka \"Dominguez\"), Bruno Cremer as Victor Manzon (aka \"Serrano\"), Francisco Rabal as Nilo, and Amidou as Kassem (aka \"Martinez\"), this R-rated film plunges four desperate fugitives into a perilous mission in a remote South American jungle. They must transport unstable, sweating nitroglycerin in two dilapidated trucks (\"Lazaro\" and \"Salazar\") across 218 miles of treacherous terrain, including an unforgettable rope bridge crossing, to extinguish a raging oil well fire. Widely considered a more faithful adaptation of Georges Arnaud's novel The Wages of Fear, \"Sorcerer\" was initially overlooked but has since been critically reappraised as one of the most intense and visually stunning films of its era. Featuring an iconic, atmospheric electronic score by Tangerine Dream, this 2-hour, 1-minute journey into existential dread and human endurance is a testament to Friedkin's uncompromising vision and practical filmmaking. Experience the white-knuckle suspense in pristine 1080p. Watch the full movie now.",
-        "embedId": "v75ktty",
-        "source": "rumble",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ5ODA1NDk0Nl5BMl5BanBnXkFtZTgwNTc0OTIwOTE@._V1_.jpg",
-        "duration": "2Hrs"
-    },
-    {
-        "id": "i-went-down-1997-full-movie",
-        "title": "I Went Down (1997) Full Movie | Brendan Gleeson, Peter McDonald | Irish Crime Comedy, Road Movie | Paddy Breathnach | 1080p",
-        "year": 1997,
-        "director": "Paddy Breathnach",
-        "quality": "1080p",
-        "genres": [
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Action"
-        ],
-        "description": "Get ready for a darkly comedic ride through the Irish criminal underworld with \"I Went Down\" (1997)! This R-rated Irish crime comedy, directed by Paddy Breathnach and written by Conor McPherson, pairs two unlikely anti-heroes on a wild road trip. Recently released from prison, Git Hynes (Peter McDonald) finds himself in deep trouble with notorious crime boss Tom French (Tony Doyle) after defending his friend. To settle the debt, Git is forced to team up with the volatile and unpredictable Bunny Kelly (Brendan Gleeson) on a seemingly simple mission: retrieve a missing associate from Cork. What follows is a blend of sharp dialogue, unexpected twists, and a uniquely Irish charm that earned the film critical acclaim and made it Ireland's highest-grossing independent film upon its release. Also starring David Wilmot as Anto and Peter Caffrey as Frank Grogan, this 1 hour 47 minute adventure is a character-driven romp, often praised for its \"buddy picture\" dynamics and clever scripting. Experience this cult classic in stunning 1080p. Watch the full movie now.",
-        "embedId": "v75ks2g",
-        "source": "rumble",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWY3ZDU2NDEtYmU2Ni00OTU3LTk1NDAtMGQ5NzA3ODQyOGNiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        "duration": "1Hr.47"
-    },
-    {
-        "id": "the-reptile-1966",
-        "title": "The Reptile (1966) Full Movie | Hammer Horror Classic | Supernatural Mystery",
-        "year": 1966,
-        "director": "John Gilling",
-        "quality": "HD",
-        "duration": "1h 31m",
-        "genres": "Horror, Mystery, Supernatural, Classics",
-        "description": "After his brother dies under mysterious circumstances, Harry Spalding investigates a remote Cornish village, only to uncover a sinister curse and a terrifying secret involving a monstrous creature. Experience this chilling Hammer Horror classic and explore our full collection at https://moviehub.uk/.",
-        "embedId": "v757tg6",
-        "source": "rumble",
-        "posterUrl": "images/the-reptile-1966.jpg"
-    },
-    {
-        "id": "strait-jacket-1964-full-movie",
-        "title": "Strait-Jacket (1964) Full Movie | 1080p | Joan Crawford",
-        "year": 1964,
-        "director": "William Castle",
-        "quality": "1080p",
-        "genres": [
-            "Horror",
-            "Thriller",
-            "Mystery",
-            "Psychological",
-            "Classic"
-        ],
-        "description": "Witness the chilling suspense of Strait-Jacket (1964) in brilliant 1080p. Starring the legendary Joan Crawford, this psychological horror thriller follows a woman returning home after twenty years in a mental institution for a brutal axe murder. As new slayings begin, is she innocent, or has the madness returned? Experience this cult classic directed by William Castle, packed with twists, turns, and unsettling atmosphere. Watch the full movie now.",
-        "embedId": "v74zos0",
-        "source": "rumble",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2MxZDllMDUtMzhkYi00Y2M2LTlhODItZjFiMjdiOTM0MGRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        "duration": "1Hr.33"
-    },
-    {
-        "id": "the-unborn-child-expected-reborn-2011",
-        "title": "The Unborn Child: Expected Reborn (2011) | Thai Horror Film | ผีจ้างคนมาเกิด",
-        "year": 2011,
-        "director": "Poj Arnon",
-        "quality": "HD",
-        "genres": [
-            "Horror",
-            "Thriller",
-            "Thai",
-            "Supernatural",
-            "Mystery"
-        ],
-        "description": "Dive into the terrifying world of The Unborn Child: Expected Reborn (2011) ผีจ้างคนมาเกิด, a gripping Thai horror film centered on chilling supernatural events and the dark secrets of life and death. A young couple faces inexplicable horrors after a tragic incident, uncovering a dark past that refuses to stay buried. Experience intense suspense and psychological dread. Watch the full movie (ดูหนังเต็มเรื่อง) for a truly haunting experience. Perfect for fans of Thai horror (หนังสยองขวัญไทย) and Asian supernatural thrillers. พบกับความสยองขวัญจากภาพยนตร์ไทย 'ผีจ้างคนมาเกิด' (2011) ที่จะพาคุณดำดิ่งสู่เรื่องราวลึกลับของชีวิตและความตาย!",
-        "embedId": "v74wely",
-        "source": "rumble",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTM5NDY1MTk2Nl5BMl5BanBnXkFtZTcwNTMyNjkxMg@@._V1_.jpg",
-        "duration": "PT1H30M"
-    },
-    {
-        "id": "Training-Day",
-        "title": "Training Day",
-        "description": "A rookie detective is pushed to his limits by a corrupt narcotics officer during a single, intense day.",
-        "embedId": "6458634209830",
-        "source": "ok.ru",
-        "genres": [
-            "Thriller"
-        ],
-        "posterUrl": "images/training day.jpg",
-        "year": 2001
-    },
-    {
-        "id": "Dead-Rush",
-        "title": "Dead Rush",
-        "description": "ADavid's life is turned upside down when an unknown illness ignites a full-blown zombie epidemic, leaving survivors with few places to hide. David rushes home to protect his pregnant wife, along the way gathering survivors.",
-        "embedId": "6410479798937",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru",
-        "posterUrl": "images/dead rush.jpg",
-        "year": 2016
-    },
-    {
-        "id": "The-Shawshank-Redemption",
-        "posterUrl": "images/The Shawshank Redemption.jpg",
-        "year": 1994,
-        "title": "The Shawshank Redemption.1994",
-        "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
-        "embedId": "7957536901741",
-        "genres": [
-            "Drama",
-            "Crime"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "Nothing-to-Lose",
-        "posterUrl": "images/Nothing to Lose.jpg",
-        "year": 1997,
-        "title": "Nothing to Lose 1997",
-        "description": "Nick's wife is in bed with his boss. He later gets a gun to his head by a carjacker but steps on the gas pedal. They end up friends after adventures together:holdups, burglary, reckless driving, and revenge. Twists follow.",
-        "embedId": "2677676706342",
-        "genres": [
-            "Comedy"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "ConAir",
-        "posterUrl": "images/ConAir.jpg",
-        "year": 1997,
-        "title": "ConAir 1997",
-        "description": "Former US Amy Ranger, Cameron Poe, has just been paroled for manslaughter, but must stop a group of violent and deadly criminals from escaping the country after they seizes control of the prison transport plane he is on.",
-        "embedId": "10328404003438",
-        "genres": [
-            "Action"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "Star-Trek-V-The-Final-Frontier",
-        "posterUrl": "images/Star Trek V The Final Frontier.jpg",
-        "year": 1989,
-        "title": "Star Trek V The Final Frontier",
-        "description": "Captain Kirk and his crew must deal with Mr. Spock's long-lost half-brother who hijacks the Enterprise for an obsessive search for God at the center of the galaxy.",
-        "embedId": "29607856717",
-        "genres": [
-            "Sci-Fi",
-            "Action",
-            "Adventure"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "All-Fun-and-Games",
-        "posterUrl": "images/All Fun and Games.jpg",
-        "year": 2023,
-        "title": "All Fun and Games",
-        "description": "A group of Salem teens discover a cursed knife that unleashes a demon that forces them to play gruesome, deadly versions of childhood games where there can be no winners, only survivors.",
-        "embedId": "6104609786466",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "North-by-Northwest",
-        "posterUrl": "images/North by Northwest.jpg",
-        "year": 1959,
-        "title": "North by Northwest",
-        "description": "A New York City advertising executive goes on the run after being mistaken for a government agent by a group of foreign spies, and falls for a woman whose loyalties he begins to doubt.",
-        "embedId": "33495386654",
-        "genres": [
-            "Adventure",
-            "Drama",
-            "Thriller",
-            "Hitchcock"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "South-Solitary",
-        "posterUrl": "images/South Solitary.jpg",
-        "year": 2010,
-        "title": "South Solitary",
-        "description": "Set in 1928, Meredith is a 35 year-old unmarried woman who arrives at a remote lighthouse island with her uncle, the new head keeper.",
-        "embedId": "4030059383351",
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "Death-Camp",
-        "posterUrl": "images/Death Camp.jpg",
-        "year": 2020,
-        "title": "Death Camp",
-        "description": "Emmy Award winner Bill Oberst, Jr. Stars as the former owner of the abandoned cabin a group of Teenagers go to where twelve kids were killed 20 years earlier. Emmy Award winning Composer Kevin McDaniels composes the Music.",
-        "embedId": "4223334091302",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "The_Searchers",
-        "title": "The Searchers (1956) - John Wayne Western Classic",
-        "description": "Ethan, who returns home after eight years, joins a group of rangers to recover lost cattle. The situation regresses after Comanches raid his town, kill his sister's family and abduct his niece.",
-        "genres": [
-            "Western",
-            "Epic"
-        ],
-        "posterUrl": "images/search.jpg",
-        "source": "rumble",
-        "embedId": "v716aug"
-    },
-    {
-        "id": "howards-end-1992",
-        "title": "Howards End (1992)",
-        "description": "A 3-time Oscar-winning tale of class and inheritance starring Emma Thompson and Anthony Hopkins.",
-        "genres": "Drama",
-        "year": 1992,
-        "quality": "1080p",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk3MDY3NDc2NF5BMl5BanBnXkFtZTgwODcwNjgzOTE@._V1_.jpg",
-        "category": "Award Winners",
-        "embedId": "v72o31w",
-        "source": "rumble"
-    },
-    {
-        "id": "The-Hitch-Hiker-1953",
-        "title": "The Hitch-Hiker",
-        "year": "1953",
-        "quality": "HD Remastered",
-        "genres": "Crime, Film-Noir, Thriller",
-        "description": "Inspired by a true crime spree, two friends on a fishing trip pick up a mysterious hitchhiker who turns out to be a serial killer.",
-        "source": "rumble",
-        "url": "v734lk4",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDYwNzllZTAtYzUxMS00NTk0LWFkMjMtOTJkYjYzZjQ5NDZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-        "id": "The-Glenn-Miller-Story-1953",
-        "title": "The Glenn Miller Story",
-        "year": "1953",
-        "quality": "1080p BluRay",
-        "genres": "Biography, Drama, Music",
-        "description": "The life story of legendary big-band leader Glenn Miller, from his early struggles as a trombone player to his rise as a world-famous conductor and his service during WWII.",
-        "source": "rumble",
-        "url": "v734zaa",
-        "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/9306b0ed0504d946999839130ccd127f7c4e9a3aca153d6bd5b07cccd529f567.jpg"
-    },
-    {
-        "id": "Doc-Holliday-3-Colorado-Outlaws-2024",
-        "title": "Doc Holliday 3: Colorado Outlaws",
-        "year": "2024",
-        "quality": "1080p BluRay",
-        "genres": "Western, Action",
-        "description": "Doc Holliday retires to Colorado after a long battle with tuberculosis and finds himself in one final adventure to save a young man from ruthless outlaws.",
-        "source": "rumble",
-        "url": "v73505w",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTE5MjAwZGEtYzM3OC00M2YzLWI4NTktODgxYTBkODg2NmNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-        "id": "Bugsy-1991-Uncut",
-        "title": "Bugsy (Uncut)",
-        "year": "1991",
-        "quality": "1080p BluRay",
-        "genres": "Biography, Crime, Drama",
-        "description": "The Uncut Director's Cut of the story of Benjamin 'Bugsy' Siegel, the playboy gangster who left New York to conquer Hollywood and ended up creating the Las Vegas Strip.",
-        "source": "rumble",
-        "url": "v736764/",
-        "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTM0NDY1MTQyOV5BMl5BanBnXkFtZTYwMTg3NDQ5._V1_FMjpg_UX1000_.jpg"
-    },
-    {
-        "id": "Bring-Her-Back",
-        "posterUrl": "images/Bring Her Back.jpg",
-        "year": 2025,
-        "title": "Bring Her Back",
-        "description": "A brother and sister uncover a terrifying ritual at the secluded home of their new foster mother.",
-        "embedId": "10147631139414",
-        "genres": [
-            "Horror"
-        ],
-        "source": "ok.ru"
-    },
-    {
-        "id": "Bring-Him-Back-Dead",
-        "posterUrl": "images/Bring Him Back Dead.jpg",
-        "year": 2022,
-        "title": "Bring Him Back Dead",
-        "description": "A violent gang of criminals is ordered, after a botched heist, to track down and eliminate the man who betrayed them and ran off with their loot. Daniels plays the anti-hero, while Mandylor plays the leader of the gang and Baldwin a man with mysterious motives.",
-        "embedId": "9611885021734",
-        "genres": [
-            "Action"
-        ],
-        "source": "ok.ru"
     }
 ]

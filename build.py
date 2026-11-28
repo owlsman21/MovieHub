@@ -85,6 +85,15 @@ def build_share_page(movie, safe_id):
 """
 
 
+def merge_movie_entry(existing_movie, incoming_movie):
+    merged = dict(existing_movie)
+    for k, v in incoming_movie.items():
+        if k == 'topPick' and str(merged.get('topPick', '')).strip().upper() == 'Y':
+            continue
+        merged[k] = v
+    return merged
+
+
 def load_and_consolidate_movies():
     movies_map = {}
 
@@ -95,23 +104,29 @@ def load_and_consolidate_movies():
                 if isinstance(existing, list):
                     for m in existing:
                         if m and m.get('id'):
-                            movies_map[m.get('id')] = m
+                            mid = m.get('id')
+                            if mid in movies_map:
+                                movies_map[mid] = merge_movie_entry(movies_map[mid], m)
+                            else:
+                                movies_map[mid] = m
         except Exception as e:
             print(f"Error reading {ALL_MOVIES_FILE}: {e}")
 
     if os.path.exists(JSON_DIR):
         for filename in os.listdir(JSON_DIR):
-            if filename.endswith('.json'):
+            if filename.endswith('.json') and filename != ALL_MOVIES_FILE:
                 path = os.path.join(JSON_DIR, filename)
                 try:
                     with open(path, 'r', encoding='utf-8') as f:
                         data = json.load(f)
-                        if isinstance(data, list):
-                            for m in data:
-                                if m and m.get('id'):
-                                    movies_map[m.get('id')] = m
-                        elif isinstance(data, dict) and data.get('id'):
-                            movies_map[data.get('id')] = data
+                        items = data if isinstance(data, list) else ([data] if isinstance(data, dict) else [])
+                        for m in items:
+                            if m and m.get('id'):
+                                mid = m.get('id')
+                                if mid in movies_map:
+                                    movies_map[mid] = merge_movie_entry(movies_map[mid], m)
+                                else:
+                                    movies_map[mid] = m
                 except Exception as e:
                     print(f"Error reading {path}: {e}")
 

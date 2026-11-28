@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta property="og:type" content="website" />
-<meta property="og:site_name" content="MovieHub" />
-<meta property="og:url" content="https://moviehub.uk/" />
-<meta property="og:title" content="MovieHub — Classic Cinema, Film Noir & Cult Classics" />
-<meta property="og:description" content="Stream restored classic films, Film Noir, Westerns, horror, and rare cinema online at MovieHub." />
-<meta property="og:image" content="https://moviehub.uk/images/og-default.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:site_name" content="MovieHub" />
+    <meta property="og:url" content="https://moviehub.uk/" />
+    <meta property="og:title" content="MovieHub — Classic Cinema, Film Noir & Cult Classics" />
+    <meta property="og:description" content="Stream restored classic films, Film Noir, Westerns, horror, and rare cinema online at MovieHub." />
+    <meta property="og:image" content="https://moviehub.uk/images/og-default.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/images/icon-192.png">
     <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0d0f14">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-icon" href="/images/icon-192.png">
+    <meta name="theme-color" content="#0d0f14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/images/icon-192.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY3DHDXQWH"></script>
     <script>
@@ -283,6 +283,54 @@
             color: #fff;
         }
 
+        /* SHELF SCROLL WRAPPER & LEFT/RIGHT ARROWS */
+        .shelf-row-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .shelf-scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            width: 40px;
+            height: 76px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 221, 0, 0.45);
+            background-color: rgba(15, 15, 15, 0.88);
+            color: #ffffff;
+            font-size: 28px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.75);
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .shelf-scroll-btn:hover:not(:disabled) {
+            background-color: var(--gold-accent);
+            color: #000000;
+            border-color: var(--gold-accent);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .shelf-scroll-btn:disabled {
+            opacity: 0.22;
+            cursor: default;
+        }
+
+        .shelf-scroll-btn.prev {
+            left: 6px;
+        }
+
+        .shelf-scroll-btn.next {
+            right: 6px;
+        }
+
         /* ONE LINE PER SHELF WITH HORIZONTAL SCROLL */
         .shelf-grid {
             display: flex;
@@ -291,23 +339,12 @@
             overflow-y: hidden;
             padding-bottom: 10px;
             scroll-behavior: smooth;
+            width: 100%;
+            scrollbar-width: none;
         }
 
         .shelf-grid::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .shelf-grid::-webkit-scrollbar-track {
-            background: #141414;
-        }
-
-        .shelf-grid::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 4px;
-        }
-
-        .shelf-grid::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-color);
+            display: none;
         }
 
         /* Search / Filtered Layout Grid */
@@ -427,6 +464,11 @@
             }
             main {
                 padding: 12px 16px 20px;
+            }
+            .shelf-scroll-btn {
+                width: 32px;
+                height: 60px;
+                font-size: 22px;
             }
         }
     </style>
@@ -576,6 +618,54 @@
             return wrap;
         }
 
+        function attachShelfScrollArrows(grid) {
+            if (!grid || !grid.parentElement) return;
+            const wrap = grid.parentElement;
+            if (wrap.querySelector('.shelf-scroll-btn')) return;
+
+            const prevBtn = document.createElement('button');
+            prevBtn.type = 'button';
+            prevBtn.className = 'shelf-scroll-btn prev';
+            prevBtn.setAttribute('aria-label', 'Scroll row left');
+            prevBtn.innerHTML = '&#8249;';
+
+            const nextBtn = document.createElement('button');
+            nextBtn.type = 'button';
+            nextBtn.className = 'shelf-scroll-btn next';
+            nextBtn.setAttribute('aria-label', 'Scroll row right');
+            nextBtn.innerHTML = '&#8250;';
+
+            function updateButtons() {
+                const maxScroll = grid.scrollWidth - grid.clientWidth;
+                if (maxScroll <= 4) {
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                    return;
+                }
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+                prevBtn.disabled = grid.scrollLeft <= 2;
+                nextBtn.disabled = grid.scrollLeft >= maxScroll - 2;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                const step = Math.max(360, Math.floor(grid.clientWidth * 0.8));
+                grid.scrollBy({ left: -step, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                const step = Math.max(360, Math.floor(grid.clientWidth * 0.8));
+                grid.scrollBy({ left: step, behavior: 'smooth' });
+            });
+
+            grid.addEventListener('scroll', updateButtons, { passive: true });
+            window.addEventListener('resize', updateButtons, { passive: true });
+
+            wrap.appendChild(prevBtn);
+            wrap.appendChild(nextBtn);
+            requestAnimationFrame(updateButtons);
+        }
+
         function applyCurrentView() {
             const searchInput = document.getElementById('search-input');
             const clearBtn = document.getElementById('clear-search');
@@ -664,10 +754,32 @@
             container.appendChild(section);
         }
 
+        function appendLatestAdditions(container, movies) {
+            const latestAddedSection = document.createElement('section');
+            latestAddedSection.className = 'shelf';
+            latestAddedSection.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
+                    <h2>Latest Additions</h2>
+                    <a href="/catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                </div>
+                <div class="shelf-row-wrap">
+                    <div class="shelf-grid" id="grid-latest-additions"></div>
+                </div>
+            `;
+            container.appendChild(latestAddedSection);
+
+            const latestAddedGrid = document.getElementById('grid-latest-additions');
+            movies.slice(0, 12).forEach(m => {
+                latestAddedGrid.appendChild(createMovieCard(m));
+            });
+            attachShelfScrollArrows(latestAddedGrid);
+        }
+
         function renderShelves(movies) {
             const container = document.getElementById('shelf-container');
             container.innerHTML = '';
 
+            // 1. My Watchlist (if user has saved items)
             const watchlistIds = getWatchlistIds();
             if (watchlistIds.length > 0) {
                 const savedMovies = watchlistIds
@@ -681,32 +793,72 @@
                         <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
                             <h2>My Watchlist (${savedMovies.length})</h2>
                         </div>
-                        <div class="shelf-grid" id="grid-watchlist"></div>
+                        <div class="shelf-row-wrap">
+                            <div class="shelf-grid" id="grid-watchlist"></div>
+                        </div>
                     `;
                     container.appendChild(watchlistSection);
                     const watchlistGrid = document.getElementById('grid-watchlist');
                     savedMovies.forEach(m => watchlistGrid.appendChild(createMovieCard(m)));
+                    attachShelfScrollArrows(watchlistGrid);
                 }
             }
 
-            const latestAddedSection = document.createElement('section');
-            latestAddedSection.className = 'shelf';
-            latestAddedSection.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
-                    <h2>Latest Additions</h2>
-                    <a href="/catalog.html" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
-                </div>
-                <div class="shelf-grid" id="grid-latest-additions"></div>
-            `;
-            container.appendChild(latestAddedSection);
+            // 2. Top Picks (movies with "topPick": "Y")
+            const topPicks = movies.filter(m =>
+                String(m.topPick || '').trim().toUpperCase() === 'Y'
+            );
 
-            const latestAddedGrid = document.getElementById('grid-latest-additions');
-            movies.slice(0, 12).forEach(m => {
-                latestAddedGrid.appendChild(createMovieCard(m));
-            });
+            if (topPicks.length > 0) {
+                const topPicksSection = document.createElement('section');
+                topPicksSection.className = 'shelf';
+                topPicksSection.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
+                        <h2>Top Picks</h2>
+                    </div>
+                    <div class="shelf-row-wrap">
+                        <div class="shelf-grid" id="grid-top-picks"></div>
+                    </div>
+                `;
+                container.appendChild(topPicksSection);
+                const topPicksGrid = document.getElementById('grid-top-picks');
+                topPicks.forEach(m => {
+                    topPicksGrid.appendChild(createMovieCard(m));
+                });
+                attachShelfScrollArrows(topPicksGrid);
+            }
 
+            // 3. New Releases (rendered first)
+            const newReleasesCat = { title: "New Releases", keywords: ["new"], domId: "latest" };
+            const newReleasesList = movies
+                .filter(m => parseInt(m.year, 10) >= 2024)
+                .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
+
+            if (newReleasesList.length > 0) {
+                const newSection = document.createElement('section');
+                newSection.className = 'shelf';
+                newSection.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px;">
+                        <h2>${newReleasesCat.title}</h2>
+                        <a href="/category.html?q=${encodeURIComponent(newReleasesCat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
+                    </div>
+                    <div class="shelf-row-wrap">
+                        <div class="shelf-grid" id="grid-${newReleasesCat.domId}"></div>
+                    </div>
+                `;
+                container.appendChild(newSection);
+                const newGrid = document.getElementById(`grid-${newReleasesCat.domId}`);
+                newReleasesList.slice(0, 12).forEach(m => {
+                    newGrid.appendChild(createMovieCard(m));
+                });
+                attachShelfScrollArrows(newGrid);
+            }
+
+            // 4. Latest Additions (placed right after New Releases)
+            appendLatestAdditions(container, movies);
+
+            // 5. Remaining category shelves
             const categories = [
-                { title: "New Releases", keywords: ["new"], domId: "latest" },
                 { title: "Classic Cinema", keywords: ["classic"], domId: "classics" },
                 { title: "Film Noir", keywords: ["noir"], domId: "filmnoir" },
                 { title: "Drama Collection", keywords: ["drama"], domId: "drama" },
@@ -726,26 +878,22 @@
                 batch.forEach(cat => {
                     let filtered = [];
 
-                    if (cat.keywords.includes("new")) {
-                        filtered = movies
-                            .filter(m => parseInt(m.year, 10) >= 2024)
-                            .sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
-                    } else if (cat.domId === "classics") {
+                    if (cat.domId === "classics") {
                         filtered = movies.filter(m => {
                             const titleText = (m.title || '').toLowerCase();
-                            const genreText = Array.isArray(m.genres) 
-                                ? m.genres.join(' ').toLowerCase() 
+                            const genreText = Array.isArray(m.genres)
+                                ? m.genres.join(' ').toLowerCase()
                                 : (m.genres || '').toLowerCase();
                             const yr = parseInt(m.year, 10) || 0;
                             const isNoir = titleText.includes('noir') || genreText.includes('noir');
-                            
+
                             return !isNoir && yr > 0 && yr < 1980;
                         });
                     } else if (cat.domId === "filmnoir") {
                         filtered = movies.filter(m => {
                             const titleText = (m.title || '').toLowerCase();
-                            const genreText = Array.isArray(m.genres) 
-                                ? m.genres.join(' ').toLowerCase() 
+                            const genreText = Array.isArray(m.genres)
+                                ? m.genres.join(' ').toLowerCase()
                                 : (m.genres || '').toLowerCase();
                             const yr = parseInt(m.year, 10) || 0;
                             const isNoir = titleText.includes('noir') || genreText.includes('noir');
@@ -755,18 +903,18 @@
                     } else {
                         filtered = movies.filter(m => {
                             const titleText = (m.title || '').toLowerCase();
-                            const genreText = Array.isArray(m.genres) 
-                                ? m.genres.join(' ').toLowerCase() 
+                            const genreText = Array.isArray(m.genres)
+                                ? m.genres.join(' ').toLowerCase()
                                 : (m.genres || '').toLowerCase();
-                            
-                            return cat.keywords.some(kw => 
+
+                            return cat.keywords.some(kw =>
                                 titleText.includes(kw) || genreText.includes(kw)
                             );
                         });
                     }
 
                     if (filtered.length === 0) return;
-                    
+
                     const section = document.createElement('section');
                     section.className = 'shelf';
                     section.innerHTML = `
@@ -774,19 +922,22 @@
                             <h2>${cat.title}</h2>
                             <a href="/category.html?q=${encodeURIComponent(cat.keywords[0])}" style="color:#e50914; text-decoration:none; font-weight:bold; margin-right:20px;">VIEW ALL ></a>
                         </div>
-                        <div class="shelf-grid" id="grid-${cat.domId}"></div>
+                        <div class="shelf-row-wrap">
+                            <div class="shelf-grid" id="grid-${cat.domId}"></div>
+                        </div>
                     `;
                     container.appendChild(section);
                     const grid = document.getElementById(`grid-${cat.domId}`);
-                    
+
                     filtered.slice(0, 12).forEach(m => {
                         grid.appendChild(createMovieCard(m));
                     });
+                    attachShelfScrollArrows(grid);
                 });
             }
-            
-            renderBatch(categories.slice(0, 3)); 
-            setTimeout(() => renderBatch(categories.slice(3)), 100); 
+
+            renderBatch(categories.slice(0, 3));
+            setTimeout(() => renderBatch(categories.slice(3)), 100);
         }
 
         async function init() {
@@ -796,6 +947,20 @@
             } catch (error) {
                 console.error("Error loading data:", error);
             }
+
+            const searchInput = document.getElementById('search-input');
+            const clearBtn = document.getElementById('clear-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', applyCurrentView);
+            }
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    if (searchInput) searchInput.value = '';
+                    applyCurrentView();
+                });
+            }
+
+            renderShelves(allMoviesData);
 
             window.addEventListener('scroll', () => {
                 const btt = document.getElementById('back-to-top');
@@ -822,147 +987,13 @@
                         await navigator.clipboard.writeText(shareData.url);
                         const orig = headerShareBtn.textContent;
                         headerShareBtn.textContent = '✓ Link Copied!';
-                        setTimeout(() => { headerShareBtn.textContent = orig; }, 2200);
-                    } catch (e) {}
+                        setTimeout(() => { headerShareBtn.textContent = orig; }, 2000);
+                    } catch (err) {}
                 });
             }
-
-            const searchInput = document.getElementById('search-input');
-            const clearBtn = document.getElementById('clear-search');
-
-            const params = new URLSearchParams(window.location.search);
-            const initialSearch = params.get('search');
-            const initialEra = params.get('era');
-
-            if (initialEra && ['precode', '1930s', '1940s', '1950s', '1960plus'].includes(initialEra)) {
-                currentEra = initialEra;
-            }
-
-            if (initialSearch && searchInput) {
-                searchInput.value = initialSearch;
-            }
-
-            if (searchInput) {
-                searchInput.addEventListener('input', applyCurrentView);
-            }
-
-            if (clearBtn && searchInput) {
-                clearBtn.addEventListener('click', () => {
-                    searchInput.value = '';
-                    clearBtn.style.display = 'none';
-                    applyCurrentView();
-                });
-            }
-
-            applyCurrentView();
         }
 
-        init();
+        document.addEventListener('DOMContentLoaded', init);
     </script>
-    <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').catch(() => {});
-    });
-  }
-</script>
-<div id="pwa-install-banner" style="display: none; position: fixed; bottom: 16px; left: 16px; right: 16px; max-width: 540px; margin: 0 auto; z-index: 9999; background: #18181b; color: #f4f4f5; border: 1px solid #ffdd00; border-radius: 10px; padding: 12px 16px; box-shadow: 0 10px 28px rgba(0,0,0,0.65); align-items: center; justify-content: space-between; gap: 12px;">
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/icon-192.png" alt="MovieHub" style="width: 36px; height: 36px; border-radius: 6px; flex-shrink: 0;">
-    <div style="font-size: 14px; line-height: 1.35;">
-      <strong style="color: #ffdd00;">Install MovieHub App</strong><br>
-      <span id="pwa-banner-subtext" style="color: #d4d4d8; font-size: 12px;">Add to your home screen for quick access to classic films.</span>
-    </div>
-  </div>
-  <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
-    <button id="pwa-install-btn" type="button" style="background: #e50914; color: #ffffff; border: none; border-radius: 6px; padding: 8px 14px; font-size: 13px; font-weight: 700; cursor: pointer;">
-      Install
-    </button>
-    <button id="pwa-dismiss-btn" type="button" aria-label="Dismiss" style="background: transparent; color: #a1a1aa; border: none; font-size: 20px; line-height: 1; padding: 4px 6px; cursor: pointer;">
-      &times;
-    </button>
-  </div>
-</div>
-<script>
-  (() => {
-    let deferredPrompt = null;
-    const banner = document.getElementById('pwa-install-banner');
-    const subtext = document.getElementById('pwa-banner-subtext');
-    const installBtn = document.getElementById('pwa-install-btn');
-    const headerInstallBtn = document.getElementById('header-install-btn');
-    const dismissBtn = document.getElementById('pwa-dismiss-btn');
-
-    if (!banner || !installBtn || !dismissBtn) return;
-
-    const isStandalone =
-      window.matchMedia('(display-mode: standalone)').matches ||
-      window.navigator.standalone === true;
-
-    if (isStandalone) {
-      if (headerInstallBtn) headerInstallBtn.style.display = 'none';
-      return;
-    }
-
-    const setManualText = () => {
-      if (subtext) {
-        subtext.textContent = 'Use your browser menu (⋮ or share) to "Install app" or "Add to Home Screen".';
-      }
-    };
-
-    const showBanner = (force = false) => {
-      if (!force && sessionStorage.getItem('pwaBannerDismissed') === '1') return;
-      if (!deferredPrompt) setManualText();
-      banner.style.display = 'flex';
-    };
-
-    const triggerInstall = async () => {
-      if (deferredPrompt) {
-        banner.style.display = 'none';
-        deferredPrompt.prompt();
-        const choice = await deferredPrompt.userChoice;
-        deferredPrompt = null;
-        if (choice && choice.outcome === 'accepted' && headerInstallBtn) {
-          headerInstallBtn.style.display = 'none';
-        }
-        return;
-      }
-      showBanner(true);
-    };
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      if (headerInstallBtn) headerInstallBtn.style.display = 'inline-flex';
-      if (subtext) {
-        subtext.textContent = 'Add to your home screen for quick access to classic films.';
-      }
-      showBanner(false);
-    });
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        if (!deferredPrompt && !isStandalone) {
-          showBanner(false);
-        }
-      }, 600);
-    });
-
-    installBtn.addEventListener('click', triggerInstall);
-    if (headerInstallBtn) {
-      headerInstallBtn.addEventListener('click', triggerInstall);
-    }
-
-    dismissBtn.addEventListener('click', () => {
-      banner.style.display = 'none';
-      sessionStorage.setItem('pwaBannerDismissed', '1');
-    });
-
-    window.addEventListener('appinstalled', () => {
-      banner.style.display = 'none';
-      if (headerInstallBtn) headerInstallBtn.style.display = 'none';
-      deferredPrompt = null;
-    });
-  })();
-</script>
 </body>
 </html>
